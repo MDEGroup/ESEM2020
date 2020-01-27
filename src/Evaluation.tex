@@ -7,24 +7,24 @@
 
 %\revised{
 
-This section describes the planning of our evaluation, having the {\em goal} of evaluating the performance of \CR. In Section~\ref{sec:Dataset}, we introduce the datasets exploited in our evaluation. The evaluation methodology and metrics are presented in Section~\ref{sec:EvaluationMethodology}. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
+This section describes the planning of our evaluation, having the {\em goal} of evaluating the performance of \CR. In Section~\ref{sec:Dataset}, we introduce the dataset exploited in our evaluation. The evaluation methodology and metrics are presented in Section~\ref{sec:methodology-metric}. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
 
 
 %ten equal parts, so-called folds
 %We also exploited 
 %was also exploited 
 
-\begin{figure*}[h!]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=\textwidth]{figs/EvaluationProcess.pdf}
+	\includegraphics[width=\linewidth]{figs/EvaluationProcess.pdf}
 	%\vspace{-.3cm}
 	\caption{Evaluation Process.}
 	\label{fig:EvaluationProcess}
 	\vspace{-.3cm}
-\end{figure*}
+\end{figure}
 
 The evaluation process is depicted in Fig.~\ref{fig:EvaluationProcess} and it consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}. We start with the \emph{Data Preparation} phase by creating a dataset from  GitHub projects. %Such datasets are used to assess the performances of \CR, but also to evaluate two of the baselines, \ie \LF and \LC. 
-The dataset is then split into training and testing sets.  In the \emph{Recommendation} phase, given a project in the testing set, a portion of its libraries is extracted as ground-truth data, and the remaining is used as query to compute similarity and recommendations. Finally, by the \emph{Outcome Evaluation} phase, we compare the recommendation results with those stored as ground-truth data to compute the quality metrics. All the aforementioned phases are  detailed in the rest of this section.
+The dataset is then split into training and testing sets.  In the \emph{Recommendation} phase, given a project in the testing set, a portion of its topics is extracted as ground-truth data, and the remaining is used as query to compute similarity and recommendations. Finally, by the \emph{Outcome Evaluation} phase, we compare the recommendation results with those stored as ground-truth data to compute the quality metrics. All the aforementioned phases are  detailed in the rest of this section.
 
 
 \subsection{Dataset Extraction} \label{sec:Dataset}
@@ -44,28 +44,17 @@ By means of the GitHub API \cite{githubAPI} we \emph{randomly} collected a datas
 
 
 %\color{blue}
+	\subsection{Evaluation Methodology and Metrics’ Definition}\label{sec:methodology-metric}
 To assess the performance of \CR proposed approach, we applied ten-fold cross-validation, considering every time $9$ folds (each one contains $625$ projects) for training and the remaining one for testing. 
-	For every testing project \emph{p}, a half of its libraries are \emph{randomly} 
-	taken out and saved as ground truth data, let us call them \emph{GT(p)}, which 
-	will be used to validate the recommendation outcomes. The other half are used 
+	For every testing project \emph{p}, a half of its topics are \emph{randomly} 
+	taken out and saved as ground truth data, let us call them \emph{GT(p)}, which will be used to validate the recommendation outcomes. The other half are used 
 	as testing libraries or query, which are called \emph{\textbf{te}}, and serve 
-	as input for \code{Similarity Computation} and \code{Recommendation}. Though 
-	the ratio of query to ground-truth data can be arbitrarily set, we chose $50\%$ 
-	for two reasons: \emph{(i)} this value was used in the evaluation of the 
-	baselines in the original 
-	work~\cite{6671293},\cite{Ouni:2017:SSL:3032135.3032325},\cite{SAIED2018164}; 
-	and \emph{(ii)} no matter how big a query is, the most important thing is to 
-	use exactly the same amount of data when evaluating the systems. In a separate 
-	experiment discussed later in this paper, the ratio of query to ground-truth 
-	has been varied to investigate whether an increase in the amount of testing 
-	data helps improve CrossRec's overall performance.
+	as input for \code{Similarity Computation} and \code{Recommendation}. %Though 	the ratio of query to ground-truth data can be arbitrarily set, we chose $50\%$ 	for two reasons: \emph{(i)} this value was used in the evaluation of the baselines in the original 	work~\cite{6671293},\cite{Ouni:2017:SSL:3032135.3032325},\cite{SAIED2018164}; 	and \emph{(ii)} no matter how big a query is, the most important thing is to 	use exactly the same amount of data when evaluating the systems. In a separate 	experiment discussed later in this paper, the ratio of query to ground-truth 	has been varied to investigate whether an increase in the amount of testing 	data helps improve CrossRec's overall performance.
 %\color{black} 
 The splitting mimics a real development process where a 
-developer has already included some libraries in the current project, \ie 
-\emph{\textbf{te}} and waits for recommendations, that means additional 
-libraries to be incorporated. A recommender system is expected to provide her 
-with the other half, \ie \emph{GT(p)}. To ensure a reliable comparison 
-between \LR and \CR, we performed cross-validation for both using exactly the same folds.
+developer has already included some topics in the current project, \ie 
+\emph{\textbf{te}} and waits for recommendations, that means additional topics to be incorporated. A recommender system is expected to provide her 
+with the other half, \ie \emph{GT(p)}. %To ensure a reliable comparison between \LR and \CR, we performed cross-validation for both using exactly the same folds.
 
 
 %====================================================================================================================================
@@ -97,7 +86,7 @@ between \LR and \CR, we performed cross-validation for both using exactly the sa
 
 % Among others, \emph{precision} and \emph{recall} are considered among the most suitable metrics for evaluating top-$N$ items of the recommendation outcomes \cite{Ostuni:2013:TRI:2507157.2507172}.
 
-\revised{There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate}, \emph{accuracy}, \emph{sales diversity}, and \emph{novelty} have been used to study the systems' performance as already proposed by Robillard \etal~\cite{Robillard:2014:RSS:2631387} and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.} For a clear presentation of the metrics considered during the outcome evaluation, let us introduce the following notations:
+There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate}, \emph{accuracy}, \emph{sales diversity}, and \emph{novelty} have been used to study the systems' performance as already proposed by Robillard \etal~\cite{Robillard:2014:RSS:2631387} and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}. For a clear presentation of the metrics considered during the outcome evaluation, let us introduce the following notations:
 
 \begin{itemize}[noitemsep,topsep=0pt]
 	\item \emph{N} is the cut-off value for the ranked list;% of recommended libraries;
@@ -121,7 +110,7 @@ between \LR and \CR, we performed cross-validation for both using exactly the sa
 
 If $REC_{N}(p)$ is the set of top-$N$ items and $match_{N}(p)=  GT(p) \bigcap REC_{N}(p) $ is the set of items in the \emph{top-N} list that match with those in the ground-truth data, then the metrics are defined as follows.
 
-\paragraph{\textbf{Success rate@N}} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least a library match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
+\paragraph{\textbf{Success rate@N}} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least a topic match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
 \vspace{-.3cm}
 
 \begin{equation} \label{eqn:RecallRate}
@@ -132,7 +121,7 @@ success\ rate@N=\frac{ count_{p \in P}( \left |  match_{N}(p) \right | > 0 ) }{\
 \noindent where the function \emph{count()} counts the number of times that the boolean expression specified in its parameter is \emph{true}.
 
 
-\paragraph{\textbf{Accuracy}} Accuracy is considered as one of the most preferred \emph{quality indicators} for Information Retrieval applications \cite{Saracevic:1995:EEI:215206.215351}. However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ library match out of $5$ and another system that returns all $5$ library matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended libraries belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth libraries appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
+\paragraph{\textbf{Accuracy}} Accuracy is considered as one of the most preferred \emph{quality indicators} for Information Retrieval applications \cite{Saracevic:1995:EEI:215206.215351}. However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
 
 %\vspace{-.2cm}
 % \cite{Saracevic:1995:EEI:215206.215351}
@@ -152,12 +141,12 @@ recall@N = \frac{ \left |  match_{N}(p) \right | }{\left | GT(p) \right |}
 improve the coverage as also the distribution of products across customers, thereby increasing the 
 chance that products will get sold by being introduced 
 \cite{Vargas_sales_diversity_14}. Similarly, in the context 
-of library recommendation, \emph{sales diversity} indicates the ability of the system to suggest to 
-projects as much libraries as possible, as well as to disperse the concentration among all items, 
-instead of focusing only on a specific set of libraries \cite{Robillard:2014:RSS:2631387}. 
+of topic recommendation, \emph{sales diversity} indicates the ability of the system to suggest to 
+projects as much topics as possible, as well as to disperse the concentration among all items, 
+instead of focusing only on a specific set of topics \cite{Robillard:2014:RSS:2631387}. 
 In the scope of this paper, \emph{catalog coverage} and \emph{entropy} are utilized to gauge 
 \emph{sales diversity}. Let $L$ be the set of all 
-libraries available for recommendation, $\#rec(l)$ denote the number of projects getting library 
+topic available for recommendation, $\#rec(l)$ denote the number of projects getting library 
 $l$ as a recommendation, \ie $\#rec(l)=count_{p \in P}( \left |   REC_{N}(p)  \ni l  \right |  )$, $l \in L $, and $total$ denote the number of recommended items across all projects.
 %Nguyen:2015:CRV:2942298.2942305,
 %====================================================================================================================================
@@ -172,7 +161,7 @@ $l$ as a recommendation, \ie $\#rec(l)=count_{p \in P}( \left |   REC_{N}(p)  \n
 %====================================================================================================================================
 %
 
-\emph{Catalog coverage} measures the percentage of libraries being recommended to projects:%\cite{Nguyen:2015:ESP:2740908.2742141}: %indicates how well a recommender system is able to: %expose libraries to projects: 
+\emph{Catalog coverage} measures the percentage of topic being recommended to projects:%\cite{Nguyen:2015:ESP:2740908.2742141}: %indicates how well a recommender system is able to: %expose libraries to projects: 
 %\vspace{-.2cm}
 
 \begin{equation}\label{eqn:Coverage}
@@ -180,7 +169,7 @@ $l$ as a recommendation, \ie $\#rec(l)=count_{p \in P}( \left |   REC_{N}(p)  \n
 coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | L \right |} 
 \end{equation}	
 
-\emph{Entropy} evaluates if the recommendations are concentrated on only a small set or spread across a wide range of libraries:% \cite{Ragone:2017:SLF:3019612.3019837}: %measures the distribution of the recommendations across all the items, showing whether the recommendations are concentrated on a few items or are better distributed:
+\emph{Entropy} evaluates if the recommendations are concentrated on only a small set or spread across a wide range of topic:% \cite{Ragone:2017:SLF:3019612.3019837}: %measures the distribution of the recommendations across all the items, showing whether the recommendations are concentrated on a few items or are better distributed:
 %\vspace{-.1cm}
 \begin{equation}\label{eqn:Entropy}
 entropy = -\sum_{l \in L}\left ( \frac{\#rec(l)}{total} \right )ln \left ( \frac{\#rec(l)}{total} \right )
@@ -202,7 +191,7 @@ entropy = -\sum_{l \in L}\left ( \frac{\#rec(l)}{total} \right )ln \left ( \frac
 
 \paragraph{\textbf{Novelty}} In business, the \emph{long tail effect} is the fact that a few of the most popular products are extremely popular, while the rest, so-called the long tail, is obscure to customers \cite{Anderson:2006:LTW:1197299}. Recommending products in the long tail is beneficial not only to customers but also to business owners \cite{Vargas_sales_diversity_14}. 
 %\color{blue}
-\revised{Given that the logarithmic scale is used instead of the decimal one on the x-Axis of Fig.~\ref{fig:NumOfLibsD1}, Fig.~\ref{fig:NumOfLibsD2}, and Fig.~\ref{fig:NumOfLibsD3}, the long tail effect can be spotted there as a few libraries are very popular by being included in several projects, whereas most of the libraries appear in fewer projects. Specifically, in \code{D1} just $10$ libraries are used by more than $200$ projects, whereas $12,962$ libraries are used by no more than $10$ projects. In \code{D2} there are $3,275$ libraries, accounting for $63.85\%$ of the total number, being used by no more than $10$ projects. Similarly, in \code{D3}, $88.24\%$ of the dependencies corresponding to $49,799$ libraries are used by no more than $10$ projects.} %\color{black} %(the long tail).
+Given that the logarithmic scale is used instead of the decimal one on the x-Axis of Fig.~\ref{fig:NumOfLibsD1}, Fig.~\ref{fig:NumOfLibsD2}, and Fig.~\ref{fig:NumOfLibsD3}, the long tail effect can be spotted there as a few topic are very popular by being included in several projects, whereas most of the topics appear in fewer projects. Specifically, in \code{D1} just $15$ topics are used by more than $200$ projects, whereas $14,876$ topics are used by no more than $10$ repositories. \JDR{CHANGE VALUES}In \code{D2} there are $876$ libraries, accounting for $63.85\%$ of the total number, being used by no more than $10$ projects. Similarly, in \code{D3}, $88.24\%$ of the dependencies corresponding to $49,799$ libraries are used by no more than $10$ projects. %\color{black} %(the long tail).
 When recommending a library, \emph{novelty} measures if a system is able to 
 pluck libraries from the ``long tail'' to expose them to projects. This might 
 help developers come across \emph{serendipitous} libraries 
@@ -230,7 +219,7 @@ where $rel(p,r)=\left |  GT(p) \bigcap  REC_{r}(p) \right |$ represents the rele
 
 %Furthermore, we investigate the possibility that the outcomes are obtained by chance. A difference between two systems, \ie \LR and \CR, is considered to be significant if it is unlikely to occur given the null hypothesis. We start with the null hypothesis that there are no distinctions between the performance of both systems. 
 
-When comparing results of \LR and \CR, we rely on suitable statistical procedures. Specifically,  we use the Wilcoxon ranked sum test (considering one data point for each fold of the cross-validation) with a significance level of $\alpha=5\%$, and the Cliff's delta ($d$) effect size measure \cite{Cliff:2005}. Due to multiple tests being performed, we adjust $p$-values using the Holm's correction \cite{holm}.
+We use the Wilcoxon ranked sum test (considering one data point for each fold of the cross-validation) with a significance level of $\alpha=5\%$, and the Cliff's delta ($d$) effect size measure \cite{Cliff:2005}. Due to multiple tests being performed, we adjust $p$-values using the Holm's correction \cite{holm}.
 
 %We investigate the possibility that the outcomes are obtained by chance. A difference between two systems is considered to be significant if it is unlikely to occur given the null hypothesis. We start with the null hypothesis that there are no distinctions between the performance of both systems. Given that the \emph{p-value} is lower than a predefined threshold, the null hypothesis can be rejected  \cite{Shani2011}. We chose a \emph{p-value} of $0.05$ or $5 \times e^{-2}$ as the significance level since the value has been chosen in several studies \cite{Niu:2017:AUP:3104915.3104977}.
 %In the next section, the evaluation's outcomes are analyzed and the answers for such research questions are given.
@@ -239,45 +228,49 @@ When comparing results of \LR and \CR, we rely on suitable statistical procedure
 
 
 \subsection{Research Questions} \label{sec:ResearchQuestions}
-
+By performing the evaluation, we aim at addressing the following research questions:
+\begin{itemize}
+\item[--] RQ1: How does the variation of training data impact on the prediction performance? To answer this question, we varied the dimension of the dataset to include more training data. In particular, we assess the quality of three different datasets to find out the best one in terms of success rate.
+\item[--] RQ2: Is the approach able to provide consistent recommendations? We compute the metrics given in Section~\ref{sec:methodology-metric} to measure the relevance of our suggested topics considering the distribution of the considered repositories.
+\end{itemize}
 %\color{blue} \LR \cite{6671293}
 %the quality metric since 
 
 %In the scope of this paper, 
 	%Due to the lack of the 
 	%implementations of \LF and \LC are not
-	As mentioned in Section \ref{sec:Dataset},
-	a direct comparison between \CR and \LF or \LC is difficult to perform, owing 
-	to the fact that there is no source code available for public use, as well as 
-	their re-implementation might not be compliant with the original work. Thus, 
-	we 
-	evaluate the recommendations by \LF, \LC and \CR by experimenting \CR on the 
-	corresponding 
-	datasets. Furthermore, we opt for \emph{success rate} as it is the common 
-	metric used in the original 
-	work~\cite{6671293},\cite{Ouni:2017:SSL:3032135.3032325},\cite{SAIED2018164}. 
-	In contrast, the full access to its original implementation\footnote{We 
-		gratefully acknowledge the \LR source code implementation provided by Ferdian 
-		Thung and David Lo at the School of Information Systems, Singapore Management 
-		University} allows us to painstakingly compare \LR with \CR, making use of all 
-	the metrics presented in this paper, \ie \emph{success rate}, \emph{accuracy}, 
-	\emph{sales diversity} and \emph{novelty}.% as already proposed by Robillard 
-%\etal~\cite{Robillard:2014:RSS:2631387} and other 
-%studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.}
-
-In this sense, our empirical evaluation aims at addressing the following research questions:
-
-\begin{itemize}[noitemsep,topsep=0pt]
-	
-	\item \rqfirst We evaluate \CR by considering three state-of-the-art approaches, \ie \LR, \LF, and \LC, exploiting the datasets presented in Section~\ref{sec:Dataset}. Furthermore, we study \CR to see if it can recommend a specific version of a library, a requirement that all the baselines considered in this paper cannot satisfy.
-	
-	
-	\item \rqsecond Apart from \emph{success rate}, we investigate if the approaches obtain a good performance in terms of \emph{accuracy}, \emph{sales diversity} and \emph{novelty} \cite{Robillard:2014:RSS:2631387},\cite{Nguyen:2015:ESP:2740908.2742141}. 
-	
-	\item \rqthird We are interested in understanding the rationale behind the performance differences between the two systems.
-	\item \rqfourth We suppose that feeding \CR with more data as query enhances the overall performance. Thus, rather than using $r=50\%$ as the ratio of query to testing data, we varied $r$ using incremental values, \ie $20\%$, $40\%$, $60\%$, and $80\%$ to analyze the change in performance.
-	
-\end{itemize}
+%	As mentioned in Section \ref{sec:Dataset},
+%	a direct comparison between \CR and \LF or \LC is difficult to perform, owing 
+%	to the fact that there is no source code available for public use, as well as 
+%	their re-implementation might not be compliant with the original work. Thus, 
+%	we 
+%	evaluate the recommendations by \LF, \LC and \CR by experimenting \CR on the 
+%	corresponding 
+%	datasets. Furthermore, we opt for \emph{success rate} as it is the common 
+%	metric used in the original 
+%	work~\cite{6671293},\cite{Ouni:2017:SSL:3032135.3032325},\cite{SAIED2018164}. 
+%	In contrast, the full access to its original implementation\footnote{We 
+%		gratefully acknowledge the \LR source code implementation provided by Ferdian 
+%		Thung and David Lo at the School of Information Systems, Singapore Management 
+%		University} allows us to painstakingly compare \LR with \CR, making use of all 
+%	the metrics presented in this paper, \ie \emph{success rate}, \emph{accuracy}, 
+%	\emph{sales diversity} and \emph{novelty}.% as already proposed by Robillard 
+%%\etal~\cite{Robillard:2014:RSS:2631387} and other 
+%%studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.}
+%
+%In this sense, our empirical evaluation aims at addressing the following research questions:
+%
+%\begin{itemize}[noitemsep,topsep=0pt]
+%	
+%	\item \rqfirst We evaluate \CR by considering three state-of-the-art approaches, \ie \LR, \LF, and \LC, exploiting the datasets presented in Section~\ref{sec:Dataset}. Furthermore, we study \CR to see if it can recommend a specific version of a library, a requirement that all the baselines considered in this paper cannot satisfy.
+%	
+%	
+%	\item \rqsecond Apart from \emph{success rate}, we investigate if the approaches obtain a good performance in terms of \emph{accuracy}, \emph{sales diversity} and \emph{novelty} \cite{Robillard:2014:RSS:2631387},\cite{Nguyen:2015:ESP:2740908.2742141}. 
+%	
+%	\item \rqthird We are interested in understanding the rationale behind the performance differences between the two systems.
+%	\item \rqfourth We suppose that feeding \CR with more data as query enhances the overall performance. Thus, rather than using $r=50\%$ as the ratio of query to testing data, we varied $r$ using incremental values, \ie $20\%$, $40\%$, $60\%$, and $80\%$ to analyze the change in performance.
+%	
+%\end{itemize}
 
 
 We study the experimental results in the next section by referring to these research questions.

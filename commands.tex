@@ -23,8 +23,10 @@
 \newcommand{\rqfourth}{\textbf{RQ$_4$}: \emph{Does an increase in the amount of input data help improve CrossRec's overall performance?}~}
 %\renewcommand{\hl}{}
 
-\newcommand*{\circled[1]}{\tikz[baseline=(char.base)]{\color{black} 
-		\node[shape=circle,draw=cyan,fill=black!10!white,inner sep=.3pt] (char) {{{\texttt\textbf #1}}};}}
+
+%%%
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\color{black} 
+		\node[shape=circle,draw=cyan,fill=black!10!white,inner sep=.3pt] (char) {\sffamily{\small{\textbf{#1}}}};}}
 	
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 
@@ -45,5 +47,5 @@
 \newcommand\PN[1]{\textcolor{blue}{\nb{Phuong}{#1}}}
 \newcommand\CDS[1]{\textcolor{red}{\nb{Claudio}{#1}}}
 \newcommand\JDR[1]{\textcolor{orange}{\nb{Juri}{#1}}}
-
+\definecolor{verylightgray}{gray}{0.95}
 %Is the approach able to provide consistent recommendations?

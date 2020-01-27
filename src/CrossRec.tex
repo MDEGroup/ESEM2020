@@ -58,11 +58,11 @@ In this section we describe \CR, a system for providing developers with \GH topi
 To this end, the architecture of \CR is shown in Fig. \ref{fig:CrossRecArchitecture}, and consists of the software components supporting the following activities:
 
 \begin{itemize}
-	\item \textit{Representing the relationships} among projects and libraries retrieved from 
+	\item \textit{Representing the relationships} among projects and topics retrieved from 
 	existing repositories;
 	\item \textit{Computing similarities} to find projects, which are similar to that under 
 	development; and
-	\item \textit{Recommending libraries} to projects using a collaborative-filtering technique.
+	\item \textit{Recommending topics} to projects using a collaborative-filtering technique.
 \end{itemize}
 
 
@@ -70,18 +70,15 @@ To this end, the architecture of \CR is shown in Fig. \ref{fig:CrossRecArchitect
 
 In a typical usage scenario of \CR, we assume that a developer is creating a new system, in which she has already included some topics, or else is evolving an existing system.
 As shown in Fig. \ref{fig:CrossRecArchitecture}, the developer interacts with the system by sending a request for recommendations \circled{1}. 
-Such a request contains a list of 
-libraries that are already included in the project the developer is working on. 
+Such a request contains a list of topics that are already included in the project the developer is working on. 
 The \code{Data Encoder} \circled{4} collects \emph{background data} from OSS 
 repositories \circled{5}, represents them in a graph, which is then used as a 
 base for other components of \CR. The \code{Similarity Calculator}  
 module \circled{2} computes similarities among projects to find the most 
-similar ones to 
-the given project. The \code{Recommendation Engine} \circled{3} 
+similar ones to the given project. The \code{Recommendation Engine} \circled{3} 
 implements a \emph{collaborative-filtering} technique 
-\cite{Aggarwal2016},\cite{Zhao:2010:UCR:1748610.1749278}, it selects top-$k$ similar 
-projects, and performs computation to generate a ranked list of \emph{top-N} 
-libraries.~Finally, the recommendations \circled{6} are sent back to the developer. 
+\cite{Aggarwal2016},\cite{Zhao:2010:UCR:1748610.1749278}, it selects top-$k$ similar  projects, and performs computation to generate a ranked list of \emph{top-N} 
+topics.~Finally, the recommendations \circled{6} are sent back to the developer. 
 
 Background data has been collected \GH \cite{github}. The 
 current version of \CR \cite{appendix} supports data extraction from 
@@ -117,20 +114,20 @@ A recommender system for online services is based on three key components, namel
 \emph{ratings} \cite{Sarwar:2001:ICF:371920.372071},\cite{DBLP:conf/rweb/NoiaO15}. A \emph{user-item ratings matrix} is built 
 to represent the mutual relationships among the components. Specifically, in the matrix a user is represented by a row, 
 an item is represented by a column and each cell in the matrix corresponds to a rating given by a user for an item 
-\cite{DBLP:conf/rweb/NoiaO15}. For library recommendation, instead of users and items, there are projects and 
-third-party libraries, and a project may include various libraries to implement desired functionalities.   
+\cite{DBLP:conf/rweb/NoiaO15}. For topic recommendation, instead of users and items, there are projects and topics, and a project may include various topics to better describe the project.   
 We derive an analogous user-item ratings matrix to represent the \emph{project-library inclusion} relationships, 
-denoted as $\ni$. In this matrix, each row represents a project and each column represents a library.~A cell in the 
-matrix is set to $1$ if the library in the column is included in the project specified by the row,  it is set to $0$ 
+denoted as $\ni$. In this matrix, each row represents a project and each column represents a topic.~A cell in the 
+matrix is set to $1$ if the topic in the column is included in the project specified by the row,  it is set to $0$ 
 otherwise. For the sake of clarity and conformance, we still denote this as a user-item ratings matrix throughout this 
 paper.
 
-For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_4 \}$ together with a set of libraries $L=\{$\emph{lib$_1$=junit:ju\-nit}; \emph{lib$_2$=commons-io:commons-io}; \emph{lib$_3$=log4j:log4j}; \emph{lib$_4$=org.slf4j:slf4j-api}; \emph{lib$_5$=org.slf4j:slf4j-log4j12}$\}$. By observing the \emph{pom.xml} files of the projects in $P$, we discovered the following inclusions: $p_1 \ni lib_1,lib_2$; $p_2 \ni lib_1,lib_3$; $p_3 \ni lib_1,lib_3,lib_4,lib_5$; $p_4 \ni lib_1,lib_2,lib_4,lib_5$. Accordingly, the user-item ratings matrix built to model the occurrence of the libraries is depicted in Fig.~\ref{fig:UserItemMatrix}.
+For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_4 \}$ together with a set of topics $L=\{$\emph{topic$_1$=machine-learning}; \emph{topic$_2$=javascript}; topic{lib$_3$=database}; \emph{topic$_4$=web}; \emph{topic$_5$=al-gorithm}$\}$. By extracting the list of defined topics of the projects in $P$, we discovered the following inclusions: $p_1 \ni topic_1,topic_2$; $p_2 \ni topic_1,topic_3$; $p_3 \ni topic_1 ,topic_3, topic_4, topic_5$;\\
+ $p_4 \ni topic_1,topic_2,topic_4,topic_5$. Accordingly, the user-item ratings matrix built to model the occurrence of the topic is depicted in Fig.~\ref{fig:UserItemMatrix}.
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.7\linewidth]{figs/UserItemMatrix.pdf}
-	\caption{An example of a user-item ratings matrix to model the inclusion of third-party libraries in OSS projects.}
+	\caption{An example of a user-item ratings matrix to model the inclusion of topics in \GH repositories.}
 	\label{fig:UserItemMatrix}
 \end{figure}
 
@@ -210,11 +207,11 @@ computation.
 We assume that a representation model that addresses the semantic 
 relationships among miscellaneous factors in the OSS community is beneficial to 
 project similarity computation. To this end, we consider the community of developers together with 
-OSS projects, libraries, and their mutual interactions as an 
+OSS projects, topics, and their mutual interactions as an 
 \textit{ecosystem}. We derive a 
 \textit{graph-based} model to represent different kinds of relationships in the OSS ecosystem, and 
 eventually to calculate similarities. In the context of mining OSS repositories, the graph model is a convenient approach since it allows for flexible data integration and numerous computation techniques. 
-By applying this representation, we are able to transform the set of projects and libraries shown in Fig.~\ref{fig:UserItemMatrix} into a directed graph as in Fig.~\ref{fig:Graph}.
+By applying this representation, we are able to transform the set of projects and topics shown in Fig.~\ref{fig:UserItemMatrix} into a directed graph as in Fig.~\ref{fig:Graph}.
 %\todo[size=\tiny, color=green!40]{This refers to our SEAA paper} 
 %In Linked Data, an RDF\footnote{RDF 1.1 Concepts and Abstract Syntax: \url{https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/}} graph is made up of an enormous number of nodes and oriented links with semantic relationships. Thanks to this feature, the similarity of two nodes in a graph can be computed by considering their intrinsic characteristics like neighbour nodes and their mutual interactions \cite{DiNoia:2012:LOD:2362499.2362501,Nguyen:2015:CRV:2942298.2942305}.
 ~We adopted our proposed CrossSim approach~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the 
@@ -223,7 +220,7 @@ exploited by many studies to do the same task
 \cite{DiNoia:2012:LOD:2362499.2362501},\cite{BRIGUEZ20146467}. Among 
 other relationships, two nodes are deemed to be similar if they point to the same node with the same edge. By looking at the graph in 
 Fig.~\ref{fig:Graph}, we can notice that $p_3$ and $p_4$ are highly 
-similar since they both point to three nodes $lib_{1}, lib_{4}, lib_{5}$.  This 
+similar since they both point to three nodes $topic_{1}, topic_{4}, topic_{5}$.  This 
 reflects what also suggested in a previous work by McMillan \etal 
 \cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common 
 pieces of functionality by using a shared set of libraries.
@@ -231,7 +228,7 @@ pieces of functionality by using a shared set of libraries.
 
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=0.6\columnwidth]{figs/Graph.pdf}
+	\includegraphics[width=\columnwidth]{figs/Graph.pdf}
 	\caption{Graph representation for projects and libraries.}
 	\label{fig:Graph}
 \end{figure}
@@ -250,17 +247,17 @@ pieces of functionality by using a shared set of libraries.
 Using this metric, the similarity between two project nodes $p$ and $q$ in an OSS graph is computed 
 by considering their feature sets \cite{DiNoia:2012:LOD:2362499.2362501}. Given that $p$ has a 
 set of neighbor nodes 
-$(lib_{1},lib_{2},..,lib_{l})$, the features of $p$ are represented by a vector 
+$(topic_{1},topic_{2},..,topic_{l})$, the features of $p$ are represented by a vector 
 $\overrightarrow{\phi}=(\phi_{1},\phi_{2},..,\phi_{l})$, with $\phi_{i}$ being the weight of node 
-$lib_{i}$. It is computed as the \emph{term-frequency inverse document frequency} value as follows: 
+$topic_{i}$. It is computed as the \emph{term-frequency inverse document frequency} value as follows: 
 %\texttt{tf-idf}   of the node 
 %\vspace{-.1cm}
 \begin{equation}\label{eqn:TFIDF}
-\phi_{i} = f_{lib_{i}} \times log(\frac{ \left | P \right |}{a_{lib_{i}}})
+\phi_{i} = f_{topic_{i}} \times log(\frac{ \left | P \right |}{a_{topic_{i}}})
 \end{equation}
 
 \noindent
-where $f_{lib_{i}}$ is the number of occurrence of $lib_{i}$ with respect to $p$, it can be either $0$ and $1$ since there is a maximum of one $lib_{i}$ connected to $p$ by the edge \emph{includes}; $\left | P \right |$ is the total number of considered projects; $a_{lib_{i}}$ is the number of projects connecting to $lib_{i}$ via the edge \emph{includes}. %According to Eq.~\ref{eqn:TFIDF}, node $lib_{1}$ in Fig.~\ref{fig:Graph} has a low weight compared to that of other nodes since it is pointed by all four project nodes. In practice, this is comprehensible since \emph{junit:junit} is a very popular dependency and thus it should have a less important role in characterizing a project.
+where $f_{topic_{i}}$ is the number of occurrence of $topic_{i}$ with respect to $p$, it can be either $0$ and $1$ since there is a maximum of one $topic_{i}$ connected to $p$ by the edge \emph{includes}; $\left | P \right |$ is the total number of considered projects; $a_{topic_{i}}$ is the number of projects connecting to $topic_{i}$ via the edge \emph{includes}. %According to Eq.~\ref{eqn:TFIDF}, node $topic_{1}$ in Fig.~\ref{fig:Graph} has a low weight compared to that of other nodes since it is pointed by all four project nodes. In practice, this is comprehensible since \emph{junit:junit} is a very popular dependency and thus it should have a less important role in characterizing a project.
 Eventually, the similarity between $p$ and $q$ with their corresponding feature vectors $\overrightarrow{\phi}=\{\phi_{i}\}_{i=1,..,l}$ and $\overrightarrow{\omega}=\{\omega_{j}\}_{j=1,..,m}$ is computed as given below:%\todo[size=\tiny, color=green!40]{Nr. 3}
 %\vspace{-.2cm}
 
