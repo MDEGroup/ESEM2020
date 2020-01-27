@@ -1,0 +1,41 @@
+\documentclass[border=10pt]{standalone}
+%%%<
+\usepackage{verbatim}
+%%%>
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usetikzlibrary{patterns}
+\pgfplotstableset{fixed zerofill,precision=3}
+\pgfplotsset{width=7cm,compat=1.8}
+\begin{comment}
+:Title: Bar plot
+:Tags: 2D;Bar plots;Manual
+:Author: Christian Feuersänger
+:Slug: bar-plot
+
+Bar plots place horizontal or vertical bars at coordinates. Multiple bar plots
+in one axis can be stacked on top of each other or aligned next to each other.
+
+The code is from the PGFPlots 1.10 manual: "4.5.4 Bar Plots".
+\end{comment}
+\begin{document}
+	\begin{tikzpicture}
+	\begin{axis}[
+	ybar,
+	%enlargelimits=0.15,
+		legend style={at={(0.5,1)},	anchor=north,legend columns=-1,font=\footnotesize},
+	xlabel={\# of neighbours (k)},
+	ylabel={success rate@10},
+	symbolic x coords={5,10,15,20,25},
+	xtick=data,
+	nodes near coords,
+	nodes near coords align={vertical},
+	every node near coord/.append style={font=\scriptsize},
+	ymin=0.5,ymax=1.2,
+	]
+	\addplot +[postaction={pattern=north east lines}] coordinates {(5,0.864) (10,0.864) (15,0.867) (20,0.865) (25,0.863)};
+	\addplot coordinates {(5,0.945) (10,0.956) (15,0.950) (20,0.954) (25,0.955)};
+	\legend{LibRec,CrossRec}
+	\end{axis}
+	\end{tikzpicture}
+\end{document}

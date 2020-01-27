@@ -1,0 +1,12 @@
+
+library(ggplot2)
+
+setwd("/home/utente/Documents/Publications/MDEGroup/CrossRec/JSS/Results/")
+
+stars <- read.csv("Dataset_stars.csv")
+p <- ggplot(stars, aes(x=Stars, y=Forks)) + 
+	geom_point(size=3, aes(color=Issues)) +
+	scale_y_log10() + scale_x_log10() + geom_point() + geom_smooth() +
+	theme(axis.text.x=element_text(size=20), axis.title=element_text(size=20,face="bold")) +
+	theme(axis.text.y=element_text(size=20), axis.title=element_text(size=20,face="bold")) +
+	theme(legend.text = element_text(size=15, face="bold"))
