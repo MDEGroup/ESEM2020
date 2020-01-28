@@ -1,1 +1,61 @@
-Motivation of our work should go here
+Manually assigning topics can be an error-prone activity that can lead to 
+wrongly specified tags. Over the last years, several attempts have been 
+made to \textit{classify} \GH projects by automatically inferring 
+appropriate topics. In the context of data mining, \textit{classification} is 
+one of the critical operations that are used to dig deep into available data 
+for gaining knowledge and for identifying repetitive 
+patterns~\cite{kotsiantis2007supervised}. 
+
+In \cite{davidlo1} the authors present an approach based on \textit{topic 
+modeling} techniques to create categories of \GH projects. Manual interventions 
+are needed to refine initial sets of categories, which are identified by an 
+LDA-GA technique, that combines two algorithms: Latent Dirichlet Allocation 
+(LDA) and Genetic Algorithm (GA) \cite{6606598}. The approach proposed in  
+\cite{davidlo1}  is unsupervised, meaning that the categories of the catalogue 
+being identified are not known ex-ante. 
+
+In a \GH blog post \cite{noauthor_topic_nodate} the author presents 
+\textit{repo-topix}, a tool to recommend topics for \GH repositories. Such a 
+tool combines NLP standard techniques to 
+find an initial set of topics, by parsing the \RM files and the textual content 
+of a repository \eg the repository's description. Then, they weight the results 
+with the TF-IDF scheme and remove ``bad'' topics using a regression model. Using 
+this refined list, repo-topix computes a custom version of Jaccard Distance to 
+identify additional similar topics. To assess the quality of the framework, 
+they made a rough evaluation based on  ROUGE-1 metrics, an n-gram overlap 
+metric that counts the number of overlapping units between the suggested topics 
+and the repository description. Unfortunately, in \cite{noauthor_topic_nodate} 
+the author discusses an approximation of the repo-topix accuracy, without 
+providing the reader with the complete dataset that was used and the source 
+code of the developed tool. 
+
+\smallskip
+
+With the aim of contributing the resolution of the problem of recommending \GH 
+topics, in the next section we propose to use item-based collaborative filtering to recommend relevant topics. The  
+challenges that we had to cope with for evaluating its performance are mainly 
+the following ones:
+
+\vspace{.2cm}
+\noindent
+$\triangleright$ \emph{Dataset definition:} the creation of the datasets to be 
+used for evaluating the approach being proposed and comparing it with some 
+baseline is a daunting task: repositories might be moved, heavily changed or 
+even deleted during the initial creation. Thus, the crawling activity can be 
+negatively affected by these continuous changes and lead to lack of data, and 
+poor topic coverage. GHTorrent\footnote{\url{http://ghtorrent.org/}} tries to 
+mitigate this issue by offering daily dumps of the repositories' metadata. 
+However, this kind of data might not be enough or even appropriate (\eg source 
+code is not available in GHTorrent dumps) to properly classify  an entire 
+repository.	Even considering directly \GH data can be difficult: \GH limits the 
+total number of requests per hour to 5,000 for authenticated users and 60 for 
+unauthorized requests. Considering all these constraints, building a suitable 
+dataset represents a real challenge to be managed carefully.
+	
+\vspace{.2cm}
+\noindent
+$\triangleright$ \emph{Topics distribution:} although tags can be assigned only 
+by the owners of \GH repositories, users can potentially wrongly specify topics 
+or introduce information overload by inserting too many elements. Thus, 
+creating a reliable ground truth to assess the classification performance of 
+the proposed approach represents another relevant difficulty. 
