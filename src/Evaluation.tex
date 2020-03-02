@@ -36,7 +36,38 @@ To evaluate the systems, we exploited a dataset with 6258 \GH repositories that 
 
 By means of the GitHub API \cite{githubAPI} we \emph{randomly} collected a dataset consisting of $6,258$ repositories. 
 \CDS{Add how the dataset has been mined (\ie constraints in term of stars, forks, num of topic, etc)}
-\JDR{Add Statistics}%Among these projects, only $7$ of them have been forked from other projects. Such original projects have been excluded from the dataset as their forked ones share highly similar libraries, and this may introduce bias in the recommendation outcomes. We represent the distribution of projects with respect to the number of forks, commits and pull requests in Fig.~\ref{fig:ForkCommitPull}. Most projects have a low number of pull requests, \ie lower than 100, however many of them have a large number of forks and commits. Forking is a means to contribute to the original repositories~\cite{Jiang:2017:WDF:3042021.3042043}. Furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it is further witnessed in Fig.~\ref{fig:ForkStarIssue}. A project with a high number of forks means that it gets attention from the OSS community. In this sense, having many forks can be considered as a sign of a well-maintained and well-received project. Meanwhile, as commits have an impact on the source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed.
+\JDR{Add Statistics}
+
+Using a project's name as query, we can retrieve different types of information such as commits, issues, and name 
+of  the repository's owner,and the list of topics. By using the \GH query language 
+\cite{noauthor_understanding_nodate}, we applied the following query filter:
+\begin{equation}
+\small
+Qf = "is:featured \; topic:t \; stars:100..80000 \; topics:>=2"
+\end{equation}%
+to consider only \GH repositories having a number of stars between 100 and 
+80,000, and tagged with at least two topics. We set such a filter after several 
+query refinements, as the chosen featured topics have different degree of 
+popularity.~For instance, the most starred project of the \emph{3d} topic has 
+around 53,000 stars; reversely, some other topics have top rank projects that 
+do not reach 1,000 stars. Thus, we tried to select the best query filter to 
+include a sufficient number of repository for each topic. %\PN{@Claudio: For 
+%this we need some references to explain why such the numbers are selected}. 
+%\CDS{The query comes from empirical evaluation as stated above}
+By imposing such a filter, we tried to avoid skewed repositories that may not have an informative \RM or projects that are already abandoned for a long time.
+%\PN{@Claudio: references needed}. 
+Forking is another index related to the quality of the project. This feature is 
+typically employed as a starting point for a new 
+project~\cite{Jiang:2017:WDF:3042021.3042043}. Furthermore, there is a strong 
+correlation between forks and stars~\cite{7816479}. In this sense, we suppose 
+that a project with a high number of stars means that it gets attention from 
+the OSS community and thus being suitable to identify popular 
+repositories~\cite{borges_popularity_2017, borges_predicting_2016}. 
+
+
+
+
+%Among these projects, only $7$ of them have been forked from other projects. Such original projects have been excluded from the dataset as their forked ones share highly similar libraries, and this may introduce bias in the recommendation outcomes. We represent the distribution of projects with respect to the number of forks, commits and pull requests in Fig.~\ref{fig:ForkCommitPull}. Most projects have a low number of pull requests, \ie lower than 100, however many of them have a large number of forks and commits. Forking is a means to contribute to the original repositories~\cite{Jiang:2017:WDF:3042021.3042043}. Furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it is further witnessed in Fig.~\ref{fig:ForkStarIssue}. A project with a high number of forks means that it gets attention from the OSS community. In this sense, having many forks can be considered as a sign of a well-maintained and well-received project. Meanwhile, as commits have an impact on the source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed.
 %}
 
 

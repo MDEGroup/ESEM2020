@@ -1,1 +1,34 @@
-In
+In recent years, the open source software (OSS) community 
+makes a daily usage of open source repositories to 
+contribute their work as well as to access to projects 
+coming from other developers. \GH is one of the most 
+well-known platforms that aggregate these projects and 
+render possible the exchange of knowledge among the users.
+%
+In order to aid information discovery and help 
+developers identify projects that can be of their interest, \GH introduced \emph{topics}. They are 
+words used to characterize projects, which thus can be 
+annotated by means of lists of words that summarize projects' features. Thanks 
+to the availability of \emph{topics}, several applications are enabled, 
+including the automated cataloguing of GitHub repositories \cite{davidlo1}, 
+further than allowing developers to explore projects by type, technology, and 
+more.
+
+Assigning the right topics to \GH repositories is a crucial step that, if not 
+properly done, can affect in a negative way their discoverability. In 
+2017, \GH presented \textit{repo-topix}, a topic suggestion tool essentially 
+based on information retrieval techniques \cite{noauthor_topic_nodate}. 
+Although the mechanism works well so far and it is fully integrated in \GH, in our 
+opinion there is still some room for improvement, e.g., in terms of the variety 
+of the suggested topics, novel data analysis techniques, and the investigation of new recommendation strategies.
+
+In this work, we propose to face these issues by exploiting collaborative filtering, a widely spread technique in the recommendation system domain \cite{Schafer:2007:CFR:1768197.1768208}. By considering \GH projects as items to recommend,  we use user-topic matrixes to perform the similarity and suggest relevant topics given an initial list coming from an input project. 
+
+By considering \GH projects as items to recommend,  we use user-topic matrixes to perform the similarity and suggest relevant topics given an initial list coming from an input project. 
+The work gives the following contributions:
+\begin{itemize}
+\item Considering the \GH projects as products, we suggest relevant topics to the project given an initial list of them;
+\item We assess the quality of the work employing a well-defined set of metrics commonly used in the recommendation system domain \ie sales diversity, novelty, and accuracy
+\end{itemize}
+
+The rest of the work is structured as follows. Section \ref{sec:Background} shows the issues and the potential challenges in the domain. In Section \ref{sec:ProposedApproach}, we present our approach and evaluate it in Section \ref{sec:Evaluation}. We present the results of the assessment in Section \ref{sec:ExperimentalResults} and we discuss the findings. Section \ref{sec:RelatedWorks} summarizes relevant works in the field and we conclude the paper in Section \ref{sec:Conclusions} with possible future works.

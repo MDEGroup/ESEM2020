@@ -72,7 +72,7 @@
 
 \title{The Name of the Title is Hope}
 
-
+\title{Using collaborative filtering to recommend Github topics}
 
 %\author{Juri Di Rocco}
 %\affiliation{%
@@ -90,7 +90,7 @@
 
 
 \begin{abstract}
-\GH has become a precious service for  storing and managing software source code. Over the last year, 10M new developers have joined the \GH community, contributing to more than 44M repositories. In order to help developers increase the reachability of their 	repositories, in 2017 \GH introduced the possibility to classify them by 	means of topics. However, assigning wrong topics to a given repository can 	compromise the possibility of helping other developers reach it and eventually contribute to its development.
+Collaborative filtering is a well-founded technique spreadly used in the recommendation system domain. During recent years, a plethora of approaches has been developed to provide the users with relevant items. Considering the open-source software (OSS) domain, \GH has become a precious service for storing and managing software source code. To represent the stored projects in an effective manner, in 2017 \GH introduced the possibility to classify them employing topics. However, assigning wrong topics to a given repository can compromise the possibility of helping other developers reach it and eventually contribute to its development.
 In this paper, we present \RECOMMENDER, a recommender system to assist open source software developers in selecting suitable topics to the repositories. \RECOMMENDER exploits a collaborative filtering technique to recommend libraries to developers by relying on the set of dependencies, which are currently included in the project being 
 This paper show...
 \end{abstract}
@@ -139,17 +139,14 @@ This paper show...
 \label{sec:Introduction}
 \input{src/Introduction}
 
-%	\section{Background}
-%	\label{sec:Background}
-%	\input{src/Background}
+\section{Background}
+\label{sec:Background}
+\input{src/Background}
 
 
-\section{Related Work}
-\label{sec:RelatedWork}
-\input{src/RelatedWork}
 
 \section{Proposed approach}
-\label{sec:CrossRec}
+\label{sec:ProposedApproach}
 \input{src/CrossRec}
 
 \section{Evaluation}		
@@ -159,6 +156,11 @@ This paper show...
 \section{Results}
 \label{sec:ExperimentalResults}
 \input{src/ExperimentalResults}
+
+
+\section{Related Work}
+\label{sec:RelatedWorks}
+\input{src/RelatedWork}
 
 \section{Conclusions and Future Work}
 \label{sec:Conclusions}
