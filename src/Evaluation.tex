@@ -48,7 +48,7 @@ By means of the GitHub API \cite{githubAPI} we \emph{randomly} collected a datas
 To assess the performance of \CR proposed approach, we applied ten-fold cross-validation, considering every time $9$ folds (each one contains $625$ projects) for training and the remaining one for testing. 
 	For every testing project \emph{p}, a half of its topics are \emph{randomly} 
 	taken out and saved as ground truth data, let us call them \emph{GT(p)}, which will be used to validate the recommendation outcomes. The other half are used 
-	as testing libraries or query, which are called \emph{\textbf{te}}, and serve 
+	as testing topics or query, which are called \emph{\textbf{te}}, and serve 
 	as input for \code{Similarity Computation} and \code{Recommendation}. %Though 	the ratio of query to ground-truth data can be arbitrarily set, we chose $50\%$ 	for two reasons: \emph{(i)} this value was used in the evaluation of the baselines in the original 	work~\cite{6671293},\cite{Ouni:2017:SSL:3032135.3032325},\cite{SAIED2018164}; 	and \emph{(ii)} no matter how big a query is, the most important thing is to 	use exactly the same amount of data when evaluating the systems. In a separate 	experiment discussed later in this paper, the ratio of query to ground-truth 	has been varied to investigate whether an increase in the amount of testing 	data helps improve CrossRec's overall performance.
 %\color{black} 
 The splitting mimics a real development process where a 
@@ -91,9 +91,9 @@ There are several metrics available to evaluate a ranked list of recommended ite
 \begin{itemize}[noitemsep,topsep=0pt]
 	\item \emph{N} is the cut-off value for the ranked list;% of recommended libraries;
 	\item \emph{k} is the number of neighbor projects exploited for the recommendation process;
-	\item For a testing project \emph{p}, a half of its libraries are extracted and used as the ground-truth data named as \emph{GT(p)};
-	\item $REC(p)$ is the \emph{top-N} libraries recommended to \emph{p}. It is a ranked list in descending order of real scores;%, with $REC_r(p)$ being the recommended library in the position $r$.		
-	\item If a recommended library $l \in REC(p)$ for a testing project $p$ is found in the ground truth of $p$ (\ie \emph{GT(p)}), hereafter we call this as a library \textit{match} or \textit{hit}.	
+	\item For a testing project \emph{p}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(p)};
+	\item $REC(p)$ is the \emph{top-N} topics recommended to \emph{p}. It is a ranked list in descending order of real scores;%, with $REC_r(p)$ being the recommended library in the position $r$.		
+	\item If a recommended tiopic $t \in REC(p)$ for a testing project $p$ is found in the ground truth of $p$ (\ie \emph{GT(p)}), hereafter we call this as a topic \textit{match} or \textit{hit}.	
 \end{itemize}	
 
 
@@ -108,7 +108,8 @@ There are several metrics available to evaluate a ranked list of recommended ite
 
 %There are several metrics available to evaluate a ranked list of recommendations \cite{DBLP:conf/rweb/NoiaO15}. Among others, \emph{precision} and \emph{recall} are considered among the most suitable metrics for evaluating a top-$N$ ranked list of items \cite{Ostuni:2013:TRI:2507157.2507172}. Together with a thoughtful discussion of various topics such as building recommender systems and presenting recommendations, Robillard \etal introduce various quality metrics for evaluating recommendation outcomes in Software Engineering, \eg \emph{precision} and \emph{recall}, \emph{confidence}, and \emph{serendipity}~\cite{robillard_recommendation_2014}. In the scope of this paper, to evaluate the recommendations by \LR and \CR, we opt for \emph{success rate}, \emph{accuracy}, \emph{sales diversity} and \emph{novelty} as already proposed in~\cite{robillard_recommendation_2014} and other studies~\cite{Nguyen:2015:ESP:2740908.2742141},\cite{6671293}.
 
-If $REC_{N}(p)$ is the set of top-$N$ items and $match_{N}(p)=  GT(p) \bigcap REC_{N}(p) $ is the set of items in the \emph{top-N} list that match with those in the ground-truth data, then the metrics are defined as follows.
+If $REC_{N}(p)$ is the set of top-$N$ items and\\
+ $match_{N}(p)=  GT(p) \bigcap REC_{N}(p) $ is the set of items in the \emph{top-N} list that match with those in the ground-truth data, then the metrics are defined as follows.
 
 \paragraph{\textbf{Success rate@N}} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least a topic match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
 \vspace{-.3cm}
@@ -121,7 +122,7 @@ success\ rate@N=\frac{ count_{p \in P}( \left |  match_{N}(p) \right | > 0 ) }{\
 \noindent where the function \emph{count()} counts the number of times that the boolean expression specified in its parameter is \emph{true}.
 
 
-\paragraph{\textbf{Accuracy}} Accuracy is considered as one of the most preferred \emph{quality indicators} for Information Retrieval applications \cite{Saracevic:1995:EEI:215206.215351}. However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
+\paragraph{\textbf{Accuracy}} Accuracy is considered as one of the most preferred \emph{quality indicators} for Information Retrieval applications \cite{Saracevic:1995:EEI:215206.215351}. However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} topics, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
 
 %\vspace{-.2cm}
 % \cite{Saracevic:1995:EEI:215206.215351}
@@ -145,9 +146,9 @@ of topic recommendation, \emph{sales diversity} indicates the ability of the sys
 projects as much topics as possible, as well as to disperse the concentration among all items, 
 instead of focusing only on a specific set of topics \cite{Robillard:2014:RSS:2631387}. 
 In the scope of this paper, \emph{catalog coverage} and \emph{entropy} are utilized to gauge 
-\emph{sales diversity}. Let $L$ be the set of all 
-topic available for recommendation, $\#rec(l)$ denote the number of projects getting library 
-$l$ as a recommendation, \ie $\#rec(l)=count_{p \in P}( \left |   REC_{N}(p)  \ni l  \right |  )$, $l \in L $, and $total$ denote the number of recommended items across all projects.
+\emph{sales diversity}. Let $T$ be the set of all 
+topic available for recommendation, $\#rec(t)$ denote the number of projects getting topic 
+$t$ as a recommendation, \ie $\#rec(t)=count_{p \in P}( \left |   REC_{N}(p)  \ni t  \right |  )$, $t \in T $, and $total$ denote the number of recommended items across all projects.
 %Nguyen:2015:CRV:2942298.2942305,
 %====================================================================================================================================
 %.In the context of library recommendation, Sales diversity measures the ability of a recommender system to expose all libraries to projects so that can be recommended to a project
@@ -166,13 +167,13 @@ $l$ as a recommendation, \ie $\#rec(l)=count_{p \in P}( \left |   REC_{N}(p)  \n
 
 \begin{equation}\label{eqn:Coverage}
 %coverage = \frac{\left | \cup_{p\in P} \left [  \cup_{r=1}^{N} REC_{r}(p) \right ] \right | }{\left | L \right |} 
-coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | L \right |} 
+coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | T \right |} 
 \end{equation}	
 
 \emph{Entropy} evaluates if the recommendations are concentrated on only a small set or spread across a wide range of topic:% \cite{Ragone:2017:SLF:3019612.3019837}: %measures the distribution of the recommendations across all the items, showing whether the recommendations are concentrated on a few items or are better distributed:
 %\vspace{-.1cm}
 \begin{equation}\label{eqn:Entropy}
-entropy = -\sum_{l \in L}\left ( \frac{\#rec(l)}{total} \right )ln \left ( \frac{\#rec(l)}{total} \right )
+entropy = -\sum_{t \in T}\left ( \frac{\#rec(t)}{total} \right )ln \left ( \frac{\#rec(t)}{total} \right )
 \end{equation}
 
 %with this definition, a lower entropy value indicates a better distribution and vice versa.	
