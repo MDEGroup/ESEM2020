@@ -7,7 +7,7 @@
 
 %\revised{
 
-This section describes the planning of our evaluation, having the {\em goal} of evaluating the performance of \CR. In Section~\ref{sec:Dataset}, we introduce the dataset exploited in our evaluation. The evaluation methodology and metrics are presented in Section~\ref{sec:methodology-metric}. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
+This section describes the planning of our evaluation, having the {\em goal} of evaluating the performance of the proposed approach. In Section~\ref{sec:Dataset}, we introduce the dataset exploited in our evaluation. The evaluation methodology and metrics are presented in Section~\ref{sec:methodology-metric}. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
 
 
 %ten equal parts, so-called folds
@@ -32,30 +32,31 @@ The dataset is then split into training and testing sets.  In the \emph{Recommen
 
 %\color{blue}
 
-To evaluate the systems, we exploited a dataset with 6258 \GH repositories that use 15757 topics.
+To evaluate the approach, we reuse the same dataset employed for our previous work \cite{MNB_data}.
 
-By means of the GitHub API \cite{githubAPI} we \emph{randomly} collected a dataset consisting of $6,258$ repositories. 
-\CDS{Add how the dataset has been mined (\ie constraints in term of stars, forks, num of topic, etc)}
-\JDR{Add Statistics}
-
-Using a project's name as query, we can retrieve different types of information such as commits, issues, and name 
-of  the repository's owner,and the list of topics. By using the \GH query language 
+By means of the GitHub API \cite{githubAPI} we \emph{randomly} collected a dataset consisting of $6,258$ repositories that use 15757 topics.
+Using a project's name as a query, we can retrieve different types of information such as commits, issues, and name
+of the repository's owner, and the list of topics. By using the \GH query language
 \cite{noauthor_understanding_nodate}, we applied the following query filter:
 \begin{equation}
 \small
 Qf = "is:featured \; topic:t \; stars:100..80000 \; topics:>=2"
 \end{equation}%
-to consider only \GH repositories having a number of stars between 100 and 
-80,000, and tagged with at least two topics. We set such a filter after several 
-query refinements, as the chosen featured topics have different degree of 
-popularity.~For instance, the most starred project of the \emph{3d} topic has 
-around 53,000 stars; reversely, some other topics have top rank projects that 
-do not reach 1,000 stars. Thus, we tried to select the best query filter to 
-include a sufficient number of repository for each topic. %\PN{@Claudio: For 
-%this we need some references to explain why such the numbers are selected}. 
-%\CDS{The query comes from empirical evaluation as stated above}
-By imposing such a filter, we tried to avoid skewed repositories that may not have an informative \RM or projects that are already abandoned for a long time.
-%\PN{@Claudio: references needed}. 
+to consider only \GH repositories having a number of stars between 100 and
+80,000, and tagged with at least two topics. We set such a filter after several
+query refinements, as the chosen featured topics have a different degree of
+popularity.~For instance, the most starred project of the \emph{3d} topic has
+around 53,000 stars; reversely, some other topics have top rank projects that
+do not reach 1,000 stars. Thus, we tried to select the best query filter to
+include a sufficient number of repository for each topic.
+We also impose an additional filter on the topics frequencies, to prune unpopular ones from the dataset. We made this choice as our boundaries include also non-featured topics in the comparison.
+
+
+
+GitHub developers use stars as a voting mechanism to
+foster the popularity of a certain project \cite{}. Through this
+system, each user can support her/his favorite projects available
+on the platform. 
 Forking is another index related to the quality of the project. This feature is 
 typically employed as a starting point for a new 
 project~\cite{Jiang:2017:WDF:3042021.3042043}. Furthermore, there is a strong 
