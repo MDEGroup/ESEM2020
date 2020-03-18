@@ -262,8 +262,10 @@ We use the Wilcoxon ranked sum test (considering one data point for each fold of
 \subsection{Research Questions} \label{sec:ResearchQuestions}
 By performing the evaluation, we aim at addressing the following research questions:
 \begin{itemize}
-\item[--] RQ1: How does the variation of training data impact on the prediction performance? To answer this question, we varied the dimension of the dataset to include more training data. In particular, we assess the quality of three different datasets to find out the best one in terms of success rate.
-\item[--] RQ2: Is the approach able to provide consistent recommendations? We compute the metrics given in Section~\ref{sec:methodology-metric} to measure the relevance of our suggested topics considering the distribution of the considered repositories.
+\item[--] \rqfirst To answer this question, we investigate different configurations to find the best one. In particular, we variate the number of input topics and the number of neighbors 
+\item[--] \rqsecond We compute the metrics given in Section~\ref{sec:methodology-metric} to compare the two mentioned approaches and report the results
+\item[--] \rqthird As the two approaches have a completely different internal structure, we are interested in investigating the reasons behind such quality variation
+\item[--] \rqfourth From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances
 \end{itemize}
 %\color{blue} \LR \cite{6671293}
 %the quality metric since 

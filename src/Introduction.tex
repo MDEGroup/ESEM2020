@@ -21,7 +21,8 @@ based on information retrieval techniques \cite{noauthor_topic_nodate}.
 Although the mechanism works well so far and it is fully integrated with \GH, in our opinion there is still some room for improvement, e.g., in terms of the variety
 of the suggested topics, novel data analysis techniques, and the investigation of new recommendation strategies.
 
-We have already faced this problem in our previous work \cite{MNB} by using a machine learning approach to recommend relevant topics given a README file of a repository. In this initial attempt, we are able to recommend only \emph{featured} topics, a curated list of them provided by Github \cite{}.
+We have already faced this problem in our previous work \cite{MNB} by using a machine learning approach to recommend relevant topics given a README file of a repository. To this end, we exploited Multinomial Na\"ive Bayesian 
+(MNB) network \footnote{For the sake of presentation, we refer to this work as MNB network throughout the paper} to recommend only \emph{featured} topics, a curated list of them provided by Github \cite{}. We limit the boundaries of this initial attempt due the internal construction of the model itself.
 
 In this work, we propose to extend the set of recommended items to non-featured topics by exploiting collaborative filtering, a widely spread technique in the recommendation system domain \cite{Schafer:2007:CFR:1768197.1768208}. Given an initial set of topics coming from a \GH project, we use repository-topic matrixes to suggest relevant topics.
 The work gives the following contributions:
