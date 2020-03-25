@@ -48,7 +48,7 @@ In this section, we describe \CT that provides developers with relevant topics f
 
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=\linewidth]{figs/CrossRec.pdf}
+	\includegraphics[width=\linewidth]{figs/CFTop.pdf}
 	\caption{Overview of the \CT Architecture.}% [??Rename Similarity Computation with Similarity Calculator]
 	\label{fig:CrossRecArchitecture}
 \end{figure}
@@ -75,7 +75,7 @@ implements a \emph{collaborative-filtering} technique
 topics.~Finally, the final list of topics is sent back to the developer.
 
 The aforementioned components are singularly described in the next sections.
-. % shown in Fig. \ref{fig:CrossRecArchitecture} \cite{CROSSREC-DATA}
+ % shown in Fig. \ref{fig:CrossRecArchitecture} \cite{CROSSREC-DATA}
 
 %\vspace{-.2cm}
 %analyzes the input to 
@@ -83,6 +83,8 @@ The aforementioned components are singularly described in the next sections.
 %. The data collected from OSS repositories is converted into a matrix 
 %A matrix of this type is very sparse since most users give ratings to a small amount of items. 
 \subsection{Topic filter} 
+As a preprocessing, we filter the initial set of topics using their frequencies counted on the entire \GH dataset. We remove irrelevant topics to reduce the noise in the prediction phase. Through the \emph{cut-off} value, we progressively increase the frequency threshold to evaluate possible impacts on overall performances. As stated in \cite{repo-topix}, this preprocessing can improve the final results, thus we decide to apply it as a first step. 
+
 
 
 \subsection{Graph Encoder} \label{sec:DataEncoder}
