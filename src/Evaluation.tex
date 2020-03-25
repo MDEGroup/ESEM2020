@@ -14,14 +14,14 @@ This section describes the planning of our evaluation, having the {\em goal} of 
 %We also exploited 
 %was also exploited 
 
-\begin{figure}[h!]
+\begin{figure*}[h!]
 	\centering
-	\includegraphics[width=\linewidth]{figs/EvaluationProcess.pdf}
+	\includegraphics[width=0.8\linewidth]{figs/evaluationCF.pdf}
 	%\vspace{-.3cm}
 	\caption{Evaluation Process.}
 	\label{fig:EvaluationProcess}
 	\vspace{-.3cm}
-\end{figure}
+\end{figure*}
 
 The evaluation process is depicted in Fig.~\ref{fig:EvaluationProcess} and it consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}. We start with the \emph{Data Preparation} phase by creating a dataset from  GitHub projects. %Such datasets are used to assess the performances of \CR, but also to evaluate two of the baselines, \ie \LF and \LC. 
 The dataset is then split into training and testing sets.  In the \emph{Recommendation} phase, given a project in the testing set, a portion of its topics is extracted as ground-truth data, and the remaining is used as query to compute similarity and recommendations. Finally, by the \emph{Outcome Evaluation} phase, we compare the recommendation results with those stored as ground-truth data to compute the quality metrics. All the aforementioned phases are  detailed in the rest of this section.
@@ -32,7 +32,7 @@ The dataset is then split into training and testing sets.  In the \emph{Recommen
 
 %\color{blue}
 
-To evaluate the approach, we reuse the same dataset employed for our previous work \cite{MNB_data}.
+To evaluate the approach, we reuse the same dataset employed for the \MNB available here \cite{MNB_data}.
 
 By means of the GitHub API \cite{githubAPI} we \emph{randomly} collected a dataset consisting of $6,258$ repositories that use 15757 topics.
 Using a project's name as a query, we can retrieve different types of information such as commits, issues, and name
@@ -76,7 +76,7 @@ repositories~\cite{borges_popularity_2017, borges_predicting_2016}.
 
 
 %\color{blue}
-	\subsection{Evaluation Methodology and Metrics’ Definition}\label{sec:methodology-metric}
+	\subsection{Metrics’ Definition}\label{sec:methodology-metric}
 To assess the performance of \CR proposed approach, we applied ten-fold cross-validation, considering every time $9$ folds (each one contains $625$ projects) for training and the remaining one for testing. 
 	For every testing project \emph{p}, a half of its topics are \emph{randomly} 
 	taken out and saved as ground truth data, let us call them \emph{GT(p)}, which will be used to validate the recommendation outcomes. The other half are used 
@@ -169,89 +169,89 @@ recall@N = \frac{ \left |  match_{N}(p) \right | }{\left | GT(p) \right |}
 \end{equation}
 %\vspace{-.1cm}
 
-\paragraph{\textbf{Sales Diversity}} This term originates from the business domain where it is important to 
-improve the coverage as also the distribution of products across customers, thereby increasing the 
-chance that products will get sold by being introduced 
-\cite{Vargas_sales_diversity_14}. Similarly, in the context 
-of topic recommendation, \emph{sales diversity} indicates the ability of the system to suggest to 
-projects as much topics as possible, as well as to disperse the concentration among all items, 
-instead of focusing only on a specific set of topics \cite{Robillard:2014:RSS:2631387}. 
-In the scope of this paper, \emph{catalog coverage} and \emph{entropy} are utilized to gauge 
-\emph{sales diversity}. Let $L$ be the set of all 
-topic available for recommendation, $\#rec(l)$ denote the number of projects getting library 
-$l$ as a recommendation, \ie $\#rec(l)=count_{p \in P}( \left |   REC_{N}(p)  \ni l  \right |  )$, $l \in L $, and $total$ denote the number of recommended items across all projects.
-%Nguyen:2015:CRV:2942298.2942305,
-%====================================================================================================================================
-%.In the context of library recommendation, Sales diversity measures the ability of a recommender system to expose all libraries to projects so that can be recommended to a project
-%, and \emph{Gini Index}. 
-%. , \emph{entropy} is defined as follows
-%To increase the possibility that all products can be sold by being recommended. 
-%Sales diversity is defined as the statistical distribution of market shares of all products that are offered by an online vendor. The ability of a recommender system to provide its users with.
-%\emph{Sales Diversity} means the ability of the system to. \emph{Sales Diversity} represents an important quality dimension for both business and user perspective, since improving the coverage of the items catalog and of the distributions of the items across the users may increase the sales and the user satisfaction \cite{}. %The term is borrowed from business where it is important to improve the range of products as well as the distribution of the products across the customers. Similarly in the context of library recommendation, 
-%Sales diversity means that all or most products in the business catalog get purchased to some extent, rather than having sales concentrating around a few items. Sales diversity gets meaning in the context of recommendation in the sense that recommending a product exposes it to being sold. By link-ing recommendation to purchase in the analysis of diversity, “sales diversity” becomes a shorthand for “promoting sales diversity”.\cite{Vargas_sales_diversity_14}
-%Catalog Coverage: and it is given below: %measures the ability of a recommender system to recommend as many items as possible. %Catalog coverage is the proportion of available items that the recommendation system recommends to users \cite{robillard_recommendation_2014}.
-%====================================================================================================================================
+%\paragraph{\textbf{Sales Diversity}} This term originates from the business domain where it is important to 
+%improve the coverage as also the distribution of products across customers, thereby increasing the 
+%chance that products will get sold by being introduced 
+%\cite{Vargas_sales_diversity_14}. Similarly, in the context 
+%of topic recommendation, \emph{sales diversity} indicates the ability of the system to suggest to 
+%projects as much topics as possible, as well as to disperse the concentration among all items, 
+%instead of focusing only on a specific set of topics \cite{Robillard:2014:RSS:2631387}. 
+%In the scope of this paper, \emph{catalog coverage} and \emph{entropy} are utilized to gauge 
+%\emph{sales diversity}. Let $L$ be the set of all 
+%topic available for recommendation, $\#rec(l)$ denote the number of projects getting library 
+%$l$ as a recommendation, \ie $\#rec(l)=count_{p \in P}( \left |   REC_{N}(p)  \ni l  \right |  )$, $l \in L $, and $total$ denote the number of recommended items across all projects.
+%%Nguyen:2015:CRV:2942298.2942305,
+%%====================================================================================================================================
+%%.In the context of library recommendation, Sales diversity measures the ability of a recommender system to expose all libraries to projects so that can be recommended to a project
+%%, and \emph{Gini Index}. 
+%%. , \emph{entropy} is defined as follows
+%%To increase the possibility that all products can be sold by being recommended. 
+%%Sales diversity is defined as the statistical distribution of market shares of all products that are offered by an online vendor. The ability of a recommender system to provide its users with.
+%%\emph{Sales Diversity} means the ability of the system to. \emph{Sales Diversity} represents an important quality dimension for both business and user perspective, since improving the coverage of the items catalog and of the distributions of the items across the users may increase the sales and the user satisfaction \cite{}. %The term is borrowed from business where it is important to improve the range of products as well as the distribution of the products across the customers. Similarly in the context of library recommendation, 
+%%Sales diversity means that all or most products in the business catalog get purchased to some extent, rather than having sales concentrating around a few items. Sales diversity gets meaning in the context of recommendation in the sense that recommending a product exposes it to being sold. By link-ing recommendation to purchase in the analysis of diversity, “sales diversity” becomes a shorthand for “promoting sales diversity”.\cite{Vargas_sales_diversity_14}
+%%Catalog Coverage: and it is given below: %measures the ability of a recommender system to recommend as many items as possible. %Catalog coverage is the proportion of available items that the recommendation system recommends to users \cite{robillard_recommendation_2014}.
+%%====================================================================================================================================
+%%
 %
-
-\emph{Catalog coverage} measures the percentage of topic being recommended to projects:%\cite{Nguyen:2015:ESP:2740908.2742141}: %indicates how well a recommender system is able to: %expose libraries to projects: 
-%\vspace{-.2cm}
-
-\begin{equation}\label{eqn:Coverage}
-%coverage = \frac{\left | \cup_{p\in P} \left [  \cup_{r=1}^{N} REC_{r}(p) \right ] \right | }{\left | L \right |} 
-coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | L \right |} 
-\end{equation}	
-
-\emph{Entropy} evaluates if the recommendations are concentrated on only a small set or spread across a wide range of topic:% \cite{Ragone:2017:SLF:3019612.3019837}: %measures the distribution of the recommendations across all the items, showing whether the recommendations are concentrated on a few items or are better distributed:
-%\vspace{-.1cm}
-\begin{equation}\label{eqn:Entropy}
-entropy = -\sum_{l \in L}\left ( \frac{\#rec(l)}{total} \right )ln \left ( \frac{\#rec(l)}{total} \right )
-\end{equation}
-
-%with this definition, a lower entropy value indicates a better distribution and vice versa.	
-
-%\item Gini Index.
-
-%have never been recommended
-%Expected popularity complement (EPC). We apply the population-based item novelty evaluation metric proposed in [31] which is called. to measure the ability of a recommender system to recommend items from the long tail 
-%As Anderson [4] stated, some businesses or economic models present a Long tail effect, in which a few of the most popular items are extremely popular, while the rest – the long tail – is much less known. Promoting the recommendation of items in this long tail may offer benefits for both users and the business behind the recommender system \cite{Vargas_sales_diversity_14}.
-
-%The Long Tail theory suggests that, as the Internet makes distribution easier and technology systems allow consumers to become aware of more obscure products, demand will shift from the most popular products at the “head” of a demand curve to the aggregate power of a long “tail” made up of demand for many different niche products
-% Fig. \ref{fig:NumOfPros} reflects the long tail effect.  we can see the long tail effect
-
-%can recommend unpopular libraries, \ie those that are much less exposed to projects
-%. 
-
-\paragraph{\textbf{Novelty}} In business, the \emph{long tail effect} is the fact that a few of the most popular products are extremely popular, while the rest, so-called the long tail, is obscure to customers \cite{Anderson:2006:LTW:1197299}. Recommending products in the long tail is beneficial not only to customers but also to business owners \cite{Vargas_sales_diversity_14}. 
-%\color{blue}
-Given that the logarithmic scale is used instead of the decimal one on the x-Axis of Fig.~\ref{fig:NumOfLibsD1}, Fig.~\ref{fig:NumOfLibsD2}, and Fig.~\ref{fig:NumOfLibsD3}, the long tail effect can be spotted there as a few topic are very popular by being included in several projects, whereas most of the topics appear in fewer projects. Specifically, in \code{D1} just $15$ topics are used by more than $200$ projects, whereas $14,876$ topics are used by no more than $10$ repositories. \JDR{CHANGE VALUES}In \code{D2} there are $876$ libraries, accounting for $63.85\%$ of the total number, being used by no more than $10$ projects. Similarly, in \code{D3}, $88.24\%$ of the dependencies corresponding to $49,799$ libraries are used by no more than $10$ projects. %\color{black} %(the long tail).
-When recommending a library, \emph{novelty} measures if a system is able to 
-pluck libraries from the ``long tail'' to expose them to projects. This might 
-help developers come across \emph{serendipitous} libraries 
-\cite{Ge:2010_catalog_coverage}, \eg those that are seen by chance but turn to 
-be useful for their current project. To quantify \emph{novelty}, we utilize 
-\emph{expected popularity complement} (EPC) which is defined in the following 
-equation \cite{Vargas_sales_diversity_14}: %This might help developers find 
-%\emph{serendipitous} libraries, \eg those that are seen by chance but turn to 
-%be useful for their current project. %Niemann:2013:NCF:2487575.2487656,
-%\vspace{-.1cm}
-
-\begin{equation}\label{eqn:EPC}
-EPC@N = \frac{\sum_{p\in P}\sum_{r=1}^{N} \frac{ rel(p,r)* \left [ 1-pop(REC_{r}(p)) \right ]}{log_{2}(r+1)} }{\sum_{p\in P}\sum_{r=1}^{N} \frac{rel(p,r)}{log_{2}(r+1)}}
-\end{equation}
-
-\noindent
-where $rel(p,r)=\left |  GT(p) \bigcap  REC_{r}(p) \right |$ represents the relevance of the library at the $r$ position of the \emph{top-N} list to project $p$, $rel(p,r)$ can either be $0$ or $1$; $pop(REC_{r}(p))$ is the popularity of the library at the position $r$ in the \emph{top-N} recommended list. It is computed as the ratio between the number of projects that receive $REC_{r}(p)$ as a recommendation and the number of projects that receive the most ever recommended library as a recommendation. Equation \ref{eqn:EPC} implies that the more unpopular libraries a system recommends, the higher the EPC value it obtains and vice versa. %It is expected that a recommender system can recommend as much as possible items in the long tail.
-%In this sense, a system that recommends items
-
-%EPC: read this paper: Improving Sales Diversity by Recommending Users to Items
-
-%The popularity pop(i) is calculated based on the times the item has been rated so far, hence, the item’s popularity is the ratio between the number of its ratings Rat(i) and the number of ratings of the most rated item in the item set L.
-
-
-
-%Furthermore, we investigate the possibility that the outcomes are obtained by chance. A difference between two systems, \ie \LR and \CR, is considered to be significant if it is unlikely to occur given the null hypothesis. We start with the null hypothesis that there are no distinctions between the performance of both systems. 
-
-We use the Wilcoxon ranked sum test (considering one data point for each fold of the cross-validation) with a significance level of $\alpha=5\%$, and the Cliff's delta ($d$) effect size measure \cite{Cliff:2005}. Due to multiple tests being performed, we adjust $p$-values using the Holm's correction \cite{holm}.
+%\emph{Catalog coverage} measures the percentage of topic being recommended to projects:%\cite{Nguyen:2015:ESP:2740908.2742141}: %indicates how well a recommender system is able to: %expose libraries to projects: 
+%%\vspace{-.2cm}
+%
+%\begin{equation}\label{eqn:Coverage}
+%%coverage = \frac{\left | \cup_{p\in P} \left [  \cup_{r=1}^{N} REC_{r}(p) \right ] \right | }{\left | L \right |} 
+%coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | L \right |} 
+%\end{equation}	
+%
+%\emph{Entropy} evaluates if the recommendations are concentrated on only a small set or spread across a wide range of topic:% \cite{Ragone:2017:SLF:3019612.3019837}: %measures the distribution of the recommendations across all the items, showing whether the recommendations are concentrated on a few items or are better distributed:
+%%\vspace{-.1cm}
+%\begin{equation}\label{eqn:Entropy}
+%entropy = -\sum_{l \in L}\left ( \frac{\#rec(l)}{total} \right )ln \left ( \frac{\#rec(l)}{total} \right )
+%\end{equation}
+%
+%%with this definition, a lower entropy value indicates a better distribution and vice versa.	
+%
+%%\item Gini Index.
+%
+%%have never been recommended
+%%Expected popularity complement (EPC). We apply the population-based item novelty evaluation metric proposed in [31] which is called. to measure the ability of a recommender system to recommend items from the long tail 
+%%As Anderson [4] stated, some businesses or economic models present a Long tail effect, in which a few of the most popular items are extremely popular, while the rest – the long tail – is much less known. Promoting the recommendation of items in this long tail may offer benefits for both users and the business behind the recommender system \cite{Vargas_sales_diversity_14}.
+%
+%%The Long Tail theory suggests that, as the Internet makes distribution easier and technology systems allow consumers to become aware of more obscure products, demand will shift from the most popular products at the “head” of a demand curve to the aggregate power of a long “tail” made up of demand for many different niche products
+%% Fig. \ref{fig:NumOfPros} reflects the long tail effect.  we can see the long tail effect
+%
+%%can recommend unpopular libraries, \ie those that are much less exposed to projects
+%%. 
+%
+%\paragraph{\textbf{Novelty}} In business, the \emph{long tail effect} is the fact that a few of the most popular products are extremely popular, while the rest, so-called the long tail, is obscure to customers \cite{Anderson:2006:LTW:1197299}. Recommending products in the long tail is beneficial not only to customers but also to business owners \cite{Vargas_sales_diversity_14}. 
+%%\color{blue}
+%Given that the logarithmic scale is used instead of the decimal one on the x-Axis of Fig.~\ref{fig:NumOfLibsD1}, Fig.~\ref{fig:NumOfLibsD2}, and Fig.~\ref{fig:NumOfLibsD3}, the long tail effect can be spotted there as a few topic are very popular by being included in several projects, whereas most of the topics appear in fewer projects. Specifically, in \code{D1} just $15$ topics are used by more than $200$ projects, whereas $14,876$ topics are used by no more than $10$ repositories. \JDR{CHANGE VALUES}In \code{D2} there are $876$ libraries, accounting for $63.85\%$ of the total number, being used by no more than $10$ projects. Similarly, in \code{D3}, $88.24\%$ of the dependencies corresponding to $49,799$ libraries are used by no more than $10$ projects. %\color{black} %(the long tail).
+%When recommending a library, \emph{novelty} measures if a system is able to 
+%pluck libraries from the ``long tail'' to expose them to projects. This might 
+%help developers come across \emph{serendipitous} libraries 
+%\cite{Ge:2010_catalog_coverage}, \eg those that are seen by chance but turn to 
+%be useful for their current project. To quantify \emph{novelty}, we utilize 
+%\emph{expected popularity complement} (EPC) which is defined in the following 
+%equation \cite{Vargas_sales_diversity_14}: %This might help developers find 
+%%\emph{serendipitous} libraries, \eg those that are seen by chance but turn to 
+%%be useful for their current project. %Niemann:2013:NCF:2487575.2487656,
+%%\vspace{-.1cm}
+%
+%\begin{equation}\label{eqn:EPC}
+%EPC@N = \frac{\sum_{p\in P}\sum_{r=1}^{N} \frac{ rel(p,r)* \left [ 1-pop(REC_{r}(p)) \right ]}{log_{2}(r+1)} }{\sum_{p\in P}\sum_{r=1}^{N} \frac{rel(p,r)}{log_{2}(r+1)}}
+%\end{equation}
+%
+%\noindent
+%where $rel(p,r)=\left |  GT(p) \bigcap  REC_{r}(p) \right |$ represents the relevance of the library at the $r$ position of the \emph{top-N} list to project $p$, $rel(p,r)$ can either be $0$ or $1$; $pop(REC_{r}(p))$ is the popularity of the library at the position $r$ in the \emph{top-N} recommended list. It is computed as the ratio between the number of projects that receive $REC_{r}(p)$ as a recommendation and the number of projects that receive the most ever recommended library as a recommendation. Equation \ref{eqn:EPC} implies that the more unpopular libraries a system recommends, the higher the EPC value it obtains and vice versa. %It is expected that a recommender system can recommend as much as possible items in the long tail.
+%%In this sense, a system that recommends items
+%
+%%EPC: read this paper: Improving Sales Diversity by Recommending Users to Items
+%
+%%The popularity pop(i) is calculated based on the times the item has been rated so far, hence, the item’s popularity is the ratio between the number of its ratings Rat(i) and the number of ratings of the most rated item in the item set L.
+%
+%
+%
+%%Furthermore, we investigate the possibility that the outcomes are obtained by chance. A difference between two systems, \ie \LR and \CR, is considered to be significant if it is unlikely to occur given the null hypothesis. We start with the null hypothesis that there are no distinctions between the performance of both systems. 
+%
+%We use the Wilcoxon ranked sum test (considering one data point for each fold of the cross-validation) with a significance level of $\alpha=5\%$, and the Cliff's delta ($d$) effect size measure \cite{Cliff:2005}. Due to multiple tests being performed, we adjust $p$-values using the Holm's correction \cite{holm}.
 
 %We investigate the possibility that the outcomes are obtained by chance. A difference between two systems is considered to be significant if it is unlikely to occur given the null hypothesis. We start with the null hypothesis that there are no distinctions between the performance of both systems. Given that the \emph{p-value} is lower than a predefined threshold, the null hypothesis can be rejected  \cite{Shani2011}. We chose a \emph{p-value} of $0.05$ or $5 \times e^{-2}$ as the significance level since the value has been chosen in several studies \cite{Niu:2017:AUP:3104915.3104977}.
 %In the next section, the evaluation's outcomes are analyzed and the answers for such research questions are given.
@@ -263,7 +263,7 @@ We use the Wilcoxon ranked sum test (considering one data point for each fold of
 By performing the evaluation, we aim at addressing the following research questions:
 \begin{itemize}
 \item[--] \rqfirst To answer this question, we investigate different configurations to find the best one. In particular, we variate the number of input topics and the number of neighbors 
-\item[--] \rqsecond We compute the metrics given in Section~\ref{sec:methodology-metric} to compare the two mentioned approaches and report the results
+\item[--] \rqsecond We compute the metrics given in Section~\ref{sec:methodology-metric} to evaluate different parameter settings
 \item[--] \rqthird As the two approaches have a completely different internal structure, we are interested in investigating the reasons behind such quality variation
 \item[--] \rqfourth From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances
 \end{itemize}
