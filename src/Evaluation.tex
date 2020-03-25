@@ -14,17 +14,18 @@ This section describes the planning of our evaluation, having the {\em goal} of 
 %We also exploited 
 %was also exploited 
 
-\begin{figure*}[h!]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\linewidth]{figs/evaluationCF.pdf}
+	\includegraphics[width=\linewidth]{figs/evaluationCF.pdf}
 	%\vspace{-.3cm}
 	\caption{Evaluation Process.}
 	\label{fig:EvaluationProcess}
 	\vspace{-.3cm}
-\end{figure*}
+\end{figure}
 
-The evaluation process is depicted in Fig.~\ref{fig:EvaluationProcess} and it consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}. We start with the \emph{Data Preparation} phase by creating a dataset from  GitHub projects. %Such datasets are used to assess the performances of \CR, but also to evaluate two of the baselines, \ie \LF and \LC. 
-The dataset is then split into training and testing sets.  In the \emph{Recommendation} phase, given a project in the testing set, a portion of its topics is extracted as ground-truth data, and the remaining is used as query to compute similarity and recommendations. Finally, by the \emph{Outcome Evaluation} phase, we compare the recommendation results with those stored as ground-truth data to compute the quality metrics. All the aforementioned phases are  detailed in the rest of this section.
+The evaluation process is depicted in Fig.~\ref{fig:EvaluationProcess} and it consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}. We start with the \emph{Data Preparation} phase by creating a dataset from GitHub projects. This dataset is used to evaluate \CT, \MNB, and the combination of two. 
+ The dataset is then split into training and testing sets. The 
+\emph{Recommendation} phase follows three different flows, according to the required input and produced output of the three mentioned approaches. To enable \CT, we extract a portion of topics from a given testing project \ie the ground-truth part. The left part is used as a query to produce recommendations. As the \MNB uses the README file of a repository to predict a set of topics, this doesn't require any topic as input. Thus, the approach encodes the document relevant information in vectors using the TF-IDF weighting scheme. This encoded data is used to feed the network that delivers a set of topics. These recommendations are used in the entangled approach, in which \CT is fed with the \MNB suggested topics. All the results are assessed in the \emph{Outcome Evaluation} phase, which compares the recommendation results with those stored as ground-truth data to compute the quality metrics. 
 
 
 \subsection{Dataset Extraction} \label{sec:Dataset}

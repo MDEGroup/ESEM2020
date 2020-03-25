@@ -44,71 +44,48 @@
 % to support OSS developers
 %====================================================================================================================================
 
-
-In this section we describe \CR, a system for providing developers with \GH topics related recommendations. More specifically, \CR is a \emph{recommender system} \cite{Aggarwal2016} that encodes the relationships among various OSS artifacts by means of a semantic graph and utilizes a collaborative filtering technique \cite{Schafer:2007:CFR:1768197.1768208} to recommend \GH topics. Such a technique has been originally developed for e-commerce systems to exploit the relationships among users and products to predict the missing ratings of prospective items \cite{Linden:2003:ARI:642462.642471}. The technique is based on the premise that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. Our approach exploits this premise to solve the problem of library recommendation \cite{Robillard:2014:RSS:2631387}. Instead of recommending goods or services to customers, we recommend third-party libraries to projects using an analogous mechanism: \emph{``if projects share some libraries in common, then they will probably share other common libraries.''} 
+In this section, we describe \CT that provides developers with relevant topics for \GH repositories. More specifically, \CT is a \emph{recommender system} \cite{Aggarwal2016} that encodes the relationships among different topics by means of a graph and utilizes a collaborative filtering technique \cite{Schafer:2007:CFR:1768197.1768208} to recommend \GH topics. Such a technique has been used mostly in the e-commerce domain to exploit the relationships among users and products to predict the missing ratings of recommended items \cite{Linden:2003:ARI:642462.642471}. The technique follows the assumption that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. Under the same premise, our tool aims to solve the problem of the reachability of a \GH repository given a set of topics. Instead of recommending goods or services to customers, we recommend a set of topics using an analogous mechanism: \emph{``if a user tags his project with some topics, then similar projects will probably contain common topics.''} 
 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{figs/CrossRec.pdf}
-	\caption{Overview of the \CR Architecture.}% [??Rename Similarity Computation with Similarity Calculator]
+	\caption{Overview of the \CT Architecture.}% [??Rename Similarity Computation with Similarity Calculator]
 	\label{fig:CrossRecArchitecture}
 \end{figure}
 
 %
-To this end, the architecture of \CR is shown in Fig. \ref{fig:CrossRecArchitecture}, and consists of the software components supporting the following activities:
+To this end, the architecture of \CT is shown in Fig. \ref{fig:CrossRecArchitecture}, and consists of the software components supporting the following activities:
 
 \begin{itemize}
-	\item \textit{Representing the relationships} among projects and topics retrieved from 
-	existing repositories;
-	\item \textit{Computing similarities} to find projects, which are similar to that under 
-	development; and
-	\item \textit{Recommending topics} to projects using a collaborative-filtering technique.
+\item \textit{Representing the relationships} among projects and topics retrieved from existing repositories;
+\item \textit{Computing similarities} to find projects, which are similar to that under development; and
+\item \textit{Recommending topics} to projects using a collaborative-filtering technique.
 \end{itemize}
 
 
-%\emph{mathematically computable format} 
+%\emph{mathematically computable format}
 
-In a typical usage scenario of \CR, we assume that a developer is creating a new system, in which she has already included some topics, or else is evolving an existing system.
-As shown in Fig. \ref{fig:CrossRecArchitecture}, the developer interacts with the system by sending a request for recommendations \circled{1}. 
-Such a request contains a list of topics that are already included in the project the developer is working on. 
-The \code{Data Encoder} \circled{4} collects \emph{background data} from OSS 
-repositories \circled{5}, represents them in a graph, which is then used as a 
-base for other components of \CR. The \code{Similarity Calculator}  
-module \circled{2} computes similarities among projects to find the most 
-similar ones to the given project. The \code{Recommendation Engine} \circled{3} 
-implements a \emph{collaborative-filtering} technique 
-\cite{Aggarwal2016},\cite{Zhao:2010:UCR:1748610.1749278}, it selects top-$k$ similar  projects, and performs computation to generate a ranked list of \emph{top-N} 
-topics.~Finally, the recommendations \circled{6} are sent back to the developer. 
+In a typical usage scenario of \CT, we assume that a developer is creating a new \GH repository, in which she has already included some topics to improve its reachability.
+As shown in Fig. \ref{fig:CrossRecArchitecture}, the developer interacts with the system by demanding for recommendations.
+Such a request contains a list of topics that are already included in the project the developer is working on. As a preprocessing phase, we apply a \emph{Topic filter} according to their frequencies \ie the measured occurrences over all repositories in the initial dataset. 
+The \code{Graph Encoder} represents
+the mentioned repositories in the graph format. This is a preparatory phase for the next steps of the recommendation process. The \code{Similarity Calculator} module computes similarities among topics to discover similar ones to recommend. The \code{Recommendation Engine} 
+implements a \emph{collaborative-filtering} technique
+\cite{Aggarwal2016},\cite{Zhao:2010:UCR:1748610.1749278}, it selects top-$k$ similar topics, and performs computation to generate a ranked list of \emph{top-N}
+topics.~Finally, the final list of topics is sent back to the developer.
 
-Background data has been collected \GH \cite{github}. The 
-current version of \CR \cite{appendix} supports data extraction from 
-GitHub, even though the support for additional platforms is under development.
-
-%\revised{
-%It is worth noting that \CR recommends a library, both with or without a version, depending on the availability of the training data. In this way, our proposed approach transcends the limitation of the baselines considered in this paper, \ie~\LF, \LR and \LC. Such approaches are not capable of recommending a specific version of a library.}
-
-%it does not recommend a specific version of such a library. Recommending library versions will be the subject of our future work.
-
-
-%\footnote{To facilitate future research, we will publish the \CR source 
-%code together with the evaluation dataset in the camera-ready version}
-
-
-
-
-%\textbf{[??? Add some words about the implementation of \CR and add the reference]}
-
-In the following, the components \code{Data Encoder}, \code{Simila\-rity Calculator}, and \code{Recommendat\-ion Engine} are singularly described. % shown in Fig. \ref{fig:CrossRecArchitecture} \cite{CROSSREC-DATA}
+The aforementioned components are singularly described in the next sections.
+. % shown in Fig. \ref{fig:CrossRecArchitecture} \cite{CROSSREC-DATA}
 
 %\vspace{-.2cm}
 %analyzes the input to 
 %CrossRec represents the data collected from OSS repositories.
 %. The data collected from OSS repositories is converted into a matrix 
 %A matrix of this type is very sparse since most users give ratings to a small amount of items. 
+\subsection{Topic filter} 
 
 
-
-\subsection{Data Encoder} \label{sec:DataEncoder}
+\subsection{Graph Encoder} \label{sec:DataEncoder}
 
 A recommender system for online services is based on three key components, namely \emph{users}, \emph{items}, and 
 \emph{ratings} \cite{Sarwar:2001:ICF:371920.372071},\cite{DBLP:conf/rweb/NoiaO15}. A \emph{user-item ratings matrix} is built 
@@ -187,8 +164,8 @@ For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_
 
 \subsection{Similarity Calculator} \label{sec:SimilarityCalculator}
 
-The \code{Recommendation Engine} of \CR works by relying on an analogous user-item ratings matrix. To provide 
-inputs for this module, the first task of \CR is to perform similarity computation on its input data to find the 
+The \code{Recommendation Engine} of \CT works by relying on an analogous user-item ratings matrix. To provide 
+inputs for this module, the first task of \CT is to perform similarity computation on its input data to find the 
 most similar projects to a given project. In this respect, the ability to compute the similarities among projects has 
 an effect on the recommendation outcomes.~Nonetheless, computing similarities among software systems is considered to 
 be a difficult task \cite{McMillan:2012:DSS:2337223.2337267}. In addition, the diversity of artifacts in OSS 
