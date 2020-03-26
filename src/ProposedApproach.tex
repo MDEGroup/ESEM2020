@@ -82,7 +82,7 @@ The aforementioned components are singularly described in the next sections.
 %CrossRec represents the data collected from OSS repositories.
 %. The data collected from OSS repositories is converted into a matrix 
 %A matrix of this type is very sparse since most users give ratings to a small amount of items. 
-\subsection{Topic filter} 
+\subsection{Topic filter}  \label{sec:filter}
 As a preprocessing, we filter the initial set of topics using their frequencies counted on the entire \GH dataset. We remove irrelevant topics to reduce the noise in the prediction phase. Through the \emph{cut-off} value, we progressively increase the frequency threshold to evaluate possible impacts on overall performances. As stated in \cite{repo-topix}, this preprocessing can improve the final results, thus we decide to apply it as a first step. 
 
 
@@ -314,46 +314,84 @@ where $n$ is the cardinality of the set of topics that $p$ and $q$ share in comm
 
 %A collaborative-filtering recommender system suggests products that customers similar to the customer being considered have already purchased. 
 
-\subsection{Recommendation Engine} \label{sec:RecommendationEngine}
-\PN{Please reprhare this section}
-The representation using a user-item ratings matrix allows for the computation of missing ratings \cite{Aggarwal2016},\cite{DBLP:conf/rweb/NoiaO15}. Depending on the availability of data, there are two main ways to compute the unknown ratings, namely \emph{content-based} \cite{Pazzani2007} and \emph{collaborative-filtering} \cite{Miranda:2008:ICF:1486927.1487083} recommendation techniques. The former exploits the relationships among items to predict the most similar items. The latter computes the ratings by taking into account the set of items rated by similar customers. There are two main types of collaborative-filtering recommendation: \emph{user-based} \cite{Zhao:2010:UCR:1748610.1749278} and \emph{item-based} \cite{Sarwar:2001:ICF:371920.372071} techniques. As their names suggest, the user-based technique computes missing ratings by considering the ratings collected from similar users. Instead, the item-based technique performs the same task by using the similarities among items \cite{Cremonesi:2008:EMC:1468165.1468327}.
 
-In the context of \CR, the term \emph{rating} is understood as the occurrence of a library in a project and computing missing ratings means to predict the inclusion of additional libraries. The project that needs prediction for library inclusion is called the \emph{active project}. By the matrix in Fig. \ref{fig:UserBasedCF}, $p$ is the active project and an asterisk ($*$) represents a known rating, either $0$ or $1$, whereas a question mark ($?$) represents an unknown rating and needs to be predicted.
+The representation using a user-item ratings matrix allows for the computation of missing scores \cite{Aggarwal2016},\cite{DBLP:conf/rweb/NoiaO15}. Depending on the availability of data, there are two main techniques to compute the unknown ratings, namely \emph{content-based} \cite{Pazzani2007} and \emph{collaborative-filtering} \cite{Miranda:2008:ICF:1486927.1487083} recommendation techniques. Focusing on the latter, this technique computes the ratings by taking into account the set of items rated by similar customers. There are two main types of collaborative-filtering recommendation: \emph{user-based} \cite{Zhao:2010:UCR:1748610.1749278} and \emph{item-based} \cite{Sarwar:2001:ICF:371920.372071} techniques. As their names suggest, the user-based technique computes missing ratings by considering the ratings collected from similar users. Instead, the item-based technique performs the same task by using the similarities among items \cite{Cremonesi:2008:EMC:1468165.1468327}.
 
-%Because of the above assumptions, the collaborative filtering algorithm is based on the comparison of one user’s behavior with other user’s behavior, to find his nearest neighbors, and according to his neighbor’s interests or preferences to predict his interests or preferences.
+In the context of \CT, the term \emph{rating} describes the appearance of a topic in a project and the employed collaborative filtering techniques aim to find additional similar topics. The project that needs prediction for topic suggestion is called the \emph{active project}. By the matrix in Fig. \ref{fig:UserBasedCF}, $p$ is the active project and an asterisk ($*$) represents a known rating, either $0$ or $1$, whereas a question mark ($?$) represents an unknown rating and needs to be predicted.
+
+
 
 \begin{figure}[t!]
-	\centering
-	%	\vspace{-.4cm}
-	\includegraphics[width=0.7\linewidth]{figs/UserBasedCF.pdf}
-	\vspace{-.4cm}
-	\caption{Computation of missing ratings using the user-based collaborative-filtering technique~\cite{Zhao:2010:UCR:1748610.1749278}.}% [?? In the previous version there was a rectangle including some of the rows. Isn't?]
-	\vspace{-.1cm}
-	\label{fig:UserBasedCF}
+\centering
+%	\vspace{-.4cm}
+\includegraphics[width=0.7\linewidth]{figs/UserBasedCF.pdf}
+\vspace{-.4cm}
+\caption{Computation of missing ratings using the user-based collaborative-filtering technique~\cite{Zhao:2010:UCR:1748610.1749278}.}% [?? In the previous version there was a rectangle including some of the rows. Isn't?]
+\vspace{-.1cm}
+\label{fig:UserBasedCF}
 \end{figure}
 
-%\CR employs a collaborative-filtering technique   based on the similar model applied in e-commerce systems
 
-Given the availability of the cross-relationships as well as the possibility to compute similarities among projects using the graph representation, we exploit the user-based collaborative-filtering technique as the engine for recommendation \cite{Linden:2003:ARI:642462.642471,Zhao:2010:UCR:1748610.1749278}. Given an active project $p$, the inclusion of libraries in $p$ can be deduced from projects that are similar to $p$. The process is summarized as follows: % \cite{Cacheda:2011:CCF:1921591.1921593}:
-%In particular, the user-based collaborative-filtering technique predicts a missing rating by considering the most similar projects to $p$. 
+Consider the mutual relationships between a project and its topics represented in a graph data structure, we exploit the user-based collaborative-filtering technique to enable the topic recommendation process \cite{Linden:2003:ARI:642462.642471,Zhao:2010:UCR:1748610.1749278}. Given an active project $p$, the inclusion of libraries in $p$ can be deduced from projects that are similar to $p$. The process is summarized as follows: 
 
-%%The engine first searches for similar projects and then computes missing ratings as a weighted average of the ratings of the items by projects .
-%According to [16, 15], item-based CF algorithms provide better performance and quality than user-based ones. Afterwards the unknown ratings are computed by considering the libraries included in these projects. In this paper, the user-based technique is utilized. 
-
-\begin{itemize} 	
-	\item Compute the similarities between the active project and all projects in the collection;
-	\item Select \emph{top-k} most similar projects; and %a subset of the users (neighborhood) according to their similarity with the active user;
-	\item Predict ratings by means of those collected from the most similar projects.
-\end{itemize} 
+\begin{itemize}
+\item Compute the similarities between the active project and all projects in the collection;
+\item Select \emph{top-k} most similar projects; and %a subset of the users (neighborhood) according to their similarity with the active user;
+\item Predict ratings by means of those collected from the most similar projects.
+\end{itemize}
 
 The rectangles in Fig. \ref{fig:UserBasedCF} imply that the row-wise relationships between the active project $p$ and the similar projects $q_1,q_2,q_3$ are exploited to compute the missing ratings for $p$. The following formula is used to predict if $p$ should include $l$, \ie~$p \ni l$~\cite{DBLP:conf/rweb/NoiaO15}: % the predicted value $r_{p,l}$ is computed
 %\vspace{-.2cm}
 \begin{equation} \label{eqn:Prediction}
-r_{p,l}=\overline{r_{p}}+\frac{\sum_{q \in topsim(p)}(r_{q,l}-\overline{r_{q}})\cdot sim(p,q) }{\sum_{q \in topsim(p)} sim(p,q) }  %\left |  P \right |  
+r_{p,l}=\overline{r_{p}}+\frac{\sum_{q \in topsim(p)}(r_{q,l}-\overline{r_{q}})\cdot sim(p,q) }{\sum_{q \in topsim(p)} sim(p,q) } %\left | P \right |
 \end{equation}
 
 \noindent
-where $\overline{r_{p}}$ and $\overline{r_{q}}$ are the mean of the ratings of $p$ and $q$, respectively; $q$ belongs to the set of \emph{top-k} most similar projects to $p$, denoted as $topsim(p)$; $sim(p,q)$ is the similarity between the active project and a similar project $q$, and it is computed using Equation \ref{eqn:VsmSim}. %For a testing project $p$, $\overline{r_{p}}$ is equal to $1$ since the ratings for all testing libraries are $1$. 
+where $\overline{r_{p}}$ and $\overline{r_{q}}$ are the mean of the ratings of $p$ and $q$, respectively; $q$ belongs to the set of \emph{top-k} most similar projects to $p$, denoted as $topsim(p)$; $sim(p,q)$ is the similarity between the active project and a similar project $q$, and it is computed using Equation \ref{eqn:VsmSim}. %For a testing project $p$, $\overline{r_{p}}$ is equal to $1$ since the ratings for all testing libraries are $1$.
+
+
+
+
+%\subsection{Recommendation Engine} \label{sec:RecommendationEngine}
+%\PN{Please reprhare this section}
+%The representation using a user-item ratings matrix allows for the computation of missing ratings \cite{Aggarwal2016},\cite{DBLP:conf/rweb/NoiaO15}. Depending on the availability of data, there are two main ways to compute the unknown ratings, namely \emph{content-based} \cite{Pazzani2007} and \emph{collaborative-filtering} \cite{Miranda:2008:ICF:1486927.1487083} recommendation techniques. The former exploits the relationships among items to predict the most similar items. The latter computes the ratings by taking into account the set of items rated by similar customers. There are two main types of collaborative-filtering recommendation: \emph{user-based} \cite{Zhao:2010:UCR:1748610.1749278} and \emph{item-based} \cite{Sarwar:2001:ICF:371920.372071} techniques. As their names suggest, the user-based technique computes missing ratings by considering the ratings collected from similar users. Instead, the item-based technique performs the same task by using the similarities among items \cite{Cremonesi:2008:EMC:1468165.1468327}.
+%
+%In the context of \CR, the term \emph{rating} is understood as the occurrence of a library in a project and computing missing ratings means to predict the inclusion of additional libraries. The project that needs prediction for library inclusion is called the \emph{active project}. By the matrix in Fig. \ref{fig:UserBasedCF}, $p$ is the active project and an asterisk ($*$) represents a known rating, either $0$ or $1$, whereas a question mark ($?$) represents an unknown rating and needs to be predicted.
+%
+%%Because of the above assumptions, the collaborative filtering algorithm is based on the comparison of one user’s behavior with other user’s behavior, to find his nearest neighbors, and according to his neighbor’s interests or preferences to predict his interests or preferences.
+%
+%\begin{figure}[t!]
+%	\centering
+%	%	\vspace{-.4cm}
+%	\includegraphics[width=0.7\linewidth]{figs/UserBasedCF.pdf}
+%	\vspace{-.4cm}
+%	\caption{Computation of missing ratings using the user-based collaborative-filtering technique~\cite{Zhao:2010:UCR:1748610.1749278}.}% [?? In the previous version there was a rectangle including some of the rows. Isn't?]
+%	\vspace{-.1cm}
+%	\label{fig:UserBasedCF}
+%\end{figure}
+%
+%%\CR employs a collaborative-filtering technique   based on the similar model applied in e-commerce systems
+%
+%Given the availability of the cross-relationships as well as the possibility to compute similarities among projects using the graph representation, we exploit the user-based collaborative-filtering technique as the engine for recommendation \cite{Linden:2003:ARI:642462.642471,Zhao:2010:UCR:1748610.1749278}. Given an active project $p$, the inclusion of libraries in $p$ can be deduced from projects that are similar to $p$. The process is summarized as follows: % \cite{Cacheda:2011:CCF:1921591.1921593}:
+%%In particular, the user-based collaborative-filtering technique predicts a missing rating by considering the most similar projects to $p$. 
+%
+%%%The engine first searches for similar projects and then computes missing ratings as a weighted average of the ratings of the items by projects .
+%%According to [16, 15], item-based CF algorithms provide better performance and quality than user-based ones. Afterwards the unknown ratings are computed by considering the libraries included in these projects. In this paper, the user-based technique is utilized. 
+%
+%\begin{itemize} 	
+%	\item Compute the similarities between the active project and all projects in the collection;
+%	\item Select \emph{top-k} most similar projects; and %a subset of the users (neighborhood) according to their similarity with the active user;
+%	\item Predict ratings by means of those collected from the most similar projects.
+%\end{itemize} 
+%
+%The rectangles in Fig. \ref{fig:UserBasedCF} imply that the row-wise relationships between the active project $p$ and the similar projects $q_1,q_2,q_3$ are exploited to compute the missing ratings for $p$. The following formula is used to predict if $p$ should include $l$, \ie~$p \ni l$~\cite{DBLP:conf/rweb/NoiaO15}: % the predicted value $r_{p,l}$ is computed
+%%\vspace{-.2cm}
+%\begin{equation} \label{eqn:Prediction}
+%r_{p,l}=\overline{r_{p}}+\frac{\sum_{q \in topsim(p)}(r_{q,l}-\overline{r_{q}})\cdot sim(p,q) }{\sum_{q \in topsim(p)} sim(p,q) }  %\left |  P \right |  
+%\end{equation}
+%
+%\noindent
+%where $\overline{r_{p}}$ and $\overline{r_{q}}$ are the mean of the ratings of $p$ and $q$, respectively; $q$ belongs to the set of \emph{top-k} most similar projects to $p$, denoted as $topsim(p)$; $sim(p,q)$ is the similarity between the active project and a similar project $q$, and it is computed using Equation \ref{eqn:VsmSim}. %For a testing project $p$, $\overline{r_{p}}$ is equal to $1$ since the ratings for all testing libraries are $1$. 
 
 
 %\subsection{CrossRec in Action}
