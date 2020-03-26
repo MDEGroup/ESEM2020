@@ -87,28 +87,17 @@ As a preprocessing, we filter the initial set of topics using their frequencies 
 
 
 
-\subsection{Graph Encoder} \label{sec:DataEncoder}
+\subsection{Data Encoder} \label{sec:DataEncoder}
 
-A recommender system for online services is based on three key components, namely \emph{users}, \emph{items}, and 
-\emph{ratings} \cite{Sarwar:2001:ICF:371920.372071},\cite{DBLP:conf/rweb/NoiaO15}. A \emph{user-item ratings matrix} is built 
-to represent the mutual relationships among the components. Specifically, in the matrix a user is represented by a row, 
-an item is represented by a column and each cell in the matrix corresponds to a rating given by a user for an item 
-\cite{DBLP:conf/rweb/NoiaO15}. For topic recommendation, instead of users and items, there are projects and topics, and a project may include various topics to better describe the project.   
-We derive an analogous user-item ratings matrix to represent the \emph{project-library inclusion} relationships, 
-denoted as $\ni$. In this matrix, each row represents a project and each column represents a topic.~A cell in the 
-matrix is set to $1$ if the topic in the column is included in the project specified by the row,  it is set to $0$ 
-otherwise. For the sake of clarity and conformance, we still denote this as a user-item ratings matrix throughout this 
+Considering traditional recommender systems for online services, we can identify three main components, namely \emph{users}, \emph{items}, and
+\emph{ratings} \cite{Sarwar:2001:ICF:371920.372071},\cite{DBLP:conf/rweb/NoiaO15}. All mutual relationships among system components are encoded in a \emph{user-item ratings matrix}. Specifically, in the matrix a user is represented by a row,
+an item is represented by a column and each cell in the matrix corresponds to a rating given by a user for an item
+\cite{DBLP:conf/rweb/NoiaO15}. Moving to our domain, users are substitute by projects as well as topics are the possible items to recommend. The analogus user-item ratings matrix represents possible relationships between these two elements \ie project may include various topics. We can denote \emph{project-library inclusion} relationships as $\ni$. In this matrix, each row represents a project and each column represents a topic. A cell in the matrix is set to $1$ if the topic in the column is included in the project specified by the row, it is set to $0$
+otherwise. For the sake of clarity and conformance, we still denote this as a user-item ratings matrix throughout this
 paper.
 
 For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_4 \}$ together with a set of topics $L=\{$\emph{topic$_1$=machine-learning}; \emph{topic$_2$=javascript}; topic{lib$_3$=database}; \emph{topic$_4$=web}; \emph{topic$_5$=al-gorithm}$\}$. By extracting the list of defined topics of the projects in $P$, we discovered the following inclusions: $p_1 \ni topic_1,topic_2$; $p_2 \ni topic_1,topic_3$; $p_3 \ni topic_1 ,topic_3, topic_4, topic_5$;\\
- $p_4 \ni topic_1,topic_2,topic_4,topic_5$. Accordingly, the user-item ratings matrix built to model the occurrence of the topic is depicted in Fig.~\ref{fig:UserItemMatrix}.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figs/UserItemMatrix.pdf}
-	\caption{An example of a user-item ratings matrix to model the inclusion of topics in \GH repositories.}
-	\label{fig:UserItemMatrix}
-\end{figure}
+$p_4 \ni topic_1,topic_2,topic_4,topic_5$. Accordingly, the user-item ratings matrix built to model the occurrence of the topic is depicted in Fig.~\ref{fig:UserItemMatrix}.
 
 
 %====================================================================================================================================
@@ -166,62 +155,89 @@ For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_
 
 \subsection{Similarity Calculator} \label{sec:SimilarityCalculator}
 
-The \code{Recommendation Engine} of \CT works by relying on an analogous user-item ratings matrix. To provide 
-inputs for this module, the first task of \CT is to perform similarity computation on its input data to find the 
-most similar projects to a given project. In this respect, the ability to compute the similarities among projects has 
-an effect on the recommendation outcomes.~Nonetheless, computing similarities among software systems is considered to 
-be a difficult task \cite{McMillan:2012:DSS:2337223.2337267}. In addition, the diversity of artifacts in OSS 
-repositories as well as their cross relationship makes the similarity computation become even more complicated. In OSS 
-repositories, both humans (\ie developers and users) and non-human actors (such as repositories, and libraries) have 
-mutual dependency and implication on the others. The interactions among these components, such as developers commit to 
-or star repositories, or projects include libraries, create a tie between them and should be included in similarity 
-computation.
+%The \code{Recommendation Engine} of \CT works by relying on an analogous user-item ratings matrix. To provide 
+%inputs for this module, the first task of \CT is to perform similarity computation on its input data to find the 
+%most similar projects to a given project. In this respect, the ability to compute the similarities among projects has 
+%an effect on the recommendation outcomes.~Nonetheless, computing similarities among software systems is considered to 
+%be a difficult task \cite{McMillan:2012:DSS:2337223.2337267}. In addition, the diversity of artifacts in OSS 
+%repositories as well as their cross relationship makes the similarity computation become even more complicated. In OSS 
+%repositories, both humans (\ie developers and users) and non-human actors (such as repositories, and libraries) have 
+%mutual dependency and implication on the others. The interactions among these components, such as developers commit to 
+%or star repositories, or projects include libraries, create a tie between them and should be included in similarity 
+%computation.
+%
+%%Furthermore, the graph structure also facilitates graph kernel methods, which are an effective way to compute similarities \cite{ODMD14a}. 
+%%As being inspired by the research from the related Linked Data and Semantic Web field \cite{bizer_linked_2009}, 
+%% as done \eg in ~\cite{Nguyen:2015:CRV:2942298.2942305,NDRDSEAA2018}
+%% \hl{The representation is inspired by the one presented in}~\cite{NDRDSEAA2018}, however the relationship between projects and libraries is the inverse semantic path, i.e. \texttt{includes} instead of \texttt{isUsedBy}.
+%
+%
+%We assume that a representation model that addresses the semantic 
+%relationships among miscellaneous factors in the OSS community is beneficial to 
+%project similarity computation. To this end, we consider the community of developers together with 
+%OSS projects, topics, and their mutual interactions as an 
+%\textit{ecosystem}. We derive a 
+%\textit{graph-based} model to represent different kinds of relationships in the OSS ecosystem, and 
+%eventually to calculate similarities. In the context of mining OSS repositories, the graph model is a convenient approach since it allows for flexible data integration and numerous computation techniques. 
+%By applying this representation, we are able to transform the set of projects and topics shown in Fig.~\ref{fig:UserItemMatrix} into a directed graph as in Fig.~\ref{fig:Graph}.
+%%\todo[size=\tiny, color=green!40]{This refers to our SEAA paper} 
+%%In Linked Data, an RDF\footnote{RDF 1.1 Concepts and Abstract Syntax: \url{https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/}} graph is made up of an enormous number of nodes and oriented links with semantic relationships. Thanks to this feature, the similarity of two nodes in a graph can be computed by considering their intrinsic characteristics like neighbour nodes and their mutual interactions \cite{DiNoia:2012:LOD:2362499.2362501,Nguyen:2015:CRV:2942298.2942305}.
+%~We adopted our proposed CrossSim approach~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the 
+%similarities among OSS graph nodes. It relies on techniques successfully 
+%exploited by many studies to do the same task 
+%\cite{DiNoia:2012:LOD:2362499.2362501},\cite{BRIGUEZ20146467}. Among 
+%other relationships, two nodes are deemed to be similar if they point to the same node with the same edge. By looking at the graph in 
+%Fig.~\ref{fig:Graph}, we can notice that $p_3$ and $p_4$ are highly 
+%similar since they both point to three nodes $topic_{1}, topic_{4}, topic_{5}$.  This 
+%reflects what also suggested in a previous work by McMillan \etal 
+%\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common 
+%pieces of functionality by using a shared set of libraries.
+%
+%
+%\begin{figure}[t!]
+%	\centering
+%	\includegraphics[width=\columnwidth]{figs/Graph.pdf}
+%	\caption{Graph representation for projects and libraries.}
+%	\label{fig:Graph}
+%\end{figure}
 
-%Furthermore, the graph structure also facilitates graph kernel methods, which are an effective way to compute similarities \cite{ODMD14a}. 
-%As being inspired by the research from the related Linked Data and Semantic Web field \cite{bizer_linked_2009}, 
-% as done \eg in ~\cite{Nguyen:2015:CRV:2942298.2942305,NDRDSEAA2018}
-% \hl{The representation is inspired by the one presented in}~\cite{NDRDSEAA2018}, however the relationship between projects and libraries is the inverse semantic path, i.e. \texttt{includes} instead of \texttt{isUsedBy}.
 
 
-We assume that a representation model that addresses the semantic 
-relationships among miscellaneous factors in the OSS community is beneficial to 
-project similarity computation. To this end, we consider the community of developers together with 
-OSS projects, topics, and their mutual interactions as an 
-\textit{ecosystem}. We derive a 
-\textit{graph-based} model to represent different kinds of relationships in the OSS ecosystem, and 
-eventually to calculate similarities. In the context of mining OSS repositories, the graph model is a convenient approach since it allows for flexible data integration and numerous computation techniques. 
+
+The \code{Recommendation Engine} of \CT works by relying on the mentioned user-item ratings matrix. To provide
+inputs for this module, the first task of \CT is to apply a similarity function on its input data to find the
+most similar topics to a given initial set. Computing properly this similarity score affects the quality of recommendation outcomes.
+
+
+~Nonetheless, computing similarities among topics could be a daunting task. \GH allows any repository owner to add, change, or delete the list of topics that describe his project \cite{}. This impacts on the stability of the topics, as they can change rapidly over time. In addition, a developer can freely specify the entire set of topics. This makes the similarity computation more complicated, as some topics couldn't have a semantic link with the others. Moreover, we can miss some key relationships depending on the similarity function employed by the calculator. For example, a purely sintactic-based similarity function assign a lower score to the topic pair 3d-graphics even though these two terms are strongly bounded in their meaning. 
+
+
+
+
+We assume that a representation model that addresses mutual
+relationships among \GH repositories and their topics is profitable to
+proposed similarity computation. To this end, we derive a
+\textit{graph-based} model to represent this kind of relationships and eventually to calculate similarities. In the context of mining OSS repositories, the graph model is a convenient approach since it allows for flexible data integration and numerous computation techniques.
 By applying this representation, we are able to transform the set of projects and topics shown in Fig.~\ref{fig:UserItemMatrix} into a directed graph as in Fig.~\ref{fig:Graph}.
-%\todo[size=\tiny, color=green!40]{This refers to our SEAA paper} 
-%In Linked Data, an RDF\footnote{RDF 1.1 Concepts and Abstract Syntax: \url{https://www.w3.org/TR/2014/REC-rdf11-concepts-20140225/}} graph is made up of an enormous number of nodes and oriented links with semantic relationships. Thanks to this feature, the similarity of two nodes in a graph can be computed by considering their intrinsic characteristics like neighbour nodes and their mutual interactions \cite{DiNoia:2012:LOD:2362499.2362501,Nguyen:2015:CRV:2942298.2942305}.
-~We adopted our proposed CrossSim approach~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the 
-similarities among OSS graph nodes. It relies on techniques successfully 
-exploited by many studies to do the same task 
-\cite{DiNoia:2012:LOD:2362499.2362501},\cite{BRIGUEZ20146467}. Among 
-other relationships, two nodes are deemed to be similar if they point to the same node with the same edge. By looking at the graph in 
-Fig.~\ref{fig:Graph}, we can notice that $p_3$ and $p_4$ are highly 
-similar since they both point to three nodes $topic_{1}, topic_{4}, topic_{5}$.  This 
-reflects what also suggested in a previous work by McMillan \etal 
-\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common 
+~We adopted our proposed CrossSim approach~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the
+similarities among OSS graph nodes. It relies on techniques successfully
+exploited by many studies to do the same task
+\cite{DiNoia:2012:LOD:2362499.2362501},\cite{BRIGUEZ20146467}. Among
+other relationships, two nodes are deemed to be similar if they point to the same node with the same edge. By looking at the graph in
+Fig.~\ref{fig:Graph}, we can notice that $p_3$ and $p_4$ are highly
+similar since they both point to three nodes $topic_{1}, topic_{4}, topic_{5}$. This
+reflects what also suggested in a previous work by McMillan \etal
+\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common
 pieces of functionality by using a shared set of libraries.
 
 
 \begin{figure}[t!]
-	\centering
-	\includegraphics[width=\columnwidth]{figs/Graph.pdf}
-	\caption{Graph representation for projects and libraries.}
-	\label{fig:Graph}
+\centering
+\includegraphics[width=\columnwidth]{figs/Graph.pdf}
+\caption{Graph representation for projects and libraries.}
+\label{fig:Graph}
 \end{figure}
 
-%This reflects the actual relationship of the projects by the view of Software Engineering: they are similar since they implement common functionalities by using common libraries .
-%By the view of recommendation algorithms, given a project $p$, suggested libraries for $p$ should come from the most similar projects to $p$ \cite{DBLP:conf/rweb/NoiaO15}. %Since VsmSim quantifies similarities by using libraries per se, it is our firm belief that the technique will facilitate the search for similar projects with respect to dependency usage.
-
-%Khrouf:2013:HER:2507157.2507171,
-
-%in terms of
-%By VsmSim\footnote{For the sake of clarity, the name is given by ourselves since the metric was not name by its authors}, 
-%In this sense, it is highly important to find the most similar projects to $p$. Since  In this way,  Vector Space Model.  the nodes connected to it represented using a vector as follows
-%Being based on the Vector Space Model  \cite{Turney:2010:FMV:1861751.1861756}, 
-% with each entry corresponding to the weight or a neighbour node:
 
 Using this metric, the similarity between two project nodes $p$ and $q$ in an OSS graph is computed 
 by considering their feature sets \cite{DiNoia:2012:LOD:2362499.2362501}. Given that $p$ has a 
@@ -245,7 +261,7 @@ sim(p,q)=\frac{\sum_{t=1}^{n}\phi_{t}\times \omega_{t}}{\sqrt{\sum_{t=1}^{n}(\ph
 \end{equation}
 
 %\noindent
-where $n$ is the cardinality of the set of libraries that $p$ and $q$ share in common \cite{DiNoia:2012:LOD:2362499.2362501}. Intuitively, $p$ and $q$ are characterized by using vectors in an $n$-dimensional space, and Eq.~\ref{eqn:VsmSim} measures the cosine of the angle between the two vectors. %and it is computed using the inner product as follows.
+where $n$ is the cardinality of the set of topics that $p$ and $q$ share in common \cite{DiNoia:2012:LOD:2362499.2362501}. Intuitively, $p$ and $q$ are characterized by using vectors in an $n$-dimensional space, and Eq.~\ref{eqn:VsmSim} measures the cosine of the angle between the two vectors. %and it is computed using the inner product as follows.
 
 
 
