@@ -42,11 +42,13 @@ Due to the lack of a baseline, we investigate the prediction performances of the
 
 \begin{table}[h]
 \centering
-\footnotesize
+
+
+\resizebox{8.5cm}{!} {
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-  & \multicolumn{3}{c|}{MNB}          & \multicolumn{3}{c|}{CFTOP}        \\ \hline
-N & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hline
+  & \multicolumn{3}{c|}{\MNB}          & \multicolumn{3}{c|}{\CT}        \\ \hline
+No. of input & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hline
 2  &       0.220       &    0.117       &  0.031       &     0.554         &      0.350     &   0.179      \\ \hline
  4 &     0.392         &    0.119       &     0.063   &       0.682       &       0.267    &   0.271     \\ \hline
 6 &    0.538          &      0.122	     &   0.096     &     0.754         &    0.224       &   0.339     \\ \hline
@@ -57,44 +59,54 @@ N & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hl
 16 &       0.853       &     0.112      &     0.258   &        0.879      &   0.127        &   0.503     \\ \hline
 18 &      0.874        &     0.122      &     0.290   &       0.886       &     0.117      &    0.521    \\ \hline
 20 &     0.891         &    0.121       &    0.320    &      0.892        &   0.117        &       0.537 \\ \hline
-Average values &     0.651        &    0.120       &    0.165   &      0.785        &   0.194        &       0.397  \\ \hline
-
-
-
-
-
-
-
-
-
-
-
-%2
-%3
-%4
-%5
-%6
-%7
-%8
-%9
-%10
-%11
-%12
-%13
-%14
-%15
-%16
-%17
-%18
-%19
-%20
-
+\textbf{Average values} &     0.651        &    0.120       &    0.165   &      0.785        &   0.194        &       0.397  \\ \hline
 \end{tabular}
+}
+\caption{Comparison of the two approaches}
+\label{tab:compareMNB}
 \end{table} 
 
 
+We evaluate both approaches by variating the number of input topics. 
+As we can see, \CT outperforms the \MNB considering all the metrics. In particular, the recall values have an improvement of 20\% on average. Considering the \MNB results, the accuracy is very low as we consider in the prediction phase also not featured topics. In the previous paper, we have limited our selves to feature topics due to the model's internal construction. This comparison proves that \CT is more suitable to recommend different topics, even they belong to not featured ones. However, the accuracy is very low compared with the success rate. This could be affected by the similarity function embedded in the recommendation engine. 
+
 \subsection{Entangled evaluation} \label{sec:EXP3}
 
+
+As a further experiment, we combined the two approaches to investigate potential improvements. We create this \emph{entagle} by feeding \CT with the first top-N results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. 
+
+
+
+\begin{table}[h]
+\centering
+
+
+\resizebox{8.5cm}{!} {
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+  & \multicolumn{3}{c|}{\CT}          & \multicolumn{3}{c|}{Entangled approach}        \\ \hline
+No. of input & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hline
+1  &       0.220       &    0.117       &  0.031       &     0.554         &      0.350     &   0.179      \\ \hline
+ 2 &     0.392         &    0.119       &     0.063   &       0.682       &       0.267    &   0.271     \\ \hline
+3 &    0.538          &      0.122	     &   0.096     &     0.754         &    0.224       &   0.339     \\ \hline
+4 &    0.648          &  0.119         &   0.125      &         0.803     &     0.192      &   0.384     \\ \hline
+5 &      0.711        &    0.112       &   0.147     &      0.828        &   0.169        &    0.422    \\ \hline
+6 &     0.765         &      0.112     &   0.177     &        0.851      &     0.153      &     0.455   \\ \hline
+7 &      0.815        &    0.119       &   0.220     &    0.863          &   0.139         &   0.482     \\ \hline
+8 &       0.853       &     0.112      &     0.258   &        0.879      &   0.127        &   0.503     \\ \hline
+10 &      0.874        &     0.122      &     0.290   &       0.886       &     0.117      &    0.521    \\ \hline
+15 &     0.891         &    0.121       &    0.320    &      0.892        &   0.117        &       0.537 \\ \hline
+20 &     0.891         &    0.121       &    0.320    &      0.892        &   0.117        &       0.537 \\ \hline
+\textbf{Average values} &     0.651        &    0.120       &    0.165   &      0.785        &   0.194        &       0.397  \\ \hline
+\end{tabular}
+}
+\caption{Comparison of the two approaches}
+\label{tab:combined}
+\end{table} 
+
+
+
+Looking at the results, \CT gains notable improvements. 
 
 
 
