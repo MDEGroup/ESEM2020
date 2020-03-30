@@ -125,6 +125,7 @@ recall@N = \frac{ \left | match_{N}(p) \right | }{\left | GT(p) \right |}
 
 
 
+
 %To assess the performance of \CR proposed approach, we applied ten-fold cross-validation, considering every time $9$ folds (each one contains $625$ projects) for training and the remaining one for testing. 
 %	For every testing project \emph{p}, a half of its topics are \emph{randomly} 
 %	taken out and saved as ground truth data, let us call them \emph{GT(p)}, which will be used to validate the recommendation outcomes. The other half are used 
@@ -185,9 +186,9 @@ recall@N = \frac{ \left | match_{N}(p) \right | }{\left | GT(p) \right |}
 By performing the evaluation, we aim at addressing the following research questions:
 \begin{itemize}
 \item[--] \rqfirst To answer this question, we investigate different configurations to find the best one. In particular, we variate the number of input topics and the number of neighbors 
-\item[--] \rqsecond We compute the metrics given in Section~\ref{sec:methodology-metric} to evaluate different parameter settings
-\item[--] \rqthird As the two approaches have a completely different internal structure, we are interested in investigating the reasons behind such quality variation
-\item[--] \rqfourth From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances
+
+\item[--] \rqsecond As the two approaches have a completely different internal structure, we are interested in investigating the reasons behind such quality variation
+\item[--] \rqthird From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances
 \end{itemize}
 
 

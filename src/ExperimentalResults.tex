@@ -1,8 +1,98 @@
-This section discusses the findings of the qualitative assessment. To address the formulated research questions, we perform three different experiments. Section \ref{sec:EXP1} discusses the \CT results by variating different parameters.  We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. Finally, Section \ref{sec:EXP3} investigates the results obtained with the entangled approach \ie the combination of the two previous 
+This section discusses the findings of the qualitative assessment. To address the formulated research questions, we perform three different experiments. Section \ref{sec:EXP1} discusses the \CT results by variating different parameters.  We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. Finally, Section \ref{sec:EXP3} investigates the results obtained with the entangled approach \ie the combination of the two previous approaches. 
 
 
 \subsection{\CT evaluation} \label{sec:EXP1}
+ \rqfirst
+To find the best configuration in terms of prediction performances, we experiment with different \CT configuration by variating the available parameters \ie number of neighbors and cut-off value.  The former refers to the number of graph nodes used in the recommendation engine. The latter is used to select the input topics based on their frequencies. Given an initial set of topics, we filter them with the cut-off value to reduce the noise in the original dataset. Then, the recommendation phase is enabled by variating the number of parameters. According to Section \ref{sec:methodology-metric}, N is the cut-off value and k is the number of neighbors of the graph. We evaluate different configuration by setting N=1,5,10,15,20 and k=5,10,15,20,25. Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
+
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=\linewidth]{figs/PrecisionRecallCurve.pdf}
+	\caption{Evaluation of the different configuration}
+	\label{fig:configs}
+\end{figure}
+
+
+As we are relying on a collaborative filtering technique, the number of input topics plays an important role in the assessment. Thus, we variate this additional parameter and compute the success rate for 5 and 10 input topics. Figure \ref{fig:success5} and \ref{success10} show the outcome of this comparison.  
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=\linewidth]{figs/successRateN@5.pdf}
+	\caption{Success rate with 5 input topics}
+	\label{fig:success5}
+\end{figure}
+
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=\linewidth]{figs/successRateN@10.pdf}
+	\caption{Success rate with 10 input topics}
+	\label{fig:success10}
+\end{figure}
+
+As expected, an increasing number of input topics leads to better performance. The success rate assessment exhibits an average improvement of 10\% considering the best number of neighbors \ie k=25. We also demonstrate that the topic filtering preprocessing fosters this enhancement. 
+
+
+
 \subsection{\MNB evaluation} \label{sec:EXP2}
+
+Due to the lack of a baseline, we investigate the prediction performances of the \MNB to compare its outcomes with \CT. Reversely to our previous paper, we extend the \MNB recommendation to not featured topics leaving the underlying structure untouched. This is necessary to undertake a fair comparison with \CT. Table \ref{tab:compareMNB} shows the evaluation results in terms of the already described metrics. 
+
+
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+  & \multicolumn{3}{c|}{MNB}          & \multicolumn{3}{c|}{CFTOP}        \\ \hline
+N & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hline
+2  &       0.220       &    0.117       &  0.031       &     0.554         &      0.350     &   0.179      \\ \hline
+ 4 &     0.392         &    0.119       &     0.063   &       0.682       &       0.267    &   0.271     \\ \hline
+6 &    0.538          &      0.122	     &   0.096     &     0.754         &    0.224       &   0.339     \\ \hline
+8 &    0.648          &  0.119         &   0.125      &         0.803     &     0.192      &   0.384     \\ \hline
+10 &      0.711        &    0.112       &   0.147     &      0.828        &   0.169        &    0.422    \\ \hline
+12 &     0.765         &      0.112     &   0.177     &        0.851      &     0.153      &     0.455   \\ \hline
+14 &      0.815        &    0.119       &   0.220     &    0.863          &   0.139         &   0.482     \\ \hline
+16 &       0.853       &     0.112      &     0.258   &        0.879      &   0.127        &   0.503     \\ \hline
+18 &      0.874        &     0.122      &     0.290   &       0.886       &     0.117      &    0.521    \\ \hline
+20 &     0.891         &    0.121       &    0.320    &      0.892        &   0.117        &       0.537 \\ \hline
+Average values &     0.651        &    0.120       &    0.165   &      0.785        &   0.194        &       0.397  \\ \hline
+
+
+
+
+
+
+
+
+
+
+
+%2
+%3
+%4
+%5
+%6
+%7
+%8
+%9
+%10
+%11
+%12
+%13
+%14
+%15
+%16
+%17
+%18
+%19
+%20
+
+\end{tabular}
+\end{table} 
+
+
 \subsection{Entangled evaluation} \label{sec:EXP3}
 
 
