@@ -9,7 +9,7 @@ To find the best configuration in terms of prediction performances, we experimen
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{figs/PrecisionRecallCurve.pdf}
-	\caption{Evaluation of the different configuration}
+	\caption{Evaluation of the different configuration.}
 	\label{fig:configs}
 \end{figure}
 
@@ -19,7 +19,7 @@ As we are relying on a collaborative filtering technique, the number of input to
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{figs/successRateN@5.pdf}
-	\caption{Success rate with 5 input topics}
+	\caption{Success rate with 5 input topics.}
 	\label{fig:success5}
 \end{figure}
 
@@ -27,7 +27,7 @@ As we are relying on a collaborative filtering technique, the number of input to
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{figs/successRateN@10.pdf}
-	\caption{Success rate with 10 input topics}
+	\caption{Success rate with 10 input topics.}
 	\label{fig:success10}
 \end{figure}
 
@@ -36,6 +36,8 @@ As expected, an increasing number of input topics leads to better performance. T
 
 
 \subsection{\MNB evaluation} \label{sec:EXP2}
+
+\rqsecond
 
 Due to the lack of a baseline, we investigate the prediction performances of the \MNB to compare its outcomes with \CT. Reversely to our previous paper, we extend the \MNB recommendation to not featured topics leaving the underlying structure untouched. This is necessary to undertake a fair comparison with \CT. Table \ref{tab:compareMNB} shows the evaluation results in terms of the already described metrics. 
 
@@ -62,7 +64,7 @@ No. of input & Success rate & Precision & Recall & Success rate & Precision & Re
 \textbf{Average values} &     0.651        &    0.120       &    0.165   &      0.785        &   0.194        &       0.397  \\ \hline
 \end{tabular}
 }
-\caption{Comparison of the two approaches}
+\caption{Comparison of the two approaches.}
 \label{tab:compareMNB}
 \end{table} 
 
@@ -71,7 +73,7 @@ We evaluate both approaches by variating the number of input topics.
 As we can see, \CT outperforms the \MNB considering all the metrics. In particular, the recall values have an improvement of 20\% on average. Considering the \MNB results, the accuracy is very low as we consider in the prediction phase also not featured topics. In the previous paper, we have limited our selves to feature topics due to the model's internal construction. This comparison proves that \CT is more suitable to recommend different topics, even they belong to not featured ones. However, the accuracy is very low compared with the success rate. This could be affected by the similarity function embedded in the recommendation engine. 
 
 \subsection{Entangled evaluation} \label{sec:EXP3}
-
+\rqthird
 
 As a further experiment, we combined the two approaches to investigate potential improvements. We create this \emph{entagle} by feeding \CT with the first top-N results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. 
 
@@ -86,23 +88,34 @@ As a further experiment, we combined the two approaches to investigate potential
 \hline
   & \multicolumn{3}{c|}{\CT}          & \multicolumn{3}{c|}{Entangled approach}        \\ \hline
 No. of input & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hline
-1  &       0.220       &    0.117       &  0.031       &     0.554         &      0.350     &   0.179      \\ \hline
- 2 &     0.392         &    0.119       &     0.063   &       0.682       &       0.267    &   0.271     \\ \hline
-3 &    0.538          &      0.122	     &   0.096     &     0.754         &    0.224       &   0.339     \\ \hline
-4 &    0.648          &  0.119         &   0.125      &         0.803     &     0.192      &   0.384     \\ \hline
-5 &      0.711        &    0.112       &   0.147     &      0.828        &   0.169        &    0.422    \\ \hline
-6 &     0.765         &      0.112     &   0.177     &        0.851      &     0.153      &     0.455   \\ \hline
-7 &      0.815        &    0.119       &   0.220     &    0.863          &   0.139         &   0.482     \\ \hline
-8 &       0.853       &     0.112      &     0.258   &        0.879      &   0.127        &   0.503     \\ \hline
-10 &      0.874        &     0.122      &     0.290   &       0.886       &     0.117      &    0.521    \\ \hline
-15 &     0.891         &    0.121       &    0.320    &      0.892        &   0.117        &       0.537 \\ \hline
-20 &     0.891         &    0.121       &    0.320    &      0.892        &   0.117        &       0.537 \\ \hline
-\textbf{Average values} &     0.651        &    0.120       &    0.165   &      0.785        &   0.194        &       0.397  \\ \hline
+1  &       0.409       &    0.409       &  0.105       &     0.138         &      0.221     &   0.029      \\ \hline
+ 2 &     0.554         &    0.350       &     0.179   &       0.220       &       0.198    &   0.053     \\ \hline
+3 &    0.632          &      0.301	     &   0.230     &     0.304         &    0.192       &   0.077     \\ \hline
+4 &    0.682          &  0.267         &   0.271      &         0.393    &     0.186      &   0.099     \\ \hline
+5 &      0.728        &    0.246       &   0.310     &      0.479        &   0.183        &    0.122    \\ \hline
+6 &     0.754         &      0.224     &   0.339     &        0.983      &     0.278      &     0.225   \\ \hline
+7 &      0.778        &    0.207       &   0.363     &    0.999          &   0.340         &   0.322     \\ \hline
+8 &       0.803       &     0.192      &     0.384   &        1      &   0.371        &   0.40     \\ \hline
+10 &      0.828        &     0.169      &     0.422   &       1       &     0.382      &    0.511    \\ \hline
+15 &     0.872         &    0.132       &    0.493    &      1        &   0.322       &       0.636 \\ \hline
+20 &     0.892         &    0.117       &    0.537    &      1        &   0.266        &       0.696 \\ \hline
+\textbf{Average values} &     0.785        &    0.194       &    0.397   &      0.826        &   0.296        &       0.433  \\ \hline
 \end{tabular}
 }
-\caption{Comparison of the two approaches}
+\caption{Results for the entangled approach.}
 \label{tab:combined}
 \end{table} 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
