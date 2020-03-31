@@ -14,7 +14,7 @@ To find the best configuration in terms of prediction performances, we experimen
 \end{figure}
 
 
-As we are relying on a collaborative filtering technique, the number of input topics plays an important role in the assessment. Thus, we variate this additional parameter and compute the success rate for 5 and 10 input topics. Figure \ref{fig:success5} and \ref{success10} show the outcome of this comparison.  
+As we are relying on a collaborative filtering technique, the number of input topics plays an important role in the assessment. Thus, we variate this additional parameter and compute the success rate for 5 and 10 input topics. Figure \ref{fig:success5} and \ref{fig:success10} show the outcome of this comparison.  
 
 \begin{figure}[t!]
 	\centering
@@ -31,15 +31,19 @@ As we are relying on a collaborative filtering technique, the number of input to
 	\label{fig:success10}
 \end{figure}
 
-As expected, an increasing number of input topics leads to better performance. The success rate assessment exhibits an average improvement of 10\% considering the best number of neighbors \ie k=25. We also demonstrate that the topic filtering preprocessing fosters this enhancement. 
+The success rate assessment exhibits an average improvement of 10\% in all of the possible configurations obtained by variating N and k values. In particular, the success rate archives better results by setting higher values of k. Nevertheless, increasing the number of neighbors gives remarkable benefits only until a certain threshold. Given k=5, the success rate passes from 63\% to 69\% if we consider k=10. This positive delta decreases by augmenting the number of neighbors until it reaches a stable success rate. Thus, we can consider k=25 as the maximum value capable of improving prediction performances. This trend is further confirmed by introducing more topics in the initial set. We also demonstrate that the topic filtering preprocessing fosters this enhancement and noise removal is a critical step of the entire process.
 
+
+\begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
+The quality evaluation demonstrates that \CT achieves better results by increasing the input data. The number of neighbors and the topic filters contribute to this improvement. However, the precision values are still low, suggesting that bias lives in the users topic
+\end{tcolorbox}
 
 
 \subsection{\MNB evaluation} \label{sec:EXP2}
 
 \rqsecond
 
-Due to the lack of a baseline, we investigate the prediction performances of the \MNB to compare its outcomes with \CT. Reversely to our previous paper, we extend the \MNB recommendation to not featured topics leaving the underlying structure untouched. This is necessary to undertake a fair comparison with \CT. Table \ref{tab:compareMNB} shows the evaluation results in terms of the already described metrics. 
+Due to the lack of a baseline, we investigate the prediction performances of the \MNB to compare its outcomes with \CT. Reversely to our previous paper, we extend the \MNB recommendation to not featured topics leaving the underlying structure untouched. This is necessary to undertake a fair comparison with \CT. Table \ref{tab:compareMNB} shows the evaluation results in terms  of the three aforementioned metrics. 
 
 
 \begin{table}[h]
@@ -69,8 +73,14 @@ No. of input & Success rate & Precision & Recall & Success rate & Precision & Re
 \end{table} 
 
 
-We evaluate both approaches by variating the number of input topics. 
-As we can see, \CT outperforms the \MNB considering all the metrics. In particular, the recall values have an improvement of 20\% on average. Considering the \MNB results, the accuracy is very low as we consider in the prediction phase also not featured topics. In the previous paper, we have limited our selves to feature topics due to the model's internal construction. This comparison proves that \CT is more suitable to recommend different topics, even they belong to not featured ones. However, the accuracy is very low compared with the success rate. This could be affected by the similarity function embedded in the recommendation engine. 
+We evaluate both approaches by variating the number of input topics up to 20. For the sake of the presentation, we report half of the data as we aim to show the overall trend.
+As we can see, \CT outperforms the \MNB considering all the metrics. In particular, the success rate grows according to the number of input for both of the approaches. Although the \MNB reaches the same values of \CT with 20 input topics, the latter starts from an initial success rate value of 55\%. This statement holds for all metrics considered in the comparison. A significant achievement is given by the recall value which is the almost triplicated on average using \CT as the recommendation engine. For some input, the \MNB slightly outperforms \CT even though they are meaningless compared to the other findings. 
+This gap is explained by the \MNB model features. Reversely from our previous work, we have added the not featured topics to the possible set of outputs \footnote{Due to the space issues, we cannot explain in detail the \MNB internal construction. Thus, the interested reader can find more information about this in our previous work}. Consequently, the accuracy of the model is compromised by these new possible outcomes that the \MNB is not able to provide. This impacts especially on the recall values, as proved by the experiment. The aim of this comparison is to prove the soundness of \CT as a recommendation algorithm where the possible outcomes are heterogeneous \ie featured topics are shuffled with not featured ones. However, the accuracy is very low compared with the success rate. This could be affected by the similarity function embedded in the recommendation engine. 
+
+
+\begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
+From the evaluation, we can claim that \CT outperforms the \MNB. This result is lead by the construction differences between the two approaches, even though the \MNB performances are negatively affected by the introduction of the not featured topics. This demonstrates the rightness of \CT in a miscellaneous environment. 
+\end{tcolorbox}
 
 \subsection{Entangled evaluation} \label{sec:EXP3}
 \rqthird
