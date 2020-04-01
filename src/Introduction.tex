@@ -1,36 +1,16 @@
-In recent years, the open-source software (OSS) community
-makes a daily usage of open source repositories to
-contribute their work as well as to access to projects
-coming from other developers. \GH is one of the most
-well-known platforms that aggregate these projects and
-render possible the exchange of knowledge among the users.
+In recent years, the developer community heavily exploits open source repositories during their daily activities. \GH has become one of the most
+popular platforms that aggregate these projects and
+support the development activity in a collaborative fashion.
 %
-In order to aid information discovery and help
-developers identify projects that can be of their interest, \GH introduced \emph{topics}. They are
-words used to characterize projects, which thus can be
-annotated by means of lists of words that summarize projects' features. Thanks
-to the availability of \emph{topics}, several applications are enabled,
-including the automated cataloging of GitHub repositories \cite{davidlo1},
-further than allowing developers to explore projects by type, technology, and
-more.
-
-Assigning the right topics to \GH repositories is a crucial step that, if not
-properly done, can affect in a negative way their discoverability. In
-2017, \GH presented \textit{repo-topix}, a topic suggestion tool essentially
-based on information retrieval techniques \cite{noauthor_topic_nodate}.
-Although the mechanism works well so far and it is fully integrated with \GH, in our opinion there is still some room for improvement, e.g., in terms of the variety
-of the suggested topics, novel data analysis techniques, and the investigation of new recommendation strategies.
-
-We have already faced this problem in our previous work \cite{MNB} by using a machine learning approach to recommend relevant topics given a README file of a repository. To this end, we exploited Multinomial Na\"ive Bayesian 
-(MNB) network \footnote{For the sake of presentation, we refer to this work as MNB network throughout the paper} to recommend only \emph{featured} topics, a curated list of them provided by Github \cite{}. We limit the boundaries of this initial attempt due the internal construction of the model itself.
+The platform recently introduced \emph{topics} to foster the popularity and promote information discovery about popular projects. They are a set of terms used to characterize projects by summarizing projects' features. Their availability triggers different applications and studies to improve the literature, including the automated cataloging of GitHub repositories \cite{davidlo1}. 
+Thus, the topic labeling activity can compromise the popularity and reachability of a project if it is not properly addressed. A recent work already faced this problem by using a machine learning approach to recommend relevant topics given a README file of a repository  \cite{MNB}. However, this tool\footnote{For the sake of presentation, we refer to this work as MNB network throughout the paper} is able to recommend only \emph{featured} topics, a curated list of them provided by Github \cite{}.
 
 In this work, we propose to extend the set of recommended items to non-featured topics by exploiting collaborative filtering, a widely spread technique in the recommendation system domain \cite{Schafer:2007:CFR:1768197.1768208}. Given an initial set of topics coming from a \GH project, we use repository-topic matrixes to suggest relevant topics.
 The work gives the following contributions:
 \begin{itemize}
 \item Considering the \GH projects as products, we suggest relevant topics to the project given an initial list of them;
 \item We assess the quality of the work employing a well-defined set of metrics commonly used in the recommendation system domain \ie sales diversity, novelty, and accuracy;
-\item We extend our previous work in the domain considering the entire set of topics and use it as a baseline
+\item Considering a well-founded approach, we extend it by providing an extended set of possible topics  
 \end{itemize}
 
 The rest of the work is structured as follows. Section \ref{sec:Background} shows the issues and the potential challenges in the domain. In Section \ref{sec:ProposedApproach}, we present our approach and evaluate it in Section \ref{sec:Evaluation}. We present the results of the assessment in Section \ref{sec:ExperimentalResults} and we discuss the findings. Section \ref{sec:RelatedWorks} summarizes relevant works in the field and we conclude the paper in Section \ref{sec:Conclusions} with possible future works.
-
