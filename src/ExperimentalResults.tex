@@ -53,8 +53,8 @@ Due to the lack of a baseline, we investigate the prediction performances of the
 \resizebox{8.5cm}{!} {
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-  & \multicolumn{3}{c|}{\MNB}          & \multicolumn{3}{c|}{\CT}        \\ \hline
-No. of input & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hline
+  & \multicolumn{3}{c|}{ \textbf{\MNB}}          & \multicolumn{3}{c|}{ \textbf{\CT}}        \\ \hline
+\textbf{No. of input} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} & \textbf{Success rate} &\textbf{ Precision} &\textbf{ Recall} \\ \hline
 2  &       0.220       &    0.117       &  0.031       &     0.554         &      0.350     &   0.179      \\ \hline
  4 &     0.392         &    0.119       &     0.063   &       0.682       &       0.267    &   0.271     \\ \hline
 6 &    0.538          &      0.122	     &   0.096     &     0.754         &    0.224       &   0.339     \\ \hline
@@ -65,7 +65,7 @@ No. of input & Success rate & Precision & Recall & Success rate & Precision & Re
 16 &       0.853       &     0.112      &     0.258   &        0.879      &   0.127        &   0.503     \\ \hline
 18 &      0.874        &     0.122      &     0.290   &       0.886       &     0.117      &    0.521    \\ \hline
 20 &     0.891         &    0.121       &    0.320    &      0.892        &   0.117        &       0.537 \\ \hline
-\textbf{Average values} &     0.651        &    0.120       &    0.165   &      0.785        &   0.194        &       0.397  \\ \hline
+\textbf{Average values} &    \textbf{0.651}        &   \textbf{ 0.120}       &   \textbf{ 0.165 }  &     \textbf{ 0.785}        &  \textbf{ 0.194}        &     \textbf{ 0.397 } \\ \hline
 \end{tabular}
 }
 \caption{Comparison of the two approaches.}
@@ -85,7 +85,7 @@ From the evaluation, we can claim that \CT outperforms the \MNB. This result is 
 \subsection{Entangled evaluation} \label{sec:EXP3}
 \rqthird
 
-As a further experiment, we combined the two approaches to investigate potential improvements. We create this \emph{entagle} by feeding \CT with the first top-N results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. 
+As a further experiment, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \CT with the first top-N results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. As it can be seen there, \CT gains notable improvement by means of this configuration. For comparison purposes, we enable the entangled approach after the top-5 recommended items given by the \MNB. We witness that all the measured metrics gain a relevant improvement. In particular, the success rate duplicates its value with only one additional input topic. Moreover, it reaches the maximum value with top-8 topics.  \CT leads to improvement of the \MNB accuracy, by increasing of 10\% the precision and recall values on average. 
 
 
 
@@ -96,8 +96,8 @@ As a further experiment, we combined the two approaches to investigate potential
 \resizebox{8.5cm}{!} {
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-  & \multicolumn{3}{c|}{\CT}          & \multicolumn{3}{c|}{Entangled approach}        \\ \hline
-No. of input & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hline
+  & \multicolumn{3}{c|}{\textbf{\CT}}          & \multicolumn{3}{c|}{\textbf{Entangled approach}}        \\ \hline
+\textbf{No. of input} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} \\ \hline
 1  &       0.409       &    0.409       &  0.105       &     0.138         &      0.221     &   0.029      \\ \hline
  2 &     0.554         &    0.350       &     0.179   &       0.220       &       0.198    &   0.053     \\ \hline
 3 &    0.632          &      0.301	     &   0.230     &     0.304         &    0.192       &   0.077     \\ \hline
@@ -109,7 +109,7 @@ No. of input & Success rate & Precision & Recall & Success rate & Precision & Re
 10 &      0.828        &     0.169      &     0.422   &       1       &     0.382      &    0.511    \\ \hline
 15 &     0.872         &    0.132       &    0.493    &      1        &   0.322       &       0.636 \\ \hline
 20 &     0.892         &    0.117       &    0.537    &      1        &   0.266        &       0.696 \\ \hline
-\textbf{Average values} &     0.785        &    0.194       &    0.397   &      0.826        &   0.296        &       0.433  \\ \hline
+\textbf{Average values} &    \textbf{ 0.785}        &   \textbf{ 0.194}       &   \textbf{ 0.397}   &     \textbf{ 0.826 }       &  \textbf{ 0.296}        &       \textbf{0.433}  \\ \hline
 \end{tabular}
 }
 \caption{Results for the entangled approach.}
@@ -118,18 +118,19 @@ No. of input & Success rate & Precision & Recall & Success rate & Precision & Re
 
 
 
+These findings can be explained by considering the nature of the input topics. In the first \CT evaluation, we randomly elicited a sub-set of topics form the repository to obtain the ground truth topics. Reversely, the entangled approach employs directly the results coming from the \MNB which represent a more curated list of inputs. Thus, selecting proper topics to enable the collaborative filtering algorithm improves the overall performance prediction even though the average accuracy is still low. Additionally, \CT covers also not featured topics that represent the weakness of the \MNB. In such a way, we combined successfully two different approaches to enlarge the possible set of outcomes. 
+
+
+
+\begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
+The entangled approach success in the improvement of the prediction performances. Success rate achieves the best results after the addition of a few topics. Furthermore, the accuracy benefits from this strategy although we measure lower values than expected.
+\end{tcolorbox}
 
 
 
 
 
 
-
-
-
-
-
-Looking at the results, \CT gains notable improvements. 
 
 
 
