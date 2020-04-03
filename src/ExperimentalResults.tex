@@ -14,7 +14,9 @@ To find the best configuration in terms of prediction performances, we experimen
 \end{figure}
 
 
-As we are relying on a collaborative filtering technique, the number of input topics plays an important role in the assessment. Thus, we variate this additional parameter and compute the success rate for 5 and 10 input topics. Figure \ref{fig:success5_10} shows the outcome of this comparison.  
+
+As we are relying on a collaborative filtering technique, the number of input topics plays an important role in the assessment. Thus, we variate this additional parameter and compute the success rate for 5 and 10 input topics. Figure \ref{fig:success5} and \ref{fig:success10} show the outcome of this comparison.  
+
 
 \begin{figure*}
 \centering
@@ -27,15 +29,19 @@ As we are relying on a collaborative filtering technique, the number of input to
 	\label{fig:success5_10}
 \end{figure*}
 
-As expected, an increasing number of input topics leads to better performance. The success rate assessment exhibits an average improvement of 10\% considering the best number of neighbors \ie k=25. We also demonstrate that the topic filtering preprocessing fosters this enhancement. 
+The success rate assessment exhibits an average improvement of 10\% in all of the possible configurations obtained by variating N and k values. In particular, the success rate archives better results by setting higher values of k. Nevertheless, increasing the number of neighbors gives remarkable benefits only until a certain threshold. Given k=5, the success rate passes from 63\% to 69\% if we consider k=10. This positive delta decreases by augmenting the number of neighbors until it reaches a stable success rate. Thus, we can consider k=25 as the maximum value capable of improving prediction performances. This trend is further confirmed by introducing more topics in the initial set. We also demonstrate that the topic filtering preprocessing fosters this enhancement and noise removal is a critical step of the entire process.
 
+
+\begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
+The quality evaluation demonstrates that \CT achieves better results by increasing the input data. The number of neighbors and the topic filters contribute to this improvement. However, the precision values are still low, suggesting that bias lives in the users topic
+\end{tcolorbox}
 
 
 \subsection{\MNB evaluation} \label{sec:EXP2}
 
 \rqsecond
 
-Due to the lack of a baseline, we investigate the prediction performances of the \MNB to compare its outcomes with \CT. Reversely to our previous paper, we extend the \MNB recommendation to not featured topics leaving the underlying structure untouched. This is necessary to undertake a fair comparison with \CT. Table \ref{tab:compareMNB} shows the evaluation results in terms of the already described metrics. 
+Due to the lack of a baseline, we investigate the prediction performances of the \MNB to compare its outcomes with \CT. Reversely from the original paper, we apply the \MNB to not featured topics leaving the underlying structure untouched. This is necessary to undertake a fair comparison with \CT. Table \ref{tab:compareMNB} shows the evaluation results in terms  of the three aforementioned metrics. 
 
 
 \begin{table}[h]
@@ -45,8 +51,8 @@ Due to the lack of a baseline, we investigate the prediction performances of the
 \resizebox{8.5cm}{!} {
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-  & \multicolumn{3}{c|}{\MNB}          & \multicolumn{3}{c|}{\CT}        \\ \hline
-No. of input & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hline
+  & \multicolumn{3}{c|}{ \textbf{\MNB}}          & \multicolumn{3}{c|}{ \textbf{\CT}}        \\ \hline
+\textbf{No. of input} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} & \textbf{Success rate} &\textbf{ Precision} &\textbf{ Recall} \\ \hline
 2  &       0.220       &    0.117       &  0.031       &     0.554         &      0.350     &   0.179      \\ \hline
  4 &     0.392         &    0.119       &     0.063   &       0.682       &       0.267    &   0.271     \\ \hline
 6 &    0.538          &      0.122	     &   0.096     &     0.754         &    0.224       &   0.339     \\ \hline
@@ -57,7 +63,8 @@ No. of input & Success rate & Precision & Recall & Success rate & Precision & Re
 16 &       0.853       &     0.112      &     0.258   &        0.879      &   0.127        &   0.503     \\ \hline
 18 &      0.874        &     0.122      &     0.290   &       0.886       &     0.117      &    0.521    \\ \hline
 20 &     0.891         &    0.121       &    0.320    &      0.892        &   0.117        &       0.537 \\ \hline
-\textbf{Average values} &     0.651        &    0.120       &    0.165   &      0.785        &   0.194        &       0.397  \\ \hline
+\rowcolor{Gray}
+\textbf{Average values} &    \textbf{0.651}        &   \textbf{ 0.120}       &   \textbf{ 0.165 }  &     \textbf{ 0.785}        &  \textbf{ 0.194}        &     \textbf{ 0.397 } \\ \hline
 \end{tabular}
 }
 \caption{Comparison of the two approaches.}
@@ -65,13 +72,19 @@ No. of input & Success rate & Precision & Recall & Success rate & Precision & Re
 \end{table} 
 
 
-We evaluate both approaches by variating the number of input topics. 
-As we can see, \CT outperforms the \MNB considering all the metrics. In particular, the recall values have an improvement of 20\% on average. Considering the \MNB results, the accuracy is very low as we consider in the prediction phase also not featured topics. In the previous paper, we have limited our selves to feature topics due to the model's internal construction. This comparison proves that \CT is more suitable to recommend different topics, even they belong to not featured ones. However, the accuracy is very low compared with the success rate. This could be affected by the similarity function embedded in the recommendation engine. 
+We evaluate both approaches by variating the number of input topics up to 20. For the sake of the presentation, we report half of the data as we aim to show the overall trend.
+As we can see, \CT outperforms the \MNB considering all the metrics. In particular, the success rate grows according to the number of input for both of the approaches. Although the \MNB reaches the same values of \CT with 20 input topics, the latter starts from an initial success rate value of 55\%. This statement holds for all metrics considered in the comparison. A significant achievement is given by the recall value which is the almost triplicated on average using \CT as the recommendation engine. For some input, the \MNB slightly outperforms \CT even though they are meaningless compared to the other findings. 
+This gap is explained by the \MNB model features. In this comparison, we have added the not featured topics to the possible set of outputs \footnote{Due to the space issues, we cannot explain in detail the \MNB internal construction. Thus, the interested reader can find more information about this in our previous work}. Consequently, the accuracy of the model is compromised by these new possible outcomes that the \MNB is not able to provide. This impacts especially on the recall values, as proved by the experiment. The aim of this comparison is to prove the soundness of \CT as a recommendation algorithm where the possible outcomes are heterogeneous \ie featured topics are shuffled with not featured ones. However, the accuracy is very low compared with the success rate. This could be affected by the similarity function embedded in the recommendation engine. 
+
+
+\begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
+From the evaluation, we can claim that \CT outperforms the \MNB. This result is lead by the construction differences between the two approaches, even though the \MNB performances are negatively affected by the introduction of the not featured topics. This demonstrates the rightness of \CT in a miscellaneous environment. 
+\end{tcolorbox}
 
 \subsection{Entangled evaluation} \label{sec:EXP3}
 \rqthird
 
-As a further experiment, we combined the two approaches to investigate potential improvements. We create this \emph{entagle} by feeding \CT with the first top-N results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. 
+As a further experiment, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \CT with the first top-N results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. As it can be seen there, \CT gains notable improvement by means of this configuration. For comparison purposes, we enable the entangled approach after the top-5 recommended items given by the \MNB. We witness that all the measured metrics gain a relevant improvement. In particular, the success rate duplicates its value with only one additional input topic. Moreover, it reaches the maximum value with top-8 topics.  \CT leads to improvement of the \MNB accuracy, by increasing of 10\% the precision and recall values on average. 
 
 
 
@@ -82,20 +95,22 @@ As a further experiment, we combined the two approaches to investigate potential
 \resizebox{8.5cm}{!} {
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-  & \multicolumn{3}{c|}{\CT}          & \multicolumn{3}{c|}{Entangled approach}        \\ \hline
-No. of input & Success rate & Precision & Recall & Success rate & Precision & Recall \\ \hline
+  & \multicolumn{3}{c|}{\textbf{\CT}}          & \multicolumn{3}{c|}{\textbf{Entangled approach}}        \\ \hline
+\textbf{No. of input} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} \\ \hline
 1  &       0.409       &    0.409       &  0.105       &     0.138         &      0.221     &   0.029      \\ \hline
  2 &     0.554         &    0.350       &     0.179   &       0.220       &       0.198    &   0.053     \\ \hline
 3 &    0.632          &      0.301	     &   0.230     &     0.304         &    0.192       &   0.077     \\ \hline
 4 &    0.682          &  0.267         &   0.271      &         0.393    &     0.186      &   0.099     \\ \hline
 5 &      0.728        &    0.246       &   0.310     &      0.479        &   0.183        &    0.122    \\ \hline
+\rowcolor{Gray}
 6 &     0.754         &      0.224     &   0.339     &        0.983      &     0.278      &     0.225   \\ \hline
 7 &      0.778        &    0.207       &   0.363     &    0.999          &   0.340         &   0.322     \\ \hline
 8 &       0.803       &     0.192      &     0.384   &        1      &   0.371        &   0.40     \\ \hline
 10 &      0.828        &     0.169      &     0.422   &       1       &     0.382      &    0.511    \\ \hline
 15 &     0.872         &    0.132       &    0.493    &      1        &   0.322       &       0.636 \\ \hline
 20 &     0.892         &    0.117       &    0.537    &      1        &   0.266        &       0.696 \\ \hline
-\textbf{Average values} &     0.785        &    0.194       &    0.397   &      0.826        &   0.296        &       0.433  \\ \hline
+\rowcolor{Gray}
+\textbf{Average values} &    \textbf{ 0.785}        &   \textbf{ 0.194}       &   \textbf{ 0.397}   &     \textbf{ 0.826 }       &  \textbf{ 0.296}        &       \textbf{0.433}  \\ \hline
 \end{tabular}
 }
 \caption{Results for the entangled approach.}
@@ -104,18 +119,19 @@ No. of input & Success rate & Precision & Recall & Success rate & Precision & Re
 
 
 
+These findings can be explained by considering the nature of the input topics. In the first \CT evaluation, we randomly elicited a sub-set of topics form the repository to obtain the ground truth topics. Reversely, the entangled approach employs directly the results coming from the \MNB which represent a more curated list of inputs. Thus, selecting proper topics to enable the collaborative filtering algorithm improves the overall performance prediction even though the average accuracy is still low. Additionally, \CT covers also not featured topics that represent the weakness of the \MNB. In such a way, we combined successfully two different approaches to enlarge the possible set of outcomes. 
+
+
+
+\begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
+The entangled approach success in the improvement of the prediction performances. Success rate achieves the best results after the addition of a few topics. Furthermore, the accuracy benefits from this strategy although we measure lower values than expected.
+\end{tcolorbox}
 
 
 
 
 
 
-
-
-
-
-
-Looking at the results, \CT gains notable improvements. 
 
 
 

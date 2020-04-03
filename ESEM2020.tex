@@ -28,6 +28,7 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{color, colortbl}
 \usepackage[all]{nowidow}
 \usepackage[inline]{enumitem}
 \usepackage[scaled]{beramono}
@@ -46,6 +47,8 @@
 %\usepackage[disable]{todonotes}
 %%
 %% \BibTeX command to typeset BibTeX logo in the docs
+
+
 \AtBeginDocument{%
   \providecommand\BibTeX{{%
     \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
@@ -87,11 +90,13 @@
 
 %\renewcommand{\shortauthors}{Juri Di Rocco, et al.}
 \input{commands}
+\definecolor{Gray}{gray}{0.9}
+
 
 
 \begin{abstract}
 Collaborative filtering is a well-founded technique spreadly used in the recommendation system domain. During recent years, a plethora of approaches has been developed to provide the users with relevant items. Considering the open-source software (OSS) domain, \GH has become a precious service for storing and managing software source code. To represent the stored projects in an effective manner, in 2017 \GH introduced the possibility to classify them employing topics. However, assigning wrong topics to a given repository can compromise the possibility of helping other developers reach it and eventually contribute to its development.
-In this paper, we present \CT, a recommender system to assist open source software developers in selecting suitable topics to the repositories. \CT exploits a collaborative filtering technique to recommend libraries to developers by relying on the set of initial topics, which are currently included in the project being. To assess the quality of the approach, we exploit our previous work in this domain and validate both of them using different metrics. The results show that \CT outperforms it in all the examined aspects. More interesting, the chain of the two approaches lead an improvement of the prediction performances.
+In this paper, we present \CT, a recommender system to assist open source software developers in selecting suitable topics to the repositories. \CT exploits a collaborative filtering technique to recommend libraries to developers by relying on the set of initial topics, which are currently included in the project being. To assess the quality of the approach, we exploit a recent work in this domain and validate both of them using different metrics. The results show that \CT outperforms it in all the examined aspects. More interesting, the chain of the two approaches lead an improvement of the prediction performances.
 \end{abstract}
 
 %%
