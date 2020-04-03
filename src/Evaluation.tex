@@ -78,7 +78,8 @@ with the other half, \ie \emph{GT(p)}.
 There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} and \emph{accuracy} have been used to study the systems' performance as already proposed by Robillard \etal~\cite{Robillard:2014:RSS:2631387} and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}. The metrics considered during the outcome evaluation follows this notation:
 
 \begin{itemize}[noitemsep,topsep=0pt]
-	\item \emph{N} is the cut-off value for the ranked topic list;% of recommended libraries;
+	\item \emph{t} is the cut-off value of input topic (\ie all topics that occur less than \emph{t} times in the dataset are removed)
+	\item \emph{N} is the cut-off value for the recommended ranked list of topic;% of recommended libraries;
 	\item \emph{k} is the number of neighbor projects exploited for the recommendation process;
 	\item For a testing project \emph{p}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(p)};
 	\item $REC(p)$ is the \emph{top-N} topics recommended to \emph{p}. It is a ranked list in descending order of real scores;
