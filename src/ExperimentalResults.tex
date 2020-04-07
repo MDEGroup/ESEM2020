@@ -3,37 +3,41 @@ This section discusses the findings of the qualitative assessment. To address th
 
 \subsection{\CT evaluation} \label{sec:EXP1}
  \rqfirst
-To find the best configuration in terms of prediction performances, we experiment with different \CT configuration by variating the available parameters \ie number of neighbors $k$, the topic cut-off value $N$ and the .  The former refers to the number of graph nodes used in the recommendation engine. The latter is used to select the input topics based on their frequencies. Given an initial set of topics, we filter them with the cut-off value to reduce the noise in the original dataset. Then, the recommendation phase is enabled by variating the number of parameters. According to Section \ref{sec:methodology-metric}, N is the cut-off value and k is the number of neighbors of the graph. We evaluate different configuration by setting N=1,5,10,15,20 and k=5,10,15,20,25. Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
-
-
+To find the best configuration in terms of prediction performances, we experiment with different \CT configuration by variating the available parameters \ie number of neighbors \emph{k}, the recommended topic cut-off value \emph{N}, and the topic frequency cut-off \emph{t} .  %The former refers to the number of similar repositories used in the recommendation engine. 
+%The latter value \emph{t} is used to select the input topics based on their frequencies: given an initial set of topics, we filter them with the cut-off value to reduce the noise in the original dataset. Then, the recommendation phase is enabled by varying the number of presented parameters. According to Section \ref{sec:methodology-metric}, N is the cut-off value and \emph{k} is the number of neighbours of the graph. We evaluate different configuration by setting N=1,5,10,15,20 and k=5,10,15,20,25. 
+Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{figs/PrecisionRecallCurve.pdf}
 	\caption{Evaluation of the different configuration.}
 	\label{fig:configs}
 \end{figure}
-
-
-
-As we are relying on a collaborative filtering technique, the number of input topics plays an important role in the assessment. Thus, we variate this additional parameter and compute the success rate for 5 and 10 input topics. Figure \ref{fig:success5} and \ref{fig:success10} show the outcome of this comparison.  
+As we are relying on a collaborative filtering technique, the number of output topics, the number of neighbours, and the data preprocessing play an important role in the assessment. Thus, we variate  the recommended list of topics \emph{N} for 5 and 10, and the number of neighbours \emph{k} \ie \emph{N} = \{5,10,15,20,25\}. Moreover, we use different frequency topic cut-off \emph{t} to remove very infrequent topics from the dataset. The bar charts in Figure \ref{fig:success-rateN5} and \ref{fig:success-rateN10} show the success rate outcomes of \CT, divided by the\emph{t}. Figure \ref{fig:success-rateN5} and \ref{fig:success-rateN10} shows the success rate considering the first 5 and 10 recommended topics respectively. The horizontal axes shows the success rate outcomes for different size of neighbours \emph{N}.
+Overall, it is evident that infrequent topics negatively affect both success rate values. At the first glance we can see that the success rate of \CT with all topics is much lower than others \emph{t} cut-off.
 
 
 \begin{figure*}
 \centering
 	\begin{tabular}{c c}	
-	\includegraphics[width=0.45\linewidth]{figs/successRateN@5.pdf} &
-	\includegraphics[width=0.45\linewidth]{figs/successRateN@10.pdf}
-	\end{tabular}
-
+	\subfigure[Success rate@5]{\label{fig:success-rateN5}
+	\includegraphics[width=0.45\linewidth]{figs/successRateN@5.pdf}} &
+	\subfigure[Success rate@10]{\label{fig:success-rateN10}
+	\includegraphics[width=0.45\linewidth]{figs/successRateN@10.pdf}}
+	\\
+	\subfigure[Success rate@5]{\label{fig:RecallRate5}
+	\includegraphics[width=0.45\linewidth]{figs/successRateN@5.pdf}} &
+	\subfigure[Success rate@10]{\label{fig:RecallRate10}
+	\includegraphics[width=0.45\linewidth]{figs/successRateN@10.pdf}}
+	\end{tabular} 
 	\caption{Success rate with 5 and 10 input topics.}
 	\label{fig:success5_10}
 \end{figure*}
 
-The success rate assessment exhibits an average improvement of 10\% in all of the possible configurations obtained by variating N and k values. In particular, the success rate archives better results by setting higher values of k. Nevertheless, increasing the number of neighbors gives remarkable benefits only until a certain threshold. Given k=5, the success rate passes from 63\% to 69\% if we consider k=10. This positive delta decreases by augmenting the number of neighbors until it reaches a stable success rate. Thus, we can consider k=25 as the maximum value capable of improving prediction performances. This trend is further confirmed by introducing more topics in the initial set. We also demonstrate that the topic filtering preprocessing fosters this enhancement and noise removal is a critical step of the entire process.
-
+The success rate assessment exhibits an average improvement of 10\% in all of the possible configurations obtained by variating \emph{N} and \emph{k} values. In particular, the success rate archives better results by setting higher values of \emph{k}. Nevertheless, increasing the number of neighbors gives remarkable benefits only until a certain threshold. Given k=5, the success rate@5 passes from 63\% to 69\% if we consider k=10. This positive delta decreases by augmenting the number of neighbours until it reaches a stable success rate. Thus, we can consider k=25 as the maximum value capable of improving prediction performances. This trend is further confirmed by introducing more topics in the initial set. We also demonstrate that the topic filtering preprocessing fosters this enhancement and noise removal is a critical step of the entire process.
+This is also confirmed by the precision and recall curves depicted in Fig.~\ref{fig:configs}. The line graph compares the precision and recall values by varying the the value of \emph{N} and \emph{t}. This outcomes keeps 25 as \emph{k} values because we already demonstrated that higher values of considered neighbours reach better prediction performances. Overall, the precision and recall values rise when the \emph{t} cut-off grows. In particular the cyan curve has better prediction performance in term of precision and recall values.
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-The quality evaluation demonstrates that \CT achieves better results by increasing the input data. The number of neighbors and the topic filters contribute to this improvement. However, the precision values are still low, suggesting that bias lives in the users topic
+The quality evaluation demonstrates that \CT achieves better results by increasing the input data. The number of neighbors and the topic filters contribute to this improvement. However, the precision and recall values are still low, suggesting that bias lives in the users topic.
 \end{tcolorbox}
 
 
