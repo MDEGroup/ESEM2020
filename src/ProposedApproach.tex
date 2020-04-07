@@ -314,6 +314,7 @@ where $n$ is the cardinality of the set of topics that $p$ and $q$ share in comm
 
 %A collaborative-filtering recommender system suggests products that customers similar to the customer being considered have already purchased. 
 
+\subsection{Recommendation engine}
 
 The representation using a user-item ratings matrix allows for the computation of missing scores \cite{Aggarwal2016},\cite{DBLP:conf/rweb/NoiaO15}. Depending on the availability of data, there are two main techniques to compute the unknown ratings, namely \emph{content-based} \cite{Pazzani2007} and \emph{collaborative-filtering} \cite{Miranda:2008:ICF:1486927.1487083} recommendation techniques. Focusing on the latter, this technique computes the ratings by taking into account the set of items rated by similar customers. There are two main types of collaborative-filtering recommendation: \emph{user-based} \cite{Zhao:2010:UCR:1748610.1749278} and \emph{item-based} \cite{Sarwar:2001:ICF:371920.372071} techniques. As their names suggest, the user-based technique computes missing ratings by considering the ratings collected from similar users. Instead, the item-based technique performs the same task by using the similarities among items \cite{Cremonesi:2008:EMC:1468165.1468327}.
 
@@ -332,7 +333,11 @@ In the context of \CT, the term \emph{rating} describes the appearance of a topi
 \end{figure}
 
 
-Consider the mutual relationships between a project and its topics represented in a graph data structure, we exploit the user-based collaborative-filtering technique to enable the topic recommendation process \cite{Linden:2003:ARI:642462.642471,Zhao:2010:UCR:1748610.1749278}. Given an active project $p$, the inclusion of libraries in $p$ can be deduced from projects that are similar to $p$. The process is summarized as follows: 
+
+We can employ the proposed engine into two different ways \emph{(i)} as a stand-alone given an initial set of topics or \emph{(ii)} using \MNB results to enable the collaborative filtering based recommendation. Consider the mutual relationships between a project and its topics represented in a graph data structure, we exploit the user-based collaborative-filtering technique to enable the topic recommendation process \cite{Linden:2003:ARI:642462.642471,Zhao:2010:UCR:1748610.1749278}. 
+
+
+Given an active project $p$, the inclusion of libraries in $p$ can be deduced from projects that are similar to $p$. The process is summarized as follows: 
 
 \begin{itemize}
 \item Compute the similarities between the active project and all projects in the collection;
