@@ -45,11 +45,11 @@ To investigate the \CT prediction performances, we populated five different data
 \begin{tabular}{|l|l|l|c|c|}
 \hline
 \textbf{Dataset} & \textbf{No. of repos} &\textbf{ No. of topics} & \textbf{Avg topics for repo} & \textbf{Avg freq. for topic} \\ \hline
-$Dt_1$  &       6,253       &    15,743       &  10  &  4         \\ \hline
- $Dt_5$  &        3,884      &    1,989       &     8  &   17   \\ \hline
-$Dt_{10}$  &    2,897          &      964	     &   8    &  24 \\ \hline
-$Dt_{15}$  &    2,273         &   634        &   7 &  28       \\ \hline
-$Dt_{20}$  &    1,806        &   456        &   7 &  30       \\ \hline
+$Dt_1$  &       6,253.0       &    15,743.0       &  10.0  &  4.0         \\ \hline
+ $Dt_5$  &        3,884.0      &    1,989.0       &     8.0  &   17.0   \\ \hline
+$Dt_{10}$  &    2,897.0         &      964.0	     &   8.0    &  24.0 \\ \hline
+$Dt_{15}$  &    2,273.0         &   634.0       &   7.0 &  28.0       \\ \hline
+$Dt_{20}$  &    1,806.0        &   456.0        &   7 .0&  30.0       \\ \hline
 
 \end{tabular}
 }
@@ -57,7 +57,7 @@ $Dt_{20}$  &    1,806        &   456        &   7 &  30       \\ \hline
 \label{tab:datasets}
 \end{table} 
 
-As we can see, removing the infrequent topics improves the overall quality of the considered datasets. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset $Dt_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989. The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. Thus, we stop at t=20 and consider Dataset $Dt_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 10-7 topics on average. This demonstrates that a huge number of topics doesn't help the discoverability of a project. 
+As we can see, removing the infrequent topics improves the overall quality of the considered datasets. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset $Dt_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989. The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. Thus, we stop at t=20 and consider Dataset $Dt_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 7 topics on average. This demonstrates that a huge number of topics doesn't help the discoverability of a project. 
 
 
 Furthermore, we evaluate the quality of the OSS project belonging to the examined dataset. As mentioned before, the \GH community assesses this aspect by mainly using forks and stars. Thus, we collect this data for each dataset using the same Github API library employed for the crawling. Figure \ref{fig:comparison} shows the comparison between Dataset $Dt_1$ and $Dt_20$. 
