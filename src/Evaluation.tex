@@ -65,12 +65,12 @@ The \code{Split topic phase} resembles a real development process where a develo
 
 \begin{itemize}[noitemsep,topsep=0pt]
 	\item \emph{t} is the frequency cut-off value of input topics (\ie all topics that occur less than \emph{t} times are removed from the dataset)
-	\item \emph{|t$_{in}$|} is the size of topics that \CT takes as input;
+	\item |\emph{t$_{in}$}| is the size of topics that \CT takes as input;
 	\item \emph{N} is the cut-off value for the recommended ranked list of topic;% of recommended libraries;
 	\item \emph{k} is the number of neighbor projects exploited for the recommendation process;
-	\item For a testing project \emph{p}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(p)};
-	\item $REC(p)$ is the \emph{top-N} topics recommended to \emph{p}. It is a ranked list in descending order of real scores;
-	\item If a recommended topic $t \in REC(p)$ for a testing project $p$ is found in the ground truth of $p$ (\ie \emph{GT(p)}), hereafter we call this as a topic \textit{match}
+	\item For a testing project \emph{r}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(r)};
+	\item $REC(r)$ is the \emph{top-N} topics recommended to a repository \emph{r}. It is a ranked list in descending order of real scores;
+	\item If a recommended topic $t \in REC(r)$ for a testing project $r$ is found in the ground truth of $r$ (\ie \emph{GT(r)}), hereafter we call this as a topic \textit{match}
 \end{itemize}
 
 
@@ -78,7 +78,7 @@ The \code{Split topic phase} resembles a real development process where a develo
 If $REC_{N}(p)$ is the set of top-$N$ items and $match_{N}(p)$ is the set of items in the \emph{top-N} list that match with those in the ground-truth data, then the metrics are defined as follows.  
 
 \vspace{.1cm}
-\paragraph{\textbf{Success rate@N}} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least a topic match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
+\noindent\textbf{Success rate@N.} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least a topic match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
 \vspace{-.1cm}
 
 \begin{equation} \label{eqn:RecallRate}
@@ -88,7 +88,7 @@ success\ rate@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | > 0 ) }{\l
 
 \vspace{.1cm}
 \vspace{.1cm}
-\paragraph{\textbf{Success rate$_M$@N}} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least $M$ topics match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
+\noindent \JDR{Check if it will be used} \textbf{Success rate$_M$@N.} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least $M$ topics match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
 \vspace{-.1cm}
 
 \begin{equation} \label{eqn:RecallRate}
@@ -99,8 +99,7 @@ success\ rate_M@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | >= M ) }
 \vspace{.1cm}
 \noindent where the function \emph{count()} counts the number of times that the boolean expression specified in its parameter is \emph{true}.
 
-
-\paragraph{\textbf{Accuracy}} Accuracy is considered as one of the most preferred \emph{quality indicators} for Information Retrieval applications \cite{Saracevic:1995:EEI:215206.215351}. However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
+\noindent \textbf{Accuracy.} Accuracy is considered as one of the most preferred \emph{quality indicators} for Information Retrieval applications \cite{Saracevic:1995:EEI:215206.215351}. However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
 
 %\vspace{-.2cm}
 % \cite{Saracevic:1995:EEI:215206.215351}
