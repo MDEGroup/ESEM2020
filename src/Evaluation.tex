@@ -45,11 +45,11 @@ To investigate the \CT prediction performances, we populated five different data
 \begin{tabular}{|l|l|l|c|c|}
 \hline
 \textbf{Dataset} & \textbf{No. of repos} &\textbf{ No. of topics} & \textbf{Avg topics for repo} & \textbf{Avg freq. for topic} \\ \hline
-$Dt_1$  &       6,253.0       &    15,743.0       &  10.0  &  4.0         \\ \hline
+$Dt_1$  &       6,253.0       &    15,743.0       &  9.9  &  4.0         \\ \hline
  $Dt_5$  &        3,884.0      &    1,989.0       &     8.0  &   17.0   \\ \hline
 $Dt_{10}$  &    2,897.0         &      964.0	     &   8.0    &  24.0 \\ \hline
-$Dt_{15}$  &    2,273.0         &   634.0       &   7.0 &  28.0       \\ \hline
-$Dt_{20}$  &    1,806.0        &   456.0        &   7 .0&  30.0       \\ \hline
+$Dt_{15}$  &    2,273.0         &   634.0       &   7.7 &  28.0       \\ \hline
+$Dt_{20}$  &    1,806.0        &   456.0        &   7 .7 &  30.0       \\ \hline
 
 \end{tabular}
 }
@@ -65,11 +65,9 @@ Similarly to the other collaborative filtering approaches, the overall predictio
 %>>>>>>> 2241e0e812c956f441252b061dd0d75d6f6927ea
 
 
-Furthermore, we evaluate the quality of the OSS project belonging to the examined dataset. As mentioned before, the \GH community assesses this aspect by mainly using forks and stars. Thus, we collect this data for each dataset using the same Github API library employed for the crawling. Figure \ref{fig:comparison} shows the comparison between Dataset $Dt_1$ and $Dt_20$. 
 
 
-
-\begin{figure*}
+\begin{figure*}[h]
 \centering
 	\begin{tabular}{c c}	
 	\subfigure[Dataset $Dt_1$]{\label{fig:dt1_stars}
@@ -81,6 +79,10 @@ Furthermore, we evaluate the quality of the OSS project belonging to the examine
 	\caption{Quality analisis of the examined datasets.}
 	\label{fig:comparison}
 \end{figure*}
+
+
+Furthermore, we evaluate the quality of the OSS project belonging to the examined dataset. As mentioned before, the \GH community assesses this aspect by mainly using forks and stars. Thus, we collect this data for each dataset using the same Github API library employed for the crawling. Figure \ref{fig:comparison} shows the comparison between Dataset $Dt_1$ and $Dt_{20}$. 
+Due to space issues, we omitted the other datasets although they confirm the depicted distribution. As can see, filtering repositories by the \emph{t} value helps to smooth the distribution. On one hand, the Dataset $Dt_1$ contains more repositories with a high forks number rather than the ultimate dataset \ie it reaches around 20,000 forks against 15,000 with t=1 and t=20 respectively. On the other hand, the slope depicted in Dataset $Dt_{20}$ is higher than the original dataset. This demonstrates that the trend of the distribution is more uniform by applying the filtering process. Although the process removes some high-ranked repositories, the final dataset mitigates issues. 
 
 
 %Among these projects, only $7$ of them have been forked from other projects. Such original projects have been excluded from the dataset as their forked ones share highly similar libraries, and this may introduce bias in the recommendation outcomes. We represent the distribution of projects with respect to the number of forks, commits and pull requests in Fig.~\ref{fig:ForkCommitPull}. Most projects have a low number of pull requests, \ie lower than 100, however many of them have a large number of forks and commits. Forking is a means to contribute to the original repositories~\cite{Jiang:2017:WDF:3042021.3042043}. Furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it is further witnessed in Fig.~\ref{fig:ForkStarIssue}. A project with a high number of forks means that it gets attention from the OSS community. In this sense, having many forks can be considered as a sign of a well-maintained and well-received project. Meanwhile, as commits have an impact on the source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed.
