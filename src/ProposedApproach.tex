@@ -218,18 +218,21 @@ We assume that a representation model that addresses mutual
 relationships among \GH repositories and their topics is profitable to
 proposed similarity computation. To this end, we derive a
 \textit{graph-based} model to represent this kind of relationships and eventually to calculate similarities. In the context of mining OSS repositories, the graph model is a convenient approach since it allows for flexible data integration and numerous computation techniques.
-By applying this representation, we are able to transform the set of projects and topics shown in Fig.~\ref{fig:UserItemMatrix} into a directed graph as in Fig.~\ref{fig:Graph}.
-~We adopted our proposed CrossSim approach~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the
+By applying this representation, we are able to transform the set of projects and topics 
+%shown in Fig.~\ref{fig:UserItemMatrix}
+ into a directed graph as in Fig.~\ref{fig:Graph}.
+~We adopted the approach in~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the
 similarities among OSS graph nodes. It relies on techniques successfully
 exploited by many studies to do the same task
 \cite{DiNoia:2012:LOD:2362499.2362501},\cite{BRIGUEZ20146467}. Among
 other relationships, two nodes are deemed to be similar if they point to the same node with the same edge. By looking at the graph in
-Fig.~\ref{fig:Graph}, we can notice that $p_3$ and $p_4$ are highly
-similar since they both point to three nodes $topic_{1}, topic_{4}, topic_{5}$. This
-reflects what also suggested in a previous work by McMillan \etal
-\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common
-pieces of functionality by using a shared set of libraries.
+Fig.~\ref{fig:Graph}, we can notice that $p_1$ and $p_2$ shares two nodes, namely $topic_{2}$ and $topic_{3}$. From the graph, we can also learn additional information about the topics themselves. For example, $topic_{3}$ seems a very popular term since is pointed by three
+different projects. In the meanwhile, $topic_1$ and $topic_4$ are used only by one project at once, $p_1$ and $p_3$ respectively. 
 
+%This reflects what also suggested in a previous work by McMillan \etal
+%\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common
+%pieces of functionality by using a shared set of libraries.
+%
 
 \begin{figure}[t!]
 \centering
