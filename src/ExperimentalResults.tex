@@ -90,9 +90,10 @@ Due to the lack of a baseline, we investigate the prediction performances of the
 	\resizebox{8.5cm}{!} {
 	\begin{tabular}{|l|l|l|l|l|l|l|}
 		\hline
-		& \multicolumn{2}{c}{Success rate}         & \multicolumn{2}{|c|}{Precision}            & \multicolumn{2}{c|}{Recall}               \\ \hline
- 
-		\emph{N}  & MNB & \CT & MNB & \CT & MNB & \CT \\ \hline
+		\rowcolor[HTML]{C0C0C0} 
+		& \multicolumn{2}{c}{\textbf{Success rate}}         & \multicolumn{2}{|c|}{\textbf{Precision}}            & \multicolumn{2}{c|}{\textbf{Recall}}               \\ \hline
+	 \rowcolor[HTML]{C0C0C0} 
+		\textbf{\emph{N} } & \textbf{MNB} & \textbf{\CT }& \textbf{MNB} & \textbf{\CT} & \textbf{MNB} & \textbf{\CT }\\ \hline
 		2                       & 0.220               & 0.554              & 0.117               & 0.350              & 0.031               & 0.179              \\
 		4                       & 0.392               & 0.682              & 0.119               & 0.267              & 0.063               & 0.271              \\
 		6                       & 0.538               & 0.754              & 0.122               & 0.224              & 0.096               & 0.339              \\
@@ -123,36 +124,63 @@ From the evaluation, we can claim that \CT outperforms the \MNB. This result is 
 
 As a further experiment, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \CT with the first top-N results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. As it can be seen there, \CT gains notable improvement by means of this configuration. For comparison purposes, we enable the entangled approach after the top-5 recommended items given by the \MNB. We witness that all the measured metrics gain a relevant improvement. In particular, the success rate duplicates its value with only one additional input topic. Moreover, it reaches the maximum value with top-8 topics.  \CT leads to improvement of the \MNB accuracy, by increasing of 10\% the precision and recall values on average. 
 
-
-
-\begin{table}[h]
-\centering
-
-
-\resizebox{8.5cm}{!} {
-\begin{tabular}{|l|l|l|l|l|l|l|}
-\hline
-  & \multicolumn{3}{c|}{\textbf{\CT}}          & \multicolumn{3}{c|}{\textbf{Entangled approach}}        \\ \hline
-\textbf{No. of input} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} \\ \hline
-1  &       0.409       &    0.409       &  0.105       &     0.138         &      0.221     &   0.029      \\ \hline
- 2 &     0.554         &    0.350       &     0.179   &       0.220       &       0.198    &   0.053     \\ \hline
-3 &    0.632          &      0.301	     &   0.230     &     0.304         &    0.192       &   0.077     \\ \hline
-4 &    0.682          &  0.267         &   0.271      &         0.393    &     0.186      &   0.099     \\ \hline
-5 &      0.728        &    0.246       &   0.310     &      0.479        &   0.183        &    0.122    \\ \hline
-\rowcolor{Gray}
-6 &     0.754         &      0.224     &   0.339     &        0.983      &     0.278      &     0.225   \\ \hline
-7 &      0.778        &    0.207       &   0.363     &    0.999          &   0.340         &   0.322     \\ \hline
-8 &       0.803       &     0.192      &     0.384   &        1      &   0.371        &   0.40     \\ \hline
-10 &      0.828        &     0.169      &     0.422   &       1       &     0.382      &    0.511    \\ \hline
-15 &     0.872         &    0.132       &    0.493    &      1        &   0.322       &       0.636 \\ \hline
-20 &     0.892         &    0.117       &    0.537    &      1        &   0.266        &       0.696 \\ \hline
-\rowcolor{Gray}
-\textbf{Average values} &    \textbf{ 0.785}        &   \textbf{ 0.194}       &   \textbf{ 0.397}   &     \textbf{ 0.826 }       &  \textbf{ 0.296}        &       \textbf{0.433}  \\ \hline
-\end{tabular}
-}
+\begin{table*}[]
+	\small
+	\begin{tabular}{|l | lll| lll |lll |lll|}
+		\hline
+		& \multicolumn{3}{l|}{\textbf{RECALL}} & \multicolumn{3}{l|}{\textbf{PRECISION}} & \multicolumn{3}{l|}{\textbf{SUCCESSRATE}} & \multicolumn{3}{l|}{ \textbf{CATALOG COVERAGE}} \\ \hline
+		k  & \textbf{MNB}     & \textbf{Tin=5}   & \textbf{Tin=2}  & \textbf{MNB}      & \textbf{Tin=5 }   & \textbf{Tin=2}   & \textbf{MNB}       & \textbf{Tin=5 }   & \textbf{Tin=2}    & \textbf{MNB}        & \textbf{Tin=5 }     & \textbf{Tin=2}      \\ \hline
+		1  & 0,018   & 0,018   & 0,018  & 0,138    & 0,138    & 0,138   & 0,136     & 0,136    & 0,136    & 10.769     & 4.835      & 4.835      \\ \hline
+		2  & 0,031   & 0,031   & 0,031  & 0,118    & 0,118    & 0,118   & 0,217     & 0,217    & 0,217    & 15.604     & 8.593      & 8.593      \\ \hline
+		3  & 0,047   & 0,047   & 0,060  & 0,118    & 0,118    & 0,151   & 0,301     & 0,301    & 0,367    & 19.780     & 12.483     & 12.571     \\ \hline
+		4  & 0,063   & 0,063   & 0,088  & 0,119    & 0,119    & 0,166   & 0,389     & 0,389    & 0,466    & 23.956     & 15.340     & 15.912     \\ \hline
+		5  & 0,081   & 0,081   & 0,104  & 0,124    & 0,124    & 0,157   & 0,476     & 0,476    & 0,508    & 25.494     & 18.307     & 19.054     \\ \hline
+		6  & 0,096   & 0,121   & 0,119  & 0,122    & 0,153    & 0,149   & 0,538     & 0,601    & 0,549    & 27.032     & 22.131     & 21.780     \\ \hline
+		7  & 0,112   & 0,149   & 0,131  & 0,121    & 0,161    & 0,140   & 0,605     & 0,668    & 0,574    & 28.791     & 25.912     & 24.681     \\ \hline
+		8  & 0,125   & 0,171   & 0,142  & 0,119    & 0,162    & 0,133   & 0,648     & 0,704    & 0,599    & 29.010     & 29.296     & 27.428     \\ \hline
+		9  & 0,135   & 0,189   & 0,153  & 0,115    & 0,160    & 0,128   & 0,678     & 0,734    & 0,623    & 29.230     & 32.417     & 30.307     \\ \hline
+		10 & 0,147   & 0,204   & 0,163  & 0,112    & 0,156    & 0,123   & 0,711     & 0,754    & 0,644    & 29.230     & 35.296     & 32.967     \\ \hline
+		12 & 0,177   & 0,230   & 0,181  & 0,112    & 0,146    & 0,114   & 0,762     & 0,788    & 0,681    & 29.230     & 40.659     & 38.373     \\ \hline
+		14 & 0,220   & 0,254   & 0,201  & 0,119    & 0,138    & 0,109   & 0,815     & 0,808    & 0,706    & 29.230     & 45.912     & 43.098     \\ \hline
+		16 & 0,258   & 0,274   & 0,215  & 0,122    & 0,131    & 0,102   & 0,853     & 0,829    & 0,722    & 29.230     & 50.505     & 47.582     \\ \hline
+		18 & 0,290   & 0,290   & 0,227  & 0,122    & 0,123    & 0,096   & 0,874     & 0,840    & 0,736    & 29.450     & 54.615     & 51.318     \\ \hline
+		20 & 0,320   & 0,306   & 0,241  & 0,121    & 0,117    & 0,092   & 0,891     & 0,855    & 0,756    & 29.450     & 58.725     & 54.923    \\ \hline
+	\end{tabular}
 \caption{Results for the entangled approach.}
 \label{tab:combined}
-\end{table} 
+\end{table*}
+
+
+
+
+%\begin{table}[h]
+%\centering
+%
+%
+%\resizebox{8.5cm}{!} {
+%\begin{tabular}{|l|l|l|l|l|l|l|}
+%\hline
+%  & \multicolumn{3}{c|}{\textbf{\CT}}          & \multicolumn{3}{c|}{\textbf{Entangled approach}}        \\ \hline
+%\textbf{No. of input} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} \\ \hline
+%1  &       0.409       &    0.409       &  0.105       &     0.138         &      0.221     &   0.029      \\ \hline
+% 2 &     0.554         &    0.350       &     0.179   &       0.220       &       0.198    &   0.053     \\ \hline
+%3 &    0.632          &      0.301	     &   0.230     &     0.304         &    0.192       &   0.077     \\ \hline
+%4 &    0.682          &  0.267         &   0.271      &         0.393    &     0.186      &   0.099     \\ \hline
+%5 &      0.728        &    0.246       &   0.310     &      0.479        &   0.183        &    0.122    \\ \hline
+%\rowcolor{Gray}
+%6 &     0.754         &      0.224     &   0.339     &        0.983      &     0.278      &     0.225   \\ \hline
+%7 &      0.778        &    0.207       &   0.363     &    0.999          &   0.340         &   0.322     \\ \hline
+%8 &       0.803       &     0.192      &     0.384   &        1      &   0.371        &   0.40     \\ \hline
+%10 &      0.828        &     0.169      &     0.422   &       1       &     0.382      &    0.511    \\ \hline
+%15 &     0.872         &    0.132       &    0.493    &      1        &   0.322       &       0.636 \\ \hline
+%20 &     0.892         &    0.117       &    0.537    &      1        &   0.266        &       0.696 \\ \hline
+%\rowcolor{Gray}
+%\textbf{Average values} &    \textbf{ 0.785}        &   \textbf{ 0.194}       &   \textbf{ 0.397}   &     \textbf{ 0.826 }       &  \textbf{ 0.296}        &       \textbf{0.433}  \\ \hline
+%\end{tabular}
+%}
+%\caption{Results for the entangled approach.}
+%\label{tab:combined}
+%\end{table} 
 
 
 
