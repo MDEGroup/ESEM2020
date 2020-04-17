@@ -1,0 +1,69 @@
+\subsection{\MNB evaluation} \label{sec:EXP2}
+
+\rqsecond
+
+Due to the lack of a baseline, we investigate the prediction performances of the \MNB to compare its outcomes with \CT. Reversely from the original paper, we apply the \MNB and we compared the outcomes whit respect to all topics (includin non featured ones) leaving the underlying structure untouched. This is necessary to undertake a fair comparison with \CT. Table \ref{tab:compareMNB} shows the evaluation results in terms  of the three aforementioned metrics. 
+
+
+%\begin{table}[h]
+%\centering
+%
+%
+%\resizebox{8.5cm}{!} {
+%\begin{tabular}{|l|l|l|l|l|l|l|}
+%\hline
+%  & \multicolumn{3}{c|}{ \textbf{\MNB}}          & \multicolumn{3}{c|}{ \textbf{\CT}}        \\ \hline
+%\textbf{No. of input} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} & \textbf{Success rate} &\textbf{ Precision} &\textbf{ Recall} \\ \hline
+%2  &       0.220       &    0.117       &  0.031       &     0.554         &      0.350     &   0.179      \\ \hline
+% 4 &     0.392         &    0.119       &     0.063   &       0.682       &       0.267    &   0.271     \\ \hline
+%6 &    0.538          &      0.122	     &   0.096     &     0.754         &    0.224       &   0.339     \\ \hline
+%8 &    0.648          &  0.119         &   0.125      &         0.803     &     0.192      &   0.384     \\ \hline
+%10 &      0.711        &    0.112       &   0.147     &      0.828        &   0.169        &    0.422    \\ \hline
+%12 &     0.765         &      0.112     &   0.177     &        0.851      &     0.153      &     0.455   \\ \hline
+%14 &      0.815        &    0.119       &   0.220     &    0.863          &   0.139         &   0.482     \\ \hline
+%16 &       0.853       &     0.112      &     0.258   &        0.879      &   0.127        &   0.503     \\ \hline
+%18 &      0.874        &     0.122      &     0.290   &       0.886       &     0.117      &    0.521    \\ \hline
+%20 &     0.891         &    0.121       &    0.320    &      0.892        &   0.117        &       0.537 \\ \hline
+%\rowcolor{Gray}
+%\textbf{Average values} &    \textbf{0.651}        &   \textbf{ 0.120}       &   \textbf{ 0.165 }  &     \textbf{ 0.785}        &  \textbf{ 0.194}        &     \textbf{ 0.397 } \\ \hline
+%\end{tabular}
+%}
+%\caption{Comparison of the two approaches.}
+%\label{tab:compareMNB}
+%\end{table} 
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+	\scriptsize
+	\resizebox{8.5cm}{!} {
+	\begin{tabular}{|l|l|l|l|l|l|l|}
+		\hline
+		\rowcolor[HTML]{C0C0C0} 
+		& \multicolumn{2}{c}{\textbf{Success rate}}         & \multicolumn{2}{|c|}{\textbf{Precision}}            & \multicolumn{2}{c|}{\textbf{Recall}}               \\ \hline
+	 \rowcolor[HTML]{C0C0C0} 
+		\textbf{\emph{N} } & \textbf{MNB} & \textbf{\CT }& \textbf{MNB} & \textbf{\CT} & \textbf{MNB} & \textbf{\CT }\\ \hline
+		2                       & 0.220               & 0.554              & 0.117               & 0.350              & 0.031               & 0.179              \\
+		4                       & 0.392               & 0.682              & 0.119               & 0.267              & 0.063               & 0.271              \\
+		6                       & 0.538               & 0.754              & 0.122               & 0.224              & 0.096               & 0.339              \\
+		8                       & 0.648               & 0.803              & 0.119               & 0.192              & 0.125               & 0.384              \\
+		10                      & 0.711               & 0.828              & 0.112               & 0.169              & 0.147               & 0.422              \\
+		12                      & 0.765               & 0.851              & 0.112               & 0.153              & 0.177               & 0.455              \\
+		14                      & 0.815               & 0.863              & 0.119               & 0.139              & 0.220               & 0.482              \\
+		16                      & 0.853               & 0.879              & 0.112               & 0.127              & 0.258               & 0.503              \\
+		18                      & 0.874               & 0.886              & 0.122               & 0.117              & 0.290               & 0.521              \\
+		20                      & 0.891               & 0.892              & 0.121               & 0.117              & 0.320               & 0.537              \\ \hline
+		\rowcolor[HTML]{C0C0C0} 
+		\textbf{Average} & \textbf{0.651}      & \textbf{0.785}     & \textbf{0.120}      & \textbf{0.194}     & \textbf{0.165}      & \textbf{0.397}    \\ \hline
+	\end{tabular}}
+\caption{Comparison of the two approaches.}
+\label{tab:compareMNB}
+\end{table}
+We evaluate both approaches by variating the number of recommended topics up to 20. For the sake of the presentation, we report half of the data as we aim to show the overall trend.
+As we can see, \CT outperforms the \MNB considering all the metrics. In particular, the success rate grows according to the number of input for both of the approaches. Although the \MNB reaches the same values of \CT with 20 input topics, the latter starts from an initial success rate value of 55\%. This statement holds for all metrics considered in the comparison. A significant achievement is given by the recall value which is the almost triplicated on average using \CT as the recommendation engine. For some input, the \MNB slightly outperforms \CT even though they are meaningless compared to the other findings. 
+This gap is explained by the \MNB model features. In this comparison, we have added the not featured topics to the possible set of outputs \footnote{Due to the space issues, we cannot explain in detail the \MNB internal construction. Thus, the interested reader can find more information in the related work}. Consequently, the accuracy of the model is compromised by these new possible outcomes that the \MNB is not able to provide. This impacts especially on the recall values, as proved by the experiment. The aim of this comparison is to prove the soundness of \CT as a recommendation algorithm where the possible outcomes are heterogeneous \ie featured topics are shuffled with not featured ones. However, the accuracy is very low compared with the success rate. This could be affected by the similarity function embedded in the recommendation engine. 
+
+
+\begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
+From the evaluation, we can claim that \CT outperforms the \MNB. This result is lead by the construction differences between the two approaches, even though the \MNB performances are negatively affected by the introduction of the not featured topics. This demonstrates the rightness of \CT in a miscellaneous environment. 
+\end{tcolorbox}
