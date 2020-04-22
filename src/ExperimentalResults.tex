@@ -53,7 +53,7 @@ The quality evaluation demonstrates that \CT achieves better results by increasi
 %\input{src/oldRQ2}
 
 \subsection{Entangled evaluation} \label{sec:EXP3}
-\rqthird
+\rqsecond
 
 As a further experiment, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \CT with the first top-N results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. As it can be seen there, \CT gains notable improvement by means of this configuration. For comparison purposes, we enable the entangled approach after the top-5 recommended items given by the \MNB. We witness that all the measured metrics gain a relevant improvement. In particular, the success rate duplicates its value with only one additional input topic. Moreover, it reaches the maximum value with top-8 topics.  \CT leads to improvement of the \MNB accuracy, by increasing of 10\% the precision and recall values on average. 
 
@@ -61,7 +61,7 @@ As a further experiment, we combined the two approaches to investigate potential
 	\small
 	\begin{tabular}{|l | lll| lll |lll |lll|}
 		\hline
-		& \multicolumn{3}{l|}{\textbf{RECALL}} & \multicolumn{3}{l|}{\textbf{PRECISION}} & \multicolumn{3}{l|}{\textbf{SUCCESSRATE}} & \multicolumn{3}{l|}{ \textbf{CATALOG COVERAGE}} \\ \hline
+		& \multicolumn{3}{l|}{\textbf{Recall}} & \multicolumn{3}{l|}{\textbf{Precision}} & \multicolumn{3}{l|}{\textbf{Success rate}} & \multicolumn{3}{l|}{ \textbf{Catalog coverage}} \\ \hline
 		k  & \textbf{MNB}     & \textbf{Tin=5}   & \textbf{Tin=2}  & \textbf{MNB}      & \textbf{Tin=5 }   & \textbf{Tin=2}   & \textbf{MNB}       & \textbf{Tin=5 }   & \textbf{Tin=2}    & \JDR{recompute those values}\textbf{MNB}        & \textbf{Tin=5 }     & \textbf{Tin=2}      \\ \hline
 		%1  & 0,018   & 0,018   & 0,018  & 0,138    & 0,138    & 0,138   & 0,136     & 0,136    & 0,136    & 10.769     & 4.835      & 4.835      \\ \hline
 		2  & 0,031   & 0,031   & 0,031  & 0,118    & 0,118    & 0,118   & 0,217     & 0,217    & 0,217    & 15.604     & 8.593      & 8.593      \\ \hline

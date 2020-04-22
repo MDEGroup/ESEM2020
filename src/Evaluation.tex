@@ -93,7 +93,7 @@ Due to space issues, we omitted the other datasets although they confirm the dep
 
 
 %\color{blue}
-\subsection{Evaluation methodology and Metrics’ Definition}\label{sec:methodology-metric}
+\subsection{Evaluation process}\label{sec:methodology-metric}
 
 Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}. \emph{Data Preparation} phase collects repositories that match the requirements defined in previous section from GitHub. This dataset is used to evaluate \CT, \MNB, and the combination of two. 
 The dataset is then split into training and testing sets. The 
@@ -108,7 +108,15 @@ For each testing project \emph{p}, we randomly delete half topics and save it as
 
 The \code{Split topic phase} resembles a real development process where a developer has already included some topics in his repository and waits for recommendations \ie additional topics to be incorporated. \CT recommender system is expected to provide her with the other half, \ie \emph{GT(p)}. 
 
-\JDR{Rephrase}There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} and \emph{accuracy} have been used to study the systems' performance as already proposed by Robillard \etal~\cite{Robillard:2014:RSS:2631387} and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}. The metrics considered during the outcome evaluation follows this notation:
+\subsection{Metrics' definition}
+
+
+\JDR{Rephrase}There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
+
+
+% and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.
+
+ The metrics considered during the outcome evaluation follows this notation:
 
 \begin{itemize}[noitemsep,topsep=0pt]
 	\item \emph{t} is the frequency cut-off value of input topics (\ie all topics that occur less than \emph{t} times are removed from the dataset)
@@ -135,16 +143,20 @@ success\ rate@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | > 0 ) }{\l
 
 \vspace{.1cm}
 \vspace{.1cm}
-\noindent \JDR{Check if it will be used} \textbf{Success rate$_M$@N.} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least $M$ topics match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
-\vspace{-.1cm}
 
-\begin{equation} \label{eqn:RecallRate}
-success\ rate_M@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | >= M ) }{\left | P \right |} %\times 100\%
-%success\ rate@N=\frac{ count_{p \in P}( \left | GT(p) \bigcap (\cup_{r=1}^{N} REC_{r}(p)) \right | > 0 ) }{\left | P \right |}
-\end{equation}
 
-\vspace{.1cm}
-\noindent where the function \emph{count()} counts the number of times that the boolean expression specified in its parameter is \emph{true}.
+
+
+%\noindent \JDR{Check if it will be used} \textbf{Success rate$_M$@N.} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least $M$ topics match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
+%\vspace{-.1cm}
+%
+%\begin{equation} \label{eqn:RecallRate}
+%success\ rate_M@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | >= M ) }{\left | P \right |} %\times 100\%
+%%success\ rate@N=\frac{ count_{p \in P}( \left | GT(p) \bigcap (\cup_{r=1}^{N} REC_{r}(p)) \right | > 0 ) }{\left | P \right |}
+%\end{equation}
+%
+%\vspace{.1cm}
+%\noindent where the function \emph{count()} counts the number of times that the boolean expression specified in its parameter is \emph{true}.
 
 \noindent \textbf{Accuracy.} Accuracy is considered as one of the most preferred \emph{quality indicators} for Information Retrieval applications \cite{Saracevic:1995:EEI:215206.215351}. However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
 
@@ -162,9 +174,22 @@ recall@N = \frac{ \left | match_{N}(p) \right | }{\left | GT(p) \right |}
 \end{equation}
 %\vspace{-.1cm}
 
+\vspace{.1cm}
+\vspace{.1cm}
 
 
 
+\noindent \textbf{Catalog coverage.} This metric is particularly suitable to measure the performance predictions of recommendation systems that suggest a list of items \cite{ge_beyond_2010}. Given the set of projects $U_p$, we compare the number of recommended topics with the global number of the available ones \ie $ REC_{N}(p)$ and T respectively. Reversely from the previous two metrics, the Catalog Coverage measures the suitability of the delivered topics considering all the possible set of values. From the evaluation point of view, it is interesting to assess the impact of N value on the coverage stability, meaning what values of N impacts on the overall prediction performances. 
+
+
+
+\begin{equation}\label{eqn:Coverage}
+%coverage = \frac{\left | \cup_{p\in P} \left [  \cup_{r=1}^{N} REC_{r}(p) \right ] \right | }{\left | L \right |} 
+coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | T \right |} 
+\end{equation}
+
+\vspace{.1cm}
+\vspace{.1cm}
 
 
 
