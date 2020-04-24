@@ -55,14 +55,15 @@ The quality evaluation demonstrates that \CT achieves better results by increasi
 \subsection{Entangled evaluation} \label{sec:EXP3}
 \rqsecond
 
-As a further experiment, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \CT with the first top-N results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. As it can be seen there, \CT gains notable improvement by means of this configuration. For comparison purposes, we enable the entangled approach after the top-5 recommended items given by the \MNB. We witness that all the measured metrics gain a relevant improvement. In particular, the success rate duplicates its value with only one additional input topic. Moreover, it reaches the maximum value with top-8 topics.  \CT leads to improvement of the \MNB accuracy, by increasing of 10\% the precision and recall values on average. 
+Due to the internal construction of the \MNB, the direct comparison of the two approaches can bring biased results. Thus, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \CT with the results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. Table \ref{tab:combined} summarizes the results of this experiment by comparing \CT and the entangled approach. 
+For experiment purposes, we variate the number of recommendation items as well as the number of input topics \ie \emph{Out} and \emph{Tin} values respectively. From the previous assessment, we figured out that the number of inputs leading the best results is Tin=5. Thus, we compare the outcomes considering the minimum number of input topics provided by the \MNB, \ie Tin=2. The results demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage. We witness that \CT outperforms the \MNB by augmenting the number of recommended items. In particular, after Out=8 the accuracy and success rate overcomes the \MNB results considering the \CT's best configuration even though the overall accuracy trend is decreasing. This happens because enlarging the set of recommended items impacts negatively on the precision values. Reversely, the success rate rises up to 0.855 with the best configuration of the entangled approach. As witnessed for the accuracy value, the \MNB records better results until a certain threshold of output items. This degradation in performance is due to the internal probabilistic model used by the approach. 
 
 \begin{table*}[]
 	\small
 	\begin{tabular}{|l | lll| lll |lll |lll|}
 		\hline
 		& \multicolumn{3}{l|}{\textbf{Recall}} & \multicolumn{3}{l|}{\textbf{Precision}} & \multicolumn{3}{l|}{\textbf{Success rate}} & \multicolumn{3}{l|}{ \textbf{Catalog coverage}} \\ \hline
-		\# of rec  & \textbf{MNB}     & \textbf{Tin=5}   & \textbf{Tin=2}  & \textbf{MNB}      & \textbf{Tin=5 }   & \textbf{Tin=2}   & \textbf{MNB}       & \textbf{Tin=5 }   & \textbf{Tin=2}    & \textbf{MNB}        & \textbf{Tin=5 }     & \textbf{Tin=2}      \\ \hline
+		Out  & \textbf{MNB}     & \textbf{Tin=5}   & \textbf{Tin=2}  & \textbf{MNB}      & \textbf{Tin=5 }   & \textbf{Tin=2}   & \textbf{MNB}       & \textbf{Tin=5 }   & \textbf{Tin=2}    & \textbf{MNB}        & \textbf{Tin=5 }     & \textbf{Tin=2}      \\ \hline
 		%1  & 0,018   & 0,018   & 0,018  & 0,138    & 0,138    & 0,138   & 0,136     & 0,136    & 0,136    & 10.769     & 4.835      & 4.835      \\ \hline
 		2  & 0.039   & 0.031   & 0.031  & 0.227    & 0.118    & 0.118   & 0.384     & 0.217    & 0.217    & 0.289     & 8.593      & 8.593      \\ \hline
 		%3  & 0,047   & 0,047   & 0,060  & 0,118    & 0,118    & 0,151   & 0,301     & 0,301    & 0,367    & 19.780     & 12.483     & 12.571     \\ \hline
@@ -70,6 +71,7 @@ As a further experiment, we combined the two approaches to investigate potential
 		%5  & 0,081   & 0,081   & 0,104  & 0,124    & 0,124    & 0,157   & 0,476     & 0,476    & 0,508    & 25.494     & 18.307     & 19.054     \\ \hline
 		6  & 0.088   & 0.121   & 0.119  & 0.174    & 0.153    & 0.149   & 0.634     & 0.601    & 0.549    & 0.664     & 22.131     & 21.780     \\ \hline
 		%7  & 0,112   & 0,149   & 0,131  & 0,121    & 0,161    & 0,140   & 0,605     & 0,668    & 0,574    & 28.791     & 25.912     & 24.681     \\ \hline
+		\rowcolor{Gray}
 		8  & 0.104   & 0.171   & 0.142  & 0.155   & 0.162    & 0.133   &  0.695     & 0.704    & 0.599    & 0.788     & 29.296     & 27.428     \\ \hline
 		%9  & 0,135   & 0,189   & 0,153  & 0,115    & 0,160    & 0,128   & 0,678     & 0,734    & 0,623    & 29.230     & 32.417     & 30.307     \\ \hline
 		10 & 0.121   & 0.204   & 0.163  & 0.144    & 0.156    & 0.123   & 0.732     & 0.754    & 0.644    & 0.916     & 35.296     & 32.967     \\ \hline
@@ -117,7 +119,9 @@ As a further experiment, we combined the two approaches to investigate potential
 
 
 
-These findings can be explained by considering the nature of the input topics. In the first \CT evaluation, we randomly elicited a sub-set of topics form the repository to obtain the ground truth topics. Reversely, the entangled approach employs directly the results coming from the \MNB which represent a more curated list of inputs. Thus, selecting proper topics to enable the collaborative filtering algorithm improves the overall performance prediction even though the average accuracy is still low. Additionally, \CT covers also not featured topics that represent the weakness of the \MNB. In such a way, we combined successfully two different approaches to enlarge the possible set of outcomes. 
+Although the examined metrics are useful to analyze the overall performances, the catalog coverage can evaluate properly the capability to recommend a \emph{list} of items instead of a single one. Looking at the results, we can observe a substantial increase even considering the first configuration with Tin=2. In particular, with only 2 recommended items, the coverage passes from 0.289 given by the \MNB to the 8.593 by simply enabling \CT in the recommendation phase. As expected, the coverage dramatically increases with a larger number of outcomes for both of the considered approaches. Nevertheless, the positive gap of the entangled configuration is sharply huge with respect to the \MNB value. Considering the Out=20, the maximum value reached by the \MNB is 1.256 while the best configuration in the entangled experiment reaches a coverage of 58.725.
+These findings can be explained by considering the nature of the considered topics. As said before, the \MNB can predict only featured topics as training the entire set of \GH topics is not possible due to the computation issues. Reversely, \CT covers a larger set of topics by exploring the described collaborative filtering technique. In this way, the \emph{entangled} is capable of suggesting both featured and not featured topics to the final user and enlarging the possible set of outcomes.
+
 
 \begin{figure}[t!]
 	\centering
@@ -128,7 +132,7 @@ These findings can be explained by considering the nature of the input topics. I
 
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-The entangled approach success in the improvement of the prediction performances. Success rate achieves the best results after the addition of a few topics. Furthermore, the accuracy benefits from this strategy although we measure lower values than expected.
+The entangled approach success in improving the prediction performances. By variating both the input and output number of topics, the accuracy and success rate experienced an improvement even though the former reached low values. The \MNB lacks in catalog coverage, as clearly demonstrated by the higher value of the entangled experiment.
 \end{tcolorbox}
 
 
