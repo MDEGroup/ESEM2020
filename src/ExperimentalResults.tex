@@ -128,8 +128,8 @@ For experiment purposes, we variate the number of recommendation items as well a
 
 
 
-Although the examined metrics are useful to analyze the overall performances, the catalog coverage can evaluate properly the capability to recommend a \emph{list} of items instead of a single one. Looking at the results, we can observe a substantial increase even considering the first configuration with Tin=2. In particular, with only 2 recommended items, the coverage passes from 0.289 given by the \MNB to the 8.593 by simply enabling \CT in the recommendation phase. As expected, the coverage dramatically increases with a larger number of outcomes for both of the considered approaches. Nevertheless, the positive gap of the entangled configuration is sharply huge with respect to the \MNB value. Considering the Out=20, the maximum value reached by the \MNB is 1.256 while the best configuration in the entangled experiment reaches a coverage of 58.725.
-These findings can be explained by considering the nature of the considered topics. As said before, the \MNB can predict only featured topics as training the entire set of \GH topics is not possible due to the computation issues. Reversely, \CT covers a larger set of topics by exploring the described collaborative filtering technique. In this way, the \emph{entangled} is capable of suggesting both featured and not featured topics to the final user and enlarging the possible set of outcomes.
+Although the examined metrics are useful to analyze the overall performances, the catalog coverage can evaluate properly the capability to recommend a \emph{list} of items instead of a single one. Looking at the results, we can observe a substantial increase after 8 output items. As expected, the coverage dramatically increases with a larger number of outcomes for both of the considered approaches. Nevertheless, the positive gap of the entangled configuration is greater than the \MNB value. Considering the Out=20, the maximum value reached by the \MNB is 39.636 while the best configuration in the entangled experiment reaches a coverage of 58.725.
+These findings can be explained by considering the nature of the considered topics. As said before, the \MNB can predict only featured topics as training the entire set of \GH topics is not possible due to the computation issues. Reversely, \CT covers a larger set of topics by enabling the described collaborative filtering technique. In this way, the \emph{entangled} is capable of suggesting both featured and not featured topics to the final user and enlarging the possible set of outcomes.
 
 
 \begin{figure}[t!]
@@ -141,7 +141,7 @@ These findings can be explained by considering the nature of the considered topi
 
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-The entangled approach success in improving the prediction performances. By variating both the input and output number of topics, the accuracy and success rate experienced an improvement even though the former reached low values. The \MNB lacks in catalog coverage, as clearly demonstrated by the higher value of the entangled experiment.
+The entangled approach success in improving the prediction performances. By variating both the input and output number of topics, the accuracy and success rate experienced an enhancement even though the former reached low values. The \MNB lacks in catalog coverage, as clearly demonstrated by the higher value of the entangled experiment.
 \end{tcolorbox}
 
 
