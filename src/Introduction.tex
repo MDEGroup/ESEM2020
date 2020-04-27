@@ -7,12 +7,12 @@ Thus, the topic labeling activity can compromise the popularity and reachability
  
 We propose \CT, a recommendation system that extends the set of recommended items to non-featured topics by exploiting collaborative filtering, a broadly used technique in the recommendation system domain \cite{Schafer:2007:CFR:1768197.1768208}. Given an initial set of topics coming from a \GH project, we encode the relevant information in a graph-based structure. In such a way, we are able to represent the mutual relationships between repositories and topics. From this, a project-topic matrix is created following the common user-item structure used in existing collaborative filtering applications. Then, we compute a similarity function based on featured vectors to recommend the most similar topics.
 
-We evaluate the \CT's prediction performances by variating different parameters as well as comparing it with the \MNB approach. As the direct comparison is not possible due to the approaches' construction, we used a well-defined set of metrics used in the literature to evaluate both of the approaches considering different datasets. Furthermore, we combined the two approaches to investigate the potential benefits of this union. 
+We evaluate the \CT's prediction performances by variating different parameters as well as comparing it with the \MNB approach. As the direct comparison is not possible due to the approaches' internal construction, we used a well-defined set of metrics used in the literature to evaluate both of the approaches considering different datasets. Furthermore, we combined the two approaches to investigate the potential benefits of this union. 
 
 The work gives the following contributions:
 \begin{itemize}
 \item Considering the \GH projects as products, we suggest relevant topics to the project given an initial list of them;
-\item We assess the quality of the work employing a well-defined set of metrics commonly used in the recommendation system domain \ie success rate and accuracy;
+\item We assess the quality of the work employing a well-defined set of metrics commonly used in the recommendation system domain \ie success rate, accuracy, and catalog coverage;
 \item Considering a well-founded approach, we improve it by providing an extended set of possible topics  
 \end{itemize}
 
