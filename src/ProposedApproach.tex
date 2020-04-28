@@ -44,7 +44,9 @@
 % to support OSS developers
 %====================================================================================================================================
 
-In this section, we describe \CT that provides developers with relevant topics for \GH repositories. More specifically, \CT is a \emph{recommender system} \cite{Aggarwal2016} that encodes the relationships among different topics by means of a graph and utilizes a collaborative filtering technique \cite{Schafer:2007:CFR:1768197.1768208} to recommend \GH topics. Such a technique has been used mostly in the e-commerce domain to exploit the relationships among users and products to predict the missing ratings of recommended items \cite{Linden:2003:ARI:642462.642471}. The technique follows the assumption that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. Under the same premise, our tool aims to solve the problem of the reachability of a \GH repository given a set of topics. Instead of recommending goods or services to customers, we recommend a set of topics using an analogous mechanism: \emph{``if a user tags his project with some topics, then similar projects will probably contain common topics.''} 
+In this section, we describe \CT that provides developers with relevant topics for \GH repositories. More specifically, \CT is a \emph{recommender system} \cite{Aggarwal2016} that encodes the relationships among different topics by means of a graph and utilizes a collaborative filtering technique \cite{Schafer:2007:CFR:1768197.1768208} to recommend \GH topics. Such a technique has been used mostly in the e-commerce domain to exploit the relationships among users and products to predict the missing ratings of recommended items \cite{Linden:2003:ARI:642462.642471}. 
+
+The technique follows the assumption that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. Under the same premise, our tool aims to solve the problem of the reachability of a \GH repository given a set of topics. Instead of recommending goods or services to customers, we recommend a set of topics using an analogous mechanism: \emph{``if a user tags his project with some topics, then similar projects will probably contain common topics.''} 
 
 \begin{figure}[t!]
 	\centering
@@ -84,6 +86,7 @@ The aforementioned components are singularly described in the next sections.
 %A matrix of this type is very sparse since most users give ratings to a small amount of items. 
 \subsection{Topic filter}  \label{sec:filter}
 As a preprocessing, we filter the initial set of topics using their frequencies counted on the entire \GH dataset. We remove irrelevant topics to reduce the noise in the prediction phase. Through the \emph{cut-off} value, we progressively increase the frequency threshold to evaluate possible impacts on overall performances. As stated in \cite{repo-topix}, this preprocessing can improve the final results, thus we decide to apply it as a first step. 
+
 To this end, we develop tailored Python scripts that apply this filter to the initial dataset. As a \GH user can manually specify the topic list for his repository, a lot of them can contain infrequent or improper terms \ie the name of the author, duplicated values, terms that rarely appear to name a few. On one hand, imposing such preprocessing reduces the repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by pruning "bad" terms. 
 This pruning phase is computed offline and doesn't affect the time required for the recommendation process. 
 
@@ -94,7 +97,9 @@ This pruning phase is computed offline and doesn't affect the time required for 
 Considering traditional recommender systems for online services, we can identify three main components, namely \emph{users}, \emph{items}, and
 \emph{ratings} \cite{Sarwar:2001:ICF:371920.372071},\cite{DBLP:conf/rweb/NoiaO15}. All mutual relationships among system components are encoded in a \emph{user-item ratings matrix}. Specifically, in the matrix a user is represented by a row,
 an item is represented by a column and each cell in the matrix corresponds to a rating given by a user for an item
-\cite{DBLP:conf/rweb/NoiaO15}. Moving to our domain, users are substitute by projects as well as topics are the possible items to recommend. The analogus user-item ratings matrix represents possible relationships between these two elements \ie project may include various topics. We can denote \emph{project-topic inclusion} relationships as $\ni$. In this matrix, each row represents a project and each column represents a topic. A cell in the matrix is set to $1$ if the topic in the column is included in the project specified by the row, it is set to $0$
+\cite{DBLP:conf/rweb/NoiaO15}. Moving to our domain, users are substitute by projects as well as topics are the possible items to recommend. The analogus user-item ratings matrix represents possible relationships between these two elements \ie project may include various topics. 
+
+We can denote \emph{project-topic inclusion} relationships as $\ni$. In this matrix, each row represents a project and each column represents a topic. A cell in the matrix is set to $1$ if the topic in the column is included in the project specified by the row, it is set to $0$
 otherwise. For the sake of clarity and conformance, we still denote this as a user-item ratings matrix throughout this
 paper.
 
@@ -224,7 +229,8 @@ proposed similarity computation. To this end, we derive a
 By applying this representation, we are able to transform the set of projects and topics 
 %shown in Fig.~\ref{fig:UserItemMatrix}
  into a directed graph as in Fig.~\ref{fig:Graph}.
-~We adopted the approach in~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the
+
+We adopted the approach in~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the
 similarities among OSS graph nodes. It relies on techniques successfully
 exploited by many studies to do the same task
 \cite{DiNoia:2012:LOD:2362499.2362501},\cite{BRIGUEZ20146467}. Among
