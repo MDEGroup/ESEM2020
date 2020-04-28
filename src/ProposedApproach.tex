@@ -84,6 +84,8 @@ The aforementioned components are singularly described in the next sections.
 %A matrix of this type is very sparse since most users give ratings to a small amount of items. 
 \subsection{Topic filter}  \label{sec:filter}
 As a preprocessing, we filter the initial set of topics using their frequencies counted on the entire \GH dataset. We remove irrelevant topics to reduce the noise in the prediction phase. Through the \emph{cut-off} value, we progressively increase the frequency threshold to evaluate possible impacts on overall performances. As stated in \cite{repo-topix}, this preprocessing can improve the final results, thus we decide to apply it as a first step. 
+To this end, we develop tailored Python scripts that apply this filter to the initial dataset. As a \GH user can manually specify the topic list for his repository, a lot of them can contain infrequent or improper terms \ie the name of the author, duplicated values, terms that rarely appear to name a few. On one hand, imposing such preprocessing reduces the repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by pruning "bad" terms. 
+This pruning phase is computed offline and doesn't affect the time required for the recommendation process. 
 
 
 
@@ -97,7 +99,8 @@ otherwise. For the sake of clarity and conformance, we still denote this as a us
 paper.
 
 For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_4 \}$ together with a set of topics $L=\{$\emph{topic$_1$=machine-learning}; \emph{topic$_2$=javascript}; topic{lib$_3$=database}; \emph{topic$_4$=web}; \emph{topic$_5$=al-gorithm}$\}$. By extracting the list of defined topics of the projects in $P$, we discovered the following inclusions: $p_1 \ni topic_1,topic_2$; $p_2 \ni topic_1,topic_3$; $p_3 \ni topic_1 ,topic_3, topic_4, topic_5$;\\
-$p_4 \ni topic_1,topic_2,topic_4,topic_5$. Accordingly, the user-item ratings matrix built to model the occurrence of the topic is depicted in Fig.~\ref{fig:UserItemMatrix}.
+$p_4 \ni topic_1,topic_2,topic_4,topic_5$.
+% Accordingly, the user-item ratings matrix built to model the occurrence of the topic is depicted in Fig.~\ref{fig:UserItemMatrix}.
 
 
 %====================================================================================================================================
