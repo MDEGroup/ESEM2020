@@ -7,7 +7,7 @@
 
 %\revised{:q
 
-In this section, we report how \CT has been evaluated, having the {\em goal} of evaluating the performance of the proposed approach. In Section~\ref{sec:Dataset}, the dataset involved in our evaluation has been presented. We describe the evaluation methodology and metrics in Section~\ref{sec:methodology-metric}. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
+In this section, we report how \CT has been evaluated, having the {\em goal} of evaluating the performance of the proposed approach. In Section~\ref{sec:Dataset}, the dataset involved in our evaluation has been presented. We describe the evaluation methodology and metrics in Section~\ref{sec:methodology-metric}, and2 Section~\ref{sec:metrics} respectively. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
 
 
 %ten equal parts, so-called folds
@@ -94,24 +94,33 @@ Due to space issues, we omitted the other datasets although they confirm the dep
 
 %\color{blue}
 \subsection{Evaluation process}\label{sec:methodology-metric}
-
-Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}. \emph{Data Preparation} phase collects repositories that match the requirements defined in previous section from GitHub. This dataset is used to evaluate \CT, \MNB, and the combination of two. 
-The dataset is then split into training and testing sets. The 
-\emph{Recommendation} phase follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \CT, \MNB, and entangled approaches evaluation respectively).
-To enable \CT, we extract a portion of topics from a given testing project \ie the ground-truth part (it is defined as $GT(p)$ in the following). The left part is used as a query to produce recommendations (see the dotted line flow). As the \MNB uses the README file of a repository to predict a set of topics, this doesn't require any topic as input. Thus, the approach encodes the document relevant information in vectors using the TF-IDF weighting scheme. Then, to feed the network that delivers a set of topics (see the bold line). Finally, the entangled approach uses \CT as the recommendation engine which is fed by the \MNB suggested topics (see dashed line flow). All the results are assessed in the \emph{Outcome Evaluation} phase, which compares the recommendation results with those stored as ground-truth data to compute the quality metrics. 
-
-
 The \emph{ten-fold cross-validation} methodology~\cite{kohavi1995study} has been used to assess the performance of \CT, \MNB and combined approach where every time $9$ folds 
 %(each one contains $625$ projects) 
 are used for training and the remaining one for testing.
-For each testing project \emph{p}, we randomly delete half topics and save it as ground truth (\emph{GT(p)}) . The ground truth data  will be used to validate the recommendation outcomes. The remaining half topics are used as query topics to the \CT.%, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
+For each testing project \emph{p}, we randomly delete half topics and save it as ground truth (\emph{GT(p)}) . The ground truth data  will be used to validate the recommendation outcomes. The remaining half topics are used as query topics to the \CT.
+Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}.
 
-The \code{Split topic phase} resembles a real development process where a developer has already included some topics in his repository and waits for recommendations \ie additional topics to be incorporated. \CT recommender system is expected to provide her with the other half, \ie \emph{GT(p)}. 
+\noindent
+$\blacksquare$~\textbf{Data Preparation phase} collects repositories that match the requirements defined in previous section from GitHub. This dataset is used to evaluate \CT, \MNB, and the combination of two. 
+The dataset is then split into training and testing sets (\ie \code{ Split ten-fold} activity).
+Due to the different nature of the the recommender systems (\ie \MNB requires \code{README} files as input and training data, whereas \CT uses a set of assigned topics as input and for training the recommendation system), the testing and training data are specifically cooked for both approaches).
+The \code{Split topic} activity resembles a real development process where a developer has already included some topics in his repository (\ie \code{Query topics}) and waits for recommendations \ie additional topics to be incorporated. \CT recommender system is expected to provide her with the other half, \ie \code{ GT topics}.
 
-\subsection{Metrics' definition}
+\noindent
+$\blacksquare$~\textbf{Recommendation phase} follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \CT, \MNB, and entangled approaches evaluation respectively).
+To enable \CT, we extract a portion of topics from a given testing project \ie the ground-truth part (it is defined as $GT(p)$ in the following). The left part is used as a query to produce recommendations (see the dotted line flow). As the \MNB uses the README file of a repository to predict a set of topics, this doesn't require any topic as input. Thus, the approach encodes the document relevant information in vectors using the TF-IDF weighting scheme. Then, to feed the network that delivers a set of topics (see the bold line). Finally, the entangled approach uses \CT as the recommendation engine which is fed by the \MNB suggested topics (see dashed line flow). In this respect, both \code{Testing data} and \code{Training set} boxes are simplified to provides the needed data (\ie README file and assigned topics) to the different recommender systems.
+
+\noindent
+$\blacksquare$~\textbf{Outcome Evaluation phase} compares the recommendation results with those stored as ground-truth data to compute the quality metrics (\ie success rate, accuracy and catalog coverage).  
 
 
-\JDR{Rephrase}There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
+%, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
+
+
+\subsection{Metrics' definition}\label{sec:metrics}
+
+
+\JDR{Rephrase}There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate}, \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
 
 
 % and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.
@@ -122,10 +131,10 @@ The \code{Split topic phase} resembles a real development process where a develo
 	\item \emph{t} is the frequency cut-off value of input topics (\ie all topics that occur less than \emph{t} times are removed from the dataset)
 	\item |\emph{t$_{in}$}| is the size of topics that \CT takes as input;
 	\item \emph{N} is the cut-off value for the recommended ranked list of topic;% of recommended libraries;
-	\item \emph{k} is the number of neighbor projects exploited for the recommendation process;
+	\item \emph{k} is the number of neighbour projects exploited for the recommendation process;
 	\item For a testing project \emph{r}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(r)};
 	\item $REC(r)$ is the \emph{top-N} topics recommended to a repository \emph{r}. It is a ranked list in descending order of real scores;
-	\item If a recommended topic $t \in REC(r)$ for a testing project $r$ is found in the ground truth of $r$ (\ie \emph{GT(r)}), hereafter we call this as a topic \textit{match}
+	\item If a recommended topic $rt \in REC(r)$ for a testing project $r$ is found in the ground truth of $r$ (\ie \emph{GT(r)}), hereafter we call this as a topic \textit{match}
 \end{itemize}
 
 
