@@ -34,7 +34,7 @@ To evaluate the approach, we reuse the same dataset employed for the \MNB availa
 Qf = "is:featured \; topic:t \; stars:100..80000 \; topics:>=2"
 \end{equation}%
 to consider only \GH repositories having a number of stars between 100 and 80,000, and tagged with at least two topics. The boolean qualifier \emph{is:featured} is used in the \MNB work to group repositories given a certain featured topic (please refers to \url{https://github.com/topics} for the complete list of featured topics). As \CT is able to retrieve both featured and not-featured topics, this filter doesn't affect the quality of the collected data.
-To investigate the \CT prediction performances, we populated five different datasets by variating the topic frequency cut-off value \emph{t} \ie the maximum frequency of the topic distribution (it will be better described in Section~\ref{sec:methodology-metric}). In this way, we remove the infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:datasets} summarizes the datasets' features with \emph{t} = 1, 5, 10, 15, 20.
+To investigate the \CT prediction performances, we populated five different datasets starting from the original one by variating the topic frequency cut-off value \emph{t} \ie the maximum frequency of the topic distribution (it will be better described in Section~\ref{sec:methodology-metric}). In this way, we remove the infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:datasets} summarizes the datasets' features with \emph{t} = 1, 5, 10, 15, 20.
 
 
 \begin{table}[h]
@@ -45,11 +45,11 @@ To investigate the \CT prediction performances, we populated five different data
 \begin{tabular}{|l|l|l|c|c|}
 \hline
 \textbf{Dataset} & \textbf{No. of repos} &\textbf{ No. of topics} & \textbf{Avg topics for repo} & \textbf{Avg freq. for topic} \\ \hline
-$Dt_1$  &       6,253      &    15,743       &  9.9  &  4.0         \\ \hline
- $Dt_5$  &        3,884      &    1,989      &     8.0  &   17.0   \\ \hline
-$Dt_{10}$  &    2,897         &      964	     &   8.0    &  24.0 \\ \hline
-$Dt_{15}$  &    2,273        &   634       &   7.7 &  28.0       \\ \hline
-$Dt_{20}$  &    1,806       &   456        &   7 .7 &  30.0       \\ \hline
+$Dt_1$  &       6,253      &    15,743       &  9.9  &  3.9       \\ \hline
+ $Dt_5$  &        3,884      &    1,989      &     8.4  &   16.5   \\ \hline
+$Dt_{10}$  &    2,897         &      964	     &   8.0    &  24.1 \\ \hline
+$Dt_{15}$  &    2,273        &   634       &   7.8  &  28.1       \\ \hline
+$Dt_{20}$  &    1,806       &   456        &   7 .7 &  30.5       \\ \hline
 
 \end{tabular}
 }
@@ -59,30 +59,35 @@ $Dt_{20}$  &    1,806       &   456        &   7 .7 &  30.0       \\ \hline
 
 %<<<<<<< HEAD
 As we can see in the next section, removing the infrequent topics improves the overall quality of the considered datasets. 
-Similarly to the other collaborative filtering approaches, the overall prediction performance strongly depends on the dataset. As we will demonstrate in the next section, the collaborative filtering provides better prediction performance when there are enough data (\ie topics) in the training set to resemble the repository behaviour. \JDR{Check this sentence, 5 is a magic number}. After infrequent topics is removed, the repository that consist of less then 5 topics are filter out from the dataset because they contain very few information to enable the collaborative filtering prediction. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset $Dt_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989. The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. Thus, we stop at t=20 and consider Dataset $Dt_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 9.9 and 7.7 topics on average for \emph{t} = 1 and \emph{t} = 20 respectively. This demonstrates that a huge number of topics doesn't help the discoverability of a project. 
-%=======
-%As we can see, removing the infrequent topics improves the overall quality of the considered datasets. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset $Dt_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989. The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. Thus, we stop at t=20 and consider Dataset $Dt_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 7 topics on average. This demonstrates that a huge number of topics doesn't help the discoverability of a project. 
-%>>>>>>> 2241e0e812c956f441252b061dd0d75d6f6927ea
+Similarly to the other collaborative filtering approaches, the overall prediction performance strongly depends on the dataset. As we will demonstrate in the next section, the collaborative filtering provides better prediction performance when there are enough data (\ie topics) in the training set to resemble the repository behaviour. After infrequent topics is removed, the repository that consist of less then 5 topics are filter out from the dataset because they contain very few information to enable the collaborative filtering prediction. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset $Dt_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989. The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. Thus, we stop at t=20 and consider Dataset $Dt_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 9.9 and 7.7 topics on average for \emph{t} = 1 and \emph{t} = 20 respectively. This demonstrates that a huge number of topics doesn't help the discoverability of a project.
 
-
-
-
-\begin{figure*}[h]
+\begin{figure*}[h!]
 \centering
-	\begin{tabular}{c c}	
-	\subfigure[Dataset $Dt_1$]{\label{fig:dt1_stars}
-	\includegraphics[width=0.45\linewidth]{figs/dataset_1_stars.pdf}} &
-	\subfigure[Dataset $Dt_{20}$]{\label{fig:dt20_stars}
-	\includegraphics[width=0.45\linewidth]{figs/dataset_20_stars.pdf}}
-	
+	\begin{tabular}{c c }	
+	\subfigure[Dataset $Dt_5$]{\label{fig:dt5_stars}
+	\includegraphics[width=0.45\linewidth]{figs/dataset_5_stars.pdf}} &
+	\subfigure[Dataset $Dt_{10}$]{\label{fig:dt10_stars}
+	\includegraphics[width=0.45\linewidth]{figs/dataset_10_stars.pdf}} \\
+\subfigure[Dataset $Dt_{15}$]{\label{fig:dt15_stars}
+	\includegraphics[width=0.45\linewidth]{figs/dataset_15_stars.pdf}} & 	
+\subfigure[Dataset $Dt_{20}$]{\label{fig:dt20_stars}
+	\includegraphics[width=0.45\linewidth]{figs/dataset_20_stars.pdf}}\\	
 	\end{tabular} 
 	\caption{Quality analisis of the examined datasets.}
 	\label{fig:comparison}
 \end{figure*}
 
+ 
+%=======
+%As we can see, removing the infrequent topics improves the overall quality of the considered datasets. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset $Dt_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989. The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. Thus, we stop at t=20 and consider Dataset $Dt_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 7 topics on average. This demonstrates that a huge number of topics doesn't help the discoverability of a project. 
+%>>>>>>> 2241e0e812c956f441252b061dd0d75d6f6927ea
+Furthermore, we evaluate the quality of the OSS project belonging to the examined dataset. As mentioned before, the \GH community assesses this aspect by mainly using forks and stars. Thus, we collect this data for each dataset using the same Github API library employed for the crawling. Figure \ref{fig:comparison} shows the comparison among all the examined datasets. As can see, filtering repositories by the \emph{t} value helps to smooth the distribution. On one hand, the Dataset $Dt_5$ contains more repositories with a high forks number rather than the ultimate dataset \ie it reaches around 20,000 forks against 15,000 with t=5 and t=20 respectively. On the other hand, the slope depicted in Dataset $Dt_{20}$ is higher than the original dataset. The positive trend is confirmed by observing the distribution of the other datasets \ie Dataset $Dt_{10}$ and $Dt_{15}$. In particular, we are able to remove repositories with less number of stars \ie from 5,000 to 10,000. 
+From this study, we observe a correlation between the number of stars and the topics' frequency. In other words, most frequent topics appear in the high-ranked repositories and this finding affects the quality of the recommendations. 
 
-Furthermore, we evaluate the quality of the OSS project belonging to the examined dataset. As mentioned before, the \GH community assesses this aspect by mainly using forks and stars. Thus, we collect this data for each dataset using the same Github API library employed for the crawling. Figure \ref{fig:comparison} shows the comparison between Dataset $Dt_1$ and $Dt_{20}$. 
-Due to space issues, we omitted the other datasets although they confirm the depicted distribution. As can see, filtering repositories by the \emph{t} value helps to smooth the distribution. On one hand, the Dataset $Dt_1$ contains more repositories with a high forks number rather than the ultimate dataset \ie it reaches around 20,000 forks against 15,000 with t=1 and t=20 respectively. On the other hand, the slope depicted in Dataset $Dt_{20}$ is higher than the original dataset. This demonstrates that the trend of the distribution is more uniform by applying the filtering process. Although the process removes some high-ranked repositories, the final dataset mitigates issues. 
+
+
+
+
 
 
 %Among these projects, only $7$ of them have been forked from other projects. Such original projects have been excluded from the dataset as their forked ones share highly similar libraries, and this may introduce bias in the recommendation outcomes. We represent the distribution of projects with respect to the number of forks, commits and pull requests in Fig.~\ref{fig:ForkCommitPull}. Most projects have a low number of pull requests, \ie lower than 100, however many of them have a large number of forks and commits. Forking is a means to contribute to the original repositories~\cite{Jiang:2017:WDF:3042021.3042043}. Furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it is further witnessed in Fig.~\ref{fig:ForkStarIssue}. A project with a high number of forks means that it gets attention from the OSS community. In this sense, having many forks can be considered as a sign of a well-maintained and well-received project. Meanwhile, as commits have an impact on the source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed.
@@ -120,7 +125,7 @@ $\blacksquare$~\textbf{Outcome Evaluation phase} compares the recommendation res
 \subsection{Metrics' definition}\label{sec:metrics}
 
 
-\JDR{Rephrase}There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate}, \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
+There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
 
 
 % and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.
