@@ -106,19 +106,19 @@ For each testing project \emph{p}, we randomly delete half topics and save it as
 Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}.
 
 \noindent
-$\blacksquare$~\textbf{Data Preparation phase} collects repositories that match the requirements defined in previous section from GitHub. This dataset is used to evaluate \CT, \MNB, and the combination of two. 
+$\blacksquare$~\textbf{Data Preparation phase} collects repositories that match the requirements defined in previous section from GitHub during \code{Data collection} step. This dataset is used to evaluate \CT, \MNB, and the combination of two. 
 The dataset is then split into training and testing sets (\ie \code{ Split ten-fold} activity).
 Due to the different nature of the the recommender systems (\ie \MNB requires \code{README} files as input and training data, whereas \CT uses a set of assigned topics as input and for training the recommendation system), the testing and training data are specifically cooked for both approaches).
 The \code{Split topic} activity resembles a real development process where a developer has already included some topics in his repository (\ie \code{Query topics}) and waits for recommendations \ie additional topics to be incorporated. \CT recommender system is expected to provide her with the other half, \ie \code{ GT topics}.
 
 \noindent
-$\blacksquare$~\textbf{Recommendation phase} follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \CT, \MNB, and entangled approaches evaluation respectively).
+$\blacksquare$~\textbf{Recommendation phase} follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \code{\CT}, \code{\MNB}, and \code{Entangled} approaches evaluation respectively).
 To enable \CT, we extract a portion of topics from a given testing project \ie the ground-truth part (it is defined as $GT(p)$ in the following). The left part is used as a query to produce recommendations (see the dotted line flow). As the \MNB uses the README file of a repository to predict a set of topics, this doesn't require any topic as input. Thus, the approach encodes the document relevant information in vectors using the TF-IDF weighting scheme. Then, to feed the network that delivers a set of topics (see the bold line). Finally, the entangled approach uses \CT as the recommendation engine which is fed by the \MNB suggested topics (see dashed line flow). In this respect, both \code{Testing data} and \code{Training set} boxes are simplified to provides the needed data (\ie README file and assigned topics) to the different recommender systems.
 
 \noindent
-$\blacksquare$~\textbf{Outcome Evaluation phase} compares the recommendation results with those stored as ground-truth data to compute the quality metrics (\ie success rate, accuracy and catalog coverage).  
+$\blacksquare$~\textbf{Outcome Evaluation phase} evaluate the recommendation results with those stored as ground-truth data to compute the quality metrics (\ie \code{Success rate}, \code{Precision}, \code{Recall}, and \code{Catalog coverage}) during the \code{Comparison} activity.  
 
-It is worth noting that we can't directly compare directly \CT and \MNB approaches because they rely on different data as input (\ie \CT requires an initial set of assigned topics for suggesting new topics, whereas\MNB uses the information mined from the README files). 
+It is worth noting that we can't directly compare directly \CT and \MNB approaches because they rely on different input data (\ie \CT requires an initial set of assigned topics for suggesting new ones, whereas\MNB uses the information mined from the README files to recommend the expected topics). 
 \JDR{Check if the entangled approach is described somewhere}
 %, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
 

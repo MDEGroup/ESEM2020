@@ -1,5 +1,5 @@
-This section discusses the findings of the qualitative assessment. To address the formulated research questions, we perform two different experiments. Section \ref{sec:EXP1} discusses the \CT results by variating different parameters, % We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. 
-the results obtained with the entangled approach (\ie the combination of \CT and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
+This section discusses the findings of the qualitative assessment. To address the formulated research questions, we perform two different experiments. Section \ref{sec:EXP1} discusses the \CT results by variating different parameters. % We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. 
+The results obtained with the entangled approach (\ie the combination of \CT and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
 
 
 \subsection{\CT evaluation} \label{sec:EXP1}
@@ -10,9 +10,10 @@ To find the best configuration in terms of prediction performances, we experimen
 %Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
 
 
-As we are relying on a collaborative filtering technique, the number of output topics, the number of neighbours, and the data preprocessing play an important role in the assessment. Thus, we variate  the recommended list of topics \emph{N} for 5 and 10, and the number of neighbours \emph{k} \ie \emph{N} = \{5, 10, 15, 20, 25\}. Moreover, the figure depicts the results of \CT applied on the dataset mined defined in Section~\ref{sec:Dataset} \ie $Dt_{1}$, $Dt_{5}$, $Dt_{10}$, $Dt_{15}$, and $Dt_{20}$.
+As we are relying on a collaborative filtering technique, the number of output topics, the number of neighbours, and the data preprocessing play an important role in the assessment. Thus, we variate  the recommended list of topics \emph{N} for 5 and 10, and the number of neighbours \emph{k} \ie \emph{N} = \{5, 10, 15, 20, 25\}. 
 %we use different topic frequency cut-off \emph{t} to remove very infrequent topics from the dataset. 
 The bar charts in Fig.~\ref{fig:success-rateN5} and \ref{fig:success-rateN10} show the average success rates of all ten folds of \CT.%divided by the different topic frequency cut-off \emph{t}
+Both figures depict the results of \CT applied on the different datasets defined in Section~\ref{sec:Dataset} \ie $Dt_{1}$, $Dt_{5}$, $Dt_{10}$, $Dt_{15}$, and $Dt_{20}$.
 In particular, Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10} shows the success rate considering the first 5 and 10 recommended topics respectively. The horizontal axes shows the success rate outcomes for different size of neighbours \emph{N}.
 Overall, it is evident that infrequent topics negatively affect both success rate values. At the first glance we can see that the success rate of \CT with all topics is much lower than others \emph{t} cut-off.
 \begin{figure*}[t]
@@ -29,7 +30,7 @@ Overall, it is evident that infrequent topics negatively affect both success rat
 \end{figure*}
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=\linewidth]{figs/PrecisionRecallCurve.pdf}
+	\includegraphics[width=.95\linewidth]{figs/PrecisionRecallCurve.png}
 	\caption{Evaluation of the different configuration.}
 	\label{fig:configs}
 \end{figure}
@@ -40,13 +41,14 @@ This is also confirmed by the precision and recall curves depicted in Fig.~\ref{
 The line graph depicts the precision and recall curves on average for all 10 rounds by considering \emph{N} value ranges from 1 to 20 and \emph{t}. So, each dot in a curve corresponds to a specific value of \emph{N}. 
 These outcomes have been obtained by keeping 25 as the number of neighbours \emph{k} because we have already discussed that higher values of neighbours reach better prediction performances. Overall, the precision and recall values rise when the \emph{t} cut-off grows. Given that better prediction performance appears near to the upper right corner~\cite{DiNoia:2012:LOD:2362499.2362501}, the figure shows that a higher value of \emph{t} reaches better accuracy for all values of \emph{N}.
 
-As defined in Section~\ref{sec:metrics}, the coverage metric is the percent of recommended topic in the training data that the model is able to recommend on a test set. Table\ref{tab:coverage} reports the average coverage value of all ten folds.
+As defined in Section~\ref{sec:metrics}, the coverage metric is the percent of recommended topic in the training data that the model is able to recommend on a test set. Table~\ref{tab:coverage} reports the average coverage value for all ten rounds.
 For each dataset (\ie $Dt_{1}$, $Dt_{5}$, $Dt_{10}$, $Dt_{15}$, $Dt_{20}$), 
-the table consists of two coverage values: the former (\ie \emph{Dataset coverage}) is computed by considering the coverage with respect to the number of topic after the filtering step, whereas the latter considers all mined topics (\ie 15,743 topics). The value of \emph{Dataset coverage} grows by increasing the topic frequency cut-off value \emph{t}, whereas the \emph{Global coverage} decreases because there are no training data to recommend infrequent topics. The average \emph{Global coverage} values decrease from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$).
-Having a higher value of \emph{t}, it strongly impacts on the global catalog coverage value, because too many training data are discarded due to the topic frequency cut-off. Differently from the discussed metric outcomes, this exeriment shows how an higher values of topic frequency cut-off negatively impacts on the global catalog coverage value.
+the table consists of two coverage values: the former (\ie \emph{Dataset coverage}) is computed by considering the coverage with respect to the number of topics after the filtering step, whereas the latter considers all mined topics (\ie 15,743 topics). The value of \emph{Dataset coverage} grows by increasing the topic frequency cut-off value \emph{t}, whereas the \emph{Global coverage} decreases because there are no training data to recommend infrequent topics. In particular, the average \emph{Global coverage} values decrease from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$).
+Having a higher value of \emph{t}, it strongly impacts on the global catalog coverage value, because too many training data are discarded due to the topic frequency cut-off \emph{t}. Differently from the discussed metric outcomes, this exeriment shows how an higher values of topic frequency cut-off negatively impacts on the global catalog coverage value.
+The values of \emph{Dataset coverage} does not provide the information about the original topics directly mined from \GH.
 
 
-\JDR{Change this part} In the methodology described in Section~\ref{sec:methodology-metric}, for each repository \emph{r}, the evaluation outcomes consider the half part of real topics as input and remaining ones as ground truth data \emph{GT(r)}. Because of we are also interested to understand how the number of input topics impacts on prediction performance, Fig.~\ref{fig:pr-input-topics} shows the average success rate of all ten folds by choosing different number of input topics. Varying |\emph{t$_{in}$}| means changing the length of input topics that enable the \CT collaborative filtering recommender. In this picture we report the average success of all folds values for the best configuration settings (\ie \emph{k} = 25, \emph{t} = 20 and) . The success rate values exhibits an improvements when the size of input topic rises. This  behaviour demonstrate that \CT computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
+\JDR{Change this part} In the methodology described in Section~\ref{sec:methodology-metric}, for each repository \emph{r}, the evaluation outcomes consider the half part of real topics as input and remaining ones as ground truth data \emph{GT(r)}. Because of we are also interested to understand how the number of input topics impacts on prediction performance, Fig.~\ref{fig:pr-input-topics} shows the average success rate of all ten folds by choosing different number of input topics. Varying |\emph{t$_{in}$}| means changing the length of input topics that enable the \CT collaborative filtering recommender. In this picture we report the average success of all folds values for the best configuration settings (\ie \emph{k} = 25 and \emph{t} = 20) . The success rate values exhibits an improvements when the size of input topic rises. This  behaviour demonstrate that \CT computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{figs/sr_change_input_topics.pdf}
@@ -57,7 +59,10 @@ Having a higher value of \emph{t}, it strongly impacts on the global catalog cov
 \input{src/coverageTable}
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-The quality evaluation demonstrates that \CT achieves better results by increasing the input data. The number of neighbors and the topic filters contribute to this improvement. However, the precision and recall values are still low, suggesting that bias lives in the users topic.
+The quality evaluation demonstrates that \CT achieves better performance in terms of accuracy and success rate by increasing the number of considered neighbours \emph{k} and filtered data \emph{t}. %The number of neighbors and the topic filters contribute to this improvement. 
+However, the conducted experiment shows that an higher values of topic frequency cut-off \emph{t} negatively impact on the global catalog coverage. 
+For this reason, the \emph{t} values should be careful selected during the filtering phase to obtain balanced results in term of accuracy, success rate, and global catalog coverage.
+However, the precision and recall values are still low, suggesting that bias lives in the users topic.
 \end{tcolorbox}
 
 
@@ -146,13 +151,6 @@ Although the examined metrics are useful to analyze the overall performances, th
 
 These findings can be explained by considering the nature of the considered topics. As said before, the \MNB can predict only featured topics as training the entire set of \GH topics is not possible due to the computation issues. Reversely, \CT covers a larger set of topics by enabling the described collaborative filtering technique. In this way, the \emph{entangled} is capable of suggesting both featured and not featured topics to the final user and enlarging the possible set of outcomes.
 
-
-\begin{figure}[t!]
-	\centering
-	\includegraphics[width=\linewidth]{figs/PRCs_entangled}
-	\caption{Evaluation of the different input topics. \CDS{Check if we want to keep this or just delete}}
-	\label{fig:prcs-entangled}
-\end{figure} 
 
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
