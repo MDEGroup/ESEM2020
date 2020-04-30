@@ -95,8 +95,10 @@
 
 
 \begin{abstract}
-Collaborative filtering is a well-founded technique spreadly used in the recommendation system domain. During recent years, a plethora of approaches has been developed to provide the users with relevant items. Considering the open-source software (OSS) domain, \GH has become a precious service for storing and managing software source code. To represent the stored projects in an effective manner, in 2017 \GH introduced the possibility to classify them employing topics. However, assigning wrong topics to a given repository can compromise the possibility of helping other developers reach it and eventually contribute to its development.
-In this paper, we present \CT, a recommender system to assist open source software developers in selecting suitable topics to the repositories. \CT exploits a collaborative filtering technique to recommend libraries to developers by relying on the set of initial topics, which are currently included in the project being. To assess the quality of the approach, we exploit a recent work in this domain and validate both of them using different metrics. The results show that \CT outperforms it in all the examined aspects. More interesting, the chain of the two approaches lead an improvement of the prediction performances.
+Collaborative filtering is a well-founded technique widely used in the recommendation system domain. During recent years, a plethora of approaches have been developed to provide the users with relevant items. Considering the open-source software (OSS) domain, \GH has gained the head role in storing, analyzing and maintaining a huge number of repositories. To represent the stored projects in an effective manner, in 2017 \GH introduced the possibility to classify them employing topics. However, such labeling activity should be carefully conducted to avoid negative effects on project popularity.
+In this paper, we present \CT, a recommender system to assist open source software developers in selecting suitable topics for the repositories. \CT exploits a collaborative filtering technique to recommend topics to developers by relying on the set of initial ones, which are currently included in the project being. 
+To assess the quality of the approach, we exploit a recent work in this domain and validate both of them using different metrics. The results show that \CT outperforms it in all the examined aspects. More interesting, combining the two approaches improves the overall prediction performances.
+
 \end{abstract}
 
 %%
@@ -143,9 +145,12 @@ In this paper, we present \CT, a recommender system to assist open source softwa
 \label{sec:Introduction}
 \input{src/Introduction}
 
-\section{Background}
-\label{sec:Background}
-\input{src/Background}
+
+
+
+\section{Related Work}
+\label{sec:RelatedWorks}
+\input{src/RelatedWork}
 
 
 
@@ -162,9 +167,9 @@ In this paper, we present \CT, a recommender system to assist open source softwa
 \input{src/ExperimentalResults}
 
 
-\section{Related Work}
-\label{sec:RelatedWorks}
-\input{src/RelatedWork}
+\section{Threats to validity}
+\label{sec:Threats}
+\input{src/Threats}
 
 \section{Conclusions and Future Work}
 \label{sec:Conclusions}

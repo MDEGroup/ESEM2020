@@ -44,7 +44,9 @@
 % to support OSS developers
 %====================================================================================================================================
 
-In this section, we describe \CT that provides developers with relevant topics for \GH repositories. More specifically, \CT is a \emph{recommender system} \cite{Aggarwal2016} that encodes the relationships among different topics by means of a graph and utilizes a collaborative filtering technique \cite{Schafer:2007:CFR:1768197.1768208} to recommend \GH topics. Such a technique has been used mostly in the e-commerce domain to exploit the relationships among users and products to predict the missing ratings of recommended items \cite{Linden:2003:ARI:642462.642471}. The technique follows the assumption that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. Under the same premise, our tool aims to solve the problem of the reachability of a \GH repository given a set of topics. Instead of recommending goods or services to customers, we recommend a set of topics using an analogous mechanism: \emph{``if a user tags his project with some topics, then similar projects will probably contain common topics.''} 
+In this section, we describe \CT that provides developers with relevant topics for \GH repositories. More specifically, \CT is a \emph{recommender system} \cite{Aggarwal2016} that encodes the relationships among different topics by means of a graph and utilizes a collaborative filtering technique \cite{Schafer:2007:CFR:1768197.1768208} to recommend \GH topics. Such a technique has been used mostly in the e-commerce domain to exploit the relationships among users and products to predict the missing ratings of recommended items \cite{Linden:2003:ARI:642462.642471}. 
+
+The technique follows the assumption that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. Under the same premise, our tool aims to solve the problem of the reachability of a \GH repository given a set of topics. Instead of recommending goods or services to customers, we recommend a set of topics using an analogous mechanism: \emph{``if a user tags his project with some topics, then similar projects will probably contain common topics.''} 
 
 \begin{figure}[t!]
 	\centering
@@ -85,6 +87,9 @@ The aforementioned components are singularly described in the next sections.
 \subsection{Topic filter}  \label{sec:filter}
 As a preprocessing, we filter the initial set of topics using their frequencies counted on the entire \GH dataset. We remove irrelevant topics to reduce the noise in the prediction phase. Through the \emph{cut-off} value, we progressively increase the frequency threshold to evaluate possible impacts on overall performances. As stated in \cite{repo-topix}, this preprocessing can improve the final results, thus we decide to apply it as a first step. 
 
+To this end, we develop tailored Python scripts that apply this filter to the initial dataset. As a \GH user can manually specify the topic list for his repository, a lot of them can contain infrequent or improper terms \ie the name of the author, duplicated values, terms that rarely appear to name a few. On one hand, imposing such preprocessing reduces the repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by pruning "bad" terms. 
+This pruning phase is computed offline and doesn't affect the time required for the recommendation process. 
+
 
 
 \subsection{Data Encoder} \label{sec:DataEncoder}
@@ -92,12 +97,15 @@ As a preprocessing, we filter the initial set of topics using their frequencies 
 Considering traditional recommender systems for online services, we can identify three main components, namely \emph{users}, \emph{items}, and
 \emph{ratings} \cite{Sarwar:2001:ICF:371920.372071},\cite{DBLP:conf/rweb/NoiaO15}. All mutual relationships among system components are encoded in a \emph{user-item ratings matrix}. Specifically, in the matrix a user is represented by a row,
 an item is represented by a column and each cell in the matrix corresponds to a rating given by a user for an item
-\cite{DBLP:conf/rweb/NoiaO15}. Moving to our domain, users are substitute by projects as well as topics are the possible items to recommend. The analogus user-item ratings matrix represents possible relationships between these two elements \ie project may include various topics. We can denote \emph{project-library inclusion} relationships as $\ni$. In this matrix, each row represents a project and each column represents a topic. A cell in the matrix is set to $1$ if the topic in the column is included in the project specified by the row, it is set to $0$
+\cite{DBLP:conf/rweb/NoiaO15}. Moving to our domain, users are substitute by projects as well as topics are the possible items to recommend. The analogus user-item ratings matrix represents possible relationships between these two elements \ie project may include various topics. 
+
+We can denote \emph{project-topic inclusion} relationships as $\ni$. In this matrix, each row represents a project and each column represents a topic. A cell in the matrix is set to $1$ if the topic in the column is included in the project specified by the row, it is set to $0$
 otherwise. For the sake of clarity and conformance, we still denote this as a user-item ratings matrix throughout this
 paper.
 
 For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_4 \}$ together with a set of topics $L=\{$\emph{topic$_1$=machine-learning}; \emph{topic$_2$=javascript}; topic{lib$_3$=database}; \emph{topic$_4$=web}; \emph{topic$_5$=al-gorithm}$\}$. By extracting the list of defined topics of the projects in $P$, we discovered the following inclusions: $p_1 \ni topic_1,topic_2$; $p_2 \ni topic_1,topic_3$; $p_3 \ni topic_1 ,topic_3, topic_4, topic_5$;\\
-$p_4 \ni topic_1,topic_2,topic_4,topic_5$. Accordingly, the user-item ratings matrix built to model the occurrence of the topic is depicted in Fig.~\ref{fig:UserItemMatrix}.
+$p_4 \ni topic_1,topic_2,topic_4,topic_5$.
+% Accordingly, the user-item ratings matrix built to model the occurrence of the topic is depicted in Fig.~\ref{fig:UserItemMatrix}.
 
 
 %====================================================================================================================================
@@ -218,23 +226,27 @@ We assume that a representation model that addresses mutual
 relationships among \GH repositories and their topics is profitable to
 proposed similarity computation. To this end, we derive a
 \textit{graph-based} model to represent this kind of relationships and eventually to calculate similarities. In the context of mining OSS repositories, the graph model is a convenient approach since it allows for flexible data integration and numerous computation techniques.
-By applying this representation, we are able to transform the set of projects and topics shown in Fig.~\ref{fig:UserItemMatrix} into a directed graph as in Fig.~\ref{fig:Graph}.
-~We adopted our proposed CrossSim approach~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the
+By applying this representation, we are able to transform the set of projects and topics 
+%shown in Fig.~\ref{fig:UserItemMatrix}
+ into a directed graph as in Fig.~\ref{fig:Graph}.
+
+We adopted the approach in~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to compute the
 similarities among OSS graph nodes. It relies on techniques successfully
 exploited by many studies to do the same task
 \cite{DiNoia:2012:LOD:2362499.2362501},\cite{BRIGUEZ20146467}. Among
 other relationships, two nodes are deemed to be similar if they point to the same node with the same edge. By looking at the graph in
-Fig.~\ref{fig:Graph}, we can notice that $p_3$ and $p_4$ are highly
-similar since they both point to three nodes $topic_{1}, topic_{4}, topic_{5}$. This
-reflects what also suggested in a previous work by McMillan \etal
-\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common
-pieces of functionality by using a shared set of libraries.
+Fig.~\ref{fig:Graph}, we can notice that $p_1$ and $p_2$ shares two nodes, namely $topic_{2}$ and $topic_{3}$. From the graph, we can also learn additional information about the topics themselves. For example, $topic_{3}$ seems a very popular term since is pointed by three
+different projects. In the meanwhile, $topic_1$ and $topic_4$ are used only by one project at once, $p_1$ and $p_3$ respectively. 
 
+%This reflects what also suggested in a previous work by McMillan \etal
+%\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common
+%pieces of functionality by using a shared set of libraries.
+%
 
 \begin{figure}[t!]
 \centering
-\includegraphics[width=\columnwidth]{figs/Graph.pdf}
-\caption{Graph representation for projects and libraries.}
+\includegraphics[width=\columnwidth]{figs/graphCFtop.pdf}
+\caption{Graph representation for projects and topics}
 \label{fig:Graph}
 \end{figure}
 
@@ -314,6 +326,7 @@ where $n$ is the cardinality of the set of topics that $p$ and $q$ share in comm
 
 %A collaborative-filtering recommender system suggests products that customers similar to the customer being considered have already purchased. 
 
+\subsection{Recommendation engine}
 
 The representation using a user-item ratings matrix allows for the computation of missing scores \cite{Aggarwal2016},\cite{DBLP:conf/rweb/NoiaO15}. Depending on the availability of data, there are two main techniques to compute the unknown ratings, namely \emph{content-based} \cite{Pazzani2007} and \emph{collaborative-filtering} \cite{Miranda:2008:ICF:1486927.1487083} recommendation techniques. Focusing on the latter, this technique computes the ratings by taking into account the set of items rated by similar customers. There are two main types of collaborative-filtering recommendation: \emph{user-based} \cite{Zhao:2010:UCR:1748610.1749278} and \emph{item-based} \cite{Sarwar:2001:ICF:371920.372071} techniques. As their names suggest, the user-based technique computes missing ratings by considering the ratings collected from similar users. Instead, the item-based technique performs the same task by using the similarities among items \cite{Cremonesi:2008:EMC:1468165.1468327}.
 
@@ -332,7 +345,11 @@ In the context of \CT, the term \emph{rating} describes the appearance of a topi
 \end{figure}
 
 
-Consider the mutual relationships between a project and its topics represented in a graph data structure, we exploit the user-based collaborative-filtering technique to enable the topic recommendation process \cite{Linden:2003:ARI:642462.642471,Zhao:2010:UCR:1748610.1749278}. Given an active project $p$, the inclusion of libraries in $p$ can be deduced from projects that are similar to $p$. The process is summarized as follows: 
+
+We can employ the proposed engine into two different ways \emph{(i)} as a stand-alone given an initial set of topics or \emph{(ii)} using \MNB results to enable the collaborative filtering based recommendation. Consider the mutual relationships between a project and its topics represented in a graph data structure, we exploit the user-based collaborative-filtering technique to enable the topic recommendation process \cite{Linden:2003:ARI:642462.642471,Zhao:2010:UCR:1748610.1749278}. 
+
+
+Given an active project $p$, the inclusion of libraries in $p$ can be deduced from projects that are similar to $p$. The process is summarized as follows: 
 
 \begin{itemize}
 \item Compute the similarities between the active project and all projects in the collection;
@@ -426,3 +443,6 @@ where $\overline{r_{p}}$ and $\overline{r_{q}}$ are the mean of the ratings of $
 %
 %In its current version, \CR recommends a set of libraries to developers, however it is likely that only some of the suggestions will result as useful for them. While the current version of \CR is unable to capture developers' feedback, it is possible to re-train again and obtain new recommendations based on the up-to-date code base.
 
+\subsection{Entanglement with \MNB}
+
+So far, we have described \CT as a stand-alone recommender system by detailing all the involved components in the process. To highlight its flexibility in a different context, we \emph{entangle} our tool with the MNB network using it as a black box. As mentioned before, this recent work using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. Given a \RM file, the approach computes vectors using the TF-IDF weighting scheme to extract features. Then, the model is trained to retrieve the most probable featured topics according to the multinomial distribution with the Naive Bayesian assumption. The outcomes are evaluated using the ten folder validation process. In the landscape of our work, we consider the set of featured topics predicted by the MNB model as the input of \CT. The aim of this kind of analysis is to evaluate \CT capability using a well-founded technique in the literature.

@@ -5,9 +5,9 @@
 
 
 
-%\revised{
+%\revised{:q
 
-This section describes the planning of our evaluation, having the {\em goal} of evaluating the performance of the proposed approach. In Section~\ref{sec:Dataset}, we introduce the dataset exploited in our evaluation. The evaluation methodology and metrics are presented in Section~\ref{sec:methodology-metric}. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
+In this section, we report how \CT has been evaluated, having the {\em goal} of evaluating the performance of the proposed approach. In Section~\ref{sec:Dataset}, the dataset involved in our evaluation has been presented. We describe the evaluation methodology and metrics in Section~\ref{sec:methodology-metric}, and2 Section~\ref{sec:metrics} respectively. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
 
 
 %ten equal parts, so-called folds
@@ -23,23 +23,69 @@ This section describes the planning of our evaluation, having the {\em goal} of 
 	\vspace{-.3cm}
 \end{figure*}
 
-The evaluation process is depicted in Fig.~\ref{fig:EvaluationProcess} and it consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}. We start with the \emph{Data Preparation} phase by creating a dataset from GitHub projects. This dataset is used to evaluate \CT, \MNB, and the combination of two. 
-The dataset is then split into training and testing sets. The 
-\emph{Recommendation} phase follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion.
-To enable \CT, we extract a portion of topics from a given testing project \ie the ground-truth part. The left part is used as a query to produce recommendations. As the \MNB uses the README file of a repository to predict a set of topics, this doesn't require any topic as input. Thus, the approach encodes the document relevant information in vectors using the TF-IDF weighting scheme. Then, to feed the network that delivers a set of topics. Finally, the entangled approach uses \CT as the recommendation engine which is fed by the \MNB suggested topics. All the results are assessed in the \emph{Outcome Evaluation} phase, which compares the recommendation results with those stored as ground-truth data to compute the quality metrics. 
-
-
 \subsection{Dataset Extraction} \label{sec:Dataset}
 
 
 %\color{blue}
 
-To evaluate the approach, we reuse the same dataset employed for the \MNB available here \cite{MNBreplication}. The \GH query language \cite{understanding} allows the fetching of relevant repository metadata including name, owner, and list of topics to mention a few. Thus, we \emph{randomly} collected a dataset consisting of $6,258$ repositories that use 15757 topics by means of the GitHub API \cite{pygithub/pygithub_2019}. To overcome the request limit during the crawling activity, we employ the \GH star voting mechanism as a popularity measure \cite{borges_whats_2018}. As claimed in several works\cite{borges_popularity_2017, borges_predicting_2016}, a high number of stars means the attention of the community for that project. So, we impose the following filter during the query execution:
+To evaluate the approach, we reuse the same dataset employed for the \MNB available here \cite{MNBreplication}. The \GH query language \cite{understanding} allows the fetching of relevant repository metadata including name, owner, and list of topics to mention a few. Thus, we \emph{randomly} collected a dataset consisting of $6,258$ repositories that use 15757 topics by means of the GitHub API \cite{pygithub/pygithub_2019}. We employ the \GH star voting mechanism as a popularity measure to avoid including unpopular, unmaintained and toy projects \cite{borges_whats_2018}. As claimed in several works\cite{borges_popularity_2017, borges_predicting_2016}, a high number of stars means the attention of the community for that project. So, we impose the following filter during the query execution:
 \begin{equation}
 \small
 Qf = "is:featured \; topic:t \; stars:100..80000 \; topics:>=2"
 \end{equation}%
-to consider only \GH repositories having a number of stars between 100 and 80,000, and tagged with at least two topics. The boolean qualifier \emph{is:featured} is used in the \MNB work to group repositories given a certain featured topic. As \CT is able to retrieve both featured and not-featured topics, this filter doesn't affect the quality of the collected data.
+to consider only \GH repositories having a number of stars between 100 and 80,000, and tagged with at least two topics. The boolean qualifier \emph{is:featured} is used in the \MNB work to group repositories given a certain featured topic (please refers to \url{https://github.com/topics} for the complete list of featured topics). As \CT is able to retrieve both featured and not-featured topics, this filter doesn't affect the quality of the collected data.
+To investigate the \CT prediction performances, we populated five different datasets starting from the original one by variating the topic frequency cut-off value \emph{t} \ie the maximum frequency of the topic distribution (it will be better described in Section~\ref{sec:methodology-metric}). In this way, we remove the infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:datasets} summarizes the datasets' features with \emph{t} = 1, 5, 10, 15, 20.
+
+
+\begin{table}[h]
+\centering
+
+
+\resizebox{8.5cm}{!} {
+\begin{tabular}{|l|l|l|c|c|}
+\hline
+\textbf{Dataset} & \textbf{No. of repos} &\textbf{ No. of topics} & \textbf{Avg topics for repo} & \textbf{Avg freq. for topic} \\ \hline
+$Dt_1$  &       6,253      &    15,743       &  9.9  &  3.9       \\ \hline
+ $Dt_5$  &        3,884      &    1,989      &     8.4  &   16.5   \\ \hline
+$Dt_{10}$  &    2,897         &      964	     &   8.0    &  24.1 \\ \hline
+$Dt_{15}$  &    2,273        &   634       &   7.8  &  28.1       \\ \hline
+$Dt_{20}$  &    1,806       &   456        &   7 .7 &  30.5       \\ \hline
+
+\end{tabular}
+}
+\caption{Datasets' description.}
+\label{tab:datasets}
+\end{table} 
+
+%<<<<<<< HEAD
+As we can see in the next section, removing the infrequent topics improves the overall quality of the considered datasets. 
+Similarly to the other collaborative filtering approaches, the overall prediction performance strongly depends on the dataset. As we will demonstrate in the next section, the collaborative filtering provides better prediction performance when there are enough data (\ie topics) in the training set to resemble the repository behaviour. After infrequent topics is removed, the repository that consist of less then 5 topics are filter out from the dataset because they contain very few information to enable the collaborative filtering prediction. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset $Dt_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989. The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. Thus, we stop at t=20 and consider Dataset $Dt_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 9.9 and 7.7 topics on average for \emph{t} = 1 and \emph{t} = 20 respectively. This demonstrates that a huge number of topics doesn't help the discoverability of a project.
+
+\begin{figure*}[h!]
+\centering
+	\begin{tabular}{c c }	
+	\subfigure[Dataset $Dt_5$]{\label{fig:dt5_stars}
+	\includegraphics[width=0.45\linewidth]{figs/dataset_5_stars.pdf}} &
+	\subfigure[Dataset $Dt_{10}$]{\label{fig:dt10_stars}
+	\includegraphics[width=0.45\linewidth]{figs/dataset_10_stars.pdf}} \\
+\subfigure[Dataset $Dt_{15}$]{\label{fig:dt15_stars}
+	\includegraphics[width=0.45\linewidth]{figs/dataset_15_stars.pdf}} & 	
+\subfigure[Dataset $Dt_{20}$]{\label{fig:dt20_stars}
+	\includegraphics[width=0.45\linewidth]{figs/dataset_20_stars.pdf}}\\	
+	\end{tabular} 
+	\caption{Quality analisis of the examined datasets.}
+	\label{fig:comparison}
+\end{figure*}
+
+ 
+%=======
+%As we can see, removing the infrequent topics improves the overall quality of the considered datasets. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset $Dt_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989. The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. Thus, we stop at t=20 and consider Dataset $Dt_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 7 topics on average. This demonstrates that a huge number of topics doesn't help the discoverability of a project. 
+%>>>>>>> 2241e0e812c956f441252b061dd0d75d6f6927ea
+Furthermore, we evaluate the quality of the OSS project belonging to the examined dataset. As mentioned before, the \GH community assesses this aspect by mainly using forks and stars. Thus, we collect this data for each dataset using the same Github API library employed for the crawling. Figure \ref{fig:comparison} shows the comparison among all the examined datasets. As can see, filtering repositories by the \emph{t} value helps to smooth the distribution. On one hand, the Dataset $Dt_5$ contains more repositories with a high forks number rather than the ultimate dataset \ie it reaches around 20,000 forks against 15,000 with t=5 and t=20 respectively. On the other hand, the slope depicted in Dataset $Dt_{20}$ is higher than the original dataset. The positive trend is confirmed by observing the distribution of the other datasets \ie Dataset $Dt_{10}$ and $Dt_{15}$. In particular, we are able to remove repositories with less number of stars \ie from 5,000 to 10,000. 
+From this study, we observe a correlation between the number of stars and the topics' frequency. In other words, most frequent topics appear in the high-ranked repositories and this finding affects the quality of the recommendations. 
+
+
+
 
 
 
@@ -52,38 +98,49 @@ to consider only \GH repositories having a number of stars between 100 and 80,00
 
 
 %\color{blue}
-\subsection{Metrics’ Definition}\label{sec:methodology-metric}
+\subsection{Evaluation process}\label{sec:methodology-metric}
+The \emph{ten-fold cross-validation} methodology~\cite{kohavi1995study} has been used to assess the performance of \CT, \MNB and combined approach where every time $9$ folds 
+%(each one contains $625$ projects) 
+are used for training and the remaining one for testing.
+For each testing project \emph{p}, we randomly delete half topics and save it as ground truth (\emph{GT(p)}) . The ground truth data  will be used to validate the recommendation outcomes. The remaining half topics are used as query topics to the \CT.
+Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}.
+
+\noindent
+$\blacksquare$~\textbf{Data Preparation phase} collects repositories that match the requirements defined in previous section from GitHub during \code{Data collection} step. This dataset is used to evaluate \CT, \MNB, and the combination of two. 
+The dataset is then split into training and testing sets (\ie \code{ Split ten-fold} activity).
+Due to the different nature of the the recommender systems (\ie \MNB requires \code{README} files as input and training data, whereas \CT uses a set of assigned topics as input and for training the recommendation system), the testing and training data are specifically cooked for both approaches).
+The \code{Split topic} activity resembles a real development process where a developer has already included some topics in his repository (\ie \code{Query topics}) and waits for recommendations \ie additional topics to be incorporated. \CT recommender system is expected to provide her with the other half, \ie \code{ GT topics}.
+
+\noindent
+$\blacksquare$~\textbf{Recommendation phase} follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \code{\CT}, \code{\MNB}, and \code{Entangled} approaches evaluation respectively).
+To enable \CT, we extract a portion of topics from a given testing project \ie the ground-truth part (it is defined as $GT(p)$ in the following). The left part is used as a query to produce recommendations (see the dotted line flow). As the \MNB uses the README file of a repository to predict a set of topics, this doesn't require any topic as input. Thus, the approach encodes the document relevant information in vectors using the TF-IDF weighting scheme. Then, to feed the network that delivers a set of topics (see the bold line). Finally, the entangled approach uses \CT as the recommendation engine which is fed by the \MNB suggested topics (see dashed line flow). In this respect, both \code{Testing data} and \code{Training set} boxes are simplified to provides the needed data (\ie README file and assigned topics) to the different recommender systems.
+
+\noindent
+$\blacksquare$~\textbf{Outcome Evaluation phase} evaluate the recommendation results with those stored as ground-truth data to compute the quality metrics (\ie \code{Success rate}, \code{Precision}, \code{Recall}, and \code{Catalog coverage}) during the \code{Comparison} activity.  
+
+It is worth noting that we can't directly compare directly \CT and \MNB approaches because they rely on different input data (\ie \CT requires an initial set of assigned topics for suggesting new ones, whereas\MNB uses the information mined from the README files to recommend the expected topics). 
+\JDR{Check if the entangled approach is described somewhere}
+%, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
 
 
+\subsection{Metrics' definition}\label{sec:metrics}
 
 
+There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
 
 
+% and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.
 
-
-
-
-
-
-
-To assess the performance of \CT, we applied ten-fold cross-validation, considering every time $9$ folds (each one contains $625$ projects) for training and the remaining one for testing.
-For every testing project \emph{p}, half of its topics are \emph{randomly}
-taken out and saved as ground truth data, let us call them \emph{GT(p)}, which will be used to validate the recommendation outcomes. The other half is used as testing topics or query, which are called \emph{\textbf{te}}, and serve
-as input for \code{Similarity Computation} and \code{Recommendation} components.
-The splitting simulates a real development process where a
-developer has already included some topics in his repository, \ie
-\emph{\textbf{te}} and waits for recommendations \ie additional topics to be incorporated. A recommender system is expected to provide her
-with the other half, \ie \emph{GT(p)}. 
-
-There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} and \emph{accuracy} have been used to study the systems' performance as already proposed by Robillard \etal~\cite{Robillard:2014:RSS:2631387} and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}. The metrics considered during the outcome evaluation follows this notation:
+ The metrics considered during the outcome evaluation follows this notation:
 
 \begin{itemize}[noitemsep,topsep=0pt]
-	\item \emph{t} is the cut-off value of input topic (\ie all topics that occur less than \emph{t} times in the dataset are removed)
+	\item \emph{t} is the frequency cut-off value of input topics (\ie all topics that occur less than \emph{t} times are removed from the dataset)
+	\item |\emph{t$_{in}$}| is the size of topics that \CT takes as input;
 	\item \emph{N} is the cut-off value for the recommended ranked list of topic;% of recommended libraries;
-	\item \emph{k} is the number of neighbor projects exploited for the recommendation process;
-	\item For a testing project \emph{p}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(p)};
-	\item $REC(p)$ is the \emph{top-N} topics recommended to \emph{p}. It is a ranked list in descending order of real scores;
-	\item If a recommended topic $t \in REC(p)$ for a testing project $p$ is found in the ground truth of $p$ (\ie \emph{GT(p)}), hereafter we call this as a topic \textit{match}
+	\item \emph{k} is the number of neighbour projects exploited for the recommendation process;
+	\item For a testing project \emph{r}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(r)};
+	\item $REC(r)$ is the \emph{top-N} topics recommended to a repository \emph{r}. It is a ranked list in descending order of real scores;
+	\item If a recommended topic $rt \in REC(r)$ for a testing project $r$ is found in the ground truth of $r$ (\ie \emph{GT(r)}), hereafter we call this as a topic \textit{match}
 \end{itemize}
 
 
@@ -91,7 +148,7 @@ There are several metrics available to evaluate a ranked list of recommended ite
 If $REC_{N}(p)$ is the set of top-$N$ items and $match_{N}(p)$ is the set of items in the \emph{top-N} list that match with those in the ground-truth data, then the metrics are defined as follows.  
 
 \vspace{.1cm}
-\paragraph{\textbf{Success rate@N}} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least a topic match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
+\noindent\textbf{Success rate@N.} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least a topic match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
 \vspace{-.1cm}
 
 \begin{equation} \label{eqn:RecallRate}
@@ -100,11 +157,23 @@ success\ rate@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | > 0 ) }{\l
 \end{equation}
 
 \vspace{.1cm}
+\vspace{.1cm}
 
-\noindent where the function \emph{count()} counts the number of times that the boolean expression specified in its parameter is \emph{true}.
 
 
-\paragraph{\textbf{Accuracy}} Accuracy is considered as one of the most preferred \emph{quality indicators} for Information Retrieval applications \cite{Saracevic:1995:EEI:215206.215351}. However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
+
+%\noindent \JDR{Check if it will be used} \textbf{Success rate$_M$@N.} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least $M$ topics match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
+%\vspace{-.1cm}
+%
+%\begin{equation} \label{eqn:RecallRate}
+%success\ rate_M@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | >= M ) }{\left | P \right |} %\times 100\%
+%%success\ rate@N=\frac{ count_{p \in P}( \left | GT(p) \bigcap (\cup_{r=1}^{N} REC_{r}(p)) \right | > 0 ) }{\left | P \right |}
+%\end{equation}
+%
+%\vspace{.1cm}
+%\noindent where the function \emph{count()} counts the number of times that the boolean expression specified in its parameter is \emph{true}.
+
+\noindent \textbf{Accuracy.} Accuracy is considered as one of the most preferred \emph{quality indicators} for Information Retrieval applications \cite{Saracevic:1995:EEI:215206.215351}. However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
 
 %\vspace{-.2cm}
 % \cite{Saracevic:1995:EEI:215206.215351}
@@ -120,9 +189,22 @@ recall@N = \frac{ \left | match_{N}(p) \right | }{\left | GT(p) \right |}
 \end{equation}
 %\vspace{-.1cm}
 
+\vspace{.1cm}
+\vspace{.1cm}
 
 
 
+\noindent \textbf{Catalog coverage.} This metric is particularly suitable to measure the performance predictions of recommendation systems that suggest a list of items \cite{ge_beyond_2010}. Given the set of projects $U_p$, we compare the number of recommended topics with the global number of the available ones \ie $ REC_{N}(p)$ and T respectively. Reversely from the previous two metrics, the Catalog Coverage measures the suitability of the delivered topics considering all the possible set of values. From the evaluation point of view, it is interesting to assess the impact of N value on the coverage stability, meaning what values of N impacts on the overall prediction performances. 
+
+
+
+\begin{equation}\label{eqn:Coverage}
+%coverage = \frac{\left | \cup_{p\in P} \left [  \cup_{r=1}^{N} REC_{r}(p) \right ] \right | }{\left | L \right |} 
+coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | T \right |} 
+\end{equation}
+
+\vspace{.1cm}
+\vspace{.1cm}
 
 
 
@@ -187,12 +269,11 @@ recall@N = \frac{ \left | match_{N}(p) \right | }{\left | GT(p) \right |}
 \subsection{Research Questions} \label{sec:ResearchQuestions}
 By performing the evaluation, we aim at addressing the following research questions:
 \begin{itemize}
-	\item[--] \rqfirst To answer this question, we investigate different configurations to find the best one. In particular, we variate the number of input topics and the number of neighbors 
+	\item[--] \rqfirst To answer this question, we investigate different configurations to find the best one \ie we variate the number of input topics \emph{T}, the number of neighbours \emph{N} and the considered number of outcomes \emph{N}.
 	
-	\item[--] \rqsecond As the two approaches have a completely different internal structure, we are interested in investigating the reasons behind such quality variation
-	\item[--] \rqthird From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances
+	%\item[--] \rqsecond Because of \CT and \MNB are completely different in term of input data, we are interested in comparing them by considering many factors that can impact on the performance.
+	\item[--] \rqsecond From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances.
 \end{itemize}
-
 
 
 We study the experimental results in the next section by referring to these research questions.
