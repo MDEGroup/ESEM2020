@@ -10,3 +10,20 @@ wrongly specified tags. Literature is plenty of several approaches that mine and
 \end{figure*}
 
 As mentioned before, the \MNB using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. By relying on the multinomial probability distribution, the approach is able to extract relevant information from the \RM file and suggest a set of topics. 
+
+\begin{table}[h]
+\centering
+
+\resizebox{8.5cm}{!} {
+
+\begin{tabular}{| p{3.2cm} | p{3.2cm} | }
+\hline
+ \textbf{Actual Topics} &\textbf{ Predicted topics} \\ \hline
+     python,blender-scripts, spaceship, procedural-generation, game-development, 3d        &  
+  shell, terminal, \textbf{3d},	opengl,	\textbf{python}        \\ \hline
+
+\end{tabular}
+}
+\caption{Example of the \MNB outcomes.}
+\label{tab:example}
+\end{table} 
