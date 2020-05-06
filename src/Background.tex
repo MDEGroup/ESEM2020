@@ -1,40 +1,29 @@
-Manually assigning topics can be an error-prone activity that can lead to 
-wrongly specified tags. Over the last years, several attempts have been 
-made to \textit{classify} \GH projects by automatically inferring 
-appropriate topics. In the context of data mining, \textit{classification} is 
-one of the critical operations that are used to dig deep into available data 
-for gaining knowledge and for identifying repetitive 
-patterns~\cite{kotsiantis2007supervised}. 
 
+Manually assigning topics can be an error-prone activity that can lead to
+wrongly specified tags. Literature is plenty of several approaches that mine and exploit available data to analyze repositories. Nevertheless, few of them cope with the topic recommendation task, which can be crucial in the project's development initial phase. Figure \ref{fig:spark} shows an example repository with related topics. By this simple snapshot, a \GH user can figure out that the \emph{apache spark} project makes usage of several programming languages such as \emph{java, r,} and \emph{python} to analyze \emph{big-data} and databases by exploiting common techniques used in this domain \ie \emph{sql and jdbc}. 
 
+\begin{figure*}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figs/spark_topics.png}
+	\caption{Example of a \GH repository and its topics.}% [??Rename Similarity Computation with Similarity Calculator]
+	\label{fig:spark}
+\end{figure*}
 
-\smallskip
+As mentioned before, the \MNB using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. By relying on the multinomial probability distribution, the approach is able to extract relevant information from the \RM file and suggest a set of topics. 
 
-With the aim of contributing the resolution of the problem of recommending \GH 
-topics, in the next section we propose to use item-based collaborative filtering to recommend relevant topics. The  
-challenges that we had to cope with for evaluating its performance are mainly 
-the following ones:
+\begin{table}[h]
+\centering
 
-\vspace{.2cm}
-\noindent
-$\triangleright$ \emph{Dataset definition:} the creation of the datasets to be 
-used for evaluating the approach being proposed and comparing it with some 
-baseline is a daunting task: repositories might be moved, heavily changed or 
-even deleted during the initial creation. Thus, the crawling activity can be 
-negatively affected by these continuous changes and lead to lack of data, and 
-poor topic coverage. GHTorrent\footnote{\url{http://ghtorrent.org/}} tries to 
-mitigate this issue by offering daily dumps of the repositories' metadata. 
-However, this kind of data might not be enough or even appropriate (\eg source 
-code is not available in GHTorrent dumps) to properly classify  an entire 
-repository.	Even considering directly \GH data can be difficult: \GH limits the 
-total number of requests per hour to 5,000 for authenticated users and 60 for 
-unauthorized requests. Considering all these constraints, building a suitable 
-dataset represents a real challenge to be managed carefully.
-	
-\vspace{.2cm}
-\noindent
-$\triangleright$ \emph{Topics distribution:} although tags can be assigned only 
-by the owners of \GH repositories, users can potentially wrongly specify topics 
-or introduce information overload by inserting too many elements. Thus, 
-creating a reliable ground truth to assess the classification performance of 
-the proposed approach represents another relevant difficulty. 
+\resizebox{8.5cm}{!} {
+
+\begin{tabular}{| p{3.2cm} | p{3.2cm} | }
+\hline
+ \textbf{Actual Topics} &\textbf{ Predicted topics} \\ \hline
+     python,blender-scripts, spaceship, procedural-generation, game-development, 3d        &  
+  shell, terminal, \textbf{3d},	opengl,	\textbf{python}        \\ \hline
+
+\end{tabular}
+}
+\caption{Example of the \MNB outcomes.}
+\label{tab:example}
+\end{table} 
