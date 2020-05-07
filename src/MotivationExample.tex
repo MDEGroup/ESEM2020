@@ -1,0 +1,30 @@
+Extracting knowledge from a developed system can provide potential benefits for searching, browsing, and discovering them among a huge set of software systems.
+\GH is one of the most used developing service that includes version control systems (\ie, git) plus social and collaborative features (\eg,  bug tracking, contribution requests, task management, and wikis).
+In particular, \GH counts more than 40 million users and over 100 million repositories. Because of this huge among of data, the availability of reusable projects might be compromised if they cannot be suitably discovered. In recent years, \GH introduced a topic mechanism to explore repositories in a particular subject area, learn more about that subject, and find projects to contribute to.
+\GH continuously monitors the stored repository and assigned topics to organize the former with respect to the list of assigned topics. Moreover, those data are periodically analysed to extract the most popular and active topics (\ie \emph{featured topics\footnote{\url{https://github.com/topics}}}). Thus, users can monitor the community’s trend by consulting such a public list. In the beginning, this activity was entirely done by humans (\ie project contributors) that label the repository according to their knowledge, feeling and belief.
+
+Recently, \GH integrates the \emph{repo-topix} tool with the aim of recommending topics for a \GH repository. Textual metadata (\ie README files and repository's description) are manipulated by NLP techniques to find a set of topics suitable for describing and classifying the repository. 
+Nevertheless, neither the tool nor the dataset is made available,
+thus a comparison with the approach is not feasible.
+
+In a recent work~\cite{10.1145/3383219.3383227}, the authors present a machine learning approach (\ie Multinomial Na\"{i}ve Bayesian (MNB) networks) to recommend only very related featured topic. In particular, the README files of the repository are analysed to learn and predict \GH topics.
+
+\begin{table*}[]
+	\centering
+	\footnotesize
+	\begin{tabular}{|p{3.8cm} | p{5.2cm} | p{3.2cm} |}
+	\hline	\bf Repository\                                                                          & \bf Real topics                                                                                              & \bf MNB Recommended topics                                                                                                                                  \\ \hline
+		\href{https://github.com/a1studmuffin/SpaceshipGenerator}{a1studmuffin/SpaceshipGenerator} & python, blender-scripts, spaceship, procedural-generation, game-development, 3d                                                         & shell, terminal, 3d,	opengl,	python                                                                                        \\ \hline
+		\href{https://github.com/0xAX/go-algorithms}{0xAX/go-algorithms}                           & golang algorithm,	data-structures	go	sort, tree-structure                                                                           & data-structures	algorithm twitter library go                                                  \\ \hline
+		\href{https://github.com/ajenti/ajenti}{ajenti/ajenti}                                     & ajenti, python,  javascript, administration, linux, panel, angular                                                                      & firefox, webpack,	linux, angular, python \\ \hline
+		\href{https://github.com/fishercoder1534/Leetcode}{fishercoder1534/Leetcode}               & leetcode, algorithm, java, interview, mysql, bash, apache, data-structures,	leetcode-solutions, leetcode-questions, leetcode-java, leetcoder & algorithm,	mysql,	bash,	data-structures,	java \\ \hline
+		\href{https://github.com/cryogen-project/cryogen}{cryogen-project/cryogen}                 & clojure, cryogen, static-site-generator & jekyll, clojure, atom, gulp, html   \\ \hline
+		\href{https://github.com/alizahid/slinky}{alizahid/slinky}                                 & jquery, navigation, mobile, es6, javascript, menu, plugin, yarn, babel, webpack, css, sass & es6, jquery, css, sass, javascript          \\ \hline
+		\href{https://github.com/esell/deb-simple}{esell/deb-simple}                               & maintainer-wanted, golang,	go, debian, ubuntu                                                                                         & ubuntu, ansible,	linux, shell, 	go \\ \hline
+		\href{https://github.com/JamesRamm/longclaw}{JamesRamm/longclaw}                           & python, django, e-commerce, shop, python3, python-2, wagtail, wagtail-cms                                                                & wagtail, django, serverless, express, python \\ \hline
+		\href{https://github.com/nitin42/terminal-in-react}{nitin42/terminal-in-react}             & terminal react	design javascript svg webpack webapp css                                                                           & webpack, eslint, react-native, react,  javascript                                                  \\ \hline
+		\href{https://github.com/kerl/kerl}{kerl/kerl}                                             & erlang, otp-release, kerl, homebrew, shell  & elixir, homebrew, bash,  deployment, 	shell  \\ \hline
+	\end{tabular}
+	\caption{Example of repositories, their real topics and the recommended one by \MNB}
+	\label{tab:motivation_example}
+\end{table*} 
