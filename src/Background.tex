@@ -1,13 +1,9 @@
 Extracting knowledge from a developed system can provide potential benefits for searching, browsing, and discovering them among a huge set of software systems.
-\GH is one of the most used developing service that includes version control systems (\ie, git) plus social and collaborative features (\eg,  bug tracking, contribution requests, task management, and wikis).
-In particular, \GH counts more than 40 million users and over 100 million repositories. Because of this huge among of data, the availability of reusable projects might be compromised if they cannot be suitably discovered. In recent years, \GH introduced a topic mechanism to explore repositories in a particular subject area, learn more about that subject, and find projects to contribute to.
+\GH is one of the most used developing service that includes version control systems (\ie git) plus social and collaborative features (\eg bug tracking, contribution requests, task management, and wikis).
+At the moment we are writing this contribution, \GH counts more than 40 million users and over 100 million repositories. Because of this huge among of data, the availability of reusable projects might be compromised if they cannot be suitably discovered. In recent years, \GH introduced a topic mechanism to explore repositories in a particular subject area, learn more about that subject, and find projects to contribute to.
 \GH continuously monitors the stored repository and assigned topics to organize the former with respect to the list of assigned topics. Moreover, those data are periodically analysed to extract the most popular and active topics (\ie \emph{featured topics\footnote{\url{https://github.com/topics}}}). Thus, users can monitor the community’s trend by consulting such a public list. In the beginning, this activity was entirely done by humans (\ie project contributors) that label the repository according to their knowledge, feeling and belief. Literature is plenty of several approaches that mine and exploit available data to analyze repositories. Nevertheless, few of them cope with the topic recommendation task, which can be crucial in the project's development initial phase.
 
-Recently, \GH integrates the \emph{repo-topix}~\cite{repo-topix} tool with the aim of recommending topics for a \GH repository. Textual metadata (\ie README files and repository's description) are manipulated by NLP techniques to find a set of topics suitable for describing and classifying the repository. Nevertheless, neither the tool nor the dataset is made available, thus a comparison with the approach is not feasible.
-In a recent work~\cite{10.1145/3383219.3383227}, the authors present a machine learning approach (\ie Multinomial Na\"{i}ve Bayesian (MNB) networks) to recommend only very related \emph{featured topics}. In particular, the README files of the repository are analysed to learn and predict \GH topics.
-
-
-Figure \ref{fig:spark} shows an example repository with related topics. By this simple snapshot, a \GH user can figure out that the \emph{apache spark} project makes usage of several programming languages such as \emph{java, r,} and \emph{python} to analyze \emph{big-data} and databases by exploiting common techniques used in this domain \ie \emph{sql and jdbc}. 
+Figure \ref{fig:spark} shows an example repository with related topics. By this simple snapshot, a \GH user can figure out that the \emph{apache spark}\footnote{\url{https://github.com/apache/sparck}} project makes usage of several programming languages such as \emph{java, r,} and \emph{python} to analyze \emph{big-data} and databases by exploiting common techniques used in this domain \ie \emph{sql and jdbc}. 
 
 \begin{figure*}[h!]
 	\centering
@@ -31,7 +27,7 @@ As mentioned before, the \MNB using the \RM file of a repository to predict feat
 
 \end{tabular}
 }
-\caption{Example of the \MNB outcomes.}
+\caption{Example of the \MNB outcomes.\JDR{change the table with apache/spark data}}
 \label{tab:example}
 \end{table} 
 

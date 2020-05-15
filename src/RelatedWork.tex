@@ -1,9 +1,15 @@
+%\JDR{Moved from section 2. Check if the text sounds}
 This section discusses relevant work in this domain.
 
 
+%Recently, \GH integrates the \emph{repo-topix}~\cite{repo-topix} tool with the aim of recommending topics for a \GH repository. Textual metadata (\ie README files and repository's description) are manipulated by NLP techniques to find a set of topics suitable for describing and classifying the repository. 
+
+Immediately after \GH platform introduces topics, they present Repo-Topix, an automatic approach to suggest them \cite{ganesan_topic_2017}. Such a tool relies on parsing the \RM files and the textual content of a repository to enable the standard NLP techniques. Then, they filter this initial set of topics by exploiting the TF-IDF scheme and a regression model to exclude "bad'' topics. As the final step, Repo-Topix computes a custom version of Jaccard Distance to discover additional similar topics. A rough evaluation based on the n-gram ROUGE-1 metrics has been conducted by counting the number of overlapping units between the recommended topics and the repository description. Nevertheless, a replication package with the complete dataset and the source code is not available for further investigation.
 
 
-Immediately after \GH platform introduces topics, they present Repo-Topix, an automatic approach to suggest them \cite{ganesan_topic_2017}. Such a tool relies on parsing the \RM files and the textual content of a repository to enable the standard NLP techniques. Then, they filter this initial set of topics by exploiting the TF-IDF scheme and a regression model to exclude "bad'' topics. As the final step, Repo-Topix computes a custom version of Jaccard Distance to discover additional similar topics. A rough evaluation based on the n-gram ROUGE-1 metrics has been conducted by counting the number of overlapping units between the recommended topics and the repository description. Nevertheless, a replication package with the complete dataset and the source code is not available for further investigation
+
+%Nevertheless, neither the tool nor the dataset is made available, thus a comparison with the approach is not feasible.
+
 
 In~\cite{orii_modeling_2013}, the author proposes a collaborative topic regression (CTR) model to excerpt topics from an initial \GH repository. The final aim is to recommend other similar projects given the input one. Given a pair of user-repository, the approach uses a Gaussian model to compute matrix factorization and extract the latent vectors given a pre-computed matrix rating. Additionally, a probabilistic topic modeling is applied to find topics from the repositories by analyzing high frequent terms. The approach is evaluated by conducting five-fold cross-validation on a dataset composed of  120,867 repositories. Such evaluation considers the pairs user-repository that have at least 3 watches. 
 
