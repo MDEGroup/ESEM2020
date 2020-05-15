@@ -456,13 +456,14 @@ where $\overline{r_{p}}$ and $\overline{r_{q}}$ are the mean of the ratings of $
 
 \subsection{Improvement of \MNB} \label{sec:entangled_approach}
 
-So far, we have described \CT as a stand-alone recommender system by detailing all the involved components in the process. To highlight its flexibility in a different context, we \emph{entangle} our tool with the MNB network using it as a black box. In this section, we show how the \CT approach can be combined with other recommendation systems that use, for instance, a different mining schema.
+So far, we have described \CT as a stand-alone recommender system by detailing all the involved components in the process. To highlight its flexibility in a different context, we propose an approach to improve the existing \MNB as follows. %\emph{entangle} our tool with the MNB network using it as a black box. 
+In this section, we show how \CT can be combined with other recommendation systems that use, for instance, a different mining schema.
 
 As mentioned before, this recent work using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. Given a \RM file, the approach computes vectors using the TF-IDF weighting scheme to extract features. Then, the model is trained to retrieve the most probable featured topics according to the multinomial distribution with the Naive Bayesian assumption. The outcomes are evaluated using the ten folder validation process. In the landscape of our work, we consider the set of featured topics predicted by the MNB model as the input of \CT. The aim of this kind of analysis is to evaluate \CT capability using a well-founded technique in the literature.
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{figs/entangled}
-	\caption{Overview of the entangled approach}
+	\caption{Overview of the combined approach.}
 	\label{fig:entangled}
 \end{figure}
 Figure~\ref{fig:entangled} depicts an overview of the entangled approach. First, the \MNB computes the list of recommended featured topics from the repository readme file. Then, top-N featured topics are used as input to \CT that computes their topics  recommendation (\ie non-featured topics are included). Finally, the recommended topics are mixed by encoding the \CT recommended topics to the top-N featured ones.
