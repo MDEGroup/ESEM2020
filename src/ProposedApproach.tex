@@ -468,4 +468,11 @@ As mentioned before, this recent work using the \RM file of a repository to pred
 \end{figure}
 Figure~\ref{fig:entangled} depicts an overview of the entangled approach. First, the \MNB computes the list of recommended featured topics from the repository readme file. Then, top-N featured topics are used as input to \CT that computes their topics  recommendation (\ie non-featured topics are included). Finally, the recommended topics are mixed by encoding the \CT recommended topics to the top-N featured ones.
 
+In our belief, \CT could improve \MNB in the following term:
+\begin{itemize}
+	\item \CT recommends non featured topics: the recommended topics are selected from similar repository independently from their nature;
+	\item \CT can recommend topics by iterating over refining steps: once we select some topic from the recommended ones, \CT can recommend new ones using the selected one as new beliefs;
+	\item \MNB doesn't provide further recommendations if the suggested topics are already included, whereas we will see in Section~\ref{sec:EXP1} \CT performs better when more topics are used as input.
+\end{itemize}
+The experiments conducted in the followings sections aim to evaluate the performance of \CT, \MNB, and the entangled approach by comparing the accuracy and coverage metrics.
 
