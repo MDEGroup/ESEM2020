@@ -6,12 +6,13 @@ At the moment we are writing this contribution, \GH counts more than 40 million 
 
 %analyze \emph{big-data} and databases by exploiting common techniques used in this domain \ie \emph{sql and jdbc}. 
 
-\begin{figure*}[h!]
+\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\linewidth]{figs/SpaceshipGenerator.png}
+	\includegraphics[width=0.99\linewidth]{figs/SpaceshipGenerator.png}
 	\caption{Example of a \GH repository and its topics.}
 	\label{fig:SpaceshipGenerator}
-\end{figure*}
+\end{figure}
+
 
 As mentioned before, the \MNB using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. By relying on the multinomial probability distribution, the approach is able to extract relevant information from the \RM file and suggest a set of topics. Table \ref{tab:example} shows an example of the \MNB's outcomes given the list of the actual repository topics. 
 
@@ -33,7 +34,13 @@ As mentioned before, the \MNB using the \RM file of a repository to predict feat
 \end{table} 
 
 
-Even though the \MNB works in practice, it suffers from some limitations. First, the underlying model can recommend only featured topics that represent only a small set of all possible terms that can be restricted because of antonymous term(\eg programming languages). For instance, \emph{blender-scripts}\footnote{blender is the most used python library to manipulate 3d objects. \url{}https://www.blender.org/} as well as \emph{game-development} could be recommended as possible topics because the project includes both \emph{3d} and \emph{python} topics.
-In this way, the \MNB doesn't express all the concepts covered by a \GH repository. As shown in the table, only two of the predicted topics matched with the real ones. Moreover, in the case the repository already includes all suggested topics, \MNB does not able to recommend new ones.
 
-The second major limitation is the underlying structure needed for the training phase. To deliver relevant items, the \MNB requires a \emph{balanced} dataset, \ie each topic must have a similar number of  \RM files. This scenario is difficult to meet in reality as the topics' heterogeneity is extremely high. Furthermore, the \GH platform is regularly updated with new projects and, consequently, with new topics. Thus, the training phase must take place several times to avoid outdated recommendations. 
+Even though the \MNB works in practice, it suffers from some limitations. First, the underlying model can recommend only featured topics that represent only a small set of all possible terms that can be restricted because of antonymous term(\eg programming languages).
+
+For instance, \emph{blender-scripts}\footnote{blender is the most used python library to manipulate 3d objects. \url{}https://www.blender.org/} as well as \emph{game-development} could be recommended as possible topics because the project includes both \emph{3d} and \emph{python} topics.
+
+In this way, the \MNB doesn't express all the concepts covered by a \GH repository. As shown in the table, only two of the predicted topics matched with the real ones. Moreover, in the case the repository already includes all suggested topics, \MNB does not able to recommend new ones.
+The second major limitation is the underlying structure needed for the training phase. To deliver relevant items, the \MNB requires a \emph{balanced} dataset, \ie each topic must have a similar number of  \RM files. This is hard to come by in practice as topics are generally heterogeneous.
+%This scenario is difficult to meet in reality as the topics' heterogeneity is extremely high. 
+Furthermore, repositories in \GH are regularly updated with new new topics and thus, the training phase must take place several times to avoid outdated recommendations. 
+
