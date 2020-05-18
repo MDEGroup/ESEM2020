@@ -77,7 +77,8 @@
 
 \title{\CT: Using collaborative filtering to recommend \GH topics}
 
-\title{\CT: An Automatic Approach to Recommend \\Relevant \GH Topics}%A Recommender System to Provide Automatic \GH Topics
+\title{\CT: An Approach to Recommend Relevant \GH Topics}%A Recommender 
+%System to Provide Automatic \GH Topics
 
 %\author{Juri Di Rocco}
 %\affiliation{%
@@ -97,20 +98,86 @@
 
 
 \begin{abstract}
-%Collaborative filtering is a well-founded technique widely used in the recommendation system domain. 
-$\blacksquare$~\textbf{Background} 
-%In recent years, a plethora of approaches have been developed to provide the users with relevant items. 
-Considering the open-source software (OSS) domain, \GH has gained the head role in storing, analyzing and maintaining a huge number of repositories.
-% In the recent years, \GH introduced the possibility to classify them employing topics to represent the stored projects in an effective manner.   
-Topics have been used by \GH as an effective measure to thematize a \GH repository, thus helping developers narrow down the search scope and approach repositories of their needs.  
-However, such labeling activity should be carefully conducted to avoid negative effects on project popularity.
-%$\blacksquare$~\textbf{Aims}  In this paper, we present \CT, a recommender system to assist open source software developers in selecting suitable topics for the repositories. \CT exploits a collaborative filtering technique to recommend topics to developers by relying on the set of initial ones, which are currently included in the project being. 
-$\blacksquare$~\textbf{Aims} In this paper, we present \TF as a novel approach to automatize such a specification by means of. \TF is a recommender system to assist open source software developers in selecting suitable topics for the repositories. \CT exploits a collaborative filtering technique to recommend topics to developers by relying on the set of initial ones, which are currently included in the project being. 
-$\blacksquare$~\textbf{Method} In particular, we built a user-item matrix and apply a syntactic-based similarity function to predict missing topics by representing repositories and related topics in a graph format. To the best of our knowledge, this is the first approach that uses collaborative filtering technique for recommending useful topics to a \GH repository. At which point, the \emph{ten-fold cross-validation} methodology has been used to assess the performance of \CT considering different performance metrics \ie precision, recall, and catalog coverage .
-%we validated the approach by considering different metrics, aiming to study various quality aspects (\ie which \CT parameters provide better prediction performance)., 
-$\blacksquare$~\textbf{Result} The results show how \CT recommends good topics depending on different factors \ie collaborative filtering settings, considered dataset and pre-processing activities. More interesting, in our experiments, we prove how \CT  can be combined with existing topic recommender systems (i.e., \MNB) to improve the initial overall prediction performances. 
-$\blacksquare$~\textbf{Conclusion}
-Our results confirm that collaborative filtering techniques can be successfully used to recommend relevant topics to an existing repository. Moreover, we figured out that TopFilter gained a significant boost in prediction performances by employing the \MNB outcomes as input topics.
+\textit{Background:} In the context of software development, GitHub has gained 
+a valuable role in storing, analyzing and maintaining a considerable number of 
+repositories. Topics have been introduced by GitHub as an effective manner to 
+annotate stored repositories. However, labeling GitHub repositories should be 
+carefully conducted to avoid adverse effects on project popularity and 
+reachability.
+\textit{Aims:} We present TopFilter, a novel approach to assist open source 
+software developers in selecting suitable topics for GitHub repositories.
+\textit{Method:} We built a user-item matrix and applied a syntactic-based 
+similarity 
+function to recommend missing topics by representing repositories and related 
+topics in a graph-based manner. The ten-fold cross-validation methodology has 
+been used to assess the performance of TopFilter by considering different 
+metrics, i.e., precision, recall, and catalog coverage.
+\textit{Result:} The results show how TopFilter recommends good topics 
+depending on different factors, i.e., collaborative filtering settings, 
+considered datasets and pre-processing activities. Moreover, we show how 
+TopFilter can be combined with an existing topic recommender system (i.e., MNB 
+network) to improve the initial overall prediction performances.
+\textit{Conclusion:} Our results confirm that collaborative filtering 
+techniques can be successfully used to recommend relevant topics for GitHub 
+repositories. Moreover, TopFilter can gain a significant boost in prediction 
+performances by employing the MNB network outcomes as input topics
+
+%%Collaborative filtering is a well-founded technique widely used in the 
+%%recommendation system domain. 
+%$\blacksquare$~\textbf{Background} 
+%%In recent years, a plethora of approaches have been developed to provide the 
+%%users with relevant items. 
+%In the context of software development, \GH has gained a precious role in 
+%storing, analyzing and maintaining a considerable number of repositories.
+%% In the recent years, \GH introduced the possibility to classify them 
+%%employing topics to represent the stored projects in an effective manner.   
+%Topics have been introduced by \GH as an effective manner to annotate stored 
+%repositories. However,
+%% to increase their reachability and help developers when they are 
+%%searching for existing software artifacts satisfying their needs.  However,
+%labeling \GH repositories should be carefully conducted to avoid 
+%adverse effects on project popularity and reachability.
+%%$\blacksquare$~\textbf{Aims}  In this paper, we present \CT, a recommender 
+%%system to assist open source software developers in selecting suitable topics 
+%%for the repositories. \CT exploits a collaborative filtering technique to 
+%%recommend topics to developers by relying on the set of initial ones, which 
+%%are 
+%%currently included in the project being. 
+%$\blacksquare$~\textbf{Aims} We present \TF, a novel approach to assist open 
+%source software developers in selecting suitable topics for \GH repositories. 
+%%
+%%\CT exploits a collaborative filtering technique to recommend topics to 
+%%developers by relying on the set of initial ones, which are currently 
+%%included 
+%%in the project being. 
+%$\blacksquare$~\textbf{Method} We built a user-item matrix and applied a 
+%syntactic-based similarity function to recommend missing topics by 
+%representing 
+%repositories and related topics in a graph-based manner. 
+%%To the best of our knowledge, this is the first approach that uses 
+%%collaborative filtering technique for recommending useful topics to a \GH 
+%%repository. At which point, 
+%The \emph{ten-fold cross-validation} methodology has been used to assess the 
+%performance of \CT by considering different metrics, \ie precision, recall, 
+%and 
+%catalog coverage.
+%%we validated the approach by considering different metrics, aiming to study 
+%%various quality aspects (\ie which \CT parameters provide better prediction 
+%%performance)., 
+%$\blacksquare$~\textbf{Result} The results show how \CT recommends good topics 
+%depending on different factors, \ie collaborative filtering settings, 
+%considered 
+%datasets and pre-processing activities. Moreover, we show how \CT  can be 
+%combined with an existing topic recommender systems (i.e., \MNB) to improve 
+%the 
+%initial overall prediction performances. 
+%$\blacksquare$~\textbf{Conclusion}
+%Our results confirm that collaborative filtering techniques can be 
+%successfully 
+%used to recommend relevant topics for \GH repositories. Moreover, TopFilter 
+%can 
+%gain a significant boost in prediction performances by employing the \MNB 
+%outcomes as input topics.
 
 \end{abstract}
 
