@@ -98,12 +98,20 @@
 
 \begin{abstract}
 %Collaborative filtering is a well-founded technique widely used in the recommendation system domain. 
-Topics have been used by \GH as an effective measure to thematize a \GH repository, thus helping developers narrow down the search scope and approach repositories of their needs.  
+$\blacksquare$~\textbf{Background} 
 %In recent years, a plethora of approaches have been developed to provide the users with relevant items. 
-Considering the open-source software (OSS) domain, \GH has gained the head role in storing, analyzing and maintaining a huge number of repositories. To represent the stored projects in an effective manner, in 2017 \GH introduced the possibility to classify them employing topics. However, such labeling activity should be carefully conducted to avoid negative effects on project popularity.
-In this paper, we present \CT, a recommender system to assist open source software developers in selecting suitable topics for the repositories. \CT exploits a collaborative filtering technique to recommend topics to developers by relying on the set of initial ones, which are currently included in the project being. 
-To assess the quality of the approach, we exploit a recent work in this domain and validate both of them using different metrics. The results show that \CT outperforms it in all the examined aspects. More interesting, combining the two approaches improves the overall prediction performances.
+Considering the open-source software (OSS) domain, \GH has gained the head role in storing, analyzing and maintaining a huge number of repositories.
+% In the recent years, \GH introduced the possibility to classify them employing topics to represent the stored projects in an effective manner.   
+Topics have been used by \GH as an effective measure to thematize a \GH repository, thus helping developers narrow down the search scope and approach repositories of their needs.  
+However, such labeling activity should be carefully conducted to avoid negative effects on project popularity.
+$\blacksquare$~\textbf{Aims}  In this paper, we present \CT, a recommender system to assist open source software developers in selecting suitable topics for the repositories. \CT exploits a collaborative filtering technique to recommend topics to developers by relying on the set of initial ones, which are currently included in the project being. 
+$\blacksquare$~\textbf{Method} In particular, we built a user-item matrix and apply a syntactic-based similarity function to predict missing topics by representing repositories and related topics in a graph format. To the best of our knowledge, this is the first approach that uses collaborative filtering technique for recommending useful topics to a \GH repository. At which point, the \emph{ten-fold cross-validation} methodology has been used to assess the performance of \CT considering different performance metrics \ie precision, recall, and catalog coverage .
+%we validated the approach by considering different metrics, aiming to study various quality aspects (\ie which \CT parameters provide better prediction performance)., 
+$\blacksquare$~\textbf{Result} The results show how \CT recommends good topics depending on different factors \ie collaborative filtering settings, considered dataset and pre-processing activities. More interesting, in our experiments, we prove how \CT  can be combined with existing topic recommender systems (i.e., \MNB) to improve the initial overall prediction performances. 
+$\blacksquare$~\textbf{Conclusion}
+Our results confirm that collaborative filtering techniques can be successfully used to recommend relevant topics to an existing repository. Moreover, we have demonstrated how existing approaches can be improved by introducing such the proposed collaborative filtering technique. %Our work opens up venues for future work to further enhance compiler error messages as well as to automatically reuse content from Stack Overflow for other aspects of programming.
 
+ We figured out that TopFilter gained a significant boost in prediction performances by employing the MNB network outcomes as input topics.
 \end{abstract}
 
 %%
