@@ -7,7 +7,7 @@
 
 %\revised{:q
 
-In this section, we report how \CT has been evaluated, having the {\em goal} of evaluating the performance of the proposed approach. In Section~\ref{sec:Dataset}, the dataset involved in our evaluation has been presented. We describe the evaluation methodology and metrics in Section~\ref{sec:methodology-metric}, and Section~\ref{sec:metrics} respectively. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
+In this section, we report on the evaluation of \CT, having the {\em goal} of evaluating the performance of the proposed approach. In Section~\ref{sec:Dataset}, the dataset involved in our evaluation has been presented. We describe the evaluation methodology and metrics in Section~\ref{sec:methodology-metric}, and Section~\ref{sec:metrics} respectively. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
 
 
 %ten equal parts, so-called folds
@@ -23,12 +23,12 @@ In this section, we report how \CT has been evaluated, having the {\em goal} of 
 	\vspace{-.3cm}
 \end{figure*}
 
-\subsection{Dataset Extraction} \label{sec:Dataset}
+\subsection{Data Extraction} \label{sec:Dataset}
 
 
 %\color{blue}
 
-To evaluate the approach, we reuse the same dataset employed for the \MNB available here \cite{MNBreplication}. The \GH query language \cite{understanding} allows the fetching of relevant repository metadata including name, owner, and list of topics to mention a few. Thus, we \emph{randomly} collected a dataset consisting of $6,258$ repositories that use 15757 topics by means of the GitHub API \cite{pygithub/pygithub_2019}. We employ the \GH star voting mechanism as a popularity measure to avoid including unpopular, unmaintained and toy projects \cite{borges_whats_2018}. As claimed in several works\cite{borges_popularity_2017, borges_predicting_2016}, a high number of stars means the attention of the community for that project. So, we impose the following filter during the query execution:
+To evaluate the approach, we reuse the same dataset employed for the \MNB available here \cite{MNBreplication}. The \GH query language \cite{understanding} allows the fetching of relevant repository metadata including name, owner, and list of topics to mention a few. Thus, we \emph{randomly} collected a dataset consisting of 6,258 repositories that use 15,757 topics by means of the GitHub API \cite{pygithub/pygithub_2019}. We employ the \GH star voting mechanism as a popularity measure to avoid including unpopular, unmaintained and toy projects \cite{borges_whats_2018}. As claimed in several works\cite{borges_popularity_2017, borges_predicting_2016}, a high number of stars means the attention of the community for that project. So, we impose the following filter during the query execution:
 \begin{equation}
 \small
 Qf = "is:featured \; topic:t \; stars:100..80000 \; topics:>=2"
