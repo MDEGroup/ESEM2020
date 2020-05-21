@@ -2,9 +2,8 @@ This section discusses the findings of the qualitative assessment. To address th
 The results obtained with the entangled approach (\ie the combination of \CT and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
 
 
-\subsection{\CT evaluation} \label{sec:EXP1}
- \rqfirst
- 
+\subsection{\rqfirst} \label{sec:EXP1}
+  
 To find the best configuration in terms of prediction performances, we experiment with different \CT configuration by variating the available parameters \ie number of neighbors \emph{k}, the recommended topic cut-off value \emph{N}, and the involved dataset.   %The former refers to the number of similar repositories used in the recommendation engine. 
 %The latter value \emph{t} is used to select the input topics based on their frequencies: given an initial set of topics, we filter them with the cut-off value to reduce the noise in the original dataset. Then, the recommendation phase is enabled by varying the number of presented parameters. According to Section \ref{sec:methodology-metric}, N is the cut-off value and \emph{k} is the number of neighbours of the graph. We evaluate different configuration by setting N=1,5,10,15,20 and k=5,10,15,20,25. 
 %Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
@@ -66,8 +65,8 @@ However, the precision and recall values are still low, suggesting that bias liv
 
 %\input{src/oldRQ2}
 
-\subsection{Entangled evaluation} \label{sec:EXP3}
-\rqsecond
+\subsection{\rqsecond} \label{sec:EXP3}
+
 
 
 Due to the internal construction of the \MNB, the direct comparison of the two approaches can bring biased results. Thus, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \CT with the results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. 
