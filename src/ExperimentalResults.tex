@@ -48,7 +48,7 @@ Having a higher value of \emph{t} has a negative impacts on the global catalog c
 In the methodology described in Section~\ref{sec:methodology-metric}, for each repository \emph{r}, the evaluation outcomes consider the half part of real topics as input and remaining ones as ground truth data \emph{GT(r)}. Because of we are also interested to understand how the number of input topics impacts on prediction performance, Fig.~\ref{fig:pr-input-topics} shows the average success rate of all ten folds by choosing different number of input topics. Varying |\emph{t$_{in}$}| means changing the length of input topics that enable the \CT collaborative filtering recommender. In this picture we report the average success of all folds values with \emph{k} = 25 and \emph{t} = 20 as configuration settings. The success rate values exhibits an improvements when the size of input topic rises. This  behaviour demonstrate that \CT computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=\linewidth]{figs/sr_change_input_topics.pdf}
+	\includegraphics[width=0.9\linewidth]{figs/successRate_inputTopic.pdf}
 	\caption{Evaluation of the different input topics.}
 	\label{fig:pr-input-topics}
 \end{figure} 
