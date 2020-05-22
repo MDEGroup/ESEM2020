@@ -53,8 +53,8 @@ Under the same premise, our tool aims to solve the problem of the reachability o
 
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=\linewidth]{figs/CFTop.pdf}
-	\caption{Overview of the \TF Architecture.}% [??Rename Similarity Computation with Similarity Calculator]
+	\includegraphics[width=\linewidth]{figs/TopFilter.png}
+	\caption{Overview of the \TF Architecture.}% [??Rename Similarity Computation with Similarity Calculator
 	\label{fig:CrossRecArchitecture}
 \end{figure}
 
@@ -97,7 +97,7 @@ We can denote \emph{project-topic inclusion} relationships as $\ni$. In this mat
 otherwise. For the sake of clarity and conformance, we still denote this as a user-item ratings matrix throughout this
 paper.
 
-For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_4 \}$ together with a set of topics $L=\{$\emph{t$_1$} = \emph{machine-learning}; \emph{t$_2$} = \emph{javascript}; \emph{t$_3$} = \emph{database}; \emph{t$_4$} = \emph{web}; \emph{t$_5$} = \emph{algorithm}, \emph{t$_6$} = \emph{algorithms}$\}$ where $p_1$ $\ni$ $t_1,t_2, t_6$; $p_2 \ni t_1,t_3$; $p_3 \ni t_1 ,t_3, t_4, t_5$; $p_4 \ni t_1,t_2,t_4,t_5$. After the NLP normalization steps, the topics \emph{t$_5$} and \emph{t$_6$} collapse on the same terms that will named as \emph{t$_{5\_6}$}. Then, the Table~\ref{tab:repo-topic-matrix} are generated to represent inclusions between repositories and topics.
+For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_4 \}$ together with a set of topics $L=\{$\emph{t$_1$} = \emph{machine-learning}; \emph{t$_2$} = \emph{javascript}; \emph{t$_3$} = \emph{database}; \emph{t$_4$} = \emph{web}; \emph{t$_5$} = \emph{algorithm}, \emph{t$_6$} = \emph{algorithms}$\}$ where $p_1$ $\ni$ $t_1,t_2, t_6$; $p_2 \ni t_1,t_3$; $p_3 \ni t_1 ,t_3, t_4, t_5$; $p_4 \ni t_1,t_2,t_4,t_5$. After the NLP normalization steps, the topics \emph{t$_5$} and \emph{t$_6$} collapse on the same term that will be named as \emph{t$_{5\_6}$}. Then, Table~\ref{tab:repo-topic-matrix} is generated to represent inclusions between repositories and topics.
 \begin{table}[t]
 	\begin{tabular}{|l|l|l|l|l|l|l|}
 		\hline
