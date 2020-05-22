@@ -34,7 +34,7 @@ To evaluate the approach, we reuse the same dataset employed for the \MNB availa
 Qf = "is:featured \; topic:t \; stars:100..80000 \; topics:>=2"
 \end{equation}%
 to consider only \GH repositories having a number of stars between 100 and 80,000, and tagged with at least two topics. The boolean qualifier \emph{is:featured} is used in the \MNB work to group repositories given a certain featured topic (please refers to \url{https://github.com/topics} for the complete list of featured topics). As \CT is able to retrieve both featured and not-featured topics, this filter doesn't affect the quality of the collected data.
-To investigate the \CT prediction performances, we populated five different datasets starting from the original one by variating the topic frequency cut-off value \emph{t} \ie the maximum frequency of the topic distribution (it will be better described in Section~\ref{sec:methodology-metric}). In this way, we remove the infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:datasets} summarizes the datasets' features with \emph{t} = 1, 5, 10, 15, 20.
+To investigate the \CT prediction performances, we populated five different datasets starting from the original one by varying the topic frequency cut-off value \emph{t} \ie the maximum frequency of the topic distribution (it will be better described in Section~\ref{sec:methodology-metric}). In this way, we remove the infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:datasets} summarizes the datasets' features with \emph{t} = 1, 5, 10, 15, 20.
 
 
 \begin{table}[h]
@@ -49,7 +49,7 @@ $Dt_1$  &       6,253      &    15,743       &  9.9  &  3.9       \\ \hline
  $Dt_5$  &        3,884      &    1,989      &     8.4  &   16.5   \\ \hline
 $Dt_{10}$  &    2,897         &      964	     &   8.0    &  24.1 \\ \hline
 $Dt_{15}$  &    2,273        &   634       &   7.8  &  28.1       \\ \hline
-$Dt_{20}$  &    1,806       &   456        &   7 .7 &  30.5       \\ \hline
+$Dt_{20}$  &    1,806       &   456        &   7.7 &  30.5       \\ \hline
 
 \end{tabular}
 }

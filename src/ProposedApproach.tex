@@ -441,13 +441,15 @@ As mentioned before, this recent work using the \RM file of a repository to pred
 	\label{fig:entangled}
 \end{figure}
 
-Figure~\ref{fig:entangled} depicts an overview of the combined approach. First, the \MNB computes the list of recommended featured topics from the repository readme file. Then, top-N featured topics are used as input to \TF that computes their topics  recommendation (\ie non-featured topics are included). Finally, the recommended topics are mixed by encoding the \TF recommended topics to the top-N featured ones.
+Figure~\ref{fig:entangled} depicts an overview of the combined approach. First, the \MNB computes the list of recommended featured topics from the repository readme file. Then, top-N featured topics are used as input to \TF that computes their topics recommendation, \ie non-featured topics are included. Finally, the recommended topics are mixed by encoding the \TF recommended topics to the top-N featured ones.
 
-We assume that \TF can improve \MNB in the following term:
+We assume that \TF can help improve \MNB in the following aspects:
 \begin{itemize}
-	\item \TF recommends non featured topics: the recommended topics are selected from similar repository independently from their nature;
+	\item \TF recommends non-featured topics: the recommended topics are selected from similar repositories, independently from their nature;
 	\item \TF can recommend topics by iterating over refining steps: once we select some topic from the recommended ones, \TF can recommend new ones using the selected one as new beliefs;
-	\item \MNB doesn't provide further recommendations if the suggested topics are already included, whereas we will see in Section~\ref{sec:EXP1} \TF performs better when more topics are used as input.
+	\item \MNB does not provide further recommendations if the suggested topics are already included, whereas we will see in Section~\ref{sec:EXP1} \TF considerably improves the performancewhen more topics are incorporated as input.
 \end{itemize}
-The experiments conducted in the followings sections aim to evaluate the performance of \TF, \MNB, and the entangled approach by comparing the accuracy and coverage metrics.
+
+%The experiments conducted 
+In the following sections, we introduce the experiments conducted to evaluate the performance of \TF, \MNB, and the combined approach by comparing the accuracy and coverage metrics.
 
