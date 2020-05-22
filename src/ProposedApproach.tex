@@ -44,27 +44,30 @@
 % to support OSS developers
 %====================================================================================================================================
 
-This section describes \TF, our proposed approach to provide developers with relevant topics for \GH repositories. 
-\TF is a recommender system %\cite{Aggarwal2016} 
-that uses a graph representation to model the relationships among OSS projects and exploits a collaborative filtering technique \cite{Schafer:2007:CFR:1768197.1768208} to recommend relevant \GH topics to developers. 
-Collaborative filtering techniques have been conceived in e-commerce domain where the relationships among products and users are used for predicting the missing ratings of recommended items \cite{Linden:2003:ARI:642462.642471}. 
-Similarly to the work presented in~\cite{NGUYEN2020110460}, our proposed technique follows the assumption that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. 
-Under the same premise, our tool aims to solve the problem of the reachability of a \GH repository given a set of topics. In particular, we recommend a set of topics using an analogous mechanism: \emph{``if a user tags his project with some topics, then similar projects will probably contain common topics''}. 
+This section describes \TF, %our proposed approach to provide developers with relevant topics for \GH repositories. 
+%\TF is 
+a recommender system %\cite{Aggarwal2016} 
+that models the relationships among OSS projects using a graph representation, and exploits a collaborative filtering technique \cite{Schafer:2007:CFR:1768197.1768208} to recommend relevant \GH topics to developers. Collaborative filtering techniques have been conceived in the e-commerce domain %where the relationships among products and users are used for 
+to recommend products %predict the missing ratings of recommended items 
+\cite{Linden:2003:ARI:642462.642471}, based one the assumption that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. 
+%Similarly to the work presented in~\cite{NGUYEN2020110460}, our proposed technique follows the assumption that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. 
+%In a similar fashion, 
+\TF works %recommends topics %works in the same manner to %aims to solve the problem of the reachability of a \GH repository given a set of topics. In particular, we recommend a set of topics 
+following the same line of reasoning: \emph{``if projects have some tags in common, then they will probably contain other tags''}~\cite{NGUYEN2020110460}.
 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=\linewidth]{figs/TopFilter.png}
-	\caption{Overview of the \TF Architecture.}% [??Rename Similarity Computation with Similarity Calculator
-	\label{fig:CrossRecArchitecture}
+	\caption{Overview of the \TF architecture.}% [??Rename Similarity Computation with Similarity Calculator
+	\label{fig:TopFilterArchitecture}
 \end{figure}
 
+Figure~\ref{fig:TopFilterArchitecture} depicts the architecture conceived to realize the \TF prototype. %First \TF represents the relationships among projects\footnote{For the sake of presentation, the terms ``repositories'' and ``projects'' are used interchangeably throughout the paper} and topics retrieved from existing repositories as a graph. %Next, the graph representation are involved to compute similar projects to that under development. Finally, relevant topics are recommended for the input project using a collaborative-filtering technique.
+First, the \code{Topic Cleaner} component is used to filter out very rare topics according to their frequencies of occurrence over all projects in the initial dataset. Afterwards, \code{Data Encoder} represents the repositories in the graph format, and \code{Similarity Calculator} computes similarities among the projects. The \code{Recomme\-ndation Engine} component implements a \emph{collaborative-filtering} technique~\cite{Aggarwal2016,Zhao:2010:UCR:1748610.1749278,NGUYEN2020110460} %,\ it selects top-$k$ similar repository, and performs computation 
+to generate a ranked list of \emph{top-N} topics which %.~Finally, a ranked list of topics 
+is eventually suggested to the developer.
 
-In this respect, first \TF represents the relationships among projects\footnote{For the sake of presentation, the terms “repoistories” and “project” are used interchangeably throughout the paper} and topics retrieved from existing repositories as a graph. Next, the graph representation are involved to compute similar projects to that under development. Finally, relevant topics are recommended for the input project using a collaborative-filtering technique.
-As shown in Fig. \ref{fig:CrossRecArchitecture}, the \emph{Topic filter} preprocessing phase filters-out very rare topics according to their frequencies, \ie the topic occurrences over all repositories in the initial dataset. The \code{Data Encoder} represents the mentioned repositories in the graph format. This is a preparatory phase for the next steps of the recommendation process. 
-The developer interacts with \TF by sending a request for recommendations that includes the list of topics which she has already included for the repository that she is working on.
-The \code{Similarity Calculator} module computes similarities between the input project and the ones included in the dataset. The \code{Recommendation Engine} implements a \emph{collaborative-filtering} technique
-\cite{Aggarwal2016,Zhao:2010:UCR:1748610.1749278,NGUYEN2020110460},\ it selects top-$k$ similar repository, and performs computation to generate a ranked list of \emph{top-N}
-topics.~Finally, the final list of topics is sent back to the developer.
+%This is a preparatory phase for the next steps of the recommendation process. The developer interacts with \TF by sending a request for recommendations that includes the list of topics which she has already included for the repository that she is working on.
 
 The aforementioned components are singularly described in the next sections. Finally,  the Section~\ref{sec:entangled_approach} presents how \TF can be combined with existing approach (\ie \MNB)  to improve the collaborative filtering prediction performance.
  % shown in Fig. \ref{fig:CrossRecArchitecture} \cite{CROSSREC-DATA}
@@ -74,7 +77,7 @@ The aforementioned components are singularly described in the next sections. Fin
 %CrossRec represents the data collected from OSS repositories.
 %. The data collected from OSS repositories is converted into a matrix 
 %A matrix of this type is very sparse since most users give ratings to a small amount of items. 
-\subsection{Topic filter}  \label{sec:filter}
+\subsection{Data Cleaner}  \label{sec:filter}
 As a preprocessing, we filter the initial set of topics using their frequencies counted on the entire \GH dataset. We remove irrelevant topics to reduce the noise in the prediction phase. Through the \emph{cut-off} value, we progressively increase the frequency threshold to evaluate possible impacts on overall performances. As stated in \cite{repo-topix}, this preprocessing can improve the final results, thus we decide to apply it as a first step. 
 
 To this end, we develop tailored Python scripts that apply this filter to the initial dataset. As a \GH user can manually specify the topic list for his repository, a lot of them can contain infrequent or improper terms \ie the name of the author, duplicated values, terms that rarely appear to name a few. On one hand, imposing such preprocessing reduces the repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by pruning "bad" terms. 
