@@ -52,7 +52,7 @@ Under the same premise, our tool aims to solve the problem of the reachability o
 
 \begin{figure}[t!]
 	\centering
-	\includegraphics[width=\linewidth]{figs/CFTop.pdf}
+	\includegraphics[width=\linewidth]{figs/TopFilter.png}
 	\caption{Overview of the \CT Architecture.}% [??Rename Similarity Computation with Similarity Calculator]
 	\label{fig:CrossRecArchitecture}
 \end{figure}
@@ -60,7 +60,7 @@ Under the same premise, our tool aims to solve the problem of the reachability o
 
 In this respect, first \CT represents the relationships among projects\footnote{For the sake of presentation, the terms “repoistories” and “project” are used interchangeably throughout the paper} and topics retrieved from existing repositories as a graph. Next, the graph representation are involved to compute similar projects to that under development. Finally, relevant topics are recommended for the input project using a collaborative-filtering technique.
 As shown in Fig. \ref{fig:CrossRecArchitecture}, the \emph{Topic filter} preprocessing phase filters-out very rare topics according to their frequencies, \ie the topic occurrences over all repositories in the initial dataset. The \code{Data Encoder} represents the mentioned repositories in the graph format. This is a preparatory phase for the next steps of the recommendation process. 
-The developer interacts with \CT by sending a request for recommendations that includes the list of topics which she has already included for the repository that she is working on.
+The developer interacts with \CT by sending a request for recommendations that includes the list of topics which she has already included for the repository that she is working on. Such topics are encoded in the graph representation to
 The \code{Similarity Calculator} module computes similarities between the input project and the ones included in the dataset. The \code{Recommendation Engine} implements a \emph{collaborative-filtering} technique
 \cite{Aggarwal2016,Zhao:2010:UCR:1748610.1749278,NGUYEN2020110460},\ it selects top-$k$ similar repository, and performs computation to generate a ranked list of \emph{top-N}
 topics.~Finally, the final list of topics is sent back to the developer.
@@ -96,7 +96,7 @@ We can denote \emph{project-topic inclusion} relationships as $\ni$. In this mat
 otherwise. For the sake of clarity and conformance, we still denote this as a user-item ratings matrix throughout this
 paper.
 
-For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_4 \}$ together with a set of topics $L=\{$\emph{t$_1$} = \emph{machine-learning}; \emph{t$_2$} = \emph{javascript}; \emph{t$_3$} = \emph{database}; \emph{t$_4$} = \emph{web}; \emph{t$_5$} = \emph{algorithm}, \emph{t$_6$} = \emph{algorithms}$\}$ where $p_1$ $\ni$ $t_1,t_2, t_6$; $p_2 \ni t_1,t_3$; $p_3 \ni t_1 ,t_3, t_4, t_5$; $p_4 \ni t_1,t_2,t_4,t_5$. After the NLP normalization steps, the topics \emph{t$_5$} and \emph{t$_6$} collapse on the same terms that will named as \emph{t$_{5\_6}$}. Then, the Table~\ref{tab:repo-topic-matrix} are generated to represent inclusions between repositories and topics.
+For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_4 \}$ together with a set of topics $L=\{$\emph{t$_1$} = \emph{machine-learning}; \emph{t$_2$} = \emph{javascript}; \emph{t$_3$} = \emph{database}; \emph{t$_4$} = \emph{web}; \emph{t$_5$} = \emph{algorithm}, \emph{t$_6$} = \emph{algorithms}$\}$ where $p_1$ $\ni$ $t_1,t_2, t_6$; $p_2 \ni t_1,t_3$; $p_3 \ni t_1 ,t_3, t_4, t_5$; $p_4 \ni t_1,t_2,t_4,t_5$. After the NLP normalization steps, the topics \emph{t$_5$} and \emph{t$_6$} collapse on the same term that will be named as \emph{t$_{5\_6}$}. Then, Table~\ref{tab:repo-topic-matrix} is generated to represent inclusions between repositories and topics.
 \begin{table}[t]
 	\begin{tabular}{|l|l|l|l|l|l|l|}
 		\hline
@@ -215,8 +215,8 @@ For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_
 
 Many recommender systems rely heavily on similarity metrics to suggest suitable
 and meaningful recommendation for a given input~\cite{Schafer:2007:CFR:1768197.1768208,Sarwar:2001:ICF:371920.372071,NGUYEN2020110460}. 
-Similarly, the \code{Recommendation Engine} of \CT relies on the information extracted from very similar project to recommend relevant topics to the input repository. 
-In this way, the \emph{Similarity Calculator} applies a similarity function on the mentioned repo-topic ratings matrix to provided very closest project in a given initial set to the input one. 
+Similarly, the \code{Recommendation Engine} of \CT relies on the information extracted from very similar project to recommend relevant topics for the input repository. 
+In this way, the \emph{Similarity Calculator} applies a similarity function on the graph representation of the repo-topic ratings matrix to provided very closest project in a given initial set to the input one. 
 As a result, computing properly this similarity score affects the quality of recommendation outcomes.
 Nonetheless, computing similarities among topics could be a daunting task. 
 \GH allows any repository owner to add, change, or delete the list of topics that describe his project. This impacts on the stability of the topics, as they can change rapidly over time. In addition, a developer can freely specify the entire set of topics. This makes the similarity computation more complicated, as some topics couldn't have a semantic link with the others. Moreover, we can miss some key relationships depending on the similarity function employed by the calculator. For example, a purely syntactic-based similarity function assign a lower score to the topic pair 3d-graphics even though these two terms are strongly bounded in their meaning.
