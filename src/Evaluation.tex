@@ -7,9 +7,10 @@
 
 %\revised{:q
 
-In this section, we report on the evaluation of \CT, having the {\em goal} of evaluating the performance of the proposed approach. In Section~\ref{sec:Dataset}, the dataset involved in our evaluation has been presented. We describe the evaluation methodology and metrics in Section~\ref{sec:methodology-metric}, and Section~\ref{sec:metrics} respectively. Finally, Section~\ref{sec:ResearchQuestions} describes the research questions.
+In this section, we report on the materials and methods used to evaluate \TF. %evaluation of \CT, having the {\em goal} of evaluating the performance of the proposed approach. 
+Section~\ref{sec:Dataset} presents the datasets exploited in the evaluation. Section~\ref{sec:methodology-metric} and Section~\ref{sec:metrics} describe the methodology and metrics, respectively. Finally, the research questions are going to be highlighted in Section~\ref{sec:ResearchQuestions}.
 
-To facilitate future research, we made available the SOrec tool together with the related data in a GitHub repository\footnote{https://github.com/ESEM2020-TopFilter/TopFilter}.
+To facilitate future research, we made available the \TF tool together with the related data in a GitHub repository\footnote{https://github.com/ESEM2020-TopFilter/TopFilter}.
 
 %ten equal parts, so-called folds
 %We also exploited 
@@ -25,6 +26,18 @@ To facilitate future research, we made available the SOrec tool together with th
 \end{figure*}
 
 \subsection{Data Extraction} \label{sec:Dataset}
+
+
+
+%\subsection{Data Cleaner}  \label{sec:filter}
+
+As a preprocessing, we filter the initial set of topics using their frequencies counted on the entire \GH dataset. We remove irrelevant topics to reduce the noise in the prediction phase. Through the \emph{cut-off} value, we progressively increase the frequency threshold to evaluate possible impacts on overall performances. As stated in \cite{repo-topix}, this preprocessing can improve the final results, thus we decide to apply it as a first step. 
+
+To this end, we develop tailored Python scripts that apply this filter to the initial dataset. As a \GH user can manually specify the topic list for his repository, a lot of them can contain infrequent or improper terms \ie the name of the author, duplicated values, terms that rarely appear to name a few. On one hand, imposing such preprocessing reduces the repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by pruning "bad" terms. 
+This pruning phase is computed offline and doesn't affect the time required for the recommendation process. 
+
+
+
 
 
 %\color{blue}
