@@ -153,27 +153,29 @@ It is worth noting that we can't directly compare directly \CT and \MNB approach
 
 \subsection{Metrics' definition}\label{sec:metrics}
 
-\JDR{Rephrase this section}
-There are several metrics available to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
-
+In the context of recommendation systems, several metrics have been proposed to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
 
 % and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.
-
- The metrics considered during the outcome evaluation follows this notation:
-
+%Before defining the metrics involved in the experiment, we present the following notations to make easier the understanding of the considered metrics:
+First of all, we present the following notations to make easier the understanding of the metrics involved in our experiment:
 \begin{itemize}[noitemsep,topsep=0pt]
 	\item \emph{t} is the frequency cut-off value of input topics (\ie all topics that occur less than \emph{t} times are removed from the dataset)
 	\item |\emph{t$_{in}$}| is the size of topics that \CT takes as input;
 	\item \emph{N} is the cut-off value for the recommended ranked list of topic;% of recommended libraries;
-	\item \emph{k} is the number of neighbour projects exploited for the recommendation process;
-	\item For a testing project \emph{r}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(r)};
-	\item $REC(r)$ is the \emph{top-N} topics recommended to a repository \emph{r}. It is a ranked list in descending order of real scores;
-	\item If a recommended topic $rt \in REC(r)$ for a testing project $r$ is found in the ground truth of $r$ (\ie \emph{GT(r)}), hereafter we call this as a topic \textit{match}
+	\item \emph{k} is the number of top-similar neighbour projects \TF considers to predict suggested topics;
+	\item \emph{GT(r)} is defined as the half part of the extracted topics for a testing project \emph{r}, and \emph{GT(r)} have been used as ground-truth data in the evaluation process;
+%	\item For a testing project \emph{r}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(r)};
+	\item $REC_{N}(r)$ is the outcome of \TF to a given repository \emph{r}, \ie the top-\emph{N}  suggested topics in a descending order by considering the recommendation scores;
+	%\item $REC(r)$ is the \emph{top-N} topics recommended to a repository \emph{r}. It is a ranked list in descending order of real scores;
+	\item a recommended topic \emph{rt} to a repository \emph{r} is marked as a \emph{match} if $rt \in REC(r)$;
+	\item  $match_{N}(r)$ is the set of items in $REC_{N}(r)$ that match with those in \emph{GT(r)} for a given a repository \emph{r}.
 \end{itemize}
 
 
 
-If $REC_{N}(p)$ is the set of top-$N$ items and $match_{N}(p)$ is the set of items in the \emph{top-N} list that match with those in the ground-truth data, then the metrics are defined as follows.  
+\noindent By using the such notations, the accuracy, success rate and coverage  metrics are defined as follows.  
+
+\JDR{Rephrase this section}
 
 \vspace{.1cm}
 \noindent\textbf{Success rate@N.} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least a topic match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
