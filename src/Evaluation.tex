@@ -10,7 +10,7 @@
 In this section, we report on the materials and methods used to evaluate \TF. %evaluation of \TF, having the {\em goal} of evaluating the performance of the proposed approach. 
 Section~\ref{sec:Dataset} presents the datasets exploited in the evaluation. Section~\ref{sec:methodology-metric} and Section~\ref{sec:metrics} describe the methodology and metrics, respectively. Finally, the research questions are highlighted in Section~\ref{sec:ResearchQuestions}.
 
-To facilitate future research, we made available the \TF tool together with the related data in a \GH repository.\footnote{https://github.com/ESEM2020-TopFilter/TopFilter}
+To facilitate future research, we made available the \TF tool together with the related data in a \GH repository.\footnote{\url{https://github.com/ESEM2020-TopFilter/TopFilter}}
 
 %ten equal parts, so-called folds
 %We also exploited 
@@ -49,7 +49,7 @@ To facilitate future research, we made available the \TF tool together with the 
 
 % \cite{MNBreplication}.
 
-To study our proposed approach, we reuse the same dataset employed to evaluate \MNB.\footnote{\url{https://github.com/MDEGroup/MNB\_TopicRecommendation/}} A preprocessing was performed to improve the data quality as follows~\cite{repo-topix}. First, we filtered the initial set of topics using their frequencies counted on the entire \GH dataset. Afterwards, we removed irrelevant topics to reduce probable noise during the prediction phase. Through the introduction of the \emph{cut-off} value~\cite{10.1145/3383219.3383227}, we gradually increase the frequency threshold to evaluate possible impacts on overall performances. %, thus we decide to apply it as a first step.
+To study our proposed approach, we reused the same dataset employed to evaluate \MNB.\footnote{\url{https://github.com/MDEGroup/MNB\_TopicRecommendation/}} A preprocessing phase was performed to improve the dataset's quality as follows~\cite{repo-topix}. First, we filtered the initial set of topics using their frequencies counted on the entire \GH dataset. Afterwards, we removed irrelevant topics to reduce probable noise during the prediction phase. Through the introduction of the \emph{cut-off} value~\cite{10.1145/3383219.3383227}, we gradually increase the frequency threshold to evaluate possible impacts on overall performances. %, thus we decide to apply it as a first step.
 %As \TF is able to retrieve both featured and not-featured topics, such a filtering process does not affect the quality of the collected data.
 
 
