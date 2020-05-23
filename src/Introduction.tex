@@ -1,22 +1,61 @@
-In recent years, the developer community heavily exploits open source repositories during their daily activities. \GH has become one of the most
-popular platforms that aggregate these projects and
-support the development activity in a collaborative fashion~\cite{7832894}.
-%
+In recent years, the developer community heavily exploits open source 
+repositories during their daily activities. \GH has become one of the most
+popular platforms that aggregate these projects and support collaborative 
+development activities~\cite{7832894}. \GH recently introduced the possibility 
+to tag repositories employing 
+\emph{topics}\footnote{\url{https://help.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics}}
+ intending to foster the popularity and promote information discovery about 
+available projects. Topics are terms used to characterize projects and to 
+facilitate their discoverability from software developers that are searching 
+for existing projects providing them with some reusable features. 
 
-The platform recently introduced \emph{topics}\footnote{\url{https://help.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics}} to foster the popularity and promote information discovery about available projects. They are a set of terms used to characterize projects by summarizing their features.  
-Thus, the topic labeling activity can compromise the popularity and reachability of a project if it is not properly addressed. A recent work\footnote{For the sake of presentation, we refer to this work as MNB network throughout the paper} already faced this problem by using a machine learning approach to recommend relevant topics given a README file of a repository \cite{10.1145/3383219.3383227}. However, this too is able to recommend only \emph{featured} topics, a curated list of them provided by \GH\footnote{\url{https://github.com/topics}}.
+Assigning repositories with wrong topics can compromise their popularity and 
+reachability. To deal with such problems, in 2017 \GH introduced a 
+mechanism named repo-topix to suggest topics by relying on information 
+retrieval techniques \cite{repo-topix}. To improve repo-topix 
+and to explore additional recommendation strategies, a recent work (named MNB 
+hereafter) faced the problem by using a Multinomial Na\"ive Bayesian network to 
+recommend relevant topics starting from the README file of the repository of 
+interest \cite{10.1145/3383219.3383227}. However, such a tool can recommend 
+only \emph{featured} topics, \ie a set of topics, which are curated by 
+\GH\footnote{\url{https://github.com/topics}}.
 
- 
-We propose \CT, a recommender system that extends the set of recommended items to non-featured topics by exploiting collaborative filtering, a broadly used technique in the recommendation system domain \cite{Schafer:2007:CFR:1768197.1768208}. Given an initial set of topics coming from a \GH project, we encode the relevant information in a graph-based structure. In such a way, we are able to represent the mutual relationships between repositories and topics. From this, a project-topic matrix is created following the common user-item structure used in existing collaborative filtering applications. Then, we compute a similarity function based on featured vectors to recommend the most similar topics.
 
-We evaluate the \CT's prediction performances by variating different parameters as well as comparing it with the \MNB approach. As the direct comparison is not possible due to the approaches' internal construction, we used a well-defined set of metrics used in the literature to evaluate both of the approaches considering different datasets. Furthermore, we combined the two approaches to investigate the potential benefits of this union. 
+In this paper, we propose \CT, a recommender system that extends the 
+recommendation capabilities of the MNB approach previously mentioned to 
+non-featured topics by exploiting collaborative filtering, a widely used 
+technique in the recommendation system domain 
+\cite{Schafer:2007:CFR:1768197.1768208}. Given an initial set of topics already 
+assigned to the \GH repository of interest, we encode it in a graph-based 
+structure to represent the mutual relationships between repositories and 
+topics. From this, a repository-topic matrix is created by following the 
+typical user-item structure used in existing collaborative filtering 
+applications. Then, we compute a similarity function based on featured vectors 
+to recommend the most similar topics.
 
-In this sense, our work makes the following contributions:
+We evaluate the \CT's prediction performances by changing different parameters 
+as well as comparing it with the \MNB approach. As the direct comparison is not 
+possible due to the approaches' internal construction, we used a well-defined 
+set of metrics used in the literature to evaluate both approaches by 
+considering different datasets. Furthermore, we also investigated the combined 
+adoption of MNB and \TF to investigate the potential benefits of their combined 
+use. 
+
+The contributions of this paper are as follows:
 \begin{itemize}
-\item Considering \GH topics as product to recommend, we improve repositories' popularity by suggesting a list of them;
-\item We assess the quality of the work employing a well-defined set of metrics commonly used in the recommendation system domain \ie success rate, accuracy, and catalog coverage;
-\item Considering a well-founded approach, we improve it by providing an extended set of possible topics  
+	\item By considering \GH topics as a product to recommend, we improve 
+	repositories' popularity by suggesting a list of relevant topics;
+	\item We assess the quality of the work employing a well-defined set of 
+	metrics commonly used in the recommendation system domain \ie success rate, 
+	accuracy, and catalog coverage;
+	\item Considering a well-founded approach, we improve it by recommending an 
+	extended set of topics.  
 \end{itemize}
 
-The paper is structured as follows. Section \ref{sec:Background} presents the \MNB approach with a motivating example to describe the faced problem. In Section \ref{sec:ProposedApproach}, we present our approach and evaluate it in Section \ref{sec:Evaluation}. Section \ref{sec:ExperimentalResults} discusses relevant findings and related works are summarized in  Section \ref{sec:RelatedWorks}. Finally, we conclude the paper and discuss possible future works in Section \ref{sec:Conclusions} with possible future works.
-
+The paper is structured as follows. Section \ref{sec:Background} presents the 
+context of this work by means of a motivating example. In Section 
+\ref{sec:ProposedApproach}, we present the \TF approach. Its evaluation is  
+presented in Section \ref{sec:Evaluation}. Section 
+\ref{sec:ExperimentalResults} discusses relevant findings and related works are 
+summarized in  Section \ref{sec:RelatedWorks}. Finally, we conclude the paper 
+and discuss possible future work in Section \ref{sec:Conclusions}.

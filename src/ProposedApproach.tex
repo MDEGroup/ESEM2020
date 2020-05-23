@@ -53,7 +53,7 @@ to recommend products %predict the missing ratings of recommended items
 %Similarly to the work presented in~\cite{NGUYEN2020110460}, our proposed technique follows the assumption that \emph{``if users agree about the quality or relevance of some items, then they will likely agree about other items''} \cite{Schafer:2007:CFR:1768197.1768208}. 
 %In a similar fashion, 
 \TF works %recommends topics %works in the same manner to %aims to solve the problem of the reachability of a \GH repository given a set of topics. In particular, we recommend a set of topics 
-following the same line of reasoning to mine \GH topics: \emph{``if projects have some tags in common, then they will probably contain other tags''}~\cite{NGUYEN2020110460}.
+following the same line of reasoning to mine \GH topics: \emph{``if projects have some tags in common, then they will probably contain other relevant tags''}~\cite{NGUYEN2020110460}.
 
 \begin{figure}[t!]
 	\centering
@@ -66,10 +66,10 @@ following the same line of reasoning to mine \GH topics: \emph{``if projects hav
 %This is a preparatory phase for the next steps of the recommendation process. The developer interacts with \TF by sending a request for recommendations that includes the list of topics which she has already included for the repository that she is working on.
 %The aforementioned components are singularly described in the next sections. 
 
-In the following subsections, we describe two \TF configurations, namely \TFa and \TFb. The first one exploits a collaborative-filtering technique; and the second one  %in detail each of the components mentioned above. %In Section~\ref{sec:combined_approach}, 
-Furthermore, based on the proposed architecture, we present an approach to improve \MNB by combining it with the collaborative-filtering technique. %\TF can be combined with \MNB to improve. %the collaborative filtering prediction performance.
+In the following subsections, we describe two \TF configurations, namely \TFa and \TFb to recommend relevant topics by incorporating different types of input data. \TFa exploits a collaborative-filtering technique, while \TFb is a combination of both \MNB and \TFa, aiming to improve the prediction performance of the original \MNB approach. % by combining it with \TFa. %\TF can be combined with \MNB to improve. %the collaborative filtering prediction performance.
 
-
+  %in detail each of the components mentioned above. %In Section~\ref{sec:combined_approach}, 
+%Furthermore, based on the proposed architecture, we present an approach to improve \MNB by 
 
  % shown in Fig. \ref{fig:CrossRecArchitecture} \cite{CROSSREC-DATA}
 %\vspace{-.2cm}
@@ -83,23 +83,23 @@ Furthermore, based on the proposed architecture, we present an approach to impro
 
 
 
-\subsection{\TFa: Recommending relevant topics using a collaborative-filtering technique} \label{sec:CFRecommendation}
+\subsection{\TFa: Recommending topics using a collaborative-filtering technique} \label{sec:CFRecommendation}
 
 %First \TF represents the relationships among projects\footnote{For the sake of presentation, the terms ``repositories'' and ``projects'' are used interchangeably throughout the paper} and topics retrieved from existing repositories as a graph. %Next, the graph representation are involved to compute similar projects to that under development. Finally, relevant topics are recommended for the input project using a collaborative-filtering technique.
 
 %This section presents the framework to. 
 
-Figure~\ref{fig:TopFilterArchitecture} depicts the architecture conceived to realize the \TF prototype. First, the \code{Topic Cleaner} component is used to filter out very rare topics according to their frequencies of occurrence over all projects in the initial dataset. Afterwards, \code{Data Encoder} represents the repositories in the graph format, and \code{Similarity Calculator} computes similarities among the projects. The \code{Recomme\-ndation Engine} component implements a \emph{collaborative-filtering} technique~\cite{Aggarwal2016,Zhao:2010:UCR:1748610.1749278,NGUYEN2020110460} %,\ it selects top-$k$ similar repository, and performs computation 
+Figure~\ref{fig:TopFilterArchitecture} depicts the architecture conceived to realize the \TF prototype. First, %the \code{Topic Cleaner} component is used to filter out very rare topics according to their frequencies of occurrence over all projects in the initial dataset. Afterwards, 
+the \code{Data Encoder} component represents the repositories in the graph format, and then \code{Similarity Calculator} computes similarities among the projects. The \code{Recomme\-ndation Engine} component implements a \emph{collaborative-filtering} technique~\cite{Aggarwal2016,Zhao:2010:UCR:1748610.1749278,NGUYEN2020110460} %,\ it selects top-$k$ similar repository, and performs computation 
 to generate a ranked list of \emph{top-N} topics which %.~Finally, a ranked list of topics 
-is eventually suggested to the developer.
+is eventually suggested to the developer. We explain in detail the functionalities of each component as follows.
 
 
 \subsubsection{Data Encoder} \label{sec:DataEncoder}
 
 %Considering traditional recommender systems for online services, we can identify three main components, namely \emph{users}, \emph{items}, and \emph{ratings} \cite{Sarwar:2001:ICF:371920.372071},\cite{DBLP:conf/rweb/NoiaO15}. 
 
-We encode the mutual relationships among system components using a \emph{project-topic matrix}~\cite{Sarwar:2001:ICF:371920.372071}. 
-Each row in represents a project, and each column corresponds to a topic. In this sense, a cell in the matrix is set to 1 if the project in the corresponding row contains the topic in the corresponding column, otherwise the cell is set to 0.
+The mutual relationships among \GH repositories and topics is encoding using a \emph{project-topic matrix}~\cite{Sarwar:2001:ICF:371920.372071}: Each row in represents a project, and each column corresponds to a topic. In this sense, a cell in the matrix is set to 1 if the project in the corresponding row contains the topic in the corresponding column, otherwise the cell is set to 0.
 
 To build the project-topic matrix, raw topics are first pre-process\-ed using various Natural Language Processing (NLP) techniques, such as stemming, lemmatization, and stop words removal. This aims to remove possible syntactical duplicates terms, \eg \textit{document} and \textit{documents}, which are frequent in \GH. Afterwards, the final matrix is constructed by means of the topics obtained through the pre-processing phase. %More specifically, stemming, lemmatization, and stop words are applied on the mined topics.
 
@@ -325,7 +325,7 @@ where $n$ is the cardinality of the set of topics that $p$ and $q$ share in comm
 
 %A collaborative-filtering recommender system suggests products that customers similar to the customer being considered have already purchased. 
 
-\subsubsection{Recommendation engine}
+\subsubsection{Recommendation Engine}
 
 %In the context of \TF, we exploit the user-based collaborative-filtering technique for implementing the recommendation engine. 
 
@@ -347,7 +347,7 @@ where $n$ is the cardinality of the set of topics that $p$ and $q$ share in comm
 
 
 
-Given an input project $p$, the inclusion of topics in such repository can be predicted from projects that are similar to $p$. In other words, \TF predict topic ratings  by means of those collected from the \emph{top-k} similar projects using the following formula~\cite{NGUYEN2020110460}:
+Given an input project $p$, the inclusion of additional topics can be predicted from the projects that are similar to $p$. In other words, \TF predicts topics' presence by means of those collected from the \emph{top-k} similar projects using the following formula~\cite{NGUYEN2020110460}:
 
 %Referring to the example depicted in Figure~\ref{fig:UserBasedCF}, the relationships between the active project $p$ and the similar projects $q_1,q_2,q_3$ are used to compute the missing topic ratings for $p$. 
 %The rectangles in Fig. \ref{fig:UserBasedCF} imply that the row-wise relationships between the active project $p$ and the similar projects $q_1,q_2,q_3$ are exploited to compute the missing ratings for $p$.
@@ -444,15 +444,11 @@ where $\overline{r_{p}}$ and $\overline{r_{q}}$ are the mean of the ratings of $
 
 %So far, we have described \TF as a stand-alone recommender system by describing its constituent components. To highlight its flexibility in a different context, we propose an approach to improve \MNB. 
 
-As already mentioned in Section~\ref{sec:Background}, though \MNB works in practice, it has its own limitations. First, it can recommend only featured topics that represent a small set of all possible terms, which in turn can be restricted because of antonymous terms, \eg programming languages. Second, given that a repository already includes all suggested topics, \MNB is not able to recommend new ones. %The second major limitation is the underlying structure needed for the training phase. 
-To suggest relevant items, \MNB requires a \emph{balanced} dataset, \ie each topic must have a similar number of \RM files. This is hard to come by in practice as topics are generally heterogeneous.
+As already mentioned in Section~\ref{sec:Background}, though \MNB works in practice, it has its own limitations. First, it can recommend only featured topics which account for a small fraction of all possible terms. %, which in turn can be restricted because of antonymous terms, \eg programming languages. 
+Second, given that a repository already includes all suggested topics, \MNB is not able to recommend new ones. %The second major limitation is the underlying structure needed for the training phase. 
+Moreover, the tool requires a \emph{balanced} dataset, \ie each topic must have a similar number of \RM files, and this is hard to come by in practice as topics are generally heterogeneous. With \TFb, we attempt to improve \MNB by combining it with the collabora\-tive-filtering technique presented in the previous subsection. The set of featured topics predicted by the MNB model is used as input to feed \TF which then runs the filtering process to deduce the inclusion of new topics.
 
-%as follows. %\emph{entangle} our tool with the MNB network using it as a black box. 
-%In particular, we show how \TF can be combined with other recommender systems that use a different mining strategy.
-
-%As mentioned before, this recent work using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. Given a \RM file, the approach computes vectors using the TF-IDF weighting scheme to extract features. Then, the model is trained to retrieve the most probable featured topics according to the multinomial distribution with the Naive Bayesian assumption. The outcomes are evaluated using the ten folder validation process.
-
-In this sense, we attempt to improve \MNB by adopting the collaborative-filtering technique presented in the previous subsections. We consider the set of featured topics predicted by the MNB model as the input of \TF. The aim of this kind of analysis is to evaluate \TF capability using a well-founded technique in the literature.
+Figure~\ref{fig:entangled} depicts an overview of the \TFb configuration: a list of featured topics computed by \MNB using README files is fed as input for \TFb, which computes a list or ranked topics, including also non-featured ones. Finally, a list is generated by combining the topics computed by \TFb with the top-N featured ones computed by \MNB, and recommended to developers.
 
 
 \begin{figure}
@@ -462,13 +458,18 @@ In this sense, we attempt to improve \MNB by adopting the collaborative-filterin
 	\label{fig:entangled}
 \end{figure}
 
-Figure~\ref{fig:entangled} depicts an overview of the combined approach. First, the \MNB computes the list of recommended featured topics from the repository readme file. Then, top-N featured topics are used as input to \TF that computes their topics recommendation, \ie non-featured topics are included. Finally, the recommended topics are mixed by encoding the \TF recommended topics to the top-N featured ones.
+%as follows. %\emph{entangle} our tool with the MNB network using it as a black box. 
+%In particular, we show how \TF can be combined with other recommender systems that use a different mining strategy.
 
-We assume that \TF can help improve \MNB in the following aspects:
+%As mentioned before, this recent work using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. Given a \RM file, the approach computes vectors using the TF-IDF weighting scheme to extract features. Then, the model is trained to retrieve the most probable featured topics according to the multinomial distribution with the Naive Bayesian assumption. The outcomes are evaluated using the ten folder validation process.
+%, resulting in \TFb
+
+%The aim of this kind of analysis is to evaluate \TF capability using a well-founded technique in the literature.  can help improve \MNB 
+We assume that \TFb is beneficial in the following aspects:
 \begin{itemize}
-	\item \TF recommends non-featured topics: the recommended topics are selected from similar repositories, independently from their nature;
-	\item \TF recommends topics by iterating over refining steps: once we select some topic from the recommended ones, \TF can recommend new ones using the selected one as new beliefs;
-	\item \MNB does not provide further recommendations if the suggested topics are already included, as we can see in Section~\ref{sec:EXP1} \TF considerably improves the performancewhen more topics are incorporated as input.
+	\item It is able to recommend non-featured topics, which are selected from similar repositories, independently from their nature;
+	\item \TFb recommends topics by iterating over refining steps: once we select some topics from the recommended ones, \TFb can discover new topics using the selected ones as new input;
+	\item \MNB does not provide additional recommendations given that the suggested topics are already included. As we will see in Section~\ref{sec:EXP1}, \TFb considerably improves the performance when more topics are incorporated as input.
 \end{itemize}
 
 %The experiments conducted 
