@@ -38,7 +38,9 @@ The success rate assessment exhibits an average improvement of 10\% in all of th
 This is also confirmed by the precision and recall curves depicted in Fig.~\ref{fig:configs}. 
 %From the accuracy scores computed using Eq. (5) and Eq. (6), the Precision-Recall curves (PRCs) for all 10 rounds of validation and different values of k were sketched. 
 The line graph depicts the precision and recall curves on average for all 10 rounds by considering \emph{N} value ranges from 1 to 20 and \emph{t}. So, each dot in a curve corresponds to a specific value of \emph{N}. 
-These outcomes have been obtained by keeping 25 as the number of neighbours \emph{k} because we have already discussed that higher values of neighbours reach better prediction performances. Overall, the precision and recall values rise when the \emph{t} cut-off grows. Given that better prediction performance appears near to the upper right corner~\cite{DiNoia:2012:LOD:2362499.2362501}, the figure shows that a higher value of \emph{t} reaches better accuracy for all values of \emph{N}.
+These outcomes have been obtained by keeping 25 as the number of neighbours \emph{k} because we have already discussed that higher values of neighbours reach better prediction performances. Overall, the precision and recall values rise when the \emph{t} cut-off grows. Given that better prediction performance appears near to the upper right corner, the figure shows that a higher value of \emph{t} reaches better accuracy for all values of \emph{N}.
+
+%~\cite{DiNoia:2012:LOD:2362499.2362501}
 
 As defined in Section~\ref{sec:metrics}, the coverage metric is the percent of recommended topic in the training data that the model is able to recommend on a test set. In our experiment, we are measuring the catalog coverage value among all the possible topic (\ie 15,743 topics). For each dataset (\ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$),  Table~\ref{tab:coverage} reports the average coverage value for all ten rounds. 
 The average catalog coverage of all folds decreases from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$) because there are no training data to recommend infrequent topics. 
