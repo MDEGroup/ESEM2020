@@ -36,6 +36,7 @@ As a preprocessing, we filter the initial set of topics using their frequencies 
 To this end, we develop tailored Python scripts that apply this filter to the initial dataset. As a \GH user can manually specify the topic list for his repository, a lot of them can contain infrequent or improper terms \ie the name of the author, duplicated values, terms that rarely appear to name a few. On one hand, imposing such preprocessing reduces the repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by pruning "bad" terms. 
 This pruning phase is computed offline and doesn't affect the time required for the recommendation process. 
 
+%Before encoding topics in the repo-topic ratings matrix, raw topics are pre-processed removing possible syntactical duplicates terms (\eg \textit{document} and \textit{documents}). More specifically, stemming, lemmatization, and stop words removal Natural Language Processing (NLP) techniques have been applied on the mined topics.
 
 
 
@@ -72,7 +73,7 @@ To investigate the \CT prediction performances, we populated five different data
 
 \begin{table}[h!]
 %	\small
-	\begin{tabular}{|l|l|l|l|l|l|} \hline
+	\begin{tabular}{|l|p{0.68cm}|p{0.68cm}|p{0.68cm}|p{0.68cm}|p{0.68cm}|} \hline
 		 & \textbf{ D$_{1}$} & \textbf{D$_{5}$} & \textbf{ D$_{10}$} & \textbf{D$_{15}$} & \textbf{D$_{20}$} \\ \hline
 		Number of repos & 6,253 & 3,884 & 2,897  & 2,273 & 1,806  \\ \hline
 		Number of topics & 15,743 & 1,989 & 964 & 634 & 456 \\ \hline
