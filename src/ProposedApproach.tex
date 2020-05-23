@@ -233,19 +233,26 @@ For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_
 %Similarly, 
 %The \code{Recommendation Engine} 
 
-This component relies on the information extracted from very similar project to recommend relevant topics to the input repository. 
-\emph{Similarity Calculator} applies a similarity function on the mentioned project-topic matrix to provide very closest project in a given initial set to the input one. 
 
+
+%\emph{Similarity Calculator} applies a similarity function on the mentioned project-topic matrix to provide very closest project in a given initial set to the input one. 
 
 %As a result, computing properly this similarity score affects the quality of recommendation outcomes. Nonetheless, computing similarities among topics could be a daunting task. \GH allows any repository owner to add, change, or delete the list of topics that describe his project. This impacts on the stability of the topics, as they can change rapidly over time. In addition, a developer can freely specify the entire set of topics. This makes the similarity computation more complicated, as some topics couldn't have a semantic link with the others. Moreover, we can miss some key relationships depending on the similarity function employed by the calculator. For example, a purely syntactic-based similarity function assign a lower score to the topic pair 3d-graphics even though these two terms are strongly bounded in their meaning.
 
+%a profitable and flexible data representation for enabling numerous computation techniques such as the one defined ~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} 
+
+This component relies on the information extracted from very similar project to recommend relevant topics to the input repository. We represent a set of projects and their topics in a graph~\cite{Nguyen:2019:FRS:3339505.3339636} to calculate the similarities among the projects. Two nodes in a graph are considered to be similar if they share the same neighbors by considering their edges. Such technique has been successfully exploited by many studies to do the same task~\cite{BRIGUEZ20146467},\cite{DiNoia:2012:LOD:2362499.2362501}in different domains.
+
+By looking at the graph in Fig.~\ref{fig:Graph}, we notice that $p_1$ and $p_2$ share two neighbor nodes, \ie  $topic_{2}$ and $topic_{3}$. %From the graph, we can also learn additional information about the topics themselves. For example, $topic_{3}$ seems a very popular term since is pointed by three different projects. 
+The similarities calculator consider two project nodes $p$ and $q$ as similar in an OSS graph by considering their feature sets. More specifically, given that $p$ has a set of neighbor nodes ($topic_{1}$, $topic_{2}$,.., $topic_{l}$), the features of $p$ are represented by a vector $\overrightarrow{\phi}=(\phi_{1},\phi_{2},..,\phi_{l})$, with $\phi_{i}$ being the weight of node $topic_{i}$ computed as the \emph{term-frequency inverse document frequency} function as follows: 
+%\texttt{tf-idf}   of the node 
+%\vspace{-.1cm}
+\begin{equation}\label{eqn:TFIDF}
+\phi_{i} = f_{topic_{i}} \times log(\frac{ \left | P \right |}{a_{topic_{i}}})
+\end{equation}
 
 
-We represent the repo-topic matrix as a \textit{graph-based} model, a profitable and flexible data representation for enabling numerous computation techniques such as the one defined in~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} to calculate the similarities among OSS projects. Such technique has been successfully exploited by many studies to do the same task \cite{DiNoia:2012:LOD:2362499.2362501},\cite{BRIGUEZ20146467} in different domains. 
-In particular, such approach considers two nodes as similar if they share neighbours by considering their edges. 
-
-By looking at the graph in Fig.~\ref{fig:Graph}, we can notice that $p_1$ and $p_2$ shares two neighbour nodes, \ie  $topic_{2}$ and $topic_{3}$. From the graph, we can also learn additional information about the topics themselves. For example, $topic_{3}$ seems a very popular term since is pointed by three
-different projects. In the meanwhile, $topic_1$ and $topic_4$ are used only by one project at once, $p_1$ and $p_3$ respectively. 
+%In the meanwhile, $topic_1$ and $topic_4$ are used only by one project, $p_1$ and $p_3$ respectively. 
 
 %This reflects what also suggested in a previous work by McMillan \etal
 %\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common
@@ -259,18 +266,6 @@ different projects. In the meanwhile, $topic_1$ and $topic_4$ are used only by o
 \label{fig:Graph}
 \end{figure}
 
-
-The similarities calculator consider two project nodes $p$ and $q$ as similar in an OSS graph  
-by considering their feature sets. More specifically, given that $p$ has a 
-set of neighbour nodes 
-($topic_{1}$, $topic_{2}$,.., $topic_{l}$), the features of $p$ are represented by a vector 
-$\overrightarrow{\phi}=(\phi_{1},\phi_{2},..,\phi_{l})$, with $\phi_{i}$ being the weight of node 
-$topic_{i}$. It is computed as the \emph{term-frequency inverse document frequency} value as follows: 
-%\texttt{tf-idf}   of the node 
-%\vspace{-.1cm}
-\begin{equation}\label{eqn:TFIDF}
-\phi_{i} = f_{topic_{i}} \times log(\frac{ \left | P \right |}{a_{topic_{i}}})
-\end{equation}
 
 \noindent
 where $f_{topic_{i}}$ is the number of occurrence of $topic_{i}$ with respect to $p$, it can be either $0$ and $1$ since there is a maximum of one $topic_{i}$ connected to $p$ by the edge \emph{includes}; $\left | P \right |$ is the total number of considered projects; $a_{topic_{i}}$ is the number of projects connecting to $topic_{i}$ via the edge \emph{includes}. %According to Eq.~\ref{eqn:TFIDF}, node $topic_{1}$ in Fig.~\ref{fig:Graph} has a low weight compared to that of other nodes since it is pointed by all four project nodes. In practice, this is comprehensible since \emph{junit:junit} is a very popular dependency and thus it should have a less important role in characterizing a project.
