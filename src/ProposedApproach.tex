@@ -66,10 +66,10 @@ following the same line of reasoning to mine \GH topics: \emph{``if projects hav
 %This is a preparatory phase for the next steps of the recommendation process. The developer interacts with \TF by sending a request for recommendations that includes the list of topics which she has already included for the repository that she is working on.
 %The aforementioned components are singularly described in the next sections. 
 
-In the following subsections, we describe two \TF configurations, namely \TFa and \TFb. The first one exploits a collaborative-filtering technique; and the second one  %in detail each of the components mentioned above. %In Section~\ref{sec:combined_approach}, 
-Furthermore, based on the proposed architecture, we present an approach to improve \MNB by combining it with the collaborative-filtering technique. %\TF can be combined with \MNB to improve. %the collaborative filtering prediction performance.
+In the following subsections, we describe two \TF configurations, namely \TFa and \TFb to recommend relevant topics by incorporating different types of input data. \TFa exploits a collaborative-filtering technique, while \TFa improves \MNB by combining it with the collaborative-filtering technique. %\TF can be combined with \MNB to improve. %the collaborative filtering prediction performance.
 
-
+  %in detail each of the components mentioned above. %In Section~\ref{sec:combined_approach}, 
+%Furthermore, based on the proposed architecture, we present an approach to improve \MNB by 
 
  % shown in Fig. \ref{fig:CrossRecArchitecture} \cite{CROSSREC-DATA}
 %\vspace{-.2cm}
@@ -325,7 +325,7 @@ where $n$ is the cardinality of the set of topics that $p$ and $q$ share in comm
 
 %A collaborative-filtering recommender system suggests products that customers similar to the customer being considered have already purchased. 
 
-\subsubsection{Recommendation engine}
+\subsubsection{Recommendation Engine}
 
 %In the context of \TF, we exploit the user-based collaborative-filtering technique for implementing the recommendation engine. 
 
@@ -444,15 +444,23 @@ where $\overline{r_{p}}$ and $\overline{r_{q}}$ are the mean of the ratings of $
 
 %So far, we have described \TF as a stand-alone recommender system by describing its constituent components. To highlight its flexibility in a different context, we propose an approach to improve \MNB. 
 
-As already mentioned in Section~\ref{sec:Background}, though \MNB works in practice, it has its own limitations. First, it can recommend only featured topics that represent a small set of all possible terms, which in turn can be restricted because of antonymous terms, \eg programming languages. Second, given that a repository already includes all suggested topics, \MNB is not able to recommend new ones. %The second major limitation is the underlying structure needed for the training phase. 
-To suggest relevant items, \MNB requires a \emph{balanced} dataset, \ie each topic must have a similar number of \RM files. This is hard to come by in practice as topics are generally heterogeneous.
+As already mentioned in Section~\ref{sec:Background}, though \MNB works in practice, it has its own limitations. First, it can recommend only featured topics which account for a small fraction of all possible terms. %, which in turn can be restricted because of antonymous terms, \eg programming languages. 
+Second, given that a repository already includes all suggested topics, \MNB is not able to recommend new ones. %The second major limitation is the underlying structure needed for the training phase. 
+Moreover, the tool requires a \emph{balanced} dataset, \ie each topic must have a similar number of \RM files, and this is hard to come by in practice as topics are generally heterogeneous.
 
 %as follows. %\emph{entangle} our tool with the MNB network using it as a black box. 
 %In particular, we show how \TF can be combined with other recommender systems that use a different mining strategy.
 
 %As mentioned before, this recent work using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. Given a \RM file, the approach computes vectors using the TF-IDF weighting scheme to extract features. Then, the model is trained to retrieve the most probable featured topics according to the multinomial distribution with the Naive Bayesian assumption. The outcomes are evaluated using the ten folder validation process.
+%, resulting in \TFb
 
-In this sense, we attempt to improve \MNB by adopting the collaborative-filtering technique presented in the previous subsections. We consider the set of featured topics predicted by the MNB model as the input of \TF. The aim of this kind of analysis is to evaluate \TF capability using a well-founded technique in the literature.
+With \TFb, we attempt to improve \MNB by combining it with the collabora\-tive-filtering technique presented in the previous subsection. The set of featured topics predicted by the MNB model is used as input to feed \TF which then runs the filtering process to deduce the inclusion of new topics. %The aim of this kind of analysis is to evaluate \TF capability using a well-founded technique in the literature.  can help improve \MNB 
+We assume that \TFb is beneficial in the following aspects:
+\begin{itemize}
+	\item \TFb recommends non-featured topics: the recommended topics are selected from similar repositories, independently from their nature;
+	\item \TFb recommends topics by iterating over refining steps: once we select some topics from the recommended ones, \TF can recommend new topics; using the selected one as new beliefs;
+	\item \MNB does not provide additional recommendations given that the suggested topics are already included. As we will see in Section~\ref{sec:EXP1}, \TFb considerably improves the performance when more topics are incorporated as input.
+\end{itemize}
 
 
 \begin{figure}
@@ -462,14 +470,7 @@ In this sense, we attempt to improve \MNB by adopting the collaborative-filterin
 	\label{fig:entangled}
 \end{figure}
 
-Figure~\ref{fig:entangled} depicts an overview of the combined approach. First, the \MNB computes the list of recommended featured topics from the repository readme file. Then, top-N featured topics are used as input to \TF that computes their topics recommendation, \ie non-featured topics are included. Finally, the recommended topics are mixed by encoding the \TF recommended topics to the top-N featured ones.
-
-We assume that \TF can help improve \MNB in the following aspects:
-\begin{itemize}
-	\item \TF recommends non-featured topics: the recommended topics are selected from similar repositories, independently from their nature;
-	\item \TF recommends topics by iterating over refining steps: once we select some topic from the recommended ones, \TF can recommend new ones using the selected one as new beliefs;
-	\item \MNB does not provide further recommendations if the suggested topics are already included, as we can see in Section~\ref{sec:EXP1} \TF considerably improves the performancewhen more topics are incorporated as input.
-\end{itemize}
+Figure~\ref{fig:entangled} depicts an overview of the \TFb configuration. First, \MNB computes the list of recommended featured topics using README files. Afterwards, top-N items are used as input for \TFb, which computes a list or ranked topics, including also non-featured ones. Finally, the recommended topics are mixed by encoding the \TF recommended topics to the top-N featured ones.
 
 %The experiments conducted 
 In the following sections, we introduce the experiments conducted to evaluate the performance of \TF, \MNB, and the combined approach by comparing the accuracy and coverage metrics.
