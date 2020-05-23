@@ -143,43 +143,37 @@ furthermore, there is a strong correlation between forks and stars~\cite{7816479
 
 \subsection{Metrics}\label{sec:metrics}
 
-In the context of recommendation systems, several metrics have been proposed to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
-
+%In the context of recommendation systems, several metrics have been proposed to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. 
+In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} are used to study the systems' performance as they have been widely exploited by related research~\cite{Robillard:2014:RSS:2631387}. 
 % and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.
 %Before defining the metrics involved in the experiment, we present the following notations to make easier the understanding of the considered metrics:
-First of all, we present the following notations to make easier the understanding of the metrics involved in our experiment:
+First, we introduce the following notations as a base for further presentation:% to make easier the understanding of the metrics involved in our experiment:
 \begin{itemize}[noitemsep,topsep=0pt]
-	\item \emph{t} is the frequency cut-off value of input topics (\ie all topics that occur less than \emph{t} times are removed from the dataset)
+	\item \emph{t} is the frequency cut-off value of input topics, \ie all topics that occur less than \emph{t} times are removed from the dataset;
 	\item |\emph{t$_{in}$}| is the size of topics that \TF takes as input;
 	\item \emph{N} is the cut-off value for the recommended ranked list of topic;% of recommended libraries;
-	\item \emph{k} is the number of top-similar neighbour projects \TF considers to predict suggested topics;
-	\item \emph{GT(r)} is defined as the half part of the extracted topics for a testing project \emph{r}, and \emph{GT(r)} have been used as ground-truth data in the evaluation process;
+	\item \emph{k} corresponds to the number of top-similar neighbor projects \TF considers to predict suggested topics;
+	\item \emph{GT(p)} is defined as a half of the extracted topics for a testing project \emph{p} using as ground-truth data;%, and \emph{GT(r)} have been used as ground-truth data in the evaluation process;
 %	\item For a testing project \emph{r}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(r)};
-	\item $REC_{N}(r)$ is the outcome of \TF to a given repository \emph{r}, \ie the top-\emph{N}  suggested topics in a descending order by considering the recommendation scores;
+	\item $REC_{N}(p)$ is the top-\emph{N}  suggested topics sorted in a descending order;% by considering the recommendation scores;  the outcome of \TF for a given repository \emph{p}, 
 	%\item $REC(r)$ is the \emph{top-N} topics recommended to a repository \emph{r}. It is a ranked list in descending order of real scores;
 	\item a recommended topic \emph{rt} to a repository \emph{r} is marked as a \emph{match} if $rt \in REC(r)$;
-	\item  $match_{N}(r)$ is the set of items in $REC_{N}(r)$ that match with those in \emph{GT(r)} for a given a repository \emph{r}.
+	\item  $match_{N}(p)$ is the set of items in $REC_{N}(p)$ that match with those in \emph{GT(p)} for repository \emph{p}.
 \end{itemize}
 
-\noindent By using the such notations, the accuracy, success rate and coverage  metrics are defined as follows.  
+\noindent By using the notations, the success rate, accuracy and coverage metrics are defined as follows.  
 
 %\JDR{Rephrase this section}
 
 \vspace{.1cm}
-\noindent\textbf{Success rate@N.} Success rate is defined as the ratio of queries that have at least a matched topic among the total number of attempts. In particular, given a set of testing projects \emph{P}, this metric measures the percentage of \emph{top-N} query results that match at least one topic in the \emph{GT(p)} among the number of query project $p \in P$~\cite{6671293}: %It is formally defined as given below:
+\noindent\textbf{Success rate@N.} Given a set of testing projects \emph{P}, success rate is defined as the ratio of queries that have at least a matched topic among the total number of queries.% In particular, this metric measures the percentage of \emph{top-N} query results that match at least one topic in the \emph{GT(p)} among the number of query project $p \in P$~\cite{6671293}: %It is formally defined as given below:
 \vspace{-.1cm}
-
 \begin{equation} \label{eqn:RecallRate}
 success\ rate@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | > 0 ) }{\left | P \right |} %\times 100\%
 %success\ rate@N=\frac{ count_{p \in P}( \left | GT(p) \bigcap (\cup_{r=1}^{N} REC_{r}(p)) \right | > 0 ) }{\left | P \right |}
 \end{equation}
-
 \vspace{.1cm}
-\vspace{.1cm}
-
-
-
-
+%\vspace{.1cm}
 %\noindent \JDR{Check if it will be used} \textbf{Success rate$_M$@N.} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least $M$ topics match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
 %\vspace{-.1cm}
 %
@@ -190,9 +184,8 @@ success\ rate@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | > 0 ) }{\l
 %
 %\vspace{.1cm}
 %\noindent where the function \emph{count()} counts the number of times that the boolean expression specified in its parameter is \emph{true}.
-
-\noindent \textbf{Accuracy.} Because of \emph{success rate@N} only measures successful queries and it does not reflect how accurate the outcome of a recommender system is
-(\eg considering two recommendation results where the former counts $1$ topic match out of $5$ and the latter that returns all $5$ topic matches,  both results equally affect the success rate value because they include at least one matched topic), accuracy has been considered as further quality metrics for \TF. Given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. In particular,  \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}:
+%Because of \emph{success rate@N} only measures successful queries and it does not reflect how accurate the outcome of a recommender system is (\eg considering two recommendation results where the former counts $1$ topic match out of $5$ and the latter that returns all $5$ topic matches,  both results equally affect the success rate value because they include at least one matched topic), accuracy has been considered as further quality metrics for \TF. 
+\noindent \textbf{Accuracy.} Given a list of \emph{top-N} libraries, \emph{precision} and \emph{recall} are utilized to measure the \emph{accuracy} of the recommendation results. In particular,  \emph{precision} is the ratio of the \emph{top-N} recommended topics found in the ground-truth data, whereas \emph{recall} is the ratio of the ground-truth topics belonging to the \emph{N} recommended items \cite{Davis:2006:RPR:1143844.1143874,Nguyen:2019:FRS:3339505.3339636}:
 
 %However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
 
@@ -215,7 +208,10 @@ recall@N = \frac{ \left | match_{N}(p) \right | }{\left | GT(p) \right |}
 
 
 
-\noindent \textbf{Catalog coverage.} This metric is particularly suitable to measure the performance predictions of recommendation systems that suggest a list of items \cite{ge_beyond_2010}. Given the set of projects $U_p$, we compare the number of recommended topics with the global number of the available ones \ie $ REC_{N}(p)$ and T respectively. Reversely from the previous two metrics, the Catalog Coverage measures the suitability of the delivered topics considering all the possible set of values. From the evaluation point of view, it is interesting to assess the impact of N value on the coverage stability, meaning what values of N impacts on the overall prediction performances. 
+\noindent \textbf{Catalog coverage.} %This metric is particularly suitable to measure the performance predictions of recommendation systems that suggest a list of items \cite{ge_beyond_2010}.
+Given the set of projects, we compare the number of recommended topics with the global number of the available ones. %, \ie $ REC_{N}(p)$ and T respectively. 
+%Reversely from the previous two metrics, 
+This metric measures the suitability of the delivered topics considering all the possible set of values. %From the evaluation point of view, it is interesting to assess the impact of N value on the coverage stability, meaning what values of N impacts on the overall prediction performances. 
 
 
 
@@ -234,24 +230,30 @@ coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | T \right 
 The \emph{ten-fold cross-validation} technique~\cite{kohavi1995study} has been used to assess the performance of \TF and to compare it with \MNB. %and combined approach where every time $9$ folds 
 %(each one contains $625$ projects) 
 %are used for training and the remaining one for testing.
-For each testing project \emph{p}, we randomly deleted a half of its topics and save them as ground-truth data, \emph{GT(p)}, which  will be used to validate the recommendation outcomes. The remaining half topics are used as query topics to feed \TF. Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consisting of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation} and they are going to be explained as follows.
+For each testing project \emph{p}, we randomly deleted a half of its topics and save them as ground-truth data, \emph{GT(p)}, which are then used to validate the recommendation outcomes. The remaining half topics are used as query topics to feed \TF. Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consisting of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation} and they are going to be explained as follows.
 
-\noindent
-$\blacksquare$~\textbf{Data Preparation.} This phase is conducted to collect repositories that match the requirements defined in previous section from GitHub during the \textit{Data collection} step. %The dataset is used to evaluate \TF, \MNB, and the combination of two. 
+%\noindent
+%$\blacksquare$~\textbf{Data Preparation.} 
+\vspace{.1cm}
+\noindent\textbf{Data Preparation.}
+This phase is conducted to collect repositories that match the requirements defined in previous section from GitHub during the \textit{Data collection} step. %The dataset is used to evaluate \TF, \MNB, and the combination of two. 
 The dataset is then split into a training and testing set, \ie \code{ Split ten-fold}. Due to the different nature of the recommender systems, \ie \MNB requires \textit{README} files as input and training data, whereas \TF uses a set of assigned topics as input and for training the, the testing and training data needs to be specifically prepared for each approach.
 The \code{Split topic} activity resembles a real development process where a developer has already included some topics in the repository, \ie \textit{Query topics} and waits for recommendations. 
 
 %\ie additional topics to be incorporated. \TF recommender system is expected to provide her with the other half, \ie \code{ GT topics}.
 
-\noindent
-$\blacksquare$~\textbf{Recommendation.} %follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \TF, \MNB, and \code{Entangled} approaches evaluation respectively). 
-To enable the evaluation of \TF, we extracted a portion of topics from a given testing project, \ie the ground-truth part. The remaining part is used as a query to produce recommendations. %(see the dotted line flow).
+%\noindent
+%$\blacksquare$~\textbf{Recommendation.} %follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \TF, \MNB, and \code{Entangled} approaches evaluation respectively). 
+\vspace{.1cm}
+\noindent\textbf{Recommendation.} To enable the evaluation of \TF, we extracted a portion of topics from a given testing project, \ie the ground-truth part. The remaining part is used as a query to produce recommendations. %(see the dotted line flow).
 Since \MNB uses only README file(s) to predict a set of topics, it does not require any topic as input. The approach parses and encodes text files in vectors using the TF-IDF weighting scheme. 
 %To feed the network that delivers a set of topics (see the bold line). 
 Finally, the combined approach uses \TF as the recommendation engine which is fed by topics generated by \MNB. In this respect, both \textit{Testing data} and \textit{Training set} boxes are simplified to provide the needed data, \ie README files and assigned topics to the recommender systems.
 
-\noindent
-$\blacksquare$~\textbf{Outcome Evaluation.} In this stage, recommendation results are compared with those stored as ground-truth data to compute the quality metrics, \ie \textit{Success rate}, \textit{Precision}, \textit{Recall}, and \textit{Catalog coverage}) during the \textit{Comparison} activity.  
+%\noindent
+%$\blacksquare$~\textbf{Outcome Evaluation.} 
+\vspace{.1cm}
+\noindent\textbf{Outcome Evaluation.} In this stage, recommendation results are compared with those stored as ground-truth data to compute the quality metrics, \ie \textit{Success rate}, \textit{Precision}, \textit{Recall}, and \textit{Catalog coverage}) during the \textit{Comparison} activity.  
 
 It is worth noting that we cannot directly compare \TF with \MNB since they rely on different input data. To be concrete, \TF is a supervised learning system that requires an initial set of assigned topics for the training, whereas \MNB is unsupervised learning and it uses only information mined from README files to recommend, without making use of any topics as input. 
 
@@ -322,10 +324,10 @@ It is worth noting that we cannot directly compare \TF with \MNB since they rely
 
 By performing the evaluation, we address the following research questions to study the proposed approach's performance:
 \begin{itemize}
-	\item[--] \rqfirst We investigated different configurations of \TF\ie the number of input topics \emph{t} as well as the number of neighbors \emph{N} is varied, to find the best configuration. %and the considered number of outcomes \emph{N}.
+	\item \rqfirst We investigated different configurations of \TF\ie the number of input topics \emph{t} as well as the number of neighbors \emph{N} is varied, to find the best configuration. %and the considered number of outcomes \emph{N}.
 	
 	%\item[--] \rqsecond Because of \TF and \MNB are completely different in term of input data, we are interested in comparing them by considering many factors that can impact on the performance.
-	\item[--] \rqsecond \TFb is an extended version of \MNB, thus we are interested in understanding if our proposed approach outperforms the original \MNB. %From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances.
+	\item \rqsecond \TFb is an extended version of \MNB, thus we are interested in understanding if our proposed approach outperforms the original \MNB. %From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances.
 \end{itemize}
 
 
