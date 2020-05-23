@@ -89,9 +89,10 @@ In the following subsections, we describe two \TF configurations, namely \TFa an
 
 %This section presents the framework to. 
 
-Figure~\ref{fig:TopFilterArchitecture} depicts the architecture conceived to realize the \TF prototype. First, the \code{Topic Cleaner} component is used to filter out very rare topics according to their frequencies of occurrence over all projects in the initial dataset. Afterwards, \code{Data Encoder} represents the repositories in the graph format, and \code{Similarity Calculator} computes similarities among the projects. The \code{Recomme\-ndation Engine} component implements a \emph{collaborative-filtering} technique~\cite{Aggarwal2016,Zhao:2010:UCR:1748610.1749278,NGUYEN2020110460} %,\ it selects top-$k$ similar repository, and performs computation 
+Figure~\ref{fig:TopFilterArchitecture} depicts the architecture conceived to realize the \TF prototype. First, %the \code{Topic Cleaner} component is used to filter out very rare topics according to their frequencies of occurrence over all projects in the initial dataset. Afterwards, 
+the \code{Data Encoder} component represents the repositories in the graph format, and then \code{Similarity Calculator} computes similarities among the projects. The \code{Recomme\-ndation Engine} component implements a \emph{collaborative-filtering} technique~\cite{Aggarwal2016,Zhao:2010:UCR:1748610.1749278,NGUYEN2020110460} %,\ it selects top-$k$ similar repository, and performs computation 
 to generate a ranked list of \emph{top-N} topics which %.~Finally, a ranked list of topics 
-is eventually suggested to the developer.
+is eventually suggested to the developer. We explain in detail the functionalities of each component as follows.
 
 
 \subsubsection{Data Encoder} \label{sec:DataEncoder}
@@ -446,21 +447,9 @@ where $\overline{r_{p}}$ and $\overline{r_{q}}$ are the mean of the ratings of $
 
 As already mentioned in Section~\ref{sec:Background}, though \MNB works in practice, it has its own limitations. First, it can recommend only featured topics which account for a small fraction of all possible terms. %, which in turn can be restricted because of antonymous terms, \eg programming languages. 
 Second, given that a repository already includes all suggested topics, \MNB is not able to recommend new ones. %The second major limitation is the underlying structure needed for the training phase. 
-Moreover, the tool requires a \emph{balanced} dataset, \ie each topic must have a similar number of \RM files, and this is hard to come by in practice as topics are generally heterogeneous.
+Moreover, the tool requires a \emph{balanced} dataset, \ie each topic must have a similar number of \RM files, and this is hard to come by in practice as topics are generally heterogeneous. With \TFb, we attempt to improve \MNB by combining it with the collabora\-tive-filtering technique presented in the previous subsection. The set of featured topics predicted by the MNB model is used as input to feed \TF which then runs the filtering process to deduce the inclusion of new topics.
 
-%as follows. %\emph{entangle} our tool with the MNB network using it as a black box. 
-%In particular, we show how \TF can be combined with other recommender systems that use a different mining strategy.
-
-%As mentioned before, this recent work using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. Given a \RM file, the approach computes vectors using the TF-IDF weighting scheme to extract features. Then, the model is trained to retrieve the most probable featured topics according to the multinomial distribution with the Naive Bayesian assumption. The outcomes are evaluated using the ten folder validation process.
-%, resulting in \TFb
-
-With \TFb, we attempt to improve \MNB by combining it with the collabora\-tive-filtering technique presented in the previous subsection. The set of featured topics predicted by the MNB model is used as input to feed \TF which then runs the filtering process to deduce the inclusion of new topics. %The aim of this kind of analysis is to evaluate \TF capability using a well-founded technique in the literature.  can help improve \MNB 
-We assume that \TFb is beneficial in the following aspects:
-\begin{itemize}
-	\item \TFb recommends non-featured topics: the recommended topics are selected from similar repositories, independently from their nature;
-	\item \TFb recommends topics by iterating over refining steps: once we select some topics from the recommended ones, \TF can recommend new topics; using the selected one as new beliefs;
-	\item \MNB does not provide additional recommendations given that the suggested topics are already included. As we will see in Section~\ref{sec:EXP1}, \TFb considerably improves the performance when more topics are incorporated as input.
-\end{itemize}
+Figure~\ref{fig:entangled} depicts an overview of the \TFb configuration: a list of featured topics computed by \MNB using README files is fed as input for \TFb, which computes a list or ranked topics, including also non-featured ones. Finally, a list is generated by combining the topics computed by \TFb with the top-N featured ones computed by \MNB, and recommended to developers.
 
 
 \begin{figure}
@@ -470,7 +459,19 @@ We assume that \TFb is beneficial in the following aspects:
 	\label{fig:entangled}
 \end{figure}
 
-Figure~\ref{fig:entangled} depicts an overview of the \TFb configuration. First, \MNB computes the list of recommended featured topics using README files. Afterwards, top-N items are used as input for \TFb, which computes a list or ranked topics, including also non-featured ones. Finally, the recommended topics are mixed by encoding the \TF recommended topics to the top-N featured ones.
+%as follows. %\emph{entangle} our tool with the MNB network using it as a black box. 
+%In particular, we show how \TF can be combined with other recommender systems that use a different mining strategy.
+
+%As mentioned before, this recent work using the \RM file of a repository to predict featured topics. It involves all the standard techniques employed in the ML domain \ie textual engineering, feature extraction, and training phase. Given a \RM file, the approach computes vectors using the TF-IDF weighting scheme to extract features. Then, the model is trained to retrieve the most probable featured topics according to the multinomial distribution with the Naive Bayesian assumption. The outcomes are evaluated using the ten folder validation process.
+%, resulting in \TFb
+
+%The aim of this kind of analysis is to evaluate \TF capability using a well-founded technique in the literature.  can help improve \MNB 
+We assume that \TFb is beneficial in the following aspects:
+\begin{itemize}
+	\item It is able to recommend non-featured topics, which are selected from similar repositories, independently from their nature;
+	\item \TFb recommends topics by iterating over refining steps: once we select some topics from the recommended ones, \TFb can discover new topics; using the selected one as new input;
+	\item \MNB does not provide additional recommendations given that the suggested topics are already included. As we will see in Section~\ref{sec:EXP1}, \TFb considerably improves the performance when more topics are incorporated as input.
+\end{itemize}
 
 %The experiments conducted 
 In the following sections, we introduce the experiments conducted to evaluate the performance of \TF, \MNB, and the combined approach by comparing the accuracy and coverage metrics.
