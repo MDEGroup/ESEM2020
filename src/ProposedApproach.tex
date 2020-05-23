@@ -66,7 +66,7 @@ following the same line of reasoning to mine \GH topics: \emph{``if projects hav
 %This is a preparatory phase for the next steps of the recommendation process. The developer interacts with \TF by sending a request for recommendations that includes the list of topics which she has already included for the repository that she is working on.
 %The aforementioned components are singularly described in the next sections. 
 
-In the following subsections, we describe in detail each of the components mentioned above. %In Section~\ref{sec:combined_approach}, 
+In the following subsections, we describe two \TF configurations, namely \TFa and \TFb. The first one exploits a collaborative-filtering technique; and the second one  %in detail each of the components mentioned above. %In Section~\ref{sec:combined_approach}, 
 Furthermore, based on the proposed architecture, we present an approach to improve \MNB by combining it with the collaborative-filtering technique. %\TF can be combined with \MNB to improve. %the collaborative filtering prediction performance.
 
 
@@ -241,43 +241,38 @@ For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_
 
 %a profitable and flexible data representation for enabling numerous computation techniques such as the one defined ~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} 
 
-This component relies on the information extracted from very similar project to recommend relevant topics to the input repository. We represent a set of projects and their topics in a graph~\cite{Nguyen:2019:FRS:3339505.3339636} to calculate the similarities among the projects. Two nodes in a graph are considered to be similar if they share the same neighbors by considering their edges. Such technique has been successfully exploited by many studies to do the same task~\cite{BRIGUEZ20146467},\cite{DiNoia:2012:LOD:2362499.2362501}in different domains.
+This component relies on the information extracted from very similar project to recommend relevant topics to the input repository. We represent a set of projects and their topics in a graph~\cite{Nguyen:2019:FRS:3339505.3339636}, so as to calculate the similarities among the projects. Two nodes in a graph are considered to be similar if they share the same neighbors by considering their edges. Such technique has been successfully exploited by many studies to do the same task~\cite{BRIGUEZ20146467},\cite{DiNoia:2012:LOD:2362499.2362501}in different domains.
 
-By looking at the graph in Fig.~\ref{fig:Graph}, we notice that $p_1$ and $p_2$ share two neighbor nodes, \ie  $topic_{2}$ and $topic_{3}$. %From the graph, we can also learn additional information about the topics themselves. For example, $topic_{3}$ seems a very popular term since is pointed by three different projects. 
-The similarities calculator consider two project nodes $p$ and $q$ as similar in an OSS graph by considering their feature sets. More specifically, given that $p$ has a set of neighbor nodes ($topic_{1}$, $topic_{2}$,.., $topic_{l}$), the features of $p$ are represented by a vector $\overrightarrow{\phi}=(\phi_{1},\phi_{2},..,\phi_{l})$, with $\phi_{i}$ being the weight of node $topic_{i}$ computed as the \emph{term-frequency inverse document frequency} function as follows: 
+%By looking at the graph in Fig.~\ref{fig:Graph}, we notice that $p_1$ and $p_2$ share two neighbor nodes, \ie  $topic_{2}$ and $topic_{3}$. %From the graph, we can also learn additional information about the topics themselves. For example, $topic_{3}$ seems a very popular term since is pointed by three different projects. 
+%The similarities calculator consider two project nodes $p$ and $q$ as similar in an OSS graph by considering their feature sets. 
+
+Given that $p$ has a set of neighbor nodes ($topic_{1}$, $topic_{2}$,.., $topic_{l}$), the features of $p$ are represented by a vector $\phi=(\phi_{1},\phi_{2},..,\phi_{l})$, with $\phi_{i}$ being the weight of node $topic_{i}$ computed as the \emph{term-frequency inverse document frequency} function as follows: $\phi_{i} = f_{topic_{i}} \times log( \left | P \right | \times a_{topic_{i}}^{-1} )$, where $f_{topic_{i}}$ is the number of occurrence of $topic_{i}$ with respect to $p$, it can be either $0$ and $1$ since there is a maximum of one $topic_{i}$ connected to $p$ by the edge \emph{includes}; $\left | P \right |$ is the total number of considered projects; $a_{topic_{i}}$ is the number of projects connecting to $topic_{i}$ via the edge \emph{includes}.
 %\texttt{tf-idf}   of the node 
 %\vspace{-.1cm}
-\begin{equation}\label{eqn:TFIDF}
-\phi_{i} = f_{topic_{i}} \times log(\frac{ \left | P \right |}{a_{topic_{i}}})
-\end{equation}
-
-
+%\begin{equation}\label{eqn:TFIDF}
+%\phi_{i} = f_{topic_{i}} \times log(\frac{ \left | P \right |}{a_{topic_{i}}})
+%\end{equation}
 %In the meanwhile, $topic_1$ and $topic_4$ are used only by one project, $p_1$ and $p_3$ respectively. 
-
 %This reflects what also suggested in a previous work by McMillan \etal
 %\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common
 %pieces of functionality by using a shared set of libraries.
-%
-
 \begin{figure}[t!]
 \centering
 \includegraphics[width=0.8\columnwidth]{figs/graphCFtop.pdf}
 \caption{Graph representation for projects and topics.}
 \label{fig:Graph}
 \end{figure}
-
-
-\noindent
-where $f_{topic_{i}}$ is the number of occurrence of $topic_{i}$ with respect to $p$, it can be either $0$ and $1$ since there is a maximum of one $topic_{i}$ connected to $p$ by the edge \emph{includes}; $\left | P \right |$ is the total number of considered projects; $a_{topic_{i}}$ is the number of projects connecting to $topic_{i}$ via the edge \emph{includes}. %According to Eq.~\ref{eqn:TFIDF}, node $topic_{1}$ in Fig.~\ref{fig:Graph} has a low weight compared to that of other nodes since it is pointed by all four project nodes. In practice, this is comprehensible since \emph{junit:junit} is a very popular dependency and thus it should have a less important role in characterizing a project.
-Eventually, the similarity between $p$ and $q$ with their corresponding feature vectors $\overrightarrow{\phi}=\{\phi_{i}\}_{i=1,..,l}$ and $\overrightarrow{\omega}=\{\omega_{j}\}_{j=1,..,m}$ is computed as given below:%\todo[size=\tiny, color=green!40]{Nr. 3}
+%\noindent
+%According to Eq.~\ref{eqn:TFIDF}, node $topic_{1}$ in Fig.~\ref{fig:Graph} has a low weight compared to that of other nodes since it is pointed by all four project nodes. In practice, this is comprehensible since \emph{junit:junit} is a very popular dependency and thus it should have a less important role in characterizing a project.
+Intuitively, the similarity between two projects $p$ and $q$ with their corresponding feature vectors $\phi=\{\phi_{i}\}_{i=1,..,l}$ and $\omega=\{\omega_{j}\}_{j=1,..,m}$ is computed as the cosine of the angle between the two vectors as given below. %Eventually, the similarity between $p$ and $q$ with their corresponding feature vectors $\phi=\{\phi_{i}\}_{i=1,..,l}$ and $\omega=\{\omega_{j}\}_{j=1,..,m}$ is computed using the cosine similarity function:%\todo[size=\tiny, color=green!40]{Nr. 3}
 %\vspace{-.2cm}
-
+% $p$ and $q$ are characterized by using vectors in an $n$-dimensional space, and Eq.~\ref{eqn:VsmSim} measures
 \begin{equation} \label{eqn:VsmSim}
 sim(p,q)=\frac{\sum_{t=1}^{n}\phi_{t}\times \omega_{t}}{\sqrt{\sum_{t=1}^{n}(\phi_{t})^{2} }\times \sqrt{\sum_{t=1}^{n}(\omega_{t})^{2}}} 
 \end{equation}
 
 %\noindent
-where $n$ is the cardinality of the set of topics that $p$ and $q$ share in common \cite{DiNoia:2012:LOD:2362499.2362501}. Intuitively, $p$ and $q$ are characterized by using vectors in an $n$-dimensional space, and Eq.~\ref{eqn:VsmSim} measures the cosine of the angle between the two vectors. %and it is computed using the inner product as follows.
+where $n$ is the cardinality of the set of topics that $p$ and $q$ share in common \cite{DiNoia:2012:LOD:2362499.2362501}. %and it is computed using the inner product as follows.
 
 
 
@@ -331,34 +326,32 @@ where $n$ is the cardinality of the set of topics that $p$ and $q$ share in comm
 %A collaborative-filtering recommender system suggests products that customers similar to the customer being considered have already purchased. 
 
 \subsubsection{Recommendation engine}
+
 %In the context of \TF, we exploit the user-based collaborative-filtering technique for implementing the recommendation engine. 
-Consider the mutual relationships between a project and its topics represented in a graph data structure, we exploit the user-based collaborative-filtering technique for implementing \TF's recommendation engine. 
-In this context, we adapted the concept of \emph{rating} to describe the appearance of a specific topic in a project and the employed collaborative filtering techniques aim to find additional similar topics. Moreover, we name the project that needs prediction for topic suggestion as \emph{active project}. 
 
-Figure~\ref{fig:UserBasedCF} depicts an instance of repo-topic rating matrix where the row $p$ is the active project and an asterisk ($*$) represents a known rating (\ie $1$ if the topics is already included, $0$ otherwise), whereas a question mark ($?$) represents an unknown rating and needs to be predicted.
+%Consider the mutual relationships between a project and its topics represented in a graph data structure, we exploit the user-based collaborative-filtering technique to implement \TF's recommendation engine. In this context, we adapted the concept of \emph{rating} to describe the appearance of a specific topic in a project and the employed collaborative filtering techniques aim to find additional similar topics. Moreover, we name the project that needs prediction for topic suggestion as \emph{active project}. Figure~\ref{fig:UserBasedCF} depicts an instance of repo-topic rating matrix where the row $p$ is the active project and an asterisk ($*$) represents a known rating (\ie $1$ if the topics is already included, $0$ otherwise), whereas a question mark ($?$) represents an unknown rating and needs to be predicted.
 
 
-\begin{figure}[t!]
-\centering
-%	\vspace{-.4cm}	
-\includegraphics[width=0.55\linewidth]{figs/matrix.pdf}
-\vspace{-.4cm}
-\caption{Deduction of missing ratings~\cite{Zhao:2010:UCR:1748610.1749278}.}% [?? In the previous version there was a rectangle including some of the rows. Isn't?]
-\vspace{-.1cm}
-\label{fig:UserBasedCF}
-\end{figure}
+%\begin{figure}[t!]
+%\centering
+%%	\vspace{-.4cm}	
+%\includegraphics[width=0.55\linewidth]{figs/matrix.pdf}
+%\vspace{-.4cm}
+%\caption{Deduction of missing ratings~\cite{Zhao:2010:UCR:1748610.1749278}.}% [?? In the previous version there was a rectangle including some of the rows. Isn't?]
+%\vspace{-.1cm}
+%\label{fig:UserBasedCF}
+%\end{figure}
 
 % from the ratings matrix
 %using the user-based collaborative-filtering technique
 
-Given an input project $p$, the inclusion of topics in such repository can be predicted from projects that are similar to $p$. In other words, \TF predict topic ratings  by means of those collected from the \emph{top-k} similar projects.
-Referring to the example depicted in Figure~\ref{fig:UserBasedCF}, 
-the relationships between the active project $p$ and the similar projects $q_1,q_2,q_3$ are used to compute the missing topic ratings for $p$. 
 
 
+Given an input project $p$, the inclusion of topics in such repository can be predicted from projects that are similar to $p$. In other words, \TF predict topic ratings  by means of those collected from the \emph{top-k} similar projects using the following formula~\cite{NGUYEN2020110460}:
 
+%Referring to the example depicted in Figure~\ref{fig:UserBasedCF}, the relationships between the active project $p$ and the similar projects $q_1,q_2,q_3$ are used to compute the missing topic ratings for $p$. 
 %The rectangles in Fig. \ref{fig:UserBasedCF} imply that the row-wise relationships between the active project $p$ and the similar projects $q_1,q_2,q_3$ are exploited to compute the missing ratings for $p$.
-The presence of a topic $t$ in project $p$ is deduced by means of the following formula:
+%The presence of a topic $t$ in project $p$ is deduced by means of the following formula:
 %The following formula is used to predict if $p$ should include a topic $t$, \ie~$p \ni t$:%~\cite{DBLP:conf/rweb/NoiaO15}: % the predicted value $r_{p,l}$ is computed
 %\vspace{-.2cm}
 \begin{equation} \label{eqn:Prediction}
