@@ -7,7 +7,7 @@
 
 %\revised{:q
 
-In this section, we report on the materials and methods used to evaluate \TF. %evaluation of \CT, having the {\em goal} of evaluating the performance of the proposed approach. 
+In this section, we report on the materials and methods used to evaluate \TF. %evaluation of \TF, having the {\em goal} of evaluating the performance of the proposed approach. 
 Section~\ref{sec:Dataset} presents the datasets exploited in the evaluation. Section~\ref{sec:methodology-metric} and Section~\ref{sec:metrics} describe the methodology and metrics, respectively. Finally, the research questions are highlighted in Section~\ref{sec:ResearchQuestions}.
 
 To facilitate future research, we made available the \TF tool together with the related data in a GitHub repository\footnote{https://github.com/ESEM2020-TopFilter/TopFilter}.
@@ -31,11 +31,6 @@ To facilitate future research, we made available the \TF tool together with the 
 
 %\subsection{Data Cleaner}  \label{sec:filter}
 
-As a preprocessing, we filter the initial set of topics using their frequencies counted on the entire \GH dataset. We remove irrelevant topics to reduce the noise in the prediction phase. Through the \emph{cut-off} value, we progressively increase the frequency threshold to evaluate possible impacts on overall performances. As stated in \cite{repo-topix}, this preprocessing can improve the final results, thus we decide to apply it as a first step. 
-
-To this end, we develop tailored Python scripts that apply this filter to the initial dataset. As a \GH user can manually specify the topic list for his repository, a lot of them can contain infrequent or improper terms \ie the name of the author, duplicated values, terms that rarely appear to name a few. On one hand, imposing such preprocessing reduces the repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by pruning "bad" terms. 
-This pruning phase is computed offline and doesn't affect the time required for the recommendation process. 
-
 %Before encoding topics in the repo-topic ratings matrix, raw topics are pre-processed removing possible syntactical duplicates terms (\eg \textit{document} and \textit{documents}). More specifically, stemming, lemmatization, and stop words removal Natural Language Processing (NLP) techniques have been applied on the mined topics.
 
 
@@ -43,13 +38,24 @@ This pruning phase is computed offline and doesn't affect the time required for 
 
 %\color{blue}
 
-To evaluate the approach, we reuse the same dataset employed for the \MNB available here \cite{MNBreplication}. The \GH query language \cite{understanding} allows the fetching of relevant repository metadata including name, owner, and list of topics to mention a few. Thus, we \emph{randomly} collected a dataset consisting of 6,258 repositories that use 15,757 topics by means of the GitHub API \cite{pygithub/pygithub_2019}. We employ the \GH star voting mechanism as a popularity measure to avoid including unpopular, unmaintained and toy projects \cite{borges_whats_2018}. As claimed in several works\cite{borges_popularity_2017, borges_predicting_2016}, a high number of stars means the attention of the community for that project. So, we impose the following filter during the query execution:
-\begin{equation}
-\small
-Qf = "is:featured \; topic:t \; stars:100..80000 \; topics:>=2"
-\end{equation}%
-to consider only \GH repositories having a number of stars between 100 and 80,000, and tagged with at least two topics. The boolean qualifier \emph{is:featured} is used in the \MNB work to group repositories given a certain featured topic (please refers to \url{https://github.com/topics} for the complete list of featured topics). As \CT is able to retrieve both featured and not-featured topics, this filter doesn't affect the quality of the collected data.
-To investigate the \CT prediction performances, we populated five different datasets starting from the original one by varying the topic frequency cut-off value \emph{t} \ie the maximum frequency of the topic distribution (it will be better described in Section~\ref{sec:methodology-metric}). In this way, we remove the infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:Datasets} summarizes the datasets' features with \emph{t} = 1, 5, 10, 15, 20. In particular, for each dataset the \emph{Avg. topics} values are the average number of topics that the repositories include, and the  \emph{Avg. freq. topics} values are the average frequency of the topics in the dataset, \ie the average occurrences of the topics among  the considered repositories in the dataset.
+
+
+%The \GH query language \cite{understanding} allows the fetching of relevant repository metadata including name, owner, and list of topics to mention a few. Thus, we \emph{randomly} collected a dataset consisting of 6,258 repositories that use 15,757 topics by means of the GitHub API \cite{pygithub/pygithub_2019}. We employ the \GH star voting mechanism as a popularity measure to avoid including unpopular, unmaintained and toy projects \cite{borges_whats_2018}. As claimed in several works\cite{borges_popularity_2017, borges_predicting_2016}, a high number of stars means the attention of the community for that project. So, we impose the following filter during the query execution:
+%\begin{equation}
+%\small
+%Qf = "is:featured \; topic:t \; stars:100..80000 \; topics:>=2"
+%\end{equation}%
+%to consider only \GH repositories having a number of stars between 100 and 80,000, and tagged with at least two topics. The boolean qualifier \emph{is:featured} is used in the \MNB work to group repositories given a certain featured topic (please refers to \url{https://github.com/topics} for the complete list of featured topics).
+
+
+To study our proposed approach, we reuse the same dataset employed to evaluate \MNB \cite{MNBreplication}. A preprocessing was performed to improve the data quality as follows~\cite{repo-topix}. First, we filtered the initial set of topics using their frequencies counted on the entire \GH dataset. Afterwards, we removed irrelevant topics to reduce probable noise during the prediction phase. Through the introduction of the \emph{cut-off} value~\cite{10.1145/3383219.3383227}, we progressively increase the frequency threshold to evaluate possible impacts on overall performances. %, thus we decide to apply it as a first step.
+%As \TF is able to retrieve both featured and not-featured topics, such a filtering process does not affect the quality of the collected data.
+
+
+We developed tailored Python scripts and applied the filter to the initial dataset. As a \GH user can manually specify a topic list for a repository, a lot of them can contain infrequent or improper terms, \ie the name of the author, duplicated values, or terms that rarely appear to name a few. On one hand, imposing such a preprocessing phase reduces the repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by pruning "bad" terms. 
+This pruning phase is computed offline and doesn't affect the time required for the recommendation process. 
+
+To investigate the \TF prediction performances, we populated five different datasets starting from the original one by varying the topic frequency cut-off value \emph{t} \ie the maximum frequency of the topic distribution (it will be better described in Section~\ref{sec:methodology-metric}). In this way, we remove the infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:Datasets} summarizes the datasets' features with \emph{t} = 1, 5, 10, 15, 20. In particular, for each dataset the \emph{Avg. topics} values are the average number of topics that the repositories include, and the  \emph{Avg. freq. topics} values are the average frequency of the topics in the dataset, \ie the average occurrences of the topics among  the considered repositories in the dataset.
 
 
 %\begin{table}[h]
@@ -128,26 +134,26 @@ From this study, we observe a correlation between the number of stars and the to
 
 %\color{blue}
 \subsection{Evaluation process}\label{sec:methodology-metric}
-The \emph{ten-fold cross-validation} methodology~\cite{kohavi1995study} has been used to assess the performance of \CT, \MNB and combined approach where every time $9$ folds 
+The \emph{ten-fold cross-validation} methodology~\cite{kohavi1995study} has been used to assess the performance of \TF, \MNB and combined approach where every time $9$ folds 
 %(each one contains $625$ projects) 
 are used for training and the remaining one for testing.
-For each testing project \emph{p}, we randomly delete half topics and save it as ground truth (\emph{GT(p)}) . The ground truth data  will be used to validate the recommendation outcomes. The remaining half topics are used as query topics to the \CT.
+For each testing project \emph{p}, we randomly delete half topics and save it as ground truth (\emph{GT(p)}) . The ground truth data  will be used to validate the recommendation outcomes. The remaining half topics are used as query topics to the \TF.
 Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}.
 
 \noindent
-$\blacksquare$~\textbf{Data Preparation phase} collects repositories that match the requirements defined in previous section from GitHub during \code{Data collection} step. This dataset is used to evaluate \CT, \MNB, and the combination of two. 
+$\blacksquare$~\textbf{Data Preparation phase} collects repositories that match the requirements defined in previous section from GitHub during \code{Data collection} step. This dataset is used to evaluate \TF, \MNB, and the combination of two. 
 The dataset is then split into training and testing sets (\ie \code{ Split ten-fold} activity).
-Due to the different nature of the the recommender systems (\ie \MNB requires \code{README} files as input and training data, whereas \CT uses a set of assigned topics as input and for training the recommendation system), the testing and training data are specifically cooked for both approaches).
-The \code{Split topic} activity resembles a real development process where a developer has already included some topics in his repository (\ie \code{Query topics}) and waits for recommendations \ie additional topics to be incorporated. \CT recommender system is expected to provide her with the other half, \ie \code{ GT topics}.
+Due to the different nature of the the recommender systems (\ie \MNB requires \code{README} files as input and training data, whereas \TF uses a set of assigned topics as input and for training the recommendation system), the testing and training data are specifically cooked for both approaches).
+The \code{Split topic} activity resembles a real development process where a developer has already included some topics in his repository (\ie \code{Query topics}) and waits for recommendations \ie additional topics to be incorporated. \TF recommender system is expected to provide her with the other half, \ie \code{ GT topics}.
 
 \noindent
-$\blacksquare$~\textbf{Recommendation phase} follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \code{\CT}, \code{\MNB}, and \code{Entangled} approaches evaluation respectively).
-To enable \CT, we extract a portion of topics from a given testing project \ie the ground-truth part (it is defined as $GT(p)$ in the following). The left part is used as a query to produce recommendations (see the dotted line flow). As the \MNB uses the README file of a repository to predict a set of topics, this doesn't require any topic as input. Thus, the approach encodes the document relevant information in vectors using the TF-IDF weighting scheme. Then, to feed the network that delivers a set of topics (see the bold line). Finally, the entangled approach uses \CT as the recommendation engine which is fed by the \MNB suggested topics (see dashed line flow). In this respect, both \code{Testing data} and \code{Training set} boxes are simplified to provides the needed data (\ie README file and assigned topics) to the different recommender systems.
+$\blacksquare$~\textbf{Recommendation phase} follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \code{\TF}, \code{\MNB}, and \code{Entangled} approaches evaluation respectively).
+To enable \TF, we extract a portion of topics from a given testing project \ie the ground-truth part (it is defined as $GT(p)$ in the following). The left part is used as a query to produce recommendations (see the dotted line flow). As the \MNB uses the README file of a repository to predict a set of topics, this doesn't require any topic as input. Thus, the approach encodes the document relevant information in vectors using the TF-IDF weighting scheme. Then, to feed the network that delivers a set of topics (see the bold line). Finally, the entangled approach uses \TF as the recommendation engine which is fed by the \MNB suggested topics (see dashed line flow). In this respect, both \code{Testing data} and \code{Training set} boxes are simplified to provides the needed data (\ie README file and assigned topics) to the different recommender systems.
 
 \noindent
 $\blacksquare$~\textbf{Outcome Evaluation phase} evaluate the recommendation results with those stored as ground-truth data to compute the quality metrics (\ie \code{Success rate}, \code{Precision}, \code{Recall}, and \code{Catalog coverage}) during the \code{Comparison} activity.  
 
-It is worth noting that we can't directly compare directly \CT and \MNB approaches because they rely on different input data (\ie \CT requires an initial set of assigned topics for suggesting new ones, whereas\MNB uses the information mined from the README files to recommend the expected topics). 
+It is worth noting that we can't directly compare directly \TF and \MNB approaches because they rely on different input data (\ie \TF requires an initial set of assigned topics for suggesting new ones, whereas\MNB uses the information mined from the README files to recommend the expected topics). 
 %, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
 
 
@@ -160,7 +166,7 @@ In the context of recommendation systems, several metrics have been proposed to 
 First of all, we present the following notations to make easier the understanding of the metrics involved in our experiment:
 \begin{itemize}[noitemsep,topsep=0pt]
 	\item \emph{t} is the frequency cut-off value of input topics (\ie all topics that occur less than \emph{t} times are removed from the dataset)
-	\item |\emph{t$_{in}$}| is the size of topics that \CT takes as input;
+	\item |\emph{t$_{in}$}| is the size of topics that \TF takes as input;
 	\item \emph{N} is the cut-off value for the recommended ranked list of topic;% of recommended libraries;
 	\item \emph{k} is the number of top-similar neighbour projects \TF considers to predict suggested topics;
 	\item \emph{GT(r)} is defined as the half part of the extracted topics for a testing project \emph{r}, and \emph{GT(r)} have been used as ground-truth data in the evaluation process;
@@ -304,7 +310,7 @@ By performing the evaluation, we aim at addressing the following research questi
 \begin{itemize}
 	\item[--] \rqfirst To answer this question, we investigate different configurations to find the best one \ie we variate the number of input topics \emph{T}, the number of neighbours \emph{N} and the considered number of outcomes \emph{N}.
 	
-	%\item[--] \rqsecond Because of \CT and \MNB are completely different in term of input data, we are interested in comparing them by considering many factors that can impact on the performance.
+	%\item[--] \rqsecond Because of \TF and \MNB are completely different in term of input data, we are interested in comparing them by considering many factors that can impact on the performance.
 	\item[--] \rqsecond From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances.
 \end{itemize}
 
