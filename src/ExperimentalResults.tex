@@ -1,21 +1,21 @@
 This section analyzes the experimental results by addressing the two research questions introduced in Section~\ref{sec:ResearchQuestions}.
 
-%discusses the findings of the qualitative assessment. To address the formulated research questions, we perform two different experiments. Section \ref{sec:EXP1} discusses the \CT results by variating different parameters. % We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. 
-%The results obtained with the entangled approach (\ie the combination of \CT and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
+%discusses the findings of the qualitative assessment. To address the formulated research questions, we perform two different experiments. Section \ref{sec:EXP1} discusses the \TF results by variating different parameters. % We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. 
+%The results obtained with the entangled approach (\ie the combination of \TF and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
 
 
 \subsection{\rqfirst} \label{sec:EXP1}
   
-To find the best configuration in terms of prediction performances, we experiment with different \CT configuration by variating the available parameters \ie number of neighbors \emph{k}, the recommended topic cut-off value \emph{N}, and the involved dataset.   %The former refers to the number of similar repositories used in the recommendation engine. 
+To find the configuration obtaining the best prediction performances, we experimented with different \TF configuration by variating the available parameters \ie number of neighbors \emph{k}, the recommended topic cut-off value \emph{N}, and the involved dataset.   %The former refers to the number of similar repositories used in the recommendation engine. 
 %The latter value \emph{t} is used to select the input topics based on their frequencies: given an initial set of topics, we filter them with the cut-off value to reduce the noise in the original dataset. Then, the recommendation phase is enabled by varying the number of presented parameters. According to Section \ref{sec:methodology-metric}, N is the cut-off value and \emph{k} is the number of neighbours of the graph. We evaluate different configuration by setting N=1,5,10,15,20 and k=5,10,15,20,25. 
 %Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
 
-As we rely on a collaborative filtering technique, the number of output topics, the number of neighbors, and the data preprocessing play an important role in the assessment. Thus, we variate  the recommended list of topics \emph{N} for 5 and 10, and the number of neighbours \emph{k} \ie \emph{N} = \{5, 10, 15, 20, 25\}. 
+As we rely on a collaborative filtering technique, the number of output topics, the number of neighbors, and the data preprocessing play an important role in the assessment. Thus, we variate  the recommended list of topics \emph{N} for 5 and 10, and the number of neighbors \emph{k}, \ie \emph{N} = $\{5, 10, 15, 20, 25\}$. 
 %we use different topic frequency cut-off \emph{t} to remove very infrequent topics from the dataset. 
-The bar charts in Fig.~\ref{fig:success-rateN5} and \ref{fig:success-rateN10} show the average success rates of all ten folds of \CT.%divided by the different topic frequency cut-off \emph{t}
-Both figures depict the results of \CT applied on the different datasets defined in Section~\ref{sec:Dataset} \ie $Dt_{1}$, $Dt_{5}$, $Dt_{10}$, $Dt_{15}$, and $Dt_{20}$.
+The bar charts in Fig.~\ref{fig:success-rateN5} and \ref{fig:success-rateN10} show the average success rates of all ten folds of \TF. %divided by the different topic frequency cut-off \emph{t}
+Both figures depict the results of \TF applied on the different datasets defined in Section~\ref{sec:Dataset}, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, and $D_{20}$.
 In particular, Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10} shows the success rate considering the first 5 and 10 recommended topics respectively. The horizontal axes shows the success rate outcomes for different size of neighbours \emph{N}.
-Overall, it is evident that infrequent topics negatively affect both success rate values. At the first glance we can see that the success rate of \CT with all topics is much lower than others \emph{t} cut-off.
+Overall, it is evident that infrequent topics negatively affect both success rate values. At the first glance we can see that the success rate of \TF with all topics is much lower than others \emph{t} cut-off.
 \begin{figure*}[t]
 \centering
 	\begin{tabular}{c c}	
@@ -41,12 +41,12 @@ This is also confirmed by the precision and recall curves depicted in Fig.~\ref{
 The line graph depicts the precision and recall curves on average for all 10 rounds by considering \emph{N} value ranges from 1 to 20 and \emph{t}. So, each dot in a curve corresponds to a specific value of \emph{N}. 
 These outcomes have been obtained by keeping 25 as the number of neighbours \emph{k} because we have already discussed that higher values of neighbours reach better prediction performances. Overall, the precision and recall values rise when the \emph{t} cut-off grows. Given that better prediction performance appears near to the upper right corner~\cite{DiNoia:2012:LOD:2362499.2362501}, the figure shows that a higher value of \emph{t} reaches better accuracy for all values of \emph{N}.
 
-As defined in Section~\ref{sec:metrics}, the coverage metric is the percent of recommended topic in the training data that the model is able to recommend on a test set. In our experiment, we are measuring the catalog coverage value among all the possible topic (\ie 15,743 topics). For each dataset (\ie $Dt_{1}$, $Dt_{5}$, $Dt_{10}$, $Dt_{15}$, $Dt_{20}$),  Table~\ref{tab:coverage} reports the average coverage value for all ten rounds. 
+As defined in Section~\ref{sec:metrics}, the coverage metric is the percent of recommended topic in the training data that the model is able to recommend on a test set. In our experiment, we are measuring the catalog coverage value among all the possible topic (\ie 15,743 topics). For each dataset (\ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$),  Table~\ref{tab:coverage} reports the average coverage value for all ten rounds. 
 The average catalog coverage of all folds decreases from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$) because there are no training data to recommend infrequent topics. 
 %The catalog coverage decreases because there are no training data to recommend infrequent topics. In particular, the average \emph{Global coverage} values decrease from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$).
 Having a higher value of \emph{t} has a negative impacts on the global catalog coverage value, because too many training data are discarded due to the topic frequency cut-off \emph{t}. Differently from the discussed metric outcomes, this experiment shows how an higher values of topic frequency cut-off negatively impacts on the catalog coverage metric.
 
-In the methodology described in Section~\ref{sec:methodology-metric}, for each repository \emph{r}, the evaluation outcomes consider the half part of real topics as input and remaining ones as ground truth data \emph{GT(r)}. Because of we are also interested to understand how the number of input topics impacts on prediction performance, Fig.~\ref{fig:pr-input-topics} shows the average success rate of all ten folds by choosing different number of input topics. Varying |\emph{t$_{in}$}| means changing the length of input topics that enable the \CT collaborative filtering recommender. In this picture we report the average success of all folds values with \emph{k} = 25 and \emph{t} = 20 as configuration settings. The success rate values exhibits an improvements when the size of input topic rises. This  behaviour demonstrate that \CT computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
+In the methodology described in Section~\ref{sec:methodology-metric}, for each repository \emph{r}, the evaluation outcomes consider the half part of real topics as input and remaining ones as ground truth data \emph{GT(r)}. Because of we are also interested to understand how the number of input topics impacts on prediction performance, Fig.~\ref{fig:pr-input-topics} shows the average success rate of all ten folds by choosing different number of input topics. Varying |\emph{t$_{in}$}| means changing the length of input topics that enable the \TF collaborative filtering recommender. In this picture we report the average success of all folds values with \emph{k} = 25 and \emph{t} = 20 as configuration settings. The success rate values exhibits an improvements when the size of input topic rises. This  behaviour demonstrate that \TF computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=0.9\linewidth]{figs/successRate_inputTopic.pdf}
@@ -55,11 +55,12 @@ In the methodology described in Section~\ref{sec:methodology-metric}, for each r
 \end{figure} 
 
 \input{src/coverageTable}
+ 
+For this reason, \emph{t} should be careful selected during the filtering phase to obtain balanced results in term of accuracy, success rate, and global catalog coverage.
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-The quality evaluation demonstrates that \CT achieves better performance in terms of accuracy and success rate by increasing the number of considered neighbours \emph{k} and filtered data \emph{t}. %The number of neighbors and the topic filters contribute to this improvement. 
-On the other hand, an higher values of topic frequency cut-off \emph{t} negatively impacts on the global catalog coverage. 
-For this reason, the \emph{t} value should be careful selected during the filtering phase to obtain balanced results in term of accuracy, success rate, and global catalog coverage.
+\textbf{Answer to RQ$_1$.} The quality evaluation demonstrates that \TF achieves better performance in terms of accuracy and success rate by increasing the number of considered neighbours \emph{k} and filtered data \emph{t}. %The number of neighbors and the topic filters contribute to this improvement. 
+On the other hand, an higher values of topic frequency cut-off \emph{t} negatively impacts on the global catalog coverage.
 %However, the precision and recall values are still low, suggesting that bias lives in the users topic.
 \end{tcolorbox}
 
@@ -70,24 +71,24 @@ For this reason, the \emph{t} value should be careful selected during the filter
 
 
 
-Due to the internal construction of the \MNB, the direct comparison of the two approaches can bring biased results. Thus, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \CT with the results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. 
-We conduct our experiment on two of the proposed datasets, \ie  $Dt_{20}$, and  $Dt_{1}$ that are the detasets with lower and higher topic to be recommended respectively.
-%Table \ref{tab:combined} summarizes the results of this experiment by comparing the \MNB and the entangled approach. From the previous assessment, we figured out that \CT reaches best results considering the Dataset $Dt_{20}$. Thus, we choose this one to conduct this second evaluation. 
-For experiment purposes, we variate the number of recommendation items as well as the number of input topics \ie \emph{N} and \emph{Tin} values respectively. From the previous assessment, we figured out that the number of inputs leading the best results is Tin=5. Thus, we compare the outcomes considering the minimum number of input topics provided by the \MNB, \ie Tin=2. The results demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage. We witness that \CT outperforms the \MNB by augmenting the number of recommended items. 
+Due to the internal construction of the \MNB, the direct comparison of the two approaches can bring biased results. Thus, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \TF with the results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. 
+We conduct our experiment on two of the proposed datasets, \ie  $D_{20}$, and  $D_{1}$ that are the detasets with lower and higher topic to be recommended respectively.
+%Table \ref{tab:combined} summarizes the results of this experiment by comparing the \MNB and the entangled approach. From the previous assessment, we figured out that \TF reaches best results considering the Dataset $D_{20}$. Thus, we choose this one to conduct this second evaluation. 
+For experiment purposes, we variate the number of recommendation items as well as the number of input topics \ie \emph{N} and \emph{Tin} values respectively. From the previous assessment, we figured out that the number of inputs leading the best results is Tin=5. Thus, we compare the outcomes considering the minimum number of input topics provided by the \MNB, \ie Tin=2. The results demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage. We witness that \TF outperforms the \MNB by augmenting the number of recommended items. 
 
-%In particular, after Out=8 the accuracy and success rate overcomes the \MNB results considering the \CT's best configuration even though the overall accuracy trend is decreasing. This happens because enlarging the set of recommended items impacts negatively on the precision values. Reversely, the success rate rises up to 0.855 with the best configuration of the entangled approach. As witnessed for the accuracy value, the \MNB records better results until a certain threshold of output items. This degradation in performance is due to the internal probabilistic model used by the approach. 
-
-
+%In particular, after Out=8 the accuracy and success rate overcomes the \MNB results considering the \TF's best configuration even though the overall accuracy trend is decreasing. This happens because enlarging the set of recommended items impacts negatively on the precision values. Reversely, the success rate rises up to 0.855 with the best configuration of the entangled approach. As witnessed for the accuracy value, the \MNB records better results until a certain threshold of output items. This degradation in performance is due to the internal probabilistic model used by the approach. 
 
 
 
 
-%Table \ref{tab:combined_dt1} and~\ref{tab:combined_dt20}  summarize the results of this experiment by comparing the \MNB and the entangled approach for $Dt_1$ and $Dt_{20}$ respectively. 
+
+
+%Table \ref{tab:combined_dt1} and~\ref{tab:combined_dt20}  summarize the results of this experiment by comparing the \MNB and the entangled approach for $D_1$ and $D_{20}$ respectively. 
 %For experiment purposes, we variate the number of recommendation items as well as the number of input topics \ie \emph{N} and \emph{Tin} values respectively. From the previous assessment (see Figure~\ref{fig:pr-input-topics}), we figured out that the number of inputs leading the best success rate results is 5. Thus, we compare the outcomes considering the minimum number of input topics provided by the \MNB, \ie Tin=2. 
 
 The results in Table~\ref{tab:combined_dt20} demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage.
 Table~\ref{tab:combined_dt1} also confirms this trend by performing the same experiment with \emph{D$_1$} dataset.
-We witness that \CT outperforms the \MNB by augmenting the number of recommended items. For both datasets \ie \emph{D$_1$} and \emph{D$_{20}$}, after K=8 the accuracy and success rate overcomes the \MNB results considering the \CT's best configuration even though the overall accuracy trend is decreasing. This happens because enlarging the set of recommended items impacts negatively on the precision values. Reversely, the success rate rises up to 0.855 and 0.531 with \emph{D$_1$} and \emph{D$_{20}$} respectively. As witnessed for the accuracy value, the \MNB records better results until a certain threshold of output items. This degradation in performance is due to the internal probabilistic model used by the approach. 
+We witness that \TF outperforms the \MNB by augmenting the number of recommended items. For both datasets \ie \emph{D$_1$} and \emph{D$_{20}$}, after K=8 the accuracy and success rate overcomes the \MNB results considering the \TF's best configuration even though the overall accuracy trend is decreasing. This happens because enlarging the set of recommended items impacts negatively on the precision values. Reversely, the success rate rises up to 0.855 and 0.531 with \emph{D$_1$} and \emph{D$_{20}$} respectively. As witnessed for the accuracy value, the \MNB records better results until a certain threshold of output items. This degradation in performance is due to the internal probabilistic model used by the approach. 
 \input{src/entangled_dt1}
 
 
@@ -98,7 +99,7 @@ We witness that \CT outperforms the \MNB by augmenting the number of recommended
 %\resizebox{8.5cm}{!} {
 %\begin{tabular}{|l|l|l|l|l|l|l|}
 %\hline
-%  & \multicolumn{3}{c|}{\textbf{\CT}}          & \multicolumn{3}{c|}{\textbf{Entangled approach}}        \\ \hline
+%  & \multicolumn{3}{c|}{\textbf{\TF}}          & \multicolumn{3}{c|}{\textbf{Entangled approach}}        \\ \hline
 %\textbf{No. of input} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} & \textbf{Success rate} &\textbf{ Precision} & \textbf{Recall} \\ \hline
 %1  &       0.409       &    0.409       &  0.105       &     0.138         &      0.221     &   0.029      \\ \hline
 % 2 &     0.554         &    0.350       &     0.179   &       0.220       &       0.198    &   0.053     \\ \hline
@@ -124,12 +125,12 @@ We witness that \CT outperforms the \MNB by augmenting the number of recommended
 
 Although the examined metrics are useful to analyze the overall performances, the catalog coverage can evaluate properly the capability to recommend a \emph{list} of items instead of a single one. Looking at the results, we can observe a substantial increase after 8 output items. As expected, the coverage dramatically increases with a larger number of outcomes for both of the considered approaches. Nevertheless, the positive gap of the entangled configuration is greater than the \MNB value. Considering the Out=20, the maximum value reached by the \MNB is 39.636 while the best configuration in the entangled experiment reaches a coverage of 58.725.
 
-These findings can be explained by considering the nature of the considered topics. As said before, the \MNB can predict only featured topics as training the entire set of \GH topics is not possible due to the computation issues. Reversely, \CT covers a larger set of topics by enabling the described collaborative filtering technique. In this way, the \emph{entangled} is capable of suggesting both featured and not featured topics to the final user and enlarging the possible set of outcomes.
+These findings can be explained by considering the nature of the considered topics. As said before, the \MNB can predict only featured topics as training the entire set of \GH topics is not possible due to the computation issues. Reversely, \TF covers a larger set of topics by enabling the described collaborative filtering technique. In this way, the \emph{entangled} is capable of suggesting both featured and not featured topics to the final user and enlarging the possible set of outcomes.
 
 
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-The entangled approach success in improving the prediction performances. By variating both the input and output number of topics, the accuracy and success rate experienced an enhancement even though the former reached low values. The \MNB lacks in catalog coverage, as clearly demonstrated by the higher value of the entangled experiment.
+\textbf{Answer to RQ$_2$.} The entangled approach success in improving the prediction performances. By variating both the input and output number of topics, the accuracy and success rate experienced an enhancement even though the former reached low values. The \MNB lacks in catalog coverage, as clearly demonstrated by the higher value of the entangled experiment.
 \end{tcolorbox}
 
 
