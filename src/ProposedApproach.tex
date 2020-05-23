@@ -66,7 +66,7 @@ following the same line of reasoning to mine \GH topics: \emph{``if projects hav
 %This is a preparatory phase for the next steps of the recommendation process. The developer interacts with \TF by sending a request for recommendations that includes the list of topics which she has already included for the repository that she is working on.
 %The aforementioned components are singularly described in the next sections. 
 
-In the following subsections, we describe two \TF configurations, namely \TFa and \TFb to recommend relevant topics by incorporating different types of input data. \TFa exploits a collaborative-filtering technique, while \TFb is a combination of both \MNB and \TFa, aiming to improve the prediction performance of \MNB. % by combining it with \TFa. %\TF can be combined with \MNB to improve. %the collaborative filtering prediction performance.
+In the following subsections, we describe two \TF configurations, namely \TFa and \TFb to recommend relevant topics by incorporating different types of input data. \TFa exploits a collaborative-filtering technique, while \TFb is a combination of both \MNB and \TFa, aiming to improve the prediction performance of the original \MNB approach. % by combining it with \TFa. %\TF can be combined with \MNB to improve. %the collaborative filtering prediction performance.
 
   %in detail each of the components mentioned above. %In Section~\ref{sec:combined_approach}, 
 %Furthermore, based on the proposed architecture, we present an approach to improve \MNB by 
@@ -347,7 +347,7 @@ where $n$ is the cardinality of the set of topics that $p$ and $q$ share in comm
 
 
 
-Given an input project $p$, the inclusion of topics in such repository can be predicted from projects that are similar to $p$. In other words, \TF predict topic ratings  by means of those collected from the \emph{top-k} similar projects using the following formula~\cite{NGUYEN2020110460}:
+Given an input project $p$, the inclusion of additional topics can be predicted from the projects that are similar to $p$. In other words, \TF predicts topics' presence by means of those collected from the \emph{top-k} similar projects using the following formula~\cite{NGUYEN2020110460}:
 
 %Referring to the example depicted in Figure~\ref{fig:UserBasedCF}, the relationships between the active project $p$ and the similar projects $q_1,q_2,q_3$ are used to compute the missing topic ratings for $p$. 
 %The rectangles in Fig. \ref{fig:UserBasedCF} imply that the row-wise relationships between the active project $p$ and the similar projects $q_1,q_2,q_3$ are exploited to compute the missing ratings for $p$.
