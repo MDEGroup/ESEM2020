@@ -54,7 +54,7 @@ To study our proposed approach, we reuse the same dataset employed to evaluate \
 
 We developed tailored Python scripts and applied the filter to the initial dataset. As a \GH user can manually specify a topic list for a repository, many of them can contain infrequent or improper terms, \ie the name of the author, duplicated values, or terms that rarely appear, to name a few. On one hand, imposing such a preprocessing phase reduces the number of repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by removing \emph{``bad''} terms. This pruning phase can be done offline and does not affect the time required for the recommendation process.
 
-To further investigate \TF's prediction performances, we populated five different datasets starting from the original corpus by varying the cut-off value \emph{t}, \ie the maximum frequency of the topic distribution (it will be detailed in Section~\ref{sec:methodology-metric}). In this way, we remove the infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:Datasets} summarizes the features of five datasets, corresponding to \emph{t} = $\{1, 5, 10, 15, 20\}$. \emph{Avg. topics} is the average number of topics that the repositories include; \emph{Avg. freq. topics} is the average frequency of the topics in the dataset.%, \ie the average occurrences of the topics among  the considered repositories in the dataset.
+To further investigate \TF's prediction performances, we populated five different datasets starting from the original corpus by varying the cut-off value \emph{t}, \ie the maximum frequency of the topic distribution (it will be detailed in Section~\ref{sec:methodology-metric}). In this way, we removed infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:Datasets} summarizes the features of five datasets, corresponding to \emph{t} = $\{1, 5, 10, 15, 20\}$. \emph{Avg. topics} is the average number of topics that the repositories include; \emph{Avg. freq. topics} is the average frequency of the topics in the dataset.%, \ie the average occurrences of the topics among  the considered repositories in the dataset.
 
 
 %\begin{table}[h]
@@ -94,7 +94,7 @@ To further investigate \TF's prediction performances, we populated five differen
 %<<<<<<< HEAD
 As we will see in Section~\ref{sec:ExperimentalResults}, removing infrequent topics improves the overall quality of the considered datasets: %Similarly to the other collaborative filtering approaches, the overall prediction performance strongly depends on the dataset. As we will demonstrate in the next section, 
 the collaborative filtering provides better prediction performance when there is enough data, \ie topics in the training set. %to resemble the repository behaviour. 
-After infrequent topics are removed, all the repositories that contain less then five topics are filtered out from the dataset, as they contain very few information to enable the collaborative filtering prediction. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset D$_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989 when t=5. %The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. 
+Once infrequent topics have been removed, all the repositories that contain less then five topics are filtered out from the dataset, as they contain little information to enable the collaborative filtering prediction. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset D$_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989 when t=5. %The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. 
 We stop at t=20 and consider Dataset D$_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 9.9 and 7.7 topics on average for \emph{t} = 1 and \emph{t} = 20 ,respectively. This demonstrates that a large number of topics are not beneficial to the discoverability of a project.
 
 \begin{figure*}[h!]
@@ -109,7 +109,7 @@ We stop at t=20 and consider Dataset D$_{20}$ as the best one according to our m
 \subfigure[Dataset D$_{20}$]{\label{fig:dt20_stars}
 	\includegraphics[width=0.45\linewidth]{figs/dataset_20_stars.pdf}}\\	
 	\end{tabular} 
-	\caption{Quality analysis of the examined datasets.}
+	\caption{A summary of the number of forks and stars for the datasets.} %Quality analysis of the examined datasets
 	\label{fig:comparison}
 \end{figure*}
 
@@ -141,32 +141,7 @@ furthermore, there is a strong correlation between forks and stars~\cite{7816479
 %e mined dependency specification by means of \code{code.xml} or \code{.grad\-le} files.\footnote{The files \code{pom.xml} and with the extension \code{.gradle} are related to management of dependencies by means of Maven (\url{https://maven.apache.org/}) and Gradle (\url{https://gradle.org/}), respectively.} Fig.~\ref{fig:NumOfLibsD1} depicts the distribution of libraries across the projects. Most of the libraries in \code{D1} ($12,962$) are used by a small number of projects, and only $10$ libraries are extremely popular by being included in more than $200$ projects. By carefully investigating the dataset, we also see that most projects contain a small number of dependencies, \ie $48\%$ of the projects include less than $20$ libraries and just $15\%$ of them include more than $100$ libraries. \}
 
 
-%\color{blue}
-\subsection{Evaluation process}\label{sec:methodology-metric}
-The \emph{ten-fold cross-validation} methodology~\cite{kohavi1995study} has been used to assess the performance of \TF, \MNB and combined approach where every time $9$ folds 
-%(each one contains $625$ projects) 
-are used for training and the remaining one for testing.
-For each testing project \emph{p}, we randomly delete half topics and save it as ground truth (\emph{GT(p)}) . The ground truth data  will be used to validate the recommendation outcomes. The remaining half topics are used as query topics to the \TF.
-Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consists of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation}.
-
-\noindent
-$\blacksquare$~\textbf{Data Preparation phase} collects repositories that match the requirements defined in previous section from GitHub during \code{Data collection} step. This dataset is used to evaluate \TF, \MNB, and the combination of two. 
-The dataset is then split into training and testing sets (\ie \code{ Split ten-fold} activity).
-Due to the different nature of the the recommender systems (\ie \MNB requires \code{README} files as input and training data, whereas \TF uses a set of assigned topics as input and for training the recommendation system), the testing and training data are specifically cooked for both approaches).
-The \code{Split topic} activity resembles a real development process where a developer has already included some topics in his repository (\ie \code{Query topics}) and waits for recommendations \ie additional topics to be incorporated. \TF recommender system is expected to provide her with the other half, \ie \code{ GT topics}.
-
-\noindent
-$\blacksquare$~\textbf{Recommendation phase} follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \code{\TF}, \code{\MNB}, and \code{Entangled} approaches evaluation respectively).
-To enable \TF, we extract a portion of topics from a given testing project \ie the ground-truth part (it is defined as $GT(p)$ in the following). The left part is used as a query to produce recommendations (see the dotted line flow). As the \MNB uses the README file of a repository to predict a set of topics, this doesn't require any topic as input. Thus, the approach encodes the document relevant information in vectors using the TF-IDF weighting scheme. Then, to feed the network that delivers a set of topics (see the bold line). Finally, the entangled approach uses \TF as the recommendation engine which is fed by the \MNB suggested topics (see dashed line flow). In this respect, both \code{Testing data} and \code{Training set} boxes are simplified to provides the needed data (\ie README file and assigned topics) to the different recommender systems.
-
-\noindent
-$\blacksquare$~\textbf{Outcome Evaluation phase} evaluate the recommendation results with those stored as ground-truth data to compute the quality metrics (\ie \code{Success rate}, \code{Precision}, \code{Recall}, and \code{Catalog coverage}) during the \code{Comparison} activity.  
-
-It is worth noting that we can't directly compare directly \TF and \MNB approaches because they rely on different input data (\ie \TF requires an initial set of assigned topics for suggesting new ones, whereas\MNB uses the information mined from the README files to recommend the expected topics). 
-%, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
-
-
-\subsection{Metrics' definition}\label{sec:metrics}
+\subsection{Metrics}\label{sec:metrics}
 
 In the context of recommendation systems, several metrics have been proposed to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} have been used to study the systems' performance as already proposed in \etal~\cite{Robillard:2014:RSS:2631387}
 
@@ -186,11 +161,9 @@ First of all, we present the following notations to make easier the understandin
 	\item  $match_{N}(r)$ is the set of items in $REC_{N}(r)$ that match with those in \emph{GT(r)} for a given a repository \emph{r}.
 \end{itemize}
 
-
-
 \noindent By using the such notations, the accuracy, success rate and coverage  metrics are defined as follows.  
 
-\JDR{Rephrase this section}
+%\JDR{Rephrase this section}
 
 \vspace{.1cm}
 \noindent\textbf{Success rate@N.} Success rate is defined as the ratio of queries that have at least a matched topic among the total number of attempts. In particular, given a set of testing projects \emph{P}, this metric measures the percentage of \emph{top-N} query results that match at least one topic in the \emph{GT(p)} among the number of query project $p \in P$~\cite{6671293}: %It is formally defined as given below:
@@ -252,7 +225,38 @@ coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | T \right 
 \end{equation}
 
 \vspace{.1cm}
-\vspace{.1cm}
+%\vspace{.1cm}
+
+
+
+
+\subsection{Evaluation process}\label{sec:methodology-metric}
+The \emph{ten-fold cross-validation} technique~\cite{kohavi1995study} has been used to assess the performance of \TF and to compare it with \MNB. %and combined approach where every time $9$ folds 
+%(each one contains $625$ projects) 
+%are used for training and the remaining one for testing.
+For each testing project \emph{p}, we randomly deleted a half of its topics and save them as ground-truth data, \emph{GT(p)}, which  will be used to validate the recommendation outcomes. The remaining half topics are used as query topics to feed \TF. Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consisting of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation} and they are going to be explained as follows.
+
+\noindent
+$\blacksquare$~\textbf{Data Preparation.} This phase is conducted to collect repositories that match the requirements defined in previous section from GitHub during the \textit{Data collection} step. %The dataset is used to evaluate \TF, \MNB, and the combination of two. 
+The dataset is then split into a training and testing set, \ie \code{ Split ten-fold}. Due to the different nature of the recommender systems, \ie \MNB requires \textit{README} files as input and training data, whereas \TF uses a set of assigned topics as input and for training the, the testing and training data needs to be specifically prepared for each approach.
+The \code{Split topic} activity resembles a real development process where a developer has already included some topics in the repository, \ie \textit{Query topics} and waits for recommendations. 
+
+%\ie additional topics to be incorporated. \TF recommender system is expected to provide her with the other half, \ie \code{ GT topics}.
+
+\noindent
+$\blacksquare$~\textbf{Recommendation.} %follows three different flows, according to the required input and produced output of the three mentioned approaches. In particular, the common operations are in white while the three different evaluation flows are represented in a grayscale fashion (\ie light grey, grey and dark grey boxes are related to \TF, \MNB, and \code{Entangled} approaches evaluation respectively). 
+To enable the evaluation of \TF, we extracted a portion of topics from a given testing project, \ie the ground-truth part. The remaining part is used as a query to produce recommendations. %(see the dotted line flow).
+Since \MNB uses only README file(s) to predict a set of topics, it does not require any topic as input. The approach parses and encodes text files in vectors using the TF-IDF weighting scheme. 
+%To feed the network that delivers a set of topics (see the bold line). 
+Finally, the combined approach uses \TF as the recommendation engine which is fed by topics generated by \MNB. In this respect, both \textit{Testing data} and \textit{Training set} boxes are simplified to provide the needed data, \ie README files and assigned topics to the recommender systems.
+
+\noindent
+$\blacksquare$~\textbf{Outcome Evaluation.} In this stage, recommendation results are compared with those stored as ground-truth data to compute the quality metrics, \ie \textit{Success rate}, \textit{Precision}, \textit{Recall}, and \textit{Catalog coverage}) during the \textit{Comparison} activity.  
+
+It is worth noting that we cannot directly compare \TF with \MNB since they rely on different input data. To be concrete, \TF is a supervised learning system that requires an initial set of assigned topics for the training, whereas \MNB is unsupervised learning and it uses only information mined from README files to recommend, without making use of any topics as input. 
+
+%, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
+
 
 
 
@@ -315,13 +319,14 @@ coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | T \right 
 
 
 \subsection{Research Questions} \label{sec:ResearchQuestions}
-By performing the evaluation, we aim at addressing the following research questions:
+
+By performing the evaluation, we address the following research questions to study the proposed approach's performance:
 \begin{itemize}
-	\item[--] \rqfirst To answer this question, we investigate different configurations to find the best one \ie we variate the number of input topics \emph{T}, the number of neighbours \emph{N} and the considered number of outcomes \emph{N}.
+	\item[--] \rqfirst We investigated different configurations of \TF\ie the number of input topics \emph{t} as well as the number of neighbors \emph{N} is varied, to find the best configuration. %and the considered number of outcomes \emph{N}.
 	
 	%\item[--] \rqsecond Because of \TF and \MNB are completely different in term of input data, we are interested in comparing them by considering many factors that can impact on the performance.
-	\item[--] \rqsecond From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances.
+	\item[--] \rqsecond \TFb is an extended version of \MNB, thus we are interested in understanding if our proposed approach outperforms the original \MNB. %From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances.
 \end{itemize}
 
 
-We study the experimental results in the next section by referring to these research questions.
+In the next section, we study the experimental results by answering the above mentioned research questions.
