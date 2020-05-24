@@ -1,4 +1,4 @@
-This section analyzes the experimental results by addressing the two research questions introduced in Section~\ref{sec:ResearchQuestions}.
+This section analyzes the performance of \TF and compares it with \MNB by addressing the two research questions in Section~\ref{sec:EXP1} and Section~\ref{sec:EXP3}, respectively.
 
 %discusses the findings of the qualitative assessment. To address the formulated research questions, we perform two different experiments. Section \ref{sec:EXP1} discusses the \TF results by variating different parameters. % We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. 
 %The results obtained with the entangled approach (\ie the combination of \TF and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
@@ -6,22 +6,22 @@ This section analyzes the experimental results by addressing the two research qu
 
 \subsection{\rqfirst} \label{sec:EXP1}
   
-To find the configuration obtaining the best prediction performances, we experimented with different \TF configuration by variating the available parameters \ie number of neighbors \emph{k}, the recommended topic cut-off value \emph{N}, and the involved dataset.   %The former refers to the number of similar repositories used in the recommendation engine. 
+To find the configuration obtaining the best prediction performances, we experimented with different \TF configurations by varying the available parameters \ie number of neighbors \emph{k}, the number of recommended items \emph{N}, and the involved dataset.   %The former refers to the number of similar repositories used in the recommendation engine. 
 %The latter value \emph{t} is used to select the input topics based on their frequencies: given an initial set of topics, we filter them with the cut-off value to reduce the noise in the original dataset. Then, the recommendation phase is enabled by varying the number of presented parameters. According to Section \ref{sec:methodology-metric}, N is the cut-off value and \emph{k} is the number of neighbours of the graph. We evaluate different configuration by setting N=1,5,10,15,20 and k=5,10,15,20,25. 
 %Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
-
-As we rely on a collaborative filtering technique, the number of output topics, the number of neighbors, and the data preprocessing play an important role in the assessment. Thus, we variate  the recommended list of topics \emph{N} for 5 and 10, and the number of neighbors \emph{k}, \ie \emph{N} = $\{5, 10, 15, 20, 25\}$. 
+%As we rely on a collaborative filtering technique, the number of output topics, the number of neighbors, and the data preprocessing play an important role in the assessment. 
+We chose two different values of \emph{N}, \ie \emph{N} = $\{5, 10\}$, and five values of \emph{k}, \ie \emph{k} = $\{5, 10, 15, 20, 25\}$. 
 %we use different topic frequency cut-off \emph{t} to remove very infrequent topics from the dataset. 
-The bar charts in Fig.~\ref{fig:success-rateN5} and \ref{fig:success-rateN10} show the average success rates of all ten folds of \TF. %divided by the different topic frequency cut-off \emph{t}
+The bar charts in Fig.~\ref{fig:success-rateN5} and \ref{fig:success-rateN10} show the average success rates obtained by running the ten-fold cross-validation technique on \TF. %divided by the different topic frequency cut-off \emph{t}
 Both figures depict the results of \TF applied on the different datasets defined in Section~\ref{sec:Dataset}, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, and $D_{20}$.
 In particular, Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10} shows the success rate considering the first 5 and 10 recommended topics respectively. The horizontal axes shows the success rate outcomes for different size of neighbours \emph{N}.
 Overall, it is evident that infrequent topics negatively affect both success rate values. At the first glance we can see that the success rate of \TF with all topics is much lower than others \emph{t} cut-off.
 \begin{figure*}[t]
 \centering
 	\begin{tabular}{c c}	
-	\subfigure[k=5]{\label{fig:success-rateN5}
+	\subfigure[N=5]{\label{fig:success-rateN5}
 	\includegraphics[width=0.48\linewidth]{figs/successRateN@5.pdf}} &
-	\subfigure[k=10]{\label{fig:success-rateN10}
+	\subfigure[N=10]{\label{fig:success-rateN10}
 	\includegraphics[width=0.48\linewidth]{figs/successRateN@10.pdf}}	
 	\end{tabular} 
 	\caption{Success rate with 5 and 10 input topics.}
