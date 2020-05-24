@@ -38,23 +38,26 @@ Overall, it is evident that infrequent topics negatively affect the prediction o
 	\label{fig:configs}
 \end{figure}
 
-Next, we consider the influence of the number of neighbors k on the prediction performance. For N=5, from Fig.~\ref{fig:success-rateN5} it is clear that incorporating more neighbor projects for recommendation helps improve the performance considerably. Take as an example, for k=10 the best success rate is 0.69 obtained for $D_{20}$, and the corresponding score achieved with k=25 is 0.73 for $D_{20}$. For N=10, we see a clear improvement in performance when more neighbors are considered for the computation of recommendations. The best success rate obtained is 0.83 when k=25 for $D_{20}$. As a whole, we come to the conclusion that increasing the number of neighbors used for computing missing ratings in the project-topic matrix is beneficial to the final recommendations. On the other hand, this also increases the computational complexity as comprehended in Eq.~\ref{eqn:Prediction}. Therefore, it is necessary to maintain a trade-off between accuracy and efficiency when deploying \TF. 
+Next, we consider the influence of the number of neighbors k on the prediction performance. For N=5, from Fig.~\ref{fig:success-rateN5} it is clear that incorporating more neighbor projects for recommendation helps improve the performance considerably. Take as an example, for k=10 the best success rate is 0.69 obtained for $D_{20}$, and the corresponding score achieved with k=25 is 0.73 for $D_{20}$. For N=10, we see a clear gain in performance when more neighbors are considered for the computation of recommendations. The best success rate obtained is 0.83 when k=25 for $D_{20}$. As a whole, we come to the conclusion that increasing the number of neighbors used for computing missing ratings in the project-topic matrix is beneficial to the final recommendations. On the other hand, this also increases the computational complexity as comprehended in Eq.~\ref{eqn:Prediction}. Therefore, it is necessary to maintain a trade-off between accuracy and efficiency when deploying \TF. 
 
 %The success rate assessment exhibits an average improvement of 10\% in all of the possible configurations obtained by variating \emph{N} and \emph{k} values. In particular, the success rate archives better results by setting higher values of \emph{k}. Nevertheless, increasing the number of neighbours gives remarkable benefits only until a certain threshold. Given \emph{k} = 5, the success rate@5 passes from 63\% to 69\% if we consider k=10. This positive delta decreases by augmenting the number of neighbours until it reaches a stable success rate. Thus, we can consider \emph{k} = 25 as the maximum value capable of improving prediction performances. This trend is further confirmed by introducing more topics in the initial set. We also demonstrate that the topic filtering preprocessing fosters this enhancement and noise removal is a critical step of the entire process.
 
 
 %This is also confirmed by the precision and recall curves depicted in
 
-To further study \TF's performance, we computed and depicted in Fig.~\ref{fig:configs} the precision/recall curves for all the considered datasets. 
+To further study \TF's performance, we computed and depicted in Fig.~\ref{fig:configs} the precision/recall curves (PRCs) for all the considered datasets. 
 %From the accuracy scores computed using Eq. (5) and Eq. (6), the Precision-Recall curves (PRCs) for all 10 rounds of validation and different values of k were sketched. 
 %The line graph depicts the precision and recall curves on average for all 10 rounds by considering 
-For this setting, the number of recommended items \emph{N} was varied from 1 to 20, aiming to study the performance for a long recommendation list. Each dot in a curve corresponds to precision and recall obtained for a specific value of \emph{N}. Furthermore, we fixed the number of neighbors k=25 since it brings the best prediction outcomes among others, while still maintains a reasonable execution time.  
+For this setting, the number of recommended items \emph{N} was varied from 1 to 20, aiming to study the performance for a long recommendation list. Each dot in a curve corresponds to precision and recall obtained for a specific value of \emph{N}. Furthermore, we fixed k=25 since this number of neighbors brings the best prediction outcomes among others, while still maintains a reasonable execution time. As a PRC close to the upper right corner represents a better precision/call~\cite{NGUYEN2020110460}, Fig.~\ref{fig:configs} demonstrates that by considering a dataset with more topics for each repository, \TFb is able to yield a better prediction performance. In particular, the worst precision/recall is seen by $D_{1}$, while the best one is obtained by $D_{20}$.
+
 %These outcomes have been obtained by keeping 25 as the number of neighbours \emph{k} because we have already discussed that higher values of neighbours reach better prediction performances.
-Overall, the precision and recall values rise when the \emph{t} cut-off grows. Given that better prediction performance appears near to the upper right corner, the figure shows that a higher value of \emph{t} reaches better accuracy for all values of \emph{N}.
+%Overall, the precision and recall values rise when the \emph{t} cut-off grows. Given that better prediction performance appears near to the upper right corner, the figure shows that a higher value of \emph{t} reaches better accuracy for all values of \emph{N}.
 
 %~\cite{DiNoia:2012:LOD:2362499.2362501}
 
-As defined in Section~\ref{sec:metrics}, the coverage metric is the percent of recommended topic in the training data that the model is able to recommend on a test set. In our experiment, we are measuring the catalog coverage value among all the possible topic (\ie 15,743 topics). For each dataset (\ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$),  Table~\ref{tab:coverage} reports the average coverage value for all ten rounds. 
+%As defined in Section~\ref{sec:metrics}, 
+
+Catalog coverage measures the percentage of recommended topic in the training data that the model is able to recommend on a test set. In our experiment, we measured the catalog coverage value among topics, \ie 15,743. Table~\ref{tab:coverage} reports the average coverage value for the considered datasets, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$). %all ten rounds. 
 The average catalog coverage of all folds decreases from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$) because there are no training data to recommend infrequent topics. 
 %The catalog coverage decreases because there are no training data to recommend infrequent topics. In particular, the average \emph{Global coverage} values decrease from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$).
 Having a higher value of \emph{t} has a negative impacts on the global catalog coverage value, because too many training data are discarded due to the topic frequency cut-off \emph{t}. Differently from the discussed metric outcomes, this experiment shows how an higher values of topic frequency cut-off negatively impacts on the catalog coverage metric.
@@ -144,7 +147,7 @@ These findings can be explained by considering the nature of the considered topi
 
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-\textbf{Answer to RQ$_2$.} Compared to \MNB, \TFb substantially improves the prediction performance. While \MNB suffers a low catalog coverage, \TFb is able to recommend a wide range of topics to repositories.
+\textbf{Answer to RQ$_2$.} Compared to \MNB, \TFb substantially improves the prediction performance. Moreover, while \MNB suffers a low catalog coverage, \TFb is able to recommend a wide range of topics to repositories.
 \end{tcolorbox}
 
 %, as clearly demonstrated by the higher value of the entangled experiment
