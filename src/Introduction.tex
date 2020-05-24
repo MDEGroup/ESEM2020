@@ -1,4 +1,4 @@
-In recent years, the developer community heavily exploits open source 
+In recent years, the software developer community has intensively exploited open source 
 repositories during their daily activities. \GH has become one of the most
 popular platforms that aggregate these projects and support collaborative 
 development activities~\cite{7832894}. \GH recently introduced the possibility 
@@ -11,11 +11,11 @@ for existing projects providing them with some reusable features.
 
 Assigning repositories with wrong topics can compromise their popularity and 
 reachability. To deal with such problems, in 2017 \GH introduced a 
-mechanism named repo-topix to suggest topics by relying on information 
+mechanism named repo-topix to suggest topics by relying on various information 
 retrieval techniques \cite{repo-topix}. To improve repo-topix 
 and to explore additional recommendation strategies, a recent work (named \MNB
 hereafter) proposes a Multinomial Na\"ive Bayesian network to 
-recommend relevant topics starting from the README file of the repository of 
+recommend relevant topics starting from the README file(s) of the repository of 
 interest \cite{10.1145/3383219.3383227}. However, such a tool can recommend 
 only \emph{featured} topics, \ie a set of topics, which are curated by 
 \GH.\footnote{\url{https://github.com/topics}}
@@ -23,21 +23,23 @@ only \emph{featured} topics, \ie a set of topics, which are curated by
 
 In this paper, we propose \TF, a recommender system that extends the 
 recommendation capabilities of the \MNB approach previously mentioned to 
-non-featured topics by exploiting collaborative filtering, a widely used 
-technique in the recommender system domain 
-\cite{Schafer:2007:CFR:1768197.1768208}. Given an initial set of topics already 
+non-featured topics by means of a collaborative filtering algorithm, a widely used 
+technique in the recommender system domain~\cite{Schafer:2007:CFR:1768197.1768208}. Given an initial set of topics already 
 assigned to the \GH repository of interest, we encode it in a graph-based 
-structure to represent the mutual relationships between repositories and 
-topics. From this, a repository-topic matrix is created by following the 
-typical user-item structure used in existing collaborative filtering 
-applications. Then, we compute a similarity function based on featured vectors 
+structure to represent the mutual relationships among repositories and 
+topics. From this, a project-topic matrix is created by following the 
+typical user-item structure used in existing collaborative filtering applications. Then, we compute a similarity function based on featured vectors 
 to recommend the most similar topics.
 
-We evaluate the \TF's prediction performances by changing different parameters 
+We evaluate \TF's prediction performances by changing different parameters 
 as well as comparing it with the \MNB approach. As the direct comparison of both \MNB and \TF is not 
-possible due to their nature %approaches' internal construction, 
+possible due to their nature, %approaches' internal construction, 
 we used a well-defined set of metrics used in the literature to evaluate both approaches by 
-considering different datasets. Furthermore, we also investigated the combination of \MNB and \TF, aiming to enhance the performance of the original \MNB approach. %to the potential benefits.%of .%their combined use. 
+considering different datasets. More importantly, we showed that by augmenting \MNB with \TF, we are able to provide more relevant topics, given a repository. In this sense, we substantially improved the performance of the original \MNB approach.
+
+% better performance is obtained.
+%compared to the original \MNB approach. I
+% also investigated the combination of \MNB and \TF, %aiming to enhance the performance of the original \MNB approach. %to the potential benefits.%of .%their combined use. 
 
 The contributions of this paper are as follows:
 \begin{itemize}
@@ -54,6 +56,6 @@ The paper is structured as follows. Section \ref{sec:Background} presents the
 context of this work by means of a motivating example. In Section 
 \ref{sec:ProposedApproach}, we present the \TF approach. Its evaluation is  
 presented in Section \ref{sec:Evaluation}. Section 
-\ref{sec:ExperimentalResults} discusses relevant findings and related works are 
+\ref{sec:ExperimentalResults} discusses relevant findings, and the related work is 
 summarized in  Section \ref{sec:RelatedWorks}. Finally, we conclude the paper 
 and discuss possible future work in Section \ref{sec:Conclusions}.
