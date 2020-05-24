@@ -83,6 +83,7 @@ A higher value of topic frequency negatively impacts on the global catalog cover
 \subsection{\rqsecond} \label{sec:EXP3}
 
 
+It is worth noting that we cannot directly compare \TF with \MNB since they rely on different input data. To be concrete, \TF is a supervised learning system that requires an initial set of assigned topics for the training, whereas \MNB is unsupervised learning and it uses only information mined from README files to recommend, without making use of any topics as input. 
 
 Due to the internal construction of the \MNB, the direct comparison of the two approaches can bring biased results. Thus, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \TF with the results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. 
 We conduct our experiment on two of the proposed datasets, \ie  $D_{20}$, and  $D_{1}$ that are the detasets with lower and higher topic to be recommended respectively.
@@ -143,9 +144,11 @@ These findings can be explained by considering the nature of the considered topi
 
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-\textbf{Answer to RQ$_2$.} Compared to \MNB, \TFb substantially improves the prediction performance. By varying both the input and output number of topics, the accuracy and success rate experienced an enhancement even though the former reached low values. The \MNB lacks in catalog coverage, as clearly demonstrated by the higher value of the entangled experiment.
+\textbf{Answer to RQ$_2$.} Compared to \MNB, \TFb substantially improves the prediction performance. While \MNB suffers a low catalog coverage, \TFb is able to recommend a wide range of topics to repositories.
 \end{tcolorbox}
 
+%, as clearly demonstrated by the higher value of the entangled experiment
+%By varying both the input and output number of topics, the accuracy and success rate experienced an enhancement even though the former reached low values. 
 
 
 
