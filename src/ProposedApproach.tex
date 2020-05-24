@@ -241,7 +241,10 @@ For explanatory purposes, we consider a set of four projects $P=\{p_1,p_2,p_3,p_
 
 %a profitable and flexible data representation for enabling numerous computation techniques such as the one defined ~\cite{Nguyen:2019:FRS:3339505.3339636},\cite{8498236} 
 
-This component relies on the information extracted from very similar project to recommend relevant topics to the input repository. We represent a set of projects and their topics in a graph~\cite{Nguyen:2019:FRS:3339505.3339636}, so as to calculate the similarities among the projects. Two nodes in a graph are considered to be similar if they share the same neighbors by considering their edges. Such technique has been successfully exploited by many studies to do the same task~\cite{BRIGUEZ20146467} in different domains.
+This component relies on the information extracted from very similar project to recommend relevant topics to the input repository. We represent a set of projects and their topics in a graph~\cite{Nguyen:2019:FRS:3339505.3339636}, so as to calculate the similarities among the projects.
+For instance, Figure~\ref{fig:Graph} depicts the graph-based representation of the project-topic matrix of Table~\ref{tab:repo-topic-matrix} 
+
+Two nodes in a graph are considered to be similar if they share the same neighbors by considering their edges. Such technique has been successfully exploited by many studies to do the same task~\cite{BRIGUEZ20146467} in different domains.
 
 %,\cite{DiNoia:2012:LOD:2362499.2362501}
 %By looking at the graph in Fig.~\ref{fig:Graph}, we notice that $p_1$ and $p_2$ share two neighbor nodes, \ie  $topic_{2}$ and $topic_{3}$. %From the graph, we can also learn additional information about the topics themselves. For example, $topic_{3}$ seems a very popular term since is pointed by three different projects. 
