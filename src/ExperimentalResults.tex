@@ -57,7 +57,7 @@ For this setting, the number of recommended items \emph{N} was varied from 1 to 
 
 %As defined in Section~\ref{sec:metrics}, 
 
-Catalog coverage measures the percentage of recommended topic in the training data that the model is able to recommend on a test set. In our experiment, we measured the catalog coverage value among topics, \ie 15,743. Table~\ref{tab:coverage} reports the average coverage value for the considered datasets, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$). %all ten rounds. 
+Catalog coverage measures the percentage of recommended topic in the training data that the model is able to recommend on a test set, and a higher value corresponds to a better coverage. In our experiment, we measured the catalog coverage value among topics, \ie 15,743. Table~\ref{tab:coverage} reports the average coverage value for the considered datasets, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$). %all ten rounds. 
 The average catalog coverage of all folds decreases from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$) because there are no training data to recommend infrequent topics. 
 %The catalog coverage decreases because there are no training data to recommend infrequent topics. In particular, the average \emph{Global coverage} values decrease from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$).
 Having a higher value of \emph{t} has a negative impacts on the global catalog coverage value, because too many training data are discarded due to the topic frequency cut-off \emph{t}. Differently from the discussed metric outcomes, this experiment shows how an higher values of topic frequency cut-off negatively impacts on the catalog coverage metric.
@@ -75,7 +75,8 @@ In the methodology described in Section~\ref{sec:methodology-metric}, for each r
 On the other hand, a higher cut-off value \emph{t} negatively impacts on the global catalog coverage. For this reason, \emph{t} should be careful selected during the filtering phase to obtain balanced results in term of accuracy, success rate, and global catalog coverage.
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-\textbf{Answer to RQ$_1$.} The evaluation demonstrates that \TF achieves a better performance in terms of success rate and accuracy by increasing the number of considered neighbors \emph{k} and filtered data \emph{t}. %The number of neighbors and the topic filters contribute to this improvement. 
+\textbf{Answer to RQ$_1$.} \TF achieves a better performance in terms of success rate and accuracy when more similar projects are considered for recommendation
+%\emph{k} and filtered data \emph{t}. %The number of neighbors and the topic filters contribute to this improvement. 
 A higher value of topic frequency negatively impacts on the global catalog coverage.
 %However, the precision and recall values are still low, suggesting that bias lives in the users topic.
 \end{tcolorbox}
@@ -85,8 +86,7 @@ A higher value of topic frequency negatively impacts on the global catalog cover
 
 \subsection{\rqsecond} \label{sec:EXP3}
 
-
-It is worth noting that we cannot directly compare \TF with \MNB since they rely on different input data. To be concrete, \TF is a supervised learning system that requires an initial set of assigned topics for the training, whereas \MNB is unsupervised learning and it uses only information mined from README files to recommend, without making use of any topics as input. 
+As already reasoned in Section~\ref{sec:methodology-metric}, it is not feasible to directly compare \TF with \MNB, as they rely on different input data. \TF is a supervised learning system that requires an initial set of assigned topics for the training, whilst \MNB is unsupervised learning and it uses only information mined from README files to recommend, without making use of any topics as input. However, we can compare.
 
 Due to the internal construction of the \MNB, the direct comparison of the two approaches can bring biased results. Thus, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \TF with the results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. 
 We conduct our experiment on two of the proposed datasets, \ie  $D_{20}$, and  $D_{1}$ that are the detasets with lower and higher topic to be recommended respectively.
