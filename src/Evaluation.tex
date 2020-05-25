@@ -52,13 +52,48 @@ To facilitate future research, we made available the \TF tool together with the 
 
 % \cite{MNBreplication}.
 
-To study our proposed approach, we reused the same dataset employed to evaluate \MNB.\footnote{\url{https://github.com/MDEGroup/MNB\_TopicRecommendation/}} A preprocessing phase was performed to improve the dataset's quality as follows~\cite{repo-topix}. First, we filtered the initial set of topics using their frequencies counted on the entire \GH dataset. Afterwards, we removed irrelevant topics to reduce probable noise during the prediction phase. Through the introduction of the \emph{cut-off} value~\cite{10.1145/3383219.3383227}, we gradually increase the frequency threshold to evaluate possible impacts on overall performances. %, thus we decide to apply it as a first step.
-%As \TF is able to retrieve both featured and not-featured topics, such a filtering process does not affect the quality of the collected data.
+To study our proposed approach, we reused the same dataset employed to evaluate 
+\MNB and made available by the authors of that technique in a replication 
+package.\footnote{\url{https://github.com/MDEGroup/MNB\_TopicRecommendation/}} 
+%
+%A preprocessing phase was performed to improve the dataset's quality as 
+%follows~\cite{repo-topix}. 
+%
+In particular, to investigate \TF's prediction performances, we populated five 
+different datasets starting from the original \MNB corpus by varying the 
+cut-off value \emph{t}, \ie the maximum frequency of the topic distribution (it 
+is detailed in Section~\ref{sec:methodology-metric}). In this way, we removed 
+infrequent elements from the dataset to analyze their impacts on the overall 
+recommendation phase. We firstly filtered the initial set of topics using their 
+frequencies counted on the entire \GH dataset. Afterwards, we removed 
+irrelevant topics to reduce probable noise during the prediction phase. Through 
+the introduction of the \emph{cut-off} value~\cite{10.1145/3383219.3383227}, we 
+gradually increase the frequency threshold to evaluate possible impacts on 
+overall performances. %, thus we decide to apply it as a first step.
+%As \TF is able to retrieve both featured and not-featured topics, such a 
+%filtering process does not affect the quality of the collected data.
 
 
-We developed the filter by means of tailored Python scripts and applied it to the initial dataset. As a \GH user can manually specify a topic list for a repository, many of them can contain infrequent or improper terms, \ie the name of the author, duplicated values, or terms that rarely appear, to name a few. On one hand, imposing such a preprocessing phase reduces the number of repositories to analyze as well as topics to recommend. On the other hand, we improve the overall quality of recommendation by removing \emph{``bad''} terms. This pruning phase can be done offline and does not affect the time required for the recommendation process.
+We developed the filtering process by means of tailored Python scripts and 
+applied it to the initial dataset. As a \GH user can manually specify a topic 
+list for a repository, many of them can contain infrequent or improper terms, 
+\ie the name 
+of the author, duplicated values, or terms that rarely appear, to name a few. 
+On one hand, imposing such a preprocessing phase reduces the number of 
+repositories to analyze as well as topics to recommend. On the other hand, we 
+improve the overall quality of recommendation by removing \emph{``bad''} terms. 
+This pruning phase can be done offline and does not affect the time required 
+for the recommendation process.
 
-To further investigate \TF's prediction performances, we populated five different datasets starting from the original corpus by varying the cut-off value \emph{t}, \ie the maximum frequency of the topic distribution (it will be detailed in Section~\ref{sec:methodology-metric}). In this way, we removed infrequent elements from the dataset to analyze the impacts on the recommendation phase as well as on the composition of the dataset. Table \ref{tab:Datasets} summarizes the features of five datasets, \ie \textbf{D$_1$}, \textbf{D$_5$}, \textbf{D$_{10}$}, \textbf{D$_{15}$}, and \textbf{D$_{20}$}, corresponding to \emph{t} = $\{1, 5, 10, 15, 20\}$. \emph{Avg. topics} is the average number of topics that the repositories include; \emph{Avg. freq. topics} is the average frequency of the topics in the dataset.%, \ie the average occurrences of the topics among  the considered repositories in the dataset.
+
+
+Table \ref{tab:Datasets} summarizes the features of five datasets, \ie 
+\textbf{D$_1$}, \textbf{D$_5$}, \textbf{D$_{10}$}, \textbf{D$_{15}$}, and 
+\textbf{D$_{20}$}, corresponding to \emph{t} = $\{1, 5, 10, 15, 20\}$. 
+\emph{Avg. topics} is the average number of topics that the repositories 
+include; \emph{Avg. freq. topics} is the average frequency of the topics in the 
+dataset.%, \ie the average occurrences of the topics among  the considered 
+%repositories in the dataset.
 
 
 %\begin{table}[h]
