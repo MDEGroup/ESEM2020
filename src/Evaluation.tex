@@ -19,14 +19,7 @@ To facilitate future research, we made available the \TF tool together with the 
 %We also exploited 
 %was also exploited 
 
-\begin{figure*}[h!]
-	\centering
-	\includegraphics[width=0.9\linewidth,keepaspectratio]{figs/evaluationCF.pdf}
-	%\vspace{-.3cm}
-	\caption{Evaluation Process.}
-	\label{fig:EvaluationProcess}
-	\vspace{-.3cm}
-\end{figure*}
+
 
 \subsection{Data Extraction} \label{sec:Dataset}
 
@@ -61,15 +54,17 @@ package.\footnote{\url{https://github.com/MDEGroup/MNB\_TopicRecommendation/}}
 %
 In particular, to investigate \TF's prediction performances, we populated five 
 different datasets starting from the original \MNB corpus by varying the 
-cut-off value \emph{t}, \ie the maximum frequency of the topic distribution (it 
+\textit{cut-off} value~\cite{10.1145/3383219.3383227} \emph{t}, \ie the 
+maximum frequency of the topic distribution (it 
 is detailed in Section~\ref{sec:methodology-metric}). In this way, we removed 
 infrequent elements from the dataset to analyze their impacts on the overall 
 recommendation phase. We firstly filtered the initial set of topics using their 
 frequencies counted on the entire \GH dataset. Afterwards, we removed 
-irrelevant topics to reduce probable noise during the prediction phase. Through 
-the introduction of the \emph{cut-off} value~\cite{10.1145/3383219.3383227}, we 
-gradually increase the frequency threshold to evaluate possible impacts on 
-overall performances. %, thus we decide to apply it as a first step.
+irrelevant topics to reduce probable noise during the prediction phase. 
+%Through 
+%the introduction of the \emph{cut-off} value, we 
+%gradually increase the frequency threshold to evaluate possible impacts on 
+%overall performances. %, thus we decide to apply it as a first step.
 %As \TF is able to retrieve both featured and not-featured topics, such a 
 %filtering process does not affect the quality of the collected data.
 
@@ -89,8 +84,9 @@ for the recommendation process.
 
 Table \ref{tab:Datasets} summarizes the features of five datasets, \ie 
 \textbf{D$_1$}, \textbf{D$_5$}, \textbf{D$_{10}$}, \textbf{D$_{15}$}, and 
-\textbf{D$_{20}$}, corresponding to \emph{t} = $\{1, 5, 10, 15, 20\}$. 
-\emph{Avg. topics} is the average number of topics that the repositories 
+\textbf{D$_{20}$}, corresponding to the cut-off value \emph{t} = $\{1, 5, 10, 
+15, 20\}$. \emph{Avg. topics} is the average number of topics that the 
+repositories 
 include; \emph{Avg. freq. topics} is the average frequency of the topics in the 
 dataset.%, \ie the average occurrences of the topics among  the considered 
 %repositories in the dataset.
@@ -130,27 +126,46 @@ dataset.%, \ie the average occurrences of the topics among  the considered
 
 
 
-%<<<<<<< HEAD
-As we will see in Section~\ref{sec:ExperimentalResults}, removing infrequent topics improves the overall quality of the considered datasets: %Similarly to the other collaborative filtering approaches, the overall prediction performance strongly depends on the dataset. As we will demonstrate in the next section, 
-the collaborative filtering provides better prediction performance when there is enough data, \ie topics in the training set. %to resemble the repository behaviour. 
-Once infrequent topics have been removed, all the repositories that contain less then five topics are filtered out from the dataset, as they contain little information to enable the collaborative filtering prediction. In particular, we remove around 2,300 repositories by increasing the cut-off value from 1 to 5. It means that the excluded repositories in Dataset D$_5$ are tagged with topics that rarely appear in the considered repositories. This finding is strengthened by the number of topics, which dramatically decreases to 1,989 when t=5. %The other datasets confirm this trend even though the delta of removed repositories goes down at each filtering step. 
-We stop at t=20 and consider Dataset D$_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 9.9 and 7.7 topics on average for \emph{t} = 1 and \emph{t} = 20, respectively. This demonstrates that a large number of topics are not beneficial to the discoverability of a project.
-
-\begin{figure*}[h!]
-\centering
+\begin{figure*}[t!]
+	\centering
 	\begin{tabular}{c c }	
-	\subfigure[Dataset D$_5$]{\label{fig:dt5_stars}
-	\includegraphics[width=0.45\linewidth]{figs/dataset_5_stars.pdf}} &
-	\subfigure[Dataset D$_{10}$]{\label{fig:dt10_stars}
-	\includegraphics[width=0.45\linewidth]{figs/dataset_10_stars.pdf}} \\
-\subfigure[Dataset D$_{15}$]{\label{fig:dt15_stars}
-	\includegraphics[width=0.45\linewidth]{figs/dataset_15_stars.pdf}} & 	
-\subfigure[Dataset D$_{20}$]{\label{fig:dt20_stars}
-	\includegraphics[width=0.45\linewidth]{figs/dataset_20_stars.pdf}}\\	
+		\subfigure[Dataset D$_5$]{\label{fig:dt5_stars}
+			\includegraphics[width=0.45\linewidth]{figs/dataset_5_stars.pdf}} &
+		\subfigure[Dataset D$_{10}$]{\label{fig:dt10_stars}
+			\includegraphics[width=0.45\linewidth]{figs/dataset_10_stars.pdf}} 
+			\\
+		\subfigure[Dataset D$_{15}$]{\label{fig:dt15_stars}
+			\includegraphics[width=0.45\linewidth]{figs/dataset_15_stars.pdf}} 
+			& 	
+		\subfigure[Dataset D$_{20}$]{\label{fig:dt20_stars}
+			\includegraphics[width=0.45\linewidth]{figs/dataset_20_stars.pdf}}\\
+				
 	\end{tabular} 
-	\caption{A summary of the number of forks and stars for the datasets.} %Quality analysis of the examined datasets
+	\caption{A summary of the number of forks and stars for the datasets.} 
+	%Quality analysis of the examined datasets
 	\label{fig:comparison}
 \end{figure*}
+
+%<<<<<<< HEAD
+As discussed in Section~\ref{sec:ExperimentalResults}, removing infrequent 
+topics improves the overall quality of the considered datasets: %Similarly to 
+%the other collaborative filtering approaches, the overall prediction 
+%performance strongly depends on the dataset. As we will demonstrate in the 
+%next 
+%section, 
+the collaborative filtering provides better prediction performance when there is enough data, \ie topics in the training set. %to resemble the repository behaviour. 
+Once infrequent topics have been removed, all the repositories that contain 
+less then five topics are filtered out from the dataset, as they contain little 
+information to enable the collaborative filtering prediction. In particular, we 
+remove around 2,300 repositories by increasing the cut-off value from 1 to 5. 
+It means that the excluded repositories in Dataset D$_5$ are tagged with topics 
+that rarely appear in the considered repositories. This finding is strengthened 
+by the number of topics, which dramatically decrease to 1,989 when t=5. %The 
+%other datasets confirm this trend even though the delta of removed 
+%repositories 
+%goes down at each filtering step. 
+We stop at t=20 and consider Dataset D$_{20}$ as the best one according to our metrics. Additionally, we observe that repositories are tagged by 9.9 and 7.7 topics on average for \emph{t} = 1 and \emph{t} = 20, respectively. This demonstrates that a large number of topics are not beneficial to the discoverability of a project.
+
 
  
 %=======
@@ -159,7 +174,11 @@ We stop at t=20 and consider Dataset D$_{20}$ as the best one according to our m
 
 %Furthermore, we evaluate the quality of the OSS project belonging to the examined dataset. As mentioned before, the \GH community assesses this aspect by mainly using forks and stars. 
 
-From the list of the projects, we exploited the \GH API to query for the number of stars and forks, and their relationship is plotted it in Fig.~\ref{fig:comparison}. %shows the comparison among all the examined datasets. 
+From the list of projects under analysis, we exploited the \GH API to retrieve 
+their number of stars and forks. A summary of the retrieved data is plotted it 
+in 
+Fig.~\ref{fig:comparison}. %shows the comparison among all the examined 
+%datasets. 
 Forking is a means to contribute to the original repositories, %~\cite{Jiang:2017:WDF:3042021.3042043}. 
 furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it is further witnessed in Fig.~\ref{fig:comparison}. A project with a high number of forks means that it gets attention from the OSS community. A repository with a large number of forks can be considered as a well-maintained and well-received project. Whereas, since commits also have an influence on source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed. As can be seen, most of the repositories possess a number of stars and forks less than 5,000. A small fraction of them have more than 30,000 forks and 10,000 stars. In this respect, we see that dataset exhibits a wide variety of quality with respect to the number of forks and stars.
 %filtering repositories by the cut-off value \emph{t} helps smooth the distribution. 
@@ -182,8 +201,20 @@ furthermore, there is a strong correlation between forks and stars~\cite{7816479
 
 \subsection{Metrics}\label{sec:metrics}
 
+\begin{figure*}[t!]
+	\centering
+	\includegraphics[width=0.9\linewidth,keepaspectratio]{figs/evaluationCF.pdf}
+	%\vspace{-.3cm}
+	\caption{Evaluation Process.}
+	\label{fig:EvaluationProcess}
+	\vspace{-.3cm}
+\end{figure*}
+
+
 %In the context of recommendation systems, several metrics have been proposed to evaluate a ranked list of recommended items \cite{DBLP:conf/rweb/NoiaO15}. 
-In the scope of this paper, \emph{success rate} \emph{accuracy}, and \emph{catalog coverage} are used to study the systems' performance as they have been widely exploited by related research~\cite{Robillard:2014:RSS:2631387}. 
+In the scope of this paper, \emph{success rate} \emph{accuracy}, and 
+\emph{catalog coverage} are used to study the \TF performance as they have 
+been widely exploited by related research~\cite{Robillard:2014:RSS:2631387}. 
 % and other studies~\cite{6671293},\cite{Nguyen:2015:ESP:2740908.2742141}.
 %Before defining the metrics involved in the experiment, we present the following notations to make easier the understanding of the considered metrics:
 First, we introduce the following notations as a base for further presentation:% to make easier the understanding of the metrics involved in our experiment:
@@ -211,6 +242,7 @@ First, we introduce the following notations as a base for further presentation:%
 success\ rate@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | > 0 ) }{\left | P \right |} %\times 100\%
 %success\ rate@N=\frac{ count_{p \in P}( \left | GT(p) \bigcap (\cup_{r=1}^{N} REC_{r}(p)) \right | > 0 ) }{\left | P \right |}
 \end{equation}
+
 \vspace{.1cm}
 %\vspace{.1cm}
 %\noindent \JDR{Check if it will be used} \textbf{Success rate$_M$@N.} Given a set of testing projects \emph{P}, this metric measures the rate at which a recommender system returns at least $M$ topics match among \emph{top-N} items for every project $p \in P$ \cite{6671293}: %It is formally defined as given below:
@@ -259,13 +291,15 @@ This metric measures the suitability of the delivered topics considering all the
 coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | T \right |} 
 \end{equation}
 
-\vspace{.1cm}
-%\vspace{.1cm}
+
 
 
 
 
 \subsection{Evaluation process}\label{sec:methodology-metric}
+
+
+
 The \emph{ten-fold cross-validation} technique~\cite{kohavi1995study} has been used to assess the performance of \TF and to compare it with \MNB. %and combined approach where every time $9$ folds 
 %(each one contains $625$ projects) 
 %are used for training and the remaining one for testing.
@@ -276,7 +310,11 @@ For each testing project \emph{p}, we randomly deleted a half of its topics and 
 \vspace{.1cm}
 \noindent\textbf{Data Preparation.}
 This phase is conducted to collect repositories that match the requirements defined in previous section from GitHub during the \textit{Data collection} step. %The dataset is used to evaluate \TF, \MNB, and the combination of two. 
-The dataset is then split into a training and testing set, \ie \code{ Split ten-fold}. Due to the different nature of the recommender systems, \ie \MNB requires \textit{README} files as input and training data, whereas \TF uses a set of assigned topics as input and for training the, the testing and training data needs to be specifically prepared for each approach.
+The dataset is then split into a training and testing set, \ie \code{ Split 
+ten-fold}. Due to the different nature of the recommender systems, \ie \MNB 
+requires \textit{README} files as input and training data, whereas \TF uses a 
+set of assigned topics as input and for training. Thus, testing and training 
+data needs to be specifically prepared for each approach.
 The \code{Split topic} activity resembles a real development process where a developer has already included some topics in the repository, \ie \textit{Query topics} and waits for recommendations. 
 
 %\ie additional topics to be incorporated. \TF recommender system is expected to provide her with the other half, \ie \code{ GT topics}.
