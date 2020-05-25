@@ -105,26 +105,35 @@ In this research question, we aim to show that augmenting \MNB with \TF helps im
 
 %Due to the internal construction of the \MNB, the direct comparison of the two approaches can bring biased results. Thus, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \TF with the results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. 
 
-We conducted experiments on two of the selected datasets, \ie $D_{1}$ and $D_{20}$, as they correspond to two distinct levels of data completeness: $D_{1}$ has more projects but with a lower quality, while $D_{1}$ has less data but with a higher quality. %With these two datasets, we aim at studying the performance of \TF in different . 
-
+We conducted experiments on two of the selected datasets, \ie $D_{1}$ and $D_{20}$, as they correspond to two distinct levels of data completeness: $D_{1}$ has more projects but with a lower quality, while $D_{1}$ has fewer data but with a higher quality. %With these two datasets, we aim at studying the performance of \TF in different . 
 %lower and higher topic to be recommended respectively.
 %Table \ref{tab:combined} summarizes the results of this experiment by comparing the \MNB and the entangled approach. From the previous assessment, we figured out that \TF reaches best results considering the Dataset $D_{20}$. Thus, we choose this one to conduct this second evaluation. 
-Furthermore, we varied the number of recommendation items as well as the number of input topics \ie \emph{N} and \emph{Tin} values respectively. From the previous assessment, we figured out that the number of inputs leading the best results is Tin=5. Thus, we compare the outcomes considering the minimum number of input topics provided by the \MNB, \ie Tin=2. The results demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage. We witness that \TF outperforms the \MNB by augmenting the number of recommended items. 
+%Furthermore, we varied the number of recommendation items as well as the number of input topics \ie \emph{N} and \emph{Tin} values respectively. From the previous assessment, we figured out that the number of inputs leading the best results is Tin=5. Thus, we compare the outcomes considering the minimum number of input topics provided by the \MNB, \ie Tin=2. 
+The success rate, precision, recall and coverage scores obtained for $D_{1}$ and $D_{20}$ are reported in Table~\ref{tab:combined_dt1} and Table~\ref{tab:combined_dt20}, respectively. 
+
+The results shown in Table~\ref{tab:combined_dt1} demonstrate that compared to \TF, \MNB obtains a better prediction performance in terms of success rate and precision for a ranked list with a low number of items, \ie N <= 6. In particular, with N=2, \MNB gets 0.240 as success rate, while the corresponding score by \TF for $\tau=5$ is 0.148. The same trend can be seen with recall and precision. This is understandable as \MNB relies on only README file(s) to function, and its performance is not affected by the number of considered topics. In contrast, \TF relies on input topics to provide recommendation, that is the reason why for a dataset with a low quality dataset (with respect to the number of topics), the performance by \TF is moderate. %.the success rate achieved by \MNB is better than that of 
+
+Table~\ref{tab:combined_dt1} also shows that, \TF outperforms \MNB when we consider a longer list of recommended items for $\tau$=5. To be concrete, starting from N=8.
+
+%The results demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage. We witness that \TF outperforms the \MNB by augmenting the number of recommended items. 
+%The results in Table~\ref{tab:combined_dt20} demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage.
+
+Table~\ref{tab:combined_dt1} also confirms this trend by performing the same experiment with \emph{D$_1$} dataset. We witness that \TF outperforms the \MNB by augmenting the number of recommended items. For both datasets \ie \emph{D$_1$} and \emph{D$_{20}$}, after K=8 the accuracy and success rate overcomes the \MNB results considering the \TF's best configuration even though the overall accuracy trend is decreasing. This happens because enlarging the set of recommended items impacts negatively on the precision values. Reversely, the success rate rises up to 0.855 and 0.531 with \emph{D$_1$} and \emph{D$_{20}$} respectively. As witnessed for the accuracy value, the \MNB records better results until a certain threshold of output items. This degradation in performance is due to the internal probabilistic model used by the approach. 
+
+
+\input{src/entangled_dt1}
+
+
+
+
+
 
 %In particular, after Out=8 the accuracy and success rate overcomes the \MNB results considering the \TF's best configuration even though the overall accuracy trend is decreasing. This happens because enlarging the set of recommended items impacts negatively on the precision values. Reversely, the success rate rises up to 0.855 with the best configuration of the entangled approach. As witnessed for the accuracy value, the \MNB records better results until a certain threshold of output items. This degradation in performance is due to the internal probabilistic model used by the approach. 
 
 
 
-
-
-
 %Table \ref{tab:combined_dt1} and~\ref{tab:combined_dt20}  summarize the results of this experiment by comparing the \MNB and the entangled approach for $D_1$ and $D_{20}$ respectively. 
 %For experiment purposes, we variate the number of recommendation items as well as the number of input topics \ie \emph{N} and \emph{Tin} values respectively. From the previous assessment (see Figure~\ref{fig:pr-input-topics}), we figured out that the number of inputs leading the best success rate results is 5. Thus, we compare the outcomes considering the minimum number of input topics provided by the \MNB, \ie Tin=2. 
-
-The results in Table~\ref{tab:combined_dt20} demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage.
-Table~\ref{tab:combined_dt1} also confirms this trend by performing the same experiment with \emph{D$_1$} dataset.
-We witness that \TF outperforms the \MNB by augmenting the number of recommended items. For both datasets \ie \emph{D$_1$} and \emph{D$_{20}$}, after K=8 the accuracy and success rate overcomes the \MNB results considering the \TF's best configuration even though the overall accuracy trend is decreasing. This happens because enlarging the set of recommended items impacts negatively on the precision values. Reversely, the success rate rises up to 0.855 and 0.531 with \emph{D$_1$} and \emph{D$_{20}$} respectively. As witnessed for the accuracy value, the \MNB records better results until a certain threshold of output items. This degradation in performance is due to the internal probabilistic model used by the approach. 
-\input{src/entangled_dt1}
 
 
 %\begin{table}[h]
