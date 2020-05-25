@@ -1,12 +1,12 @@
 % Please add the following required packages to your document preamble:
 % \usepackage{multirow}
-\begin{table*}[]
+\begin{table*}[t!]
 	\small
 \caption{Experimental results obtained by \TFb for Dataset $D_{1}$.}
 \begin{tabular}{|l | lll| lll |lll |lll|}
 	\hline
-	& \multicolumn{3}{l|}{\textbf{Recall}} & \multicolumn{3}{l|}{\textbf{Precision}} & \multicolumn{3}{l|}{\textbf{Success rate}} & \multicolumn{3}{l|}{ \textbf{Catalog coverage}} \\ \hline
-	$N$  & \textbf{MNB}     & \textbf{Tin=5}   & \textbf{Tin=2}  & \textbf{MNB}      & \textbf{Tin=5 }   & \textbf{Tin=2}   & \textbf{MNB}       & \textbf{Tin=5 }   & \textbf{Tin=2}    & \textbf{MNB}        & \textbf{Tin=5 }     & \textbf{Tin=2}      \\ \hline
+	& \multicolumn{3}{c|}{\textbf{Recall}} & \multicolumn{3}{c|}{\textbf{Precision}} & \multicolumn{3}{l|}{\textbf{Success rate}} & \multicolumn{3}{c|}{ \textbf{Catalog coverage}} \\ \hline
+	$N$  & \textbf{MNB}     & $\tau=5$   & $\tau=2$  & \textbf{MNB}      & $\tau=5$   & $\tau=2$   & \textbf{MNB}       & $\tau=5$   & $\tau=2$    & \textbf{MNB}        & $\tau=5$     & $\tau=2$      \\ \hline
                    
 2                  & 0.026 & 0.017             & 0.017             & 0.137 & 0.077             & 0.077             & 0.240 & 0.148             & 0.148             & 0.175 & 0.411             & 0.411             \\ \hline
 4                  & 0.042 & 0.035             & 0.039             & 0.123 & 0.081             & 0.090             & 0.383 & 0.287             & 0.283             & 0.314 & 0.617             & 0.802             \\ \hline
@@ -24,13 +24,13 @@
 \end{table*}
 
 
-\begin{table*}[]
+\begin{table*}[t!]
 	\small
 	\caption{Experimental results obtained by \TFb for Dataset $D_{20}$.}
 	\begin{tabular}{|l | lll| lll |lll |lll|}
 		\hline
-		& \multicolumn{3}{l|}{\textbf{Recall}} & \multicolumn{3}{l|}{\textbf{Precision}} & \multicolumn{3}{l|}{\textbf{Success rate}} & \multicolumn{3}{l|}{ \textbf{Catalog coverage}} \\ \hline
-		$N$  & \textbf{MNB}     & \textbf{Tin=5}   & \textbf{Tin=2}  & \textbf{MNB}      & \textbf{Tin=5 }   & \textbf{Tin=2}   & \textbf{MNB}       & \textbf{Tin=5 }   & \textbf{Tin=2}    & \textbf{MNB}        & \textbf{Tin=5 }     & \textbf{Tin=2}      \\ \hline
+		& \multicolumn{3}{c|}{\textbf{Recall}} & \multicolumn{3}{c|}{\textbf{Precision}} & \multicolumn{3}{l|}{\textbf{Success rate}} & \multicolumn{3}{c|}{ \textbf{Catalog coverage}} \\ \hline
+		$N$  & \textbf{MNB}     & $\tau=5$   & $\tau=2$  & \textbf{MNB}      & $\tau=5$   & $\tau=2$   & \textbf{MNB}       & $\tau=5$   & $\tau=2$    & \textbf{MNB}        & $\tau=5$     & $\tau=2$      \\ \hline
 		%1  & 0,018   & 0,018   & 0,018  & 0,138    & 0,138    & 0,138   & 0,136     & 0,136    & 0,136    & 10.769     & 4.835      & 4.835      \\ \hline
 		2  & 0.035   & 0.031   & 0.031  & 0.206    & 0.118    & 0.118   & 0.363     & 0.217    & 0.217    & 9.068     & 8.593      & 8.593      \\ \hline
 		%3  & 0,047   & 0,047   & 0,060  & 0,118    & 0,118    & 0,151   & 0,301     & 0,301    & 0,367    & 19.780     & 12.483     & 12.571     \\ \hline
