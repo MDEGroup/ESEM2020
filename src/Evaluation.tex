@@ -54,7 +54,7 @@ package.\footnote{\url{https://github.com/MDEGroup/MNB\_TopicRecommendation/}}
 %
 In particular, to investigate \TF's prediction performances, we populated five 
 different datasets starting from the original \MNB corpus by varying the 
-\textit{cut-off} value~\cite{10.1145/3383219.3383227} \emph{t}, \ie the 
+\textit{cut-off} value \emph{t}~\cite{10.1145/3383219.3383227}, \ie the 
 maximum frequency of the topic distribution (it 
 is detailed in Section~\ref{sec:methodology-metric}). In this way, we removed 
 infrequent elements from the dataset to analyze their impacts on the overall 
@@ -83,11 +83,8 @@ for the recommendation process.
 
 
 Table \ref{tab:Datasets} summarizes the features of five datasets, \ie 
-\textbf{D$_1$}, \textbf{D$_5$}, \textbf{D$_{10}$}, \textbf{D$_{15}$}, and 
-\textbf{D$_{20}$}, corresponding to the cut-off value \emph{t} = $\{1, 5, 10, 
-15, 20\}$. \emph{Avg. topics} is the average number of topics that the 
-repositories 
-include; \emph{Avg. freq. topics} is the average frequency of the topics in the 
+D$_1$, D$_5$, D$_{10}$, D$_{15}$, and D$_{20}$, corresponding to different cut-off values \emph{t} = $\{1, 5, 10, 15, 20\}$. \emph{Avg. topics} is the average number of topics that the 
+repositories include; \emph{Avg. freq. topics} is the average frequency of the topics in the 
 dataset.%, \ie the average occurrences of the topics among  the considered 
 %repositories in the dataset.
 
@@ -175,8 +172,7 @@ We stop at t=20 and consider Dataset D$_{20}$ as the best one according to our m
 %Furthermore, we evaluate the quality of the OSS project belonging to the examined dataset. As mentioned before, the \GH community assesses this aspect by mainly using forks and stars. 
 
 From the list of projects under analysis, we exploited the \GH API to retrieve 
-their number of stars and forks. A summary of the retrieved data is plotted it 
-in 
+their number of stars and forks. A summary of the retrieved data is plotted in 
 Fig.~\ref{fig:comparison}. %shows the comparison among all the examined 
 %datasets. 
 Forking is a means to contribute to the original repositories, %~\cite{Jiang:2017:WDF:3042021.3042043}. 
