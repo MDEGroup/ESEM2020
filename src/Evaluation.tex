@@ -201,7 +201,7 @@ their number of stars and forks. A summary of the retrieved data is plotted in
 Fig.~\ref{fig:comparison}. %shows the comparison among all the examined 
 %datasets. 
 Forking is a means to contribute to the original repositories, %~\cite{Jiang:2017:WDF:3042021.3042043}. 
-furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it is further witnessed in Fig.~\ref{fig:comparison}. A project with a high number of forks means that it gets attention from the OSS community. A repository with a large number of forks can be considered as a well-maintained and well-received project. Whereas, since commits also have an influence on source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed. As can be seen, most of the repositories possess a number of stars and forks less than 5,000. A small fraction of them have more than 30,000 forks and 10,000 stars. In this respect, we see that dataset exhibits a wide variety of quality with respect to the number of forks and stars.
+furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it is further witnessed in Fig.~\ref{fig:comparison}. A project with a high number of forks means that it garners attention from the developers community. A repository with a large number of forks can be considered as a well-maintained and well-received project. Whereas, since commits also have an influence on source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed. As can be seen, most of the repositories possess a number of stars and forks less than 5,000. A small fraction of them have more than 30,000 forks and 10,000 stars. In this respect, we see that the datasets exhibit a wide variety of quality with respect to the number of forks and stars.
 %filtering repositories by the cut-off value \emph{t} helps smooth the distribution. 
 %On one hand, 
 
@@ -248,11 +248,11 @@ First, we introduce the following notations as a base for further presentation:%
 %	\item For a testing project \emph{r}, a half of its topics are extracted and used as the ground-truth data named as \emph{GT(r)};
 	\item $REC_{N}(p)$ is the top-\emph{N}  suggested topics sorted in a descending order;% by considering the recommendation scores;  the outcome of \TF for a given repository \emph{p}, 
 	%\item $REC(r)$ is the \emph{top-N} topics recommended to a repository \emph{r}. It is a ranked list in descending order of real scores;
-	\item a recommended topic \emph{rt} to a repository \emph{r} is marked as a \emph{match} if $rt \in REC(r)$;
+	\item a recommended topic \emph{rt} to a repository \emph{p} is marked as a \emph{match} if $rt \in REC(p)$;
 	\item  $match_{N}(p)$ is the set of items in $REC_{N}(p)$ that match with those in \emph{GT(p)} for repository \emph{p}.
 \end{itemize}
 
-\noindent By using the notations, the success rate, accuracy and coverage metrics are defined as follows.  
+\noindent By means of the notations, the success rate, accuracy and coverage metrics are defined as follows.  
 
 %\JDR{Rephrase this section}
 
