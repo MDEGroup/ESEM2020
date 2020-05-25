@@ -24,9 +24,9 @@ Overall, it is evident that infrequent topics negatively affect the prediction o
 \begin{figure*}[t]
 \centering
 	\begin{tabular}{c c}	
-	\subfigure[N=5]{\label{fig:success-rateN5}
+	\subfigure[$\tau$=5]{\label{fig:success-rateN5}
 	\includegraphics[width=0.48\linewidth]{figs/successRateN@5.pdf}} &
-	\subfigure[N=10]{\label{fig:success-rateN10}
+	\subfigure[$\tau$=10]{\label{fig:success-rateN10}
 	\includegraphics[width=0.48\linewidth]{figs/successRateN@10.pdf}}	
 	\end{tabular} 
 	\caption{Success rate with 5 and 10 input topics.}
@@ -88,7 +88,7 @@ The figure demonstrates an evident outcome: by using more input topics as input 
 %On the other hand, a higher cut-off value \emph{t} negatively impacts on the global catalog coverage. For this reason, \emph{t} should be careful selected during the filtering phase to obtain balanced results in term of accuracy, success rate, and global catalog coverage.
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-\textbf{Answer to RQ$_1$.} \TFa achieves a better success rate and accuracy 
+\textbf{Answer to RQ$_1$.} Given a project, \TFa achieves a better success rate and accuracy 
 when more similar projects are considered for recommendation.
 %\emph{k} and filtered data \emph{t}. %The number of neighbors and the topic filters contribute to this improvement. 
 A higher cut-off value \emph{t} negatively impacts on the coverage; and using more topics as input data helps \TF improve the performance.
