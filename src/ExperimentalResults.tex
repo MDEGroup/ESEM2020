@@ -10,7 +10,7 @@ To find the configuration obtaining the best prediction performances, we experim
 %The latter value \emph{t} is used to select the input topics based on their frequencies: given an initial set of topics, we filter them with the cut-off value to reduce the noise in the original dataset. Then, the recommendation phase is enabled by varying the number of presented parameters. According to Section \ref{sec:methodology-metric}, N is the cut-off value and \emph{k} is the number of neighbours of the graph. We evaluate different configuration by setting N=1,5,10,15,20 and k=5,10,15,20,25. 
 %Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
 %As we rely on a collaborative filtering technique, the number of output topics, the number of neighbors, and the data preprocessing play an important role in the assessment. 
-We chose two different values of \emph{N}, \ie \emph{N} = $\{5, 10\}$, and five values of \emph{k}, \ie \emph{k} = $\{5, 10, 15, 20, 25\}$. Furthermore, we also considered all the five datasets defined in Section~\ref{sec:Dataset}, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, and $D_{20}$. The average success rates obtained by running the ten-fold cross-validation technique with \TFa are depicted in Fig.~\ref{fig:success-rateN5} and \ref{fig:success-rateN10}.
+We chose two different values of \emph{N}, \ie \emph{N} = $\{5, 10\}$, and five values of \emph{k}, \ie \emph{k} = $\{5, 10, 15, 20, 25\}$. Furthermore, we also considered all the five datasets defined in Section~\ref{sec:Dataset}, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, and $D_{20}$. The average success rates obtained by running the ten-fold cross-validation technique with \TFa are depicted in Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10}.
 
 %we use different topic frequency cut-off \emph{t} to remove very infrequent topics from the dataset. 
 %The bar charts in Fig.~\ref{fig:success-rateN5} and \ref{fig:success-rateN10} show the average success rates obtained by running the ten-fold cross-validation technique with \TFa. %divided by the different topic frequency cut-off \emph{t}
@@ -48,8 +48,9 @@ Next, we consider the influence of the number of neighbors k on the prediction p
 To further study \TF's performance, we computed and depicted in Fig.~\ref{fig:configs} the precision/recall curves (PRCs) for all the considered datasets. 
 %From the accuracy scores computed using Eq. (5) and Eq. (6), the Precision-Recall curves (PRCs) for all 10 rounds of validation and different values of k were sketched. 
 %The line graph depicts the precision and recall curves on average for all 10 rounds by considering 
-For this setting, the number of recommended items \emph{N} was varied from 1 to 20, aiming to study the performance for a long recommendation list. Each dot in a curve corresponds to precision and recall obtained for a specific value of \emph{N}. Furthermore, we fixed k=25 since this number of neighbors brings the best prediction outcomes among others, while still maintains a reasonable execution time. As a PRC close to the upper right corner represents a better precision/call~\cite{NGUYEN2020110460}, Fig.~\ref{fig:configs} demonstrates that by considering a dataset with more topics for each repository, \TFb is able to yield a better prediction performance. In particular, the worst precision/recall is seen by $D_{1}$, while the best one is obtained by $D_{20}$.
+For this setting, the number of recommended items \emph{N} was varied from 1 to 20, aiming to study the performance for a long recommendation list. Each dot in a curve corresponds to precision and recall obtained for a specific value of \emph{N}. Furthermore, we fixed k=25 since this number of neighbors brings the best prediction outcomes among others, while it still maintains a reasonable execution time. As a PRC close to the upper right corner represents a better precision/call~\cite{NGUYEN2020110460}, Fig.~\ref{fig:configs} demonstrates that by considering a dataset with more topics for each repository, \TFa is able to yield a better prediction performance. In particular, the worst precision/recall relationship is seen by $D_{1}$, while the best one is obtained by $D_{20}$. Overall, these results are consistent with those presented in Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10}: using projects consisting of more input topics helps \TFa considerably enhance its performance.
 
+% an10 .
 %These outcomes have been obtained by keeping 25 as the number of neighbours \emph{k} because we have already discussed that higher values of neighbours reach better prediction performances.
 %Overall, the precision and recall values rise when the \emph{t} cut-off grows. Given that better prediction performance appears near to the upper right corner, the figure shows that a higher value of \emph{t} reaches better accuracy for all values of \emph{N}.
 
@@ -57,12 +58,19 @@ For this setting, the number of recommended items \emph{N} was varied from 1 to 
 
 %As defined in Section~\ref{sec:metrics}, 
 
-Catalog coverage measures the percentage of recommended topic in the training data that the model is able to recommend on a test set, and a higher value corresponds to a better coverage. In our experiment, we measured the catalog coverage value among topics, \ie 15,743. Table~\ref{tab:coverage} reports the average coverage value for the considered datasets, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$). %all ten rounds. 
-The average catalog coverage of all folds decreases from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$) because there are no training data to recommend infrequent topics. 
-%The catalog coverage decreases because there are no training data to recommend infrequent topics. In particular, the average \emph{Global coverage} values decrease from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$).
-Having a higher value of \emph{t} has a negative impacts on the global catalog coverage value, because too many training data are discarded due to the topic frequency cut-off \emph{t}. Differently from the discussed metric outcomes, this experiment shows how an higher values of topic frequency cut-off negatively impacts on the catalog coverage metric.
+Next, we investigate if \TFa can recommend a wide range of topics to repositories by considering catalog coverage. The metric measures the percentage of recommended topic in the training data that the model is able to recommend on a test set, and a higher value corresponds to a better coverage. 
+%In our experiment, we measured the metric among topics, \ie 15,743. 
+Table~\ref{tab:coverage} reports the average coverage value for the considered datasets, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$. %all ten rounds. 
 
-In the methodology described in Section~\ref{sec:methodology-metric}, for each repository \emph{r}, the evaluation outcomes consider the half part of real topics as input and remaining ones as ground truth data \emph{GT(r)}. Because of we are also interested to understand how the number of input topics impacts on prediction performance, Fig.~\ref{fig:pr-input-topics} shows the average success rate of all ten folds by choosing different number of input topics. Varying |\emph{t$_{in}$}| means changing the length of input topics that enable the \TF collaborative filtering recommender. In this picture we report the average success of all folds values with \emph{k} = 25 and \emph{t} = 20 as configuration settings. The success rate values exhibits an improvements when the size of input topic rises. This  behaviour demonstrate that \TF computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
+%The average catalog coverage of all folds decreases from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$) because there are no training data to recommend infrequent topics. 
+%The catalog coverage decreases because there are no training data to recommend infrequent topics. In particular, the average \emph{Global coverage} values decrease from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$).
+
+From the table, it is evident that using a higher cut-off value \emph{t} has a negative impacts on the global catalog coverage. For instance, with $D_{1}$ and N=2, we obtain 2.313 as coverage, and this score gradually decreases along \emph{t}, and shrinks to 0.715 with $D_{20}$. Similarly, by other values of N, catalog coverage is large for a low value \emph{t} and small for a high \emph{t}. This can be explained as follows: using a high value of \emph{t} means that a large amount of training data is discarded, and this also removes topics. Altogether, we see that by using a denser dataset for training, \ie projects with more topics, is beneficial to success rate, accuracy, but not to catalog coverage.
+
+%Differently from the discussed metric outcomes, this experiment shows how an higher values of topic frequency cut-off negatively impacts on the catalog coverage metric.
+
+As presented in Section~\ref{sec:methodology-metric}, given a testing project \emph{p}, we exploited a half of real topics as input, and used the remaining as ground truth data, \ie \emph{GT(p)}. We are interested to understand how the number of input topics impacts on prediction performance. Fig.~\ref{fig:pr-input-topics} reports the average success rate obtained by performing the cross validation. %ten folds by choosing different number of input topics. 
+Varying |\emph{t$_{in}$}| means changing the length of input topics that enable the \TF collaborative filtering recommender. In this picture we report the average success of all folds values with \emph{k} = 25 and \emph{t} = 20 as configuration settings. The success rate values exhibits an improvements when the size of input topic rises. This behaviour demonstrate that \TF computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=0.8\linewidth]{figs/successRate_inputTopic.pdf}
@@ -72,12 +80,12 @@ In the methodology described in Section~\ref{sec:methodology-metric}, for each r
 
 \input{src/coverageTable}
 
-On the other hand, a higher cut-off value \emph{t} negatively impacts on the global catalog coverage. For this reason, \emph{t} should be careful selected during the filtering phase to obtain balanced results in term of accuracy, success rate, and global catalog coverage.
+%On the other hand, a higher cut-off value \emph{t} negatively impacts on the global catalog coverage. For this reason, \emph{t} should be careful selected during the filtering phase to obtain balanced results in term of accuracy, success rate, and global catalog coverage.
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
 \textbf{Answer to RQ$_1$.} \TF achieves a better performance in terms of success rate and accuracy when more similar projects are considered for recommendation
 %\emph{k} and filtered data \emph{t}. %The number of neighbors and the topic filters contribute to this improvement. 
-A higher value of topic frequency negatively impacts on the global catalog coverage.
+A higher cut-off value \emph{t} negatively impacts on the global catalog coverage.
 %However, the precision and recall values are still low, suggesting that bias lives in the users topic.
 \end{tcolorbox}
 
@@ -86,7 +94,7 @@ A higher value of topic frequency negatively impacts on the global catalog cover
 
 \subsection{\rqsecond} \label{sec:EXP3}
 
-As already reasoned in Section~\ref{sec:methodology-metric}, it is not feasible to directly compare \TF with \MNB, as they rely on different input data. \TF is a supervised learning system that requires an initial set of assigned topics for the training, whilst \MNB is unsupervised learning and it uses only information mined from README files to recommend, without making use of any topics as input. However, we can compare.
+As already reasoned in Section~\ref{sec:methodology-metric}, it is not feasible to directly compare \TF with \MNB, as they are based on different mechanisms. \TF relies on a supervised learning technique, requiring an initial set of assigned topics for the training. Meanwhile, \MNB works on the basis of an unsupervised learning system, which needs only information mined from README files to recommend, without being fed with any input topics. %as input. %However, we can compare.
 
 Due to the internal construction of the \MNB, the direct comparison of the two approaches can bring biased results. Thus, we combined the two approaches to investigate potential improvements. We create this \emph{entagled} configuration by feeding \TF with the results of the \MNB. This simulates the exact use case of the collaborative filtering approach, in which the developer is represented by the \MNB. 
 We conduct our experiment on two of the proposed datasets, \ie  $D_{20}$, and  $D_{1}$ that are the detasets with lower and higher topic to be recommended respectively.

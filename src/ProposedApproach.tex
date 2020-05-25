@@ -257,7 +257,7 @@ is shown in Table~\ref{tab:repo-topic-matrix}.
 %\cite{DiNoia:2012:LOD:2362499.2362501},\cite{BRIGUEZ20146467}. Among 
 %other relationships, two nodes are deemed to be similar if they point to the same node with the same edge. By looking at the graph in 
 %Fig.~\ref{fig:Graph}, we can notice that $p_3$ and $p_4$ are highly 
-%similar since they both point to three nodes $topic_{1}, topic_{4}, topic_{5}$.  This 
+%similar since they both point to three nodes $t_{1}, t_{4}, t_{5}$.  This 
 %reflects what also suggested in a previous work by McMillan \etal 
 %\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common 
 %pieces of functionality by using a shared set of libraries.
@@ -287,34 +287,34 @@ This component relies on the previously encoded data to assess the similarity
 of given repositories. For explanatory reasons, we represent a set of projects 
 and their topics in a graph, so as to calculate the similarities among the 
 projects.For instance, Figure~\ref{fig:Graph} depicts the graph-based 
-representation of the project-topic matrix in Table~\ref{tab:repo-topic-matrix} 
+representation of the project-topic matrix in Table~\ref{tab:repo-topic-matrix}.  
 %
-Two nodes in a graph are considered to be similar if they share the same neighbors by considering their edges. Such technique has been successfully exploited by many studies to do the same task~\cite{BRIGUEZ20146467} in different domains.
+Two nodes in a graph are considered to be similar if they share the same neighbors by considering their edges. Such a technique has been successfully exploited by many studies to do the same task~\cite{BRIGUEZ20146467} in different domains.
 
 %,\cite{DiNoia:2012:LOD:2362499.2362501}
-%By looking at the graph in Fig.~\ref{fig:Graph}, we notice that $p_1$ and $p_2$ share two neighbor nodes, \ie  $topic_{2}$ and $topic_{3}$. %From the graph, we can also learn additional information about the topics themselves. For example, $topic_{3}$ seems a very popular term since is pointed by three different projects. 
+%By looking at the graph in Fig.~\ref{fig:Graph}, we notice that $p_1$ and $p_2$ share two neighbor nodes, \ie  $t_{2}$ and $t_{3}$. %From the graph, we can also learn additional information about the topics themselves. For example, $t_{3}$ seems a very popular term since is pointed by three different projects. 
 %The similarities calculator consider two project nodes $p$ and $q$ as similar in an OSS graph by considering their feature sets. 
 
-Given that $p$ has a set of neighbor nodes ($topic_{1}$, $topic_{2}$,.., 
-$topic_{l}$), the features of $p$ are represented by a vector 
+Given that $p$ has a set of neighbor nodes ($t_{1}$, $t_{2}$,.., 
+$t_{l}$), the features of $p$ are represented by a vector 
 $\phi=(\phi_{1},\phi_{2},..,\phi_{l})$, with $\phi_{i}$ being the weight of 
-node $topic_{i}$ computed as the \emph{term-frequency inverse document 
-frequency} function as follows: $\phi_{i} = f_{topic_{i}} \times log( \left | P 
-\right | \times a_{topic_{i}}^{-1} )$, where $f_{topic_{i}}$ is the number of 
-occurrences of $topic_{i}$ with respect to $p$, it can be either $0$ and $1$. 
-%since there is a maximum of one $topic_{i}$ connected to $p$ by the 
+node $t_{i}$ computed as the \emph{term-frequency inverse document 
+frequency} function as follows: $\phi_{i} = f_{t_{i}} \times log( \left | P 
+\right | \times a_{t_{i}}^{-1} )$, where $f_{t_{i}}$ is the number of 
+occurrences of $t_{i}$ with respect to $p$, it can be either $0$ and $1$. 
+%since there is a maximum of one $t_{i}$ connected to $p$ by the 
 %corresponding inclusion relation; 
 $\left | P \right |$ is the total number of 
 considered 
-projects; $a_{topic_{i}}$ is the number of projects connecting to $topic_{i}$ 
+projects; $a_{t_{i}}$ is the number of projects connecting to $t_{i}$ 
 via corresponding edges.
 % \emph{includes}.
 %\texttt{tf-idf}   of the node 
 %\vspace{-.1cm}
 %\begin{equation}\label{eqn:TFIDF}
-%\phi_{i} = f_{topic_{i}} \times log(\frac{ \left | P \right |}{a_{topic_{i}}})
+%\phi_{i} = f_{t_{i}} \times log(\frac{ \left | P \right |}{a_{t_{i}}})
 %\end{equation}
-%In the meanwhile, $topic_1$ and $topic_4$ are used only by one project, $p_1$ and $p_3$ respectively. 
+%In the meanwhile, $t_1$ and $t_4$ are used only by one project, $p_1$ and $p_3$ respectively. 
 %This reflects what also suggested in a previous work by McMillan \etal
 %\cite{McMillan:2012:DSS:2337223.2337267}, \ie similar projects implement common
 %pieces of functionality by using a shared set of libraries.
@@ -325,7 +325,7 @@ via corresponding edges.
 \label{fig:Graph}
 \end{figure}
 %\noindent
-%According to Eq.~\ref{eqn:TFIDF}, node $topic_{1}$ in Fig.~\ref{fig:Graph} has a low weight compared to that of other nodes since it is pointed by all four project nodes. In practice, this is comprehensible since \emph{junit:junit} is a very popular dependency and thus it should have a less important role in characterizing a project.
+%According to Eq.~\ref{eqn:TFIDF}, node $t_{1}$ in Fig.~\ref{fig:Graph} has a low weight compared to that of other nodes since it is pointed by all four project nodes. In practice, this is comprehensible since \emph{junit:junit} is a very popular dependency and thus it should have a less important role in characterizing a project.
 Intuitively, the similarity between two projects $p$ and $q$ with their corresponding feature vectors $\phi=\{\phi_{i}\}_{i=1,..,l}$ and $\omega=\{\omega_{j}\}_{j=1,..,m}$ is computed as the cosine of the angle between the two vectors as given below. %Eventually, the similarity between $p$ and $q$ with their corresponding feature vectors $\phi=\{\phi_{i}\}_{i=1,..,l}$ and $\omega=\{\omega_{j}\}_{j=1,..,m}$ is computed using the cosine similarity function:%\todo[size=\tiny, color=green!40]{Nr. 3}
 %\vspace{-.2cm}
 % $p$ and $q$ are characterized by using vectors in an $n$-dimensional space, and Eq.~\ref{eqn:VsmSim} measures
