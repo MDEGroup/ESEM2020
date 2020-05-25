@@ -74,12 +74,11 @@ following the same line of reasoning to mine \GH topics: \emph{``if projects hav
 %This is a preparatory phase for the next steps of the recommendation process. The developer interacts with \TF by sending a request for recommendations that includes the list of topics which she has already included for the repository that she is working on.
 %The aforementioned components are singularly described in the next sections. 
 
-In the following subsections, we describe two \TF configurations, namely \TFa 
-and \TFb to recommend relevant topics by incorporating different types of input 
-data. \TFa exploits a collaborative-filtering technique, while \TFb is a 
+In the following subsections, we describe two \TF configurations %, namely \TFa and \TFb 
+to recommend relevant topics by incorporating different types of input 
+data. The first configuration exploits a collaborative-filtering technique, while the second one is a 
 combination of both \MNB and \TFa, aiming to improve the prediction performance 
-of the original \MNB approach as proposed by the authors in their paper 
-\cite{10.1145/3383219.3383227}. % by combining it with \TFa. %\TF can be 
+of the original \MNB approach as proposed by the authors in their paper \cite{10.1145/3383219.3383227}. % by combining it with \TFa. %\TF can be 
 %%combined with \MNB to improve. %the collaborative filtering prediction 
 %%%performance.
 
@@ -153,7 +152,7 @@ is shown in Table~\ref{tab:repo-topic-matrix}.
 %inclusions between repositories and topics.
 
 \begin{table}[h!]
-
+	\caption{The \emph{project-topic matrix} of the explanatory example.}
 	\begin{tabular}{|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|p{0.5cm}|} \hline
 		& \emph{t$_1$} & \emph{t$_2$} & \emph{t$_3$} & \emph{t$_4$} & \emph{t$_{5}$} \\ \hline
 		$p_1$ & 1 & 1 & 0 & 0 & 1 \\ \hline
@@ -161,7 +160,6 @@ is shown in Table~\ref{tab:repo-topic-matrix}.
 		$p_3$ & 1 & 0 & 1 & 1 & 1 \\ \hline
 		$p_4$ & 1 & 1 & 0 & 0 & 1 \\ \hline
 	\end{tabular}
-	\caption{The \emph{project-topic matrix} of the explanatory example.}
     \label{tab:repo-topic-matrix}
 \end{table}
 
