@@ -1,22 +1,21 @@
-\GH is nowadays the most popular platform to handle and maintain OSS projects. 
+\GH is nowadays among the most popular platforms to handle and maintain OSS projects. 
 Topics have been introduced in 2017 to promote the project's visibility on the 
 platform. 
 %Although a couple of works face the problem, there are additional challenges 
 %to be faced. 
-In this work, we presented \CT, a collaborative filtering based recommender 
+In this work, we presented \TF, a collaborative filtering-based recommender 
 system to suggest \GH topics.  By encoding repositories and related topics in a 
 graph-based representation, we built a user-item matrix and apply a 
-syntactic-based similarity function to predict missing topics. To assess the 
-prediction performances, we compared \CT with a well-founded work based on an 
-ML technique in terms of success rate and accuracy. The results show that \CT 
-outperforms the opponent with a relevant improvement of the mentioned metrics. 
-Furthermore, we combined the two approaches by taking as input in \TF, the 
-output produced by \MNB. We shown that by means of such a combined usage of the 
-approaches, it is possible to obtain a significant boost in topic predictions. 
-Nevertheless, the accuracy didn't reach higher values in all the experimental 
-settings. To our best knowledge, it depends on the similarity function used in 
+syntactic-based similarity function to predict missing topics.
+%To assess the prediction performances, we compared \TF with a well-founded work based on an 
+%ML technique in terms of success rate and accuracy. The results show that \TF 
+%outperforms the opponent with a relevant improvement of the mentioned metrics. 
+To assess the prediction performances, we combined our approach with a well-founded system based on an ML algorithm, \ie \MNB. In particular, by taking as input in \TF, the 
+output produced by \MNB, we showed that by means of such a combined usage of the approaches, it is possible to obtain a significant boost in topic predictions. 
+Nevertheless, the accuracy did not reach higher values in all the experimental 
+settings. To our best knowledge, this depends on very much the similarity function used in 
 the recommendation engine as well as on the heterogeneity of the dataset. Thus, 
-we are planning to extend \CT by adding different degrees of similarity, \eg 
+we plan to extend \TF by adding different degrees of similarity, \eg 
 semantic analysis on topics. Moreover, we can enlarge the evaluation by 
 considering other common metrics in the collaborative filtering domain such as 
 sales diversity and novelty. All of this is planned as future work.
