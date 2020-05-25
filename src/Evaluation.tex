@@ -7,18 +7,43 @@
 
 %\revised{:q
 
-In this section, we report on the materials and methods used to evaluate \TF. %evaluation of \TF, having the {\em goal} of evaluating the performance of the proposed approach. 
-Section~\ref{sec:Dataset} presents the datasets exploited in the evaluation.   
+In this section, we report on the materials and methods used to evaluate \TF. 
+%evaluation of \TF, having the {\em goal} of evaluating the performance of the 
+%proposed approach. 
+Section~\ref{sec:ResearchQuestions} presents the research questions we want to 
+answer by means of the performed experiments. Section~\ref{sec:Dataset} 
+presents the datasets exploited in the evaluation. 
 Section~\ref{sec:metrics} and Section~\ref{sec:methodology-metric} describe the 
-evaluation metrics and process, respectively. The research questions 
-are presented in Section~\ref{sec:ResearchQuestions}.
-
-To facilitate future research, we made available the \TF tool together with the related data in a \GH repository.\footnote{\url{https://github.com/ESEM2020-TopFilter/TopFilter}}
+evaluation metrics and process, respectively. The experimental results are 
+discussed in the next section. To facilitate future research, we made available 
+the \TF tool together with the related data in a \GH 
+repository.\footnote{\url{https://github.com/ESEM2020-TopFilter/TopFilter}}
 
 %ten equal parts, so-called folds
 %We also exploited 
 %was also exploited 
 
+
+\subsection{Research Questions} \label{sec:ResearchQuestions}
+
+By performing the evaluation, we address the following research questions to 
+study the performance of the proposed approache:
+
+\begin{itemize}
+	\item \rqfirst We investigated different configurations of \TF\ie the 
+	number of input topics \emph{t} as well as the number of neighbors \emph{N} 
+	is varied, to find the best configuration. %and the considered number of 
+	%outcomes \emph{N}.
+	
+	%\item[--] \rqsecond Because of \TF and \MNB are completely different in 
+	%term of input data, we are interested in comparing them by considering 
+	%many 
+	%factors that can impact on the performance.
+	\item \rqsecond \TFb is an extended version of \MNB, thus we are interested 
+	in understanding if our proposed approach outperforms the original \MNB. 
+	%From an empirical point of view, it is relevant to analyze the combination 
+	%of the two approaches and measure its performances.
+\end{itemize}
 
 
 \subsection{Data Extraction} \label{sec:Dataset}
@@ -300,10 +325,19 @@ coverage@N = \frac{\left | \cup_{p\in P} REC_{N}(p) \right | }{\left | T \right 
 
 
 
-The \emph{ten-fold cross-validation} technique~\cite{kohavi1995study} has been used to assess the performance of \TF and to compare it with \MNB. %and combined approach where every time $9$ folds 
+The \emph{ten-fold cross-validation} technique~\cite{kohavi1995study} has been 
+used to assess the performance of \TF and its combined use with \MNB. %and 
+%combined approach where every time $9$ folds 
 %(each one contains $625$ projects) 
 %are used for training and the remaining one for testing.
-For each testing project \emph{p}, we randomly deleted a half of its topics and save them as ground-truth data, \emph{GT(p)}, which are then used to validate the recommendation outcomes. The remaining half topics are used as query topics to feed \TF. Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consisting of three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, and~\emph{Outcome Evaluation} and they are going to be explained as follows.
+%
+%For each testing project \emph{p}, we randomly deleted a half of its topics 
+%and save them as ground-truth data, \emph{GT(p)}, which are then used to 
+%validate the recommendation outcomes. The remaining half topics are used as 
+%query topics to feed \TF. 
+Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consisting of 
+three consecutive phases,~\ie~\emph{Data Preparation},~\emph{Recommendation}, 
+and~\emph{Outcome Evaluation} and they are going to be explained as follows.
 
 %\noindent
 %$\blacksquare$~\textbf{Data Preparation.} 
@@ -311,9 +345,9 @@ For each testing project \emph{p}, we randomly deleted a half of its topics and 
 \noindent\textbf{Data Preparation.}
 This phase is conducted to collect repositories that match the requirements defined in previous section from GitHub during the \textit{Data collection} step. %The dataset is used to evaluate \TF, \MNB, and the combination of two. 
 The dataset is then split into a training and testing set, \ie \code{ Split 
-ten-fold}. Due to the different nature of the recommender systems, \ie \MNB 
+ten-fold}. Due to the different nature of the recommender systems (\ie \MNB 
 requires \textit{README} files as input and training data, whereas \TF uses a 
-set of assigned topics as input and for training. Thus, testing and training 
+set of assigned topics as input and for training) testing and training 
 data needs to be specifically prepared for each approach.
 The \code{Split topic} activity resembles a real development process where a developer has already included some topics in the repository, \ie \textit{Query topics} and waits for recommendations. 
 
@@ -331,7 +365,7 @@ Finally, the combined approach uses \TF as the recommendation engine which is fe
 %$\blacksquare$~\textbf{Outcome Evaluation.} 
 \vspace{.1cm}
 \noindent\textbf{Outcome Evaluation.} In this stage, recommendation results are compared with those stored as ground-truth data to compute the quality metrics, \ie \textit{Success rate}, \textit{Precision}, \textit{Recall}, and \textit{Catalog coverage}) during the \textit{RQ$_1$} and \textit{RQ$_2$} evaluation activities.  
-
+%
 It is worth noting that we cannot directly compare \TF with \MNB since they rely on different input data. To be concrete, \TF is a supervised learning system that requires an initial set of assigned topics for the training, whereas \MNB is unsupervised learning and it uses only information mined from README files to recommend, without making use of any topics as input. 
 
 %, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
@@ -397,15 +431,6 @@ It is worth noting that we cannot directly compare \TF with \MNB since they rely
 
 
 
-\subsection{Research Questions} \label{sec:ResearchQuestions}
-
-By performing the evaluation, we address the following research questions to study the proposed approach's performance:
-\begin{itemize}
-	\item \rqfirst We investigated different configurations of \TF\ie the number of input topics \emph{t} as well as the number of neighbors \emph{N} is varied, to find the best configuration. %and the considered number of outcomes \emph{N}.
-	
-	%\item[--] \rqsecond Because of \TF and \MNB are completely different in term of input data, we are interested in comparing them by considering many factors that can impact on the performance.
-	\item \rqsecond \TFb is an extended version of \MNB, thus we are interested in understanding if our proposed approach outperforms the original \MNB. %From an empirical point of view, it is relevant to analyze the combination of the two approaches and measure its performances.
-\end{itemize}
 
 
-In the next section, we study the experimental results by answering the above mentioned research questions.
+
