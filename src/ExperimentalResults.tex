@@ -1,21 +1,25 @@
-This section analyzes the performance of \TF and compares it with \MNB by addressing the two research questions in Section~\ref{sec:EXP1} and Section~\ref{sec:EXP3}, respectively.
-
-%discusses the findings of the qualitative assessment. To address the formulated research questions, we perform two different experiments. Section \ref{sec:EXP1} discusses the \TF results by variating different parameters. % We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. 
-%The results obtained with the entangled approach (\ie the combination of \TF and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
-
 \begin{figure*}[t!]
 	\centering
 	\begin{tabular}{c c}	
 		\subfigure[N=5]{\label{fig:success-rateN5}
 			\includegraphics[width=0.48\linewidth]{figs/successRateN@5.pdf}}
-			 &
+		&
 		\subfigure[N=10]{\label{fig:success-rateN10}
 			\includegraphics[width=0.48\linewidth]{figs/successRateN@10.pdf}}
-				
+		
 	\end{tabular} 
 	\caption{Success rate with 5 and 10 input topics.}
 	\label{fig:success5_10}
 \end{figure*}
+
+This section analyzes the performance of \TF and compares it with \MNB by 
+addressing the two research questions in Section~\ref{sec:EXP1} and 
+Section~\ref{sec:EXP3}, respectively.
+
+%discusses the findings of the qualitative assessment. To address the formulated research questions, we perform two different experiments. Section \ref{sec:EXP1} discusses the \TF results by variating different parameters. % We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. 
+%The results obtained with the entangled approach (\ie the combination of \TF and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
+
+
 
 \subsection{\rqfirst} \label{sec:EXP1}
   
@@ -156,9 +160,29 @@ The success rate, precision, recall and coverage scores obtained for $D_{1}$ and
 
 The results in Table~\ref{tab:combined_dt1} demonstrate that compared to \TF, \MNB obtains a better prediction performance in terms of success rate, recall and precision for a ranked list with a low number of items, \ie N $\leq$ 4. In particular, with N=2, \MNB gets 0.240 as success rate, while the corresponding score by \TF for 0.148. The same trend can be seen with recall and precision. This is understandable as \MNB relies on only README file(s) to function, and its performance is not affected by the number of considered topics. In contrast, \TF needs input topics to provide recommendation, that is the reason why for a dataset with a low quality dataset (with respect to the number of topics), \TF gets a moderate performance. %.the success rate achieved by \MNB is better than that of 
 
-Table~\ref{tab:combined_dt1} also shows that \TF outperforms \MNB when we consider a longer list of recommended items. To be concrete, starting from N=6 (\ie the row marked with gray), all the metrics computed with \TF are superior to those computed with \MNB. For example, \TF gets 0.675 as the maximum success rate, while the corresponding score by \MNB is 0.662. More importantly, \TF always achieves a much better coverage than that of \MNB: By the best configuration, \TF reaches a coverage of 3.544, which is much higher than 0.768 obtained by \MNB. In other words, our proposed approach is able to recommend a wider range of topics than \MNB. This can be explained by the fact that \TF takes into consideration a set of topics as input, and the more data it has, the larger the set of topics it can recommend.
+Table~\ref{tab:combined_dt1} also shows that the combined use of \MNB and \TF 
+outperforms \MNB when we consider a longer list of recommended items. To be 
+concrete, starting from N=6 (\ie the row marked with gray), all the metrics 
+computed with \textit{MNBN+\TF} are superior to those computed with \MNB. For 
+example, \textit{MNBN+\TF} 
+gets 0.675 as the maximum success rate, while the corresponding score by \MNB 
+is 0.662. More importantly, \textit{MNBN+\TF} always achieves a much better 
+coverage than 
+that of \MNB: By the best configuration, \textit{MNBN+\TF} reaches a coverage 
+of 3.544, which 
+is much higher than 0.768 obtained by \MNB. In other words, our proposed 
+approach is able to recommend a wider range of topics than \MNB. This can be 
+explained by the fact that \TF takes into consideration a set of topics as 
+input, and the more data it has, the larger the set of topics it can recommend.
 
-By examining Table~\ref{tab:combined_dt20}, we encounter a similar outcome compared to that of Table~\ref{tab:combined_dt1}: \TF outperforms \MNB by all the quality metrics, \ie success rate, recall, precision and coverage. Especially, using $D_{20}$ as the training data, \TF improves the overall success rate considerably, with respect to using $D_{1}$. This further confirms our findings in RQ$_1$: A denser dataset facilitates the capability of recommending a more relevant set of topics. %to repositories.
+By examining Table~\ref{tab:combined_dt20}, we encounter a similar outcome 
+compared to that of Table~\ref{tab:combined_dt1}: \textit{MNBN+\TF} outperforms 
+\MNB by all the quality metrics, \ie success rate, recall, precision and 
+coverage. Especially, using $D_{20}$ as the training data, \textit{MNBN+\TF} 
+improves the 
+overall success rate considerably, with respect to using $D_{1}$. This further 
+confirms our findings in RQ$_1$: A denser dataset facilitates the capability of 
+recommending a more relevant set of topics. %to repositories.
 
 %The results demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage. We witness that \TF outperforms the \MNB by augmenting the number of recommended items. 
 %The results in Table~\ref{tab:combined_dt20} demonstrate that the \MNB gains notable improvement by means of the entangled configuration in terms of the mentioned metrics \ie accuracy, success rate, and catalog coverage.
@@ -214,7 +238,11 @@ By examining Table~\ref{tab:combined_dt20}, we encounter a similar outcome compa
 
 
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
-\textbf{Answer to RQ$_2$.} Compared to \MNB, \TFb substantially improves the prediction performance with respect to success rate, precision and recall. Moreover, while \MNB suffers a low catalog coverage, \TFb is able to recommend a wide range of topics to repositories.
+\textbf{Answer to RQ$_2$.} Compared to \MNB, the combined used of \MNB and \TFb 
+substantially improves the prediction performance with respect to success rate, 
+precision and recall. Moreover, while \MNB suffers a low catalog coverage, 
+\textit{MNBN+\TF} 
+is able to recommend a wide range of topics to repositories.
 \end{tcolorbox}
 
 %, as clearly demonstrated by the higher value of the entangled experiment
