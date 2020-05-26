@@ -6,7 +6,7 @@ over 100 million repositories. Because of this enormous amount of data, the
 availability of reusable projects might be compromised if they cannot be 
 suitably discovered. In recent years, \GH introduced a  mechanism based on 
 topics to explore repositories. The managed \GH repositories are being continuously 
-monitored and assigned topics to improve their organization. Moreover, 
+monitored and assigned with topics to improve their organization. Moreover, 
 repositories are periodically analyzed to extract the most popular and active 
 topics (\ie \emph{featured topics\footnote{\url{https://github.com/topics}}}). 
 Thus, users can observe the community's trend by consulting such a public list. 
@@ -46,7 +46,7 @@ relevant information from \RM file(s) and suggest a set of topics. Table
 \begin{tabular}{| p{3.2cm} | p{3.2cm} | }
 \hline
  \textbf{Actual Topics} &\textbf{ Recommended topics} \\ \hline
-     python,blender-scripts, spaceship, procedural-generation, 
+     python, blender-scripts, spaceship, procedural-generation, 
      game-development, 3d        &  
   shell, terminal, \textbf{3d},    opengl,    \textbf{python}        \\ \hline
 
@@ -65,9 +65,9 @@ repository.
 %
 For instance, \emph{blender-scripts}\footnote{blender is the most used python 
 library to manipulate 3d objects. \url{https://www.blender.org/}} as well as 
-\emph{game-development} could be recommended as possible topics because the 
-project includes both \emph{3d} and \emph{python} topics.
-In this way, \MNB does not express all the concepts covered by a \GH 
+\emph{game-development} (which are not featured topics) could be recommended as 
+possible topics because the project includes both \emph{3d} and \emph{python} 
+topics. Thus, \MNB does not express all the concepts covered by a \GH 
 repository. As shown in the table, only two of the predicted topics match 
 with the real ones. Moreover, in the case the repository already includes all 
 suggested topics, \MNB is not able to recommend new ones.
@@ -91,5 +91,7 @@ computes missing ratings by considering the ratings collected from similar
 users, whereas, the latter performs the same task by using the similarities 
 among items \cite{Cremonesi:2008:EMC:1468165.1468327}.
 
-In the following section, we show that the proposed collaborative-filtering approach can recommend missing topics for \GH repositories. Moreover, we also demonstrate that the accuracy of 
-our proposed approach is higher than that of \MNB.
+In the following section, we show that the proposed collaborative-filtering 
+approach can recommend missing topics for \GH repositories. Moreover, we also 
+demonstrate that it is possible to increase the accuracy of \MNB by combining 
+it with the proposed technique.
