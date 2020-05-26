@@ -19,7 +19,12 @@ This section analyzes the performance of \TF and compares it with \MNB by addres
 
 \subsection{\rqfirst} \label{sec:EXP1}
   
-To find the configuration obtaining the best prediction performances, we experimented %with different \TF configurations 
+As presented in Section~\ref{sec:methodology-metric}, given a 
+testing project \emph{p}, a certain number of topics is used as 
+input, \ie $\tau$, and the remaining ones are saved as ground 
+truth data, \ie \emph{GT(p)}. To find the configuration 
+obtaining the best prediction performances, we experimented 
+%with different \TF configurations 
 by varying the available parameters, \ie the number of 
 top-similar neighbour projects \emph{k}, the number of 
 recommended items \emph{N}. %, and the involved dataset.   %The 
@@ -29,7 +34,18 @@ recommended items \emph{N}. %, and the involved dataset.   %The
 %The latter value \emph{t} is used to select the input topics based on their frequencies: given an initial set of topics, we filter them with the cut-off value to reduce the noise in the original dataset. Then, the recommendation phase is enabled by varying the number of presented parameters. According to Section \ref{sec:methodology-metric}, N is the cut-off value and \emph{k} is the number of neighbours of the graph. We evaluate different configuration by setting N=1,5,10,15,20 and k=5,10,15,20,25. 
 %Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
 %As we rely on a collaborative filtering technique, the number of output topics, the number of neighbors, and the data preprocessing play an important role in the assessment. 
-To be more concrete, we chose two different values of \emph{N}, \ie \emph{N} = $\{5, 10\}$, and five values of \emph{k}, \ie \emph{k} = $\{5, 10, 15, 20, 25\}$. Furthermore, we also considered all the five datasets defined in Section~\ref{sec:Dataset}, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, and $D_{20}$. The average success rates obtained by running the ten-fold cross-validation technique with \TFa are depicted in Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10}.
+To be more concrete, we chose two different values of \emph{N}, 
+\ie \emph{N} = $\{5, 10\}$, and five values of \emph{k}, \ie 
+\emph{k} = $\{5, 10, 15, 20, 25\}$. Furthermore, we also 
+considered all the five datasets defined in 
+Section~\ref{sec:Dataset}, \ie $D_{1}$, $D_{5}$, $D_{10}$, 
+$D_{15}$, and $D_{20}$. The value of $\tau$ is always considered 
+as half of the number of topics related to the project under 
+analysis. In particular, given a testing project, the first half 
+of the related topics are used to construct the query. The 
+average success rates obtained by running the ten-fold 
+cross-validation technique with \TFa are depicted in 
+Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10}.
 
 %we use different topic frequency cut-off \emph{t} to remove very infrequent topics from the dataset. 
 %The bar charts in Fig.~\ref{fig:success-rateN5} and \ref{fig:success-rateN10} show the average success rates obtained by running the ten-fold cross-validation technique with \TFa. %divided by the different topic frequency cut-off \emph{t}
@@ -84,11 +100,22 @@ From the table, we see that by considering a longer list of items, \ie increasin
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.90\linewidth]{figs/successRate_inputTopic.pdf}
-	\caption{Success rates for $\tau$=$\{1,2,3,4,5\}$.}
+	\caption{Success rates for $\tau$=$\{1,2,3,4,5\}$ on 
+	\textit{D$_{20}$}.}
 	\label{fig:pr-input-topics}
 \end{figure} 
 
-As presented in Section~\ref{sec:methodology-metric}, given a testing project \emph{p}, a certain number of topics is used as input, \ie $\tau$, and the remaining ones are saved as ground truth data, \ie \emph{GT(p)}. We are interested to understanding how $\tau$ impacts on the prediction performance by performing a cross validation with $\tau$=$\{1,2,3,4,5\}$; Moreover, to simplify the evaluation, we fixed the number neighbors \emph{k} to 25 and the number of topics \emph{t} to 20. Fig.~\ref{fig:pr-input-topics} reports the average success rate obtained for two values of N, \ie N=$\{5,10\}$. %through our experiment. %ten folds by choosing different number of input topics. 
+
+
+We are also interested to understanding how $\tau$ impacts on 
+the prediction performance by performing a cross validation with 
+$\tau$=$\{1,2,3,4,5\}$; Moreover, to simplify the evaluation, we 
+fixed the number neighbors \emph{k} to 25 and the number of 
+topics \emph{t} to 20 and applied \TF on the dataset 
+\textit{D$_{20}$}. Figure~\ref{fig:pr-input-topics} reports 
+the average success rate obtained for two values of N, \ie 
+N=$\{5,10\}$. %through our experiment. %ten folds by choosing 
+%%different number of input topics. 
 %Varying $\tau$ means changing the length of input topics that enable the \TF collaborative filtering recommender. 
 %In this picture we report the average success of all folds values with \emph{k} = 25 and \emph{t} = 20 as configuration settings. 
 The figure demonstrates an evident outcome: by using more input topics as input data, we get a better prediction performance. Take as an example, for $\tau$=1, we get a success rate of 0.44 and 0.61 for N=5 and N=10, respectively. When we use 5 topics to feed \TFa, the corresponding success rate is 0.56 and 0.66 for N=5 and N=10, respectively. This happens due to the fact that by considering more input topics, \TFa is able to better determine the similarity between the testing project and projects in the training data, as shown in Eq.~\ref{eqn:Prediction}, which eventually allows it to mine more relevant topics.
