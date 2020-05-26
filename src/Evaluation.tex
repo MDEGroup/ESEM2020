@@ -7,16 +7,16 @@
 
 %\revised{:q
 
-In this section, we report on evaluation process conducted to study the performance of \TF. 
+In this section, we report on the evaluation process conducted to study the performance of \TF. 
 %the materials and methods used to evaluate \TF. 
 %evaluation of \TF, having the {\em goal} of evaluating the performance of the 
 %proposed approach. 
-Section~\ref{sec:ResearchQuestions} presents the research questions we want to 
-answer by means of the performed experiments. Section~\ref{sec:Dataset} 
-presents the datasets exploited in the evaluation. 
+Section~\ref{sec:Dataset} 
+gives an informative description of the datasets exploited in the evaluation. 
 Section~\ref{sec:metrics} and Section~\ref{sec:methodology-metric} describe the 
-evaluation metrics and process, respectively. The experimental results are 
-discussed in the next section. To facilitate future research, we made available 
+evaluation metrics and process, respectively. %The experimental results are discussed in the next section. 
+Finally, Section~\ref{sec:ResearchQuestions} presents the research questions we want to 
+answer by means of the performed experiments. To facilitate future research, we made available 
 the \TF tool together with the related data in a \GH 
 repository.\footnote{\url{https://github.com/ESEM2020-TopFilter/TopFilter}}
 
@@ -25,31 +25,7 @@ repository.\footnote{\url{https://github.com/ESEM2020-TopFilter/TopFilter}}
 %was also exploited 
 
 
-\subsection{Research Questions} \label{sec:ResearchQuestions}
-
-By performing the evaluation, we address the following research questions to 
-study the performance of the proposed approache:
-
-\begin{itemize}
-	\item \rqfirst We investigate different configurations of \TF\ie the 
-	number of input topics \emph{t} as well as the number of neighbors \emph{N} 
-	is varied, to find the best configuration. %and the considered number of 
-	%outcomes \emph{N}.
-	
-	%\item[--] \rqsecond Because of \TF and \MNB are completely different in 
-	%term of input data, we are interested in comparing them by considering 
-	%many 
-	%factors that can impact on the performance.
-	\item \rqsecond \TFb is an extended version of \MNB, thus we are interested 
-	in understanding if our proposed approach outperforms the original \MNB. 
-	%From an empirical point of view, it is relevant to analyze the combination 
-	%of the two approaches and measure its performances.
-\end{itemize}
-
-
 \subsection{Data Extraction} \label{sec:Dataset}
-
-
 
 %\subsection{Data Cleaner}  \label{sec:filter}
 
@@ -202,7 +178,7 @@ their number of stars and forks. A summary of the retrieved data is plotted in
 Fig.~\ref{fig:comparison}. %shows the comparison among all the examined 
 %datasets. 
 Forking is a means to contribute to the original repositories, %~\cite{Jiang:2017:WDF:3042021.3042043}. 
-furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it is further witnessed in Fig.~\ref{fig:comparison}. A project with a high number of forks means that it garners attention from the developers community. A repository with a large number of forks can be considered as a well-maintained and well-received project. Whereas, since commits also have an influence on source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed. As can be seen, most of the repositories possess a number of stars and forks less than 5,000. A small fraction of them have more than 30,000 forks and 10,000 stars. In this respect, we see that the datasets exhibit a wide variety of quality with respect to the number of forks and stars.
+furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it can be further observed in Fig.~\ref{fig:comparison}. A project with a high number of forks means that it garners attention from the developers community. A repository with a large number of forks can be considered as a well-maintained and well-received project. Whereas, since commits also have an influence on source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed. As can be seen, most of the repositories possess a number of stars and forks less than 5,000. A small fraction of them have more than 30,000 forks and 10,000 stars. In this respect, we see that the datasets exhibit a wide variety of quality with respect to the number of forks and stars.
 %filtering repositories by the cut-off value \emph{t} helps smooth the distribution. 
 %On one hand, 
 
@@ -368,6 +344,27 @@ It is worth noting that we cannot directly compare \TF with \MNB since they rely
 %, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
 
 
+
+\subsection{Research Questions} \label{sec:ResearchQuestions}
+
+%By performing the evaluation, we address
+The following research questions are addressed to study the performance of the proposed approaches:
+
+\begin{itemize}
+	\item \rqfirst We investigate different configurations of \TF\ie the 
+	number of input topics \emph{t} as well as the number of neighbors \emph{N} 
+	is varied, to find the best configuration. %and the considered number of 
+	%outcomes \emph{N}.
+	
+	%\item[--] \rqsecond Because of \TF and \MNB are completely different in 
+	%term of input data, we are interested in comparing them by considering 
+	%many 
+	%factors that can impact on the performance.
+	\item \rqsecond \TFb is an extended version of \MNB, thus we are interested 
+	in understanding if our proposed approach outperforms the original \MNB. 
+	%From an empirical point of view, it is relevant to analyze the combination 
+	%of the two approaches and measure its performances.
+\end{itemize}
 
 
 
