@@ -7,22 +7,23 @@
 
 %\revised{:q
 
-In this section, we report on evaluation process conducted to study the performance of \TF. 
+In this section, we report on the evaluation process conducted to study the performance of \TF. 
 %the materials and methods used to evaluate \TF. 
 %evaluation of \TF, having the {\em goal} of evaluating the performance of the 
 %proposed approach. 
-Section~\ref{sec:ResearchQuestions} presents the research questions we want to 
-answer by means of the performed experiments. Section~\ref{sec:Dataset} 
-presents the datasets exploited in the evaluation. 
+Section~\ref{sec:Dataset} 
+gives an informative description of the datasets exploited in the evaluation. 
 Section~\ref{sec:metrics} and Section~\ref{sec:methodology-metric} describe the 
-evaluation metrics and process, respectively. The experimental results are 
-discussed in the next section. To facilitate future research, we made available 
+evaluation metrics and process, respectively. %The experimental results are discussed in the next section. 
+Finally, Section~\ref{sec:ResearchQuestions} presents the research questions we want to 
+answer by means of the performed experiments. To facilitate future research, we made available 
 the \TF tool together with the related data in a \GH 
 repository.\footnote{\url{https://github.com/ESEM2020-TopFilter/TopFilter}}
 
 %ten equal parts, so-called folds
 %We also exploited 
 %was also exploited 
+
 
 
 \subsection{Research Questions} \label{sec:ResearchQuestions}
@@ -49,8 +50,6 @@ study the performance of the proposed approache:
 
 
 \subsection{Data Extraction} \label{sec:Dataset}
-
-
 
 %\subsection{Data Cleaner}  \label{sec:filter}
 
@@ -203,7 +202,7 @@ their number of stars and forks. A summary of the retrieved data is plotted in
 Fig.~\ref{fig:comparison}. %shows the comparison among all the examined 
 %datasets. 
 Forking is a means to contribute to the original repositories, %~\cite{Jiang:2017:WDF:3042021.3042043}. 
-furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it is further witnessed in Fig.~\ref{fig:comparison}. A project with a high number of forks means that it garners attention from the developers community. A repository with a large number of forks can be considered as a well-maintained and well-received project. Whereas, since commits also have an influence on source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed. As can be seen, most of the repositories possess a number of stars and forks less than 5,000. A small fraction of them have more than 30,000 forks and 10,000 stars. In this respect, we see that the datasets exhibit a wide variety of quality with respect to the number of forks and stars.
+furthermore, there is a strong correlation between forks and stars~\cite{7816479}, as it can be further observed in Fig.~\ref{fig:comparison}. A project with a high number of forks means that it garners attention from the developers community. A repository with a large number of forks can be considered as a well-maintained and well-received project. Whereas, since commits also have an influence on source code~\cite{8009930}, the number of commits is also a good indicator of how a project has been developed. As can be seen, most of the repositories possess a number of stars and forks less than 5,000. A small fraction of them have more than 30,000 forks and 10,000 stars. In this respect, we see that the datasets exhibit a wide variety of quality with respect to the number of forks and stars.
 %filtering repositories by the cut-off value \emph{t} helps smooth the distribution. 
 %On one hand, 
 
@@ -279,7 +278,7 @@ success\ rate@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | > 0 ) }{\l
 %\vspace{.1cm}
 %\noindent where the function \emph{count()} counts the number of times that the boolean expression specified in its parameter is \emph{true}.
 %Because of \emph{success rate@N} only measures successful queries and it does not reflect how accurate the outcome of a recommender system is (\eg considering two recommendation results where the former counts $1$ topic match out of $5$ and the latter that returns all $5$ topic matches,  both results equally affect the success rate value because they include at least one matched topic), accuracy has been considered as further quality metrics for \TF. 
-\noindent \textbf{Accuracy.} Given a list of \emph{top-N} libraries, \emph{precision} and \emph{recall} are utilized to measure the \emph{accuracy} of the recommendation results. In particular,  \emph{precision} is the ratio of the \emph{top-N} recommended topics found in the ground-truth data, whereas \emph{recall} is the ratio of the ground-truth topics belonging to the \emph{N} recommended items \cite{Davis:2006:RPR:1143844.1143874,Nguyen:2019:FRS:3339505.3339636}:
+\noindent \textbf{Accuracy.} Given a list of \emph{top-N} libraries, \emph{precision} and \emph{recall} are utilized to measure the \emph{accuracy} of the recommendation results. In particular,  \emph{precision} is the ratio of the \emph{top-N} recommended topics found in the ground-truth data, whereas \emph{recall} is the ratio of the ground-truth topics belonging to the \emph{N} recommended items \cite{Davis:2006:RPR:1143844.1143874}:%,Nguyen:2019:FRS:3339505.3339636
 
 %However, \emph{success rate@N} does not reflect how accurate the outcome of a recommender system is. For instance, given only one testing project, there is no difference between a system that returns $1$ topic match out of $5$ and another system that returns all $5$ topic matches, since \emph{success rate@5} is $100\%$ for both cases (see Eq.~\eqref{eqn:RecallRate}). Thus, given a list of \emph{top-N} libraries, \emph{precision@N} and \emph{recall@N} are utilized to measure the \emph{accuracy} of the recommendation results. \emph{precision@N} is the ratio of the \emph{top-N} recommended topics belonging to the ground-truth dataset, whereas \emph{recall@N} is the ratio of the ground-truth topics appearing in the \emph{N} recommended items \cite{Nguyen:2019:FRS:3339505.3339636},\cite{DiNoia:2012:LOD:2362499.2362501},\cite{Davis:2006:RPR:1143844.1143874}: %,Nguyen:2015:CRV:2942298.2942305 %}. A concrete definition for the metrics is given below \cite{
 
@@ -369,6 +368,27 @@ It is worth noting that we cannot directly compare \TF with \MNB since they rely
 %, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
 
 
+
+\subsection{Research Questions} \label{sec:ResearchQuestions}
+
+%By performing the evaluation, we address
+The following research questions are addressed to study the performance of the proposed approaches:
+
+\begin{itemize}
+	\item \rqfirst We investigate different configurations of \TF\ie the 
+	number of input topics \emph{t} as well as the number of neighbors \emph{N} 
+	is varied, to find the best configuration. %and the considered number of 
+	%outcomes \emph{N}.
+	
+	%\item[--] \rqsecond Because of \TF and \MNB are completely different in 
+	%term of input data, we are interested in comparing them by considering 
+	%many 
+	%factors that can impact on the performance.
+	\item \rqsecond \TFb is an extended version of \MNB, thus we are interested 
+	in understanding if our proposed approach outperforms the original \MNB. 
+	%From an empirical point of view, it is relevant to analyze the combination 
+	%of the two approaches and measure its performances.
+\end{itemize}
 
 
 

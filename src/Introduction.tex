@@ -5,16 +5,16 @@ development activities~\cite{7832894}. \GH recently introduced the possibility
 to tag repositories employing 
 \emph{topics}\footnote{\url{https://help.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics}}
  intending to foster the popularity and promote information discovery about 
-available projects\footnote{Hereafter the terms \GH projects and repositories 
+available projects.\footnote{Hereafter the terms \GH  \emph{``projects''} and \emph{``repositories''} 
 are used 
-interchangeably.}. Topics are terms used to characterize projects and to 
-facilitate their discoverability from software developers that are searching 
+interchangeably.} Topics are terms used to characterize repositories and to 
+facilitate their discoverability from software developers who are searching 
 for existing projects providing them with some reusable features. 
 
 Assigning repositories with wrong topics can compromise their popularity and 
 reachability. To deal with such problems, in 2017 \GH introduced a 
-mechanism named repo-topix to suggest topics by relying on various information 
-retrieval techniques \cite{repo-topix}. To improve repo-topix 
+mechanism named Repo-Topix to suggest topics by relying on various information 
+retrieval techniques \cite{repo-topix}. To improve Repo-Topix 
 and to explore additional recommendation strategies, a recent work (named \MNB 
 hereafter) proposes a Multinomial Na\"ive Bayesian network to 
 recommend relevant topics starting from the README file(s) of the repository of 
@@ -52,7 +52,7 @@ The contributions of this paper are as follows:
 	\item By considering \GH topics as a product to recommend, we improve 
 	repositories' popularity by suggesting a list of relevant topics;
 	\item We assess the quality of the work employing a well-defined set of 
-	metrics commonly used in the recommendation system domain \ie success rate, 
+	metrics commonly used in the recommendation system domain, \ie success rate, 
 	accuracy, and catalog coverage;
 	\item Considering a well-founded approach, we improve it by recommending an 
 	extended set of topics.  
@@ -60,7 +60,7 @@ The contributions of this paper are as follows:
 
 The paper is structured as follows. Section \ref{sec:Background} presents the 
 context of this work by means of a motivating example. In Section 
-\ref{sec:ProposedApproach}, we present the \TF approach. Its evaluation is  
+\ref{sec:ProposedApproach}, we introduce the \TF approach, with its evaluation being 
 presented in Section \ref{sec:Evaluation}. Section 
 \ref{sec:ExperimentalResults} discusses relevant findings, and the related work is 
 summarized in  Section \ref{sec:RelatedWorks}. Finally, we conclude the paper 
