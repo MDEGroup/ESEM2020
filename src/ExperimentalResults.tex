@@ -1,14 +1,16 @@
 \begin{figure*}[t!]
 	\centering
+	\vspace{-.2cm}
 	\begin{tabular}{c c}	
 		\subfigure[N=5]{\label{fig:success-rateN5}
-			\includegraphics[width=0.48\linewidth]{figs/successRateN@5.pdf}}
+			\includegraphics[width=0.40\linewidth]{figs/successRateN@5.pdf}}
 		&
 		\subfigure[N=10]{\label{fig:success-rateN10}
-			\includegraphics[width=0.48\linewidth]{figs/successRateN@10.pdf}}
+			\includegraphics[width=0.40\linewidth]{figs/successRateN@10.pdf}}
 		
 	\end{tabular} 
 	\caption{Success rate with 5 and 10 input topics.}
+	\vspace{-.2cm}
 	\label{fig:success5_10}
 \end{figure*}
 
@@ -68,11 +70,16 @@ Next, we examine the influence of the number of neighbors k on the prediction pe
 
 
 %This is also confirmed by the precision and recall curves depicted in
+
+
+
 \begin{figure}[h!]
 	\centering
+	\vspace{-.2cm}
 	\includegraphics[width=0.90\linewidth]{figs/PrecisionRecallCurve.png}
-	\caption{Precision/recall curves.}%Evaluation of the 
-	%different configuration.
+	\vspace{-.2cm}
+	\caption{Precision/recall curves.}%Evaluation of the 	%different configuration.
+	\vspace{-.2cm}
 	\label{fig:configs}
 \end{figure}
 
@@ -97,6 +104,7 @@ Table~\ref{tab:coverage} reports the average coverage value for the considered d
 
 %The average catalog coverage of all folds decreases from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$) because there are no training data to recommend infrequent topics. 
 %The catalog coverage decreases because there are no training data to recommend infrequent topics. In particular, the average \emph{Global coverage} values decrease from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$).
+\input{src/coverageTable}
 
 From the table, we see that by considering a longer list of items, \ie increasing N, a better coverage is gained. Furthermore, using a higher cut-off value \emph{t} has a negative impacts on the global catalog coverage. For instance, with $D_{1}$ and N=2, we obtain 2.313 as coverage, and this score gradually decreases along \emph{t}, and shrinks to 0.715 with $D_{20}$. Similarly, by other values of N, catalog coverage is large for a low \emph{t} and small for a high \emph{t}. This can be explained as follows: setting a high value of \emph{t} means that a large amount of training data is discarded, and thus removing also topics. Altogether, we see that using a denser dataset for training, \ie projects with more topics, is beneficial to success rate, accuracy, but not to catalog coverage.
 
@@ -104,7 +112,9 @@ From the table, we see that by considering a longer list of items, \ie increasin
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.90\linewidth]{figs/successRate_inputTopic.pdf}
+	\vspace{-.2cm}
+	\includegraphics[width=0.80\linewidth]{figs/successRate_inputTopic.pdf}
+	\vspace{-.2cm}
 	\caption{Success rates for $\tau$=$\{1,2,3,4,5\}$ on 
 	\textit{D$_{20}$}.}
 	\label{fig:pr-input-topics}
@@ -126,7 +136,7 @@ N=$\{5,10\}$. %through our experiment. %ten folds by choosing
 The figure demonstrates an evident outcome: by using more input topics as input data, we get a better prediction performance. Take as an example, for $\tau$=1, we get a success rate of 0.44 and 0.61 for N=5 and N=10, respectively. When we use 5 topics to feed \TFa, the corresponding success rate is 0.56 and 0.66 for N=5 and N=10, respectively. This happens due to the fact that by considering more input topics, \TFa is able to better determine the similarity between the testing project and projects in the training data, as shown in Eq.~\ref{eqn:Prediction}, which eventually allows it to mine more relevant topics.
 
 %The success rate values exhibits an improvements when the size of input topic rises. This behaviour demonstrate that \TF computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
-\input{src/coverageTable}
+
 
 
 
