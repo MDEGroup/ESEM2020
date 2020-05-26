@@ -7,7 +7,10 @@
 
 %\revised{:q
 
-In this section, we report on the evaluation process conducted to study the performance of \TF. 
+In this section, we report on the evaluation process conducted to study the 
+performance of \TF. Section~\ref{sec:ResearchQuestions} presents the research 
+questions we want to 
+answer by means of the performed experiments. 
 %the materials and methods used to evaluate \TF. 
 %evaluation of \TF, having the {\em goal} of evaluating the performance of the 
 %proposed approach. 
@@ -15,8 +18,7 @@ Section~\ref{sec:Dataset}
 gives an informative description of the datasets exploited in the evaluation. 
 Section~\ref{sec:metrics} and Section~\ref{sec:methodology-metric} describe the 
 evaluation metrics and process, respectively. %The experimental results are discussed in the next section. 
-Finally, Section~\ref{sec:ResearchQuestions} presents the research questions we want to 
-answer by means of the performed experiments. To facilitate future research, we made available 
+To facilitate future research, we made available 
 the \TF tool together with the related data in a \GH 
 repository.\footnote{\url{https://github.com/ESEM2020-TopFilter/TopFilter}}
 
@@ -29,7 +31,7 @@ repository.\footnote{\url{https://github.com/ESEM2020-TopFilter/TopFilter}}
 \subsection{Research Questions} \label{sec:ResearchQuestions}
 
 By performing the evaluation, we address the following research questions to 
-study the performance of the proposed approache:
+study the performance of the proposed approach:
 
 \begin{itemize}
 	\item \rqfirst We investigate different configurations of \TF\ie the 
@@ -361,35 +363,50 @@ Finally, the combined approach uses \TF as the recommendation engine which is fe
 %\noindent
 %$\blacksquare$~\textbf{Outcome Evaluation.} 
 \vspace{.1cm}
-\noindent\textbf{Outcome Evaluation.} In this stage, recommendation results are compared with those stored as ground-truth data to compute the quality metrics, \ie \textit{Success rate}, \textit{Precision}, \textit{Recall}, and \textit{Catalog coverage}) during the \textit{RQ$_1$} and \textit{RQ$_2$} evaluation activities.  
-%
-It is worth noting that we cannot directly compare \TF with \MNB since they rely on different input data. To be concrete, \TF is a supervised learning system that requires an initial set of assigned topics for the training, whereas \MNB is unsupervised learning and it uses only information mined from README files to recommend, without making use of any topics as input. 
+\noindent\textbf{Outcome Evaluation.} It is worth noting that we cannot 
+directly compare \TF with \MNB since they 
+rely on different input data. To be concrete, \TF is a supervised learning 
+system that requires an initial set of assigned topics for the training, 
+whereas \MNB is unsupervised learning and it uses only information mined from 
+README files to recommend, without making use of any topics as input. Thus, we 
+evaluate the performance of \TF by analysing the recommendation results that 
+are compared with those stored as ground-truth data to compute the quality 
+metrics (\ie \textit{Success rate}, \textit{Precision}, \textit{Recall}, and 
+\textit{Catalog coverage}) during the \textit{RQ$_1$} evaluation activities. 
+The same metrics are used to evaluate the performance of the combined use of 
+\TF and \MNB to answer \textit{RQ$_2$}.
+
+%In this stage, recommendation results are compared with those stored as 
+%ground-truth data to compute the quality metrics, \ie \textit{Success rate}, 
+%\textit{Precision}, \textit{Recall}, and \textit{Catalog coverage}) during the 
+%\textit{RQ$_1$} and \textit{RQ$_2$} evaluation activities.  
 
 %, which are called \emph{\textbf{te}}, and serve as input for \code{Similarity Computation} and \code{Recommendation} components.
 
 
-
-\subsection{Research Questions} \label{sec:ResearchQuestions}
-
-%By performing the evaluation, we address
-The following research questions are addressed to study the performance of the proposed approaches:
-
-\begin{itemize}
-	\item \rqfirst We investigate different configurations of \TF\ie the 
-	number of input topics \emph{t} as well as the number of neighbors \emph{N} 
-	is varied, to find the best configuration. %and the considered number of 
-	%outcomes \emph{N}.
-	
-	%\item[--] \rqsecond Because of \TF and \MNB are completely different in 
-	%term of input data, we are interested in comparing them by considering 
-	%many 
-	%factors that can impact on the performance.
-	\item \rqsecond \TFb is an extended version of \MNB, thus we are interested 
-	in understanding if our proposed approach outperforms the original \MNB. 
-	%From an empirical point of view, it is relevant to analyze the combination 
-	%of the two approaches and measure its performances.
-\end{itemize}
-
+%
+%\subsection{Research Questions} \label{sec:ResearchQuestions}
+%
+%%By performing the evaluation, we address
+%The following research questions are addressed to study the performance of the 
+%proposed approaches:
+%
+%\begin{itemize}
+%	\item \rqfirst We investigate different configurations of \TF\ie the 
+%	number of input topics \emph{t} as well as the number of neighbors \emph{N} 
+%	is varied, to find the best configuration. %and the considered number of 
+%	%outcomes \emph{N}.
+%	
+%	%\item[--] \rqsecond Because of \TF and \MNB are completely different in 
+%	%term of input data, we are interested in comparing them by considering 
+%	%many 
+%	%factors that can impact on the performance.
+%	\item \rqsecond \TFb is an extended version of \MNB, thus we are interested 
+%	in understanding if our proposed approach outperforms the original \MNB. 
+%	%From an empirical point of view, it is relevant to analyze the combination 
+%	%of the two approaches and measure its performances.
+%\end{itemize}
+%
 
 
 
