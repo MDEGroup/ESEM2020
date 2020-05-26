@@ -2,10 +2,13 @@
 % \usepackage{multirow}
 \begin{table*}[t!]
 	\normalsize
-\caption{Comparison between \MNB and \TFb using Dataset $D_{1}$.} %Experimental results obtained by
+\caption{Comparison between \MNB and \textit{MNBN+\TFb} using Dataset $D_{1}$.} 
+%Experimental results obtained by
 \begin{tabular}{|c| c|c| c|c |c|c |c|c|} \hline
 	& \multicolumn{2}{c|}{\textbf{Success rate}} & \multicolumn{2}{c|}{\textbf{Recall}} & \multicolumn{2}{c|}{\textbf{Precision}} & \multicolumn{2}{c|}{ \textbf{Catalog coverage}} \\ \hline
-	$N$  & \MNB     & \TF  & \MNB      & \TF   & \MNB       & \TF    & \MNB       & \TF      \\ \hline         
+	$N$  & \MNB     & \textit{MNBN+\TFb}  & \MNB      & \textit{MNBN+\TFb}   & 
+	\MNB       & \textit{MNBN+\TFb}    & \MNB       & \textit{MNBN+\TFb}      
+	\\ \hline         
 	
 2        & 0.240    & 0.148  & 0.026    & 0.017   & 0.137    & 0.077     & 0.175   & 0.411   \\ \hline
 4        & 0.383    & 0.287  & 0.042    & 0.035   & 0.123    & 0.081     & 0.314   & 0.617   \\ \hline
@@ -25,10 +28,13 @@
 
 \begin{table*}[t!]
 	\normalsize
-	\caption{Comparison between \MNB and \TFb using Dataset $D_{20}$.}
+	\caption{Comparison between \MNB and \textit{MNBN+\TFb} using Dataset 
+	$D_{20}$.}
 	\begin{tabular}{|c| c|c| c|c |c|c |c|c|} \hline		
 		& \multicolumn{2}{c|}{\textbf{Success rate}} & \multicolumn{2}{c|}{\textbf{Recall}} & \multicolumn{2}{c|}{\textbf{Precision}} & \multicolumn{2}{c|}{ \textbf{Catalog coverage}} \\ \hline
-		$N$  & \MNB     & \TF  & \MNB      & \TF   & \MNB       & \TF    & \MNB       & \TF      \\ \hline         
+		$N$  & \MNB     & \textit{MNBN+\TFb}  & \MNB      & 
+		\textit{MNBN+\TFb}   & \MNB       & \textit{MNBN+\TFb}    & \MNB       
+		& \textit{MNBN+\TFb}      \\ \hline         
 		
 		2  & 0.363      & 0.217  & 0.035     & 0.031  & 0.206       & 0.118   & 0.263          & 0.249      \\ \hline		
 4  & 0.600      & 0.389  & 0.075     & 0.063  & 0.221       & 0.119   & 0.562         & 0.444     \\ \hline

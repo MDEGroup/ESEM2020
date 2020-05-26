@@ -2,7 +2,7 @@
 \usepackage{xcolor}
 \usepackage{pgfplots}
 \usepackage{tikz}
-\usetikzlibrary{patterns}
+
 
 % Define bar chart colors
 %
@@ -41,10 +41,10 @@
 %	    ylabel = {Success rate@5 (\%)},
         symbolic x coords={1,2,3,4,5},
     ]
-        \addplot[style={black,fill=bblue,mark=none,pattern=grid}]
+        \addplot[style={black,fill=bblue!30,mark=none}]
             coordinates {(1, 0.437) (2, 0.478) (3,0.520)(4, 0.544)(5, 0.561)};
             
-        \addplot[style={black,fill=orange,mark=none,pattern=dots}]
+        \addplot[style={black,fill=orange!30,mark=none}]
             coordinates {(1, 0.614) (2, 0.632) (3,0.647)(4, 0.656)(5, 0.661)};
                       
 

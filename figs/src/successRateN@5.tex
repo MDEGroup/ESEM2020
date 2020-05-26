@@ -2,7 +2,7 @@
 \usepackage{xcolor}
 \usepackage{pgfplots}
 \usepackage{tikz}
-\usetikzlibrary{patterns}
+
 % Define bar chart colors
 %
 \definecolor{bblue}{HTML}{4F81BD}
@@ -20,10 +20,10 @@
         width  = 6cm,%*\textwidth,
         height = 15	cm,
         major x tick style = transparent,
-        ybar = 8pt,
+        ybar = 0pt,
         ymin = 0.5, ymax = 0.9,
-        x=6cm,
-        bar width=20pt,
+        x=5cm,
+        bar width=25pt,
         ymajorgrids = true,	
         xtick = data,
         scaled y ticks = false,
@@ -41,19 +41,19 @@
 	    %ylabel = {Success rate@5 (\%)},	
         symbolic x coords={5,10,15,20,25},
     ]
-        \addplot[style={black,fill=blue!30,mark=none,pattern=horizontal lines}]
+        \addplot[style={bblue,fill=blue!30,mark=none}]
             coordinates {(5, 0.539) (10, 0.603) (15,0.621)(20, 0.627)(25, 0.627)};
             
-        \addplot[style={black,fill=orange!30,mark=none, pattern=vertical lines}]
+        \addplot[style={orange,fill=orange!30,mark=none}]
             coordinates {(5, 0.616) (10, 0.679) (15,0.688)(20, 0.697)(25, 0.705)};
                       
-        \addplot[style={black,fill=red!30,mark=none,pattern=grid}]
+        \addplot[style={rred,fill=red!30,mark=none}]
             coordinates {(5,0.622) (10,0.683) (15,0.702)(20,0.714)(25,0.720)};
 
-        \addplot[style={black,fill=green!30,mark=none, pattern=dots}]
+        \addplot[style={ggreen,fill=green!30,mark=none}]
             coordinates {(5,0.634) (10,0.686) (15, 0.698) (20,0.713) (25,0.723)};
 
-        \addplot[style={black,fill=purple!30,mark=none, pattern=north east lines}]
+        \addplot[style={ppurple,fill=purple!30,mark=none}]
             coordinates {(5,0.631) (10,0.688) (15,0.716) (20,0.727) (25,0.728)};
 
 %      	\addplot[style={orange,fill=orange,mark=none}]
