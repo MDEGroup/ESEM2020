@@ -2,7 +2,7 @@
 \usepackage{xcolor}
 \usepackage{pgfplots}
 \usepackage{tikz}
-
+\usetikzlibrary{patterns}
 % Define bar chart colors
 %
 \definecolor{bblue}{HTML}{4F81BD}
@@ -41,19 +41,19 @@
 	    every tick label/.append style={font=\Huge},
         symbolic x coords={5,10,15,20,25},
     ]
-        \addplot[style={bblue,fill=bblue,mark=none}]
+        \addplot[style={black,fill=blue!30,mark=none,pattern=horizontal lines}]
             coordinates {(5, .621) (10, 0.686) (15,0.710)(20, 0.724)(25, 0.724)};
             
-        \addplot[style={orange,fill=orange,mark=none}]
+		\addplot[style={black,fill=orange!30,mark=none, pattern=vertical lines}]
             coordinates {(5, 0.701) (10, 0.727) (15,0.788)(20, 0.801)(25, 0.804)};
                       
-        \addplot[style={rred,fill=rred,mark=none}]
+        \addplot[style={black,fill=red!30,mark=none,pattern=grid}]
             coordinates {(5,0.707) (10,0.776) (15,0.793)(20,0.806)(25,0.817)};
 
-        \addplot[style={ggreen,fill=ggreen,mark=none}]
+        \addplot[style={black,fill=green!30,mark=none, pattern=dots}]
             coordinates {(5,0.714) (10,0.774) (15, 0.795) (20,0.806) (25,0.815)};
 
-        \addplot[style={ppurple,fill=ppurple,mark=none}]
+        \addplot[style={black,fill=purple!30,mark=none, pattern=north east lines}]
             coordinates {(5,0.706) (10,0.779) (15,0.808) (20,0.822) (25,0.828)};
 
         \legend{D$_1$, D$_5$, D$_{10}$, D$_{15}$, D$_{20}$}
