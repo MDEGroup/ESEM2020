@@ -3,11 +3,29 @@ This section analyzes the performance of \TF and compares it with \MNB by addres
 %discusses the findings of the qualitative assessment. To address the formulated research questions, we perform two different experiments. Section \ref{sec:EXP1} discusses the \TF results by variating different parameters. % We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. 
 %The results obtained with the entangled approach (\ie the combination of \TF and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
 
+\begin{figure*}[t!]
+	\centering
+	\begin{tabular}{c c}	
+		\subfigure[N=5]{\label{fig:success-rateN5}
+			\includegraphics[width=0.48\linewidth]{figs/successRateN@5.pdf}}
+			 &
+		\subfigure[N=10]{\label{fig:success-rateN10}
+			\includegraphics[width=0.48\linewidth]{figs/successRateN@10.pdf}}
+				
+	\end{tabular} 
+	\caption{Success rate with 5 and 10 input topics.}
+	\label{fig:success5_10}
+\end{figure*}
 
 \subsection{\rqfirst} \label{sec:EXP1}
   
 To find the configuration obtaining the best prediction performances, we experimented %with different \TF configurations 
-by varying the available parameters, \ie the number of neighbors \emph{k}, the number of recommended items \emph{N}. %, and the involved dataset.   %The former refers to the number of similar repositories used in the recommendation engine. 
+by varying the available parameters, \ie the number of 
+top-similar neighbour projects \emph{k}, the number of 
+recommended items \emph{N}. %, and the involved dataset.   %The 
+%%former refers to the number of similar repositories used in 
+%%the 
+%%recommendation engine. 
 %The latter value \emph{t} is used to select the input topics based on their frequencies: given an initial set of topics, we filter them with the cut-off value to reduce the noise in the original dataset. Then, the recommendation phase is enabled by varying the number of presented parameters. According to Section \ref{sec:methodology-metric}, N is the cut-off value and \emph{k} is the number of neighbours of the graph. We evaluate different configuration by setting N=1,5,10,15,20 and k=5,10,15,20,25. 
 %Figure \ref{fig:configs} shows the results  in terms of precision and recall. 
 %As we rely on a collaborative filtering technique, the number of output topics, the number of neighbors, and the data preprocessing play an important role in the assessment. 
@@ -21,23 +39,8 @@ To be more concrete, we chose two different values of \emph{N}, \ie \emph{N} = $
 
 Overall, it is evident that infrequent topics negatively affect the prediction outcomes. With $D_{1}$, \ie all projects are considered, \TF obtains a low success rate by both configurations N=5 and N=10, compared to the results of other cut-off values \emph{t}. For instance, with k=5, \TFa gets 0.54 as success rate for $D_{1}$, meanwhile it gets 0.62 as success rate for $D_{5}$ and $D_{10}$, and 0.63 for $D_{15}$ and $D_{20}$. The same trend can also be witnessed with other values of k, \ie \emph{k} = $\{10, 15, 20, 25\}$: \TFa achieves a better performance when we consider a dataset with more topics for each project. This is understandable since \TFa relies on the availability of training data to function: the more topics it has, the better it can compute the similarities among projects (cf. Fig.~\ref{fig:Graph} and Eq.~\ref{eqn:VsmSim}), and thus it is able to find more relevant topics (cf. Eq.~\ref{eqn:Prediction}). Similarly, for N=10, \ie we consider a longer list of recommendations, \TFa obtains a better success rate when a dataset with more detailed training data is exploited. 
 
-\begin{figure*}[t]
-\centering
-	\begin{tabular}{c c}	
-	\subfigure[N=5]{\label{fig:success-rateN5}
-	\includegraphics[width=0.48\linewidth]{figs/successRateN@5.pdf}} &
-	\subfigure[N=10]{\label{fig:success-rateN10}
-	\includegraphics[width=0.48\linewidth]{figs/successRateN@10.pdf}}	
-	\end{tabular} 
-	\caption{Success rate with 5 and 10 input topics.}
-	\label{fig:success5_10}
-\end{figure*}
-\begin{figure}[t!]
-	\centering
-	\includegraphics[width=0.90\linewidth]{figs/PrecisionRecallCurve.png}
-	\caption{Precision/recall curves.}%Evaluation of the different configuration.
-	\label{fig:configs}
-\end{figure}
+
+
 
 Next, we examine the influence of the number of neighbors k on the prediction performance. For N=5, from Fig.~\ref{fig:success-rateN5} it is clear that incorporating more neighbor projects for recommendation helps improve the performance considerably. Take as an example, for k=10 the best success rate is 0.69 obtained for $D_{20}$, and the corresponding score achieved with k=25 is 0.73 for $D_{20}$. For N=10, we see a clear gain in performance when more neighbors are considered for the computation of recommendations. The best obtained success rate is 0.83 when k=25 for $D_{20}$. As a whole, we come to the conclusion that increasing the number of neighbors used for computing missing ratings in the project-topic matrix is beneficial to the final recommendations. On the other hand, this also increases the computational complexity as comprehended in Eq.~\ref{eqn:Prediction}. Therefore, it is necessary to maintain a trade-off between accuracy and efficiency when deploying \TF by choosing a suitable value of k. 
 
@@ -50,6 +53,14 @@ To further study \TF's performance, we computed and depicted in Fig.~\ref{fig:co
 %From the accuracy scores computed using Eq. (5) and Eq. (6), the Precision-Recall curves (PRCs) for all 10 rounds of validation and different values of k were sketched. 
 %The line graph depicts the precision and recall curves on average for all 10 rounds by considering 
 For this setting, the number of recommended items \emph{N} was varied from 1 to 20, aiming to study the performance for a long recommendation list. Each dot in a curve corresponds to precision and recall obtained for a specific value of \emph{N}. Furthermore, we fixed k=25 since this number of neighbors brings the best prediction outcomes among others, while it still maintains a reasonable execution time. As a PRC close to the upper right corner represents a better precision/call~\cite{NGUYEN2020110460}, Fig.~\ref{fig:configs} demonstrates that by considering a dataset with more topics for each repository, \TFa yields a better prediction performance. In particular, the worst precision/recall relationship is seen by $D_{1}$, while the best one is obtained by $D_{20}$. Overall, these results are consistent with those presented in Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10}: using projects consisting of more input topics helps \TFa enhance its performance substantially.
+
+\begin{figure}[b!]
+	\centering
+	\includegraphics[width=0.90\linewidth]{figs/PrecisionRecallCurve.png}
+	\caption{Precision/recall curves.}%Evaluation of the 
+	%different configuration.
+	\label{fig:configs}
+\end{figure}
 
 % an10 .
 %These outcomes have been obtained by keeping 25 as the number of neighbours \emph{k} because we have already discussed that higher values of neighbours reach better prediction performances.
@@ -70,20 +81,24 @@ From the table, we see that by considering a longer list of items, \ie increasin
 
 %Differently from the discussed metric outcomes, this experiment shows how an higher values of topic frequency cut-off negatively impacts on the catalog coverage metric.
 
-As presented in Section~\ref{sec:methodology-metric}, given a testing project \emph{p}, a certain number of topics is used as input, \ie $\tau$, and the remaining ones are saved as ground truth data, \ie \emph{GT(p)}. We are interested to understanding how $\tau$ impacts on the prediction performance by performing a cross validation with $\tau$=$\{1,2,3,4,5\}$; Moreover, to simplify the evaluation, we fixed the number neighbors \emph{k} to 25 and the number of topics \emph{t} to 20. Fig.~\ref{fig:pr-input-topics} reports the average success rate obtained for two values of N, \ie N=$\{5,10\}$. %through our experiment. %ten folds by choosing different number of input topics. 
-%Varying $\tau$ means changing the length of input topics that enable the \TF collaborative filtering recommender. 
-%In this picture we report the average success of all folds values with \emph{k} = 25 and \emph{t} = 20 as configuration settings. 
-The figure demonstrates an evident outcome: by using more input topics as input data, we get a better prediction performance. Take as an example, for $\tau$=1, we get a success rate of 0.44 and 0.61 for N=5 and N=10, respectively. When we use 5 topics to feed \TFa, the corresponding success rate is 0.56 and 0.66 for N=5 and N=10, respectively. This happens due to the fact that by considering more input topics, \TFa is able to better determine the similarity between the testing project and projects in the training data, as shown in Eq.~\ref{eqn:Prediction}, which eventually allows it to mine more relevant topics.
-
-%The success rate values exhibits an improvements when the size of input topic rises. This behaviour demonstrate that \TF computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
-\begin{figure}[t!]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.90\linewidth]{figs/successRate_inputTopic.pdf}
 	\caption{Success rates for $\tau$=$\{1,2,3,4,5\}$.}
 	\label{fig:pr-input-topics}
 \end{figure} 
 
+As presented in Section~\ref{sec:methodology-metric}, given a testing project \emph{p}, a certain number of topics is used as input, \ie $\tau$, and the remaining ones are saved as ground truth data, \ie \emph{GT(p)}. We are interested to understanding how $\tau$ impacts on the prediction performance by performing a cross validation with $\tau$=$\{1,2,3,4,5\}$; Moreover, to simplify the evaluation, we fixed the number neighbors \emph{k} to 25 and the number of topics \emph{t} to 20. Fig.~\ref{fig:pr-input-topics} reports the average success rate obtained for two values of N, \ie N=$\{5,10\}$. %through our experiment. %ten folds by choosing different number of input topics. 
+%Varying $\tau$ means changing the length of input topics that enable the \TF collaborative filtering recommender. 
+%In this picture we report the average success of all folds values with \emph{k} = 25 and \emph{t} = 20 as configuration settings. 
+The figure demonstrates an evident outcome: by using more input topics as input data, we get a better prediction performance. Take as an example, for $\tau$=1, we get a success rate of 0.44 and 0.61 for N=5 and N=10, respectively. When we use 5 topics to feed \TFa, the corresponding success rate is 0.56 and 0.66 for N=5 and N=10, respectively. This happens due to the fact that by considering more input topics, \TFa is able to better determine the similarity between the testing project and projects in the training data, as shown in Eq.~\ref{eqn:Prediction}, which eventually allows it to mine more relevant topics.
+
+%The success rate values exhibits an improvements when the size of input topic rises. This behaviour demonstrate that \TF computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
 \input{src/coverageTable}
+
+
+
+
 
 %On the other hand, a higher cut-off value \emph{t} negatively impacts on the global catalog coverage. For this reason, \emph{t} should be careful selected during the filtering phase to obtain balanced results in term of accuracy, success rate, and global catalog coverage.
 
