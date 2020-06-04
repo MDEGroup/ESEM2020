@@ -1,0 +1,7 @@
+1	git://github.com/zhisheng17/flink-learning
+2	#DEP#stream
+3	#DEP#kafka
+4	#DEP#mysql
+5	#DEP#elasticsearch
+6	#DEP#spark
+7	#DEP#redi

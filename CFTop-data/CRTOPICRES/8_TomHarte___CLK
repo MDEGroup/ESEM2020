@@ -1,0 +1,3 @@
+no_maven: msx,no_maven: mastersystem,no_maven: atarist,no_maven: acornelectron,no_maven: atari2600,no_maven: 6502,no_maven: vic20,no_maven: compositvideo,no_maven: appleii,no_maven: colecovis
+no_maven: emul,no_maven: 68000,no_maven: amstradcpc,no_maven: linux,no_maven: apple2,no_maven: z80,no_maven: oric,no_maven: zx80,no_maven: m68k,no_maven: zx81
+no_maven: cpp,no_maven: reversengin,no_maven: arm,no_maven: python,no_maven: cpluplu,no_maven: io,no_maven: framework,no_maven: game,no_maven: window,no_maven: maco,no_maven: disassembl,no_maven: assembl,no_maven: raspberripi,no_maven: gameboy,no_maven: gameboyemul,no_maven: c,no_maven: calcul,no_maven: tinspir,no_maven: jit,no_maven: psvita

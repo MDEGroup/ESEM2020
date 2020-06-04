@@ -1,0 +1,3 @@
+no_maven: shell,no_maven: cloudwatch,no_maven: cidr,no_maven: jq,no_maven: iam,no_maven: s3,no_maven: json,no_maven: awcli,no_maven: terraform,no_maven: waf
+no_maven: elb,no_maven: route53,no_maven: ec2,no_maven: amazon,no_maven: aw,no_maven: bash,no_maven: cloudfront,no_maven: awscli,no_maven: infrastructurcod,no_maven: vpc
+no_maven: terraform,no_maven: ansibl,no_maven: docker,no_maven: devop,no_maven: vagrant,no_maven: kubernet,no_maven: boilerpl,no_maven: gcp,no_maven: serverless,no_maven: cloud,no_maven: s3,no_maven: golang,no_maven: tad,no_maven: dockerswarm,no_maven: noop,no_maven: iac,no_maven: azur,no_maven: contain,no_maven: spotinstanc,no_maven: javascript

@@ -1,0 +1,12 @@
+1	git://github.com/pac4j/play-pac4j
+2	#DEP#authent
+3	#DEP#jwt
+4	#DEP#java
+5	#DEP#author
+6	#DEP#twitter
+7	#DEP#sql
+8	#DEP#secur
+9	#DEP#scala
+10	#DEP#mongodb
+11	#DEP#oauth
+12	#DEP#facebook

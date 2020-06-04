@@ -1,0 +1,11 @@
+1	git://github.com/txn2/kubefwd
+2	#DEP#cli
+3	#DEP#proxi
+4	#DEP#network
+5	#DEP#microservic
+6	#DEP#devop
+7	#DEP#linux
+8	#DEP#developtool
+9	#DEP#homebrew
+10	#DEP#kubernet
+11	#DEP#maco

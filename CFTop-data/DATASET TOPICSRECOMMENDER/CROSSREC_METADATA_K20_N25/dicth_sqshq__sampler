@@ -1,0 +1,9 @@
+1	git://github.com/sqshq/sampler
+2	#DEP#shell
+3	#DEP#commandlin
+4	#DEP#monitor
+5	#DEP#chart
+6	#DEP#commandlinetool
+7	#DEP#visual
+8	#DEP#termin
+9	#DEP#golang

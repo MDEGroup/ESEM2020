@@ -1,0 +1,7 @@
+1	git://github.com/firefox-devtools/debugger
+2	#DEP#node
+3	#DEP#chrome
+4	#DEP#javascript
+5	#DEP#firefox
+6	#DEP#react
+7	#DEP#redux

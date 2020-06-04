@@ -1,0 +1,7 @@
+1	git://github.com/cloud-custodian/cloud-custodian
+2	#DEP#serverless
+3	#DEP#azur
+4	#DEP#lambda
+5	#DEP#gcp
+6	#DEP#aw
+7	#DEP#cloud

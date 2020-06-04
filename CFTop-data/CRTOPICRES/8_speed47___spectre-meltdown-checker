@@ -1,0 +1,3 @@
+no_maven: kernel,no_maven: cve20183646,no_maven: netbsd,no_maven: cve20183620,no_maven: cve20183640,no_maven: foreshadow,no_maven: spectr,no_maven: cve20175715,no_maven: cve20183639
+no_maven: cve20183615,no_maven: cve20175754,no_maven: cve201911135,no_maven: linux,no_maven: cve20175753,no_maven: mitig,no_maven: freebsd,no_maven: meltdown,no_maven: dragonflybsd,no_maven: zombieload
+no_maven: window,no_maven: golang,no_maven: bash,no_maven: maco,no_maven: shell,no_maven: openbsd,no_maven: contain,no_maven: python,no_maven: vim,no_maven: c,no_maven: commandlin,no_maven: go,no_maven: consol,no_maven: mysql,no_maven: postgresql,no_maven: lua,no_maven: opersystem,no_maven: linuxdistribut,no_maven: privaci,no_maven: comment

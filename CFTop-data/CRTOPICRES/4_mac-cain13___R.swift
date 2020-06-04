@@ -1,0 +1,3 @@
+no_maven: uiimag,no_maven: autocompletresourc,no_maven: uifont,no_maven: xcode,no_maven: segu,no_maven: customfont
+no_maven: swift,no_maven: autocompletimag,no_maven: io,no_maven: uistoryboard,no_maven: autocomplet,no_maven: localis,no_maven: codegen
+no_maven: python,no_maven: mysql,no_maven: databas,no_maven: syntaxhighlight,no_maven: mycli,no_maven: javascript,no_maven: objectc,no_maven: android,no_maven: java,no_maven: local,no_maven: golang,no_maven: i18n,no_maven: translat,no_maven: lua,no_maven: thrift,no_maven: finagl,no_maven: cocoa,no_maven: scala,no_maven: maco,no_maven: php

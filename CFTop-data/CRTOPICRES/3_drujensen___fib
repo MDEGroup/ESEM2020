@@ -1,0 +1,3 @@
+no_maven: node,no_maven: fibonaccibenchmark,no_maven: csharp,no_maven: rust,no_maven: python,no_maven: javascript,no_maven: perl,no_maven: rubi,no_maven: dart,no_maven: julia
+no_maven: r,no_maven: python3,no_maven: crystal,no_maven: elixir,no_maven: clang,no_maven: go,no_maven: cpp,no_maven: php,no_maven: java8,no_maven: swift
+no_maven: java,no_maven: python,no_maven: c,no_maven: haskel,no_maven: golang,no_maven: rust,no_maven: rubi,no_maven: nodej,no_maven: compil,no_maven: cpluplu,no_maven: csharp,no_maven: assembl,no_maven: javascript,no_maven: lua,no_maven: scala,no_maven: typescript,no_maven: nim,no_maven: fsharp,no_maven: machinlearn,no_maven: convolutneuralnetwork

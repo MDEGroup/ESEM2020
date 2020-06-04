@@ -1,0 +1,3 @@
+no_maven: devtool,no_maven: develop,no_maven: rail,no_maven: server
+no_maven: smtp,no_maven: rubi,no_maven: mail,no_maven: rubygem
+no_maven: javascript,no_maven: smtpserver,no_maven: nodej,no_maven: rail,no_maven: imap,no_maven: irc,no_maven: xmpp,no_maven: email,no_maven: http,no_maven: go,no_maven: server,no_maven: developtool,no_maven: websocket,no_maven: activstream,no_maven: twitter,no_maven: facebook,no_maven: redi,no_maven: polyglot,no_maven: socketio,no_maven: sockethub

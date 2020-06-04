@@ -1,0 +1,9 @@
+1	git://github.com/agconti/cookiecutter-django-rest
+2	#DEP#restapi
+3	#DEP#python
+4	#DEP#django
+5	#DEP#rest
+6	#DEP#python3
+7	#DEP#api
+8	#DEP#docker
+9	#DEP#boilerpl

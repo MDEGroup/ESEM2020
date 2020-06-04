@@ -1,0 +1,3 @@
+no_maven: neovim,no_maven: vim,no_maven: deoplet,no_maven: neovimplugin
+no_maven: elixir,no_maven: vimplugin,no_maven: codecomplet,no_maven: deopletsourc
+no_maven: vim,no_maven: neovim,no_maven: viml,no_maven: start,no_maven: vimscript,no_maven: startup,no_maven: erlang,no_maven: syntaxcheck,no_maven: linter,no_maven: neovimplugin,no_maven: continuintegr,no_maven: java,no_maven: python,no_maven: go,no_maven: rubi,no_maven: rust,no_maven: async,no_maven: authent,no_maven: oauth2,no_maven: author

@@ -1,0 +1,3 @@
+no_maven: luajit,no_maven: openresti,no_maven: nginxlua,no_maven: stream
+no_maven: nginx,no_maven: lua,no_maven: httpclient,no_maven: http
+no_maven: python,no_maven: json,no_maven: request,no_maven: api,no_maven: rest,no_maven: openresti,no_maven: web,no_maven: apicli,no_maven: nodej,no_maven: javascript,no_maven: php,no_maven: webscrap,no_maven: framework,no_maven: ajax,no_maven: curl,no_maven: client,no_maven: develop,no_maven: termin,no_maven: cli,no_maven: developtool

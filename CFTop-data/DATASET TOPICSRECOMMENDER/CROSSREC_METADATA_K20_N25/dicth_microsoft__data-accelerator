@@ -1,0 +1,10 @@
+1	git://github.com/microsoft/data-accelerator
+2	#DEP#nodej
+3	#DEP#bigdata
+4	#DEP#stream
+5	#DEP#kafka
+6	#DEP#iot
+7	#DEP#azur
+8	#DEP#react
+9	#DEP#spark
+10	#DEP#docker

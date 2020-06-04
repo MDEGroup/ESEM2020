@@ -1,0 +1,15 @@
+1	git://github.com/jakubroztocil/httpie
+2	#DEP#cli
+3	#DEP#http
+4	#DEP#web
+5	#DEP#python
+6	#DEP#develop
+7	#DEP#devop
+8	#DEP#rest
+9	#DEP#client
+10	#DEP#json
+11	#DEP#api
+12	#DEP#developtool
+13	#DEP#termin
+14	#DEP#debug
+15	#DEP#httpclient

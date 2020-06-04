@@ -1,0 +1,3 @@
+no_maven: tfj,no_maven: nodej,no_maven: j,no_maven: facedetect,no_maven: javascript,no_maven: facerecognit
+no_maven: genderrecognit,no_maven: emotrecognit,no_maven: ageestim,no_maven: facelandmark,no_maven: tensorflow,no_maven: tensorflowj
+no_maven: deeplearn,no_maven: machinlearn,no_maven: python,no_maven: neuralnetwork,no_maven: kera,no_maven: jupytnotebook,no_maven: artificiintellig,no_maven: pytorch,no_maven: naturlanguagprocess,no_maven: tutori,no_maven: color,no_maven: nlp,no_maven: datascienc,no_maven: javascript,no_maven: distribut,no_maven: scikitlearn,no_maven: ml,no_maven: computvis,no_maven: handpos,no_maven: artificineuralnetwork

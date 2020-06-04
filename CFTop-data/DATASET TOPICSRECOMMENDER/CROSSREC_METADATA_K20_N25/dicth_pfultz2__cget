@@ -1,0 +1,10 @@
+1	git://github.com/pfultz2/cget
+2	#DEP#packagmanag
+3	#DEP#c
+4	#DEP#osx
+5	#DEP#cmake
+6	#DEP#window
+7	#DEP#linux
+8	#DEP#cplusplu
+9	#DEP#crossplatform
+10	#DEP#cpp

@@ -1,0 +1,8 @@
+1	git://github.com/teeworlds/teeworlds
+2	#DEP#c
+3	#DEP#opengl
+4	#DEP#cpluplu
+5	#DEP#window
+6	#DEP#linux
+7	#DEP#maco
+8	#DEP#game

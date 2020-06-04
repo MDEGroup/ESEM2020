@@ -1,0 +1,3 @@
+no_maven: toolkit,no_maven: cur,no_maven: gui
+no_maven: csharp,no_maven: termin,no_maven: dotnet
+no_maven: xamarin,no_maven: dotnetcor,no_maven: mono,no_maven: io,no_maven: html,no_maven: crossplatform,no_maven: fsharp,no_maven: gamedev,no_maven: opengl,no_maven: framework,no_maven: dualiti,no_maven: portabl,no_maven: gameengin,no_maven: gamedevelop,no_maven: watcho,no_maven: tvo,no_maven: maco,no_maven: entitiframework,no_maven: entityframework,no_maven: ef6

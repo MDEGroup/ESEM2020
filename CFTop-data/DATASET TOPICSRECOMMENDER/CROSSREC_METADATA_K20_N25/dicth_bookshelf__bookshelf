@@ -1,0 +1,8 @@
+1	git://github.com/bookshelf/bookshelf
+2	#DEP#nodej
+3	#DEP#sqlite
+4	#DEP#postgresql
+5	#DEP#databas
+6	#DEP#javascript
+7	#DEP#mysql
+8	#DEP#orm

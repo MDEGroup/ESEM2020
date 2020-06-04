@@ -1,0 +1,14 @@
+1	git://github.com/PipelineAI/pipeline
+2	#DEP#redi
+3	#DEP#neuralnetwork
+4	#DEP#kafka
+5	#DEP#scikitlearn
+6	#DEP#machinlearn
+7	#DEP#kera
+8	#DEP#kubernet
+9	#DEP#tensorflow
+10	#DEP#spark
+11	#DEP#artificiintellig
+12	#DEP#docker
+13	#DEP#pytorch
+14	#DEP#gpu

@@ -1,0 +1,7 @@
+1	git://github.com/synopse/mORMot
+2	#DEP#postgresql
+3	#DEP#oracl
+4	#DEP#orm
+5	#DEP#webapp
+6	#DEP#mvc
+7	#DEP#mysql

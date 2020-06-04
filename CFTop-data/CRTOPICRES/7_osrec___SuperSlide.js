@@ -1,0 +1,3 @@
+no_maven: menubar,no_maven: web,no_maven: menu,no_maven: smooth
+no_maven: menunavig,no_maven: app,no_maven: pwa,no_maven: slide
+no_maven: present,no_maven: javascript,no_maven: slideshow,no_maven: markdown,no_maven: react,no_maven: android,no_maven: html,no_maven: webpack,no_maven: nodej,no_maven: kotlin,no_maven: offlin,no_maven: document,no_maven: keynot,no_maven: jupytnotebook,no_maven: neuralnetwork,no_maven: deeplearn,no_maven: apidocu,no_maven: documenttool,no_maven: doc,no_maven: developtool

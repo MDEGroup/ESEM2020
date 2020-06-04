@@ -1,0 +1,7 @@
+1	git://github.com/giampaolo/psutil
+2	#DEP#c
+3	#DEP#osx
+4	#DEP#python
+5	#DEP#monitor
+6	#DEP#window
+7	#DEP#linux

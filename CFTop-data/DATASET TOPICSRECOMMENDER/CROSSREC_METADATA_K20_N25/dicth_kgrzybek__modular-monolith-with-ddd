@@ -1,0 +1,8 @@
+1	git://github.com/kgrzybek/modular-monolith-with-ddd
+2	#DEP#restapi
+3	#DEP#designsystem
+4	#DEP#architectur
+5	#DEP#dotnetcor
+6	#DEP#design
+7	#DEP#dotnet
+8	#DEP#rest

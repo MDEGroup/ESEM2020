@@ -1,0 +1,7 @@
+1	git://github.com/claudiajs/claudia
+2	#DEP#nodej
+3	#DEP#serverless
+4	#DEP#apigateway
+5	#DEP#javascript
+6	#DEP#awlambda
+7	#DEP#aw

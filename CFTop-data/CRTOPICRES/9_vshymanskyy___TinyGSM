@@ -1,0 +1,3 @@
+no_maven: sim800,no_maven: quectel,no_maven: ublox,no_maven: restapi,no_maven: lte,no_maven: arduino,no_maven: esp32,no_maven: esp8266,no_maven: a7
+no_maven: modem,no_maven: neoway,no_maven: mqtt,no_maven: sim7000,no_maven: a6,no_maven: sim900,no_maven: m590,no_maven: gpr,no_maven: xbee,no_maven: blynk
+no_maven: iot,no_maven: homebridg,no_maven: arduino,no_maven: homekit,no_maven: homeautom,no_maven: http,no_maven: raspberripi,no_maven: iotplatform,no_maven: homebridgplugin,no_maven: internetth,no_maven: java,no_maven: websocket,no_maven: homeassist,no_maven: esp8266,no_maven: io,no_maven: httpswitch,no_maven: hap,no_maven: homebridghttp,no_maven: switch,no_maven: mqttsmarthom

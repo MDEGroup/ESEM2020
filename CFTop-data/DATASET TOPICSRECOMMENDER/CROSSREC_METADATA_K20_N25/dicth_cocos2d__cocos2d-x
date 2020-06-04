@@ -1,0 +1,7 @@
+1	git://github.com/cocos2d/cocos2d-x
+2	#DEP#gameengin
+3	#DEP#cpluplu
+4	#DEP#window
+5	#DEP#android
+6	#DEP#lua
+7	#DEP#io

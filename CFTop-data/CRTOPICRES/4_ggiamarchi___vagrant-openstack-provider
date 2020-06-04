@@ -1,0 +1,3 @@
+no_maven: virtualmachin,no_maven: vagrant,no_maven: iaa,no_maven: devoptool
+no_maven: devop,no_maven: vagrantprovid,no_maven: openstack,no_maven: vagrantplugin,no_maven: cloud
+no_maven: aw,no_maven: kubernet,no_maven: docker,no_maven: contain,no_maven: python,no_maven: terraform,no_maven: azur,no_maven: monitor,no_maven: ansibl,no_maven: cloudmanag,no_maven: golang,no_maven: sre,no_maven: prometheu,no_maven: kubernetclust,no_maven: openshift,no_maven: infrastructur,no_maven: baremet,no_maven: linux,no_maven: serverless,no_maven: kvm

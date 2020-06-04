@@ -1,0 +1,9 @@
+1	git://github.com/mattgodbolt/compiler-explorer
+2	#DEP#compil
+3	#DEP#haskel
+4	#DEP#swift
+5	#DEP#cpluplu
+6	#DEP#assembl
+7	#DEP#go
+8	#DEP#rust
+9	#DEP#cpp

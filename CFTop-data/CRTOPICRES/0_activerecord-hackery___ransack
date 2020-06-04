@@ -1,0 +1,3 @@
+no_maven: search,no_maven: activerecord,no_maven: rubilibrari,no_maven: rubigem
+no_maven: rubi,no_maven: sql,no_maven: rubirail,no_maven: searchinterfac
+no_maven: rail,no_maven: javascript,no_maven: react,no_maven: golang,no_maven: python,no_maven: webpack,no_maven: mysql,no_maven: brakeman,no_maven: securtool,no_maven: staticanalysi,no_maven: gosec,no_maven: redux,no_maven: databas,no_maven: sqlite3,no_maven: postgresql,no_maven: knex,no_maven: vue,no_maven: vulner,no_maven: bandit,no_maven: npmaudit

@@ -1,0 +1,11 @@
+1	git://github.com/sitewhere/sitewhere
+2	#DEP#kubernet
+3	#DEP#java
+4	#DEP#raspberripi
+5	#DEP#arduino
+6	#DEP#kafka
+7	#DEP#iot
+8	#DEP#android
+9	#DEP#aw
+10	#DEP#opensourc
+11	#DEP#microservic

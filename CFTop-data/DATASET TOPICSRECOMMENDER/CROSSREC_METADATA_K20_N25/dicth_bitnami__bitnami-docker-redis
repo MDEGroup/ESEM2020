@@ -1,0 +1,8 @@
+1	git://github.com/bitnami/bitnami-docker-redis
+2	#DEP#dockerimag
+3	#DEP#redi
+4	#DEP#nosql
+5	#DEP#databas
+6	#DEP#contain
+7	#DEP#docker
+8	#DEP#cluster

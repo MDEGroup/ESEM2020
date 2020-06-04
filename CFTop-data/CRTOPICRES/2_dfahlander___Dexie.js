@@ -1,0 +1,3 @@
+no_maven: indexeddb,no_maven: databas,no_maven: javascript
+no_maven: offlin,no_maven: storag,no_maven: offlinstorag
+no_maven: pwa,no_maven: progresswebapp,no_maven: servicwork,no_maven: nosql,no_maven: javascript,no_maven: cach,no_maven: offlinfirst,no_maven: databas,no_maven: webpack,no_maven: servicework,no_maven: ipf,no_maven: emoji,no_maven: keyboard,no_maven: reactnativ,no_maven: emoticon,no_maven: chat,no_maven: kubernetop,no_maven: cassandra,no_maven: op,no_maven: kubernet

@@ -1,0 +1,3 @@
+no_maven: avx2,no_maven: arm64,no_maven: aarch64,no_maven: neon
+no_maven: json,no_maven: simd,no_maven: arm,no_maven: sse42,no_maven: jsonpars
+no_maven: raspberripi,no_maven: c,no_maven: ubuntu,no_maven: raspbian,no_maven: jsonseri,no_maven: cpp,no_maven: opersystem,no_maven: golang,no_maven: embed,no_maven: java,no_maven: calcul,no_maven: tinspir,no_maven: emul,no_maven: jit,no_maven: debian,no_maven: nodej,no_maven: paa,no_maven: python,no_maven: heroku,no_maven: raspberrypi

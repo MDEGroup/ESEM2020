@@ -1,0 +1,3 @@
+no_maven: sbt,no_maven: gradl,no_maven: publish,no_maven: leiningen
+no_maven: librari,no_maven: jitpack,no_maven: maven,no_maven: android
+no_maven: java,no_maven: springmvc,no_maven: gradl,no_maven: ui,no_maven: anim,no_maven: materidesign,no_maven: spring,no_maven: compon,no_maven: mybati,no_maven: ssm,no_maven: redi,no_maven: javacpppreset,no_maven: javalibrari,no_maven: tool,no_maven: plugin,no_maven: launch,no_maven: deploy,no_maven: androidrocketlaunch,no_maven: hibern,no_maven: swift

@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: reactnativ,no_maven: node,no_maven: xmpp
+no_maven: javascript,no_maven: browser,no_maven: compon,no_maven: client
+no_maven: react,no_maven: frontend,no_maven: librari,no_maven: ui,no_maven: node,no_maven: http,no_maven: compil,no_maven: python,no_maven: anim,no_maven: materidesign,no_maven: j,no_maven: nodej,no_maven: golang,no_maven: html,no_maven: web,no_maven: chat,no_maven: desktop,no_maven: vanilla,no_maven: autocomplet,no_maven: es6

@@ -1,0 +1,3 @@
+no_maven: platformio,no_maven: atom,no_maven: fpga,no_maven: arduino,no_maven: esp32,no_maven: esp8266,no_maven: debugg,no_maven: iot
+no_maven: librari,no_maven: microcontrol,no_maven: build,no_maven: hardwar,no_maven: lattic,no_maven: embed,no_maven: verilog,no_maven: ide,no_maven: mbed
+no_maven: opersystem,no_maven: iot,no_maven: arm,no_maven: cortex,no_maven: kernel,no_maven: realtim,no_maven: golang,no_maven: go,no_maven: cpp,no_maven: rto,no_maven: python,no_maven: c,no_maven: homebrew,no_maven: tensorflow,no_maven: rust,no_maven: crossplatform,no_maven: mcu,no_maven: cooper,no_maven: cmsirto,no_maven: preemptiv

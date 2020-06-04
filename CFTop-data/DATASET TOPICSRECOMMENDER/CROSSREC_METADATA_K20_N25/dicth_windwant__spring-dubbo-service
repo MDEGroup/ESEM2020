@@ -1,0 +1,9 @@
+1	git://github.com/windwant/spring-dubbo-service
+2	#DEP#mybati
+3	#DEP#mongodb
+4	#DEP#websocket
+5	#DEP#docker
+6	#DEP#rest
+7	#DEP#valid
+8	#DEP#maven
+9	#DEP#redi

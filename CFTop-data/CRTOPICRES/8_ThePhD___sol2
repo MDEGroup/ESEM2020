@@ -1,0 +1,3 @@
+no_maven: visualstudio,no_maven: luajit,no_maven: gcc,no_maven: sol,no_maven: luascript,no_maven: moderncpp,no_maven: clang
+no_maven: ndk,no_maven: cpp17,no_maven: android,no_maven: lua,no_maven: io,no_maven: luabind,no_maven: visualcpp,no_maven: simpl
+no_maven: mobil,no_maven: nativescript,no_maven: java,no_maven: angular,no_maven: cpluplu,no_maven: crossplatform,no_maven: gameengin,no_maven: cpp,no_maven: reactnativ,no_maven: datavisu,no_maven: chart,no_maven: fast,no_maven: cameraapi,no_maven: capturvideo,no_maven: capturimag,no_maven: androidlibrari,no_maven: perform,no_maven: camera,no_maven: nativ,no_maven: window

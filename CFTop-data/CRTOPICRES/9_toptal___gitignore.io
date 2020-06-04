@@ -1,0 +1,3 @@
+no_maven: gitignorfil,no_maven: serversideswift,no_maven: linux
+no_maven: gitignor,no_maven: maco,no_maven: vaporswift,no_maven: swift
+no_maven: io,no_maven: objectc,no_maven: osx,no_maven: ui,no_maven: macoapp,no_maven: tvo,no_maven: editor,no_maven: cocoa,no_maven: xcode,no_maven: markdown,no_maven: ocr,no_maven: swiftcrawl,no_maven: vaporexampl,no_maven: server,no_maven: perfect,no_maven: serversideswift,no_maven: awesomvapor,no_maven: vapor,no_maven: tutori,no_maven: homebrew

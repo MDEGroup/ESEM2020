@@ -1,0 +1,7 @@
+1	git://github.com/hypebeast/micro-auth
+2	#DEP#authent
+3	#DEP#github
+4	#DEP#googl
+5	#DEP#nginx
+6	#DEP#dockercompo
+7	#DEP#docker

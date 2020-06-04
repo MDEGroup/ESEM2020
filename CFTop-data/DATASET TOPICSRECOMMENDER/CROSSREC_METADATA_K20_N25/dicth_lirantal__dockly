@@ -1,0 +1,7 @@
+1	git://github.com/lirantal/dockly
+2	#DEP#nodej
+3	#DEP#cli
+4	#DEP#consol
+5	#DEP#commandlinetool
+6	#DEP#contain
+7	#DEP#docker

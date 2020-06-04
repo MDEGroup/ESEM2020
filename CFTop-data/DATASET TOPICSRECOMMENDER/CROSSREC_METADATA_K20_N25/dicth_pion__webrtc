@@ -1,0 +1,8 @@
+1	git://github.com/pion/webrtc
+2	#DEP#stream
+3	#DEP#p2p
+4	#DEP#golang
+5	#DEP#video
+6	#DEP#audio
+7	#DEP#go
+8	#DEP#webassembl

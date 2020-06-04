@@ -1,0 +1,3 @@
+no_maven: j,no_maven: python,no_maven: chart
+no_maven: json,no_maven: django,no_maven: ajax
+no_maven: javascript,no_maven: python,no_maven: jqueri,no_maven: bootstrap,no_maven: nodej,no_maven: fetch,no_maven: jqueriplugin,no_maven: modal,no_maven: form,no_maven: cs,no_maven: html,no_maven: mysql,no_maven: vue,no_maven: ajaxform,no_maven: webapp,no_maven: promis,no_maven: http,no_maven: react,no_maven: pagin,no_maven: templat

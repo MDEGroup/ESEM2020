@@ -1,0 +1,8 @@
+1	git://github.com/justsml/guides
+2	#DEP#express
+3	#DEP#mongodb
+4	#DEP#ajax
+5	#DEP#eslint
+6	#DEP#document
+7	#DEP#docker
+8	#DEP#guid

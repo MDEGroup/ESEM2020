@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: node,no_maven: express,no_maven: expressj
+no_maven: mvc,no_maven: webapp,no_maven: userscriptmanag,no_maven: onlinexpect
+no_maven: framework,no_maven: android,no_maven: io,no_maven: react,no_maven: javascript,no_maven: web,no_maven: nodej,no_maven: reactnativ,no_maven: mobil,no_maven: mobilapp,no_maven: vue,no_maven: koa,no_maven: reactj,no_maven: aspnetcor,no_maven: local,no_maven: cpp,no_maven: sql,no_maven: modelviewcontrol,no_maven: mongodb,no_maven: java

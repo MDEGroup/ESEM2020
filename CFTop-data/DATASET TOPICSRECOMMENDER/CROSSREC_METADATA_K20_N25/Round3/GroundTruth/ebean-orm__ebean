@@ -1,0 +1,6 @@
+8	#DEP#mariadb
+9	#DEP#orm
+10	#DEP#elasticsearch
+11	#DEP#mysql
+12	#DEP#sqlserver
+13	#DEP#oracl

@@ -1,0 +1,3 @@
+no_maven: chrome,no_maven: javascript,no_maven: crx
+no_maven: chromeexten,no_maven: translat,no_maven: pdf
+no_maven: javascript,no_maven: i18n,no_maven: latex,no_maven: internation,no_maven: markdown,no_maven: local,no_maven: python,no_maven: nodej,no_maven: react,no_maven: book,no_maven: epub,no_maven: django,no_maven: web,no_maven: pandoc,no_maven: makefil,no_maven: typeset,no_maven: yaml,no_maven: frontend,no_maven: flutter,no_maven: jsonloc

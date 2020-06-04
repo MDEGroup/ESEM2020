@@ -1,0 +1,7 @@
+1	git://github.com/liamg/tfsec
+2	#DEP#ci
+3	#DEP#secur
+4	#DEP#staticanalysi
+5	#DEP#azur
+6	#DEP#terraform
+7	#DEP#aw

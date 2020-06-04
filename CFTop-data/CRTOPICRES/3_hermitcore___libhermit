@@ -1,0 +1,3 @@
+no_maven: kernel,no_maven: cloudcomput,no_maven: multikernel,no_maven: virtual
+no_maven: osdev,no_maven: highperformcomput,no_maven: unikernel,no_maven: opersystem
+no_maven: kernel,no_maven: c,no_maven: window,no_maven: java,no_maven: x86,no_maven: assembl,no_maven: rust,no_maven: terminemul,no_maven: cdrom,no_maven: eltorito,no_maven: windowmanag,no_maven: python,no_maven: compositor,no_maven: baremet,no_maven: toaruo,no_maven: bootload,no_maven: texteditor,no_maven: clibrari,no_maven: linuxkernel,no_maven: arm

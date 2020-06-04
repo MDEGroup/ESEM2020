@@ -1,0 +1,3 @@
+no_maven: httpserver,no_maven: websocketprotocol,no_maven: rubimri,no_maven: cluster,no_maven: concurrconnect,no_maven: webserv,no_maven: rubi,no_maven: server
+no_maven: eventmachin,no_maven: websocketserv,no_maven: redicli,no_maven: eventsourc,no_maven: redi,no_maven: rack,no_maven: pubsub,no_maven: sse
+no_maven: websocket,no_maven: rail,no_maven: rubi,no_maven: server,no_maven: cqr,no_maven: eventdriven,no_maven: elixir,no_maven: nodej,no_maven: webserv,no_maven: http,no_maven: web,no_maven: cqre,no_maven: framework,no_maven: realtim,no_maven: javascript,no_maven: bot,no_maven: springboot,no_maven: command,no_maven: eventstor,no_maven: golang

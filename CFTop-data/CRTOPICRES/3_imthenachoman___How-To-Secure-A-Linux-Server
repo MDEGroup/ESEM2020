@@ -1,0 +1,3 @@
+no_maven: ccsa,no_maven: secur,no_maven: hardenstep,no_maven: server
+no_maven: harden,no_maven: linux,no_maven: linuxserv,no_maven: securharden
+no_maven: secur,no_maven: pcid,no_maven: ansibl,no_maven: shell,no_maven: securtool,no_maven: complianc,no_maven: stig,no_maven: securautom,no_maven: ci,no_maven: bash,no_maven: systemd,no_maven: ubuntuserv,no_maven: ubuntu,no_maven: vim,no_maven: audit,no_maven: privaci,no_maven: mozilla,no_maven: firefox,no_maven: mozillafirefox,no_maven: securprofil

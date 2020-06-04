@@ -1,0 +1,3 @@
+no_maven: log,no_maven: riemann,no_maven: metric
+no_maven: clojur,no_maven: monitor,no_maven: event
+no_maven: clojurescript,no_maven: dom,no_maven: php,no_maven: restapi,no_maven: web,no_maven: schedul,no_maven: googlcalendar,no_maven: javascript,no_maven: laravel,no_maven: ide,no_maven: lighttabl,no_maven: clojurdevelop,no_maven: editor,no_maven: systemcatalog,no_maven: widget,no_maven: postgresql,no_maven: plpgsql,no_maven: versioncontrolsystem,no_maven: semant,no_maven: jqueri

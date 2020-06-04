@@ -1,0 +1,7 @@
+1	git://github.com/google/tink
+2	#DEP#secur
+3	#DEP#java
+4	#DEP#javascript
+5	#DEP#crypto
+6	#DEP#go
+7	#DEP#cpp

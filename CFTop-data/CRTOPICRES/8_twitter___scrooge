@@ -1,0 +1,3 @@
+no_maven: scala,no_maven: java,no_maven: finagl,no_maven: cocoa
+no_maven: android,no_maven: lua,no_maven: thrift,no_maven: codegen
+no_maven: golang,no_maven: go,no_maven: io,no_maven: compil,no_maven: schemafirst,no_maven: graphql,no_maven: typescript,no_maven: angular,no_maven: swagger,no_maven: gamedevelop,no_maven: gameengin,no_maven: api,no_maven: microservic,no_maven: window,no_maven: swift,no_maven: tensoralgebra,no_maven: machinlearn,no_maven: deepneuralnetwork,no_maven: optim,no_maven: librari

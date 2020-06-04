@@ -1,0 +1,3 @@
+no_maven: darksyntaxthem,no_maven: vimairlin,no_maven: vim
+no_maven: vimcolorschem,no_maven: colorschem,no_maven: lightlin
+no_maven: theme,no_maven: termin,no_maven: sublimtext,no_maven: xcode,no_maven: atom,no_maven: vscode,no_maven: sketch,no_maven: slack,no_maven: generthem,no_maven: wallpap,no_maven: iterm,no_maven: hyper,no_maven: alfr,no_maven: themer,no_maven: trianglifi,no_maven: vim,no_maven: conemu,no_maven: cmd,no_maven: chrome,no_maven: shell

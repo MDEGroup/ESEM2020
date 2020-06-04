@@ -1,0 +1,7 @@
+1	git://github.com/globocom/huskyCI
+2	#DEP#continuintegr
+3	#DEP#python
+4	#DEP#javascript
+5	#DEP#staticanalysi
+6	#DEP#golang
+7	#DEP#securtool

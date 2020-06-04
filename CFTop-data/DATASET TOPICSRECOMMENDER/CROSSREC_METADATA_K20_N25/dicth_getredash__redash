@@ -1,0 +1,8 @@
+1	git://github.com/getredash/redash
+2	#DEP#postgresql
+3	#DEP#python
+4	#DEP#javascript
+5	#DEP#visual
+6	#DEP#mysql
+7	#DEP#dashboard
+8	#DEP#analyt

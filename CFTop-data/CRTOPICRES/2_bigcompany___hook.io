@@ -1,0 +1,3 @@
+no_maven: serverless,no_maven: webhook,no_maven: faa
+no_maven: javascript,no_maven: hook,no_maven: microservic
+no_maven: react,no_maven: nodej,no_maven: typescript,no_maven: reacthook,no_maven: graphql,no_maven: mongodb,no_maven: http,no_maven: docker,no_maven: serverless,no_maven: rest,no_maven: fetch,no_maven: reactnativ,no_maven: javassist,no_maven: aspectj,no_maven: lifecycl,no_maven: gradl,no_maven: rxjava,no_maven: retrofit2,no_maven: mvp,no_maven: android

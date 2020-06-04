@@ -1,0 +1,3 @@
+no_maven: powerpc,no_maven: bap,no_maven: x86,no_maven: staticanalysi,no_maven: secur,no_maven: controlflowanalysi,no_maven: mip,no_maven: binarianalysi,no_maven: programverif,no_maven: ocaml
+no_maven: dynamanalysi,no_maven: emul,no_maven: disassembl,no_maven: taintanalysi,no_maven: lifter,no_maven: instructsem,no_maven: forens,no_maven: arm,no_maven: programanalysi,no_maven: reversengin
+no_maven: secur,no_maven: python,no_maven: framework,no_maven: hack,no_maven: malwar,no_maven: raspberripi,no_maven: ethereum,no_maven: staticanalysi,no_maven: ubuntu,no_maven: raspbian,no_maven: window,no_maven: mip,no_maven: x86,no_maven: arm64,no_maven: x8664,no_maven: m68k,no_maven: sparc,no_maven: pentest,no_maven: android,no_maven: linux

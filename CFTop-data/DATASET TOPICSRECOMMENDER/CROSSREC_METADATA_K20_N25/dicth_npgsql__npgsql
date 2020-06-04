@@ -1,0 +1,7 @@
+1	git://github.com/npgsql/npgsql
+2	#DEP#sql
+3	#DEP#postgr
+4	#DEP#postgresql
+5	#DEP#databas
+6	#DEP#csharp
+7	#DEP#dotnet

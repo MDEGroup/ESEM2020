@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: c,no_maven: luabind,no_maven: iplookup,no_maven: java,no_maven: python
+no_maven: iplocat,no_maven: clang,no_maven: golang,no_maven: lua,no_maven: rust,no_maven: php,no_maven: ipaddress
+no_maven: python,no_maven: cpp,no_maven: javascript,no_maven: rubi,no_maven: java,no_maven: c,no_maven: typescript,no_maven: go,no_maven: swift,no_maven: csharp,no_maven: elixir,no_maven: gcc,no_maven: haskel,no_maven: graphql,no_maven: objectc,no_maven: scala,no_maven: elm,no_maven: cplusplu,no_maven: cli,no_maven: react

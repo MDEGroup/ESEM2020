@@ -1,0 +1,11 @@
+1	git://github.com/sagemathinc/cocalc
+2	#DEP#nodej
+3	#DEP#latex
+4	#DEP#jupytnotebook
+5	#DEP#postgresql
+6	#DEP#python
+7	#DEP#jupyt
+8	#DEP#markdown
+9	#DEP#r
+10	#DEP#termin
+11	#DEP#cloud

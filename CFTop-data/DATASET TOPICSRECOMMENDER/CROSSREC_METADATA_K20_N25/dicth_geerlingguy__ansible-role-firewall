@@ -1,0 +1,7 @@
+1	git://github.com/geerlingguy/ansible-role-firewall
+2	#DEP#secur
+3	#DEP#debian
+4	#DEP#linux
+5	#DEP#ubuntu
+6	#DEP#cento
+7	#DEP#ansibl

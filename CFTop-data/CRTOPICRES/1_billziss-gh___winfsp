@@ -1,0 +1,3 @@
+no_maven: kernel,no_maven: windowkernel,no_maven: gplv3
+no_maven: driver,no_maven: fuse,no_maven: window,no_maven: filesystem
+no_maven: databas,no_maven: nosql,no_maven: file,no_maven: rust,no_maven: nodej,no_maven: javascript,no_maven: search,no_maven: cassandra,no_maven: client,no_maven: c,no_maven: arangodb,no_maven: tool,no_maven: cli,no_maven: storag,no_maven: polyfil,no_maven: fileaccess,no_maven: network,no_maven: reactnativ,no_maven: android,no_maven: io

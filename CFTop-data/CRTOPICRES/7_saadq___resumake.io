@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: latex,no_maven: pdflatex,no_maven: gener
+no_maven: resum,no_maven: pdfgener,no_maven: react,no_maven: pdf
+no_maven: latex,no_maven: html,no_maven: cs,no_maven: typeset,no_maven: resumtemplat,no_maven: markdown,no_maven: pandoc,no_maven: tex,no_maven: typesetsystem,no_maven: sile,no_maven: publish,no_maven: book,no_maven: php,no_maven: jekyl,no_maven: latextemplat,no_maven: functionprogram,no_maven: javascript,no_maven: interview,no_maven: linux,no_maven: nodej

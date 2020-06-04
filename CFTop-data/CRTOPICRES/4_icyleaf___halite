@@ -1,0 +1,3 @@
+no_maven: httpinterceptor,no_maven: chainablmethod,no_maven: crystal
+no_maven: httplogger,no_maven: httpsession,no_maven: httpmiddlewar,no_maven: httpclient
+no_maven: http,no_maven: request,no_maven: json,no_maven: rest,no_maven: apicli,no_maven: python,no_maven: restapi,no_maven: curl,no_maven: api,no_maven: java,no_maven: php,no_maven: network,no_maven: ajax,no_maven: webscrap,no_maven: framework,no_maven: client,no_maven: develop,no_maven: termin,no_maven: cli,no_maven: developtool

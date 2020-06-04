@@ -1,0 +1,3 @@
+no_maven: markdown,no_maven: latex,no_maven: book
+no_maven: html,no_maven: epub,no_maven: pdf,no_maven: rust
+no_maven: ebook,no_maven: book,no_maven: mobi,no_maven: javascript,no_maven: latex,no_maven: markdown,no_maven: cli,no_maven: chrome,no_maven: reader,no_maven: server,no_maven: python,no_maven: gitbook,no_maven: tutori,no_maven: nodej,no_maven: publish,no_maven: cs,no_maven: tool,no_maven: commandlin,no_maven: termin,no_maven: benchmark

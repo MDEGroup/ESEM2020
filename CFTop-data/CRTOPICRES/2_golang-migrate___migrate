@@ -1,0 +1,3 @@
+no_maven: postgr,no_maven: sqlite,no_maven: mongodb,no_maven: databas,no_maven: googlcloudstorag,no_maven: migrat,no_maven: googlcloudspann,no_maven: mariadb,no_maven: crate
+no_maven: sql,no_maven: golang,no_maven: mysql,no_maven: spanner,no_maven: go,no_maven: neo4j,no_maven: aws3,no_maven: cassandra,no_maven: ql
+no_maven: databas,no_maven: nosql,no_maven: postgresql,no_maven: sqlite,no_maven: storag,no_maven: op,no_maven: kubernet,no_maven: kubernetop,no_maven: postgr,no_maven: mongodb,no_maven: orm,no_maven: javascript,no_maven: redi,no_maven: dataanalysi,no_maven: microservic,no_maven: datavisu,no_maven: migrat,no_maven: sqlserver,no_maven: test,no_maven: tdd

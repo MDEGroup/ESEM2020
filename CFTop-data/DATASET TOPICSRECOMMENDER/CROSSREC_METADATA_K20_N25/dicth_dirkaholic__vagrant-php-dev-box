@@ -1,0 +1,8 @@
+1	git://github.com/dirkaholic/vagrant-php-dev-box
+2	#DEP#vagrant
+3	#DEP#develop
+4	#DEP#laravel
+5	#DEP#nginx
+6	#DEP#mysql
+7	#DEP#php7
+8	#DEP#symfoni

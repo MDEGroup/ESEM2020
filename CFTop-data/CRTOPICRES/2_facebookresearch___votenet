@@ -1,0 +1,3 @@
+no_maven: deeplearn,no_maven: objectdetect,no_maven: robot
+no_maven: vote,no_maven: pointcloud,no_maven: 3d
+no_maven: webgl,no_maven: computvis,no_maven: python,no_maven: graphic,no_maven: geometriprocess,no_maven: deeplearn,no_maven: rgbd,no_maven: segment,no_maven: threej,no_maven: globe,no_maven: javascript,no_maven: neuralnetwork,no_maven: gameengin,no_maven: visual,no_maven: opengl,no_maven: cpluplu,no_maven: gltf2,no_maven: electron,no_maven: gltf,no_maven: viewer

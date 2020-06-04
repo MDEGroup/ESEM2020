@@ -1,0 +1,8 @@
+1	git://github.com/lbryio/lbry-sdk
+2	#DEP#bitcoin
+3	#DEP#python
+4	#DEP#blockchain
+5	#DEP#p2p
+6	#DEP#bittorr
+7	#DEP#decentr
+8	#DEP#cryptocurr

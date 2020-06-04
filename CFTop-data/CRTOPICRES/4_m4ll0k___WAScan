@@ -1,0 +1,3 @@
+no_maven: web,no_maven: scanner,no_maven: sql
+no_maven: inject,no_maven: webapp,no_maven: x
+no_maven: javascript,no_maven: react,no_maven: python,no_maven: html5,no_maven: web,no_maven: linux,no_maven: pwa,no_maven: android,no_maven: io,no_maven: secur,no_maven: django,no_maven: cs,no_maven: svg,no_maven: webpack,no_maven: html,no_maven: app,no_maven: typescript,no_maven: ui,no_maven: toolkit,no_maven: framework

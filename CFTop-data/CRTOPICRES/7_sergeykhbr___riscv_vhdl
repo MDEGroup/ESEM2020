@@ -1,0 +1,3 @@
+no_maven: qt,no_maven: soc,no_maven: vhdl,no_maven: systemc
+no_maven: riscv,no_maven: simul,no_maven: debugg,no_maven: cpu
+no_maven: secur,no_maven: qt,no_maven: debug,no_maven: javascript,no_maven: emul,no_maven: lua,no_maven: x86,no_maven: reversengin,no_maven: x8664,no_maven: network,no_maven: processorarchitectur,no_maven: risc,no_maven: cpuemul,no_maven: computarchitectur,no_maven: educ,no_maven: unity3d,no_maven: xmr,no_maven: monero,no_maven: go,no_maven: java

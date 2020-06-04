@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: serverless,no_maven: cube,no_maven: postgresql,no_maven: presto,no_maven: javascript
+no_maven: chart,no_maven: hive,no_maven: mysql,no_maven: spark,no_maven: analyt,no_maven: microservic,no_maven: athena
+no_maven: dashboard,no_maven: python,no_maven: datavisu,no_maven: bigdata,no_maven: webanalyt,no_maven: nativanalyt,no_maven: dataviz,no_maven: keenio,no_maven: analysi,no_maven: scala,no_maven: hadoop,no_maven: busiintellig,no_maven: admin,no_maven: monitor,no_maven: visual,no_maven: redi,no_maven: kafka,no_maven: nosql,no_maven: analytapi,no_maven: dataexplor

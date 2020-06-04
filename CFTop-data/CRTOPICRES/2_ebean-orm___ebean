@@ -1,0 +1,3 @@
+no_maven: jdbc,no_maven: sqlite,no_maven: java,no_maven: databas,no_maven: cockroachdb,no_maven: kotlin,no_maven: h2,no_maven: hana,no_maven: postgr
+no_maven: jpa,no_maven: sql,no_maven: mariadb,no_maven: orm,no_maven: elasticsearch,no_maven: mysql,no_maven: sqlserver,no_maven: ebean,no_maven: oracl
+no_maven: postgresql,no_maven: sqlite,no_maven: databas,no_maven: java,no_maven: csharp,no_maven: mssql,no_maven: db2,no_maven: sqlqueri,no_maven: jdbc,no_maven: linq,no_maven: firebird,no_maven: dotnet,no_maven: microsoftsqlserv,no_maven: postgr,no_maven: sqlqueribuild,no_maven: codegen,no_maven: poco,no_maven: redi,no_maven: mybati,no_maven: mongodb

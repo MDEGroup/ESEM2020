@@ -1,0 +1,7 @@
+1	git://github.com/RickWong/fetch-plus
+2	#DEP#nodej
+3	#DEP#http
+4	#DEP#xml
+5	#DEP#rest
+6	#DEP#json
+7	#DEP#ajax

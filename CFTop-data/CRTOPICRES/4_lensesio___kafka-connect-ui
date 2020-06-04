@@ -1,0 +1,3 @@
+no_maven: twitter,no_maven: kafkaconnect,no_maven: elasticsearch,no_maven: kafka,no_maven: influxdb,no_maven: jm
+no_maven: mqtt,no_maven: hdf,no_maven: s3,no_maven: redi,no_maven: cassandra,no_maven: documentdb
+no_maven: nosql,no_maven: databas,no_maven: aw,no_maven: serverless,no_maven: driver,no_maven: backup,no_maven: postgresql,no_maven: client,no_maven: mysql,no_maven: kubernet,no_maven: react,no_maven: tensorflow,no_maven: kera,no_maven: pytorch,no_maven: spark,no_maven: postgr,no_maven: golang,no_maven: go,no_maven: docker,no_maven: python

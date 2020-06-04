@@ -1,0 +1,3 @@
+no_maven: openid,no_maven: oauth2,no_maven: provid,no_maven: server
+no_maven: openidprovid,no_maven: connect,no_maven: openidconnect,no_maven: oidc
+no_maven: authent,no_maven: author,no_maven: oauth,no_maven: secur,no_maven: java,no_maven: ldap,no_maven: logout,no_maven: twitter,no_maven: ca,no_maven: facebook,no_maven: jwt,no_maven: sql,no_maven: sociallogin,no_maven: login,no_maven: mongodb,no_maven: saml,no_maven: par,no_maven: springboot,no_maven: opensourc,no_maven: oauth2

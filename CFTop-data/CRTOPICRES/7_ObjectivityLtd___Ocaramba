@@ -1,0 +1,3 @@
+no_maven: nunit,no_maven: datadriven,no_maven: chrome,no_maven: firefox,no_maven: specflow,no_maven: seleniumwebdriv
+no_maven: xunit,no_maven: safari,no_maven: test,no_maven: mstest,no_maven: parallel,no_maven: ie,no_maven: testautom
+no_maven: javascript,no_maven: firefox,no_maven: chrome,no_maven: testtool,no_maven: typescript,no_maven: nodej,no_maven: synchron,no_maven: rust,no_maven: thread,no_maven: datastructur,no_maven: concurr,no_maven: lockfre,no_maven: restapi,no_maven: testframework,no_maven: angular,no_maven: webextens,no_maven: bitwarden,no_maven: vagrant,no_maven: virtual,no_maven: packer

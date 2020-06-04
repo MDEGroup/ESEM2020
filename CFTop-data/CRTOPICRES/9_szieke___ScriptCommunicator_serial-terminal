@@ -1,0 +1,3 @@
+no_maven: qt,no_maven: udp,no_maven: script,no_maven: tcp
+no_maven: serialport,no_maven: bu,no_maven: spimast,no_maven: termin,no_maven: serial
+no_maven: json,no_maven: cli,no_maven: deseri,no_maven: java,no_maven: tool,no_maven: commandlin,no_maven: rust,no_maven: swift,no_maven: par,no_maven: raspberripi,no_maven: iot,no_maven: android,no_maven: jsonpars,no_maven: golang,no_maven: go,no_maven: benchmark,no_maven: marlin,no_maven: upnp,no_maven: nodej,no_maven: gcode

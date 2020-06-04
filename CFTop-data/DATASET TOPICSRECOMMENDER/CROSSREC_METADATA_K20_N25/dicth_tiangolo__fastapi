@@ -1,0 +1,10 @@
+1	git://github.com/tiangolo/fastapi
+2	#DEP#openapi
+3	#DEP#python
+4	#DEP#rest
+5	#DEP#python3
+6	#DEP#framework
+7	#DEP#json
+8	#DEP#api
+9	#DEP#async
+10	#DEP#swagger

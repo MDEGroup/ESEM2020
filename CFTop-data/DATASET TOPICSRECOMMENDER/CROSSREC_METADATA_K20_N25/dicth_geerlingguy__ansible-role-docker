@@ -1,0 +1,8 @@
+1	git://github.com/geerlingguy/ansible-role-docker
+2	#DEP#ubuntu
+3	#DEP#debian
+4	#DEP#server
+5	#DEP#cento
+6	#DEP#contain
+7	#DEP#docker
+8	#DEP#ansibl

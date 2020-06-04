@@ -1,0 +1,8 @@
+1	git://github.com/pywinauto/pywinauto
+2	#DEP#testtool
+3	#DEP#python
+4	#DEP#autom
+5	#DEP#gui
+6	#DEP#window
+7	#DEP#linux
+8	#DEP#test

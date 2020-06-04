@@ -1,0 +1,3 @@
+no_maven: c,no_maven: esp32,no_maven: stm32
+no_maven: elixir,no_maven: embed,no_maven: erlang
+no_maven: c,no_maven: rubi,no_maven: haskel,no_maven: rust,no_maven: erlangvm,no_maven: nosql,no_maven: tcp,no_maven: typescript,no_maven: python,no_maven: scala,no_maven: lua,no_maven: performvisu,no_maven: performdashboard,no_maven: beam,no_maven: iot,no_maven: microcontrol,no_maven: storag,no_maven: nosqldataba,no_maven: json,no_maven: transact

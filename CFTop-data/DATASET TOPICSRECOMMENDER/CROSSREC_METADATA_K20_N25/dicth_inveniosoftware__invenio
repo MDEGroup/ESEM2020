@@ -1,0 +1,7 @@
+1	git://github.com/inveniosoftware/invenio
+2	#DEP#postgresql
+3	#DEP#angularj
+4	#DEP#python
+5	#DEP#flask
+6	#DEP#elasticsearch
+7	#DEP#redi

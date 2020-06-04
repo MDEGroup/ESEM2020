@@ -1,0 +1,3 @@
+no_maven: luajit,no_maven: openresti,no_maven: vanillaopenresti,no_maven: luamvc
+no_maven: mvc,no_maven: lua,no_maven: vanilladev,no_maven: vanilla
+no_maven: javascript,no_maven: es6,no_maven: android,no_maven: backbon,no_maven: mvvm,no_maven: framework,no_maven: architectur,no_maven: nodej,no_maven: io,no_maven: mvp,no_maven: gamedevelop,no_maven: gameengin,no_maven: redi,no_maven: autocomplet,no_maven: koa,no_maven: j,no_maven: reactj,no_maven: vuej,no_maven: react,no_maven: vue

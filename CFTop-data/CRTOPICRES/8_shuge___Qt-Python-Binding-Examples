@@ -1,0 +1,3 @@
+no_maven: qt,no_maven: pyqt4,no_maven: gui
+no_maven: pyqt5,no_maven: pysid,no_maven: pyside2
+no_maven: qt,no_maven: packagmanag,no_maven: python,no_maven: lalrgrammar,no_maven: dfaminim,no_maven: scanner,no_maven: yacc,no_maven: lexicanalyz,no_maven: par,no_maven: nfa,no_maven: lexer,no_maven: flex,no_maven: bazelrul,no_maven: java,no_maven: scannergen,no_maven: antlr,no_maven: mavenplugin,no_maven: dfa,no_maven: token,no_maven: regexp

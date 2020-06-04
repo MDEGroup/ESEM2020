@@ -1,0 +1,3 @@
+no_maven: cli,no_maven: script,no_maven: npm
+no_maven: npmscript,no_maven: autom,no_maven: packagjson
+no_maven: io,no_maven: npm,no_maven: test,no_maven: ansibl,no_maven: android,no_maven: javascript,no_maven: nodej,no_maven: hybridapp,no_maven: uitest,no_maven: terraform,no_maven: headless,no_maven: chrome,no_maven: telegram,no_maven: homebridg,no_maven: notif,no_maven: homeautom,no_maven: homebridgplugin,no_maven: puppet,no_maven: packaglock,no_maven: shrinkwrap

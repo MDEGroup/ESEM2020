@@ -1,0 +1,3 @@
+no_maven: vue,no_maven: es6,no_maven: j,no_maven: javascript
+no_maven: vuej,no_maven: reactj,no_maven: react,no_maven: mvc,no_maven: backbon
+no_maven: javascript,no_maven: vue,no_maven: angular,no_maven: redux,no_maven: nodej,no_maven: golang,no_maven: cs,no_maven: materidesign,no_maven: webapp,no_maven: bootstrap4,no_maven: bootstrap,no_maven: sql,no_maven: python,no_maven: java,no_maven: linux,no_maven: global,no_maven: local,no_maven: mongodb,no_maven: go,no_maven: ssr

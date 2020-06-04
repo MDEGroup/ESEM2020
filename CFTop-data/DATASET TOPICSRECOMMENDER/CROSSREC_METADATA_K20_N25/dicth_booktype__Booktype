@@ -1,0 +1,8 @@
+1	git://github.com/booktype/Booktype
+2	#DEP#ebook
+3	#DEP#python
+4	#DEP#javascript
+5	#DEP#django
+6	#DEP#rest
+7	#DEP#book
+8	#DEP#pdf

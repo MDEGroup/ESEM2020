@@ -1,0 +1,3 @@
+no_maven: core,no_maven: deepneuralnetwork,no_maven: avx2,no_maven: avx,no_maven: intelprocessorgraph,no_maven: intelarchitectur,no_maven: avx512,no_maven: mkldnn,no_maven: cpluplu,no_maven: deeplearn
+no_maven: perform,no_maven: openmp,no_maven: xeon,no_maven: avx512vnni,no_maven: atom,no_maven: sse41,no_maven: dnnl,no_maven: xeonphi,no_maven: tbb,no_maven: simd
+no_maven: javascript,no_maven: nodej,no_maven: chrome,no_maven: debug,no_maven: matrix,no_maven: vector,no_maven: react,no_maven: nativ,no_maven: cs,no_maven: css3,no_maven: web,no_maven: termin,no_maven: python,no_maven: feed,no_maven: r,no_maven: prototyp,no_maven: ecmascript,no_maven: par,no_maven: binari,no_maven: v8

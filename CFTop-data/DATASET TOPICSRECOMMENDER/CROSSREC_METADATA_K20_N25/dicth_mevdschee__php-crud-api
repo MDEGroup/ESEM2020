@@ -1,0 +1,10 @@
+1	git://github.com/mevdschee/php-crud-api
+2	#DEP#openapi
+3	#DEP#postgresql
+4	#DEP#restapi
+5	#DEP#databas
+6	#DEP#rest
+7	#DEP#sqlserver
+8	#DEP#mysql
+9	#DEP#swagger
+10	#DEP#php

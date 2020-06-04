@@ -1,0 +1,7 @@
+1	git://github.com/simov/markdown-viewer
+2	#DEP#markdown
+3	#DEP#chrome
+4	#DEP#javascript
+5	#DEP#firefox
+6	#DEP#chromeexten
+7	#DEP#firefoxaddon

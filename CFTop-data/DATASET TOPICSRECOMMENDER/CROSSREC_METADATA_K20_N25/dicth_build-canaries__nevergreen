@@ -1,0 +1,10 @@
+1	git://github.com/build-canaries/nevergreen
+2	#DEP#continudeploy
+3	#DEP#ci
+4	#DEP#continuintegr
+5	#DEP#monitor
+6	#DEP#react
+7	#DEP#travici
+8	#DEP#redux
+9	#DEP#continudeliveri
+10	#DEP#cicd

@@ -1,0 +1,11 @@
+1	git://github.com/lando/lando
+2	#DEP#nodej
+3	#DEP#docker
+4	#DEP#python
+5	#DEP#develop
+6	#DEP#rubi
+7	#DEP#laravel
+8	#DEP#dotnet
+9	#DEP#wordpress
+10	#DEP#php
+11	#DEP#local

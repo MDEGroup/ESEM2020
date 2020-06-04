@@ -1,0 +1,3 @@
+no_maven: tslint,no_maven: flaskappl,no_maven: python,no_maven: javascript,no_maven: linter
+no_maven: phpc,no_maven: rubi,no_maven: eslint,no_maven: lua,no_maven: rubocop,no_maven: php
+no_maven: javascript,no_maven: python,no_maven: react,no_maven: typescript,no_maven: java,no_maven: c,no_maven: vue,no_maven: redux,no_maven: perl,no_maven: tcl,no_maven: webpack,no_maven: go,no_maven: rust,no_maven: es6,no_maven: debugg,no_maven: docker,no_maven: cpp,no_maven: sas,no_maven: babel,no_maven: mocha

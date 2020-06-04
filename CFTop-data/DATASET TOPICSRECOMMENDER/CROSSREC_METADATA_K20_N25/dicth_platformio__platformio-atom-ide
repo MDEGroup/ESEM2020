@@ -1,0 +1,7 @@
+1	git://github.com/platformio/platformio-atom-ide
+2	#DEP#atom
+3	#DEP#arduino
+4	#DEP#iot
+5	#DEP#librari
+6	#DEP#embed
+7	#DEP#ide

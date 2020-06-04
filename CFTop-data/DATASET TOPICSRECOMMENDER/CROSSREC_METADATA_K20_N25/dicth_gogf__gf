@@ -1,0 +1,10 @@
+1	git://github.com/gogf/gf
+2	#DEP#templat
+3	#DEP#cach
+4	#DEP#webserv
+5	#DEP#valid
+6	#DEP#golang
+7	#DEP#framework
+8	#DEP#mvc
+9	#DEP#orm
+10	#DEP#go

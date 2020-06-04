@@ -1,0 +1,3 @@
+no_maven: scala,no_maven: lightgbm,no_maven: cognitserv,no_maven: pyspark,no_maven: ai,no_maven: deeplearn,no_maven: cntk,no_maven: modeldeploy
+no_maven: azur,no_maven: machinlearn,no_maven: ml,no_maven: microsoftmachinlearn,no_maven: databrick,no_maven: spark,no_maven: microsoft,no_maven: http
+no_maven: python,no_maven: tensorflow,no_maven: scikitlearn,no_maven: datascienc,no_maven: deeplearn,no_maven: kubernet,no_maven: dotnet,no_maven: stream,no_maven: java,no_maven: golang,no_maven: go,no_maven: cloud,no_maven: ai,no_maven: eventhub,no_maven: c,no_maven: nodej,no_maven: messag,no_maven: node,no_maven: amqp,no_maven: apach

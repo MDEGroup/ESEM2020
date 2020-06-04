@@ -1,0 +1,7 @@
+1	git://github.com/Netflix/genie
+2	#DEP#bigdata
+3	#DEP#springboot
+4	#DEP#distributsystem
+5	#DEP#microservic
+6	#DEP#cloud
+7	#DEP#java

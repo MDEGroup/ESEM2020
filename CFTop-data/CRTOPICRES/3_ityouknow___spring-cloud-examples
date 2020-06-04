@@ -1,0 +1,3 @@
+no_maven: refresh,no_maven: springclond,no_maven: springboot,no_maven: zuul,no_maven: hystrix
+no_maven: hystrixdashboardturbin,no_maven: eureka,no_maven: turbin,no_maven: springclouddemo,no_maven: springcloud,no_maven: springcloudexampl
+no_maven: springboot,no_maven: spring,no_maven: java,no_maven: microservic,no_maven: hystrix,no_maven: springcloudcor,no_maven: zuul,no_maven: cloudnativ,no_maven: docker,no_maven: mybati,no_maven: zipkin,no_maven: rabbitmq,no_maven: springsecur,no_maven: apigateway,no_maven: proxi,no_maven: reactor,no_maven: consul,no_maven: springbootadmin,no_maven: kubernet,no_maven: config

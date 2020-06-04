@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: smartappbann,no_maven: vanillaj,no_maven: ecmascript6,no_maven: javascript,no_maven: npm
+no_maven: bower,no_maven: android,no_maven: smartbann,no_maven: io,no_maven: webdev,no_maven: mobil
+no_maven: nativescript,no_maven: javascript,no_maven: docker,no_maven: npm,no_maven: angular,no_maven: flutter,no_maven: php,no_maven: plugin,no_maven: react,no_maven: reactnativ,no_maven: fresco,no_maven: imag,no_maven: nodej,no_maven: yarn,no_maven: dependmanag,no_maven: depend,no_maven: gui,no_maven: geoloc,no_maven: nginx,no_maven: vagrant

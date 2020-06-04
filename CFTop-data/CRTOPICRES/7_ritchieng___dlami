@@ -1,0 +1,3 @@
+no_maven: ami,no_maven: python,no_maven: cudnn5,no_maven: cuda
+no_maven: ubuntu,no_maven: aw,no_maven: tensorflow,no_maven: kera
+no_maven: deeplearn,no_maven: machinlearn,no_maven: python,no_maven: pytorch,no_maven: neuralnetwork,no_maven: visual,no_maven: jupytnotebook,no_maven: tutori,no_maven: coreml,no_maven: onnx,no_maven: scikitlearn,no_maven: computvis,no_maven: mxnet,no_maven: cntk,no_maven: color,no_maven: caffe2,no_maven: window,no_maven: winmltool,no_maven: ml,no_maven: ai

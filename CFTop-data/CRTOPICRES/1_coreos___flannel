@@ -1,0 +1,3 @@
+no_maven: subnet,no_maven: dockerimag,no_maven: network,no_maven: overlaynetwork
+no_maven: flannel,no_maven: go,no_maven: kubernet,no_maven: docker
+no_maven: contain,no_maven: golang,no_maven: devop,no_maven: k8,no_maven: ansibl,no_maven: paa,no_maven: cicd,no_maven: test,no_maven: networkemul,no_maven: chao,no_maven: chaoengin,no_maven: testtool,no_maven: chaomonkey,no_maven: chaotest,no_maven: deploy,no_maven: swarm,no_maven: faa,no_maven: serverless,no_maven: kubernetdeploy,no_maven: oci

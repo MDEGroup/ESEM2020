@@ -1,0 +1,7 @@
+1	git://github.com/adithyakhamithkar/ansible-playbooks
+2	#DEP#nginx
+3	#DEP#vagrant
+4	#DEP#mysql
+5	#DEP#ubuntu
+6	#DEP#elasticsearch
+7	#DEP#docker

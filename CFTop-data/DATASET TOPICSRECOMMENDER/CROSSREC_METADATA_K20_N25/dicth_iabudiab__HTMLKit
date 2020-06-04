@@ -1,0 +1,8 @@
+1	git://github.com/iabudiab/HTMLKit
+2	#DEP#dom
+3	#DEP#par
+4	#DEP#objectc
+5	#DEP#html
+6	#DEP#io
+7	#DEP#maco
+8	#DEP#swift

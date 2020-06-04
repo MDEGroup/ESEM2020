@@ -1,0 +1,3 @@
+no_maven: swaggercodegen,no_maven: swaggerspec,no_maven: golang
+no_maven: swaggerspecif,no_maven: api,no_maven: go,no_maven: codegen
+no_maven: golang,no_maven: typescript,no_maven: angular,no_maven: local,no_maven: io,no_maven: schemafirst,no_maven: graphql,no_maven: compil,no_maven: java,no_maven: microservic,no_maven: swift,no_maven: restapi,no_maven: uiimag,no_maven: uistoryboard,no_maven: orm,no_maven: alpaca,no_maven: clientlibrari,no_maven: apicli,no_maven: finagl,no_maven: cocoa

@@ -1,0 +1,8 @@
+1	git://github.com/tboox/tbox
+2	#DEP#algorithm
+3	#DEP#stream
+4	#DEP#network
+5	#DEP#xml
+6	#DEP#json
+7	#DEP#contain
+8	#DEP#crossplatform

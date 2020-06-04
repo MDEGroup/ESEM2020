@@ -1,0 +1,3 @@
+no_maven: neovim,no_maven: cli,no_maven: vim,no_maven: fish
+no_maven: unix,no_maven: go,no_maven: fzf,no_maven: zsh,no_maven: bash
+no_maven: shell,no_maven: shellscript,no_maven: linux,no_maven: fish,no_maven: javascript,no_maven: developtool,no_maven: cd,no_maven: cli,no_maven: shellexten,no_maven: nodej,no_maven: j,no_maven: commandlin,no_maven: autojump,no_maven: z,no_maven: jump,no_maven: fasd,no_maven: maco,no_maven: theme,no_maven: powerlin,no_maven: colorschem

@@ -1,0 +1,7 @@
+1	git://github.com/spritejs/spritejs
+2	#DEP#anim
+3	#DEP#render
+4	#DEP#graphic
+5	#DEP#svg
+6	#DEP#react
+7	#DEP#vue

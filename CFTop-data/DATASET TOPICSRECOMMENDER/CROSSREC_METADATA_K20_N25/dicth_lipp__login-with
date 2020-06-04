@@ -1,0 +1,8 @@
+1	git://github.com/lipp/login-with
+2	#DEP#twitter
+3	#DEP#googl
+4	#DEP#docker
+5	#DEP#jwt
+6	#DEP#facebook
+7	#DEP#oauth
+8	#DEP#microservic

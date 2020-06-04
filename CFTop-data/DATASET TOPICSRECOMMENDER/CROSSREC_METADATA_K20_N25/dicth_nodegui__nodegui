@@ -1,0 +1,7 @@
+1	git://github.com/nodegui/nodegui
+2	#DEP#nodej
+3	#DEP#desktop
+4	#DEP#qt
+5	#DEP#javascript
+6	#DEP#gui
+7	#DEP#crossplatform

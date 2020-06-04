@@ -1,0 +1,10 @@
+1	git://github.com/requery/requery
+2	#DEP#postgr
+3	#DEP#sqlite
+4	#DEP#java
+5	#DEP#kotlin
+6	#DEP#oracl
+7	#DEP#sql
+8	#DEP#mysql
+9	#DEP#android
+10	#DEP#rxjava

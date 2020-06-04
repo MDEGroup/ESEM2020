@@ -1,0 +1,3 @@
+no_maven: wordpressplugin,no_maven: graphqlserv,no_maven: api
+no_maven: wpplugin,no_maven: wordpress,no_maven: graphql
+no_maven: javascript,no_maven: nodej,no_maven: php,no_maven: react,no_maven: es6,no_maven: theme,no_maven: vue,no_maven: wordpressthem,no_maven: nginx,no_maven: restapi,no_maven: magento,no_maven: python,no_maven: workflow,no_maven: wordpressplugin,no_maven: gulp,no_maven: vagrant,no_maven: bedrock,no_maven: ansibl,no_maven: wpcli,no_maven: trelli

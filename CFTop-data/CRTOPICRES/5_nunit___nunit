@@ -1,0 +1,3 @@
+no_maven: nunit,no_maven: nunitframework,no_maven: tdd,no_maven: testframework
+no_maven: csharp,no_maven: dotnet,no_maven: test,no_maven: testdrivendevelop
+no_maven: dotnetcor,no_maven: xamarin,no_maven: tdd,no_maven: framework,no_maven: mono,no_maven: gamedevelop,no_maven: gamedev,no_maven: gameengin,no_maven: document,no_maven: http,no_maven: io,no_maven: dualiti,no_maven: portabl,no_maven: opengl,no_maven: testframework,no_maven: bdd,no_maven: shell,no_maven: command,no_maven: rubi,no_maven: commandlin

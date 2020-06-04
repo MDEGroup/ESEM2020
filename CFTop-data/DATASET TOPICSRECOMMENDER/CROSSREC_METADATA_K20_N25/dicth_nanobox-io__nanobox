@@ -1,0 +1,7 @@
+1	git://github.com/nanobox-io/nanobox
+2	#DEP#cli
+3	#DEP#deploy
+4	#DEP#golang
+5	#DEP#developtool
+6	#DEP#docker
+7	#DEP#virtualbox

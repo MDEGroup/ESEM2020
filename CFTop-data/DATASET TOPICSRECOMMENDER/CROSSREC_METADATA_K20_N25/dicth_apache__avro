@@ -1,0 +1,10 @@
+1	git://github.com/apache/avro
+2	#DEP#c
+3	#DEP#bigdata
+4	#DEP#java
+5	#DEP#python
+6	#DEP#rubi
+7	#DEP#librari
+8	#DEP#csharp
+9	#DEP#cplusplu
+10	#DEP#php

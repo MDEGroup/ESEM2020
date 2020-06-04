@@ -1,0 +1,7 @@
+1	git://github.com/2881099/FreeSql
+2	#DEP#sqlite
+3	#DEP#postgresql
+4	#DEP#oracl
+5	#DEP#mysql
+6	#DEP#orm
+7	#DEP#sqlserver

@@ -1,0 +1,7 @@
+1	git://github.com/sloria/doitlive
+2	#DEP#cli
+3	#DEP#script
+4	#DEP#commandlin
+5	#DEP#python
+6	#DEP#zsh
+7	#DEP#bash

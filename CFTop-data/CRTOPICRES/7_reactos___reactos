@@ -1,0 +1,3 @@
+no_maven: kernel,no_maven: c,no_maven: x86,no_maven: gpl,no_maven: win32
+no_maven: osdev,no_maven: driver,no_maven: window,no_maven: opersystem,no_maven: win32api
+no_maven: kernel,no_maven: databas,no_maven: nosql,no_maven: javascript,no_maven: python,no_maven: c,no_maven: cassandra,no_maven: client,no_maven: virtual,no_maven: highperformcomput,no_maven: cloudcomput,no_maven: unikernel,no_maven: java,no_maven: test,no_maven: testtool,no_maven: nodej,no_maven: arangodb,no_maven: terminemul,no_maven: cdrom,no_maven: eltorito

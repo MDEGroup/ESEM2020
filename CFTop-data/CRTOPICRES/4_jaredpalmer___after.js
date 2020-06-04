@@ -1,0 +1,3 @@
+no_maven: ssr,no_maven: serversiderend,no_maven: react
+no_maven: reactrout,no_maven: webpack,no_maven: razzl
+no_maven: react,no_maven: redux,no_maven: babel,no_maven: express,no_maven: eslint,no_maven: koa,no_maven: typescript,no_maven: reactj,no_maven: hmr,no_maven: javascript,no_maven: ssr,no_maven: axio,no_maven: es6,no_maven: nodej,no_maven: prettier,no_maven: csmodul,no_maven: postcss,no_maven: mobx,no_maven: starter,no_maven: koa2

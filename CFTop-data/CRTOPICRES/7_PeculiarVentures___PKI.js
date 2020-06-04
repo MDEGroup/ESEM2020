@@ -1,0 +1,3 @@
+no_maven: javascriptlibrari,no_maven: plug,no_maven: encrypt,no_maven: es6,no_maven: pkcs5,no_maven: timestamp,no_maven: webcrypto,no_maven: sign
+no_maven: certif,no_maven: pkcs7,no_maven: pkiapplic,no_maven: crl,no_maven: tsp,no_maven: asn,no_maven: pki,no_maven: javascript,no_maven: ocsp
+no_maven: nodej,no_maven: react,no_maven: vue,no_maven: letsencrypt,no_maven: tl,no_maven: graphql,no_maven: node,no_maven: koa,no_maven: vuex,no_maven: mongodb,no_maven: acm,no_maven: decentr,no_maven: c,no_maven: dn,no_maven: dht,no_maven: p2p,no_maven: dyndn,no_maven: ui,no_maven: python,no_maven: powershel

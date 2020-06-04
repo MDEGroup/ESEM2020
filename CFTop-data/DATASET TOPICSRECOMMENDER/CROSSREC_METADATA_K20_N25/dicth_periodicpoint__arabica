@@ -1,0 +1,8 @@
+1	git://github.com/periodicpoint/arabica
+2	#DEP#latex
+3	#DEP#publish
+4	#DEP#yaml
+5	#DEP#book
+6	#DEP#pdf
+7	#DEP#markdown
+8	#DEP#boilerpl

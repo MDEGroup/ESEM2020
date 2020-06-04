@@ -1,0 +1,9 @@
+1	git://github.com/yvt/openspades
+2	#DEP#opengl
+3	#DEP#cpluplu
+4	#DEP#network
+5	#DEP#cmake
+6	#DEP#game
+7	#DEP#linux
+8	#DEP#window
+9	#DEP#maco

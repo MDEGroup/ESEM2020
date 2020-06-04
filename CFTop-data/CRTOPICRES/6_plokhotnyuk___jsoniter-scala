@@ -1,0 +1,3 @@
+no_maven: jmhbenchmark,no_maven: scala,no_maven: par
+no_maven: highperform,no_maven: macro,no_maven: json,no_maven: serial
+no_maven: languag,no_maven: deseri,no_maven: compil,no_maven: python,no_maven: framework,no_maven: programlanguag,no_maven: lisp,no_maven: metaprogram,no_maven: go,no_maven: par,no_maven: webdevelop,no_maven: java,no_maven: android,no_maven: xml,no_maven: jsonpars,no_maven: functionlanguag,no_maven: functionprogram,no_maven: haskel,no_maven: type,no_maven: clojur

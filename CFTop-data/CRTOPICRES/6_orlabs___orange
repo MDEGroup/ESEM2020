@@ -1,0 +1,3 @@
+no_maven: openresti,no_maven: proxi,no_maven: monitor,no_maven: nginx
+no_maven: resti,no_maven: gateway,no_maven: ngxlua,no_maven: lor,no_maven: api
+no_maven: web,no_maven: nodej,no_maven: python,no_maven: rest,no_maven: http,no_maven: microservic,no_maven: aqara,no_maven: homebridg,no_maven: xiaomi,no_maven: restapi,no_maven: javascript,no_maven: mongoos,no_maven: mongodb,no_maven: window,no_maven: awesom,no_maven: android,no_maven: io,no_maven: azur,no_maven: cloud,no_maven: edg

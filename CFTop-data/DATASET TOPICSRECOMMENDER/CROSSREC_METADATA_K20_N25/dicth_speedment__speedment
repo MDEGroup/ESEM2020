@@ -1,0 +1,8 @@
+1	git://github.com/speedment/speedment
+2	#DEP#springboot
+3	#DEP#java
+4	#DEP#databas
+5	#DEP#stream
+6	#DEP#spring
+7	#DEP#orm
+8	#DEP#codegen

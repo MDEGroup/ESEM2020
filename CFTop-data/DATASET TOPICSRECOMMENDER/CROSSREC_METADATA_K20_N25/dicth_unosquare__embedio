@@ -1,0 +1,8 @@
+1	git://github.com/unosquare/embedio
+2	#DEP#embed
+3	#DEP#http
+4	#DEP#websocket
+5	#DEP#webserv
+6	#DEP#raspberripi
+7	#DEP#dotnetcor
+8	#DEP#dotnet

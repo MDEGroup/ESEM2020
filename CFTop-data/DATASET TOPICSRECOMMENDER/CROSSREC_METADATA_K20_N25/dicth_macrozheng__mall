@@ -1,0 +1,11 @@
+1	git://github.com/macrozheng/mall
+2	#DEP#mybati
+3	#DEP#springboot
+4	#DEP#mongodb
+5	#DEP#spring
+6	#DEP#springcloud
+7	#DEP#mysql
+8	#DEP#elasticsearch
+9	#DEP#redi
+10	#DEP#docker
+11	#DEP#java

@@ -1,0 +1,9 @@
+1	git://github.com/awslabs/aws-serverless-express
+2	#DEP#nodej
+3	#DEP#serverless
+4	#DEP#express
+5	#DEP#apigateway
+6	#DEP#expressj
+7	#DEP#awlambda
+8	#DEP#node
+9	#DEP#lambda

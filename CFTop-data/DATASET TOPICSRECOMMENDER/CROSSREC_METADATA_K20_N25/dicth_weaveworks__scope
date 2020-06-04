@@ -1,0 +1,7 @@
+1	git://github.com/weaveworks/scope
+2	#DEP#monitor
+3	#DEP#visual
+4	#DEP#contain
+5	#DEP#kubernet
+6	#DEP#docker
+7	#DEP#microservic

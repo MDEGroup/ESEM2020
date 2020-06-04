@@ -1,0 +1,3 @@
+no_maven: render,no_maven: webtool,no_maven: webgl,no_maven: shader
+no_maven: grapheditor,no_maven: editor,no_maven: webapp,no_maven: 3d,no_maven: scenegraph
+no_maven: javascript,no_maven: ide,no_maven: react,no_maven: framework,no_maven: uniti,no_maven: window,no_maven: web,no_maven: android,no_maven: io,no_maven: packag,no_maven: packagmanag,no_maven: extens,no_maven: bitbucket,no_maven: unity3d,no_maven: github,no_maven: git,no_maven: maco,no_maven: gamedev,no_maven: 3dgameengin,no_maven: cplusplu

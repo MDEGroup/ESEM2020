@@ -1,0 +1,11 @@
+1	git://github.com/beetboxvm/beetbox
+2	#DEP#vagrant
+3	#DEP#cm
+4	#DEP#compos
+5	#DEP#docker
+6	#DEP#local
+7	#DEP#wordpress
+8	#DEP#symfoni
+9	#DEP#develop
+10	#DEP#ansibl
+11	#DEP#virtualbox

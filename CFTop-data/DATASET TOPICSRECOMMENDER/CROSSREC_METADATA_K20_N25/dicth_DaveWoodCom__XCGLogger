@@ -1,0 +1,8 @@
+1	git://github.com/DaveWoodCom/XCGLogger
+2	#DEP#log
+3	#DEP#carthag
+4	#DEP#cocoapod
+5	#DEP#io
+6	#DEP#maco
+7	#DEP#debug
+8	#DEP#swift

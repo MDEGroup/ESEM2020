@@ -1,0 +1,3 @@
+no_maven: compil,no_maven: atmega,no_maven: arduino,no_maven: lisp,no_maven: baremet
+no_maven: embedsystem,no_maven: teensi,no_maven: clojur,no_maven: microcontrol,no_maven: arm
+no_maven: opersystem,no_maven: embed,no_maven: iot,no_maven: kernel,no_maven: cortex,no_maven: realtim,no_maven: rto,no_maven: cpp,no_maven: raspberripi,no_maven: lua,no_maven: rust,no_maven: mcu,no_maven: linux,no_maven: window,no_maven: debian,no_maven: ubuntu,no_maven: raspbian,no_maven: clojurescript,no_maven: cooper,no_maven: cmsirto

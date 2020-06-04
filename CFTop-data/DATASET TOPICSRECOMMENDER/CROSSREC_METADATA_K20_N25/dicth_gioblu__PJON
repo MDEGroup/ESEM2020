@@ -1,0 +1,12 @@
+1	git://github.com/gioblu/PJON
+2	#DEP#raspberripi
+3	#DEP#arduino
+4	#DEP#decentr
+5	#DEP#iot
+6	#DEP#commun
+7	#DEP#privaci
+8	#DEP#opensourc
+9	#DEP#network
+10	#DEP#window
+11	#DEP#linux
+12	#DEP#cpp

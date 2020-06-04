@@ -1,0 +1,7 @@
+1	git://github.com/looly/hutool
+2	#DEP#java
+3	#DEP#tool
+4	#DEP#util
+5	#DEP#json
+6	#DEP#orm
+7	#DEP#http

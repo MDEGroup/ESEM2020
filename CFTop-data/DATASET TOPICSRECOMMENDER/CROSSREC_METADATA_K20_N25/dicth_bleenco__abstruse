@@ -1,0 +1,8 @@
+1	git://github.com/bleenco/abstruse
+2	#DEP#continudeploy
+3	#DEP#ci
+4	#DEP#continuintegr
+5	#DEP#server
+6	#DEP#test
+7	#DEP#continudeliveri
+8	#DEP#docker

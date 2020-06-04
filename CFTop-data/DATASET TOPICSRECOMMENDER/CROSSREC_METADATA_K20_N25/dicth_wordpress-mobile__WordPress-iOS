@@ -1,0 +1,7 @@
+1	git://github.com/wordpress-mobile/WordPress-iOS
+2	#DEP#xcode
+3	#DEP#cocoapod
+4	#DEP#objectc
+5	#DEP#io
+6	#DEP#wordpress
+7	#DEP#swift

@@ -1,0 +1,3 @@
+no_maven: searchengin,no_maven: ipf,no_maven: ipfsearch
+no_maven: rabbitmq,no_maven: golang,no_maven: elasticsearch
+no_maven: redi,no_maven: springboot,no_maven: mongodb,no_maven: mysql,no_maven: springcloud,no_maven: python,no_maven: kafka,no_maven: mybati,no_maven: monitor,no_maven: docker,no_maven: dotnet,no_maven: postgresql,no_maven: zookeep,no_maven: netti,no_maven: swagger,no_maven: rocketmq,no_maven: http,no_maven: elk,no_maven: java,no_maven: spring

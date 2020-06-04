@@ -1,0 +1,3 @@
+no_maven: publish,no_maven: gradl,no_maven: java
+no_maven: kotlin,no_maven: maven,no_maven: android
+no_maven: java,no_maven: gradl,no_maven: io,no_maven: springboot,no_maven: spring,no_maven: app,no_maven: swift,no_maven: confer,no_maven: sql,no_maven: flutter,no_maven: angular,no_maven: jhipster,no_maven: firebas,no_maven: springcloud,no_maven: groovi,no_maven: typescript,no_maven: scala,no_maven: line,no_maven: bot,no_maven: sdk

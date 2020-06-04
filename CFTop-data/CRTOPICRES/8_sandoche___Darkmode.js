@@ -1,0 +1,3 @@
+no_maven: widget,no_maven: vanillaj,no_maven: npm,no_maven: dark
+no_maven: npmpackag,no_maven: npmmodul,no_maven: nightmod,no_maven: darkmod,no_maven: darkthem
+no_maven: npm,no_maven: javascript,no_maven: cli,no_maven: nodej,no_maven: docker,no_maven: meteor,no_maven: deploy,no_maven: meteorapp,no_maven: zeit,no_maven: theme,no_maven: reactcompon,no_maven: react,no_maven: eslintplugin,no_maven: eslint,no_maven: clicommand,no_maven: cliapp,no_maven: homekit,no_maven: homebridg,no_maven: homeautom,no_maven: autom

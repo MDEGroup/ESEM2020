@@ -1,0 +1,7 @@
+1	git://github.com/uber/aresdb
+2	#DEP#realtim
+3	#DEP#databas
+4	#DEP#golang
+5	#DEP#storag
+6	#DEP#analyt
+7	#DEP#data

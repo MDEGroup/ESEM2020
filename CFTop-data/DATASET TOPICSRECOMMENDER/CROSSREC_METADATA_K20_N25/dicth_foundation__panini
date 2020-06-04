@@ -1,0 +1,7 @@
+1	git://github.com/foundation/panini
+2	#DEP#javascript
+3	#DEP#html
+4	#DEP#data
+5	#DEP#yaml
+6	#DEP#gulp
+7	#DEP#json

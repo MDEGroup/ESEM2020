@@ -1,0 +1,7 @@
+1	git://github.com/sqlkata/querybuilder
+2	#DEP#postgresql
+3	#DEP#databas
+4	#DEP#sqlserver
+5	#DEP#sql
+6	#DEP#mysql
+7	#DEP#csharp

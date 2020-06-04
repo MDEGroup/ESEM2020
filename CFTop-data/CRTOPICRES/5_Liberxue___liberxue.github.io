@@ -1,0 +1,3 @@
+no_maven: github,no_maven: jekylblog,no_maven: githubact,no_maven: jekylsit,no_maven: jekyl,no_maven: blog
+no_maven: jekylwebsit,no_maven: githubpagewebsit,no_maven: jsonsearch,no_maven: githubpag,no_maven: jekylthem,no_maven: blogthem
+no_maven: jekyl,no_maven: theme,no_maven: jekylblog,no_maven: jekylsit,no_maven: rubigem,no_maven: portfoliowebsit,no_maven: jekyltemplat,no_maven: templat,no_maven: blog,no_maven: github,no_maven: cv,no_maven: resumtemplat,no_maven: resum,no_maven: staticsitegen,no_maven: sc,no_maven: lunr,no_maven: search,no_maven: deploy,no_maven: staticsit,no_maven: portfolio

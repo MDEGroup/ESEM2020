@@ -1,0 +1,8 @@
+1	git://github.com/async-labs/saas
+2	#DEP#typescript
+3	#DEP#react
+4	#DEP#express
+5	#DEP#mongodb
+6	#DEP#materiui
+7	#DEP#mongoos
+8	#DEP#boilerpl

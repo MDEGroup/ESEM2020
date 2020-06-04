@@ -1,0 +1,3 @@
+no_maven: xbox,no_maven: emul,no_maven: window,no_maven: linux
+no_maven: maco,no_maven: lle,no_maven: qemu,no_maven: game
+no_maven: linux,no_maven: gameengin,no_maven: gamedevelop,no_maven: virtualbox,no_maven: opengl,no_maven: engin,no_maven: gamedev,no_maven: kvm,no_maven: highsierra,no_maven: hackintosh,no_maven: window,no_maven: vagrant,no_maven: packer,no_maven: libvirt,no_maven: rust,no_maven: lua,no_maven: android,no_maven: io,no_maven: crossplatform,no_maven: mojav

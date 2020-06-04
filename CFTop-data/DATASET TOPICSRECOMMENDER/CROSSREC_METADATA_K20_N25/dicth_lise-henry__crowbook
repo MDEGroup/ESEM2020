@@ -1,0 +1,7 @@
+1	git://github.com/lise-henry/crowbook
+2	#DEP#markdown
+3	#DEP#latex
+4	#DEP#book
+5	#DEP#html
+6	#DEP#pdf
+7	#DEP#rust

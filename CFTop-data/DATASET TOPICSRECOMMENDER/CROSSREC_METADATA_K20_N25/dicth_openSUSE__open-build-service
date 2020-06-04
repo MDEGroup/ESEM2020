@@ -1,0 +1,8 @@
+1	git://github.com/openSUSE/open-build-service
+2	#DEP#docker
+3	#DEP#cento
+4	#DEP#rubi
+5	#DEP#rail
+6	#DEP#packag
+7	#DEP#ubuntu
+8	#DEP#debian

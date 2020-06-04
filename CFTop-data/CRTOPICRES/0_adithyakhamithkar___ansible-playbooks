@@ -1,0 +1,3 @@
+no_maven: grafana,no_maven: aws3,no_maven: sensu,no_maven: ldap,no_maven: ipa,no_maven: jenkin,no_maven: gitlab,no_maven: digitalocean,no_maven: awec2
+no_maven: awiam,no_maven: nginx,no_maven: vagrant,no_maven: mysql,no_maven: meso,no_maven: ubuntu,no_maven: elasticsearch,no_maven: ansiblplaybook,no_maven: docker,no_maven: fail2ban
+no_maven: ansibl,no_maven: kubernet,no_maven: microservic,no_maven: golang,no_maven: cento,no_maven: marathon,no_maven: consul,no_maven: etcd,no_maven: linux,no_maven: contain,no_maven: ec,no_maven: javascript,no_maven: debian,no_maven: devop,no_maven: php7,no_maven: symfoni,no_maven: mongodb,no_maven: redi,no_maven: dockercompo,no_maven: springboot

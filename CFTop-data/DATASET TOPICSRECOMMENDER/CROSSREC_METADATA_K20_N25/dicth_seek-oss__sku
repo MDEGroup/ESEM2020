@@ -1,0 +1,7 @@
+1	git://github.com/seek-oss/sku
+2	#DEP#frontend
+3	#DEP#babel
+4	#DEP#le
+5	#DEP#buildtool
+6	#DEP#eslint
+7	#DEP#webpack

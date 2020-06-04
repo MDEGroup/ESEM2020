@@ -1,0 +1,3 @@
+no_maven: fit2cloud,no_maven: jumpserv,no_maven: rook,no_maven: webkubectl,no_maven: clariti,no_maven: vmwarevspher,no_maven: kubespray,no_maven: kubernetinst,no_maven: multiaz
+no_maven: terraform,no_maven: kubeapp,no_maven: kubeoper,no_maven: kubernetansibl,no_maven: kubernet,no_maven: kubernetserv,no_maven: openstack,no_maven: ansibl,no_maven: kop
+no_maven: docker,no_maven: devop,no_maven: vagrant,no_maven: aw,no_maven: contain,no_maven: azur,no_maven: python,no_maven: devoptool,no_maven: googlcloud,no_maven: ubuntu,no_maven: git,no_maven: linux,no_maven: gcp,no_maven: infrastructurcod,no_maven: cloud,no_maven: inspec,no_maven: etcd,no_maven: maco,no_maven: ec2,no_maven: deploy

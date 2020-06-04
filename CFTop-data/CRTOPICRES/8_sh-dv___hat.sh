@@ -1,0 +1,3 @@
+no_maven: serverless,no_maven: decrypt,no_maven: ae,no_maven: webcryptoapi,no_maven: fileencrypt,no_maven: javascript,no_maven: encrypt
+no_maven: crypto,no_maven: ae256,no_maven: browser,no_maven: aeencrypt,no_maven: encryptdecrypt,no_maven: clientsid,no_maven: webcrypto,no_maven: ae128
+no_maven: javascript,no_maven: nodej,no_maven: typescript,no_maven: privaci,no_maven: secur,no_maven: compil,no_maven: python,no_maven: node,no_maven: go,no_maven: termin,no_maven: encrypt,no_maven: bitcoin,no_maven: cryptocurr,no_maven: java,no_maven: cryptographi,no_maven: autom,no_maven: transcrypt,no_maven: transpil,no_maven: walletgen,no_maven: react

@@ -1,0 +1,8 @@
+1	git://github.com/Huomen/highdsa
+2	#DEP#spring
+3	#DEP#mybati
+4	#DEP#springmvc
+5	#DEP#redi
+6	#DEP#nginx
+7	#DEP#maven
+8	#DEP#rest

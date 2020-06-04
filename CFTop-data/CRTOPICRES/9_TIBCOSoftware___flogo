@@ -1,0 +1,3 @@
+no_maven: mqttclient,no_maven: flogo,no_maven: edg,no_maven: serverless,no_maven: awlambda,no_maven: stream,no_maven: iot,no_maven: functionserv,no_maven: faaframework,no_maven: golang
+no_maven: integr,no_maven: faa,no_maven: kafkacli,no_maven: go,no_maven: tensorflow,no_maven: mqttproduc,no_maven: rule,no_maven: microservic,no_maven: kafkaproduc,no_maven: lambda
+no_maven: serverless,no_maven: awlambda,no_maven: aw,no_maven: kubernet,no_maven: docker,no_maven: kafka,no_maven: golang,no_maven: serverlessfunct,no_maven: swarm,no_maven: apachkafka,no_maven: secur,no_maven: k8,no_maven: functionserv,no_maven: python,no_maven: hook,no_maven: webhook,no_maven: javascript,no_maven: contain,no_maven: php,no_maven: lambdalay

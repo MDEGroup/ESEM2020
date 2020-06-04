@@ -1,0 +1,3 @@
+no_maven: markdown,no_maven: exam,no_maven: offenssecur,no_maven: pandoc,no_maven: reporttool
+no_maven: latex,no_maven: markdownpdf,no_maven: markdowntemplat,no_maven: report,no_maven: oscpprep,no_maven: oscp
+no_maven: markdown,no_maven: pdf,no_maven: tex,no_maven: html,no_maven: dashboard,no_maven: pdfgener,no_maven: bigdata,no_maven: sqleditor,no_maven: datavisu,no_maven: busiintellig,no_maven: book,no_maven: epub,no_maven: svg,no_maven: render,no_maven: wpf,no_maven: math,no_maven: formula,no_maven: dotnet,no_maven: nodej,no_maven: react

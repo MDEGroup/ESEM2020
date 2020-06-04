@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: pangu,no_maven: textspac,no_maven: text
+no_maven: javascript,no_maven: chromeexten,no_maven: html,no_maven: userscript
+no_maven: chrome,no_maven: firefoxaddon,no_maven: firefox,no_maven: vue,no_maven: bootstrap,no_maven: angular,no_maven: cs,no_maven: browserexten,no_maven: markdown,no_maven: python,no_maven: crx,no_maven: typescript,no_maven: bitwarden,no_maven: layui,no_maven: j,no_maven: ui,no_maven: notif,no_maven: bootstrap3,no_maven: userstyl,no_maven: twitterexten

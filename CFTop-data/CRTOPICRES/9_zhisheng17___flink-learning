@@ -1,0 +1,3 @@
+no_maven: hbase,no_maven: streamprocess,no_maven: flink,no_maven: stream,no_maven: kafka
+no_maven: rabbitmq,no_maven: mysql,no_maven: elasticsearch,no_maven: spark,no_maven: redi,no_maven: rocketmq
+no_maven: mongodb,no_maven: springboot,no_maven: python,no_maven: mybati,no_maven: postgresql,no_maven: springcloud,no_maven: go,no_maven: zookeep,no_maven: kafka,no_maven: git,no_maven: docker,no_maven: monitor,no_maven: java,no_maven: golang,no_maven: dubbo,no_maven: tomcat,no_maven: microservic,no_maven: jvm,no_maven: swagger,no_maven: maven

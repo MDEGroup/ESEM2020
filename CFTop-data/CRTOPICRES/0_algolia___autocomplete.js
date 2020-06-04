@@ -1,0 +1,3 @@
+no_maven: algoliasearch,no_maven: dropdown,no_maven: suggest
+no_maven: jqueri,no_maven: typeahead,no_maven: algolia,no_maven: autocomplet
+no_maven: javascript,no_maven: syntaxhighlight,no_maven: vim,no_maven: es6,no_maven: python,no_maven: shell,no_maven: search,no_maven: languagserverprotocol,no_maven: ajax,no_maven: jqueriplugin,no_maven: languagserv,no_maven: atom,no_maven: linter,no_maven: cli,no_maven: neovim,no_maven: jekyl,no_maven: rubigem,no_maven: githubpag,no_maven: lunr,no_maven: theme

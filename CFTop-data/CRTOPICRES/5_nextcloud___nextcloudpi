@@ -1,0 +1,3 @@
+no_maven: dockerimag,no_maven: raspberripi,no_maven: raspbian
+no_maven: arm,no_maven: nextcloud,no_maven: qemu,no_maven: x8664
+no_maven: linux,no_maven: raspberripi,no_maven: x86,no_maven: emul,no_maven: arm64,no_maven: virtualbox,no_maven: ubuntu,no_maven: reversengin,no_maven: secur,no_maven: aarch64,no_maven: docker,no_maven: homebridg,no_maven: cpluplu,no_maven: cpp,no_maven: jit,no_maven: kvm,no_maven: vagrant,no_maven: packer,no_maven: maco,no_maven: debian

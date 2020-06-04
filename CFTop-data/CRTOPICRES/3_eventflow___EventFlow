@@ -1,0 +1,3 @@
+no_maven: domaindrivendesign,no_maven: saga,no_maven: elasticsearch,no_maven: netstandard,no_maven: cqre,no_maven: rabbitmq,no_maven: ddd,no_maven: framework
+no_maven: nuget,no_maven: eventsourc,no_maven: csharp,no_maven: asyncawait,no_maven: eventstor,no_maven: dotnet,no_maven: cqr,no_maven: event
+no_maven: dotnetcor,no_maven: cqre,no_maven: angular,no_maven: statemanag,no_maven: ngrx,no_maven: ngx,no_maven: redux,no_maven: mono,no_maven: restapi,no_maven: dotnetcore2,no_maven: unittest,no_maven: xunit,no_maven: continuintegr,no_maven: buildtool,no_maven: nunit,no_maven: cake,no_maven: buildautom,no_maven: api,no_maven: command,no_maven: elixir

@@ -1,0 +1,3 @@
+no_maven: typescript,no_maven: powershel,no_maven: java,no_maven: cpp,no_maven: javascript,no_maven: rubi,no_maven: swift
+no_maven: lsp,no_maven: emac,no_maven: lua,no_maven: debugg,no_maven: go,no_maven: debug,no_maven: php,no_maven: rust
+no_maven: javascript,no_maven: python,no_maven: chrome,no_maven: java,no_maven: golang,no_maven: nodej,no_maven: c,no_maven: vim,no_maven: elixir,no_maven: rubi,no_maven: swift,no_maven: inspector,no_maven: csharp,no_maven: syntaxhighlight,no_maven: ide,no_maven: wxwidgetappl,no_maven: luaengin,no_maven: editor,no_maven: zerobran,no_maven: zerobranstudio

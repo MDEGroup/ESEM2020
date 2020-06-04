@@ -1,0 +1,12 @@
+1	git://github.com/wireapp/wire-ios
+2	#DEP#secur
+3	#DEP#commun
+4	#DEP#messeng
+5	#DEP#video
+6	#DEP#app
+7	#DEP#audio
+8	#DEP#io
+9	#DEP#privaci
+10	#DEP#mobil
+11	#DEP#encrypt
+12	#DEP#swift

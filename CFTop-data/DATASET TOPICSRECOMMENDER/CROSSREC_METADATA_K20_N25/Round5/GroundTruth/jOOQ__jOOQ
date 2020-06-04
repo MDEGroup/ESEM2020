@@ -1,0 +1,5 @@
+6	#DEP#postgresql
+7	#DEP#databas
+8	#DEP#orm
+9	#DEP#codegen
+10	#DEP#mysql

@@ -1,0 +1,8 @@
+1	git://github.com/nitroshare/nitroshare-desktop
+2	#DEP#qt
+3	#DEP#cmake
+4	#DEP#cpluplu
+5	#DEP#gui
+6	#DEP#tl
+7	#DEP#qt5
+8	#DEP#crossplatform

@@ -1,0 +1,3 @@
+no_maven: openscenegraph,no_maven: opengl,no_maven: cmake
+no_maven: cpluplu,no_maven: osg,no_maven: scenegraph
+no_maven: window,no_maven: linux,no_maven: qt,no_maven: opengl,no_maven: cpp,no_maven: game,no_maven: headeronli,no_maven: datastructur,no_maven: music,no_maven: mac,no_maven: sdl2,no_maven: sdl,no_maven: supertux,no_maven: cmake,no_maven: 3d,no_maven: gameengin,no_maven: crossplatform,no_maven: graphic,no_maven: vulkan,no_maven: hashtabl

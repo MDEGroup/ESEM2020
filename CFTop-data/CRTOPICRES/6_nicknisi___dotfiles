@@ -1,0 +1,3 @@
+no_maven: shell,no_maven: neovim,no_maven: zshsetup,no_maven: git,no_maven: dotfil,no_maven: osx
+no_maven: vim,no_maven: neovimsetup,no_maven: tmux,no_maven: tmuxconfigur,no_maven: homebrew,no_maven: zsh
+no_maven: shell,no_maven: bash,no_maven: dotfil,no_maven: maco,no_maven: linux,no_maven: cli,no_maven: termin,no_maven: python,no_maven: neovim,no_maven: commandlin,no_maven: fish,no_maven: fzf,no_maven: snippet,no_maven: tpm,no_maven: wsl,no_maven: cygwin,no_maven: clipboard,no_maven: dotconfig,no_maven: configur,no_maven: rubi

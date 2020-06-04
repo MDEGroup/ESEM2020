@@ -1,0 +1,3 @@
+no_maven: eslint,no_maven: axio,no_maven: react,no_maven: expressj,no_maven: awec2
+no_maven: nginx,no_maven: materiui,no_maven: mobx,no_maven: pm2,no_maven: reactrout
+no_maven: react,no_maven: webpack,no_maven: redux,no_maven: koa,no_maven: javascript,no_maven: boilerpl,no_maven: nodej,no_maven: node,no_maven: express,no_maven: eslint,no_maven: electron,no_maven: koa2,no_maven: fullstack,no_maven: ssr,no_maven: babel,no_maven: templat,no_maven: api,no_maven: mysql,no_maven: wiki,no_maven: slack

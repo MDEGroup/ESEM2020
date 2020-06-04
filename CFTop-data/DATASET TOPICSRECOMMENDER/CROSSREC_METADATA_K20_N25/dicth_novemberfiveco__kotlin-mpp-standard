@@ -1,0 +1,8 @@
+1	git://github.com/novemberfiveco/kotlin-mpp-standard
+2	#DEP#starterkit
+3	#DEP#kotlin
+4	#DEP#cocoapod
+5	#DEP#gradl
+6	#DEP#maven
+7	#DEP#android
+8	#DEP#io

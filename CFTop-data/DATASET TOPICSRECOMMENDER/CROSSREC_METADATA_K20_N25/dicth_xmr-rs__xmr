@@ -1,0 +1,8 @@
+1	git://github.com/xmr-rs/xmr
+2	#DEP#node
+3	#DEP#blockchain
+4	#DEP#p2p
+5	#DEP#cryptocurr
+6	#DEP#xmr
+7	#DEP#monero
+8	#DEP#rust

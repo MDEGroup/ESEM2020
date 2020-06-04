@@ -1,0 +1,3 @@
+no_maven: postgresql,no_maven: redshift,no_maven: plotli,no_maven: mysqlclient
+no_maven: visual,no_maven: sql,no_maven: electron,no_maven: falcon
+no_maven: python,no_maven: react,no_maven: javascript,no_maven: nodej,no_maven: datavisu,no_maven: graphql,no_maven: flask,no_maven: linux,no_maven: chart,no_maven: databas,no_maven: statist,no_maven: html,no_maven: django,no_maven: api,no_maven: maco,no_maven: reactj,no_maven: spa,no_maven: wordpress,no_maven: shop,no_maven: magento

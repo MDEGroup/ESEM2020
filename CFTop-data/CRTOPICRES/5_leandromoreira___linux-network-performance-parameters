@@ -1,0 +1,3 @@
+no_maven: kernel,no_maven: sysctl,no_maven: perform
+no_maven: tcp,no_maven: network,no_maven: linux
+no_maven: http,no_maven: python,no_maven: udp,no_maven: proxi,no_maven: protocol,no_maven: golang,no_maven: p2p,no_maven: c,no_maven: docker,no_maven: server,no_maven: databas,no_maven: websocket,no_maven: java,no_maven: go,no_maven: blockchain,no_maven: interview,no_maven: mysql,no_maven: ansibl,no_maven: kubernet,no_maven: git

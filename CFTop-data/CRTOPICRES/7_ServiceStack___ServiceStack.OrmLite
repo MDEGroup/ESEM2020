@@ -1,0 +1,3 @@
+no_maven: netcor,no_maven: netframework,no_maven: sqlite,no_maven: firebird,no_maven: postgresql,no_maven: highperform
+no_maven: linq,no_maven: poco,no_maven: orm,no_maven: csharp,no_maven: mysql,no_maven: sqlserver,no_maven: oracl
+no_maven: postgresql,no_maven: sql,no_maven: databas,no_maven: sqlite,no_maven: dotnet,no_maven: java,no_maven: jdbc,no_maven: mariadb,no_maven: sqlqueri,no_maven: sqlite3,no_maven: linqprovid,no_maven: db2,no_maven: postgr,no_maven: sqlqueribuild,no_maven: microsoftsqlserv,no_maven: jpa,no_maven: codegen,no_maven: cockroachdb,no_maven: queribuild,no_maven: mongodb

@@ -1,0 +1,3 @@
+no_maven: postgresql,no_maven: mysqlorm,no_maven: sql,no_maven: jqueri
+no_maven: framework,no_maven: ajax,no_maven: postgresqlorm,no_maven: mysql,no_maven: php
+no_maven: javascript,no_maven: jqueri,no_maven: bootstrap,no_maven: cm,no_maven: java,no_maven: pdo,no_maven: sql,no_maven: jqueriplugin,no_maven: postgresql,no_maven: ssm,no_maven: python,no_maven: theme,no_maven: html5,no_maven: json,no_maven: nodej,no_maven: contentmanag,no_maven: laravel,no_maven: search,no_maven: php7,no_maven: pagin

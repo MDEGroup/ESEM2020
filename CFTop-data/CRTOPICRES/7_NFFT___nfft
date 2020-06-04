@@ -1,0 +1,3 @@
+no_maven: c,no_maven: fftw,no_maven: julia
+no_maven: fouriertransform,no_maven: matlab,no_maven: nfft
+no_maven: python,no_maven: octav,no_maven: computvis,no_maven: imagprocess,no_maven: javascript,no_maven: machinlearn,no_maven: computgraph,no_maven: latex,no_maven: cs,no_maven: d3,no_maven: threej,no_maven: materiinformat,no_maven: gaussianprocess,no_maven: variatinf,no_maven: dataanalysi,no_maven: bayesianinf,no_maven: artificilif,no_maven: cellularautomaton,no_maven: lenia,no_maven: gnuplot

@@ -1,0 +1,9 @@
+1	git://github.com/srevinsaju/guiscrcpy
+2	#DEP#qt
+3	#DEP#python3
+4	#DEP#python
+5	#DEP#gui
+6	#DEP#window
+7	#DEP#linux
+8	#DEP#android
+9	#DEP#opensourc

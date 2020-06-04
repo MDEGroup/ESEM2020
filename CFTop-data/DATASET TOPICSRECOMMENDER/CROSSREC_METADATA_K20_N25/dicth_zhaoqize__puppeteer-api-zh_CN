@@ -1,0 +1,9 @@
+1	git://github.com/zhaoqize/puppeteer-api-zh_CN
+2	#DEP#node
+3	#DEP#web
+4	#DEP#chrome
+5	#DEP#autom
+6	#DEP#headless
+7	#DEP#puppet
+8	#DEP#test
+9	#DEP#developtool

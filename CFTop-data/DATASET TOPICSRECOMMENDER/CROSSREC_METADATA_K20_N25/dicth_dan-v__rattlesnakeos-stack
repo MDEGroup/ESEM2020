@@ -1,0 +1,8 @@
+1	git://github.com/dan-v/rattlesnakeos-stack
+2	#DEP#secur
+3	#DEP#golang
+4	#DEP#awlambda
+5	#DEP#terraform
+6	#DEP#android
+7	#DEP#aw
+8	#DEP#privaci

@@ -1,0 +1,7 @@
+1	git://github.com/api-platform/core
+2	#DEP#rest
+3	#DEP#swagger
+4	#DEP#api
+5	#DEP#graphql
+6	#DEP#php
+7	#DEP#symfoni

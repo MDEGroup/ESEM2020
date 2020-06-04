@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: typescript,no_maven: loopback,no_maven: fireloop
+no_maven: sdkbuilder,no_maven: angular,no_maven: ionic,no_maven: nativescript
+no_maven: android,no_maven: io,no_maven: mobil,no_maven: typescript,no_maven: javascript,no_maven: angularcli,no_maven: bootstrap,no_maven: materi,no_maven: crossplatform,no_maven: webapp,no_maven: seed,no_maven: sas,no_maven: webpack,no_maven: electron,no_maven: primeng,no_maven: dynamform,no_maven: form,no_maven: kendoui,no_maven: cli,no_maven: ngx

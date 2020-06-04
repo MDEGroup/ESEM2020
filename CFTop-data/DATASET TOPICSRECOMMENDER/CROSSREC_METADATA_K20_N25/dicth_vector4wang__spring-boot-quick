@@ -1,0 +1,11 @@
+1	git://github.com/vector4wang/spring-boot-quick
+2	#DEP#jwt
+3	#DEP#mybati
+4	#DEP#springboot
+5	#DEP#assembl
+6	#DEP#maven
+7	#DEP#swagger
+8	#DEP#elasticsearch
+9	#DEP#oauth2
+10	#DEP#spark
+11	#DEP#redi

@@ -1,0 +1,3 @@
+no_maven: c,no_maven: ffmpeg,no_maven: sdl2,no_maven: opengl,no_maven: cpluplu,no_maven: multimedia,no_maven: audioprocess
+no_maven: framework,no_maven: frei0r,no_maven: ladspa,no_maven: videoprocess,no_maven: video,no_maven: audio,no_maven: qt
+no_maven: cpluplu,no_maven: p2p,no_maven: decentr,no_maven: imag,no_maven: android,no_maven: window,no_maven: privaci,no_maven: commun,no_maven: encrypt,no_maven: voip,no_maven: player,no_maven: linux,no_maven: openseadragon,no_maven: 3d,no_maven: viewer,no_maven: pdf,no_maven: iiif,no_maven: photo,no_maven: audioprocess,no_maven: stream

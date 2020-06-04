@@ -1,0 +1,7 @@
+1	git://github.com/astefanutti/kubebox
+2	#DEP#consol
+3	#DEP#monitor
+4	#DEP#gui
+5	#DEP#dashboard
+6	#DEP#termin
+7	#DEP#kubernet

@@ -1,0 +1,3 @@
+no_maven: anim,no_maven: webextens,no_maven: javascript
+no_maven: chromeexten,no_maven: bilibili,no_maven: danmaku
+no_maven: javascript,no_maven: firefoxaddon,no_maven: chrome,no_maven: firefox,no_maven: browserexten,no_maven: githubexten,no_maven: github,no_maven: facebook,no_maven: userstyl,no_maven: io,no_maven: devtool,no_maven: highlight,no_maven: crx,no_maven: twitterexten,no_maven: twitter,no_maven: quanmin,no_maven: barrag,no_maven: wechat,no_maven: renderengin,no_maven: weixin

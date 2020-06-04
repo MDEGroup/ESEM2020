@@ -1,0 +1,3 @@
+no_maven: linknet,no_maven: densenet,no_maven: imagseg,no_maven: mobilenet,no_maven: keratensorflow,no_maven: keramodel,no_maven: resnet,no_maven: fpn,no_maven: pspnet
+no_maven: pretrain,no_maven: segment,no_maven: unet,no_maven: keraexampl,no_maven: resnext,no_maven: tensorflow,no_maven: segmentmodel,no_maven: tensorflowkera,no_maven: kera,no_maven: efficientnet
+no_maven: deeplearn,no_maven: python,no_maven: machinlearn,no_maven: pytorch,no_maven: neuralnetwork,no_maven: jupytnotebook,no_maven: color,no_maven: tutori,no_maven: coreml,no_maven: onnx,no_maven: bert,no_maven: chinecorpu,no_maven: computvis,no_maven: naturlanguagprocess,no_maven: visual,no_maven: mxnet,no_maven: dataset,no_maven: nlp,no_maven: caffe2,no_maven: window

@@ -1,0 +1,3 @@
+no_maven: highlightkeyword,no_maven: javascript,no_maven: mark
+no_maven: jqueri,no_maven: highlight,no_maven: marktext
+no_maven: javascript,no_maven: ajax,no_maven: mongoos,no_maven: jqueriplugin,no_maven: koa,no_maven: modal,no_maven: simplemd,no_maven: vuerout,no_maven: vue,no_maven: bootstrap,no_maven: pagin,no_maven: templat,no_maven: nodej,no_maven: graphqldemo,no_maven: mongodb,no_maven: html5,no_maven: css3,no_maven: lua,no_maven: pico8,no_maven: jqueriui

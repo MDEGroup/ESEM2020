@@ -1,0 +1,3 @@
+no_maven: shell,no_maven: fishshel,no_maven: zsh,no_maven: plugin,no_maven: autojump,no_maven: fuzzi,no_maven: fish,no_maven: zshplugin
+no_maven: cd,no_maven: jump,no_maven: powershel,no_maven: j,no_maven: z,no_maven: fzf,no_maven: bash,no_maven: fasd
+no_maven: javascript,no_maven: ci,no_maven: continuintegr,no_maven: cs,no_maven: html,no_maven: continudeliveri,no_maven: zsh,no_maven: continudeploy,no_maven: ui,no_maven: layui,no_maven: cli,no_maven: continutest,no_maven: go,no_maven: docker,no_maven: php,no_maven: shellscript,no_maven: nodej,no_maven: commandlin,no_maven: neovim,no_maven: vim

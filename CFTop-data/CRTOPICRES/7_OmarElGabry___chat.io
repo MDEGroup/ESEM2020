@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: socket,no_maven: realtim,no_maven: passport
+no_maven: mongoos,no_maven: chat,no_maven: express,no_maven: redi
+no_maven: mongodb,no_maven: nodej,no_maven: node,no_maven: react,no_maven: api,no_maven: passport,no_maven: koa,no_maven: vue,no_maven: graphql,no_maven: tutori,no_maven: redux,no_maven: webpack,no_maven: vuex,no_maven: vuerout,no_maven: boilerpl,no_maven: apiserv,no_maven: javascript,no_maven: es6,no_maven: databas,no_maven: reactslingshot

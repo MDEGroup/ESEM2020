@@ -1,0 +1,7 @@
+1	git://github.com/Yalantis/FoldingTabBar.iOS
+2	#DEP#anim
+3	#DEP#carthag
+4	#DEP#cocoapod
+5	#DEP#objectc
+6	#DEP#io
+7	#DEP#swift

@@ -1,0 +1,7 @@
+1	git://github.com/jordanwilson230/kubectl-plugins
+2	#DEP#plugin
+3	#DEP#deploy
+4	#DEP#cicd
+5	#DEP#devop
+6	#DEP#ssh
+7	#DEP#kubernet

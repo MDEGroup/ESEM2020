@@ -1,0 +1,3 @@
+no_maven: homebridgalarm,no_maven: homebridg,no_maven: lock,no_maven: alarm
+no_maven: light,no_maven: homekit,no_maven: homeautom,no_maven: homebridgplugin,no_maven: alarmdotcom
+no_maven: homebridg,no_maven: javascript,no_maven: notif,no_maven: siri,no_maven: xiaomi,no_maven: raspberri,no_maven: nodej,no_maven: homeassist,no_maven: bluetoothlowenergi,no_maven: iot,no_maven: netatmo,no_maven: autom,no_maven: temperatursensor,no_maven: humidsensor,no_maven: hygrothermograph,no_maven: httpswitch,no_maven: mqtt,no_maven: hap,no_maven: homebridghttp,no_maven: switch

@@ -1,0 +1,3 @@
+no_maven: build,no_maven: format,no_maven: lint,no_maven: golang,no_maven: editor
+no_maven: atom,no_maven: test,no_maven: go,no_maven: ide,no_maven: autocomplet
+no_maven: golang,no_maven: javascript,no_maven: databas,no_maven: python,no_maven: emac,no_maven: editor,no_maven: php,no_maven: debugg,no_maven: cpp,no_maven: clang,no_maven: build,no_maven: ajax,no_maven: jqueriplugin,no_maven: compon,no_maven: vanilla,no_maven: frontend,no_maven: es6,no_maven: crossplatform,no_maven: liteid,no_maven: qt

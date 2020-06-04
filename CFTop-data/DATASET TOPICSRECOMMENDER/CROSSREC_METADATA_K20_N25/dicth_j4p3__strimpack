@@ -1,0 +1,7 @@
+1	git://github.com/j4p3/strimpack
+2	#DEP#express
+3	#DEP#commun
+4	#DEP#stream
+5	#DEP#react
+6	#DEP#dockercompo
+7	#DEP#docker

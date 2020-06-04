@@ -1,0 +1,3 @@
+no_maven: javascript,no_maven: mithril,no_maven: virtualdom
+no_maven: framework,no_maven: xhr,no_maven: router,no_maven: vdom
+no_maven: javascript,no_maven: api,no_maven: http,no_maven: rout,no_maven: web,no_maven: react,no_maven: rxjava,no_maven: retrofit,no_maven: microservic,no_maven: univers,no_maven: ajax,no_maven: compon,no_maven: nodej,no_maven: materidesign,no_maven: mvp,no_maven: jsx,no_maven: typescript,no_maven: websocket,no_maven: reactivprogram,no_maven: frameworkagnost

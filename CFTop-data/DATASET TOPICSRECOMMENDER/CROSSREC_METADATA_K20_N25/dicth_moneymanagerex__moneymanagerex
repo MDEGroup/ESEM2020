@@ -1,0 +1,10 @@
+1	git://github.com/moneymanagerex/moneymanagerex
+2	#DEP#gui
+3	#DEP#datavisu
+4	#DEP#cmake
+5	#DEP#cpluplu
+6	#DEP#maco
+7	#DEP#window
+8	#DEP#cryptocurr
+9	#DEP#linux
+10	#DEP#cpp

@@ -1,0 +1,3 @@
+no_maven: twittercli,no_maven: twitterapi,no_maven: twitter
+no_maven: twitterapiexchang,no_maven: twitteroauth,no_maven: php
+no_maven: symfoni,no_maven: compon,no_maven: symfonicompon,no_maven: cli,no_maven: clicommand,no_maven: consol,no_maven: laravel,no_maven: mysql,no_maven: symfonibundl,no_maven: python,no_maven: html,no_maven: xml,no_maven: sql,no_maven: cs,no_maven: csselector,no_maven: shell,no_maven: debian,no_maven: php7,no_maven: phpfpm,no_maven: ubuntu

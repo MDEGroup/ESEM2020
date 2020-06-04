@@ -1,0 +1,9 @@
+1	git://github.com/monero-project/monero
+2	#DEP#secur
+3	#DEP#cmake
+4	#DEP#cpluplu
+5	#DEP#blockchain
+6	#DEP#privaci
+7	#DEP#p2p
+8	#DEP#cryptocurr
+9	#DEP#monero

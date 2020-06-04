@@ -1,0 +1,3 @@
+no_maven: elm,no_maven: typescript,no_maven: java,no_maven: kotlin,no_maven: objectc,no_maven: golang
+no_maven: json,no_maven: jsonschema,no_maven: csharp,no_maven: cplusplu,no_maven: graphql,no_maven: rust,no_maven: swift
+no_maven: java,no_maven: javascript,no_maven: nodej,no_maven: librari,no_maven: mobil,no_maven: cordova,no_maven: objectc,no_maven: cpp,no_maven: typescript,no_maven: c,no_maven: php,no_maven: python,no_maven: rubi,no_maven: html5,no_maven: webframework,no_maven: couchdb,no_maven: httpserver,no_maven: pouchdb,no_maven: crossplatform,no_maven: reactiv

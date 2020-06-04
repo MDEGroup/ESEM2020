@@ -1,0 +1,10 @@
+1	git://github.com/budtmo/docker-android
+2	#DEP#kubernet
+3	#DEP#azur
+4	#DEP#emul
+5	#DEP#terraform
+6	#DEP#android
+7	#DEP#gcp
+8	#DEP#aw
+9	#DEP#docker
+10	#DEP#cloud

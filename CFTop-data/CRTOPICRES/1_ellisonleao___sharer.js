@@ -1,0 +1,3 @@
+no_maven: reddit,no_maven: pinterest,no_maven: twitter,no_maven: telegram,no_maven: javascript
+no_maven: hackernew,no_maven: okru,no_maven: facebook,no_maven: socialnetwork,no_maven: whatsapp,no_maven: sharebutton
+no_maven: telegram,no_maven: twitter,no_maven: python,no_maven: bot,no_maven: messeng,no_maven: electron,no_maven: slack,no_maven: photo,no_maven: javascript,no_maven: machinlearn,no_maven: laravel,no_maven: emoji,no_maven: php,no_maven: api,no_maven: chatbot,no_maven: franz,no_maven: product,no_maven: offic,no_maven: android,no_maven: autopost

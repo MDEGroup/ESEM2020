@@ -1,0 +1,7 @@
+1	git://github.com/awslabs/aws-sam-cli
+2	#DEP#serverless
+3	#DEP#python
+4	#DEP#apigateway
+5	#DEP#aw
+6	#DEP#docker
+7	#DEP#lambda

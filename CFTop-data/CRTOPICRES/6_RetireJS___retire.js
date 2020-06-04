@@ -1,0 +1,3 @@
+no_maven: insecurlibrari,no_maven: softwarcompositanalysi,no_maven: vulnerlibrari,no_maven: secur,no_maven: scanner
+no_maven: gruntplugin,no_maven: firefoxexten,no_maven: chromeexten,no_maven: buildtool,no_maven: vulner,no_maven: javascript
+no_maven: chrome,no_maven: firefox,no_maven: firefoxaddon,no_maven: webextens,no_maven: edgexten,no_maven: docker,no_maven: operaexten,no_maven: npm,no_maven: youtub,no_maven: securtool,no_maven: secur,no_maven: scanner,no_maven: maven,no_maven: browserexten,no_maven: crx,no_maven: auto,no_maven: edg,no_maven: webpack,no_maven: webextenstoolbox,no_maven: clitoolbox

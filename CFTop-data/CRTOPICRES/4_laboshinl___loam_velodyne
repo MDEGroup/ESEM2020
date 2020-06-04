@@ -1,0 +1,3 @@
+no_maven: velodyn,no_maven: map,no_maven: loam,no_maven: loamvelodyn,no_maven: lidar
+no_maven: computvis,no_maven: pcl,no_maven: slam,no_maven: pointcloud,no_maven: ro,no_maven: 3d
+no_maven: deeplearn,no_maven: artificiintellig,no_maven: robot,no_maven: python,no_maven: tensorflow,no_maven: neuralnetwork,no_maven: machinlearn,no_maven: vision,no_maven: local,no_maven: carla,no_maven: simul,no_maven: selfdrivecar,no_maven: deepreinforclearn,no_maven: geometriprocess,no_maven: 3ddeeplearn,no_maven: pytorch,no_maven: uniti,no_maven: manipul,no_maven: graphic,no_maven: research

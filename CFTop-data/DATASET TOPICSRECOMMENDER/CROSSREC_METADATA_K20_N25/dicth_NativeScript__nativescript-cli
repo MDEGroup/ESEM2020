@@ -1,0 +1,7 @@
+1	git://github.com/NativeScript/nativescript-cli
+2	#DEP#cli
+3	#DEP#android
+4	#DEP#io
+5	#DEP#nativescript
+6	#DEP#mobil
+7	#DEP#crossplatform

@@ -1,0 +1,3 @@
+no_maven: httpserver,no_maven: http,no_maven: golang
+no_maven: static,no_maven: file,no_maven: go
+no_maven: javascript,no_maven: awlambda,no_maven: golang,no_maven: lambda,no_maven: aw,no_maven: serverless,no_maven: cli,no_maven: php,no_maven: directori,no_maven: cach,no_maven: filesystem,no_maven: queue,no_maven: tool,no_maven: staticsit,no_maven: rust,no_maven: staticsitegen,no_maven: storag,no_maven: polyfil,no_maven: fileaccess,no_maven: network

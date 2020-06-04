@@ -1,0 +1,10 @@
+1	git://github.com/s-matyukevich/raspberry-pi-os
+2	#DEP#kernel
+3	#DEP#c
+4	#DEP#raspberripi
+5	#DEP#resourc
+6	#DEP#assembl
+7	#DEP#tutori
+8	#DEP#learn
+9	#DEP#arm
+10	#DEP#opersystem

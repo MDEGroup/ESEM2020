@@ -1,0 +1,3 @@
+no_maven: algorithm,no_maven: javascript,no_maven: binaritre
+no_maven: sortalgorithm,no_maven: datastructur,no_maven: graph
+no_maven: algorithm,no_maven: javascript,no_maven: sort,no_maven: tree,no_maven: bubblsort,no_maven: interviewquest,no_maven: searchalgorithm,no_maven: python,no_maven: search,no_maven: interview,no_maven: queue,no_maven: heap,no_maven: binaritre,no_maven: graphalgorithm,no_maven: interviewpract,no_maven: stack,no_maven: linklist,no_maven: golang,no_maven: competitprogram,no_maven: csharp

@@ -1,0 +1,7 @@
+1	git://github.com/geerlingguy/packer-boxes
+2	#DEP#vagrant
+3	#DEP#ubuntu
+4	#DEP#cento
+5	#DEP#ansibl
+6	#DEP#debian
+7	#DEP#virtualbox

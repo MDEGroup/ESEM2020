@@ -1,0 +1,3 @@
+no_maven: secur,no_maven: securtool,no_maven: staticanalysi,no_maven: rubi
+no_maven: rail,no_maven: securaudit,no_maven: securvuln,no_maven: brakeman,no_maven: vulner
+no_maven: secur,no_maven: securtool,no_maven: vulnerscann,no_maven: rubi,no_maven: golang,no_maven: javascript,no_maven: rubirail,no_maven: linux,no_maven: devop,no_maven: vulnerdetect,no_maven: securautom,no_maven: staticanalysi,no_maven: gosec,no_maven: vulnermanag,no_maven: securscann,no_maven: securharden,no_maven: docker,no_maven: contain,no_maven: bandit,no_maven: python

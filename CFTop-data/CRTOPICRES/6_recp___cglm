@@ -1,0 +1,3 @@
+no_maven: boundbox,no_maven: c,no_maven: avx,no_maven: matrix,no_maven: opengl,no_maven: frustum,no_maven: sse,no_maven: neon,no_maven: bezier,no_maven: matrixdecomposit
+no_maven: vector,no_maven: glmc,no_maven: marixinv,no_maven: simd,no_maven: 3dmath,no_maven: math,no_maven: openglmath,no_maven: euler,no_maven: 3d,no_maven: affintransformmatr
+no_maven: webgl,no_maven: glsl,no_maven: svg,no_maven: graphic,no_maven: shader,no_maven: glslshader,no_maven: render,no_maven: datastructur,no_maven: javascript,no_maven: c,no_maven: crystal,no_maven: python,no_maven: wpf,no_maven: formula,no_maven: tex,no_maven: latex,no_maven: dotnet,no_maven: unity3d,no_maven: 2d,no_maven: opengl

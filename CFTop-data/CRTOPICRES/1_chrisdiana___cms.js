@@ -1,0 +1,3 @@
+no_maven: markdown,no_maven: singlpageapp,no_maven: staticsitegen
+no_maven: javascript,no_maven: filebas,no_maven: markdownpars
+no_maven: nodej,no_maven: react,no_maven: graphql,no_maven: python,no_maven: vue,no_maven: django,no_maven: ui,no_maven: microservic,no_maven: cm,no_maven: serverless,no_maven: reactj,no_maven: redux,no_maven: wagtail,no_maven: markdown,no_maven: expressj,no_maven: mongoos,no_maven: swagger,no_maven: express,no_maven: node,no_maven: commonmark

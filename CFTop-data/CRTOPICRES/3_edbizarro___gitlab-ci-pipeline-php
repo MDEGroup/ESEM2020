@@ -1,0 +1,3 @@
+no_maven: dockerimag,no_maven: ci,no_maven: continuintegr,no_maven: gitlab
+no_maven: gitlabci,no_maven: cd,no_maven: continudeliveri,no_maven: docker,no_maven: php
+no_maven: continuintegr,no_maven: ci,no_maven: cicd,no_maven: continudeploy,no_maven: devop,no_maven: continutest,no_maven: pipelin,no_maven: kubernet,no_maven: deploy,no_maven: infrastructurcod,no_maven: gocd,no_maven: terraform,no_maven: ansibl,no_maven: helm,no_maven: monitor,no_maven: aw,no_maven: dockercontain,no_maven: chatbot,no_maven: gitlab,no_maven: continudeliveriserv

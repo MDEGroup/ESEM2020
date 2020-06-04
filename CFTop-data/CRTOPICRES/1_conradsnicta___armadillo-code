@@ -1,0 +1,3 @@
+no_maven: armadillo,no_maven: matrixfactor,no_maven: matrix,no_maven: cpp11,no_maven: lapack,no_maven: expresstemplat,no_maven: matrixfunct,no_maven: mkl,no_maven: vector,no_maven: machinlearn
+no_maven: hpc,no_maven: matlab,no_maven: linearalgebra,no_maven: openmp,no_maven: sparmatrix,no_maven: statist,no_maven: bla,no_maven: gaussianmixturmodel,no_maven: scientifcomput,no_maven: linearalgebralibrari
+no_maven: machinlearn,no_maven: python,no_maven: deeplearn,no_maven: datascienc,no_maven: neuralnetwork,no_maven: librari,no_maven: compil,no_maven: graph,no_maven: scienc,no_maven: deepneuralnetwork,no_maven: stat,no_maven: c,no_maven: matrix,no_maven: cbla,no_maven: analyt,no_maven: sketch,no_maven: sparklin,no_maven: sketchapp,no_maven: json,no_maven: plugin

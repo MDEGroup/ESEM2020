@@ -1,0 +1,3 @@
+no_maven: publish,no_maven: doi,no_maven: mongodb
+no_maven: python,no_maven: crossref,no_maven: metadata
+no_maven: api,no_maven: framework,no_maven: django,no_maven: php,no_maven: javascript,no_maven: seo,no_maven: xmlsitemap,no_maven: opengraph,no_maven: wordpress,no_maven: portablepdb,no_maven: modul,no_maven: writer,no_maven: reader,no_maven: pdb,no_maven: msil,no_maven: windowspdb,no_maven: assembl,no_maven: dotnet,no_maven: cil,no_maven: il

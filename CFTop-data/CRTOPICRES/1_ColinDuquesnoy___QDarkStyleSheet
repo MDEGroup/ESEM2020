@@ -1,0 +1,3 @@
+no_maven: qt,no_maven: pyqt4,no_maven: pyqt5
+no_maven: pysid,no_maven: stylesheet,no_maven: qt5,no_maven: darkthem
+no_maven: qt,no_maven: dark,no_maven: pyside2,no_maven: pyqt5,no_maven: cpluplu,no_maven: lightthem,no_maven: theme,no_maven: scihub,no_maven: qtquick,no_maven: pyqt,no_maven: qml,no_maven: eva,no_maven: hub,no_maven: sci,no_maven: gui,no_maven: cs,no_maven: crossplatform,no_maven: applic,no_maven: matrix,no_maven: chat

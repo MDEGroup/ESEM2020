@@ -1,0 +1,7 @@
+1	git://github.com/release-it/release-it
+2	#DEP#publish
+3	#DEP#github
+4	#DEP#git
+5	#DEP#npm
+6	#DEP#tool
+7	#DEP#autom

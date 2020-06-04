@@ -1,0 +1,3 @@
+no_maven: cli,no_maven: help,no_maven: commandlin,no_maven: tldr
+no_maven: exampl,no_maven: cheatsheet,no_maven: termin,no_maven: document,no_maven: curl
+no_maven: webapp,no_maven: docker,no_maven: sampl,no_maven: jvm,no_maven: playframework,no_maven: examplproject,no_maven: samplapp,no_maven: cli,no_maven: javascript,no_maven: devop,no_maven: api,no_maven: nodej,no_maven: go,no_maven: microservic,no_maven: httpclient,no_maven: apicli,no_maven: graphql,no_maven: python,no_maven: http,no_maven: golang

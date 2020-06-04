@@ -1,0 +1,11 @@
+1	git://github.com/biolab/orange3
+2	#DEP#datavisu
+3	#DEP#python
+4	#DEP#chart
+5	#DEP#machinlearn
+6	#DEP#visual
+7	#DEP#cluster
+8	#DEP#datascienc
+9	#DEP#numpi
+10	#DEP#scikitlearn
+11	#DEP#panda

@@ -1,0 +1,3 @@
+no_maven: websocket,no_maven: networkstack,no_maven: network,no_maven: broker
+no_maven: server,no_maven: rest,no_maven: mqtt,no_maven: wamp,no_maven: messag
+no_maven: framework,no_maven: messeng,no_maven: http,no_maven: telegram,no_maven: api,no_maven: java,no_maven: swift,no_maven: io,no_maven: slack,no_maven: python,no_maven: chat,no_maven: web,no_maven: electron,no_maven: restapi,no_maven: opensourc,no_maven: app,no_maven: applic,no_maven: postgresql,no_maven: amqp,no_maven: tox

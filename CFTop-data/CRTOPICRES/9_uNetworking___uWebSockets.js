@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: typescript,no_maven: http,no_maven: websocket
+no_maven: commerci,no_maven: runtim,no_maven: router,no_maven: pubsub
+no_maven: javascript,no_maven: framework,no_maven: nodej,no_maven: rout,no_maven: j,no_maven: univers,no_maven: kubernet,no_maven: csharp,no_maven: dotnet,no_maven: websocket,no_maven: book,no_maven: golang,no_maven: microservic,no_maven: eventdriven,no_maven: serverless,no_maven: api,no_maven: compil,no_maven: virtualmachin,no_maven: interpret,no_maven: reactivprogram

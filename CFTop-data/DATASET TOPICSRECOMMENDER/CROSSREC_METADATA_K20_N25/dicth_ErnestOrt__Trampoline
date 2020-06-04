@@ -1,0 +1,9 @@
+1	git://github.com/ErnestOrt/Trampoline
+2	#DEP#gradl
+3	#DEP#springboot
+4	#DEP#deploy
+5	#DEP#spring
+6	#DEP#maven
+7	#DEP#microservic
+8	#DEP#cloud
+9	#DEP#java

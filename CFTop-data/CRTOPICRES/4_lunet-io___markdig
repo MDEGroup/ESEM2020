@@ -1,0 +1,3 @@
+no_maven: markdownhtml,no_maven: markdown,no_maven: markdownprocessor,no_maven: commonmark,no_maven: gfm
+no_maven: markdownpars,no_maven: commonmarkpar,no_maven: dotnetcor,no_maven: csharp,no_maven: markdownflavor,no_maven: dotnet
+no_maven: markdown,no_maven: nuget,no_maven: api,no_maven: aspnetcor,no_maven: javascript,no_maven: staticsitegen,no_maven: continuintegr,no_maven: dotnetstandard,no_maven: typescript,no_maven: markdownhtml,no_maven: aspnet,no_maven: redi,no_maven: memcach,no_maven: cach,no_maven: cachemanag,no_maven: singlpageapp,no_maven: filebas,no_maven: unittest,no_maven: xunit,no_maven: buildtool

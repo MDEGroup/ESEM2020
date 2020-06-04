@@ -1,0 +1,7 @@
+1	git://github.com/amfoss/GitLit
+2	#DEP#oauth
+3	#DEP#restapi
+4	#DEP#python
+5	#DEP#githubapi
+6	#DEP#django
+7	#DEP#graphql

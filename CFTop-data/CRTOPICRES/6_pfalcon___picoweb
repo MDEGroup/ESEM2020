@@ -1,0 +1,3 @@
+no_maven: minimalist,no_maven: pycopi,no_maven: micropython,no_maven: python
+no_maven: webserv,no_maven: webapp,no_maven: microframework,no_maven: nanoframework,no_maven: unbloat
+no_maven: server,no_maven: python,no_maven: httpserver,no_maven: javascript,no_maven: http,no_maven: microservic,no_maven: web,no_maven: php,no_maven: symfoni,no_maven: framework,no_maven: django,no_maven: react,no_maven: dotnet,no_maven: fsharp,no_maven: nginx,no_maven: termin,no_maven: cli,no_maven: middlewar,no_maven: websocket,no_maven: spa

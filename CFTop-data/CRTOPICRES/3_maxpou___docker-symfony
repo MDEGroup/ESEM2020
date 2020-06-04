@@ -1,0 +1,3 @@
+no_maven: nginx,no_maven: mysql,no_maven: dockersymfoni
+no_maven: dockercompo,no_maven: php7,no_maven: docker,no_maven: symfoni
+no_maven: php,no_maven: nginx,no_maven: mysql,no_maven: phpfpm,no_maven: python,no_maven: continuintegr,no_maven: symfony4,no_maven: java,no_maven: nodej,no_maven: nodemon,no_maven: api,no_maven: vagrant,no_maven: react,no_maven: lemp,no_maven: shell,no_maven: debian,no_maven: cli,no_maven: ubuntu,no_maven: authent,no_maven: express

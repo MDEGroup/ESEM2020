@@ -1,0 +1,3 @@
+no_maven: monitor,no_maven: devop,no_maven: errorlog
+no_maven: django,no_maven: crashreport,no_maven: errormonitor,no_maven: cspreport
+no_maven: python,no_maven: javascript,no_maven: restapi,no_maven: webanalyt,no_maven: insight,no_maven: analyt,no_maven: track,no_maven: nodej,no_maven: data,no_maven: heatmap,no_maven: notif,no_maven: mobil,no_maven: mobilmarket,no_maven: productmanag,no_maven: pushnotif,no_maven: scrollmap,no_maven: sdk,no_maven: richpush,no_maven: dashboard,no_maven: mobilanalyt

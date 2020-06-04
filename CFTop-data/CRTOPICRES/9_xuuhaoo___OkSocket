@@ -1,0 +1,3 @@
+no_maven: tcpsocket,no_maven: androidserv,no_maven: tcpclient,no_maven: socket,no_maven: socketio,no_maven: androidsocketserv,no_maven: tcp,no_maven: server
+no_maven: androidtcpserv,no_maven: client,no_maven: androidsocket,no_maven: android,no_maven: androidserverjson,no_maven: socketserv,no_maven: androidsocketiocli,no_maven: tcpserver,no_maven: serversid
+no_maven: server,no_maven: network,no_maven: golang,no_maven: packet,no_maven: game,no_maven: chat,no_maven: desktop,no_maven: go,no_maven: web,no_maven: http,no_maven: json,no_maven: protobuf,no_maven: qt5,no_maven: matrix,no_maven: qt,no_maven: javascript,no_maven: driver,no_maven: cassandra,no_maven: databas,no_maven: nosql

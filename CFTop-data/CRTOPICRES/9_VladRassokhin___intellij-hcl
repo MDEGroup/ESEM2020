@@ -1,0 +1,3 @@
+no_maven: intellij,no_maven: intellijplugin,no_maven: terraform
+no_maven: intellijplatform,no_maven: hcl,no_maven: syntaxhighlight
+no_maven: terraform,no_maven: autocomplet,no_maven: vim,no_maven: python,no_maven: intellij,no_maven: tool,no_maven: intellijplugin,no_maven: termin,no_maven: cli,no_maven: theme,no_maven: sublimtext,no_maven: kotlin,no_maven: visualstudiocod,no_maven: atom,no_maven: kubernet,no_maven: markdown,no_maven: code,no_maven: golang,no_maven: aw,no_maven: linter

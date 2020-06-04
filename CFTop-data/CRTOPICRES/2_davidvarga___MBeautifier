@@ -1,0 +1,3 @@
+no_maven: beautifi,no_maven: matlabeditor,no_maven: matlabsourc
+no_maven: matlab,no_maven: sourcecod,no_maven: codeformatt,no_maven: formatt
+no_maven: javascript,no_maven: python,no_maven: cs,no_maven: prettier,no_maven: d3,no_maven: octav,no_maven: angular,no_maven: html,no_maven: vue,no_maven: machinlearn,no_maven: datavisu,no_maven: materiinformat,no_maven: threej,no_maven: eslint,no_maven: computvis,no_maven: sas,no_maven: typescript,no_maven: c,no_maven: fouriertransform,no_maven: fftw

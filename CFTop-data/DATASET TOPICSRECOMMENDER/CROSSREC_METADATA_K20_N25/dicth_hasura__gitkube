@@ -1,0 +1,8 @@
+1	git://github.com/hasura/gitkube
+2	#DEP#continudeploy
+3	#DEP#git
+4	#DEP#cicd
+5	#DEP#golang
+6	#DEP#developtool
+7	#DEP#kubernet
+8	#DEP#docker

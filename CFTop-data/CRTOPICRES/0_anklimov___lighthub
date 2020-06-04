@@ -1,0 +1,3 @@
+no_maven: mqttclient,no_maven: heatcontrol,no_maven: dmx512,no_maven: controllino,no_maven: homeassist,no_maven: arduino,no_maven: openhab,no_maven: homebridg,no_maven: iot
+no_maven: homeautom,no_maven: homi,no_maven: modbu,no_maven: mqtt,no_maven: 1wire,no_maven: iobrok,no_maven: ventil,no_maven: relaycontrol,no_maven: smarthomcontrol,no_maven: dmx
+no_maven: homebridg,no_maven: homebridgplugin,no_maven: homekit,no_maven: raspberripi,no_maven: iot,no_maven: autom,no_maven: websocket,no_maven: smarthom,no_maven: javascript,no_maven: nodej,no_maven: siri,no_maven: hardwar,no_maven: i2c,no_maven: gpio,no_maven: spi,no_maven: esp32,no_maven: arduino,no_maven: iotplatform,no_maven: java,no_maven: internetth

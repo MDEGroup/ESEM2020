@@ -1,0 +1,7 @@
+1	git://github.com/antoinecarme/pyaf
+2	#DEP#webserv
+3	#DEP#jupyt
+4	#DEP#heroku
+5	#DEP#python
+6	#DEP#scikitlearn
+7	#DEP#panda

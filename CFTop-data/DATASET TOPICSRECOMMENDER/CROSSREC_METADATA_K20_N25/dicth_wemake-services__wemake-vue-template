@@ -1,0 +1,7 @@
+1	git://github.com/wemake-services/wemake-vue-template
+2	#DEP#vue
+3	#DEP#ssr
+4	#DEP#typescript
+5	#DEP#eslint
+6	#DEP#jest
+7	#DEP#docker

@@ -1,0 +1,3 @@
+no_maven: arp,no_maven: baremet,no_maven: vrrp
+no_maven: bgp,no_maven: keepaliv,no_maven: kubernet,no_maven: loadbalanc
+no_maven: contain,no_maven: http2,no_maven: http,no_maven: golang,no_maven: docker,no_maven: go,no_maven: microservic,no_maven: springboot,no_maven: java,no_maven: serverless,no_maven: springcloud,no_maven: cloudnativ,no_maven: spring,no_maven: roadrunn,no_maven: php,no_maven: supervisor,no_maven: php7,no_maven: http2push,no_maven: worker,no_maven: rpc

@@ -1,0 +1,7 @@
+1	git://github.com/crate/crate
+2	#DEP#databas
+3	#DEP#distribut
+4	#DEP#iot
+5	#DEP#sql
+6	#DEP#cluster
+7	#DEP#java

@@ -1,0 +1,7 @@
+1	git://github.com/noirbizarre/flask-restplus
+2	#DEP#python
+3	#DEP#flask
+4	#DEP#rest
+5	#DEP#json
+6	#DEP#swagger
+7	#DEP#api

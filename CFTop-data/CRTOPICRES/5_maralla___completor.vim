@@ -1,0 +1,3 @@
+no_maven: omnicomplet,no_maven: lspserver,no_maven: vim,no_maven: python
+no_maven: lsp,no_maven: neovimplugin,no_maven: vimplugin,no_maven: codecomplet
+no_maven: vim,no_maven: viml,no_maven: vimscript,no_maven: packagmanag,no_maven: neovim,no_maven: start,no_maven: startup,no_maven: privaci,no_maven: p2p,no_maven: lalrgrammar,no_maven: dfaminim,no_maven: scanner,no_maven: yacc,no_maven: lexicanalyz,no_maven: par,no_maven: nfa,no_maven: lexer,no_maven: flex,no_maven: bazelrul,no_maven: java

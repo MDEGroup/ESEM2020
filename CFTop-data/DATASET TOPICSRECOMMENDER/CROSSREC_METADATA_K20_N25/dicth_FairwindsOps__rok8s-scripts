@@ -1,0 +1,8 @@
+1	git://github.com/FairwindsOps/rok8s-scripts
+2	#DEP#continudeploy
+3	#DEP#ci
+4	#DEP#continuintegr
+5	#DEP#contain
+6	#DEP#kubernet
+7	#DEP#continudeliveri
+8	#DEP#docker

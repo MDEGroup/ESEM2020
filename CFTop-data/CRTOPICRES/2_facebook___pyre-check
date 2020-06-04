@@ -1,0 +1,3 @@
+no_maven: abstractinterpret,no_maven: secur,no_maven: controlflowanalysi,no_maven: python,no_maven: typecheck
+no_maven: staticanalysi,no_maven: ocaml,no_maven: taintanalysi,no_maven: programanalysi,no_maven: codequ
+no_maven: secur,no_maven: staticcodeanalysi,no_maven: python,no_maven: haskel,no_maven: opensourc,no_maven: rubi,no_maven: gradl,no_maven: test,no_maven: linter,no_maven: binarianalysi,no_maven: emul,no_maven: elixir,no_maven: detekt,no_maven: checkstyl,no_maven: novoda,no_maven: gradlplugin,no_maven: findbug,no_maven: pmd,no_maven: androidlint,no_maven: securtool

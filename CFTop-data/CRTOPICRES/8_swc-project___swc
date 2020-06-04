@@ -1,0 +1,3 @@
+no_maven: compil,no_maven: typescript,no_maven: typescriptpars,no_maven: javascript,no_maven: babel,no_maven: swc
+no_maven: ecmascript,no_maven: closurcompil,no_maven: ecmascriptpars,no_maven: parser,no_maven: typescriptcompil,no_maven: rust
+no_maven: javascript,no_maven: par,no_maven: ast,no_maven: j,no_maven: es2020,no_maven: compil,no_maven: javascriptengin,no_maven: perform,no_maven: markdown,no_maven: eslint,no_maven: staticcodeanalysi,no_maven: typescript,no_maven: babel,no_maven: nodej,no_maven: c,no_maven: zh,no_maven: quickj,no_maven: es6,no_maven: linter,no_maven: develop

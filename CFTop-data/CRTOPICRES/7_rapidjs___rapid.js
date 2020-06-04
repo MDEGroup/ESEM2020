@@ -1,0 +1,3 @@
+no_maven: rapid,no_maven: es6,no_maven: j,no_maven: laravel,no_maven: fluent,no_maven: ajax
+no_maven: api,no_maven: interfac,no_maven: model,no_maven: router,no_maven: orm,no_maven: apiwrapp,no_maven: promis
+no_maven: nodej,no_maven: django,no_maven: typescript,no_maven: javascript,no_maven: postgresql,no_maven: db,no_maven: databas,no_maven: compon,no_maven: framework,no_maven: rout,no_maven: restapi,no_maven: python,no_maven: promislibrari,no_maven: transact,no_maven: admin,no_maven: admindashboard,no_maven: administr,no_maven: respons,no_maven: templat,no_maven: backoffic

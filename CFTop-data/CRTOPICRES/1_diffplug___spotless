@@ -1,0 +1,3 @@
+no_maven: gradl,no_maven: scala,no_maven: java,no_maven: kotlin,no_maven: javascript,no_maven: typescript,no_maven: sql
+no_maven: groovi,no_maven: maven,no_maven: prettier,no_maven: sas,no_maven: cs,no_maven: plugingradl,no_maven: formatt
+no_maven: gradl,no_maven: javascript,no_maven: eslint,no_maven: kotlin,no_maven: java,no_maven: html,no_maven: gradlplugin,no_maven: angular,no_maven: vue,no_maven: nodej,no_maven: test,no_maven: sc,no_maven: serverless,no_maven: webpack,no_maven: babel,no_maven: colour,no_maven: logger,no_maven: consol,no_maven: ansicolor,no_maven: json

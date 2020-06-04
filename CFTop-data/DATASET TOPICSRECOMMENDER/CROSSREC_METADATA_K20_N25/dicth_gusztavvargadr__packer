@@ -1,0 +1,9 @@
+1	git://github.com/gusztavvargadr/packer
+2	#DEP#azur
+3	#DEP#sqlserver
+4	#DEP#window
+5	#DEP#ubuntu
+6	#DEP#aw
+7	#DEP#vagrant
+8	#DEP#docker
+9	#DEP#virtualbox

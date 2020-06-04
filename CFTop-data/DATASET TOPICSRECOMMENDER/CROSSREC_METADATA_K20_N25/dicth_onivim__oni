@@ -1,0 +1,11 @@
+1	git://github.com/onivim/oni
+2	#DEP#neovim
+3	#DEP#typescript
+4	#DEP#vim
+5	#DEP#javascript
+6	#DEP#gui
+7	#DEP#react
+8	#DEP#editor
+9	#DEP#ui
+10	#DEP#redux
+11	#DEP#ide

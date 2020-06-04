@@ -1,0 +1,3 @@
+no_maven: neovim,no_maven: ag,no_maven: vim
+no_maven: pt,no_maven: ack,no_maven: rg,no_maven: async
+no_maven: http,no_maven: react,no_maven: python,no_maven: rest,no_maven: swagger,no_maven: perform,no_maven: swool,no_maven: ajax,no_maven: framework,no_maven: openapi,no_maven: api,no_maven: nodej,no_maven: cach,no_maven: redux,no_maven: server,no_maven: neovim,no_maven: vim,no_maven: axio,no_maven: request,no_maven: php

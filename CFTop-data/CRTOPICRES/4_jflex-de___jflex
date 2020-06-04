@@ -1,0 +1,3 @@
+no_maven: flex,no_maven: lexergen,no_maven: antlr,no_maven: java,no_maven: nfa,no_maven: lexer,no_maven: scanner,no_maven: grammar,no_maven: lexicanalyz,no_maven: yacc
+no_maven: mavenplugin,no_maven: token,no_maven: lalrgrammar,no_maven: dfaminim,no_maven: cup,no_maven: bazelrul,no_maven: dfa,no_maven: scannergen,no_maven: regexp,no_maven: par
+no_maven: maven,no_maven: java,no_maven: gradlplugin,no_maven: javascript,no_maven: python,no_maven: jwt,no_maven: gradl,no_maven: proguard,no_maven: minif,no_maven: obfusc,no_maven: authent,no_maven: flaskhttpauth,no_maven: flask,no_maven: secur,no_maven: continuintegr,no_maven: bazel,no_maven: docker,no_maven: prototyp,no_maven: ecmascript,no_maven: binari

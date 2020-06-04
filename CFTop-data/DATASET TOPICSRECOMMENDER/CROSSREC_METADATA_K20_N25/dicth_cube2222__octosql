@@ -1,0 +1,12 @@
+1	git://github.com/cube2222/octosql
+2	#DEP#cli
+3	#DEP#dataanalysi
+4	#DEP#nosql
+5	#DEP#sql
+6	#DEP#golang
+7	#DEP#json
+8	#DEP#mysql
+9	#DEP#go
+10	#DEP#redi
+11	#DEP#csv
+12	#DEP#postgresql

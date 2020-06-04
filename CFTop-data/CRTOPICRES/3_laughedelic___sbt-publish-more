@@ -1,0 +1,3 @@
+no_maven: sbt,no_maven: scala,no_maven: sbtplugin
+no_maven: publish,no_maven: publishresolv,no_maven: artifact
+no_maven: nodej,no_maven: javascript,no_maven: githubact,no_maven: docker,no_maven: cm,no_maven: devop,no_maven: cicd,no_maven: python,no_maven: markdown,no_maven: pandoc,no_maven: android,no_maven: deploy,no_maven: action,no_maven: cli,no_maven: p2p,no_maven: blog,no_maven: azur,no_maven: azurcli,no_maven: agil,no_maven: commandlin

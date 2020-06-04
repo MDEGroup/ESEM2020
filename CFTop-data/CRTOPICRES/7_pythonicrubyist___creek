@@ -1,0 +1,3 @@
+no_maven: xlsx,no_maven: xlsxparser,no_maven: par,no_maven: rail
+no_maven: xlsxreader,no_maven: rubi,no_maven: excel,no_maven: excelpars,no_maven: excelread
+no_maven: csv,no_maven: javascript,no_maven: xl,no_maven: json,no_maven: xlsx,no_maven: html,no_maven: sqlite,no_maven: spreadsheet,no_maven: markdown,no_maven: tabl,no_maven: jekyl,no_maven: jupytnotebook,no_maven: ltsv,no_maven: tsv,no_maven: panda,no_maven: androidxml,no_maven: pythoncommand,no_maven: androidlocalizfil,no_maven: python,no_maven: extractstr

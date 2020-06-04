@@ -1,0 +1,3 @@
+no_maven: setup,no_maven: rhel7,no_maven: vagrant,no_maven: box
+no_maven: packer,no_maven: cento,no_maven: virtualbox,no_maven: ansibl,no_maven: centos7
+no_maven: vagrant,no_maven: ubuntu,no_maven: docker,no_maven: debian,no_maven: qemu,no_maven: libvirt,no_maven: wordpress,no_maven: parallel,no_maven: vmware,no_maven: aw,no_maven: rhel,no_maven: kubernet,no_maven: alpin,no_maven: hyperv,no_maven: nginx,no_maven: window,no_maven: freebsd,no_maven: linux,no_maven: virtual,no_maven: maco

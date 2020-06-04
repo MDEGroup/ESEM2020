@@ -1,0 +1,7 @@
+1	git://github.com/flasgger/flasgger
+2	#DEP#openapi
+3	#DEP#restapi
+4	#DEP#flask
+5	#DEP#rest
+6	#DEP#api
+7	#DEP#swagger

@@ -1,0 +1,10 @@
+1	git://github.com/n8n-io/n8n
+2	#DEP#node
+3	#DEP#typescript
+4	#DEP#develop
+5	#DEP#selfhost
+6	#DEP#workflow
+7	#DEP#autom
+8	#DEP#cli
+9	#DEP#api
+10	#DEP#docker

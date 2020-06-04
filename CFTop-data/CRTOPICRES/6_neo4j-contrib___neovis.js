@@ -1,0 +1,3 @@
+no_maven: cypher,no_maven: javascript,no_maven: datavisu
+no_maven: networkvisu,no_maven: visual,no_maven: graphvisu,no_maven: neo4j
+no_maven: datavisu,no_maven: mongodb,no_maven: chart,no_maven: mysql,no_maven: react,no_maven: python,no_maven: migrat,no_maven: golang,no_maven: aws3,no_maven: postgr,no_maven: sql,no_maven: crate,no_maven: googlcloudspann,no_maven: go,no_maven: cassandra,no_maven: sqlite,no_maven: databas,no_maven: mariadb,no_maven: spanner,no_maven: ql

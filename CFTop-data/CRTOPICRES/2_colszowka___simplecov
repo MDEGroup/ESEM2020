@@ -1,0 +1,3 @@
+no_maven: testcoverag,no_maven: coverag,no_maven: rubi
+no_maven: rail,no_maven: coveraglibrari,no_maven: coveragreport,no_maven: codequ
+no_maven: rubi,no_maven: opensourc,no_maven: coverag,no_maven: detekt,no_maven: checkstyl,no_maven: gradl,no_maven: novoda,no_maven: gradlplugin,no_maven: findbug,no_maven: pmd,no_maven: androidlint,no_maven: dotnetcli,no_maven: unittest,no_maven: codecoverag,no_maven: coverlet,no_maven: crossplatform,no_maven: dotnet,no_maven: dotnetcor,no_maven: jqueri,no_maven: jqueridatat

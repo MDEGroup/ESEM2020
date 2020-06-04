@@ -1,0 +1,7 @@
+1	git://github.com/exyte/Macaw
+2	#DEP#anim
+3	#DEP#graphic
+4	#DEP#svg
+5	#DEP#ui
+6	#DEP#io
+7	#DEP#swift

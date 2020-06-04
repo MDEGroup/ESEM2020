@@ -1,0 +1,10 @@
+1	git://github.com/jOOQ/jOOQ
+2	#DEP#java
+3	#DEP#oracl
+4	#DEP#sql
+5	#DEP#sqlserver
+6	#DEP#postgresql
+7	#DEP#databas
+8	#DEP#orm
+9	#DEP#codegen
+10	#DEP#mysql

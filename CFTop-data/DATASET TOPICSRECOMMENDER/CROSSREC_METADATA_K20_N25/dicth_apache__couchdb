@@ -1,0 +1,7 @@
+1	git://github.com/apache/couchdb
+2	#DEP#bigdata
+3	#DEP#http
+4	#DEP#databas
+5	#DEP#javascript
+6	#DEP#cplusplu
+7	#DEP#cloud

@@ -1,0 +1,8 @@
+1	git://github.com/aelsabbahy/goss
+2	#DEP#testtool
+3	#DEP#devop
+4	#DEP#golang
+5	#DEP#linux
+6	#DEP#test
+7	#DEP#go
+8	#DEP#docker

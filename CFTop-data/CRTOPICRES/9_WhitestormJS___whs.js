@@ -1,0 +1,3 @@
+no_maven: compondriven,no_maven: highperform,no_maven: webdevelop,no_maven: framework
+no_maven: react,no_maven: scenegraph,no_maven: webpack,no_maven: modular,no_maven: physic
+no_maven: javascript,no_maven: redux,no_maven: babel,no_maven: sas,no_maven: mathemat,no_maven: cs,no_maven: artificiintellig,no_maven: machinlearn,no_maven: python,no_maven: editor,no_maven: motion,no_maven: anim,no_maven: svg,no_maven: nodej,no_maven: express,no_maven: webapp,no_maven: le,no_maven: symfoni,no_maven: postcss,no_maven: bootstrap

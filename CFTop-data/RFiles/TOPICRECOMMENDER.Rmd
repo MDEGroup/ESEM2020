@@ -1,0 +1,74 @@
+---
+title: "Topic Recommender"
+output:
+  pdf_document: default
+  html_document: 
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(ggplot2)
+```
+## Parameter
+
+Topic cutoff = 10
+
+Num of neighbours = 15
+
+Sim function = topic-based
+
+## Success Rate
+```{r}
+setwd("/Users/juri/Desktop/entangled/ResultsIN5/")
+sr_r1 <-  read.csv("SR_Round1", sep="\t", header = F)
+sr_r2 <-  read.csv("SR_Round2", sep="\t", header = F)
+sr_r3 <-  read.csv("SR_Round3", sep="\t", header = F)
+sr_r4 <-  read.csv("SR_Round4", sep="\t", header = F)
+sr_r5 <-  read.csv("SR_Round5", sep="\t", header = F)
+sr_r6 <-  read.csv("SR_Round6", sep="\t", header = F)
+sr_r7 <-  read.csv("SR_Round7", sep="\t", header = F)
+sr_r8 <-  read.csv("SR_Round8", sep="\t", header = F)
+sr_r9 <-  read.csv("SR_Round9", sep="\t", header = F)
+sr_r10 <-  read.csv("SR_Round10", sep="\t", header = F)
+sr_tot <- rbind(sr_r1, sr_r2, sr_r3, sr_r4, sr_r5, sr_r6, sr_r7, sr_r8, sr_r9, sr_r10)
+sr_tot$V3 <- NULL
+sr_tot <- sr_tot %>% group_by(sr_tot$V1) %>% summarise(mean = mean(V2))
+
+sr_tot <- sr_tot %>% rename(k = `sr_tot$V1`)
+sr_tot
+sr_tot$mean %>% summary()
+```
+## Precision and Recall
+``` {r}
+setwd("/Users/juri/Desktop/entangled/ResultsIN5/")
+pr_r1 <-  read.csv("PRC_Round1", sep="\t", header = F)
+colnames(pr_r1)
+pr_r2 <-  read.csv("PRC_Round2", sep="\t", header = F)
+pr_r3 <-  read.csv("PRC_Round3", sep="\t", header = F)
+pr_r4 <-  read.csv("PRC_Round4", sep="\t", header = F)
+pr_r5 <-  read.csv("PRC_Round5", sep="\t", header = F)
+pr_r6 <-  read.csv("PRC_Round6", sep="\t", header = F)
+pr_r7 <-  read.csv("PRC_Round7", sep="\t", header = F)
+pr_r8 <-  read.csv("PRC_Round8", sep="\t", header = F)
+pr_r9 <-  read.csv("PRC_Round9", sep="\t", header = F)
+pr_r10 <-  read.csv("PRC_Round10", sep="\t", header = F)
+#pr_r1 %>% merge(pr_r2, "V1") %>% merge(pr_r3, "V1")
+pr_tot <- rbind(pr_r1, pr_r2, pr_r3, pr_r4, pr_r5, pr_r6, pr_r7, pr_r8, pr_r9, pr_r10)
+pr_tot <- pr_tot %>% group_by(pr_tot$V1) %>% summarise(meanREC = mean(V2), meanPR = mean(V3)) %>% rename(k = `pr_tot$V1`)
+pr_tot
+pr_tot %>% ggplot(aes(x=meanREC, y=meanPR)) + geom_line() + geom_point()
+```
+
+### Precision summary
+
+``` {r}
+pr_tot$meanPR %>% summary()
+```
+
+### Recall summary
+
+``` {r}
+pr_tot$meanREC %>% summary()
+```
+

@@ -1,0 +1,7 @@
+1	git://github.com/trailofbits/manticore
+2	#DEP#secur
+3	#DEP#python
+4	#DEP#blockchain
+5	#DEP#emul
+6	#DEP#ethereum
+7	#DEP#test

@@ -1,0 +1,3 @@
+no_maven: babelsetup,no_maven: webpack4,no_maven: reactboilerpl,no_maven: babel
+no_maven: react,no_maven: babel7,no_maven: webpack,no_maven: boilerpl
+no_maven: babel,no_maven: javascript,no_maven: redux,no_maven: nodej,no_maven: eslint,no_maven: express,no_maven: vue,no_maven: sas,no_maven: starterkit,no_maven: es6,no_maven: typescript,no_maven: mongoos,no_maven: mongodb,no_maven: hmr,no_maven: pwa,no_maven: webpack3,no_maven: rethinkdb,no_maven: univers,no_maven: vuej,no_maven: prettier

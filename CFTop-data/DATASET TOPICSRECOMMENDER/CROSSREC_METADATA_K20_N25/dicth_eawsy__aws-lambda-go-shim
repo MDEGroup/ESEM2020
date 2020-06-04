@@ -1,0 +1,7 @@
+1	git://github.com/eawsy/aws-lambda-go-shim
+2	#DEP#serverless
+3	#DEP#awlambda
+4	#DEP#golang
+5	#DEP#aw
+6	#DEP#go
+7	#DEP#lambda

@@ -1,0 +1,3 @@
+no_maven: embi,no_maven: sonarr,no_maven: portain,no_maven: googldriv,no_maven: rclone,no_maven: nzbget,no_maven: radarr,no_maven: ombi,no_maven: plex,no_maven: delug
+no_maven: debian,no_maven: usenet,no_maven: ubuntu,no_maven: sabnzbd,no_maven: netdata,no_maven: gdrive,no_maven: docker,no_maven: ansibl,no_maven: plexpi,no_maven: plexdriv
+no_maven: cento,no_maven: role,no_maven: php,no_maven: nzbget,no_maven: sonarr,no_maven: radarr,no_maven: nzbhydra,no_maven: tautulli,no_maven: plex,no_maven: raspbian,no_maven: selfhost,no_maven: linux,no_maven: secur,no_maven: redhat,no_maven: fedora,no_maven: rhel,no_maven: shell,no_maven: vagrant,no_maven: packer,no_maven: virtualbox

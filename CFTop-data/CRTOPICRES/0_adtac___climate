@@ -1,0 +1,3 @@
+no_maven: shell,no_maven: commandlin,no_maven: linux
+no_maven: developtool,no_maven: zsh,no_maven: bash
+no_maven: shell,no_maven: fish,no_maven: linux,no_maven: cli,no_maven: python,no_maven: go,no_maven: vim,no_maven: shellexten,no_maven: shellscript,no_maven: powerlin,no_maven: environ,no_maven: nodej,no_maven: node,no_maven: commandlin,no_maven: tool,no_maven: ipython,no_maven: termin,no_maven: certif,no_maven: sign,no_maven: acm

@@ -1,0 +1,3 @@
+no_maven: stylelint,no_maven: postcssplugin,no_maven: postcss
+no_maven: cs,no_maven: formatt,no_maven: sas
+no_maven: javascript,no_maven: prettier,no_maven: sc,no_maven: html,no_maven: nodej,no_maven: framework,no_maven: yarn,no_maven: angular,no_maven: vue,no_maven: jqueri,no_maven: beautifi,no_maven: eslint,no_maven: typescript,no_maven: html5,no_maven: rwd,no_maven: access,no_maven: responsgrid,no_maven: desktop,no_maven: ui,no_maven: ux

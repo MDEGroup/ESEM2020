@@ -1,0 +1,9 @@
+1	git://github.com/zdliuccit/vue-webpack-config
+2	#DEP#axio
+3	#DEP#vue
+4	#DEP#ssr
+5	#DEP#react
+6	#DEP#eslint
+7	#DEP#koa2
+8	#DEP#koa
+9	#DEP#webpack

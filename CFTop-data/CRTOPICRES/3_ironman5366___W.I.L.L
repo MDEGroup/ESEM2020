@@ -1,0 +1,3 @@
+no_maven: ai,no_maven: plugin,no_maven: telegram,no_maven: python
+no_maven: jsonapi,no_maven: spaci,no_maven: pa,no_maven: personassist,no_maven: assist
+no_maven: python,no_maven: naturlanguagprocess,no_maven: nlp,no_maven: bot,no_maven: raspberripi,no_maven: php,no_maven: machinlearn,no_maven: jarvi,no_maven: artificiintellig,no_maven: spaciexten,no_maven: homeautom,no_maven: speechtext,no_maven: speechsynthesi,no_maven: speechrecognit,no_maven: laravel,no_maven: voicassist,no_maven: ai,no_maven: naturlanguag,no_maven: linux,no_maven: opensourc

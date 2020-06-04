@@ -1,0 +1,3 @@
+no_maven: gameengin,no_maven: opengl,no_maven: oreonengin,no_maven: glfw,no_maven: lwjgl
+no_maven: vulkanapi,no_maven: lwjgl3,no_maven: vulkan,no_maven: lombok,no_maven: vulkangameengin,no_maven: java
+no_maven: opengl,no_maven: metal,no_maven: d3d11,no_maven: gameengin,no_maven: graphic,no_maven: directx12,no_maven: d3d12,no_maven: directx,no_maven: linux,no_maven: directx11,no_maven: crossplatform,no_maven: android,no_maven: io,no_maven: direct3d,no_maven: render,no_maven: game,no_maven: webgl,no_maven: bulletphys,no_maven: entiticomponsystem,no_maven: gamedevelop

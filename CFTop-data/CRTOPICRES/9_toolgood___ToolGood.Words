@@ -1,0 +1,3 @@
+no_maven: stringmatch,no_maven: textfilt,no_maven: textsearch,no_maven: golang,no_maven: pinyin,no_maven: wordfilt,no_maven: wordssearch
+no_maven: filter,no_maven: sensitwordfilt,no_maven: dotnet,no_maven: stringsearch,no_maven: textmatch,no_maven: trietre,no_maven: ahocorasick,no_maven: java
+no_maven: opengl,no_maven: csharp,no_maven: imagprocess,no_maven: imag,no_maven: video,no_maven: maco,no_maven: javascript,no_maven: render,no_maven: gpu,no_maven: metal,no_maven: videoprocess,no_maven: realtim,no_maven: io,no_maven: gpgpu,no_maven: ajax,no_maven: anim,no_maven: librari,no_maven: ui,no_maven: sort,no_maven: terraform

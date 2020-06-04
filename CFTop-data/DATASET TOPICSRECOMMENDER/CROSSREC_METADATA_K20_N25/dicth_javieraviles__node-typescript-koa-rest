@@ -1,0 +1,11 @@
+1	git://github.com/javieraviles/node-typescript-koa-rest
+2	#DEP#node
+3	#DEP#typescript
+4	#DEP#restapi
+5	#DEP#jwt
+6	#DEP#koa
+7	#DEP#sql
+8	#DEP#heroku
+9	#DEP#swagger
+10	#DEP#koa2
+11	#DEP#docker

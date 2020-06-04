@@ -1,0 +1,9 @@
+1	git://github.com/WordOps/WordOps
+2	#DEP#perform
+3	#DEP#php
+4	#DEP#wordpress
+5	#DEP#autom
+6	#DEP#nginx
+7	#DEP#mariadb
+8	#DEP#ubuntu
+9	#DEP#debian

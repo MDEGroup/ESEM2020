@@ -1,0 +1,3 @@
+no_maven: datavisu,no_maven: graph,no_maven: interact
+no_maven: svg,no_maven: visual,no_maven: chart,no_maven: javascript
+no_maven: datavisu,no_maven: d3,no_maven: dataviz,no_maven: react,no_maven: chartlibrari,no_maven: cs,no_maven: d3j,no_maven: termin,no_maven: plotli,no_maven: design,no_maven: webapp,no_maven: toastui,no_maven: simpl,no_maven: easi,no_maven: django,no_maven: python,no_maven: flask,no_maven: uber,no_maven: dashbord,no_maven: golang

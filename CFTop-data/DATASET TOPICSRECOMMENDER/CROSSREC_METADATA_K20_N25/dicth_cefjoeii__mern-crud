@@ -1,0 +1,7 @@
+1	git://github.com/cefjoeii/mern-crud
+2	#DEP#node
+3	#DEP#express
+4	#DEP#mongodb
+5	#DEP#socketio
+6	#DEP#restapi
+7	#DEP#react

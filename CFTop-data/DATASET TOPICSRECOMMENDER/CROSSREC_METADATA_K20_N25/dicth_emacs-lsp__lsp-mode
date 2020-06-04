@@ -1,0 +1,8 @@
+1	git://github.com/emacs-lsp/lsp-mode
+2	#DEP#java
+3	#DEP#python
+4	#DEP#javascript
+5	#DEP#typescript
+6	#DEP#emac
+7	#DEP#swift
+8	#DEP#cpp

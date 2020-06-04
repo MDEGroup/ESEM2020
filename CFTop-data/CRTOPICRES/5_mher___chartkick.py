@@ -1,0 +1,3 @@
+no_maven: googlchart,no_maven: highchart,no_maven: python,no_maven: flask
+no_maven: chartlibrari,no_maven: chart,no_maven: visual,no_maven: django,no_maven: chartj
+no_maven: datavisu,no_maven: dataviz,no_maven: react,no_maven: javascript,no_maven: d3,no_maven: graph,no_maven: admindashboard,no_maven: gulp,no_maven: svg,no_maven: materidesign,no_maven: materiui,no_maven: toastui,no_maven: simpl,no_maven: easi,no_maven: bootstrap,no_maven: bootstrapthem,no_maven: bootstrap4,no_maven: bootstraptemplat,no_maven: uber,no_maven: plotli

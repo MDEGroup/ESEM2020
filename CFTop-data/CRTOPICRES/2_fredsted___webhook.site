@@ -1,0 +1,3 @@
+no_maven: sqlite,no_maven: frontend,no_maven: pusher,no_maven: pushnotif
+no_maven: laravel,no_maven: angular,no_maven: webhook,no_maven: spa
+no_maven: javascript,no_maven: vue,no_maven: telegram,no_maven: telegrambot,no_maven: pwa,no_maven: react,no_maven: boilerpl,no_maven: gitlab,no_maven: deploy,no_maven: rail,no_maven: poll,no_maven: telegrambotapi,no_maven: typescript,no_maven: singlpageappl,no_maven: mysql,no_maven: html,no_maven: serversiderend,no_maven: nodej,no_maven: cm,no_maven: go

@@ -1,0 +1,3 @@
+no_maven: java,no_maven: databas,no_maven: nosql
+no_maven: driver,no_maven: arangodb,no_maven: vpack
+no_maven: databas,no_maven: nosql,no_maven: par,no_maven: cassandra,no_maven: client,no_maven: window,no_maven: linux,no_maven: filesystem,no_maven: fuse,no_maven: c,no_maven: javascript,no_maven: kernel,no_maven: gplv3,no_maven: api,no_maven: datastaxdriv,no_maven: hardwar,no_maven: oculu,no_maven: diy,no_maven: vr,no_maven: maxcoutt

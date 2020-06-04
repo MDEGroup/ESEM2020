@@ -1,0 +1,10 @@
+1	git://github.com/cube-js/cube.js
+2	#DEP#nodej
+3	#DEP#serverless
+4	#DEP#postgresql
+5	#DEP#javascript
+6	#DEP#chart
+7	#DEP#mysql
+8	#DEP#spark
+9	#DEP#analyt
+10	#DEP#microservic

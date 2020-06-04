@@ -1,0 +1,3 @@
+no_maven: postgresql,no_maven: databas,no_maven: server
+no_maven: rest,no_maven: automatapi,no_maven: postgrest,no_maven: haskel
+no_maven: python,no_maven: restapi,no_maven: web,no_maven: api,no_maven: http,no_maven: graphql,no_maven: graphqlapi,no_maven: framework,no_maven: list,no_maven: docker,no_maven: linter,no_maven: compil,no_maven: functionprogram,no_maven: microservic,no_maven: shell,no_maven: present,no_maven: markdown,no_maven: pandoc,no_maven: javascript,no_maven: cpp
