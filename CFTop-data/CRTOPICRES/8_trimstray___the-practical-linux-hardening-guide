@@ -1,0 +1,3 @@
+no_maven: audit,no_maven: linuxharden,no_maven: pcid,no_maven: checklist,no_maven: manual,no_maven: harden,no_maven: ci
+no_maven: linux,no_maven: cento,no_maven: secur,no_maven: guid,no_maven: redhatenterprislinux,no_maven: openscap,no_maven: linuxsecur
+no_maven: ubuntu,no_maven: ansibl,no_maven: debian,no_maven: setup,no_maven: docker,no_maven: autom,no_maven: terraform,no_maven: role,no_maven: vagrant,no_maven: kubernet,no_maven: shell,no_maven: handbook,no_maven: book,no_maven: shellscript,no_maven: learn,no_maven: redhat,no_maven: fedora,no_maven: rhel,no_maven: packer,no_maven: box

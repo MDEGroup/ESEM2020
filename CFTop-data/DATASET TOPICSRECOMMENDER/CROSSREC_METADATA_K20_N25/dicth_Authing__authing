@@ -1,0 +1,7 @@
+1	git://github.com/Authing/authing
+2	#DEP#javascript
+3	#DEP#jwt
+4	#DEP#graphql
+5	#DEP#ipf
+6	#DEP#api
+7	#DEP#oauth

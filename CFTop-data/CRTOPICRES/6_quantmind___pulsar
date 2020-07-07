@@ -1,0 +1,3 @@
+no_maven: httpserver,no_maven: wsgi,no_maven: http,no_maven: python
+no_maven: testframework,no_maven: asyncio,no_maven: multiprocess,no_maven: rpc,no_maven: greenlet
+no_maven: python,no_maven: test,no_maven: json,no_maven: tdd,no_maven: game,no_maven: python3,no_maven: testtool,no_maven: protobuf,no_maven: swagger,no_maven: api,no_maven: nosql,no_maven: autom,no_maven: io,no_maven: network,no_maven: server,no_maven: testautom,no_maven: highperform,no_maven: csharp,no_maven: grpc,no_maven: thread

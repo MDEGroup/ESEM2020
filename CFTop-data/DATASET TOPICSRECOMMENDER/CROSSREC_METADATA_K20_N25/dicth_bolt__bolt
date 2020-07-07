@@ -1,0 +1,8 @@
+1	git://github.com/bolt/bolt
+2	#DEP#sqlite
+3	#DEP#postgresql
+4	#DEP#cm
+5	#DEP#theme
+6	#DEP#mysql
+7	#DEP#php
+8	#DEP#symfoni

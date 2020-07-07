@@ -1,0 +1,3 @@
+no_maven: flycheck,no_maven: vim,no_maven: sublim
+no_maven: webstorm,no_maven: emac,no_maven: eslint,no_maven: syntast
+no_maven: javascript,no_maven: react,no_maven: emaclisp,no_maven: redux,no_maven: typescript,no_maven: webpack,no_maven: es6,no_maven: majormod,no_maven: vim,no_maven: clojur,no_maven: sas,no_maven: babel,no_maven: cpp,no_maven: mocha,no_maven: antdesign,no_maven: antd,no_maven: mock,no_maven: theme,no_maven: lightthem,no_maven: darkthem

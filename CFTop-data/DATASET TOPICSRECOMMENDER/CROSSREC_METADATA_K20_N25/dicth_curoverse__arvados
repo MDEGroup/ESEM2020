@@ -1,0 +1,12 @@
+1	git://github.com/curoverse/arvados
+2	#DEP#workflow
+3	#DEP#python
+4	#DEP#bigdata
+5	#DEP#rubi
+6	#DEP#azur
+7	#DEP#gcp
+8	#DEP#aw
+9	#DEP#go
+10	#DEP#docker
+11	#DEP#cloud
+12	#DEP#cluster

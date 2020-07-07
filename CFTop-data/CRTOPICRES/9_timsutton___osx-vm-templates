@@ -1,0 +1,3 @@
+no_maven: virtual,no_maven: vagrant,no_maven: packer
+no_maven: maco,no_maven: virtualbox,no_maven: parallel,no_maven: vmware
+no_maven: vagrant,no_maven: packer,no_maven: ansibl,no_maven: vagrantbox,no_maven: ubuntu,no_maven: concurr,no_maven: vmwarefus,no_maven: javascript,no_maven: synchron,no_maven: rust,no_maven: thread,no_maven: datastructur,no_maven: lockfre,no_maven: qemu,no_maven: libvirt,no_maven: cli,no_maven: paralleldesktop,no_maven: catalina,no_maven: macocatalina,no_maven: vm

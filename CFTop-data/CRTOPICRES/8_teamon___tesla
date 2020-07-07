@@ -1,0 +1,3 @@
+no_maven: http,no_maven: hackney,no_maven: json
+no_maven: elixir,no_maven: middlewar,no_maven: ibrows
+no_maven: javascript,no_maven: nodej,no_maven: koa,no_maven: proxi,no_maven: express,no_maven: node,no_maven: websocket,no_maven: api,no_maven: restapi,no_maven: koa2,no_maven: http,no_maven: microservic,no_maven: socket,no_maven: json,no_maven: expressj,no_maven: rest,no_maven: golang,no_maven: go,no_maven: server,no_maven: serverless

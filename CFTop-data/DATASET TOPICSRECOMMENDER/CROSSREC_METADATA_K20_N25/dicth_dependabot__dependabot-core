@@ -1,0 +1,12 @@
+1	git://github.com/dependabot/dependabot-core
+2	#DEP#java
+3	#DEP#python
+4	#DEP#javascript
+5	#DEP#rubi
+6	#DEP#terraform
+7	#DEP#elixir
+8	#DEP#go
+9	#DEP#dotnet
+10	#DEP#docker
+11	#DEP#php
+12	#DEP#rust

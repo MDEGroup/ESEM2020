@@ -1,0 +1,7 @@
+1	git://github.com/spring-cloud/spring-cloud-consul
+2	#DEP#springboot
+3	#DEP#java
+4	#DEP#cloudnativ
+5	#DEP#spring
+6	#DEP#springcloud
+7	#DEP#microservic

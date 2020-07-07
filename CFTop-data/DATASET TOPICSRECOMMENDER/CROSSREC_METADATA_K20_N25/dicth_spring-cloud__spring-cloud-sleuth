@@ -1,0 +1,7 @@
+1	git://github.com/spring-cloud/spring-cloud-sleuth
+2	#DEP#springboot
+3	#DEP#java
+4	#DEP#spring
+5	#DEP#springcloud
+6	#DEP#cloudnativ
+7	#DEP#microservic

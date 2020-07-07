@@ -1,0 +1,3 @@
+no_maven: git,no_maven: specif,no_maven: convent
+no_maven: conventchangelog,no_maven: standard,no_maven: conventcommit,no_maven: commit
+no_maven: javascript,no_maven: nodej,no_maven: ecmascript,no_maven: develop,no_maven: eslint,no_maven: stat,no_maven: statist,no_maven: par,no_maven: librari,no_maven: linter,no_maven: es6,no_maven: staticcodeanalysi,no_maven: styleguid,no_maven: secur,no_maven: histori,no_maven: git,no_maven: anim,no_maven: web,no_maven: measur,no_maven: framework

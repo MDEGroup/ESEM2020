@@ -1,0 +1,8 @@
+1	git://github.com/mahmoud/boltons
+2	#DEP#python
+3	#DEP#json
+4	#DEP#util
+5	#DEP#datastructur
+6	#DEP#statist
+7	#DEP#cach
+8	#DEP#datascienc

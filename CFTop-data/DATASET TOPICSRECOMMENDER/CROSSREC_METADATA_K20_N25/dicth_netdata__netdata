@@ -1,0 +1,11 @@
+1	git://github.com/netdata/netdata
+2	#DEP#notif
+3	#DEP#monitor
+4	#DEP#iot
+5	#DEP#devop
+6	#DEP#dashboard
+7	#DEP#contain
+8	#DEP#kubernet
+9	#DEP#analyt
+10	#DEP#docker
+11	#DEP#graph

@@ -1,0 +1,9 @@
+1	git://github.com/flatlogic/react-dashboard
+2	#DEP#bootstrap
+3	#DEP#react
+4	#DEP#dashboard
+5	#DEP#redux
+6	#DEP#reactrout
+7	#DEP#graphql
+8	#DEP#webpack
+9	#DEP#sas

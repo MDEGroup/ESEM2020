@@ -1,0 +1,9 @@
+1	git://github.com/nvzqz/RandomKit
+2	#DEP#test
+3	#DEP#cocoapod
+4	#DEP#carthag
+5	#DEP#maco
+6	#DEP#crossplatform
+7	#DEP#linux
+8	#DEP#io
+9	#DEP#swift

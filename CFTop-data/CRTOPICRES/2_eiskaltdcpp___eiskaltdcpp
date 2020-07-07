@@ -1,0 +1,3 @@
+no_maven: gui,no_maven: cli,no_maven: qt,no_maven: commun,no_maven: fileshar,no_maven: cpluplu,no_maven: network,no_maven: gtk,no_maven: p2p
+no_maven: messag,no_maven: adc,no_maven: window,no_maven: linux,no_maven: mac,no_maven: chat,no_maven: directconnect,no_maven: dht,no_maven: client,no_maven: crossplatform
+no_maven: qt,no_maven: maco,no_maven: electron,no_maven: desktop,no_maven: qt5,no_maven: music,no_maven: gui,no_maven: cpluplu,no_maven: npm,no_maven: c,no_maven: stream,no_maven: p2p,no_maven: matrix,no_maven: script,no_maven: npmgui,no_maven: npmj,no_maven: npmdesktopmanag,no_maven: react,no_maven: haiku,no_maven: qt5gui

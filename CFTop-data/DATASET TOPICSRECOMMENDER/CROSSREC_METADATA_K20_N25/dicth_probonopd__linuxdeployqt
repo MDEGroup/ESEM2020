@@ -1,0 +1,7 @@
+1	git://github.com/probonopd/linuxdeployqt
+2	#DEP#applic
+3	#DEP#qt5
+4	#DEP#deploy
+5	#DEP#packag
+6	#DEP#linux
+7	#DEP#qt

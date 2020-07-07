@@ -1,0 +1,13 @@
+1	git://github.com/metabase/metabase
+2	#DEP#postgr
+3	#DEP#dataanalysi
+4	#DEP#databas
+5	#DEP#slack
+6	#DEP#datavisu
+7	#DEP#visual
+8	#DEP#clojur
+9	#DEP#dashboard
+10	#DEP#analyt
+11	#DEP#mysql
+12	#DEP#data
+13	#DEP#postgresql

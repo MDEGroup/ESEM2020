@@ -1,0 +1,7 @@
+1	git://github.com/jcubic/jquery.terminal
+2	#DEP#shell
+3	#DEP#cli
+4	#DEP#par
+5	#DEP#commandlin
+6	#DEP#emul
+7	#DEP#termin

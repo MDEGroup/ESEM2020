@@ -1,0 +1,3 @@
+no_maven: webcam,no_maven: webrtclibrari,no_maven: webrtcapi,no_maven: pion,no_maven: srtp,no_maven: stream,no_maven: webrtcserv,no_maven: p2p,no_maven: pionwebrtc,no_maven: golang
+no_maven: rtp,no_maven: wasm,no_maven: livevideo,no_maven: video,no_maven: audio,no_maven: go,no_maven: webassembl,no_maven: webrtc,no_maven: ortc,no_maven: voip
+no_maven: p2p,no_maven: javascript,no_maven: c,no_maven: stream,no_maven: window,no_maven: emscripten,no_maven: opengl,no_maven: nodej,no_maven: webtorr,no_maven: bittorr,no_maven: rust,no_maven: browser,no_maven: cpluplu,no_maven: live,no_maven: vod,no_maven: cdn,no_maven: android,no_maven: emul,no_maven: openseadragon,no_maven: 3d

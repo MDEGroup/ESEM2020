@@ -1,0 +1,3 @@
+no_maven: bigdata,no_maven: juju,no_maven: ubuntu,no_maven: maco
+no_maven: conjur,no_maven: kubernet,no_maven: openstack,no_maven: bigsoftwar
+no_maven: contain,no_maven: docker,no_maven: aw,no_maven: devop,no_maven: azur,no_maven: ansibl,no_maven: python,no_maven: terraform,no_maven: cloud,no_maven: openshift,no_maven: golang,no_maven: gce,no_maven: go,no_maven: vagrant,no_maven: linux,no_maven: git,no_maven: java,no_maven: cluster,no_maven: kvm,no_maven: server

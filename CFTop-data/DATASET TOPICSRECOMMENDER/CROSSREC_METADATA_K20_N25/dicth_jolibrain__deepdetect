@@ -1,0 +1,7 @@
+1	git://github.com/jolibrain/deepdetect
+2	#DEP#restapi
+3	#DEP#deeplearn
+4	#DEP#server
+5	#DEP#machinlearn
+6	#DEP#tensorflow
+7	#DEP#gpu

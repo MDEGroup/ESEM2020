@@ -1,0 +1,10 @@
+1	git://github.com/elpheria/rpc-websockets
+2	#DEP#nodej
+3	#DEP#serverless
+4	#DEP#gcp
+5	#DEP#chat
+6	#DEP#iot
+7	#DEP#azur
+8	#DEP#messag
+9	#DEP#aw
+10	#DEP#distributsystem

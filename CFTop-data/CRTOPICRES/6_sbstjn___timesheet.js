@@ -1,0 +1,3 @@
+no_maven: javascript,no_maven: chartlibrari,no_maven: chart,no_maven: librari
+no_maven: html,no_maven: visual,no_maven: timesheet,no_maven: cs
+no_maven: javascript,no_maven: frontend,no_maven: j,no_maven: vue,no_maven: nodej,no_maven: react,no_maven: express,no_maven: python,no_maven: chrome,no_maven: interview,no_maven: svg,no_maven: go,no_maven: minifi,no_maven: xml,no_maven: json,no_maven: layui,no_maven: ui,no_maven: mysql,no_maven: gulp,no_maven: theme

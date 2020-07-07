@@ -1,0 +1,3 @@
+no_maven: telegram,no_maven: zabbixalertscript,no_maven: bot,no_maven: notif
+no_maven: zabbixalert,no_maven: zabbix,no_maven: zabbixnotif,no_maven: telegrambot
+no_maven: telegram,no_maven: bot,no_maven: telegrambotapi,no_maven: par,no_maven: gitlab,no_maven: php,no_maven: python,no_maven: webhook,no_maven: sdk,no_maven: telegramapi,no_maven: golang,no_maven: bitbucket,no_maven: trello,no_maven: golangappl,no_maven: rail,no_maven: poller,no_maven: rubi,no_maven: async,no_maven: control,no_maven: hotreload

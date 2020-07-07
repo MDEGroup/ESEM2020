@@ -1,0 +1,3 @@
+no_maven: bot,no_maven: codestyl,no_maven: githubwebhook,no_maven: staticcodeanalysi,no_maven: python,no_maven: review,no_maven: staticanalysi
+no_maven: styleguid,no_maven: linter,no_maven: pep8,no_maven: pythonstyl,no_maven: pycodestyl,no_maven: githubapp,no_maven: codequ,no_maven: flake8
+no_maven: javascript,no_maven: eslint,no_maven: githubapi,no_maven: githubcli,no_maven: github,no_maven: ecmascript,no_maven: develop,no_maven: staticcodeanalysi,no_maven: nodej,no_maven: es6,no_maven: androidappl,no_maven: java,no_maven: app,no_maven: apk,no_maven: android,no_maven: githubandroid,no_maven: androidapp,no_maven: standard,no_maven: document,no_maven: markdown

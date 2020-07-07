@@ -1,0 +1,10 @@
+1	git://github.com/microsoft/nni
+2	#DEP#deepneuralnetwork
+3	#DEP#distribut
+4	#DEP#neuralnetwork
+5	#DEP#deeplearn
+6	#DEP#machinlearn
+7	#DEP#python
+8	#DEP#tensorflow
+9	#DEP#datascienc
+10	#DEP#pytorch

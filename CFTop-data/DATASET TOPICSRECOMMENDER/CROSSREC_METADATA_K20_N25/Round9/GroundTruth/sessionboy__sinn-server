@@ -1,0 +1,4 @@
+5	#DEP#nginx
+6	#DEP#mongoos
+7	#DEP#restapi
+8	#DEP#docker

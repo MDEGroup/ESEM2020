@@ -1,0 +1,7 @@
+1	git://github.com/nstudio/nativescript-floatingactionbutton
+2	#DEP#nativescriptplugin
+3	#DEP#uicompon
+4	#DEP#materidesign
+5	#DEP#android
+6	#DEP#io
+7	#DEP#nativescript

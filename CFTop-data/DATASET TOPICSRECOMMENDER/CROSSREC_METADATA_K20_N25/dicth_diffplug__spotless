@@ -1,0 +1,11 @@
+1	git://github.com/diffplug/spotless
+2	#DEP#gradl
+3	#DEP#scala
+4	#DEP#java
+5	#DEP#kotlin
+6	#DEP#javascript
+7	#DEP#typescript
+8	#DEP#sql
+9	#DEP#maven
+10	#DEP#sas
+11	#DEP#cs

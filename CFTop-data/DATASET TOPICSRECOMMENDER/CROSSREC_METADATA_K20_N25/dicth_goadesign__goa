@@ -1,0 +1,7 @@
+1	git://github.com/goadesign/goa
+2	#DEP#rest
+3	#DEP#api
+4	#DEP#swagger
+5	#DEP#go
+6	#DEP#microservic
+7	#DEP#codegen

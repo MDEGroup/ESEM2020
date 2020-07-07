@@ -1,0 +1,15 @@
+1	git://github.com/FrankKair/polyglot-euler
+2	#DEP#haskel
+3	#DEP#scala
+4	#DEP#lua
+5	#DEP#java
+6	#DEP#python
+7	#DEP#javascript
+8	#DEP#rubi
+9	#DEP#typescript
+10	#DEP#golang
+11	#DEP#elixir
+12	#DEP#swift
+13	#DEP#programlanguag
+14	#DEP#crystal
+15	#DEP#rust

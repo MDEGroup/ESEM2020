@@ -1,0 +1,3 @@
+no_maven: symbolexecut,no_maven: disassembl,no_maven: python
+no_maven: intermedirepres,no_maven: assembl,no_maven: emul,no_maven: reversengin
+no_maven: malwar,no_maven: x86,no_maven: x8664,no_maven: cpp,no_maven: compil,no_maven: framework,no_maven: secur,no_maven: go,no_maven: haskel,no_maven: cpluplu,no_maven: swift,no_maven: java,no_maven: dlang,no_maven: lua,no_maven: javascript,no_maven: qile,no_maven: unicornemul,no_maven: analysi,no_maven: binari,no_maven: retro

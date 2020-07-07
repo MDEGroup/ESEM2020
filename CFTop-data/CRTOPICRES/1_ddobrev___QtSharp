@@ -1,0 +1,3 @@
+no_maven: wrapper,no_maven: qt,no_maven: mono,no_maven: gui,no_maven: bridg
+no_maven: bind,no_maven: csharp,no_maven: dotnet,no_maven: glue,no_maven: crossplatform
+no_maven: xamarin,no_maven: mono,no_maven: dotnetcor,no_maven: android,no_maven: io,no_maven: java,no_maven: c,no_maven: cplusplu,no_maven: cppsharp,no_maven: interop,no_maven: gui,no_maven: cpluplu,no_maven: mobil,no_maven: monodroid,no_maven: monotouch,no_maven: objectc,no_maven: uwp,no_maven: essentixamarin,no_maven: watcho,no_maven: tvo

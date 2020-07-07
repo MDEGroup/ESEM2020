@@ -1,0 +1,3 @@
+no_maven: mousewheel,no_maven: jqueri,no_maven: swipe,no_maven: javascript
+no_maven: slide,no_maven: onepag,no_maven: snap,no_maven: scroll
+no_maven: javascript,no_maven: anim,no_maven: present,no_maven: jqueri,no_maven: slideshow,no_maven: markdown,no_maven: react,no_maven: cs,no_maven: html,no_maven: ember,no_maven: scrollto,no_maven: keynot,no_maven: navig,no_maven: ui,no_maven: transform,no_maven: transit,no_maven: unpkg,no_maven: scrollrev,no_maven: reveal,no_maven: jupytnotebook

@@ -1,0 +1,3 @@
+no_maven: frontend,no_maven: es6,no_maven: chrome,no_maven: javascript,no_maven: gener
+no_maven: angularj,no_maven: angular,no_maven: react,no_maven: promis,no_maven: vue2
+no_maven: nodej,no_maven: javascript,no_maven: bootstrap,no_maven: vue,no_maven: typescript,no_maven: mongoos,no_maven: mongodb,no_maven: cs,no_maven: gulp,no_maven: postgresql,no_maven: vuex,no_maven: vuerout,no_maven: html5,no_maven: graphql,no_maven: es6,no_maven: jqueri,no_maven: vuej,no_maven: vuejs2,no_maven: framework,no_maven: librari

@@ -1,0 +1,8 @@
+1	git://github.com/armbian/build
+2	#DEP#kernel
+3	#DEP#distribut
+4	#DEP#opersystem
+5	#DEP#buildtool
+6	#DEP#ubuntu
+7	#DEP#arm
+8	#DEP#debian

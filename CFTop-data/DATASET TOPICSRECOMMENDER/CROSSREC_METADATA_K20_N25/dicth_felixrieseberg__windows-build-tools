@@ -1,0 +1,7 @@
+1	git://github.com/felixrieseberg/windows-build-tools
+2	#DEP#nodej
+3	#DEP#npm
+4	#DEP#python
+5	#DEP#window
+6	#DEP#buildtool
+7	#DEP#microsoft

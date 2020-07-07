@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: typescript,no_maven: reactredux,no_maven: babel
+no_maven: react,no_maven: apollocli,no_maven: reactrout,no_maven: webpack
+no_maven: redux,no_maven: eslint,no_maven: sas,no_maven: babel,no_maven: reactj,no_maven: graphql,no_maven: postcss,no_maven: ssr,no_maven: le,no_maven: koa,no_maven: apollo,no_maven: express,no_maven: hmr,no_maven: starterkit,no_maven: typescript,no_maven: serversiderend,no_maven: javascript,no_maven: koa2,no_maven: fullstack,no_maven: csmodul

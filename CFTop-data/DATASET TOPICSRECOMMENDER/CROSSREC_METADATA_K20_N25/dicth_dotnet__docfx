@@ -1,0 +1,7 @@
+1	git://github.com/dotnet/docfx
+2	#DEP#markdown
+3	#DEP#staticsitegen
+4	#DEP#api
+5	#DEP#csharp
+6	#DEP#dotnet
+7	#DEP#document

@@ -1,0 +1,7 @@
+1	git://github.com/go-pg/pg
+2	#DEP#postgresql
+3	#DEP#databas
+4	#DEP#sql
+5	#DEP#golang
+6	#DEP#orm
+7	#DEP#go

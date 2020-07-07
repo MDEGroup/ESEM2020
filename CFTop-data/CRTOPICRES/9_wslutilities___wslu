@@ -1,0 +1,3 @@
+no_maven: shell,no_maven: windowsubsystemlinux,no_maven: wsl,no_maven: kalilinux,no_maven: bashonwindow
+no_maven: ubuntu,no_maven: opensus,no_maven: debian,no_maven: sle,no_maven: bash
+no_maven: cento,no_maven: linux,no_maven: fedora,no_maven: shell,no_maven: docker,no_maven: window,no_maven: vagrant,no_maven: archlinux,no_maven: android,no_maven: php,no_maven: cli,no_maven: mediumserv,no_maven: packer,no_maven: virtualbox,no_maven: ansibl,no_maven: aria2,no_maven: gnome,no_maven: zeronet,no_maven: desktop,no_maven: crossplatform

@@ -1,0 +1,3 @@
+no_maven: shell,no_maven: tsh,no_maven: csh,no_maven: rsh,no_maven: bsh,no_maven: tcsh,no_maven: compil,no_maven: perl,no_maven: convert
+no_maven: binari,no_maven: sh,no_maven: shellscript,no_maven: shc,no_maven: rc,no_maven: ksh,no_maven: zsh,no_maven: ash,no_maven: bash
+no_maven: shell,no_maven: cli,no_maven: linux,no_maven: go,no_maven: fish,no_maven: developtool,no_maven: cd,no_maven: shellexten,no_maven: window,no_maven: maco,no_maven: fzf,no_maven: theme,no_maven: powerlin,no_maven: colorschem,no_maven: packagmanag,no_maven: python,no_maven: prototyp,no_maven: ecmascript,no_maven: par,no_maven: perform

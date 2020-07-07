@@ -1,0 +1,11 @@
+1	git://github.com/faressoft/terminalizer
+2	#DEP#shell
+3	#DEP#render
+4	#DEP#anim
+5	#DEP#commandlin
+6	#DEP#gener
+7	#DEP#theme
+8	#DEP#termin
+9	#DEP#font
+10	#DEP#zsh
+11	#DEP#bash

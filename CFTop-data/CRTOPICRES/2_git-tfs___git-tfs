@@ -1,0 +1,3 @@
+no_maven: libgit2sharp,no_maven: git,no_maven: tfvc
+no_maven: csharp,no_maven: tfapi,no_maven: tf
+no_maven: java,no_maven: nodej,no_maven: mobil,no_maven: cordova,no_maven: cplusplu,no_maven: librari,no_maven: objectc,no_maven: javascript,no_maven: dotnet,no_maven: git,no_maven: xamarin,no_maven: window,no_maven: authent,no_maven: multifactorauth,no_maven: visualstudioteamserv,no_maven: visualstudio,no_maven: bitbucket,no_maven: visualstudiocod,no_maven: credentistorag,no_maven: github

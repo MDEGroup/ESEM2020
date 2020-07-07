@@ -1,0 +1,8 @@
+1	git://github.com/Monitorr/Monitorr
+2	#DEP#docker
+3	#DEP#selfhost
+4	#DEP#javascript
+5	#DEP#webapp
+6	#DEP#html
+7	#DEP#php
+8	#DEP#monitor

@@ -1,0 +1,8 @@
+1	git://github.com/google/go-cloud
+2	#DEP#azur
+3	#DEP#server
+4	#DEP#golang
+5	#DEP#gcp
+6	#DEP#aw
+7	#DEP#go
+8	#DEP#cloud

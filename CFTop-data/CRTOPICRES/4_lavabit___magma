@@ -1,0 +1,3 @@
+no_maven: mailserv,no_maven: http,no_maven: commun,no_maven: encryptmessagprotocol,no_maven: mailtransportag,no_maven: pop,no_maven: maildeliveriag,no_maven: encrypt
+no_maven: smtp,no_maven: server,no_maven: messag,no_maven: dime,no_maven: magma,no_maven: darkmail,no_maven: imap,no_maven: email,no_maven: webmail
+no_maven: smtpserver,no_maven: mail,no_maven: javascript,no_maven: go,no_maven: python,no_maven: network,no_maven: secur,no_maven: developtool,no_maven: tox,no_maven: swift,no_maven: p2p,no_maven: antidot,no_maven: io,no_maven: ssl,no_maven: mailserv,no_maven: test,no_maven: django,no_maven: python3,no_maven: develop,no_maven: mda

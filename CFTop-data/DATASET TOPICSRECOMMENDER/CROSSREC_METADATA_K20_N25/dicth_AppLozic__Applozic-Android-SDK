@@ -1,0 +1,8 @@
+1	git://github.com/AppLozic/Applozic-Android-SDK
+2	#DEP#gradl
+3	#DEP#commun
+4	#DEP#realtim
+5	#DEP#notif
+6	#DEP#messeng
+7	#DEP#android
+8	#DEP#chat

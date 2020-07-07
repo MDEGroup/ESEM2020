@@ -1,0 +1,7 @@
+1	git://github.com/insin/nwb
+2	#DEP#javascript
+3	#DEP#babel
+4	#DEP#reactcompon
+5	#DEP#preact
+6	#DEP#react
+7	#DEP#webpack

@@ -1,0 +1,3 @@
+no_maven: neovim,no_maven: syntaxcheck,no_maven: filetyp,no_maven: stylelint,no_maven: vim
+no_maven: lint,no_maven: neomak,no_maven: linter,no_maven: vimplugin,no_maven: async,no_maven: checker
+no_maven: javascript,no_maven: vim,no_maven: staticcodeanalysi,no_maven: ecmascript,no_maven: develop,no_maven: eslint,no_maven: styleguid,no_maven: markdown,no_maven: neovimplugin,no_maven: nodej,no_maven: standard,no_maven: es6,no_maven: autocomplet,no_maven: neovim,no_maven: golang,no_maven: python,no_maven: languagecli,no_maven: syntaxcheck,no_maven: languagserverprotocol,no_maven: codecomplet

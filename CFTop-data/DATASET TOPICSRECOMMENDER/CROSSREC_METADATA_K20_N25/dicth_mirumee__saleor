@@ -1,0 +1,8 @@
+1	git://github.com/mirumee/saleor
+2	#DEP#python
+3	#DEP#headless
+4	#DEP#django
+5	#DEP#pwa
+6	#DEP#ecommerc
+7	#DEP#react
+8	#DEP#graphql

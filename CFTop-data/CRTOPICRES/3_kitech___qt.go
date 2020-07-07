@@ -1,0 +1,3 @@
+no_maven: qt5,no_maven: gui,no_maven: golang,no_maven: android
+no_maven: go,no_maven: qt,no_maven: crossplatform,no_maven: speed
+no_maven: cpluplu,no_maven: linux,no_maven: window,no_maven: gui,no_maven: maco,no_maven: qt5,no_maven: cpp,no_maven: mac,no_maven: nodej,no_maven: cli,no_maven: chat,no_maven: opensourc,no_maven: golang,no_maven: ide,no_maven: liteid,no_maven: cmake,no_maven: web,no_maven: javascript,no_maven: csharp,no_maven: dotnet

@@ -1,0 +1,3 @@
+no_maven: latex,no_maven: rmarkdown,no_maven: dynamdocu
+no_maven: lyx,no_maven: literprogram,no_maven: book,no_maven: knitr
+no_maven: markdown,no_maven: python,no_maven: pdf,no_maven: latex,no_maven: handbook,no_maven: gitbook,no_maven: epub,no_maven: rmarkdown,no_maven: html,no_maven: javascript,no_maven: publish,no_maven: algorithm,no_maven: servicmesh,no_maven: docker,no_maven: contain,no_maven: cloudnativ,no_maven: kubernet,no_maven: notebook,no_maven: learn,no_maven: cpp

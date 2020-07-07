@@ -1,0 +1,7 @@
+1	git://github.com/cloudposse/geodesic
+2	#DEP#shell
+3	#DEP#aw
+4	#DEP#terraform
+5	#DEP#contain
+6	#DEP#kubernet
+7	#DEP#docker

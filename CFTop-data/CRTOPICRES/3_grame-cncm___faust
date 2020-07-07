@@ -1,0 +1,3 @@
+no_maven: c,no_maven: llvm,no_maven: compil,no_maven: dsp
+no_maven: wasm,no_maven: faust,no_maven: audio,no_maven: functionprogram,no_maven: cpp
+no_maven: webassembl,no_maven: rust,no_maven: framework,no_maven: window,no_maven: audioprocess,no_maven: synth,no_maven: raspberripi,no_maven: uidesign,no_maven: music,no_maven: synthes,no_maven: sequenc,no_maven: javascript,no_maven: emscripten,no_maven: android,no_maven: video,no_maven: compil,no_maven: voip,no_maven: persistdatastructur,no_maven: vector,no_maven: datastructur

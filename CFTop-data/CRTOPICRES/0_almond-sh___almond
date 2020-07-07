@@ -1,0 +1,3 @@
+no_maven: jupytkernel,no_maven: scala,no_maven: jupytnotebook
+no_maven: jupyt,no_maven: repl,no_maven: sparksql,no_maven: spark
+no_maven: python,no_maven: scala,no_maven: bigdata,no_maven: jupytnotebook,no_maven: machinlearn,no_maven: notebook,no_maven: nodej,no_maven: react,no_maven: azur,no_maven: apachspark,no_maven: sparkstream,no_maven: hdinsight,no_maven: stream,no_maven: datascienc,no_maven: tensorflow,no_maven: cluster,no_maven: ipython,no_maven: nteract,no_maven: csharp,no_maven: fsharp

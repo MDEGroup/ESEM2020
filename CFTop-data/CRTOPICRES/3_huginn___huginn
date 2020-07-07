@@ -1,0 +1,3 @@
+no_maven: webscrap,no_maven: feed,no_maven: scraper,no_maven: twitter,no_maven: notif,no_maven: monitor
+no_maven: autom,no_maven: agent,no_maven: r,no_maven: feedgener,no_maven: twitterstream,no_maven: huginn
+no_maven: monitor,no_maven: perform,no_maven: python,no_maven: apm,no_maven: metric,no_maven: feed,no_maven: atom,no_maven: rreader,no_maven: android,no_maven: io,no_maven: rpackag,no_maven: trace,no_maven: distributtrac,no_maven: javascript,no_maven: alarm,no_maven: systeminform,no_maven: alert,no_maven: statsd,no_maven: healthcheck,no_maven: dashboard

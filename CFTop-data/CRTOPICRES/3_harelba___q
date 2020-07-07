@@ -1,0 +1,3 @@
+no_maven: cli,no_maven: commandlin,no_maven: python,no_maven: commandlinetool,no_maven: sql
+no_maven: textasdata,no_maven: q,no_maven: qtextasdata,no_maven: csv,no_maven: tsv
+no_maven: json,no_maven: html,no_maven: excel,no_maven: xml,no_maven: yaml,no_maven: sqlite,no_maven: cli,no_maven: toml,no_maven: panda,no_maven: javascript,no_maven: nodej,no_maven: sql,no_maven: jupytnotebook,no_maven: ltsv,no_maven: datavisu,no_maven: data,no_maven: chart,no_maven: spreadsheet,no_maven: tabl,no_maven: xlsx

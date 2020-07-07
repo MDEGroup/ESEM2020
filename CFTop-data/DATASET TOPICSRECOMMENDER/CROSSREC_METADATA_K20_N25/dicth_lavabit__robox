@@ -1,0 +1,8 @@
+1	git://github.com/lavabit/robox
+2	#DEP#virtualbox
+3	#DEP#vagrant
+4	#DEP#oracl
+5	#DEP#ubuntu
+6	#DEP#cento
+7	#DEP#debian
+8	#DEP#bash

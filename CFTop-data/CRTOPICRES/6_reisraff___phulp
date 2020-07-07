@@ -1,0 +1,3 @@
+no_maven: watcher,no_maven: task,no_maven: assetmanag,no_maven: builder
+no_maven: phulp,no_maven: taskrunn,no_maven: gulp,no_maven: taskmanag,no_maven: php
+no_maven: webpack,no_maven: cs,no_maven: sas,no_maven: npm,no_maven: node,no_maven: javascript,no_maven: html,no_maven: nodej,no_maven: svgsprite,no_maven: gulpstart,no_maven: assetpipelin,no_maven: browsersync,no_maven: mysql,no_maven: j,no_maven: express,no_maven: es6,no_maven: yarn,no_maven: wordpress,no_maven: laravel,no_maven: frontend

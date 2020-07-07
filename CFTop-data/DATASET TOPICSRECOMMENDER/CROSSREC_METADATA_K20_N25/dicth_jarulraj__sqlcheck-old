@@ -1,0 +1,7 @@
+1	git://github.com/jarulraj/sqlcheck-old
+2	#DEP#postgresql
+3	#DEP#databas
+4	#DEP#commandlin
+5	#DEP#oracl
+6	#DEP#sql
+7	#DEP#mysql

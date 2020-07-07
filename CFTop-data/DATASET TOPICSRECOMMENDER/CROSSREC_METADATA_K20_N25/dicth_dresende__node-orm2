@@ -1,0 +1,7 @@
+1	git://github.com/dresende/node-orm2
+2	#DEP#mongodb
+3	#DEP#sqlite
+4	#DEP#postgresql
+5	#DEP#databas
+6	#DEP#mysql
+7	#DEP#orm

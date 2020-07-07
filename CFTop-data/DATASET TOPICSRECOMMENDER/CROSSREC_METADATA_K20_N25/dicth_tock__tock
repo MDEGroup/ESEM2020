@@ -1,0 +1,7 @@
+1	git://github.com/tock/tock
+2	#DEP#kernel
+3	#DEP#iot
+4	#DEP#embed
+5	#DEP#arm
+6	#DEP#opersystem
+7	#DEP#rust

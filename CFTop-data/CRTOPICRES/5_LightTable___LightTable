@@ -1,0 +1,3 @@
+no_maven: clojurescript,no_maven: clojurdevelop,no_maven: editor
+no_maven: lighttabl,no_maven: clojur,no_maven: ide
+no_maven: clojurescript,no_maven: editor,no_maven: golang,no_maven: go,no_maven: crossplatform,no_maven: javascript,no_maven: taoensso,no_maven: epl,no_maven: log,no_maven: liteid,no_maven: qt,no_maven: portabl,no_maven: emac,no_maven: git,no_maven: multiplatform,no_maven: commonlisp,no_maven: kotlin,no_maven: scala,no_maven: sql,no_maven: notebook

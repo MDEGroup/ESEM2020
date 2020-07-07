@@ -1,0 +1,3 @@
+no_maven: markdown,no_maven: pandoc,no_maven: present
+no_maven: slideshow,no_maven: haskel,no_maven: slide
+no_maven: javascript,no_maven: html,no_maven: web,no_maven: server,no_maven: privaci,no_maven: encrypt,no_maven: crypto,no_maven: p2p,no_maven: peerpeer,no_maven: present,no_maven: shell,no_maven: cs,no_maven: design,no_maven: webslid,no_maven: htmlpresent,no_maven: webpack,no_maven: pdf,no_maven: cli,no_maven: swipe,no_maven: jqueri

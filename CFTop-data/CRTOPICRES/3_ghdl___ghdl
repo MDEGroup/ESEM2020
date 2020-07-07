@@ -1,0 +1,3 @@
+no_maven: compil,no_maven: llvm,no_maven: gcc,no_maven: vhdl
+no_maven: simul,no_maven: ghdl,no_maven: testbench,no_maven: hardwar
+no_maven: deeplearn,no_maven: linux,no_maven: arduino,no_maven: iot,no_maven: selfdrivecar,no_maven: uniti,no_maven: tensorflow,no_maven: autonomvehicl,no_maven: autonomdr,no_maven: python,no_maven: artificiintellig,no_maven: carla,no_maven: computvis,no_maven: ro,no_maven: riscv,no_maven: qt,no_maven: airsim,no_maven: websocket,no_maven: esp8266,no_maven: esp32

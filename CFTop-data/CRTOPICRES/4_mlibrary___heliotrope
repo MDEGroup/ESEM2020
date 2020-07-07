@@ -1,0 +1,3 @@
+no_maven: publish,no_maven: samvera,no_maven: hyrax
+no_maven: fcrepo,no_maven: fedorarepositori,no_maven: blacklight,no_maven: solr
+no_maven: 3d,no_maven: artificiintellig,no_maven: geometriprocess,no_maven: pointcloud,no_maven: 3dmatch,no_maven: computvis,no_maven: 3ddeeplearn,no_maven: deeplearn,no_maven: rgbd,no_maven: vision,no_maven: zookeep,no_maven: activ,no_maven: jqueri,no_maven: rest,no_maven: thymeleaf,no_maven: springmvc,no_maven: redi,no_maven: freemark,no_maven: mybati,no_maven: lucen

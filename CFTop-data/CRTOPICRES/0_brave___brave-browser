@@ -1,0 +1,3 @@
+no_maven: brave,no_maven: browser,no_maven: window
+no_maven: linux,no_maven: maco,no_maven: chromium
+no_maven: window,no_maven: chrome,no_maven: golang,no_maven: javascript,no_maven: headlesschrom,no_maven: electron,no_maven: nodej,no_maven: guitoolkit,no_maven: cef,no_maven: crossplatformgui,no_maven: android,no_maven: io,no_maven: headless,no_maven: puppet,no_maven: jqueri,no_maven: chromeo,no_maven: desktopappl,no_maven: secur,no_maven: decentr,no_maven: encrypt

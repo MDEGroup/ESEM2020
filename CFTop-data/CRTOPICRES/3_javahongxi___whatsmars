@@ -1,0 +1,3 @@
+no_maven: dubbo,no_maven: elastjob,no_maven: springboot,no_maven: java,no_maven: tomcat,no_maven: spring,no_maven: otter,no_maven: rpcframework,no_maven: springmvc,no_maven: kafka
+no_maven: springcloud,no_maven: zookeep,no_maven: rpc,no_maven: shardjdbc,no_maven: elasticsearch,no_maven: distributrpc,no_maven: redi,no_maven: microservic,no_maven: lambda,no_maven: rocketmq
+no_maven: springboot,no_maven: java,no_maven: spring,no_maven: mysql,no_maven: golang,no_maven: docker,no_maven: kubernet,no_maven: springcloudcor,no_maven: cloudnativ,no_maven: go,no_maven: kafka,no_maven: rabbitmq,no_maven: mongodb,no_maven: mybati,no_maven: consul,no_maven: python,no_maven: git,no_maven: dubbo,no_maven: netti,no_maven: elk

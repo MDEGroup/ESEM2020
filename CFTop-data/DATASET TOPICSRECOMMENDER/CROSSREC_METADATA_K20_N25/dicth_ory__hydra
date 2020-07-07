@@ -1,0 +1,9 @@
+1	git://github.com/ory/hydra
+2	#DEP#oauth2
+3	#DEP#oauth
+4	#DEP#secur
+5	#DEP#author
+6	#DEP#server
+7	#DEP#cloud
+8	#DEP#cloudnativ
+9	#DEP#docker

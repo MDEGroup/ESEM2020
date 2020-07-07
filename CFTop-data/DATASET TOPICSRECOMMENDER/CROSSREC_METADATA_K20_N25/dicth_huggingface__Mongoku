@@ -1,0 +1,7 @@
+1	git://github.com/huggingface/Mongoku
+2	#DEP#node
+3	#DEP#typescript
+4	#DEP#web
+5	#DEP#mongodb
+6	#DEP#admin
+7	#DEP#angular

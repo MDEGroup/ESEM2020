@@ -1,0 +1,14 @@
+1	git://github.com/dancancro/great-big-example-application
+2	#DEP#typescript
+3	#DEP#springboot
+4	#DEP#postgresql
+5	#DEP#restapi
+6	#DEP#demo
+7	#DEP#elasticsearch
+8	#DEP#webpack
+9	#DEP#yarn
+10	#DEP#kotlin
+11	#DEP#heroku
+12	#DEP#redux
+13	#DEP#docker
+14	#DEP#angular4

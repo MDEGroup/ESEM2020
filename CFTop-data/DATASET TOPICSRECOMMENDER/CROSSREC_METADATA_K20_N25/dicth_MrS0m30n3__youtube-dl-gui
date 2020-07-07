@@ -1,0 +1,7 @@
+1	git://github.com/MrS0m30n3/youtube-dl-gui
+2	#DEP#window
+3	#DEP#python
+4	#DEP#gui
+5	#DEP#linux
+6	#DEP#video
+7	#DEP#crossplatform

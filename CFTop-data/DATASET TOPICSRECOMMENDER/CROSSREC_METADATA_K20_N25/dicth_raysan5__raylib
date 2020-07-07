@@ -1,0 +1,8 @@
+1	git://github.com/raysan5/raylib
+2	#DEP#desktop
+3	#DEP#c
+4	#DEP#opengl
+5	#DEP#iot
+6	#DEP#android
+7	#DEP#embed
+8	#DEP#program

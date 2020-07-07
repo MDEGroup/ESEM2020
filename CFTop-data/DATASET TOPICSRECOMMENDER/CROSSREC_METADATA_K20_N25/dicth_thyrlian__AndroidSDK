@@ -1,0 +1,10 @@
+1	git://github.com/thyrlian/AndroidSDK
+2	#DEP#dockerimag
+3	#DEP#gradl
+4	#DEP#ci
+5	#DEP#hack
+6	#DEP#kotlin
+7	#DEP#continuintegr
+8	#DEP#emul
+9	#DEP#android
+10	#DEP#docker

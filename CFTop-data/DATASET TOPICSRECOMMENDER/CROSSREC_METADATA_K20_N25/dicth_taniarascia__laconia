@@ -1,0 +1,10 @@
+1	git://github.com/taniarascia/laconia
+2	#DEP#applic
+3	#DEP#authent
+4	#DEP#databas
+5	#DEP#mvc
+6	#DEP#admin
+7	#DEP#mysql
+8	#DEP#webapp
+9	#DEP#php
+10	#DEP#php7

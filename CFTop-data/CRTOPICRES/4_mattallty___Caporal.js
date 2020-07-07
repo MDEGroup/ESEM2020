@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: node,no_maven: cli,no_maven: argvpars,no_maven: commandlin
+no_maven: argumentpars,no_maven: argumentpar,no_maven: cliapp,no_maven: commandlinepars,no_maven: argv,no_maven: termin
+no_maven: cli,no_maven: commandlin,no_maven: javascript,no_maven: nodej,no_maven: parser,no_maven: git,no_maven: tool,no_maven: rust,no_maven: par,no_maven: maco,no_maven: go,no_maven: complet,no_maven: java,no_maven: shell,no_maven: posix,no_maven: dotnetstandard,no_maven: vt100,no_maven: dotnetcor,no_maven: benchmark,no_maven: syntaxhighlight

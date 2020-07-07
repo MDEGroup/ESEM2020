@@ -1,0 +1,13 @@
+1	git://github.com/GuoYongfeng/book
+2	#DEP#nodej
+3	#DEP#shell
+4	#DEP#git
+5	#DEP#npm
+6	#DEP#babel
+7	#DEP#react
+8	#DEP#eslint
+9	#DEP#atom
+10	#DEP#es2015
+11	#DEP#redux
+12	#DEP#postcss
+13	#DEP#webpack

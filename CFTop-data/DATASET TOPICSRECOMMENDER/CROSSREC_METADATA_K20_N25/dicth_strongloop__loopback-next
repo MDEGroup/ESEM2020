@@ -1,0 +1,8 @@
+1	git://github.com/strongloop/loopback-next
+2	#DEP#nodej
+3	#DEP#openapi
+4	#DEP#typescript
+5	#DEP#rest
+6	#DEP#framework
+7	#DEP#swagger
+8	#DEP#api

@@ -1,0 +1,3 @@
+no_maven: typescript,no_maven: consol,no_maven: xterm,no_maven: terminemul
+no_maven: develop,no_maven: ssh,no_maven: tti,no_maven: termin
+no_maven: shell,no_maven: cli,no_maven: python,no_maven: commandlin,no_maven: window,no_maven: developtool,no_maven: consol,no_maven: util,no_maven: javascript,no_maven: aw,no_maven: bash,no_maven: zsh,no_maven: linux,no_maven: maco,no_maven: program,no_maven: client,no_maven: secur,no_maven: syntaxhighlight,no_maven: vagrant,no_maven: pti

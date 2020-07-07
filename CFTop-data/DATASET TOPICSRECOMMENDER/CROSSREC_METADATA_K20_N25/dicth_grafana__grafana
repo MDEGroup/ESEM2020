@@ -1,0 +1,10 @@
+1	git://github.com/grafana/grafana
+2	#DEP#datavisu
+3	#DEP#monitor
+4	#DEP#metric
+5	#DEP#postgr
+6	#DEP#mysql
+7	#DEP#dashboard
+8	#DEP#elasticsearch
+9	#DEP#go
+10	#DEP#analyt

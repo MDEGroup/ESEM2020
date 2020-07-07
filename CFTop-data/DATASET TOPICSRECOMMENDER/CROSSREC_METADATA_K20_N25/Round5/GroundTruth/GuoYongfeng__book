@@ -1,0 +1,6 @@
+8	#DEP#eslint
+9	#DEP#atom
+10	#DEP#es2015
+11	#DEP#redux
+12	#DEP#postcss
+13	#DEP#webpack

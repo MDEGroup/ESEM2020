@@ -1,0 +1,3 @@
+no_maven: datasynchron,no_maven: magento2,no_maven: multiprocess,no_maven: nosql,no_maven: mongodb
+no_maven: mongodbsync,no_maven: backend,no_maven: elasticsearch,no_maven: redi,no_maven: magento,no_maven: kue
+no_maven: mongodb,no_maven: mysql,no_maven: docker,no_maven: nodej,no_maven: springboot,no_maven: frontend,no_maven: admin,no_maven: php,no_maven: javascript,no_maven: rabbitmq,no_maven: mybati,no_maven: python,no_maven: postgresql,no_maven: spark,no_maven: git,no_maven: graphql,no_maven: bash,no_maven: vim,no_maven: platform,no_maven: laravel

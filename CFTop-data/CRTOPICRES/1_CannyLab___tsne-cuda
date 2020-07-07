@@ -1,0 +1,3 @@
+no_maven: datavisu,no_maven: dataanalysi,no_maven: tsnecuda,no_maven: tsnealgorithm,no_maven: barnhut,no_maven: python
+no_maven: tsne,no_maven: fittsn,no_maven: cuda,no_maven: barnhuttsn,no_maven: multithread,no_maven: mnist,no_maven: gpu
+no_maven: python,no_maven: tensorflow,no_maven: opencl,no_maven: deeplearn,no_maven: parallel,no_maven: gpgpu,no_maven: machinlearn,no_maven: compil,no_maven: ubuntu,no_maven: rocm,no_maven: nodej,no_maven: javascript,no_maven: nvidia,no_maven: kera,no_maven: gpucomput,no_maven: cnn,no_maven: seq2seq,no_maven: numpi,no_maven: llvm,no_maven: opengl

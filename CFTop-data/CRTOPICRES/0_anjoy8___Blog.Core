@@ -1,0 +1,3 @@
+no_maven: dotnet,no_maven: aop,no_maven: dto,no_maven: netcorwebapi,no_maven: cor,no_maven: t4,no_maven: dependinject,no_maven: autofac,no_maven: jwt
+no_maven: netcor,no_maven: dotnetcore2,no_maven: swagger,no_maven: repositori,no_maven: vue,no_maven: sqlsugarcor,no_maven: redi,no_maven: automapp,no_maven: ioc
+no_maven: csharp,no_maven: dotnet,no_maven: mongoos,no_maven: express,no_maven: dotnetcor,no_maven: react,no_maven: koa,no_maven: javascript,no_maven: nodej,no_maven: linq,no_maven: orm,no_maven: netstandard,no_maven: framework,no_maven: bot,no_maven: dependinject,no_maven: netframework,no_maven: highperform,no_maven: nuget,no_maven: aop,no_maven: rabbitmq

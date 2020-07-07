@@ -1,0 +1,8 @@
+1	git://github.com/cabinjs/cabin
+2	#DEP#log
+3	#DEP#express
+4	#DEP#koa
+5	#DEP#reactnativ
+6	#DEP#util
+7	#DEP#react
+8	#DEP#debug

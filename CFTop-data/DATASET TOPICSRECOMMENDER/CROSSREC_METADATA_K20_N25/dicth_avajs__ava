@@ -1,0 +1,10 @@
+1	git://github.com/avajs/ava
+2	#DEP#nodej
+3	#DEP#node
+4	#DEP#cli
+5	#DEP#perform
+6	#DEP#javascript
+7	#DEP#babel
+8	#DEP#async
+9	#DEP#es2015
+10	#DEP#test

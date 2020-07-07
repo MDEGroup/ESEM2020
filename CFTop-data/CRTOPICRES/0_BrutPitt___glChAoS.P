@@ -1,0 +1,3 @@
+no_maven: imgui,no_maven: attractor,no_maven: hypercomplex,no_maven: emscripten,no_maven: opengl,no_maven: glsl,no_maven: webgl,no_maven: ggx,no_maven: azdo,no_maven: fractal
+no_maven: fractalalgorithm,no_maven: particl,no_maven: dla3d,no_maven: palett,no_maven: gpu,no_maven: render,no_maven: webgl2,no_maven: webassembl,no_maven: particlesystem,no_maven: dla
+no_maven: webgl,no_maven: wasm,no_maven: opengl,no_maven: javascript,no_maven: 3d,no_maven: react,no_maven: metal,no_maven: maco,no_maven: gpgpu,no_maven: compon,no_maven: realtim,no_maven: rust,no_maven: emscripten,no_maven: typescript,no_maven: canva,no_maven: webvr,no_maven: ui,no_maven: nodej,no_maven: gameengin,no_maven: python

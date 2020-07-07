@@ -1,0 +1,9 @@
+1	git://github.com/mbtproject/mbt
+2	#DEP#cli
+3	#DEP#ci
+4	#DEP#git
+5	#DEP#deploy
+6	#DEP#autom
+7	#DEP#devop
+8	#DEP#buildtool
+9	#DEP#go

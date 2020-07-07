@@ -1,0 +1,3 @@
+no_maven: hammerspoon,no_maven: osx,no_maven: objectc
+no_maven: autom,no_maven: lua,no_maven: maco
+no_maven: io,no_maven: python,no_maven: devop,no_maven: gameengin,no_maven: gamedevelop,no_maven: test,no_maven: android,no_maven: headless,no_maven: chrome,no_maven: continudeploy,no_maven: continuintegr,no_maven: ansibl,no_maven: terraform,no_maven: golang,no_maven: game,no_maven: django,no_maven: cli,no_maven: hybridapp,no_maven: uitest,no_maven: homekit

@@ -1,0 +1,3 @@
+no_maven: webvr,no_maven: webgl,no_maven: debugg
+no_maven: webgl2,no_maven: inspector,no_maven: debug,no_maven: 3d
+no_maven: javascript,no_maven: chrome,no_maven: go,no_maven: inspect,no_maven: librari,no_maven: debugg,no_maven: php,no_maven: golang,no_maven: linux,no_maven: cli,no_maven: graphic,no_maven: nodej,no_maven: render,no_maven: typescript,no_maven: emac,no_maven: swift,no_maven: gameengin,no_maven: opengl,no_maven: http,no_maven: laravel

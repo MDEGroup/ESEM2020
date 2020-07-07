@@ -1,0 +1,8 @@
+1	git://github.com/geerlingguy/drupal-vm
+2	#DEP#vagrant
+3	#DEP#cm
+4	#DEP#develop
+5	#DEP#docker
+6	#DEP#local
+7	#DEP#ansibl
+8	#DEP#virtualbox

@@ -1,0 +1,8 @@
+1	git://github.com/teddysun/lamp
+2	#DEP#shell
+3	#DEP#debian
+4	#DEP#mysql
+5	#DEP#ubuntu
+6	#DEP#cento
+7	#DEP#mariadb
+8	#DEP#php

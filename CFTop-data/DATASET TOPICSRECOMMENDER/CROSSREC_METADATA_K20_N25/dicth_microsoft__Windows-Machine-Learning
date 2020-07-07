@@ -1,0 +1,10 @@
+1	git://github.com/microsoft/Windows-Machine-Learning
+2	#DEP#neuralnetwork
+3	#DEP#ai
+4	#DEP#deeplearn
+5	#DEP#pytorch
+6	#DEP#machinlearn
+7	#DEP#window
+8	#DEP#tensorflow
+9	#DEP#scikitlearn
+10	#DEP#kera

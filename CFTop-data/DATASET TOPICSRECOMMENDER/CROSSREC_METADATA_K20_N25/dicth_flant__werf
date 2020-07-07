@@ -1,0 +1,11 @@
+1	git://github.com/flant/werf
+2	#DEP#dockerimag
+3	#DEP#continuintegr
+4	#DEP#cicd
+5	#DEP#devop
+6	#DEP#golang
+7	#DEP#go
+8	#DEP#kubernet
+9	#DEP#continudeliveri
+10	#DEP#docker
+11	#DEP#ansibl

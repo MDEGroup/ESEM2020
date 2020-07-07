@@ -1,0 +1,3 @@
+no_maven: vagrant,no_maven: cm,no_maven: environ,no_maven: drupal,no_maven: vm,no_maven: kohana,no_maven: compos,no_maven: silverstrip,no_maven: packer,no_maven: docker
+no_maven: modx,no_maven: cakephp,no_maven: local,no_maven: wordpress,no_maven: backdrop,no_maven: symfoni,no_maven: develop,no_maven: composplugin,no_maven: ansibl,no_maven: virtualbox
+no_maven: vagrant,no_maven: packer,no_maven: vmware,no_maven: javascript,no_maven: ubuntu,no_maven: docker,no_maven: box,no_maven: parallel,no_maven: wpcli,no_maven: bedrock,no_maven: trelli,no_maven: drupal,no_maven: environ,no_maven: nodej,no_maven: virtual,no_maven: maco,no_maven: php,no_maven: vm,no_maven: react,no_maven: io

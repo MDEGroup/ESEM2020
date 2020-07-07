@@ -1,0 +1,7 @@
+1	git://github.com/IoT-Technology/IOT-Technical-Guide
+2	#DEP#nosql
+3	#DEP#realtim
+4	#DEP#websocket
+5	#DEP#jwt
+6	#DEP#sql
+7	#DEP#http

@@ -1,0 +1,8 @@
+1	git://github.com/volatiletech/sqlboiler
+2	#DEP#postgr
+3	#DEP#postgresql
+4	#DEP#databas
+5	#DEP#golang
+6	#DEP#orm
+7	#DEP#mysql
+8	#DEP#go

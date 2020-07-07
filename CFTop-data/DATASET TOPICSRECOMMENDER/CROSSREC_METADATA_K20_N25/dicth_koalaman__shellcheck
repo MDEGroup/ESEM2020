@@ -1,0 +1,7 @@
+1	git://github.com/koalaman/shellcheck
+2	#DEP#shell
+3	#DEP#staticanalysi
+4	#DEP#linter
+5	#DEP#haskel
+6	#DEP#developtool
+7	#DEP#bash

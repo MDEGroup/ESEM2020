@@ -1,0 +1,11 @@
+1	git://github.com/javahongxi/whatsmars
+2	#DEP#springboot
+3	#DEP#java
+4	#DEP#spring
+5	#DEP#springmvc
+6	#DEP#kafka
+7	#DEP#springcloud
+8	#DEP#elasticsearch
+9	#DEP#redi
+10	#DEP#microservic
+11	#DEP#lambda

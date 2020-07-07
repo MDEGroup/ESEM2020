@@ -1,0 +1,3 @@
+no_maven: javascriptlibrari,no_maven: jqueriplugin,no_maven: javascript
+no_maven: jqueri,no_maven: tutori,no_maven: onboard,no_maven: trip
+no_maven: nodej,no_maven: mongodb,no_maven: jupytnotebook,no_maven: react,no_maven: mongoos,no_maven: python,no_maven: express,no_maven: deeplearn,no_maven: creatreactapp,no_maven: datascienc,no_maven: panda,no_maven: interact,no_maven: scikitlearn,no_maven: databas,no_maven: api,no_maven: tensorflow,no_maven: color,no_maven: kera,no_maven: local,no_maven: languag

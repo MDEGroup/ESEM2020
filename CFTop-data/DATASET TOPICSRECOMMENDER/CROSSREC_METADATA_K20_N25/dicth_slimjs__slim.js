@@ -1,0 +1,12 @@
+1	git://github.com/slimjs/slim.js
+2	#DEP#dom
+3	#DEP#angular
+4	#DEP#frontend
+5	#DEP#es6
+6	#DEP#javascript
+7	#DEP#framework
+8	#DEP#vuej
+9	#DEP#librari
+10	#DEP#react
+11	#DEP#html5
+12	#DEP#webcompon

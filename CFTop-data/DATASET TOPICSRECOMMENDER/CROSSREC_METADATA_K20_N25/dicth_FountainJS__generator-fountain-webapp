@@ -1,0 +1,8 @@
+1	git://github.com/FountainJS/generator-fountain-webapp
+2	#DEP#gulp
+3	#DEP#vuejs2
+4	#DEP#angular
+5	#DEP#react
+6	#DEP#eslint
+7	#DEP#angular2
+8	#DEP#webapp

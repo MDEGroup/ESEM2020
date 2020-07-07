@@ -1,0 +1,7 @@
+1	git://github.com/vanniktech/gradle-maven-publish-plugin
+2	#DEP#publish
+3	#DEP#gradl
+4	#DEP#java
+5	#DEP#kotlin
+6	#DEP#maven
+7	#DEP#android

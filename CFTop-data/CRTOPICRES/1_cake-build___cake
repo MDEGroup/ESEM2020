@@ -1,0 +1,3 @@
+no_maven: nunit,no_maven: continuintegr,no_maven: xunit,no_maven: unittest,no_maven: buildautom
+no_maven: nuget,no_maven: dotnetcor,no_maven: buildtool,no_maven: csharp,no_maven: dotnet,no_maven: cake
+no_maven: aspnetcor,no_maven: dotnetstandard,no_maven: continudeploy,no_maven: continuintegr,no_maven: mono,no_maven: dotnetcore2,no_maven: aspnet,no_maven: api,no_maven: ddd,no_maven: domaindrivendesign,no_maven: rabbitmq,no_maven: redi,no_maven: memcach,no_maven: cach,no_maven: cachemanag,no_maven: featuretoggl,no_maven: featurflag,no_maven: featurtoggl,no_maven: opencvsharp,no_maven: wrapper

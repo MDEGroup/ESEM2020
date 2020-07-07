@@ -1,0 +1,3 @@
+no_maven: azurfunct,no_maven: serverless,no_maven: windowcontain,no_maven: singular,no_maven: infiniband,no_maven: mpi,no_maven: azur,no_maven: nf
+no_maven: glusterf,no_maven: rdma,no_maven: contain,no_maven: slurm,no_maven: azurbatch,no_maven: docker,no_maven: batchprocess,no_maven: gpu,no_maven: hpc
+no_maven: kubernet,no_maven: devop,no_maven: linux,no_maven: go,no_maven: orchestr,no_maven: meso,no_maven: flask,no_maven: python3,no_maven: k8,no_maven: websit,no_maven: secur,no_maven: monitor,no_maven: golang,no_maven: spark,no_maven: python,no_maven: swarm,no_maven: azur,no_maven: javascript,no_maven: shell,no_maven: bash

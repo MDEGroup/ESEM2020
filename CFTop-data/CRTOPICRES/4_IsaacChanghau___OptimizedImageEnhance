@@ -1,0 +1,3 @@
+no_maven: imagprocess,no_maven: gaussianpyramid,no_maven: guidedfilt,no_maven: colorbalanc,no_maven: retinex,no_maven: laplacianpyramid,no_maven: dtcwt,no_maven: imagenhanc,no_maven: backscatt
+no_maven: matlab,no_maven: videoprocess,no_maven: hazeremov,no_maven: underwatimag,no_maven: darkchannelprior,no_maven: wavelettransform,no_maven: opencvjava,no_maven: java8,no_maven: denois
+no_maven: java,no_maven: python,no_maven: springboot,no_maven: video,no_maven: opengl,no_maven: deeplearn,no_maven: javascript,no_maven: audioprocess,no_maven: websit,no_maven: render,no_maven: gpu,no_maven: metal,no_maven: maco,no_maven: filter,no_maven: imag,no_maven: imagprocess,no_maven: realtim,no_maven: io,no_maven: gpgpu,no_maven: cpluplu

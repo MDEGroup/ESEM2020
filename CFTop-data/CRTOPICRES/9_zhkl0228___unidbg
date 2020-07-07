@@ -1,0 +1,3 @@
+no_maven: io,no_maven: emul,no_maven: android
+no_maven: capston,no_maven: debugg,no_maven: unicorn,no_maven: keyston
+no_maven: javascript,no_maven: debug,no_maven: lua,no_maven: nodej,no_maven: syntaxhighlight,no_maven: php,no_maven: profil,no_maven: go,no_maven: inspector,no_maven: java,no_maven: swift,no_maven: node,no_maven: emac,no_maven: qt,no_maven: chrome,no_maven: secur,no_maven: cliapp,no_maven: cli,no_maven: react,no_maven: ide

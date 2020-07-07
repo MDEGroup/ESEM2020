@@ -1,0 +1,3 @@
+no_maven: typescript,no_maven: tslint,no_maven: codestyl
+no_maven: javascript,no_maven: styleguid,no_maven: eslint
+no_maven: es6,no_maven: react,no_maven: develop,no_maven: staticcodeanalysi,no_maven: ecmascript,no_maven: linter,no_maven: nodej,no_maven: frontend,no_maven: markdown,no_maven: standard,no_maven: designsystem,no_maven: bestpract,no_maven: sas,no_maven: awesom,no_maven: documenttool,no_maven: babel,no_maven: guidelin,no_maven: design,no_maven: cs,no_maven: lint

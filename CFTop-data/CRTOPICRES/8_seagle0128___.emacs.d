@@ -1,0 +1,3 @@
+no_maven: centaur,no_maven: configur,no_maven: elisp
+no_maven: centauremac,no_maven: emac,no_maven: emacconfigur,no_maven: emaclisp
+no_maven: clojur,no_maven: melpa,no_maven: python,no_maven: javascript,no_maven: cpp,no_maven: lisp,no_maven: keymap,no_maven: keyword,no_maven: deferload,no_maven: handler,no_maven: autoload,no_maven: typescript,no_maven: developtool,no_maven: emacmod,no_maven: git,no_maven: ide,no_maven: commonlisp,no_maven: vim,no_maven: refactor,no_maven: emacpackag

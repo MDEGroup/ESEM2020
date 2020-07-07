@@ -1,0 +1,3 @@
+no_maven: httpserver,no_maven: dieselr,no_maven: frontend,no_maven: actixweb,no_maven: diesel
+no_maven: backend,no_maven: websit,no_maven: postgresql,no_maven: webapp,no_maven: rust
+no_maven: frontend,no_maven: web,no_maven: php,no_maven: webdevelop,no_maven: admin,no_maven: document,no_maven: doc,no_maven: index,no_maven: api,no_maven: blockchain,no_maven: symfoni,no_maven: databas,no_maven: search,no_maven: server,no_maven: sas,no_maven: vue,no_maven: map,no_maven: list,no_maven: develop,no_maven: awesom

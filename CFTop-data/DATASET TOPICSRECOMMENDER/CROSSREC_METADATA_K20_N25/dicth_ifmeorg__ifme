@@ -1,0 +1,10 @@
+1	git://github.com/ifmeorg/ifme
+2	#DEP#sc
+3	#DEP#jest
+4	#DEP#rubi
+5	#DEP#rail
+6	#DEP#react
+7	#DEP#webpack
+8	#DEP#i18n
+9	#DEP#html
+10	#DEP#javascript

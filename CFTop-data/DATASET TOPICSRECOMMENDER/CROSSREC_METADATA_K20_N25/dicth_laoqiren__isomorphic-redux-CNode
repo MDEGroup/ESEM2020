@@ -1,0 +1,8 @@
+1	git://github.com/laoqiren/isomorphic-redux-CNode
+2	#DEP#nodej
+3	#DEP#express
+4	#DEP#mongodb
+5	#DEP#react
+6	#DEP#mongoos
+7	#DEP#redux
+8	#DEP#webpack

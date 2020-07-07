@@ -1,0 +1,7 @@
+1	git://github.com/cazala/coin-hive-stratum
+2	#DEP#nodej
+3	#DEP#proxi
+4	#DEP#mine
+5	#DEP#cryptocurr
+6	#DEP#xmr
+7	#DEP#monero

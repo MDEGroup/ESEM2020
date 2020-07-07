@@ -1,0 +1,9 @@
+1	git://github.com/intel-analytics/BigDL
+2	#DEP#bigdata
+3	#DEP#scala
+4	#DEP#neuralnetwork
+5	#DEP#python
+6	#DEP#deeplearn
+7	#DEP#ai
+8	#DEP#spark
+9	#DEP#kera

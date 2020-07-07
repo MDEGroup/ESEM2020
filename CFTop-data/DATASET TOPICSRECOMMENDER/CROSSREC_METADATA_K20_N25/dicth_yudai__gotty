@@ -1,0 +1,8 @@
+1	git://github.com/yudai/gotty
+2	#DEP#typescript
+3	#DEP#web
+4	#DEP#websocket
+5	#DEP#javascript
+6	#DEP#browser
+7	#DEP#termin
+8	#DEP#go

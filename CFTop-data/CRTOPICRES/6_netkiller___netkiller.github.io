@@ -1,0 +1,3 @@
+no_maven: docbook,no_maven: memcach,no_maven: redi,no_maven: postgresql,no_maven: mongodb,no_maven: tomcat,no_maven: ebook,no_maven: nginx,no_maven: openssl,no_maven: apach
+no_maven: netkil,no_maven: book,no_maven: linux,no_maven: strongswan,no_maven: ubuntu,no_maven: freebsd,no_maven: openvpn,no_maven: mysql,no_maven: epub,no_maven: centos7
+no_maven: javascript,no_maven: pdf,no_maven: vpn,no_maven: latex,no_maven: openbsd,no_maven: maco,no_maven: markdown,no_maven: android,no_maven: publish,no_maven: cento,no_maven: consol,no_maven: html,no_maven: ebook,no_maven: lua,no_maven: python,no_maven: io,no_maven: c,no_maven: fedora,no_maven: debian,no_maven: bash

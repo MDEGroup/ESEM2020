@@ -1,0 +1,3 @@
+no_maven: 3dprint,no_maven: imagprocess,no_maven: itk,no_maven: tciadac,no_maven: qt,no_maven: neuroimag,no_maven: nationinstituthealth,no_maven: python,no_maven: medicimag,no_maven: cpluplu
+no_maven: vtk,no_maven: tractographi,no_maven: medicimagcomput,no_maven: segment,no_maven: imagguidtherapi,no_maven: nih,no_maven: registr,no_maven: 3dslicer,no_maven: kitwar,no_maven: crossplatform
+no_maven: qt,no_maven: python,no_maven: go,no_maven: golang,no_maven: ide,no_maven: liteid,no_maven: opensourc,no_maven: pointcloud,no_maven: 3d,no_maven: mesh,no_maven: nodej,no_maven: markdown,no_maven: cpluplu,no_maven: javascript,no_maven: tensorflow,no_maven: nativescript,no_maven: android,no_maven: io,no_maven: visual,no_maven: meshprocess

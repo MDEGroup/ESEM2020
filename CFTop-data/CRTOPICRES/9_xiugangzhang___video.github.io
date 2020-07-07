@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: express,no_maven: j
+no_maven: gulp,no_maven: html,no_maven: mysql,no_maven: cs
+no_maven: javascript,no_maven: sas,no_maven: nodej,no_maven: frontend,no_maven: starterkit,no_maven: npm,no_maven: react,no_maven: j,no_maven: grunt,no_maven: sc,no_maven: starterproject,no_maven: bem,no_maven: starter,no_maven: yarn,no_maven: jqueri,no_maven: git,no_maven: typescript,no_maven: webpack,no_maven: framework,no_maven: chrome

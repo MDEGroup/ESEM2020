@@ -1,0 +1,3 @@
+no_maven: neovim,no_maven: vim,no_maven: make,no_maven: neovimplugin,no_maven: asyncrun
+no_maven: asynchron,no_maven: quickfixwindow,no_maven: build,no_maven: vimplugin,no_maven: vim8
+no_maven: vim,no_maven: python,no_maven: neovim,no_maven: golang,no_maven: go,no_maven: viml,no_maven: librari,no_maven: syntaxcheck,no_maven: linter,no_maven: reactiv,no_maven: neovimplugin,no_maven: linux,no_maven: window,no_maven: languagserverprotocol,no_maven: autocomplet,no_maven: async,no_maven: lint,no_maven: test,no_maven: ide,no_maven: start

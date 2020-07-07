@@ -1,0 +1,3 @@
+no_maven: bytecod,no_maven: compil,no_maven: javadecompil,no_maven: java,no_maven: decompil,no_maven: dex2jar,no_maven: jsp,no_maven: procyon
+no_maven: baksmali,no_maven: recompil,no_maven: fernflow,no_maven: krakatau,no_maven: apk,no_maven: war,no_maven: cfr,no_maven: smali,no_maven: bytecodview
+no_maven: android,no_maven: java,no_maven: packagmanag,no_maven: github,no_maven: buck,no_maven: androidappl,no_maven: githubapi,no_maven: androidapp,no_maven: apkdecompil,no_maven: qt5,no_maven: ide,no_maven: reversengin,no_maven: androiddecompil,no_maven: apktool,no_maven: apkstudio,no_maven: javadecompil,no_maven: qt,no_maven: fastbuild,no_maven: tinker,no_maven: gradl

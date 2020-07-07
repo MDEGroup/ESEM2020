@@ -1,0 +1,3 @@
+no_maven: shell,no_maven: shellexten,no_maven: cli,no_maven: zplug,no_maven: jump,no_maven: autojump,no_maven: cd,no_maven: commandlinetool
+no_maven: fzfscript,no_maven: fasd,no_maven: shellscript,no_maven: fuzzisearch,no_maven: commandlineinterfac,no_maven: z,no_maven: fzf,no_maven: zsh,no_maven: bash
+no_maven: shell,no_maven: fish,no_maven: cli,no_maven: go,no_maven: developtool,no_maven: cd,no_maven: linux,no_maven: sh,no_maven: csh,no_maven: ash,no_maven: ksh,no_maven: rc,no_maven: compil,no_maven: convert,no_maven: shc,no_maven: binari,no_maven: bsh,no_maven: perl,no_maven: rsh,no_maven: tsh

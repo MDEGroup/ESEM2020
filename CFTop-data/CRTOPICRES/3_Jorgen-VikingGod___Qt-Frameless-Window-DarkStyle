@@ -1,0 +1,3 @@
+no_maven: qt5,no_maven: qstylesheet,no_maven: stylesheet
+no_maven: qt,no_maven: darkthem,no_maven: fanci,no_maven: cpp
+no_maven: window,no_maven: qt5,no_maven: linux,no_maven: dark,no_maven: crossplatform,no_maven: lightthem,no_maven: theme,no_maven: vst,no_maven: videoeditor,no_maven: glsl,no_maven: maco,no_maven: hardwaraccel,no_maven: opengl,no_maven: widget,no_maven: nightmod,no_maven: darkmod,no_maven: chromeexten,no_maven: firefoxaddon,no_maven: sas,no_maven: node

@@ -1,0 +1,7 @@
+1	git://github.com/vespene-io/_old_vespene
+2	#DEP#continudeploy
+3	#DEP#continuintegr
+4	#DEP#python
+5	#DEP#autom
+6	#DEP#django
+7	#DEP#devop

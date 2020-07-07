@@ -1,0 +1,8 @@
+1	git://github.com/tensorflow/tfjs-core
+2	#DEP#deepneuralnetwork
+3	#DEP#typescript
+4	#DEP#neuralnetwork
+5	#DEP#webgl
+6	#DEP#deeplearn
+7	#DEP#machinlearn
+8	#DEP#javascript

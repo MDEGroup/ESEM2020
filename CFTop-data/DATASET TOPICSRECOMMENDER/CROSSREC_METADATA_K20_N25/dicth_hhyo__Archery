@@ -1,0 +1,9 @@
+1	git://github.com/hhyo/Archery
+2	#DEP#postgresql
+3	#DEP#mongodb
+4	#DEP#django
+5	#DEP#sqlserver
+6	#DEP#mybati
+7	#DEP#mysql
+8	#DEP#redi
+9	#DEP#oracl

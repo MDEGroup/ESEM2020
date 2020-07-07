@@ -1,0 +1,3 @@
+no_maven: esp32,no_maven: espressif,no_maven: esp8285,no_maven: nodemcu
+no_maven: spiff,no_maven: firmwar,no_maven: lua,no_maven: esp8266
+no_maven: arduino,no_maven: iot,no_maven: esp32,no_maven: raspberripi,no_maven: blynk,no_maven: homeautom,no_maven: arduinolibrari,no_maven: homekit,no_maven: esp8266arduino,no_maven: homebridg,no_maven: dsc,no_maven: homeassist,no_maven: homeyduino,no_maven: homesecur,no_maven: homey,no_maven: gamedevelop,no_maven: gameengin,no_maven: internetth,no_maven: hardwar,no_maven: platformio

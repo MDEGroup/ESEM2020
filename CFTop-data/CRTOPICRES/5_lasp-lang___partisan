@@ -1,0 +1,3 @@
+no_maven: failurdetect,no_maven: tcp,no_maven: gossipround,no_maven: distributsystem
+no_maven: membership,no_maven: elixir,no_maven: gossip,no_maven: erlang
+no_maven: rubi,no_maven: rust,no_maven: typescript,no_maven: python,no_maven: scala,no_maven: haskel,no_maven: lua,no_maven: performvisu,no_maven: performdashboard,no_maven: java,no_maven: javascript,no_maven: authent,no_maven: oauth2,no_maven: author,no_maven: ueberauth,no_maven: oauth,no_maven: lisp,no_maven: list,no_maven: ocaml,no_maven: project

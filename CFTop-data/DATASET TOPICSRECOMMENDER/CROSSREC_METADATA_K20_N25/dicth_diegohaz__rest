@@ -1,0 +1,7 @@
+1	git://github.com/diegohaz/rest
+2	#DEP#mongodb
+3	#DEP#restapi
+4	#DEP#rest
+5	#DEP#mongoos
+6	#DEP#jest
+7	#DEP#boilerpl

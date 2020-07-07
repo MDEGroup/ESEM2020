@@ -1,0 +1,10 @@
+1	git://github.com/tiangolo/uwsgi-nginx-flask-docker
+2	#DEP#dockerimag
+3	#DEP#web
+4	#DEP#python
+5	#DEP#flask
+6	#DEP#python2
+7	#DEP#python3
+8	#DEP#nginx
+9	#DEP#webapp
+10	#DEP#debian

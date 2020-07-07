@@ -1,0 +1,8 @@
+1	git://github.com/timothycrosley/portray
+2	#DEP#http
+3	#DEP#commandlin
+4	#DEP#python
+5	#DEP#python3
+6	#DEP#html
+7	#DEP#staticsitegen
+8	#DEP#document

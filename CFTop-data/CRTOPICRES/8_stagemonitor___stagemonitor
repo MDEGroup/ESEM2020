@@ -1,0 +1,3 @@
+no_maven: grafana,no_maven: java,no_maven: perform,no_maven: monitor,no_maven: metric
+no_maven: kibana,no_maven: apm,no_maven: profil,no_maven: opentrac,no_maven: trace
+no_maven: monitor,no_maven: distributtrac,no_maven: perform,no_maven: java,no_maven: metric,no_maven: agent,no_maven: distribut,no_maven: chromeexten,no_maven: asynchron,no_maven: executor,no_maven: forkjoinpool,no_maven: async,no_maven: threadsaf,no_maven: threadpool,no_maven: thread,no_maven: transmitt,no_maven: framework,no_maven: dapper,no_maven: context,no_maven: transmittthreadloc

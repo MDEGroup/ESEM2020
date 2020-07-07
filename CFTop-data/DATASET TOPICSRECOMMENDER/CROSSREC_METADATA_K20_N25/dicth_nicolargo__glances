@@ -1,0 +1,7 @@
+1	git://github.com/nicolargo/glances
+2	#DEP#restapi
+3	#DEP#web
+4	#DEP#python
+5	#DEP#monitor
+6	#DEP#rest
+7	#DEP#termin

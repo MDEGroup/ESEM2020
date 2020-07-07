@@ -1,0 +1,3 @@
+no_maven: testtool,no_maven: matcher,no_maven: kotlin
+no_maven: assert,no_maven: propertitest,no_maven: test
+no_maven: unittest,no_maven: maven,no_maven: autom,no_maven: javascript,no_maven: nodej,no_maven: jenkin,no_maven: lua,no_maven: luaunit,no_maven: hybridapp,no_maven: android,no_maven: uitest,no_maven: io,no_maven: bdd,no_maven: applic,no_maven: python,no_maven: pythonlibrari,no_maven: flag,no_maven: log,no_maven: tdd,no_maven: node

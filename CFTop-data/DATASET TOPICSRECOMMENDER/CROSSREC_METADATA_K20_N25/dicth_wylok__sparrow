@@ -1,0 +1,7 @@
+1	git://github.com/wylok/sparrow
+2	#DEP#websit
+3	#DEP#flask
+4	#DEP#devop
+5	#DEP#python3
+6	#DEP#contain
+7	#DEP#docker

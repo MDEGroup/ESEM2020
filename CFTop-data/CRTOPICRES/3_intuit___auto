@@ -1,0 +1,3 @@
+no_maven: publish,no_maven: autorelea,no_maven: slack
+no_maven: jira,no_maven: github,no_maven: releas
+no_maven: git,no_maven: version,no_maven: gitlab,no_maven: githubapi,no_maven: html,no_maven: cli,no_maven: changelog,no_maven: react,no_maven: npm,no_maven: secur,no_maven: golang,no_maven: python,no_maven: histori,no_maven: tag,no_maven: standard,no_maven: semant,no_maven: travici,no_maven: azur,no_maven: cs,no_maven: angular

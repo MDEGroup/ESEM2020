@@ -1,0 +1,11 @@
+1	git://github.com/api-platform/api-platform
+2	#DEP#php
+3	#DEP#docker
+4	#DEP#javascript
+5	#DEP#rest
+6	#DEP#framework
+7	#DEP#react
+8	#DEP#swagger
+9	#DEP#api
+10	#DEP#graphql
+11	#DEP#symfoni

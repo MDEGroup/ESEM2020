@@ -1,0 +1,7 @@
+1	git://github.com/mtxr/vscode-sqltools
+2	#DEP#postgr
+3	#DEP#sqlite
+4	#DEP#postgresql
+5	#DEP#azur
+6	#DEP#sql
+7	#DEP#mysql

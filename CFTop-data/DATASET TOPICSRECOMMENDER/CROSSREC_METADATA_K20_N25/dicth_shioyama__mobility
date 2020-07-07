@@ -1,0 +1,8 @@
+1	git://github.com/shioyama/mobility
+2	#DEP#postgresql
+3	#DEP#rubi
+4	#DEP#rail
+5	#DEP#json
+6	#DEP#translat
+7	#DEP#i18n
+8	#DEP#local

@@ -1,0 +1,3 @@
+no_maven: dba,no_maven: dbal,no_maven: pdo,no_maven: sqlserver,no_maven: sql,no_maven: pgsql
+no_maven: mysql,no_maven: ezsql,no_maven: sqlite3,no_maven: mysqli,no_maven: shortcut,no_maven: php,no_maven: oracl
+no_maven: postgresql,no_maven: sql,no_maven: sqlite,no_maven: orm,no_maven: sqlserver,no_maven: databas,no_maven: java,no_maven: javascript,no_maven: postgr,no_maven: typescript,no_maven: mssql,no_maven: microsoftsqlserv,no_maven: golang,no_maven: knex,no_maven: poco,no_maven: csharp,no_maven: commandlin,no_maven: firebird,no_maven: notadd,no_maven: angular

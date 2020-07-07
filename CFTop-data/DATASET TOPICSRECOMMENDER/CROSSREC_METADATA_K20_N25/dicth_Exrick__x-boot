@@ -1,0 +1,7 @@
+1	git://github.com/Exrick/x-boot
+2	#DEP#vue
+3	#DEP#admin
+4	#DEP#mysql
+5	#DEP#elasticsearch
+6	#DEP#springboot
+7	#DEP#redi

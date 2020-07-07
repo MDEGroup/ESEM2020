@@ -1,0 +1,9 @@
+1	git://github.com/IBM/kui
+2	#DEP#serverless
+3	#DEP#cli
+4	#DEP#plugin
+5	#DEP#electron
+6	#DEP#visual
+7	#DEP#ui
+8	#DEP#dashboard
+9	#DEP#kubernet

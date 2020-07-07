@@ -1,0 +1,7 @@
+1	git://github.com/Huachao/vscode-restclient
+2	#DEP#typescript
+3	#DEP#http
+4	#DEP#restapi
+5	#DEP#rest
+6	#DEP#graphql
+7	#DEP#httpclient

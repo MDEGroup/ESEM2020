@@ -1,0 +1,3 @@
+no_maven: peewe,no_maven: python,no_maven: flask
+no_maven: hellogithub,no_maven: peeweorm,no_maven: flaskweb
+no_maven: minimalist,no_maven: unix,no_maven: decentrappl,no_maven: port,no_maven: unity3d,no_maven: lexergen,no_maven: dashboard,no_maven: javascript,no_maven: cup,no_maven: search,no_maven: oversubscript,no_maven: softwar,no_maven: myanimelistapi,no_maven: grammar,no_maven: circularstatist,no_maven: coursera,no_maven: myanimelist,no_maven: dhtnetwork,no_maven: parser,no_maven: restphp

@@ -1,0 +1,3 @@
+no_maven: sort,no_maven: sortpomplugin,no_maven: xml
+no_maven: mavenplugin,no_maven: maven,no_maven: pom
+no_maven: java,no_maven: spring,no_maven: springmvc,no_maven: proguard,no_maven: minif,no_maven: obfusc,no_maven: gradl,no_maven: springboot,no_maven: mybati,no_maven: ssm,no_maven: redi,no_maven: mavenexten,no_maven: git,no_maven: version,no_maven: unittest,no_maven: jenkin,no_maven: lua,no_maven: luaunit,no_maven: assert,no_maven: continuintegr

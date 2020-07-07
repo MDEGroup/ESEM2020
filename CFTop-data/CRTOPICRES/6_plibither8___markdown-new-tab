@@ -1,0 +1,3 @@
+no_maven: markdown,no_maven: newtab,no_maven: chrome
+no_maven: chromeexten,no_maven: newtabpag,no_maven: chromenewtab
+no_maven: javascript,no_maven: firefoxaddon,no_maven: chrome,no_maven: firefox,no_maven: browserexten,no_maven: devtool,no_maven: userstyl,no_maven: perform,no_maven: extens,no_maven: vue,no_maven: webextens,no_maven: es6,no_maven: githubexten,no_maven: github,no_maven: crx,no_maven: twitterexten,no_maven: twitter,no_maven: graphiql,no_maven: apollocli,no_maven: apolloclientdevtool

@@ -1,0 +1,9 @@
+1	git://github.com/xmake-io/xmake
+2	#DEP#packagmanag
+3	#DEP#c
+4	#DEP#cpluplu
+5	#DEP#objectc
+6	#DEP#assembl
+7	#DEP#buildtool
+8	#DEP#lua
+9	#DEP#crossplatform

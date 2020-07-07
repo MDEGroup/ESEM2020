@@ -1,0 +1,9 @@
+1	git://github.com/xo/xo
+2	#DEP#sqlite
+3	#DEP#postgresql
+4	#DEP#oracl
+5	#DEP#sql
+6	#DEP#golang
+7	#DEP#mysql
+8	#DEP#orm
+9	#DEP#codegen

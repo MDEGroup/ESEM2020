@@ -1,0 +1,8 @@
+1	git://github.com/gchaincl/httplab
+2	#DEP#cli
+3	#DEP#http
+4	#DEP#webserv
+5	#DEP#develop
+6	#DEP#golang
+7	#DEP#developtool
+8	#DEP#test

@@ -1,0 +1,11 @@
+1	git://github.com/manuelbieh/react-ssr-setup
+2	#DEP#express
+3	#DEP#babel
+4	#DEP#typescript
+5	#DEP#react
+6	#DEP#eslint
+7	#DEP#reactrout
+8	#DEP#redux
+9	#DEP#i18n
+10	#DEP#postcss
+11	#DEP#webpack

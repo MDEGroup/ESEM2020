@@ -1,0 +1,3 @@
+no_maven: scipi,no_maven: pydata,no_maven: python
+no_maven: numpi,no_maven: dask,no_maven: scikitlearn,no_maven: panda
+no_maven: python,no_maven: machinlearn,no_maven: deeplearn,no_maven: datascienc,no_maven: matplotlib,no_maven: decistre,no_maven: jupytnotebook,no_maven: tensorflow,no_maven: opencv,no_maven: regress,no_maven: classif,no_maven: cluster,no_maven: randomforest,no_maven: pandadatafram,no_maven: elasticsearch,no_maven: nlp,no_maven: pytorch,no_maven: kera,no_maven: scipi,no_maven: datavisu

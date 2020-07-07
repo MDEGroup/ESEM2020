@@ -1,0 +1,8 @@
+1	git://github.com/xeraa/vagrant-elastic-stack
+2	#DEP#vagrant
+3	#DEP#mongodb
+4	#DEP#docker
+5	#DEP#nginx
+6	#DEP#elasticsearch
+7	#DEP#redi
+8	#DEP#ansibl

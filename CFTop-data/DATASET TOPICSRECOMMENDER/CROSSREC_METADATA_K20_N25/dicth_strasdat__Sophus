@@ -1,0 +1,7 @@
+1	git://github.com/strasdat/Sophus
+2	#DEP#cpluplu
+3	#DEP#graphic
+4	#DEP#robot
+5	#DEP#computvis
+6	#DEP#python
+7	#DEP#3d

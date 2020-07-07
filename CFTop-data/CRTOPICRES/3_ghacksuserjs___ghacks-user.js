@@ -1,0 +1,3 @@
+no_maven: set,no_maven: firefox,no_maven: custom
+no_maven: ghack,no_maven: privaci,no_maven: secur,no_maven: antifingerprint
+no_maven: p2p,no_maven: firefox,no_maven: encrypt,no_maven: mozilla,no_maven: browser,no_maven: cryptographi,no_maven: securharden,no_maven: mozillafirefox,no_maven: crypto,no_maven: peerpeer,no_maven: blockchain,no_maven: cpluplu,no_maven: decentr,no_maven: javascript,no_maven: tor,no_maven: java,no_maven: vpn,no_maven: chrome,no_maven: anonym,no_maven: swift

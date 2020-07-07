@@ -1,0 +1,9 @@
+1	git://github.com/chromium/badssl.com
+2	#DEP#secur
+3	#DEP#http
+4	#DEP#python
+5	#DEP#browser
+6	#DEP#nginx
+7	#DEP#tl
+8	#DEP#chrome
+9	#DEP#test

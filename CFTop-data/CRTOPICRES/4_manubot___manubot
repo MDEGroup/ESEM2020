@@ -1,0 +1,3 @@
+no_maven: publish,no_maven: markdown,no_maven: citat
+no_maven: pandoc,no_maven: python,no_maven: manubot,no_maven: csljson
+no_maven: markdown,no_maven: pdf,no_maven: latex,no_maven: publish,no_maven: typeset,no_maven: latextemplat,no_maven: machinlearn,no_maven: yaml,no_maven: pdfgener,no_maven: pandoctemplat,no_maven: book,no_maven: komascript,no_maven: present,no_maven: write,no_maven: haskel,no_maven: javascript,no_maven: markdownpdf,no_maven: makefil,no_maven: docker,no_maven: typesetsystem

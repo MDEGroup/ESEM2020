@@ -1,0 +1,3 @@
+no_maven: sqlbuilder,no_maven: sqlite,no_maven: databas
+no_maven: sql,no_maven: spm,no_maven: grdb
+no_maven: mysql,no_maven: postgresql,no_maven: databas,no_maven: postgr,no_maven: javascript,no_maven: knex,no_maven: sqlite3,no_maven: java,no_maven: datascienc,no_maven: busiintellig,no_maven: golang,no_maven: django,no_maven: python,no_maven: schema,no_maven: nodej,no_maven: php,no_maven: top,no_maven: activ,no_maven: monitor,no_maven: cli

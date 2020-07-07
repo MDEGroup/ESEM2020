@@ -1,0 +1,3 @@
+no_maven: secur,no_maven: staticcodeanalysi,no_maven: securtool
+no_maven: staticanalysi,no_maven: golang,no_maven: securautom
+no_maven: secur,no_maven: securtool,no_maven: vulner,no_maven: securharden,no_maven: brakeman,no_maven: python,no_maven: complianc,no_maven: ansibl,no_maven: stig,no_maven: cybersecur,no_maven: javascript,no_maven: rubirail,no_maven: gosec,no_maven: java,no_maven: ci,no_maven: linter,no_maven: test,no_maven: par,no_maven: aw,no_maven: vulnermanag

@@ -1,0 +1,12 @@
+1	git://github.com/gaia-pipeline/gaia
+2	#DEP#kubernet
+3	#DEP#java
+4	#DEP#deploy
+5	#DEP#continuintegr
+6	#DEP#python
+7	#DEP#autom
+8	#DEP#devop
+9	#DEP#rubi
+10	#DEP#cplusplu
+11	#DEP#go
+12	#DEP#continudeliveri

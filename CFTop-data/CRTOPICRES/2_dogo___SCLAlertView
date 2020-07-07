@@ -1,0 +1,3 @@
+no_maven: carthag,no_maven: objectc,no_maven: cocoapod
+no_maven: alert,no_maven: sclalertviewobject,no_maven: io,no_maven: alertview
+no_maven: android,no_maven: monitor,no_maven: nativescript,no_maven: mobil,no_maven: prometheu,no_maven: python,no_maven: ui,no_maven: notif,no_maven: dashboard,no_maven: grafana,no_maven: metric,no_maven: angular,no_maven: statsd,no_maven: notifi,no_maven: notifserv,no_maven: framework,no_maven: notifhub,no_maven: pushnotif,no_maven: notifapi,no_maven: docker

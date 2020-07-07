@@ -1,0 +1,12 @@
+1	git://github.com/pac4j/spring-security-pac4j
+2	#DEP#authent
+3	#DEP#jwt
+4	#DEP#secur
+5	#DEP#java
+6	#DEP#author
+7	#DEP#twitter
+8	#DEP#sql
+9	#DEP#springboot
+10	#DEP#mongodb
+11	#DEP#oauth
+12	#DEP#facebook

@@ -1,0 +1,9 @@
+1	git://github.com/bojidaryovchev/nest-angular
+2	#DEP#typescript
+3	#DEP#express
+4	#DEP#mongodb
+5	#DEP#angular
+6	#DEP#jwt
+7	#DEP#mongoos
+8	#DEP#graphql
+9	#DEP#webpack

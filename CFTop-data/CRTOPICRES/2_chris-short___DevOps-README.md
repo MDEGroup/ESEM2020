@@ -1,0 +1,3 @@
+no_maven: sre,no_maven: devopjourney,no_maven: continudeploy,no_maven: stress,no_maven: monitor,no_maven: failur,no_maven: cloudnativ,no_maven: continuintegr,no_maven: leader,no_maven: sitereliablengin
+no_maven: system,no_maven: lean,no_maven: devop,no_maven: blame,no_maven: cultur,no_maven: releas,no_maven: continudeliveri,no_maven: systemadministr,no_maven: systemengin,no_maven: cloud
+no_maven: continuintegr,no_maven: continudeploy,no_maven: golang,no_maven: kubernet,no_maven: git,no_maven: cli,no_maven: github,no_maven: docker,no_maven: autom,no_maven: go,no_maven: contain,no_maven: cicd,no_maven: histori,no_maven: monitor,no_maven: version,no_maven: devopworkflow,no_maven: infrastructur,no_maven: python,no_maven: aw,no_maven: orchestr

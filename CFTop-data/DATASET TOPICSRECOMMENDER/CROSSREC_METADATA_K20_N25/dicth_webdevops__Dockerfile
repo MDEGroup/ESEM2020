@@ -1,0 +1,8 @@
+1	git://github.com/webdevops/Dockerfile
+2	#DEP#dockerimag
+3	#DEP#debian
+4	#DEP#nginx
+5	#DEP#ubuntu
+6	#DEP#cento
+7	#DEP#docker
+8	#DEP#php

@@ -1,0 +1,3 @@
+no_maven: dotnetcore2,no_maven: topshelf,no_maven: gitterchat,no_maven: appveyor,no_maven: rabbitmq
+no_maven: masstransit,no_maven: azurservicbu,no_maven: nuget,no_maven: csharp,no_maven: dotnet,no_maven: messag
+no_maven: dotnetcor,no_maven: java,no_maven: mono,no_maven: azur,no_maven: microsoft,no_maven: xamarin,no_maven: eventhub,no_maven: c,no_maven: nodej,no_maven: golang,no_maven: python,no_maven: node,no_maven: go,no_maven: amqp,no_maven: apach,no_maven: stream,no_maven: spark,no_maven: librari,no_maven: unittest,no_maven: xunit

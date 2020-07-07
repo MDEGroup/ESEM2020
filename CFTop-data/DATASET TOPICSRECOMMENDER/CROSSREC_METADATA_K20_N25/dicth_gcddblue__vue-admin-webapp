@@ -1,0 +1,10 @@
+1	git://github.com/gcddblue/vue-admin-webapp
+2	#DEP#axio
+3	#DEP#vue
+4	#DEP#vuerout
+5	#DEP#npm
+6	#DEP#admin
+7	#DEP#webpack
+8	#DEP#dashboard
+9	#DEP#vuex
+10	#DEP#mock

@@ -1,0 +1,8 @@
+1	git://github.com/stdlib/lib
+2	#DEP#nodej
+3	#DEP#serverless
+4	#DEP#node
+5	#DEP#awlambda
+6	#DEP#api
+7	#DEP#sdk
+8	#DEP#faa

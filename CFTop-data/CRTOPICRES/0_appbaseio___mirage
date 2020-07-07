@@ -1,0 +1,3 @@
+no_maven: elasticsearchplugin,no_maven: chromeexten,no_maven: kibana
+no_maven: databasgui,no_maven: elasticsearch,no_maven: mirag
+no_maven: redi,no_maven: monitor,no_maven: rabbitmq,no_maven: mongodb,no_maven: mysql,no_maven: sql,no_maven: php,no_maven: docker,no_maven: orion,no_maven: dotnet,no_maven: bosun,no_maven: python,no_maven: kafka,no_maven: postgresql,no_maven: log,no_maven: elasticsearchplugin,no_maven: mybati,no_maven: springcloud,no_maven: springboot,no_maven: javascript

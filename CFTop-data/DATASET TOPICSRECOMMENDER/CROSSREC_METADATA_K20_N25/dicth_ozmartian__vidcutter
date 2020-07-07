@@ -1,0 +1,8 @@
+1	git://github.com/ozmartian/vidcutter
+2	#DEP#opengl
+3	#DEP#python3
+4	#DEP#window
+5	#DEP#linux
+6	#DEP#ubuntu
+7	#DEP#maco
+8	#DEP#crossplatform

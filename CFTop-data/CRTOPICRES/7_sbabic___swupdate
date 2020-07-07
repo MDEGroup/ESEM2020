@@ -1,0 +1,3 @@
+no_maven: hawkbit,no_maven: swupdat,no_maven: emmc,no_maven: flash,no_maven: otafirmwarupdat,no_maven: iot,no_maven: fota,no_maven: ota
+no_maven: firmwarupdat,no_maven: embedsystem,no_maven: otaupdat,no_maven: linux,no_maven: lua,no_maven: softwarupdat,no_maven: embed,no_maven: industrilinux
+no_maven: microcontrol,no_maven: arm,no_maven: opersystem,no_maven: iot,no_maven: c,no_maven: realtim,no_maven: android,no_maven: cortex,no_maven: macappstor,no_maven: maco,no_maven: homebrew,no_maven: osx,no_maven: mcu,no_maven: arduino,no_maven: json,no_maven: cpp,no_maven: golang,no_maven: gamedevelop,no_maven: gameengin,no_maven: window

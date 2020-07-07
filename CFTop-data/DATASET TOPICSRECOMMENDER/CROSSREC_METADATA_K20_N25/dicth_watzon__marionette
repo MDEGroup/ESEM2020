@@ -1,0 +1,8 @@
+1	git://github.com/watzon/marionette
+2	#DEP#browser
+3	#DEP#firefox
+4	#DEP#headless
+5	#DEP#api
+6	#DEP#puppet
+7	#DEP#test
+8	#DEP#crystal

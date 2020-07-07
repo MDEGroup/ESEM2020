@@ -1,0 +1,3 @@
+no_maven: ci,no_maven: stig,no_maven: disa
+no_maven: securharden,no_maven: ansibl,no_maven: securautom
+no_maven: secur,no_maven: securtool,no_maven: harden,no_maven: golang,no_maven: securaudit,no_maven: complianc,no_maven: devop,no_maven: python,no_maven: staticanalysi,no_maven: autom,no_maven: shell,no_maven: pcid,no_maven: linux,no_maven: cybersecur,no_maven: vulner,no_maven: aw,no_maven: rubirail,no_maven: hipaa,no_maven: gdpr,no_maven: vulnerdetect

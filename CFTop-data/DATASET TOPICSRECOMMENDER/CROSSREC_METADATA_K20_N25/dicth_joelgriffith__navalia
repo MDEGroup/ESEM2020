@@ -1,0 +1,7 @@
+1	git://github.com/joelgriffith/navalia
+2	#DEP#browser
+3	#DEP#typescript
+4	#DEP#chrome
+5	#DEP#autom
+6	#DEP#headless
+7	#DEP#graphql

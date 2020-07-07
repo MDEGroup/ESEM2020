@@ -1,0 +1,8 @@
+1	git://github.com/GoogleContainerTools/jib
+2	#DEP#gradl
+3	#DEP#java
+4	#DEP#maven
+5	#DEP#contain
+6	#DEP#kubernet
+7	#DEP#docker
+8	#DEP#microservic

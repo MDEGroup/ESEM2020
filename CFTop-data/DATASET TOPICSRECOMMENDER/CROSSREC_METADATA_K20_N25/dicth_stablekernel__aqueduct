@@ -1,0 +1,7 @@
+1	git://github.com/stablekernel/aqueduct
+2	#DEP#oauth2
+3	#DEP#http
+4	#DEP#server
+5	#DEP#rest
+6	#DEP#framework
+7	#DEP#orm

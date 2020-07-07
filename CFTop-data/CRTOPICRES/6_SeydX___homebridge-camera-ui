@@ -1,0 +1,3 @@
+no_maven: http,no_maven: ftp,no_maven: stream,no_maven: rtsp,no_maven: homebridg
+no_maven: gui,no_maven: motion,no_maven: camera,no_maven: mqtt,no_maven: homebridgplugin,no_maven: webui
+no_maven: homebridg,no_maven: javascript,no_maven: anim,no_maven: ui,no_maven: notif,no_maven: homekit,no_maven: web,no_maven: nodej,no_maven: physic,no_maven: autom,no_maven: cli,no_maven: react,no_maven: cs,no_maven: httpswitch,no_maven: hap,no_maven: homebridghttp,no_maven: switch,no_maven: togglswitch,no_maven: mqttsmarthom,no_maven: regex

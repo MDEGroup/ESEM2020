@@ -1,0 +1,3 @@
+no_maven: markdown,no_maven: rmarkdown,no_maven: rstudio,no_maven: python,no_maven: jupytnotebook
+no_maven: notebook,no_maven: jupyterlab,no_maven: versioncontrol,no_maven: jupyterlabexten,no_maven: knitr,no_maven: hydrogen
+no_maven: git,no_maven: datascienc,no_maven: jupyt,no_maven: python,no_maven: machinlearn,no_maven: deeplearn,no_maven: jupytnotebook,no_maven: latex,no_maven: python3,no_maven: azur,no_maven: azurmachinlearn,no_maven: azureml,no_maven: azurml,no_maven: book,no_maven: electron,no_maven: datastructur,no_maven: competitprogram,no_maven: algorithm,no_maven: rmarkdown,no_maven: mercuri

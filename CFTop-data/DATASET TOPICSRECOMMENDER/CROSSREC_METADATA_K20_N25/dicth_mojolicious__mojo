@@ -1,0 +1,9 @@
+1	git://github.com/mojolicious/mojo
+2	#DEP#http
+3	#DEP#websocket
+4	#DEP#webserv
+5	#DEP#perl
+6	#DEP#html
+7	#DEP#json
+8	#DEP#mvc
+9	#DEP#webframework

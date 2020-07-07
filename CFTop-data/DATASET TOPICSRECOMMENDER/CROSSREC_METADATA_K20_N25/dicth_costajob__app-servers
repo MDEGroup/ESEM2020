@@ -1,0 +1,9 @@
+1	git://github.com/costajob/app-servers
+2	#DEP#nodej
+3	#DEP#java
+4	#DEP#python
+5	#DEP#rubi
+6	#DEP#golang
+7	#DEP#elixir
+8	#DEP#crystal
+9	#DEP#rust

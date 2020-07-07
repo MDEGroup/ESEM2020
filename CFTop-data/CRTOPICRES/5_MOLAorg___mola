@@ -1,0 +1,3 @@
+no_maven: visualslam,no_maven: cxx17,no_maven: toolkit,no_maven: graphslam,no_maven: lidarpointcloud,no_maven: lidar
+no_maven: computvis,no_maven: cxx,no_maven: mobilrobot,no_maven: slam,no_maven: dataset,no_maven: local
+no_maven: python,no_maven: robot,no_maven: matlab,no_maven: data,no_maven: machinlearn,no_maven: deeplearn,no_maven: map,no_maven: json,no_maven: openscienc,no_maven: opendata,no_maven: curat,no_maven: researchdatamanag,no_maven: publish,no_maven: websit,no_maven: learn,no_maven: vision,no_maven: tensorflow,no_maven: ekf,no_maven: awesomlist,no_maven: awesom

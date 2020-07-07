@@ -1,0 +1,7 @@
+1	git://github.com/google/mtail
+2	#DEP#compil
+3	#DEP#log
+4	#DEP#proxi
+5	#DEP#monitor
+6	#DEP#metric
+7	#DEP#go

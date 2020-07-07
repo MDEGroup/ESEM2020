@@ -1,0 +1,3 @@
+no_maven: compil,no_maven: sqlite,no_maven: postgresql,no_maven: fsharp
+no_maven: typecheck,no_maven: sqlserver,no_maven: sql,no_maven: tsql
+no_maven: mysql,no_maven: oracl,no_maven: postgresql,no_maven: java,no_maven: orm,no_maven: databas,no_maven: sqlite,no_maven: csharp,no_maven: sqlite3,no_maven: python,no_maven: dotnet,no_maven: php,no_maven: devop,no_maven: index,no_maven: mainten,no_maven: db2,no_maven: docker,no_maven: azur,no_maven: jdbc,no_maven: jpa

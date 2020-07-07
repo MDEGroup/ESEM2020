@@ -1,0 +1,3 @@
+no_maven: http,no_maven: web,no_maven: swagger
+no_maven: bidi,no_maven: clojur,no_maven: manifold
+no_maven: clojurescript,no_maven: epl,no_maven: taoensso,no_maven: emaclisp,no_maven: emac,no_maven: java,no_maven: rest,no_maven: refactor,no_maven: log,no_maven: i18n,no_maven: translat,no_maven: l10n,no_maven: local,no_maven: editor,no_maven: ide,no_maven: lighttabl,no_maven: clojurdevelop,no_maven: notebook,no_maven: groovi,no_maven: kotlin

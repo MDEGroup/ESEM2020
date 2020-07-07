@@ -1,0 +1,3 @@
+no_maven: fsharp,no_maven: compil,no_maven: tool
+no_maven: netcor,no_maven: intellisens,no_maven: visualstudio,no_maven: functionprogram
+no_maven: csharp,no_maven: framework,no_maven: wpf,no_maven: dotnet,no_maven: netstandard,no_maven: haskel,no_maven: sqlserver,no_maven: netframework,no_maven: highperform,no_maven: compil,no_maven: llvm,no_maven: azur,no_maven: window,no_maven: postgresql,no_maven: poco,no_maven: plot,no_maven: plotlibrari,no_maven: chart,no_maven: objectc,no_maven: c

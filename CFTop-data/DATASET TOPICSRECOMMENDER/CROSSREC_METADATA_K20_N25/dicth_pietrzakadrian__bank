@@ -1,0 +1,12 @@
+1	git://github.com/pietrzakadrian/bank
+2	#DEP#nodej
+3	#DEP#typescript
+4	#DEP#socketio
+5	#DEP#restapi
+6	#DEP#expressj
+7	#DEP#javascript
+8	#DEP#websocket
+9	#DEP#nginx
+10	#DEP#react
+11	#DEP#mysql
+12	#DEP#redux

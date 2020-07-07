@@ -1,0 +1,7 @@
+1	git://github.com/swc-project/swc
+2	#DEP#compil
+3	#DEP#typescript
+4	#DEP#javascript
+5	#DEP#babel
+6	#DEP#parser
+7	#DEP#rust

@@ -1,0 +1,3 @@
+no_maven: map,no_maven: googlmapapi,no_maven: googlmap
+no_maven: jqueri,no_maven: marker,no_maven: javascript
+no_maven: cs,no_maven: jqueriplugin,no_maven: ajax,no_maven: plugin,no_maven: nodej,no_maven: sas,no_maven: menu,no_maven: navig,no_maven: modal,no_maven: php,no_maven: spider,no_maven: crawler,no_maven: cheerio,no_maven: extractdata,no_maven: bootstrap,no_maven: pagin,no_maven: templat,no_maven: html5,no_maven: css3,no_maven: lua

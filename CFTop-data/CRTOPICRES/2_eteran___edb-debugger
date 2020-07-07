@@ -1,0 +1,3 @@
+no_maven: x86,no_maven: qt,no_maven: edb,no_maven: cpluplu,no_maven: ollydbg
+no_maven: linux,no_maven: x8664,no_maven: debugg,no_maven: secur,no_maven: reversengin
+no_maven: emul,no_maven: cpp,no_maven: x86,no_maven: debug,no_maven: java,no_maven: lua,no_maven: arm,no_maven: python,no_maven: visual,no_maven: android,no_maven: assembl,no_maven: mip,no_maven: arm64,no_maven: framework,no_maven: m68k,no_maven: sparc,no_maven: go,no_maven: io,no_maven: inspector,no_maven: emac

@@ -1,0 +1,7 @@
+1	git://github.com/henrylee2cn/faygo
+2	#DEP#golang
+3	#DEP#http2
+4	#DEP#server
+5	#DEP#swagger
+6	#DEP#webframework
+7	#DEP#middlewar

@@ -1,0 +1,8 @@
+1	git://github.com/sessionboy/sinn-server
+2	#DEP#nodej
+3	#DEP#koa2
+4	#DEP#es6
+5	#DEP#nginx
+6	#DEP#mongoos
+7	#DEP#restapi
+8	#DEP#docker

@@ -1,0 +1,3 @@
+no_maven: feign,no_maven: springboot,no_maven: thymeleaf,no_maven: spring,no_maven: hystrix,no_maven: ca
+no_maven: eureka,no_maven: rbac,no_maven: springbootadmin,no_maven: springcloud,no_maven: microservic,no_maven: jbone,no_maven: sso
+no_maven: springboot,no_maven: java,no_maven: spring,no_maven: springcloudcor,no_maven: cloudnativ,no_maven: zuul,no_maven: zipkin,no_maven: hystrix,no_maven: oauth2,no_maven: docker,no_maven: author,no_maven: turbin,no_maven: authent,no_maven: consul,no_maven: ribbon,no_maven: elk,no_maven: secur,no_maven: configur,no_maven: trace,no_maven: zipkinbrav

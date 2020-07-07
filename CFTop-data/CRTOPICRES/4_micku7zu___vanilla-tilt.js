@@ -1,0 +1,3 @@
+no_maven: vanilla,no_maven: tilt,no_maven: javascript,no_maven: tiltj,no_maven: smootheffect
+no_maven: smooth,no_maven: tilteffect,no_maven: librari,no_maven: vanillajavascript,no_maven: smoothanim,no_maven: tiltjavascript
+no_maven: javascript,no_maven: java,no_maven: nodej,no_maven: mobil,no_maven: csharp,no_maven: cordova,no_maven: cplusplu,no_maven: objectc,no_maven: ui,no_maven: anim,no_maven: compon,no_maven: materidesign,no_maven: swift,no_maven: framework,no_maven: web,no_maven: smoothscrol,no_maven: android,no_maven: architectur,no_maven: html5,no_maven: bunnyj

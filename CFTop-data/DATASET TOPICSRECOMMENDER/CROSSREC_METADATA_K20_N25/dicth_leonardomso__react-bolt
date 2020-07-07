@@ -1,0 +1,9 @@
+1	git://github.com/leonardomso/react-bolt
+2	#DEP#babel
+3	#DEP#react
+4	#DEP#eslint
+5	#DEP#jest
+6	#DEP#redux
+7	#DEP#cs
+8	#DEP#webpack
+9	#DEP#boilerpl

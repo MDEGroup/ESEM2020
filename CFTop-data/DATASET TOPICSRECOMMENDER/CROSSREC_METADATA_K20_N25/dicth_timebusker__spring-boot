@@ -1,0 +1,10 @@
+1	git://github.com/timebusker/spring-boot
+2	#DEP#log
+3	#DEP#mybati
+4	#DEP#secur
+5	#DEP#spring
+6	#DEP#swagger
+7	#DEP#springboot
+8	#DEP#async
+9	#DEP#redi
+10	#DEP#cach

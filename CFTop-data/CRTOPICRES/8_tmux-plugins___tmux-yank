@@ -1,0 +1,3 @@
+no_maven: shell,no_maven: wsl,no_maven: tpm,no_maven: tmux
+no_maven: clipboard,no_maven: linux,no_maven: maco,no_maven: cygwin
+no_maven: window,no_maven: golang,no_maven: electron,no_maven: javascript,no_maven: nodej,no_maven: android,no_maven: privaci,no_maven: comment,no_maven: rust,no_maven: bash,no_maven: chromeexten,no_maven: chromebrows,no_maven: githubexten,no_maven: file,no_maven: copipast,no_maven: io,no_maven: desktopappl,no_maven: go,no_maven: wasi,no_maven: wasm

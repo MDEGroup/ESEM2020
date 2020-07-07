@@ -1,0 +1,10 @@
+1	git://github.com/Jocs/jocs.github.io
+2	#DEP#frontend
+3	#DEP#es6
+4	#DEP#chrome
+5	#DEP#javascript
+6	#DEP#gener
+7	#DEP#angularj
+8	#DEP#angular
+9	#DEP#react
+10	#DEP#vue2

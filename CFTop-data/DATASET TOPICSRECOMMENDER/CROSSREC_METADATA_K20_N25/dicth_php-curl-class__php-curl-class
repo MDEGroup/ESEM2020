@@ -1,0 +1,12 @@
+1	git://github.com/php-curl-class/php-curl-class
+2	#DEP#http
+3	#DEP#proxi
+4	#DEP#xml
+5	#DEP#framework
+6	#DEP#rest
+7	#DEP#client
+8	#DEP#json
+9	#DEP#api
+10	#DEP#httpclient
+11	#DEP#php
+12	#DEP#webserv

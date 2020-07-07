@@ -1,0 +1,3 @@
+no_maven: compil,no_maven: cranelift,no_maven: cretonn,no_maven: wasm
+no_maven: jit,no_maven: rust,no_maven: aotcompil,no_maven: codegen
+no_maven: golang,no_maven: compil,no_maven: cli,no_maven: cpp,no_maven: librari,no_maven: java,no_maven: schemafirst,no_maven: graphql,no_maven: typescript,no_maven: angular,no_maven: tool,no_maven: commandlin,no_maven: termin,no_maven: benchmark,no_maven: go,no_maven: api,no_maven: swift,no_maven: io,no_maven: php,no_maven: orm

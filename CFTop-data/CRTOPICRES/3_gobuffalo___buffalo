@@ -1,0 +1,3 @@
+no_maven: web,no_maven: buffalo,no_maven: rail,no_maven: golang
+no_maven: framework,no_maven: gobuffalo,no_maven: go,no_maven: webframework
+no_maven: web,no_maven: api,no_maven: restapi,no_maven: websocket,no_maven: json,no_maven: golang,no_maven: jetti,no_maven: javascript,no_maven: angular,no_maven: http,no_maven: crossplatform,no_maven: apidocu,no_maven: graphql,no_maven: jsonschema,no_maven: storagbackend,no_maven: apiserv,no_maven: schemafield,no_maven: html,no_maven: fast,no_maven: crystal

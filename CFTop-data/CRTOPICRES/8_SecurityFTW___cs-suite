@@ -1,0 +1,3 @@
+no_maven: azursecur,no_maven: secur,no_maven: awsecur,no_maven: azuraudit,no_maven: gcpauditreport
+no_maven: azur,no_maven: securaudit,no_maven: awaudit,no_maven: gcp,no_maven: cloudsecur,no_maven: securtool
+no_maven: secur,no_maven: aw,no_maven: cloud,no_maven: securharden,no_maven: go,no_maven: golang,no_maven: devop,no_maven: complianc,no_maven: vulnerdetect,no_maven: vulnerscann,no_maven: harden,no_maven: securvuln,no_maven: linux,no_maven: vulner,no_maven: cluster,no_maven: kubernet,no_maven: forens,no_maven: cybersecur,no_maven: hack,no_maven: penetrtest

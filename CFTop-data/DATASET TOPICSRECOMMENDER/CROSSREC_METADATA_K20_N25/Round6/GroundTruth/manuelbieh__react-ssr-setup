@@ -1,0 +1,5 @@
+7	#DEP#reactrout
+8	#DEP#redux
+9	#DEP#i18n
+10	#DEP#postcss
+11	#DEP#webpack

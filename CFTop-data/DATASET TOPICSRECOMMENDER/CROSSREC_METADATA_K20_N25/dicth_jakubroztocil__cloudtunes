@@ -1,0 +1,8 @@
+1	git://github.com/jakubroztocil/cloudtunes
+2	#DEP#mongodb
+3	#DEP#web
+4	#DEP#websocket
+5	#DEP#python
+6	#DEP#webapp
+7	#DEP#redi
+8	#DEP#spa

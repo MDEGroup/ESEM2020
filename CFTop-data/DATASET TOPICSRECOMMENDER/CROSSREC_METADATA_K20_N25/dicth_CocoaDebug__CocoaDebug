@@ -1,0 +1,9 @@
+1	git://github.com/CocoaDebug/CocoaDebug
+2	#DEP#log
+3	#DEP#debug
+4	#DEP#carthag
+5	#DEP#network
+6	#DEP#cocoapod
+7	#DEP#objectc
+8	#DEP#io
+9	#DEP#swift

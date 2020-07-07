@@ -1,0 +1,7 @@
+1	git://github.com/jaredpalmer/razzle
+2	#DEP#typescript
+3	#DEP#univers
+4	#DEP#javascript
+5	#DEP#preact
+6	#DEP#react
+7	#DEP#webpack

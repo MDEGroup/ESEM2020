@@ -1,0 +1,3 @@
+no_maven: packagmanag,no_maven: search,no_maven: depend
+no_maven: discoveri,no_maven: rail,no_maven: opensourc
+no_maven: rubi,no_maven: secur,no_maven: bootstrap,no_maven: html,no_maven: bootstrapthem,no_maven: bootstrap4,no_maven: free,no_maven: bootstraptemplat,no_maven: react,no_maven: rubirail,no_maven: ajax,no_maven: jqueri,no_maven: jqueridatat,no_maven: datat,no_maven: markdown,no_maven: crossplatform,no_maven: nodej,no_maven: wiki,no_maven: document,no_maven: git

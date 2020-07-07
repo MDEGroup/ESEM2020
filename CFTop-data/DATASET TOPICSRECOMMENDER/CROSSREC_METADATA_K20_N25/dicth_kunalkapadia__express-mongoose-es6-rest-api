@@ -1,0 +1,11 @@
+1	git://github.com/kunalkapadia/express-mongoose-es6-rest-api
+2	#DEP#node
+3	#DEP#express
+4	#DEP#es6
+5	#DEP#babel
+6	#DEP#yarn
+7	#DEP#authent
+8	#DEP#eslint
+9	#DEP#mongoos
+10	#DEP#mongodb
+11	#DEP#boilerpl

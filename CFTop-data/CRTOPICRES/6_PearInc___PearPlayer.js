@@ -1,0 +1,3 @@
+no_maven: p2pcdn,no_maven: webp2p,no_maven: vod,no_maven: javascript,no_maven: stream,no_maven: cdn
+no_maven: browser,no_maven: p2p,no_maven: live,no_maven: multisourc,no_maven: video,no_maven: http2,no_maven: webrtc
+no_maven: javascript,no_maven: webtorr,no_maven: bittorr,no_maven: nodej,no_maven: stream,no_maven: voip,no_maven: cli,no_maven: api,no_maven: player,no_maven: electron,no_maven: audio,no_maven: decentr,no_maven: videochat,no_maven: ifram,no_maven: youtubplay,no_maven: youtubapi,no_maven: browserifi,no_maven: youtub,no_maven: es6,no_maven: boxscor

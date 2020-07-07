@@ -1,0 +1,3 @@
+no_maven: desktop,no_maven: c,no_maven: raylib,no_maven: opengl
+no_maven: iot,no_maven: videogam,no_maven: android,no_maven: embed,no_maven: program
+no_maven: python,no_maven: microcontrol,no_maven: c,no_maven: javascript,no_maven: opersystem,no_maven: mbed,no_maven: ota,no_maven: lua,no_maven: arduino,no_maven: esp8266,no_maven: esp32,no_maven: arm,no_maven: mcu,no_maven: rust,no_maven: securopersystem,no_maven: tock,no_maven: kernel,no_maven: cortex,no_maven: internetth,no_maven: softwarupdat

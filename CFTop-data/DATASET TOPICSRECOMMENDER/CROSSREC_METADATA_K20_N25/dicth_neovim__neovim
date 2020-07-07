@@ -1,0 +1,8 @@
+1	git://github.com/neovim/neovim
+2	#DEP#neovim
+3	#DEP#c
+4	#DEP#vim
+5	#DEP#extens
+6	#DEP#api
+7	#DEP#lua
+8	#DEP#crossplatform

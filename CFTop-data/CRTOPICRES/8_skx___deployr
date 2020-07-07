@@ -1,0 +1,3 @@
+no_maven: deploy,no_maven: util,no_maven: autom
+no_maven: devop,no_maven: golang,no_maven: ssh,no_maven: scp
+no_maven: termin,no_maven: aw,no_maven: secur,no_maven: cli,no_maven: bastionhost,no_maven: go,no_maven: terminemul,no_maven: bastion,no_maven: docker,no_maven: vpn,no_maven: commandlinetool,no_maven: javascript,no_maven: continudeliveri,no_maven: continuintegr,no_maven: autom,no_maven: devoptool,no_maven: tui,no_maven: wtf,no_maven: cui,no_maven: dashboard

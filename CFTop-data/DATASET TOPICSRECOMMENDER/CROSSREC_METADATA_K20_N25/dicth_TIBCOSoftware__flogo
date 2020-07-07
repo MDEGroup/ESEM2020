@@ -1,0 +1,11 @@
+1	git://github.com/TIBCOSoftware/flogo
+2	#DEP#serverless
+3	#DEP#awlambda
+4	#DEP#stream
+5	#DEP#iot
+6	#DEP#golang
+7	#DEP#faa
+8	#DEP#go
+9	#DEP#tensorflow
+10	#DEP#microservic
+11	#DEP#lambda

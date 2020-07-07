@@ -1,0 +1,3 @@
+no_maven: xlsx,no_maven: activerecord,no_maven: spreadsheet,no_maven: rubi
+no_maven: rail,no_maven: export,no_maven: csv,no_maven: od
+no_maven: sql,no_maven: json,no_maven: javascript,no_maven: xlsx,no_maven: excel,no_maven: cli,no_maven: docker,no_maven: rubi,no_maven: xl,no_maven: postgresql,no_maven: golang,no_maven: design,no_maven: sketch,no_maven: prism,no_maven: artboard,no_maven: sketchplugin,no_maven: palett,no_maven: xml,no_maven: python,no_maven: flask

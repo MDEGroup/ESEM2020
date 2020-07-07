@@ -1,0 +1,3 @@
+no_maven: ajaxif,no_maven: javascript,no_maven: jqueri
+no_maven: ajax,no_maven: nett,no_maven: nettframework
+no_maven: jqueri,no_maven: javascript,no_maven: php,no_maven: jqueriplugin,no_maven: ajaxform,no_maven: bootstrap,no_maven: pagin,no_maven: templat,no_maven: webcompon,no_maven: html,no_maven: customel,no_maven: htmlform,no_maven: axio,no_maven: compon,no_maven: vuej,no_maven: vueresourc,no_maven: request,no_maven: api,no_maven: loader,no_maven: json

@@ -1,0 +1,7 @@
+1	git://github.com/huntsman-li/go-cache
+2	#DEP#postgr
+3	#DEP#postgresql
+4	#DEP#mysql
+5	#DEP#go
+6	#DEP#cach
+7	#DEP#nosql

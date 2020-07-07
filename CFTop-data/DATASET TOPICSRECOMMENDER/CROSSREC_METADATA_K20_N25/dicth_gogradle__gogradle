@@ -1,0 +1,7 @@
+1	git://github.com/gogradle/gogradle
+2	#DEP#gradl
+3	#DEP#golang
+4	#DEP#buildtool
+5	#DEP#go
+6	#DEP#test
+7	#DEP#ide

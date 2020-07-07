@@ -1,0 +1,7 @@
+1	git://github.com/LibrePCB/LibrePCB
+2	#DEP#qt
+3	#DEP#window
+4	#DEP#maco
+5	#DEP#electron
+6	#DEP#linux
+7	#DEP#unix

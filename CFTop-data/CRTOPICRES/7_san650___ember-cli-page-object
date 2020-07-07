@@ -1,0 +1,3 @@
+no_maven: qunit,no_maven: embercli,no_maven: pageobjectpattern
+no_maven: ember,no_maven: mocha,no_maven: test,no_maven: pageobject
+no_maven: javascript,no_maven: react,no_maven: angular,no_maven: nodej,no_maven: chai,no_maven: webpack,no_maven: eslint,no_maven: express,no_maven: node,no_maven: compon,no_maven: redux,no_maven: vue,no_maven: babel,no_maven: mvp,no_maven: frontend,no_maven: rubi,no_maven: mongodb,no_maven: testframework,no_maven: bdd,no_maven: browser

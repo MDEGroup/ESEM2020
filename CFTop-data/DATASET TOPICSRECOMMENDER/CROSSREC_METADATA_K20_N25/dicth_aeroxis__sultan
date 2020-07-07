@@ -1,0 +1,11 @@
+1	git://github.com/aeroxis/sultan
+2	#DEP#compil
+3	#DEP#cli
+4	#DEP#commandlin
+5	#DEP#commandlinetool
+6	#DEP#python2
+7	#DEP#python3
+8	#DEP#ssh
+9	#DEP#termin
+10	#DEP#zsh
+11	#DEP#bash

@@ -1,0 +1,11 @@
+1	git://github.com/SFTtech/openage
+2	#DEP#qt
+3	#DEP#gameengin
+4	#DEP#opengl
+5	#DEP#engin
+6	#DEP#python
+7	#DEP#cpluplu
+8	#DEP#cmake
+9	#DEP#game
+10	#DEP#linux
+11	#DEP#cpp

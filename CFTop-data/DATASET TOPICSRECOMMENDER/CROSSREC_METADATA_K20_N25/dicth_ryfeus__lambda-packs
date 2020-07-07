@@ -1,0 +1,10 @@
+1	git://github.com/ryfeus/lambda-packs
+2	#DEP#serverless
+3	#DEP#python
+4	#DEP#awlambda
+5	#DEP#numpi
+6	#DEP#panda
+7	#DEP#aw
+8	#DEP#tensorflow
+9	#DEP#pytorch
+10	#DEP#kera

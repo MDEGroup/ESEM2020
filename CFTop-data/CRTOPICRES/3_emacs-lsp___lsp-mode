@@ -1,0 +1,3 @@
+no_maven: languagserverprotocol,no_maven: java,no_maven: python,no_maven: javascript
+no_maven: typescript,no_maven: languagservercli,no_maven: emac,no_maven: swift,no_maven: cpp
+no_maven: java,no_maven: python,no_maven: haskel,no_maven: emaclisp,no_maven: csharp,no_maven: assembl,no_maven: golang,no_maven: rust,no_maven: c,no_maven: nodej,no_maven: go,no_maven: javascript,no_maven: emacmod,no_maven: objectc,no_maven: json,no_maven: majormod,no_maven: git,no_maven: ide,no_maven: r,no_maven: php

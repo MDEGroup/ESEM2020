@@ -1,0 +1,7 @@
+1	git://github.com/Netflix/bless
+2	#DEP#serverless
+3	#DEP#secur
+4	#DEP#python
+5	#DEP#ssh
+6	#DEP#aw
+7	#DEP#lambda

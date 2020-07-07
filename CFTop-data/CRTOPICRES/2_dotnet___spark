@@ -1,0 +1,3 @@
+no_maven: fsharp,no_maven: bigdata,no_maven: sparkstream,no_maven: dotnetstandard,no_maven: stream,no_maven: apachspark,no_maven: hdinsight,no_maven: azur,no_maven: databrick,no_maven: machinlearn
+no_maven: tpcd,no_maven: sparksql,no_maven: dotnetcor,no_maven: csharp,no_maven: dotnet,no_maven: tpch,no_maven: spark,no_maven: analyt,no_maven: emr,no_maven: microsoft
+no_maven: nodej,no_maven: mysql,no_maven: azur,no_maven: eventhub,no_maven: stream,no_maven: aspnetcor,no_maven: docker,no_maven: scala,no_maven: postgresql,no_maven: api,no_maven: c,no_maven: golang,no_maven: messag,no_maven: python,no_maven: node,no_maven: java,no_maven: go,no_maven: amqp,no_maven: apach,no_maven: redi

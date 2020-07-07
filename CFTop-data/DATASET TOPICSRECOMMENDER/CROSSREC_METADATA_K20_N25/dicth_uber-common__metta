@@ -1,0 +1,8 @@
+1	git://github.com/uber-common/metta
+2	#DEP#vagrant
+3	#DEP#secur
+4	#DEP#python
+5	#DEP#network
+6	#DEP#yaml
+7	#DEP#redi
+8	#DEP#virtualbox

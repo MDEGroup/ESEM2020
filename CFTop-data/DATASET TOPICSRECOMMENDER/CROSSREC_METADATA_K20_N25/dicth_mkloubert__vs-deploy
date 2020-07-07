@@ -1,0 +1,11 @@
+1	git://github.com/mkloubert/vs-deploy
+2	#DEP#nodej
+3	#DEP#sql
+4	#DEP#typescript
+5	#DEP#deploy
+6	#DEP#web
+7	#DEP#aw
+8	#DEP#azur
+9	#DEP#restapi
+10	#DEP#le
+11	#DEP#http

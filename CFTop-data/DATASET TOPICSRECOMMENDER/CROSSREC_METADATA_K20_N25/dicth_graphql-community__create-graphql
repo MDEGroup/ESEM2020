@@ -1,0 +1,8 @@
+1	git://github.com/graphql-community/create-graphql
+2	#DEP#nodej
+3	#DEP#cli
+4	#DEP#express
+5	#DEP#koa
+6	#DEP#mongoos
+7	#DEP#graphql
+8	#DEP#boilerpl

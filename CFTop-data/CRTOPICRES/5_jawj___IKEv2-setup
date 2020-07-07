@@ -1,0 +1,3 @@
+no_maven: ikev2vpn,no_maven: vpnserver,no_maven: ikev2
+no_maven: letsencrypt,no_maven: ubuntu,no_maven: vpn,no_maven: strongswan
+no_maven: docker,no_maven: openvpn,no_maven: go,no_maven: loadbalanc,no_maven: kubernet,no_maven: golang,no_maven: debian,no_maven: vpnserver,no_maven: certif,no_maven: ssl,no_maven: secur,no_maven: proxi,no_maven: privaci,no_maven: http,no_maven: ipsec,no_maven: zookeep,no_maven: reversproxi,no_maven: consul,no_maven: meso,no_maven: microservic

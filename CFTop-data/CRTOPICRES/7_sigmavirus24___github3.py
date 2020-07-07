@@ -1,0 +1,3 @@
+no_maven: github,no_maven: restclient,no_maven: python27,no_maven: restapi,no_maven: python
+no_maven: githubapi,no_maven: rest,no_maven: python36,no_maven: python34,no_maven: python35
+no_maven: python,no_maven: api,no_maven: restapi,no_maven: django,no_maven: github,no_maven: python3,no_maven: test,no_maven: http,no_maven: web,no_maven: docker,no_maven: java,no_maven: nodej,no_maven: express,no_maven: python2,no_maven: pythonlibrari,no_maven: microservic,no_maven: framework,no_maven: osint,no_maven: golang,no_maven: secur

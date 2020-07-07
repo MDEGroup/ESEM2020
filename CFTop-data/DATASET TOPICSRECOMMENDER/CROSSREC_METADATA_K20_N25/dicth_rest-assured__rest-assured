@@ -1,0 +1,9 @@
+1	git://github.com/rest-assured/rest-assured
+2	#DEP#java
+3	#DEP#restapi
+4	#DEP#xml
+5	#DEP#kotlin
+6	#DEP#rest
+7	#DEP#json
+8	#DEP#test
+9	#DEP#http

@@ -1,0 +1,3 @@
+no_maven: naturlanguagprocess,no_maven: nlp,no_maven: pattern
+no_maven: python,no_maven: python2,no_maven: python3,no_maven: nltk
+no_maven: flask,no_maven: api,no_maven: restapi,no_maven: django,no_maven: flaskexten,no_maven: scikitlearn,no_maven: marshmallow,no_maven: naturlanguagprocess,no_maven: spaci,no_maven: cluster,no_maven: textclassif,no_maven: alexaskillkit,no_maven: echo,no_maven: alexa,no_maven: machinlearn,no_maven: deeplearn,no_maven: openapi3,no_maven: openapi2,no_maven: jsonschema,no_maven: openapispecif

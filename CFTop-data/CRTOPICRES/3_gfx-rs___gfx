@@ -1,0 +1,3 @@
+no_maven: gfx,no_maven: opengl,no_maven: graphicapi,no_maven: graphic,no_maven: metal
+no_maven: dx12,no_maven: dx11,no_maven: vulkan,no_maven: gpu,no_maven: rust
+no_maven: opengl,no_maven: metal,no_maven: commandlin,no_maven: termin,no_maven: d3d11,no_maven: graphic,no_maven: gameengin,no_maven: tool,no_maven: cli,no_maven: linux,no_maven: csharp,no_maven: cpp,no_maven: python,no_maven: benchmark,no_maven: gamedevelop,no_maven: direct3d,no_maven: d3d12,no_maven: cuda,no_maven: c,no_maven: window

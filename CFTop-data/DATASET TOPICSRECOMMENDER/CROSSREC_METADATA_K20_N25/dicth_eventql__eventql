@@ -1,0 +1,7 @@
+1	git://github.com/eventql/eventql
+2	#DEP#distribut
+3	#DEP#databas
+4	#DEP#stream
+5	#DEP#sql
+6	#DEP#analyt
+7	#DEP#cpp

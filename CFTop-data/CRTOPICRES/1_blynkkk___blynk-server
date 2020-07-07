@@ -1,0 +1,3 @@
+no_maven: java,no_maven: restapi,no_maven: raspberripi,no_maven: arduino,no_maven: esp32,no_maven: esp8266,no_maven: websocket,no_maven: iot,no_maven: homeautom,no_maven: ota
+no_maven: blynkserv,no_maven: netti,no_maven: mqtt,no_maven: particlphoton,no_maven: sslcertif,no_maven: internetth,no_maven: hardwar,no_maven: blynk,no_maven: iotplatform,no_maven: http
+no_maven: iot,no_maven: arduino,no_maven: homebridg,no_maven: homebridgplugin,no_maven: homekit,no_maven: java,no_maven: esp8266,no_maven: linux,no_maven: homeautom,no_maven: kafka,no_maven: raspberripi,no_maven: ssl,no_maven: springboot,no_maven: mysql,no_maven: architectur,no_maven: zookeep,no_maven: kubernet,no_maven: opensourc,no_maven: secur,no_maven: nginx

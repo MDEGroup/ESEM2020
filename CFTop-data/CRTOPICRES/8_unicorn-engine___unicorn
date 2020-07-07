@@ -1,0 +1,3 @@
+no_maven: x86,no_maven: secur,no_maven: reversengin,no_maven: m68k,no_maven: emul,no_maven: sparc
+no_maven: framework,no_maven: x8664,no_maven: arm64,no_maven: cpu,no_maven: arm,no_maven: mip
+no_maven: x86,no_maven: raspberripi,no_maven: aarch64,no_maven: reversengin,no_maven: secur,no_maven: c,no_maven: homebridg,no_maven: raspbian,no_maven: emul,no_maven: disassembl,no_maven: powerpc,no_maven: compil,no_maven: window,no_maven: linux,no_maven: nodej,no_maven: ubuntu,no_maven: cpp,no_maven: homekit,no_maven: dockerhomebridg,no_maven: docker

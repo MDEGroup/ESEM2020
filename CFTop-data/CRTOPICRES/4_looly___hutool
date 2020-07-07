@@ -1,0 +1,3 @@
+no_maven: java,no_maven: tool,no_maven: hutool
+no_maven: util,no_maven: json,no_maven: orm,no_maven: http
+no_maven: rest,no_maven: test,no_maven: mysql,no_maven: postgresql,no_maven: sqlite,no_maven: databas,no_maven: python,no_maven: commandlin,no_maven: api,no_maven: golang,no_maven: restapi,no_maven: xml,no_maven: shell,no_maven: bash,no_maven: javascript,no_maven: rout,no_maven: oauth2,no_maven: framework,no_maven: server,no_maven: dart

@@ -1,0 +1,3 @@
+no_maven: github,no_maven: continuintegr,no_maven: appveyor
+no_maven: bor,no_maven: travici,no_maven: elixir
+no_maven: github,no_maven: java,no_maven: slack,no_maven: rubi,no_maven: python,no_maven: oauth2,no_maven: android,no_maven: circleci,no_maven: githubapi,no_maven: terraform,no_maven: jest,no_maven: express,no_maven: node,no_maven: continuintegr,no_maven: deploy,no_maven: rust,no_maven: githubpag,no_maven: erlang,no_maven: slackbot,no_maven: chatop

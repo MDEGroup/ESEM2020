@@ -1,0 +1,8 @@
+1	git://github.com/elixirs/faker
+2	#DEP#testtool
+3	#DEP#databas
+4	#DEP#developtool
+5	#DEP#elixir
+6	#DEP#gener
+7	#DEP#test
+8	#DEP#data

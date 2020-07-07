@@ -1,0 +1,3 @@
+no_maven: oauth,no_maven: restapi,no_maven: python
+no_maven: githubapi,no_maven: django,no_maven: graphql
+no_maven: javascript,no_maven: react,no_maven: python,no_maven: github,no_maven: vue,no_maven: redux,no_maven: docker,no_maven: android,no_maven: io,no_maven: dockersupport,no_maven: koa,no_maven: githubprofil,no_maven: nodej,no_maven: apollo,no_maven: cli,no_maven: api,no_maven: reactnativ,no_maven: electron,no_maven: webapp,no_maven: flutter

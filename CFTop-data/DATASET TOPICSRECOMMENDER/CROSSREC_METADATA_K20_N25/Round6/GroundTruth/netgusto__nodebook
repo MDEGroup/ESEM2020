@@ -1,0 +1,9 @@
+10	#DEP#haskel
+11	#DEP#r
+12	#DEP#elixir
+13	#DEP#lua
+14	#DEP#csharp
+15	#DEP#go
+16	#DEP#rust
+17	#DEP#php
+18	#DEP#cpp

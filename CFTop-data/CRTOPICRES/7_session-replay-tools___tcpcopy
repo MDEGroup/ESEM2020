@@ -1,0 +1,3 @@
+no_maven: loadtest,no_maven: testtool,no_maven: replaymysqltraff,no_maven: smoketest
+no_maven: realtest,no_maven: replayhttptraff,no_maven: replay,no_maven: stresstest,no_maven: test
+no_maven: testtool,no_maven: javascript,no_maven: nodej,no_maven: shell,no_maven: bat,no_maven: bash,no_maven: tap,no_maven: autom,no_maven: mock,no_maven: restapi,no_maven: hybridapp,no_maven: android,no_maven: uitest,no_maven: io,no_maven: typescript,no_maven: testautom,no_maven: golang,no_maven: tdd,no_maven: http,no_maven: monitor

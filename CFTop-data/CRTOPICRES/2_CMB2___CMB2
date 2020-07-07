@@ -1,0 +1,3 @@
+no_maven: wordpress,no_maven: cmb2field,no_maven: repeatfield
+no_maven: php,no_maven: cmb2,no_maven: metabox,no_maven: custommetabox
+no_maven: symfoni,no_maven: compon,no_maven: symfonicompon,no_maven: cli,no_maven: clicommand,no_maven: consol,no_maven: laravel,no_maven: mysql,no_maven: python,no_maven: bundl,no_maven: symfonibundl,no_maven: html,no_maven: xml,no_maven: sql,no_maven: wordpressplugin,no_maven: wordpress,no_maven: cs,no_maven: csselector,no_maven: shell,no_maven: debian

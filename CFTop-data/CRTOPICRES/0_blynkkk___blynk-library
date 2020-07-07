@@ -1,0 +1,3 @@
+no_maven: ethernetshield,no_maven: espressif,no_maven: iotplatform,no_maven: raspberripi,no_maven: arduino,no_maven: esp32,no_maven: esp8266,no_maven: bluetoothlowenergi,no_maven: bluetooth
+no_maven: serialport,no_maven: ota,no_maven: particlphoton,no_maven: wifi,no_maven: hardwar,no_maven: internetth,no_maven: embed,no_maven: gsm,no_maven: iot,no_maven: mbed
+no_maven: arduino,no_maven: raspberripi,no_maven: mqtt,no_maven: linux,no_maven: iotframework,no_maven: microcontrol,no_maven: i2c,no_maven: gpio,no_maven: iotplatform,no_maven: java,no_maven: opensourc,no_maven: uniti,no_maven: threadsaf,no_maven: thread,no_maven: hardwarlibrari,no_maven: opersystem,no_maven: esp8266,no_maven: inteljoul,no_maven: beaglebonblack,no_maven: drone

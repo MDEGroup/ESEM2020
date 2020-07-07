@@ -1,0 +1,9 @@
+1	git://github.com/samuelclay/NewsBlur
+2	#DEP#postgresql
+3	#DEP#mongodb
+4	#DEP#elasticsearch
+5	#DEP#python
+6	#DEP#r
+7	#DEP#android
+8	#DEP#io
+9	#DEP#redi

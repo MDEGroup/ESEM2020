@@ -1,0 +1,3 @@
+no_maven: faaplatform,no_maven: webapi,no_maven: faa,no_maven: eda,no_maven: serverless,no_maven: microservic
+no_maven: azur,no_maven: faaframework,no_maven: eventsourc,no_maven: webjob,no_maven: servicebu,no_maven: akkadotnet,no_maven: cqr
+no_maven: angular,no_maven: cloud,no_maven: nodej,no_maven: edg,no_maven: iot,no_maven: statemanag,no_maven: ngrx,no_maven: ngx,no_maven: redux,no_maven: ddd,no_maven: gateway,no_maven: iothub,no_maven: cs,no_maven: html,no_maven: react,no_maven: vue,no_maven: github,no_maven: git,no_maven: webapp,no_maven: javascript

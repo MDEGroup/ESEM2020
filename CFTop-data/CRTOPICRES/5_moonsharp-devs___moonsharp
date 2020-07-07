@@ -1,0 +1,3 @@
+no_maven: lua,no_maven: mono,no_maven: unity3d,no_maven: moonsharp
+no_maven: xamarin,no_maven: csharp,no_maven: debugg,no_maven: interpret
+no_maven: dotnet,no_maven: io,no_maven: android,no_maven: javascript,no_maven: crossplatform,no_maven: emul,no_maven: debug,no_maven: inspector,no_maven: dotnetcor,no_maven: chrome,no_maven: shell,no_maven: commandlin,no_maven: tensorflow,no_maven: machinlearn,no_maven: uwp,no_maven: essentixamarin,no_maven: watcho,no_maven: maco,no_maven: tvo,no_maven: keyston

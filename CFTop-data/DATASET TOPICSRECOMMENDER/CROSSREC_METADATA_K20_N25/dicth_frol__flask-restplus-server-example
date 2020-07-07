@@ -1,0 +1,8 @@
+1	git://github.com/frol/flask-restplus-server-example
+2	#DEP#openapi
+3	#DEP#oauth2
+4	#DEP#restapi
+5	#DEP#python
+6	#DEP#flask
+7	#DEP#swagger
+8	#DEP#docker

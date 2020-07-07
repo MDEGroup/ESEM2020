@@ -1,0 +1,7 @@
+1	git://github.com/julien-lafont/Mocky
+2	#DEP#scala
+3	#DEP#http
+4	#DEP#javascript
+5	#DEP#tool
+6	#DEP#test
+7	#DEP#mock

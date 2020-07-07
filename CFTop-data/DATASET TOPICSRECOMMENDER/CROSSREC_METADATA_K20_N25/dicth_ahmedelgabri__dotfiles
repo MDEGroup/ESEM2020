@@ -1,0 +1,7 @@
+1	git://github.com/ahmedelgabri/dotfiles
+2	#DEP#shell
+3	#DEP#neovim
+4	#DEP#dotfil
+5	#DEP#vim
+6	#DEP#homebrew
+7	#DEP#zsh

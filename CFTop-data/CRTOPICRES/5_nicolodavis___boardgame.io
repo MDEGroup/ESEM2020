@@ -1,0 +1,3 @@
+no_maven: gameengin,no_maven: boardgam,no_maven: javascript
+no_maven: reactnativ,no_maven: react,no_maven: tabletop
+no_maven: io,no_maven: android,no_maven: compon,no_maven: javascript,no_maven: mobil,no_maven: tool,no_maven: reactcompon,no_maven: webapp,no_maven: es6,no_maven: redux,no_maven: cs,no_maven: updat,no_maven: render,no_maven: pure,no_maven: perform,no_maven: ui,no_maven: html,no_maven: htmlparser,no_maven: htmlrender,no_maven: swipelistview

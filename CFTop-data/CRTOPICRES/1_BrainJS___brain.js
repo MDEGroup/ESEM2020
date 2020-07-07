@@ -1,0 +1,3 @@
+no_maven: nodej,no_maven: node,no_maven: recurrneuralnetwork,no_maven: web,no_maven: neuralnetwork
+no_maven: stream,no_maven: easius,no_maven: browser,no_maven: brain,no_maven: api,no_maven: convolutneuralnetwork
+no_maven: javascript,no_maven: p2p,no_maven: webrtc,no_maven: nodej,no_maven: bittorr,no_maven: machinlearn,no_maven: webtorr,no_maven: python,no_maven: autom,no_maven: neuralnetwork,no_maven: deeplearn,no_maven: websocket,no_maven: typescript,no_maven: neurosci,no_maven: matlab,no_maven: deepneuralnetwork,no_maven: crystal,no_maven: dropboxapi,no_maven: uploadipa,no_maven: enterpris

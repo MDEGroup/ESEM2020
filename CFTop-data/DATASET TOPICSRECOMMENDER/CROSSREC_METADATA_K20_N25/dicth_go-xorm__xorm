@@ -1,0 +1,7 @@
+1	git://github.com/go-xorm/xorm
+2	#DEP#postgr
+3	#DEP#sqlite
+4	#DEP#postgresql
+5	#DEP#golang
+6	#DEP#orm
+7	#DEP#mysql

@@ -1,0 +1,3 @@
+no_maven: datavisu,no_maven: plotli,no_maven: fintech
+no_maven: chartlibrari,no_maven: bioinformat,no_maven: react,no_maven: d3
+no_maven: visual,no_maven: datavisu,no_maven: chart,no_maven: javascript,no_maven: dataviz,no_maven: svg,no_maven: python,no_maven: datascienc,no_maven: d3j,no_maven: cs,no_maven: dashboard,no_maven: map,no_maven: genom,no_maven: flask,no_maven: d3visual,no_maven: nteract,no_maven: materiinformat,no_maven: matlab,no_maven: threej,no_maven: dataanalysi

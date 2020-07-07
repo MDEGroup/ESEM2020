@@ -1,0 +1,8 @@
+1	git://github.com/elasticluster/elasticluster
+2	#DEP#python
+3	#DEP#azur
+4	#DEP#gcp
+5	#DEP#spark
+6	#DEP#ansibl
+7	#DEP#cloud
+8	#DEP#cluster

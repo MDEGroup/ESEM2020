@@ -1,0 +1,3 @@
+no_maven: kubernet,no_maven: jenkin,no_maven: saltstack,no_maven: novnc,no_maven: androidemul,no_maven: azur,no_maven: dockerandroid,no_maven: emul,no_maven: terraform,no_maven: mobilapp
+no_maven: android,no_maven: gcp,no_maven: aw,no_maven: mobilweb,no_maven: seleniumgrid,no_maven: selenium,no_maven: docker,no_maven: cloud,no_maven: alibabacloud,no_maven: genymot
+no_maven: azur,no_maven: kubernet,no_maven: python,no_maven: serverless,no_maven: golang,no_maven: devop,no_maven: java,no_maven: cluster,no_maven: go,no_maven: spark,no_maven: infrastructurcod,no_maven: alibaba,no_maven: dockerselenium,no_maven: maven,no_maven: javascript,no_maven: pgp,no_maven: secretmanag,no_maven: secretdistribut,no_maven: secur,no_maven: chrome

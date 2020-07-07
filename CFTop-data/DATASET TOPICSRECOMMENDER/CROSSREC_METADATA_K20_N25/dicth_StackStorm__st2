@@ -1,0 +1,7 @@
+1	git://github.com/StackStorm/st2
+2	#DEP#workflow
+3	#DEP#deploy
+4	#DEP#cicd
+5	#DEP#python
+6	#DEP#autom
+7	#DEP#devop

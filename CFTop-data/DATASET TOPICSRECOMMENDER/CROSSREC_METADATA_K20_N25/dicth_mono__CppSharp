@@ -1,0 +1,7 @@
+1	git://github.com/mono/CppSharp
+2	#DEP#c
+3	#DEP#par
+4	#DEP#parser
+5	#DEP#csharp
+6	#DEP#dotnet
+7	#DEP#cplusplu

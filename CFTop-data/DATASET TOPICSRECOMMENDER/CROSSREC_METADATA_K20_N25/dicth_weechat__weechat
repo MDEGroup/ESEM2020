@@ -1,0 +1,12 @@
+1	git://github.com/weechat/weechat
+2	#DEP#php
+3	#DEP#c
+4	#DEP#script
+5	#DEP#python
+6	#DEP#javascript
+7	#DEP#rubi
+8	#DEP#perl
+9	#DEP#extens
+10	#DEP#client
+11	#DEP#lua
+12	#DEP#chat

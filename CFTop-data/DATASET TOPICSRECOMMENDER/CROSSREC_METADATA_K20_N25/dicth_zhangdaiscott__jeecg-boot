@@ -1,0 +1,8 @@
+1	git://github.com/zhangdaiscott/jeecg-boot
+2	#DEP#mybati
+3	#DEP#vue
+4	#DEP#java
+5	#DEP#jwt
+6	#DEP#springcloud
+7	#DEP#redi
+8	#DEP#springboot

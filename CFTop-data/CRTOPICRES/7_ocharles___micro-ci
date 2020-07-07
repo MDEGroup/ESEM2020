@@ -1,0 +1,3 @@
+no_maven: nixpkg,no_maven: continuintegr,no_maven: dhall
+no_maven: haskel,no_maven: nix,no_maven: nixo
+no_maven: compil,no_maven: privaci,no_maven: encrypt,no_maven: crypto,no_maven: p2p,no_maven: peerpeer,no_maven: functionprogram,no_maven: present,no_maven: markdown,no_maven: javascript,no_maven: cpp,no_maven: slideshow,no_maven: slide,no_maven: dataflowanalysi,no_maven: llvm,no_maven: optimis,no_maven: linter,no_maven: shell,no_maven: pandoc,no_maven: swift

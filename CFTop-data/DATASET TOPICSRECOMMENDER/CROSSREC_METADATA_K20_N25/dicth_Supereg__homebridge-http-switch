@@ -1,0 +1,7 @@
+1	git://github.com/Supereg/homebridge-http-switch
+2	#DEP#http
+3	#DEP#homebridg
+4	#DEP#notif
+5	#DEP#javascript
+6	#DEP#homekit
+7	#DEP#homebridgplugin

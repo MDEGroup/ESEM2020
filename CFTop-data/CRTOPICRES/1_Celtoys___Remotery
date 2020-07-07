@@ -1,0 +1,3 @@
+no_maven: c,no_maven: opengl,no_maven: metal,no_maven: profil
+no_maven: cuda,no_maven: d3d11,no_maven: cpu,no_maven: gpu
+no_maven: opengl,no_maven: d3d12,no_maven: python,no_maven: xmr,no_maven: monero,no_maven: vulkan,no_maven: gpgpu,no_maven: opencl,no_maven: compil,no_maven: graphic,no_maven: directx,no_maven: ubuntu,no_maven: nodej,no_maven: javascript,no_maven: nvidia,no_maven: miner,no_maven: direct3d,no_maven: mine,no_maven: debugg,no_maven: perform

@@ -1,0 +1,3 @@
+no_maven: vue,no_maven: pusher,no_maven: websocket
+no_maven: laravel,no_maven: laravelecho,no_maven: dashboard,no_maven: php
+no_maven: cmf,no_maven: admin,no_maven: cmframework,no_maven: backend,no_maven: githubapi,no_maven: github,no_maven: googl,no_maven: platform,no_maven: cm,no_maven: continudeliveri,no_maven: devop,no_maven: continudeploy,no_maven: piplin,no_maven: continuintegr,no_maven: bookstack,no_maven: wiki,no_maven: document,no_maven: selfhost,no_maven: llum,no_maven: devtool

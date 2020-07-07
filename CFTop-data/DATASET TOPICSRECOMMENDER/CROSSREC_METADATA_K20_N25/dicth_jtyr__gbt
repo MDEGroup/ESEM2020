@@ -1,0 +1,10 @@
+1	git://github.com/jtyr/gbt
+2	#DEP#shell
+3	#DEP#docker
+4	#DEP#python
+5	#DEP#ssh
+6	#DEP#vagrant
+7	#DEP#mysql
+8	#DEP#go
+9	#DEP#zsh
+10	#DEP#bash

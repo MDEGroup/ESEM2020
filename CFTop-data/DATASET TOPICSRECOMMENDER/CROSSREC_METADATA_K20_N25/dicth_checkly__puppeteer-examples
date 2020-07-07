@@ -1,0 +1,8 @@
+1	git://github.com/checkly/puppeteer-examples
+2	#DEP#nodej
+3	#DEP#node
+4	#DEP#monitor
+5	#DEP#puppet
+6	#DEP#jest
+7	#DEP#test
+8	#DEP#developtool

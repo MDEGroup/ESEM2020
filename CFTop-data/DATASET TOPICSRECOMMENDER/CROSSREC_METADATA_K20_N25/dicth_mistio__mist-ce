@@ -1,0 +1,9 @@
+1	git://github.com/mistio/mist-ce
+2	#DEP#docker
+3	#DEP#python
+4	#DEP#monitor
+5	#DEP#devop
+6	#DEP#server
+7	#DEP#aw
+8	#DEP#contain
+9	#DEP#cloud

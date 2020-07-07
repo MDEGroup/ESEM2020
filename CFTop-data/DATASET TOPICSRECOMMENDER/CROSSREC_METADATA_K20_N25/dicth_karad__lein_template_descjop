@@ -1,0 +1,11 @@
+1	git://github.com/karad/lein_template_descjop
+2	#DEP#nodej
+3	#DEP#window
+4	#DEP#osx
+5	#DEP#npm
+6	#DEP#packag
+7	#DEP#html
+8	#DEP#electron
+9	#DEP#clojur
+10	#DEP#atom
+11	#DEP#linux

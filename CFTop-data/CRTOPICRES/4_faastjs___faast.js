@@ -1,0 +1,3 @@
+no_maven: serverless,no_maven: typescript,no_maven: javascript
+no_maven: batch,no_maven: librari,no_maven: batchprocess,no_maven: faa
+no_maven: serverless,no_maven: docker,no_maven: kubernet,no_maven: lambda,no_maven: awlambda,no_maven: k8,no_maven: microservic,no_maven: contain,no_maven: serverlessfunct,no_maven: functionserv,no_maven: function,no_maven: hacktoberfest,no_maven: materidesign,no_maven: ui,no_maven: anim,no_maven: compon,no_maven: swarm,no_maven: cloud,no_maven: serverlessarchitectur,no_maven: aw

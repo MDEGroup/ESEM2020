@@ -1,0 +1,3 @@
+no_maven: shell,no_maven: fish,no_maven: autosuggest
+no_maven: zshautosuggest,no_maven: zsh,no_maven: autocomplet
+no_maven: bash,no_maven: shell,no_maven: javascript,no_maven: syntaxhighlight,no_maven: atom,no_maven: termin,no_maven: ajax,no_maven: jqueriplugin,no_maven: linux,no_maven: python,no_maven: maco,no_maven: developtool,no_maven: shellscript,no_maven: cli,no_maven: shellexten,no_maven: compon,no_maven: vanilla,no_maven: frontend,no_maven: es6,no_maven: mysql

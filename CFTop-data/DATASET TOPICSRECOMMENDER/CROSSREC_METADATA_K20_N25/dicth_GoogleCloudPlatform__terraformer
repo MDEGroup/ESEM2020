@@ -1,0 +1,7 @@
+1	git://github.com/GoogleCloudPlatform/terraformer
+2	#DEP#kubernet
+3	#DEP#aw
+4	#DEP#golang
+5	#DEP#terraform
+6	#DEP#gcp
+7	#DEP#cloud

@@ -1,0 +1,8 @@
+1	git://github.com/florent37/Android-NoSql
+2	#DEP#mongodb
+3	#DEP#firebas
+4	#DEP#nosql
+5	#DEP#sql
+6	#DEP#android
+7	#DEP#data
+8	#DEP#local

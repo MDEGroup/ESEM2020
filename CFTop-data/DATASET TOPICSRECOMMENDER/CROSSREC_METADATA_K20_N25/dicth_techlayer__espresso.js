@@ -1,0 +1,9 @@
+1	git://github.com/techlayer/espresso.js
+2	#DEP#vue
+3	#DEP#es6
+4	#DEP#j
+5	#DEP#javascript
+6	#DEP#vuej
+7	#DEP#reactj
+8	#DEP#react
+9	#DEP#mvc

@@ -1,0 +1,3 @@
+no_maven: ipythonnotebook,no_maven: python,no_maven: jupytnotebook
+no_maven: machinlearn,no_maven: music,no_maven: musicinformretriev
+no_maven: linux,no_maven: qt,no_maven: musicplay,no_maven: audio,no_maven: neuralnetwork,no_maven: window,no_maven: mac,no_maven: cpluplu,no_maven: python,no_maven: datascienc,no_maven: youtub,no_maven: deeplearn,no_maven: audioprocess,no_maven: faust,no_maven: synth,no_maven: raspberripi,no_maven: uidesign,no_maven: synthes,no_maven: sequenc,no_maven: lastfm

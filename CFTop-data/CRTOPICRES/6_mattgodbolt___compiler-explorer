@@ -1,0 +1,3 @@
+no_maven: compil,no_maven: haskel,no_maven: dlang,no_maven: swift,no_maven: cpluplu
+no_maven: assembl,no_maven: go,no_maven: rust,no_maven: ispc,no_maven: cpp
+no_maven: java,no_maven: javascript,no_maven: python,no_maven: php,no_maven: rubi,no_maven: c,no_maven: swift,no_maven: haskel,no_maven: csharp,no_maven: tool,no_maven: commandlin,no_maven: termin,no_maven: cli,no_maven: emul,no_maven: cryptographi,no_maven: typescript,no_maven: golang,no_maven: scala,no_maven: lua,no_maven: r

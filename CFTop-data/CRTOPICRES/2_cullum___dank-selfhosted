@@ -1,0 +1,3 @@
+no_maven: dn,no_maven: prosodi,no_maven: spamd,no_maven: selfhost,no_maven: dnssec,no_maven: xmpp
+no_maven: openbsd,no_maven: nsd,no_maven: email,no_maven: dovecot,no_maven: ansibl,no_maven: opensmtpd
+no_maven: python,no_maven: freebsd,no_maven: linux,no_maven: autom,no_maven: cs,no_maven: secur,no_maven: python3,no_maven: django,no_maven: c,no_maven: postfix,no_maven: html,no_maven: watchhtml,no_maven: respons,no_maven: sas,no_maven: responsemail,no_maven: emailsignatur,no_maven: inlinstyl,no_maven: javascript,no_maven: privaci,no_maven: smtp

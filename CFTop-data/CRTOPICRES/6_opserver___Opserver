@@ -1,0 +1,3 @@
+no_maven: monitor,no_maven: bosun,no_maven: sql
+no_maven: orion,no_maven: elasticsearch,no_maven: dotnet,no_maven: redi
+no_maven: mongodb,no_maven: rabbitmq,no_maven: mysql,no_maven: springboot,no_maven: csharp,no_maven: docker,no_maven: mybati,no_maven: rocketmq,no_maven: kafka,no_maven: postgresql,no_maven: springcloud,no_maven: memcach,no_maven: spark,no_maven: python,no_maven: dubbo,no_maven: quartz,no_maven: springsecur,no_maven: swagger,no_maven: websocket,no_maven: cach
