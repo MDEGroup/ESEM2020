@@ -1,0 +1,106 @@
+
+%This section discusses relevant work in this domain.
+%Recently, \GH integrates the \emph{repo-topix}~\cite{repo-topix} tool with the aim of recommending topics for a \GH repository. Textual metadata (\ie README files and repository's description) are manipulated by NLP techniques to find a set of topics suitable for describing and classifying the repository. 
+
+Immediately after the introduction of topics in the \GH platform, the 
+Repo-Topix tool was presented \cite{ganesan_topic_2017}. Such a tool relies on 
+parsing the \RM files and the textual content of a given \GH repository to 
+suggest topics automatically. As a first step, the tool applies standard NLP 
+techniques on the input artifacts. Then, it filters an initial set of topics 
+by exploiting the TF-IDF scheme and a regression model to exclude \emph{``bad''} 
+topics. As the final step, Repo-Topix computes a custom version of the Jaccard 
+distance to discover additional similar topics. A rough evaluation based on the 
+n-gram ROUGE-1 metrics has been conducted by counting the number of overlapping 
+units between the recommended topics and the repository description. 
+Nevertheless, a replication package with the complete dataset and the source 
+code of the tool is not available, and this hampers further investigations and comparisons. 
+%are hampered.
+
+
+%Nevertheless, neither the tool nor the dataset is made available, thus a comparison with the approach is not feasible.
+
+
+%In~\cite{orii2012collaborative}, the author proposes 
+A collaborative topic regression (CTR) model has been proposed to extract topics from a given \GH repository~\cite{orii2012collaborative}. The final 
+aim is to recommend other similar projects given the input one. For a pair of 
+user-repository, the approach uses a Gaussian model to compute matrix 
+factorization and extract the latent vectors given a pre-computed matrix 
+rating. Additionally, a probabilistic topic modeling is applied to find topics 
+from the repositories by analyzing high frequent terms. The approach was 
+evaluated by conducting five-fold cross-validation on a dataset composed of  
+120,867 repositories. Such evaluation considers user-repository pairs that 
+have at least 3 watches. Differently from \TF, this approach can recommend \GH 
+ repositories that are relevant with respect to the topics of the input 
+ repository.
+
+Lia \etal \cite{liao_user_2018} propose a user-oriented portrait model to 
+recommend a set of \GH projects that can be of interest for a given user. An 
+initial set of labels is obtained by computing the LDA algorithm on the textual 
+elements of a repository, \ie issues, commits, and pull requests. Then, the 
+approach exploits a project familiarity technique that relies on the user's 
+behavior, considering the different repositories operation. Such a strategy 
+enables the collaborative filtering technique that exploits two kinds of 
+similarity, \ie attribute and social similarity. The former takes into account personal user information such as company, geographical information 
+and the time when the account has been created. The latter computes similarity scores considering the proportion of items contributed by the user. 
+The approach was evaluated by considering 80 users with an average of 
+1,894 different behaviors for each one. By considering the first two months of 
+activity in 2016 as a test set, the assessment shows that the approach improves 
+the performances in terms of precision, recall, and success rate of the 
+considered baseline. Though both \TF and the presented work~\cite{liao_user_2018} make use of collaborative-filtering techniques, the 
+former is designed to recommend topics to be assigned to an input \GH 
+repository, whereas the latter recommends \GH repositories that can be of 
+interest for a given user.
+
+
+A model-based fuzzy C-means for collaborative filtering (MFCCF) has been 
+proposed \cite{ajoudanian_recommending_2019} to recommend relevant human 
+resources during the \GH project development. Similarly to our approach, the 
+proposed model encodes relevant information about repositories in a graph 
+structure and extracts from it a sparse test sub-graph. This is a 
+preparatory phase to enable the fuzzy C-means clustering technique. Using the 
+computed sparse sub-graph as the centre of the cluster, the model can handle 
+the sparsity issue that generally arises in the CF domain. Then, MFCCF computes 
+the Pearson Correlation for each pair user-item belonging to a cluster and 
+retrieves the top-N results. The evaluation was performed using the GHTorrent 
+dump to collect the necessary information. Using ten projects as the testing 
+dataset, the results of MFCCF are compared with the ones chosen by the human 
+resource department of the considered company. The results demonstrate the 
+effectiveness of the approach with an accuracy of 80\% on average. 
+
+The REPERSP tool \cite{xu_repersp_2017} recommends \GH projects by exploiting 
+users' behaviour. As the first step, the tool computes the similarities between 
+projects using the TF-IDF weighting scheme to obtain the content similarity 
+matrix. Additionally, REPERSP captures the developer's behaviour by considering 
+her activity on \GH, \ie create, star, and fork actions over projects. A 
+different value is assigned for each type of action to create a user-project 
+matrix. Finally, the tool combines the two similarity matrices to deliver the 
+recommended projects. To assess the quality of the work, REPERSP was compared 
+with the traditional collaborative filtering techniques, \ie user-based and 
+item-based. The study was conducted over two groups with different users, 
+projects, and purposes. The results show that the proposed tool outperforms the 
+considered baseline in terms of accuracy, precision, and recall. 
+
+Besides \GH projects, tags and topics are successfully used in different 
+contexts, \ie in social networks. Purushotham \etal~\cite{purushotham_collaborative_nodate} propose a hierarchical Bayesian model 
+that relies on a topic model to provide final users with relevant items. By 
+combining  LDA and matrix factorization techniques, the proposed model is able 
+to reduce the sparsity problem that typically occurs when the collaborative 
+filtering is employed. After this preprocessing phase, the hierarchical 
+Bayesian model is tuned with several parameters to maximize the prediction 
+performances. The models were evaluated by using two large real-world datasets 
+tailored for music and bookmark recommendations. The experimental results show that the 
+proposed model outperforms the classical CTR model with respect to recall. 
+
+%Bog\'ardi-M\'esz\"oly \etal \cite{bogardi-meszoly_tag_2013} propose two 
+%different recommender systems based on vocabulary have been proposed \ie tags 
+%and topics 
+%recommenders. The first filters the initial thesaurus terms using algorithms 
+%to 
+%correct spelling and clerical errors. Then, the filtered tags are grouped into 
+%distinct classes to highlight the popular ones. The topics recommender 
+%improves 
+%the former model by constructing a graph from the tags. The following steps 
+%involve the identification of relevant topics and their graphical 
+%visualization 
+%in the so-called topic clouds. The soundness of the approach is assessed by 
+%comparing the obtained outcomes with the real-world thesis portal 

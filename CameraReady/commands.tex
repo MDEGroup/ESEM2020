@@ -1,0 +1,59 @@
+
+
+
+% Usual suspects
+
+\newcommand*{\ie}{i.e.,\@\xspace}
+\newcommand*{\eg}{e.g.,\@\xspace}
+\newcommand*{\cf}{cf.\@\xspace}
+\newcommand*{\RM}{README\@\xspace}
+\newcommand*{\GH}{GitHub\@\xspace}
+\newcommand*{\CT}{TopFilter\@\xspace}
+\newcommand*{\TF}{TopFilter\@\xspace}
+%\newcommand*{\TFa}{TopFilter-$\alpha$\@\xspace}
+%\newcommand*{\TFb}{TopFilter-$\beta$\@\xspace}
+\newcommand*{\TFa}{TopFilter\@\xspace}
+\newcommand*{\TFb}{TopFilter\@\xspace}
+%\newcommand*{\CT}{CFTop\@\xspace}
+\newcommand*{\MNB}{MNBN\@\xspace}
+\newcommand*{\CR}{<RECOMMENDER ACRONYM>\@\xspace}
+\newcommand\revised[1]{\textcolor{blue}{#1}}
+\newcommand{\code}[1]{{\small \texttt{#1}}}
+\newcommand*{\LF}{LibFinder\@\xspace}
+\newcommand*{\LC}{LibCUP\@\xspace}
+\newcommand*{\LR}{LibRec\@\xspace}
+
+\newcommand{\rqfirst}{\emph{RQ$_1$: Which \TFa configuration yields the best performance?}~}%\emph{How \CT parameter settings impact on the prediction performance?}~} 
+%\newcommand{\rqsecond}{\textbf{RQ$_2$}: \emph{How the parameters have been evaluated?}~}
+\newcommand{\rqsecond}{\emph{RQ$_2$: To what extent can the accuracy of \MNB be improved by means of \TFb?}~}
+\newcommand{\rqthird}{\textbf{RQ$_3$}: \emph{How \CT behave with respect the \MNB in terms of prediction performance?}~}
+
+%\renewcommand{\hl}{}
+
+
+%%%
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\color{black} 
+		\node[shape=circle,draw=cyan,fill=black!10!white,inner sep=.3pt] (char) {\sffamily{\small{\textbf{#1}}}};}}
+	
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+\makeatletter
+\newcommand*{\etc}{%
+	\@ifnextchar{.}%
+	{etc}%
+	{etc.\@\xspace}%
+}
+\makeatother
+\newcommand*{\etal}{\emph{et~al.}\@\xspace}
+
+\newcommand{\nb}[2]{
+	\fbox{\bfseries\sffamily\scriptsize#1}
+	{\sf\small$\blacktriangleright$\textit{#2}$\blacktriangleleft$}
+}
+
+\newcommand\PN[1]{\textcolor{blue}{\nb{Phuong}{#1}}}
+\newcommand\CDS[1]{\textcolor{red}{\nb{Claudio}{#1}}}
+\newcommand\JDR[1]{\textcolor{orange}{\nb{Juri}{#1}}}
+\definecolor{verylightgray}{gray}{0.95}
+%Is the approach able to provide consistent recommendations?
+

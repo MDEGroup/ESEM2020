@@ -1,0 +1,97 @@
+\GH is one of the most used development services that includes version control 
+systems (\ie git) plus social and collaborative features (\eg bug tracking, 
+contribution requests, task management, and wikis).
+At the time of writing this paper, \GH counts more than 40 million users and 
+over 100 million repositories. Because of this enormous amount of data, the 
+availability of reusable projects might be compromised if they cannot be 
+suitably discovered. In recent years, \GH introduced a  mechanism based on 
+topics to explore repositories. The managed \GH repositories are being continuously 
+monitored and assigned with topics to improve their organization. Moreover, 
+repositories are periodically analyzed to extract the most popular and active 
+topics (\ie \emph{featured topics\footnote{\url{https://github.com/topics}}}). 
+Thus, users can observe the community's trend by consulting such a public list. 
+In the beginning, this activity was entirely done by humans (\ie project 
+contributors) who label the repository according to their knowledge, feeling 
+and belief. In the literature, there are a plenty of approaches that mine and exploit available 
+data to analyze repositories. Nevertheless, a few of them cope with the topic 
+recommendation task, which can be crucial in the project's development initial 
+phase. Figure \ref{fig:SpaceshipGenerator} shows an explanatory repository with 
+related topics. By this simple snapshot, a \GH user can figure out that the 
+\emph{SpaceshipGenerator}\footnote{\label{note:spaceship}\url{https://github.com/a1studmuffin/SpaceshipGenerator}}
+ repository makes use of \emph{Blender-scripts} (\ie a \emph{python} 3d 
+modeling library) for \emph{procedural-generation} of \emph{3d} spaceships from 
+a random seed.
+
+
+\begin{figure*}[h!]
+    \centering
+    \includegraphics[width=0.80\linewidth]{figs/SpaceshipGenerator.png}
+    \caption{A \GH repository with different topics.}
+    \label{fig:SpaceshipGenerator}
+\end{figure*}
+
+
+As previously mentioned, the \MNB approach takes as input \RM file(s) of a given 
+repository to recommend the related featured topics, which can be assigned to 
+it. To conceive \MNB~\cite{10.1145/3383219.3383227}, the authors have adopted standard techniques employed in the 
+ML domain, \ie textual engineering, feature extraction, and training phase. By 
+relying on the multinomial probability distribution, the approach can extract 
+relevant information from \RM file(s) and suggest a set of topics. Table 
+\ref{tab:example} shows an example of the outcomes obtained by \MNB given the list of the actual repository topics. 
+
+\begin{table}[h]
+\centering
+\resizebox{8.5cm}{!} {
+\footnotesize
+\begin{tabular}{| p{3.2cm} | p{3.2cm} | }
+\hline
+ \textbf{Actual Topics} &\textbf{ Recommended topics} \\ \hline
+     python, blender-scripts, spaceship, procedural-generation, 
+     game-development, 3d        &  
+  shell, terminal, \textbf{3d},    opengl,    \textbf{python}        \\ \hline
+
+\end{tabular}
+}
+\caption{Example of the \MNB outcomes for the \emph{SpaceshipGenerator} repository.}
+\label{tab:example}
+\end{table} 
+
+
+Though \MNB works in practice, it suffers some limitations. First, the 
+underlying model can recommend only featured topics that represent only a small 
+set of all possible terms that can be potentially assigned to the analysed 
+repository.
+% that can be restricted because of antonymous term(\eg programming %languages).
+%
+For instance, \emph{blender-scripts}\footnote{blender is the most used python 
+library to manipulate 3d objects. \url{https://www.blender.org/}} as well as 
+\emph{game-development} (which are not featured topics) could be recommended as 
+possible topics because the project includes both \emph{3d} and \emph{python} 
+topics. Thus, \MNB does not express all the concepts covered by a \GH 
+repository. As shown in the table, only two of the predicted topics match 
+with the real ones. Moreover, in the case the repository already includes all 
+suggested topics, \MNB is not able to recommend new ones.
+The second major limitation is the underlying structure needed for the training 
+phase. \MNB requires a \emph{balanced} dataset to deliver relevant items, 
+\ie each topic must have a similar number of \RM files. It is indeed challenging to satisfy such a constraint in practice, as topics are generally heterogeneous. 
+Furthermore, repositories in \GH are regularly updated with new topics, and 
+thus, the training phase must take place several times to avoid outdated 
+recommendations. 
+
+In recent years, many techniques have been conceived to predict users' interests 
+by relying on the preferences collected from other users. Such techniques can 
+be classified as  \emph{content-based}~\cite{Pazzani2007} where the 
+relationships among items have been exploited to predict the most similar items,
+or \emph{collaborative-filtering}~\cite{Miranda:2008:ICF:1486927.1487083} that 
+calculates the missing ratings by taking into account the set of items rated by 
+similar customers. There are two main types of collaborative-filtering 
+recommendation: \emph{user-based} \cite{Zhao:2010:UCR:1748610.1749278} and 
+\emph{item-based} \cite{Sarwar:2001:ICF:371920.372071} techniques. The former 
+computes missing ratings by considering the ratings collected from similar 
+users, whereas, the latter performs the same task by using the similarities 
+among items \cite{Cremonesi:2008:EMC:1468165.1468327}.
+
+In the following section, we show that the proposed collaborative-filtering 
+approach can recommend missing topics for \GH repositories. Moreover, we also 
+demonstrate that it is possible to increase the accuracy of \MNB by combining 
+it with the proposed technique.

@@ -1,0 +1,298 @@
+%%
+%% This is file `sample-sigconf.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `sigconf')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-sigconf.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%% The ol powerpointfirst command in your LaTeX source must be the \documentclass command.
+\documentclass[sigconf,review,screen]{acmart} %anonymous
+%\documentclass[sigconf]{acmart,review}
+\usepackage{xspace}
+
+%\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{color, colortbl}
+\usepackage[all]{nowidow}
+\usepackage[inline]{enumitem}
+\usepackage[scaled]{beramono}
+\usepackage{booktabs} % For formal tables
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[tight,footnotesize]{subfigure}
+\usepackage{multirow}
+\usepackage{balance}
+\usepackage{listings}
+%\usepackage{microtype}
+\usepackage{tcolorbox}
+\usepackage{cleveref}
+\usepackage{soul}
+\usepackage{lscape}
+\usepackage{lineno}
+%\usepackage[disable]{todonotes}
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+%\setcopyright{acmcopyright}
+%\copyrightyear{2020}
+%\acmYear{2020}
+%\acmDOI{10.1145/1122445.1122456}
+
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[ESEM 2020]{The International Symposium on Empirical Software Engineering and Measurement}{September, 2020}{Bari, Italy}
+%\acmConference[Woodstock '18]{Woodstock '18: ACM Symposium on Neural
+%  Gaze Detection}{June 03--05, 2018}{Woodstock, NY}
+%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%  June 03--05, 2018, Woodstock, NY}
+\acmPrice{15.00}
+\acmISBN{978-1-4503-XXXX-X/18/06}
+
+\begin{document}
+
+\title{The Name of the Title is Hope}
+
+\title{\CT: Using collaborative filtering to recommend \GH topics}
+
+\title{\TF: A Recommender System for Mining Relevant \GH Topics}
+
+\title{\TF: An Approach to Recommend Relevant \GH Topics}%A Recommender 
+%System to Provide Automatic \GH Topics
+
+
+
+\author{Juri Di Rocco, Claudio Di Sipio, Davide Di Ruscio, Phuong Nguyen, Riccardo Rubei}
+%	%\authornote{Dr.~Trovato insisted his name be first.}
+%	\orcid{1234-5678-9012}
+\affiliation{%
+	\institution{Universit\`a degli studi dell'Aquila, Via Vetoio 2, 67100 -- L'Aquila, Italy}
+	%\streetaddress{Via Coppito 2 -- 67100 L'Aquila, Italy}
+	%	\city{Via Vetoio 2 -- 67100 L'Aquila, Italy} 
+	%  \state{Ohio} 
+	%  \postcode{43017-6221}
+}
+\email{{juri.dirocco, claudio.disipio, davide.diruscio,phuong.nguyen, riccardo.rubei}@univaq.it} % firstname.lastname
+
+
+
+
+%\author{Juri Di Rocco}
+%\affiliation{%
+% \institution{Universit\'a degli studi dell'Aquila}
+%  \streetaddress{1 Th{\o}rv{\"a}ld Circle}
+%  \city{Hekla}
+%  \country{Iceland}}
+%}
+%\email{juri.dirocco@univaq.it}
+
+
+
+%\renewcommand{\shortauthors}{Juri Di Rocco, et al.}
+\input{commands}
+\definecolor{Gray}{gray}{0.9}
+ 
+
+
+\begin{abstract}
+\textit{Background:} In the context of software development, \GH has been at the forefront of platforms to
+%gained a valuable role in 
+store, analyze and maintain a large number of software repositories. Topics have been introduced by \GH as an effective 
+method to 
+annotate stored repositories. However, labeling GitHub repositories should be 
+carefully conducted to avoid adverse effects on project popularity and 
+reachability.
+\textit{Aims:} We present \TF, a novel approach to assist open source 
+software developers in selecting suitable topics for GitHub repositories being 
+created.
+\textit{Method:} We built a project-topic matrix and applied a syntactic-based 
+similarity 
+function to recommend missing topics by representing repositories and related 
+topics in a graph-based manner. The ten-fold cross-validation methodology has 
+been used to assess the performance of \TF by considering different 
+metrics, \ie success rate, precision, recall, and catalog coverage.
+\textit{Result:} The results show that \TF recommends good topics 
+depending on different factors, \ie collaborative filtering settings, 
+considered datasets, and pre-processing activities. Moreover, \TF can be combined with a state-of-the-art topic recommender system (\ie MNB 
+network) to improve the overall prediction performance.
+\textit{Conclusion:} Our results confirm that collaborative filtering 
+techniques can successfully be used to recommend relevant topics for GitHub 
+repositories. Moreover, \TF can gain a significant boost in prediction 
+performances by employing the outcomes obtained by the MNB network as its 
+initial set of topics.
+
+%%Collaborative filtering is a well-founded technique widely used in the 
+%%recommendation system domain. 
+%$\blacksquare$~\textbf{Background} 
+%%In recent years, a plethora of approaches have been developed to provide the 
+%%users with relevant items. 
+%In the context of software development, \GH has gained a precious role in 
+%storing, analyzing and maintaining a considerable number of repositories.
+%% In the recent years, \GH introduced the possibility to classify them 
+%%employing topics to represent the stored projects in an effective manner.   
+%Topics have been introduced by \GH as an effective manner to annotate stored 
+%repositories. However,
+%% to increase their reachability and help developers when they are 
+%%searching for existing software artifacts satisfying their needs.  However,
+%labeling \GH repositories should be carefully conducted to avoid 
+%adverse effects on project popularity and reachability.
+%%$\blacksquare$~\textbf{Aims}  In this paper, we present \CT, a recommender 
+%%system to assist open source software developers in selecting suitable topics 
+%%for the repositories. \CT exploits a collaborative filtering technique to 
+%%recommend topics to developers by relying on the set of initial ones, which 
+%%are 
+%%currently included in the project being. 
+%$\blacksquare$~\textbf{Aims} We present \TF, a novel approach to assist open 
+%source software developers in selecting suitable topics for \GH repositories. 
+%%
+%%\CT exploits a collaborative filtering technique to recommend topics to 
+%%developers by relying on the set of initial ones, which are currently 
+%%included 
+%%in the project being. 
+%$\blacksquare$~\textbf{Method} We built a user-item matrix and applied a 
+%syntactic-based similarity function to recommend missing topics by 
+%representing 
+%repositories and related topics in a graph-based manner. 
+%%To the best of our knowledge, this is the first approach that uses 
+%%collaborative filtering technique for recommending useful topics to a \GH 
+%%repository. At which point, 
+%The \emph{ten-fold cross-validation} methodology has been used to assess the 
+%performance of \CT by considering different metrics, \ie precision, recall, 
+%and 
+%catalog coverage.
+%%we validated the approach by considering different metrics, aiming to study 
+%%various quality aspects (\ie which \CT parameters provide better prediction 
+%%performance)., 
+%$\blacksquare$~\textbf{Result} The results show how \CT recommends good topics 
+%depending on different factors, \ie collaborative filtering settings, 
+%considered 
+%datasets and pre-processing activities. Moreover, we show how \CT  can be 
+%combined with an existing topic recommender systems (\ie \MNB) to improve 
+%the 
+%initial overall prediction performances. 
+%$\blacksquare$~\textbf{Conclusion}
+%Our results confirm that collaborative filtering techniques can be 
+%successfully 
+%used to recommend relevant topics for \GH repositories. Moreover, \TF 
+%can 
+%gain a significant boost in prediction performances by employing the \MNB 
+%outcomes as input topics.
+
+\end{abstract}
+
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+
+%\begin{CCSXML}
+%<ccs2012>
+% <concept>
+%  <concept_id>10010520.10010553.10010562</concept_id>
+%  <concept_desc>Computer systems organization~Embedded systems</concept_desc>
+%  <concept_significance>500</concept_significance>
+% </concept>
+% <concept>
+%  <concept_id>10010520.10010575.10010755</concept_id>
+%  <concept_desc>Computer systems organization~Redundancy</concept_desc>
+%  <concept_significance>300</concept_significance>
+% </concept>
+% <concept>
+%  <concept_id>10010520.10010553.10010554</concept_id>
+%  <concept_desc>Computer systems organization~Robotics</concept_desc>
+%  <concept_significance>100</concept_significance>
+% </concept>
+% <concept>
+%  <concept_id>10003033.10003083.10003095</concept_id>
+%  <concept_desc>Networks~Network reliability</concept_desc>
+%  <concept_significance>100</concept_significance>
+% </concept>
+%</ccs2012>
+%\end{CCSXML}
+%
+%\ccsdesc[500]{Computer systems organization~Embedded systems}
+%\ccsdesc[300]{Computer systems organization~Redundancy}
+%\ccsdesc{Computer systems organization~Robotics}
+%\ccsdesc[100]{Networks~Network reliability}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Recommender systems, GitHub topics recommendation, Collaborative filtering}
+
+\maketitle
+	\section{Introduction}
+\label{sec:Introduction}
+\input{src/Introduction}
+
+
+\section{Motivation and background}
+\label{sec:Background}
+\input{src/Background}
+
+
+
+
+
+
+\section{Proposed approach}
+\label{sec:ProposedApproach}
+\input{src/ProposedApproach}
+
+\section{Evaluation Materials and Methods}		
+\label{sec:Evaluation}
+\input{src/Evaluation}
+
+\section{Experimental Results}
+\label{sec:ExperimentalResults}
+\input{src/ExperimentalResults}
+
+
+\section{Threats to validity}
+\label{sec:Threats}
+\input{src/Threats}
+
+\section{Related Work}
+\label{sec:RelatedWorks}
+\input{src/RelatedWork}
+
+\section{Conclusions and Future Work}
+\label{sec:Conclusions}
+\input{src/Conclusions}
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{ESEM2020}
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\end{document}
+\endinput
+%%
+%% End of file `sample-sigconf.tex'.
