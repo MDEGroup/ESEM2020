@@ -35,7 +35,7 @@ have at least 3 watches. Differently from \TF, this approach can recommend \GH
 
 Lia \etal \cite{liao_user_2018} propose a user-oriented portrait model to 
 recommend a set of \GH projects that can be of interest for a given user. An 
-initial set of labels is obtained by computing the LDA algorithm on the textual 
+initial set of labels is obtained by running the LDA algorithm on the textual 
 elements of a repository, \ie issues, commits, and pull requests. Then, the 
 approach exploits a project familiarity technique that relies on the user's 
 behavior, considering the different repositories operation. Such a strategy 
@@ -45,8 +45,8 @@ and the time when the account has been created. The latter computes similarity s
 The approach was evaluated by considering 80 users with an average of 
 1,894 different behaviors for each one. By considering the first two months of 
 activity in 2016 as a test set, the assessment shows that the approach improves 
-the performances in terms of precision, recall, and success rate of the 
-considered baseline. Though both \TF and the presented work~\cite{liao_user_2018} make use of collaborative-filtering techniques, the 
+the performances in terms of precision, recall, and success rate. %of the considered baseline. 
+Though both \TF and the presented work~\cite{liao_user_2018} make use of collaborative-filtering techniques, the 
 former is designed to recommend topics to be assigned to an input \GH 
 repository, whereas the latter recommends \GH repositories that can be of 
 interest for a given user.
@@ -90,6 +90,8 @@ Bayesian model is tuned with several parameters to maximize the prediction
 performances. The models were evaluated by using two large real-world datasets 
 tailored for music and bookmark recommendations. The experimental results show that the 
 proposed model outperforms the classical CTR model with respect to recall. 
+
+\vspace{-.3cm}
 
 %Bog\'ardi-M\'esz\"oly \etal \cite{bogardi-meszoly_tag_2013} propose two 
 %different recommender systems based on vocabulary have been proposed \ie tags 

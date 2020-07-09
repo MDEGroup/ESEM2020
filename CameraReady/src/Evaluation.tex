@@ -291,15 +291,31 @@ success\ rate@N=\frac{ count_{p \in P}( \left | match_{N}(p) \right | > 0 ) }{\l
 %\vspace{-.2cm}
 % \cite{Saracevic:1995:EEI:215206.215351}
 
-\begin{equation} \label{eqn:Precision}
-precision@N = \frac{ \left | match_{N}(p) \right | }{N}
-%precision@N(p) = \frac{\sum_{r=1}^{N}\left | GT(p) \bigcap REC_{r}(p) \right |}{N}
-\end{equation}
-%\vspace{-.1cm}
-\begin{equation} \label{eqn:Recall}
-recall@N = \frac{ \left | match_{N}(p) \right | }{\left | GT(p) \right |}
-%recall@N(p) = \frac{\sum_{r=1}^{N}\left | GT(p) \bigcap REC_{r}(p) \right |}{\left | GT(p) \right |}
-\end{equation}
+\begin{minipage}{0.48\linewidth}
+	\begin{equation} \label{eqn:Precision}%\nonumber%
+%	P = \frac{ TP }{TP+ FP}
+	precision@N = \frac{ \left | match_{N}(p) \right | }{N}
+	\end{equation}
+\end{minipage}% 
+\begin{minipage}{0.48\linewidth}
+	\begin{equation} \label{eqn:Recall}%\nonumber%
+	recall@N = \frac{ \left | match_{N}(p) \right | }{\left | GT(p) \right |}
+%	R = \frac{ TP }{TP+FN}    
+	\end{equation}
+\end{minipage}%\par\vspace{\belowdisplayskip}
+
+%
+%\begin{equation} \label{eqn:Precision}
+%precision@N = \frac{ \left | match_{N}(p) \right | }{N}
+%%precision@N(p) = \frac{\sum_{r=1}^{N}\left | GT(p) \bigcap REC_{r}(p) \right |}{N}
+%\end{equation}
+%%\vspace{-.1cm}
+%\begin{equation} \label{eqn:Recall}
+%recall@N = \frac{ \left | match_{N}(p) \right | }{\left | GT(p) \right |}
+%%recall@N(p) = \frac{\sum_{r=1}^{N}\left | GT(p) \bigcap REC_{r}(p) \right |}{\left | GT(p) \right |}
+%\end{equation}
+
+
 %\vspace{-.1cm}
 
 \vspace{.1cm}
@@ -340,9 +356,9 @@ used to assess the performance of \TF and its combined use with \MNB. %and
 %query topics to feed \TF. 
 Figure~\ref{fig:EvaluationProcess} depicts the evaluation process consisting of 
 three consecutive steps,~\ie~\emph{Data Preparation},~\emph{Recommendation 
-production}, 
-and~\emph{Outcome Evaluation} and they are going to be explained as 
-follows.
+Production}, 
+and~\emph{Outcome Evaluation}, which %and they are 
+going to be explained as follows.
 
 %\noindent
 %$\blacksquare$~\textbf{Data Preparation.} 
@@ -390,12 +406,8 @@ performance of the combined use of \TF and \MNB.
 	\centering
 	\vspace{-.2cm}
 	\begin{tabular}{c c}	
-		\subfigure[N=5]{\label{fig:success-rateN5}
-			\includegraphics[width=0.40\linewidth]{figs/successRateN@5.pdf}}
-		&
-		\subfigure[N=10]{\label{fig:success-rateN10}
-			\includegraphics[width=0.40\linewidth]{figs/successRateN@10.pdf}}
-		
+		\subfigure[N=5]{\label{fig:success-rateN5}\includegraphics[width=0.40\linewidth]{figs/successRateN@5.pdf}}	&
+		\subfigure[N=10]{\label{fig:success-rateN10}\includegraphics[width=0.40\linewidth]{figs/successRateN@10.pdf}}		
 	\end{tabular} 
 	\caption{Success rate with 5 and 10 input topics.}
 	\vspace{-.2cm}

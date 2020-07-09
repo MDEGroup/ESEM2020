@@ -1,9 +1,8 @@
 
 
 This section analyzes the performance of \TF as well as the combination of \MNB with \TF by %and compares it with \MNB by 
-addressing the two research questions as discussed in Section~\ref{sec:EXP1} 
-and 
-Section~\ref{sec:EXP3}, respectively.
+addressing the two research questions %as discussed 
+in Section~\ref{sec:EXP1} and Section~\ref{sec:EXP3}, respectively.
 
 %discusses the findings of the qualitative assessment. To address the formulated research questions, we perform two different experiments. Section \ref{sec:EXP1} discusses the \TF results by variating different parameters. % We measure the predict performances of the \MNB in Section \ref{sec:EXP2}. 
 %The results obtained with the entangled approach (\ie the combination of \TF and \MNB approaches) are investigate in Section~\ref{sec:EXP3} . 
@@ -46,12 +45,14 @@ Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10}.
 %Both figures depict the results of \TF applied on the different datasets defined in Section~\ref{sec:Dataset}, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, and $D_{20}$.
 %In particular, Fig.~\ref{fig:success-rateN5} and Fig.~\ref{fig:success-rateN10} shows the success rate considering the first 5 and 10 recommended topics respectively. The horizontal axes shows the success rate outcomes for different size of neighbours \emph{N}.
 
-Overall, it is evident that infrequent topics negatively affect the prediction outcomes. With $D_{1}$, \ie all projects are considered, \TF obtains a low success rate by both configurations N=5 and N=10, compared to the results of other cut-off values \emph{t}. For instance, with k=5, \TFa gets 0.54 as success rate for $D_{1}$, meanwhile it gets 0.62 as success rate for $D_{5}$ and $D_{10}$, and 0.63 for $D_{15}$ and $D_{20}$. The same trend can also be witnessed with other values of k, \ie \emph{k} = $\{10, 15, 20, 25\}$: \TFa achieves a better performance when we consider a dataset with more topics for each project. This is understandable since \TFa relies on the availability of training data to function: the more topics it has, the better it can compute the similarities among projects (cf. Fig.~\ref{fig:Graph} and Eq.~\ref{eqn:VsmSim}), and thus it is able to find more relevant topics (cf. Eq.~\ref{eqn:Prediction}). Similarly, for N=10, \ie we consider a longer list of recommendations, \TFa obtains a better success rate when a dataset with more detailed training data is exploited. 
+Overall, it is evident that infrequent topics negatively affect the prediction outcomes. With $D_{1}$, \ie all projects are considered, \TF obtains a low success rate by both configurations N=5 and N=10, compared to the results of other cut-off values \emph{t}. For instance, with k=5, \TFa gets 0.54 as success rate for $D_{1}$, meanwhile it gets 0.62 as success rate for $D_{5}$ and $D_{10}$, and 0.63 for $D_{15}$ and $D_{20}$. The same trend can also be witnessed with other values of k, \ie \emph{k} = $\{10, 15, 20, 25\}$: \TFa achieves a better performance when we consider a dataset with more topics for each project. This is understandable since \TFa relies on the availability of training data to function: the more topics it has, the better it can compute the similarities among projects (cf. Fig.~\ref{fig:Graph} and Eq.~\ref{eqn:VsmSim}), and thus it is able to find more relevant topics (cf. Eq.~\ref{eqn:Prediction}). Similarly, for N=10, \ie we consider a longer list of recommendations, \TFa obtains a better success rate when %a dataset with 
+more detailed training data is exploited. 
 
 
 
 
-Next, we examine the influence of the number of neighbors k on the prediction performance. For N=5, from Fig.~\ref{fig:success-rateN5} it is clear that incorporating more neighbor projects for recommendation helps improve the performance considerably. Take as an example, for k=10 the best success rate is 0.69 obtained for $D_{20}$, and the corresponding score achieved with k=25 is 0.73 for $D_{20}$. For N=10, we see a clear gain in performance when more neighbors are considered for the computation of recommendations. The best obtained success rate is 0.83 when k=25 for $D_{20}$. As a whole, we come to the conclusion that increasing the number of neighbors used for computing missing ratings in the project-topic matrix is beneficial to the final recommendations. On the other hand, this also increases the computational complexity as comprehended in Eq.~\ref{eqn:Prediction}. Therefore, it is necessary to maintain a trade-off between accuracy and efficiency when deploying \TF by choosing a suitable value of k. 
+Next, we examine the influence of the number of neighbors k on the prediction performance. For N=5, from Fig.~\ref{fig:success-rateN5} it is clear that incorporating more neighbor projects for recommendation helps improve the performance considerably. Take as an example, for k=10 the best success rate is 0.69 obtained for $D_{20}$, and the corresponding score achieved with k=25 is 0.73 for $D_{20}$. For N=10, we see a clear gain in performance when more neighbors are considered for the computation of recommendations. The best obtained success rate is 0.83 when k=25 for $D_{20}$. As a whole, we conclude %come to the conclusion 
+that increasing the number of neighbors used for computing missing ratings in the project-topic matrix is beneficial to the final recommendations. On the other hand, this also increases the computational complexity as comprehended in Eq.~\ref{eqn:Prediction}. Therefore, it is necessary to maintain a trade-off between accuracy and efficiency when deploying \TF by choosing a suitable value of k. 
 
 %The success rate assessment exhibits an average improvement of 10\% in all of the possible configurations obtained by variating \emph{N} and \emph{k} values. In particular, the success rate archives better results by setting higher values of \emph{k}. Nevertheless, increasing the number of neighbours gives remarkable benefits only until a certain threshold. Given \emph{k} = 5, the success rate@5 passes from 63\% to 69\% if we consider k=10. This positive delta decreases by augmenting the number of neighbours until it reaches a stable success rate. Thus, we can consider \emph{k} = 25 as the maximum value capable of improving prediction performances. This trend is further confirmed by introducing more topics in the initial set. We also demonstrate that the topic filtering preprocessing fosters this enhancement and noise removal is a critical step of the entire process.
 
@@ -87,7 +88,8 @@ For this setting, the number of recommended items \emph{N} was varied from 1 to 
 
 We investigate if \TFa can recommend a wide range of topics to repositories by considering catalog coverage. The metric measures the percentage of recommended topic in the training data that the model is able to suggest to a test set, and a higher value corresponds to a better coverage. 
 %In our experiment, we measured the metric among topics, \ie 15,743. 
-Table~\ref{tab:coverage} reports the average coverage value for the considered datasets, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$. %all ten rounds. 
+Table~\ref{tab:coverage} reports the average coverage value for the %considered 
+datasets, \ie $D_{1}$, $D_{5}$, $D_{10}$, $D_{15}$, $D_{20}$. %all ten rounds. 
 
 %The average catalog coverage of all folds decreases from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$) because there are no training data to recommend infrequent topics. 
 %The catalog coverage decreases because there are no training data to recommend infrequent topics. In particular, the average \emph{Global coverage} values decrease from 9.306\% (Dt$_1$) to 1.805\% (Dt$_{20}$).
@@ -120,7 +122,7 @@ N=$\{5,10\}$. %through our experiment. %ten folds by choosing
 %%different number of input topics. 
 %Varying $\tau$ means changing the length of input topics that enable the \TF collaborative filtering recommender. 
 %In this picture we report the average success of all folds values with \emph{k} = 25 and \emph{t} = 20 as configuration settings. 
-The figure demonstrates an evident outcome: by using more input topics as input data, we get a better prediction performance. Take as an example, for $\tau$=1, we get a success rate of 0.44 and 0.61 for N=5 and N=10, respectively. When we use 5 topics to feed \TFa, the corresponding success rate is 0.56 and 0.66 for N=5 and N=10, respectively. This happens due to the fact that by considering more input topics, \TFa is able to better determine the similarity between the testing project and projects in the training data, as shown in Eq.~\ref{eqn:Prediction}, which eventually allows it to mine more relevant topics.
+The figure demonstrates an evident outcome: by using more input topics as input data, we get a better prediction performance. Take as an example, for $\tau$=1, we get a success rate of 0.44 and 0.61 for N=5 and N=10, respectively. When we use 5 topics to feed \TFa, the corresponding success rate is 0.56 and 0.66 for N=5 and N=10, respectively. This happens due to the fact that by considering more input topics, \TFa is able to better determine the similarity between the testing project and those in the training data, as shown in Eq.~\ref{eqn:Prediction}, which eventually allows it to mine more relevant topics.
 
 %The success rate values exhibits an improvements when the size of input topic rises. This behaviour demonstrate that \TF computes better similar repositories as neighbours when it has a higher number of topic as input. This is due to the similarity function that has been involved in the computation of first  \emph{k} neighbours. Because the average number of topics for each considered repository is 9.896 we can consider |\emph{t$_{in}$}| = 5 as the maximum value capable of improving prediction performances.
 
@@ -261,8 +263,8 @@ recommending a more relevant set of topics. %to repositories.
 \begin{tcolorbox}[boxrule=0.86pt,left=0.3em, right=0.3em,top=0.1em, bottom=0.05em]
 \textbf{Answer to RQ$_2$.} Compared to \MNB, the combined used of \MNB and \TFb 
 substantially improves the prediction performance with respect to success rate, 
-precision and recall. Moreover, while \MNB suffers a low catalog coverage, 
-\textit{MNBN+\TF} 
+precision and recall. While \MNB suffers a low catalog coverage, 
+MNBN+\TF
 is able to recommend a wide range of topics to repositories.
 \end{tcolorbox}
 
