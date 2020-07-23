@@ -58,12 +58,7 @@ proposed approach: %, the:
 
 %Before encoding topics in the repo-topic ratings matrix, raw topics are pre-processed removing possible syntactical duplicates terms (\eg \textit{document} and \textit{documents}). More specifically, stemming, lemmatization, and stop words removal Natural Language Processing (NLP) techniques have been applied on the mined topics.
 
-
-
-
 %\color{blue}
-
-
 
 %The \GH query language \cite{understanding} allows the fetching of relevant repository metadata including name, owner, and list of topics to mention a few. Thus, we \emph{randomly} collected a dataset consisting of 6,258 repositories that use 15,757 topics by means of the GitHub API \cite{pygithub/pygithub_2019}. We employ the \GH star voting mechanism as a popularity measure to avoid including unpopular, unmaintained and toy projects \cite{borges_whats_2018}. As claimed in several works\cite{borges_popularity_2017, borges_predicting_2016}, a high number of stars means the attention of the community for that project. So, we impose the following filter during the query execution:
 %\begin{equation}
@@ -75,8 +70,7 @@ proposed approach: %, the:
 % \cite{MNBreplication}.
 
 To study our proposed approach, we reused the same dataset employed to evaluate 
-\MNB and made available by the authors of that technique in a replication 
-package.\footnote{\url{https://github.com/MDEGroup/MNB\_TopicRecommendation/}} 
+\MNB which was already made available online in a replication package.\footnote{\url{https://github.com/MDEGroup/MNB\_TopicRecommendation/}} 
 %
 %A preprocessing phase was performed to improve the dataset's quality as 
 %follows~\cite{repo-topix}. 
